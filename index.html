@@ -37,6 +37,12 @@ h1{font-size:clamp(38px,5vw,64px);margin:10px 0 12px;line-height:1.02}
 .toolbar{display:grid;grid-template-columns:1.4fr repeat(4,minmax(150px,.6fr));gap:12px;position:sticky;top:0;z-index:40;padding:14px 0 16px;background:linear-gradient(180deg,rgba(10,16,32,.97),rgba(10,16,32,.86),rgba(10,16,32,0));backdrop-filter:blur(10px)}
 input,select{width:100%;background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:14px;padding:13px 14px;outline:none;font-size:15px}
 .stats{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0 26px}
+.worldMapSection{background:linear-gradient(180deg,#101937,#0b1430);border:1px solid var(--line);border-radius:26px;padding:20px;margin:4px 0 34px;box-shadow:var(--shadow)}
+.worldMapHead{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:8px}
+.worldMapHead h2{margin:0;font-size:24px}
+.worldMapHead p{margin:5px 0 0;color:var(--muted);line-height:1.5}
+.mapHint{font-size:12px;color:#8fa4cb;white-space:nowrap}
+#worldMap{width:100%;height:480px;border-radius:18px;overflow:hidden}
 .stat{background:var(--panel);border:1px solid var(--line);padding:10px 14px;border-radius:999px;color:var(--muted)}
 .stat b{color:var(--text)}
 .day{margin:34px 0 42px}
@@ -108,6 +114,7 @@ input,select{width:100%;background:var(--panel);color:var(--text);border:1px sol
   .sheetMain,.sheetSide,.section{padding:20px}
 }
 </style>
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
 </head>
 <body>
 <div class="wrap">
@@ -142,6 +149,16 @@ input,select{width:100%;background:var(--panel);color:var(--text);border:1px sol
     <div class="stat">Vista pensada para <b>LinkedIn y portafolio</b></div>
     <div class="stat">Formato: <b>archivo + lectura guiada + ficha técnica</b></div>
   </div>
+  <section class="worldMapSection">
+    <div class="worldMapHead">
+      <div>
+        <h2>Mapa mundial de estudios</h2>
+        <p>Acerca el cursor o toca un país para ver cuántos estudios hemos recopilado. El mapa responde a los filtros actuales.</p>
+      </div>
+      <div class="mapHint">País · cantidad de estudios</div>
+    </div>
+    <div id="worldMap" aria-label="Mapa mundial de cantidad de estudios por país"></div>
+  </section>
   <main id="app"></main>
   <footer class="footer">Los datos provienen de los resúmenes ya construidos en esta conversación. Cuando un paper o artículo no reporta un dato, se mantiene como <b>No reportado</b>. Las imágenes internas son <b>visuales de apoyo conceptual</b> para facilitar comprensión rápida del tema y la modalidad del estudio.</footer>
 </div>
@@ -257,7 +274,73 @@ window.addEventListener('popstate',()=>{
   if(slug) openStudy(slug,false); else closeStudy(false);
 });
 function openHashOnLoad(){ const slug=location.hash.replace(/^#/,''); if(slug) openStudy(slug,false); }
-function render(){const query=q.value.trim().toLowerCase(); const f=DATA.filter(x=>(!dateSel.value||x.date===dateSel.value)&&(!countrySel.value||x.country===countrySel.value)&&(!rubroSel.value||x.rubro===rubroSel.value)&&(!areaSel.value||x.area===areaSel.value)&&(!query||Object.values(x).join(' ').toLowerCase().includes(query))); const groups={}; f.forEach(x=>(groups[x.date]??=[]).push(x)); const dates=Object.keys(groups).sort().reverse(); document.getElementById('count').textContent=f.length; document.getElementById('days').textContent=dates.length; document.getElementById('from').textContent=DATA.length?[...DATA].sort((a,b)=>a.date.localeCompare(b.date))[0].date:'—'; document.getElementById('total').textContent=DATA.length; document.getElementById('updated').textContent=DATA.length?[...DATA].sort((a,b)=>b.date.localeCompare(a.date))[0].date:'—'; const app=document.getElementById('app'); if(!dates.length){app.innerHTML='<div class="empty">No hay estudios que coincidan con los filtros.</div>'; return;} app.innerHTML=dates.map(d=>`<section class="day"><div class="dayhead"><h2>${d}</h2><span>${groups[d].length} estudios</span></div><div class="grid">${groups[d].map(card).join('')}</div></section>`).join('');}
+const COUNTRY_ISO={
+  "Estados Unidos":"USA","EE. UU.":"USA","China":"CHN","Alemania":"DEU","Reino Unido":"GBR","Francia":"FRA",
+  "Finlandia":"FIN","Italia":"ITA","España":"ESP","Chile":"CHL","Canadá":"CAN","Corea del Sur":"KOR",
+  "Singapur":"SGP","Australia":"AUS","Chequia":"CZE","República Checa":"CZE","Países Bajos":"NLD",
+  "Israel":"ISR","Japón":"JPN","India":"IND","Brasil":"BRA","Perú":"PER","Suiza":"CHE","Suecia":"SWE",
+  "Dinamarca":"DNK","Noruega":"NOR","Bélgica":"BEL","Austria":"AUT","Taiwán":"TWN","Hong Kong":"HKG",
+  "Arabia Saudita":"SAU","Emiratos Árabes Unidos":"ARE","Sudáfrica":"ZAF","México":"MEX"
+};
+const COUNTRY_LABELS={
+  USA:"Estados Unidos",CHN:"China",DEU:"Alemania",GBR:"Reino Unido",FRA:"Francia",FIN:"Finlandia",ITA:"Italia",
+  ESP:"España",CHL:"Chile",CAN:"Canadá",KOR:"Corea del Sur",SGP:"Singapur",AUS:"Australia",CZE:"Chequia",
+  NLD:"Países Bajos",ISR:"Israel",JPN:"Japón",IND:"India",BRA:"Brasil",PER:"Perú",CHE:"Suiza",SWE:"Suecia",
+  DNK:"Dinamarca",NOR:"Noruega",BEL:"Bélgica",AUT:"Austria",TWN:"Taiwán",HKG:"Hong Kong",SAU:"Arabia Saudita",
+  ARE:"Emiratos Árabes Unidos",ZAF:"Sudáfrica",MEX:"México"
+};
+function countriesFromStudy(country){
+  return String(country||"").split(" / ").map(x=>x.trim()).filter(x=>COUNTRY_ISO[x]);
+}
+function renderWorldMap(items){
+  const el=document.getElementById('worldMap');
+  if(!el || typeof Plotly==='undefined') return;
+  const counts={};
+  items.forEach(s=>{
+    const seen=new Set(countriesFromStudy(s.country));
+    seen.forEach(name=>{
+      const iso=COUNTRY_ISO[name];
+      counts[iso]=(counts[iso]||0)+1;
+    });
+  });
+  const locations=Object.keys(counts);
+  const z=locations.map(x=>counts[x]);
+  const text=locations.map(x=>COUNTRY_LABELS[x]||x);
+  const max=Math.max(1,...z);
+  Plotly.react(el,[{
+    type:'choropleth',
+    locationmode:'ISO-3',
+    locations,
+    z,
+    text,
+    customdata:z,
+    colorscale:[[0,'#1b2949'],[0.35,'#3658a8'],[0.7,'#6f5cff'],[1,'#2dd4bf']],
+    zmin:0,
+    zmax:max,
+    marker:{line:{color:'#0b1020',width:0.55}},
+    showscale:true,
+    colorbar:{title:'Estudios',tickfont:{color:'#9fb0d0'},titlefont:{color:'#eef3ff'},outlinewidth:0,bgcolor:'rgba(0,0,0,0)'},
+    hovertemplate:'<b>%{text}</b><br>%{customdata} estudios<extra></extra>'
+  }],{
+    margin:{l:0,r:0,t:0,b:0},
+    paper_bgcolor:'rgba(0,0,0,0)',
+    plot_bgcolor:'rgba(0,0,0,0)',
+    geo:{
+      projection:{type:'natural earth'},
+      bgcolor:'rgba(0,0,0,0)',
+      showframe:false,
+      showcoastlines:false,
+      showland:true,
+      landcolor:'#121c35',
+      showcountries:true,
+      countrycolor:'#263553',
+      showocean:true,
+      oceancolor:'#08101e'
+    },
+    font:{family:'Inter, ui-sans-serif, system-ui',color:'#eef3ff'}
+  },{displayModeBar:false,responsive:true});
+}
+function render(){const query=q.value.trim().toLowerCase(); const f=DATA.filter(x=>(!dateSel.value||x.date===dateSel.value)&&(!countrySel.value||x.country===countrySel.value)&&(!rubroSel.value||x.rubro===rubroSel.value)&&(!areaSel.value||x.area===areaSel.value)&&(!query||Object.values(x).join(' ').toLowerCase().includes(query))); renderWorldMap(f); const groups={}; f.forEach(x=>(groups[x.date]??=[]).push(x)); const dates=Object.keys(groups).sort().reverse(); document.getElementById('count').textContent=f.length; document.getElementById('days').textContent=dates.length; document.getElementById('from').textContent=DATA.length?[...DATA].sort((a,b)=>a.date.localeCompare(b.date))[0].date:'—'; document.getElementById('total').textContent=DATA.length; document.getElementById('updated').textContent=DATA.length?[...DATA].sort((a,b)=>b.date.localeCompare(a.date))[0].date:'—'; const app=document.getElementById('app'); if(!dates.length){app.innerHTML='<div class="empty">No hay estudios que coincidan con los filtros.</div>'; return;} app.innerHTML=dates.map(d=>`<section class="day"><div class="dayhead"><h2>${d}</h2><span>${groups[d].length} estudios</span></div><div class="grid">${groups[d].map(card).join('')}</div></section>`).join('');}
 [q,dateSel,countrySel,rubroSel,areaSel].forEach(el=>el.addEventListener('input',render));
 fetch('data/studies.json', {cache:'no-store'})
   .then(r=>{if(!r.ok) throw new Error('No se pudo cargar la base de estudios'); return r.json();})
