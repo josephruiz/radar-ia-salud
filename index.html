@@ -34,7 +34,7 @@ h1{font-size:clamp(38px,5vw,64px);margin:10px 0 12px;line-height:1.02}
 .quickFacts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:14px}
 .fact{background:rgba(255,255,255,.03);border:1px solid #233454;padding:12px;border-radius:16px}
 .fact b{display:block;font-size:22px;margin-bottom:4px}
-.toolbar{display:grid;grid-template-columns:1.4fr repeat(3,minmax(160px,.6fr));gap:12px;position:sticky;top:0;z-index:40;padding:14px 0 16px;background:linear-gradient(180deg,rgba(10,16,32,.97),rgba(10,16,32,.86),rgba(10,16,32,0));backdrop-filter:blur(10px)}
+.toolbar{display:grid;grid-template-columns:1.4fr repeat(4,minmax(150px,.6fr));gap:12px;position:sticky;top:0;z-index:40;padding:14px 0 16px;background:linear-gradient(180deg,rgba(10,16,32,.97),rgba(10,16,32,.86),rgba(10,16,32,0));backdrop-filter:blur(10px)}
 input,select{width:100%;background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:14px;padding:13px 14px;outline:none;font-size:15px}
 .stats{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0 26px}
 .stat{background:var(--panel);border:1px solid var(--line);padding:10px 14px;border-radius:999px;color:var(--muted)}
@@ -125,7 +125,7 @@ input,select{width:100%;background:var(--panel);color:var(--text);border:1px sol
           <div class="fact"><b id="count">0</b><span>estudios visibles</span></div>
           <div class="fact"><b id="days">0</b><span>días registrados</span></div>
           <div class="fact"><b id="from">—</b><span>primer registro</span></div>
-          <div class="fact"><b>42</b><span>estudios cargados</span></div>
+          <div class="fact"><b id="total">0</b><span>estudios cargados</span></div>
         </div>
       </aside>
     </div>
@@ -134,10 +134,11 @@ input,select{width:100%;background:var(--panel);color:var(--text);border:1px sol
     <input id="q" placeholder="Buscar: neumonía, OCT, AUC, PyTorch, wearables, etiología..." />
     <select id="date"><option value="">Todas las fechas</option></select>
     <select id="country"><option value="">Todos los países</option></select>
+    <select id="rubro"><option value="">Todos los rubros</option></select>
     <select id="area"><option value="">Todas las áreas</option></select>
   </section>
   <div class="stats">
-    <div class="stat">Última actualización <b>26/09/2026</b></div>
+    <div class="stat">Última actualización <b id="updated">—</b></div>
     <div class="stat">Vista pensada para <b>LinkedIn y portafolio</b></div>
     <div class="stat">Formato: <b>archivo + lectura guiada + ficha técnica</b></div>
   </div>
@@ -147,16 +148,18 @@ input,select{width:100%;background:var(--panel);color:var(--text);border:1px sol
 <section id="detailView" class="detailView" aria-hidden="true"></section>
 <script>
 let DATA = [];
-const q = document.getElementById('q'), dateSel=document.getElementById('date'), countrySel=document.getElementById('country'), areaSel=document.getElementById('area');
+const q = document.getElementById('q'), dateSel=document.getElementById('date'), countrySel=document.getElementById('country'), rubroSel=document.getElementById('rubro'), areaSel=document.getElementById('area');
 const detailView = document.getElementById('detailView');
 const indexWrap = document.querySelector('.wrap');
 function unique(key){return [...new Set(DATA.map(x=>x[key]).filter(Boolean))].sort().reverse();}
 function populateFilters(){
   dateSel.innerHTML='<option value="">Todas las fechas</option>';
   countrySel.innerHTML='<option value="">Todos los países</option>';
+  rubroSel.innerHTML='<option value="">Todos los rubros</option>';
   areaSel.innerHTML='<option value="">Todas las áreas</option>';
   unique('date').forEach(v=>dateSel.insertAdjacentHTML('beforeend',`<option value="${v}">${v}</option>`));
   [...new Set(DATA.map(x=>x.country))].sort().forEach(v=>countrySel.insertAdjacentHTML('beforeend',`<option>${v}</option>`));
+  [...new Set(DATA.map(x=>x.rubro).filter(Boolean))].sort().forEach(v=>rubroSel.insertAdjacentHTML('beforeend',`<option>${v}</option>`));
   [...new Set(DATA.map(x=>x.area))].sort().forEach(v=>areaSel.insertAdjacentHTML('beforeend',`<option>${v}</option>`));
 }
 function esc(s){return (s||'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));}
@@ -254,8 +257,8 @@ window.addEventListener('popstate',()=>{
   if(slug) openStudy(slug,false); else closeStudy(false);
 });
 function openHashOnLoad(){ const slug=location.hash.replace(/^#/,''); if(slug) openStudy(slug,false); }
-function render(){const query=q.value.trim().toLowerCase(); const f=DATA.filter(x=>(!dateSel.value||x.date===dateSel.value)&&(!countrySel.value||x.country===countrySel.value)&&(!areaSel.value||x.area===areaSel.value)&&(!query||Object.values(x).join(' ').toLowerCase().includes(query))); const groups={}; f.forEach(x=>(groups[x.date]??=[]).push(x)); const dates=Object.keys(groups).sort().reverse(); document.getElementById('count').textContent=f.length; document.getElementById('days').textContent=dates.length; document.getElementById('from').textContent=DATA.length?[...DATA].sort((a,b)=>a.date.localeCompare(b.date))[0].date:'—'; const app=document.getElementById('app'); if(!dates.length){app.innerHTML='<div class="empty">No hay estudios que coincidan con los filtros.</div>'; return;} app.innerHTML=dates.map(d=>`<section class="day"><div class="dayhead"><h2>${d}</h2><span>${groups[d].length} estudios</span></div><div class="grid">${groups[d].map(card).join('')}</div></section>`).join('');}
-[q,dateSel,countrySel,areaSel].forEach(el=>el.addEventListener('input',render));
+function render(){const query=q.value.trim().toLowerCase(); const f=DATA.filter(x=>(!dateSel.value||x.date===dateSel.value)&&(!countrySel.value||x.country===countrySel.value)&&(!rubroSel.value||x.rubro===rubroSel.value)&&(!areaSel.value||x.area===areaSel.value)&&(!query||Object.values(x).join(' ').toLowerCase().includes(query))); const groups={}; f.forEach(x=>(groups[x.date]??=[]).push(x)); const dates=Object.keys(groups).sort().reverse(); document.getElementById('count').textContent=f.length; document.getElementById('days').textContent=dates.length; document.getElementById('from').textContent=DATA.length?[...DATA].sort((a,b)=>a.date.localeCompare(b.date))[0].date:'—'; document.getElementById('total').textContent=DATA.length; document.getElementById('updated').textContent=DATA.length?[...DATA].sort((a,b)=>b.date.localeCompare(a.date))[0].date:'—'; const app=document.getElementById('app'); if(!dates.length){app.innerHTML='<div class="empty">No hay estudios que coincidan con los filtros.</div>'; return;} app.innerHTML=dates.map(d=>`<section class="day"><div class="dayhead"><h2>${d}</h2><span>${groups[d].length} estudios</span></div><div class="grid">${groups[d].map(card).join('')}</div></section>`).join('');}
+[q,dateSel,countrySel,rubroSel,areaSel].forEach(el=>el.addEventListener('input',render));
 fetch('data/studies.json', {cache:'no-store'})
   .then(r=>{if(!r.ok) throw new Error('No se pudo cargar la base de estudios'); return r.json();})
   .then(data=>{DATA=data; populateFilters(); render();})
