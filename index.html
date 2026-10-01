@@ -102,6 +102,50 @@ input,select{width:100%;background:var(--panel);color:var(--text);border:1px sol
 .metricTable td{color:#f2f6ff;background:rgba(255,255,255,.01)}
 .linkRow{display:flex;flex-wrap:wrap;gap:10px}
 .note{color:#a8b7d7;font-size:13px;line-height:1.65;margin-top:10px}
+.detailView.lightMode{background:#f3f7f9;color:#17324a}
+.detailView.lightMode .backRow{color:#36566e}
+.detailView.lightMode .backBtn{background:#ffffff;color:#0f526b;border:1px solid #c9dce4;box-shadow:0 6px 18px rgba(20,76,98,.08)}
+.richPaper{max-width:1180px;margin:0 auto;background:#ffffff;border-radius:28px;overflow:hidden;box-shadow:0 20px 70px rgba(33,79,98,.12);border:1px solid #dfecef;color:#17324a}
+.richHero{padding:34px 38px 28px;background:linear-gradient(135deg,#f8fcfd,#eef8fb 55%,#f8f4ff)}
+.richMeta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.richChip{background:#ffffff;border:1px solid #cfe3ea;color:#24566c;border-radius:999px;padding:7px 10px;font-size:12px;font-weight:750}
+.richTitle{font-size:clamp(34px,5vw,58px);line-height:1.03;margin:0;color:#113b59;letter-spacing:-.035em}
+.richTitleEs{font-size:15px;line-height:1.5;color:#607b8e;margin-top:10px;font-weight:600}
+.richByline{margin-top:18px;color:#527184;font-size:14px;line-height:1.6}
+.richIntroGrid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;margin-top:24px}
+.richLead{background:#ffffff;border:1px solid #d6e7ed;border-radius:22px;padding:22px;line-height:1.75;font-size:17px}
+.richLead h3{margin:0 0 10px;color:#0d7896}
+.richRemember{background:linear-gradient(135deg,#e9f8f5,#edf7ff);border:1px solid #cce6e5;border-radius:22px;padding:22px}
+.richRemember .ey{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:#0a7c79;font-weight:850}
+.richRemember p{font-size:18px;line-height:1.6;margin:8px 0 0;color:#17324a;font-weight:720}
+.infographicSection{padding:30px 38px;border-top:1px solid #e4eef1}
+.infographicBand{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.infographicBand .n{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:#0b8da5;color:white;font-weight:900;font-size:18px}
+.infographicBand h3{margin:0;font-size:26px;color:#123f5b}
+.richTwoCol{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.richCard{background:#f7fbfc;border:1px solid #dbeaec;border-radius:20px;padding:18px}
+.richCard h4{margin:0 0 8px;color:#0f6681;font-size:17px}
+.richCard p{margin:0;line-height:1.68;color:#314f60}
+.datasetGrid,.resultGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.datasetCard,.resultCard{border-radius:20px;padding:18px;border:1px solid #dbe9ee;background:white;box-shadow:0 8px 24px rgba(19,77,100,.05)}
+.datasetCard b,.resultCard b{display:block;font-size:27px;color:#143d59;margin:5px 0}
+.datasetCard span,.resultCard span{color:#60798a;line-height:1.55}
+.figureFeature{background:#fbfdfe;border:1px solid #dce9ed;border-radius:22px;padding:15px;margin-bottom:16px}
+.figureFeature img{width:100%;display:block;border-radius:14px;background:white;object-fit:contain;max-height:620px}
+.figureFeature .fcap{padding:12px 4px 2px;color:#486779;line-height:1.55;font-size:14px}
+.figureFeature .fcap b{color:#123f5b}
+.implGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.implItem{background:#eef8fb;border:1px solid #d1e7ed;border-radius:16px;padding:14px;color:#214f63;font-weight:700}
+.richMetricTable{width:100%;border-collapse:separate;border-spacing:0;border:1px solid #d7e7eb;border-radius:18px;overflow:hidden;background:#fff}
+.richMetricTable th,.richMetricTable td{padding:12px 14px;text-align:left;border-bottom:1px solid #e5eff2}
+.richMetricTable th{background:#eaf6f8;color:#174c63}
+.richMetricTable td{color:#294b5d}
+.richMetricTable tr:last-child td{border-bottom:none}
+.richLimit{background:#fff2ef;border:1px solid #f2d3cc;border-radius:20px;padding:18px;line-height:1.7;color:#69413a}
+.richSourceNote{font-size:12px;color:#718997;margin-top:12px;line-height:1.6}
+.detailView.lightMode .btn{background:linear-gradient(135deg,#0b8da5,#5a78d6)}
+.detailView.lightMode .btn.secondary{background:#dfeef5;color:#164e68}
+@media(max-width:850px){.richIntroGrid,.richTwoCol,.datasetGrid,.resultGrid{grid-template-columns:1fr}.implGrid{grid-template-columns:1fr 1fr}.richHero,.infographicSection{padding:24px 20px}.richTitle{font-size:36px}}
 @media(max-width:980px){
   .heroGrid,.sheetHero{grid-template-columns:1fr}
   .sheetSide{border-left:none;border-top:1px solid rgba(255,255,255,.06)}
@@ -184,7 +228,7 @@ function slugify(s){return (s||'').toLowerCase().normalize('NFD').replace(/[\u03
 function splitMetrics(metrics){return (metrics||'No reportado').split(/[;•]/).map(s=>s.trim()).filter(Boolean).map((m,i)=>{const colon=m.indexOf(':'); if(colon>0) return {label:m.slice(0,colon).trim(), value:m.slice(colon+1).trim()}; return {label:i===0?'Resultado principal':'Métrica', value:m};});}
 function supportSVG(study, small=false){const w=small?280:560, h=small?180:280; const t=study.theme||{a:'#4e61ff',b:'#8aa4ff',emoji:'🩺',label:'Clínica'}; const title=esc(study.theme.label||study.area||'Estudio'); const modality=esc(study.modality||''); const icon=esc(t.emoji||'🩺'); const country=esc(study.countryFlags||study.flag||'🌍'); return `<svg class="thumbArt" viewBox="0 0 ${w} ${h}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="visual de apoyo"><defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="${t.a}"/><stop offset="100%" stop-color="${t.b}"/></linearGradient><linearGradient id="g2" x1="1" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff22"/><stop offset="100%" stop-color="#ffffff08"/></linearGradient></defs><rect width="100%" height="100%" rx="24" fill="#0f1a33"/><circle cx="${w*0.82}" cy="${h*0.18}" r="${h*0.24}" fill="url(#g2)"/><circle cx="${w*0.15}" cy="${h*0.80}" r="${h*0.20}" fill="url(#g2)"/><rect x="18" y="18" width="${w-36}" height="${h-36}" rx="24" fill="url(#g1)" opacity="0.16" stroke="rgba(255,255,255,.18)"/><g><circle cx="${w*0.21}" cy="${h*0.35}" r="${h*0.15}" fill="rgba(255,255,255,.14)"/><text x="${w*0.21}" y="${h*0.39}" text-anchor="middle" font-size="${small?28:42}">${icon}</text></g><g fill="none" stroke="rgba(255,255,255,.32)" stroke-width="2"><path d="M${w*0.12} ${h*0.68} C${w*0.24} ${h*0.60}, ${w*0.34} ${h*0.74}, ${w*0.48} ${h*0.62}"/><path d="M${w*0.16} ${h*0.74} C${w*0.28} ${h*0.66}, ${w*0.40} ${h*0.82}, ${w*0.56} ${h*0.68}"/></g><text x="28" y="${h-66}" fill="#eef3ff" font-size="${small?15:22}" font-weight="800">${title}</text><text x="28" y="${h-38}" fill="#d4e1ff" font-size="${small?12:16}">${country} · ${modality}</text></svg>`;}
 function metricChips(metrics){return splitMetrics(metrics).slice(0,3).map(m=>`<span class="metricChip"><b>${esc(m.label)}:</b> ${esc(m.value)}</span>`).join('');}
-function card(x){const code=x.code?`<a class="btn secondary" href="${esc(x.code)}" target="_blank" rel="noopener">Código</a>`:''; return `<article class="card"><div class="thumb"><div class="thumbBox"><div class="thumbMeta"><span class="flagPill">${x.countryFlags} ${esc(x.country)}</span><span class="areaPill">${esc(x.area)}</span></div>${supportSVG(x,true)}</div></div><div class="cardBody"><div class="kicker">${esc(x.date)} · ${esc(x.modality)}</div><h3 class="title">${esc(x.title)}</h3><p class="desc">${esc(x.summary)}</p><div class="metaRow"><div class="mini"><span class="label">Muestra</span><span class="value">${esc(x.sample)}</span></div><div class="mini"><span class="label">Diseño</span><span class="value">${esc(x.design)}</span></div></div><div class="metricsPreview">${metricChips(x.metrics)}</div><div class="remember"><b>🧠 Lo que debes recordar:</b> ${esc(x.remember)}</div></div><div class="cardActions"><button class="btn" onclick="openStudy('${slugify(x.date+'-'+x.title)}')">Abrir estudio</button><a class="btn ghost" href="${esc(x.paper)}" target="_blank" rel="noopener">Paper / fuente</a>${code}</div></article>`;}
+function card(x){const code=x.code?`<a class="btn secondary" href="${esc(x.code)}" target="_blank" rel="noopener">Código</a>`:''; return `<article class="card"><div class="thumb"><div class="thumbBox"><div class="thumbMeta"><span class="flagPill">${x.countryFlags} ${esc(x.country)}</span><span class="areaPill">${esc(x.area)}</span></div>${supportSVG(x,true)}</div></div><div class="cardBody"><div class="kicker">${esc(x.date)} · ${esc(x.modality)}</div><h3 class="title">${esc(x.title)}</h3>${x.title_es?`<div style="font-size:12px;color:#8fa5c7;line-height:1.45;margin-top:-4px">${esc(x.title_es)}</div>`:''}<p class="desc">${esc(x.summary)}</p><div class="metaRow"><div class="mini"><span class="label">Muestra</span><span class="value">${esc(x.sample)}</span></div><div class="mini"><span class="label">Diseño</span><span class="value">${esc(x.design)}</span></div></div><div class="metricsPreview">${metricChips(x.metrics)}</div><div class="remember"><b>🧠 Lo que debes recordar:</b> ${esc(x.remember)}</div></div><div class="cardActions"><button class="btn" onclick="openStudy('${slugify(x.date+'-'+x.title)}')">Abrir estudio</button><a class="btn ghost" href="${esc(x.paper)}" target="_blank" rel="noopener">Paper / fuente</a>${code}</div></article>`;}
 function longIntro(s){return `${esc(s.summary)} Además, el estudio se apoya en <b>${esc(s.model)}</b> y utiliza <b>${esc(s.modality)}</b> como fuente principal de datos. La muestra reportada fue <b>${esc(s.sample)}</b> y el diseño se describe como <b>${esc(s.design)}</b>. Lo más relevante de sus resultados fue: <b>${esc(s.metrics)}</b>.`;}
 function metricTableRows(s){const rows=splitMetrics(s.metrics).map(m=>`<tr><th>${esc(m.label)}</th><td>${esc(m.value)}</td></tr>`).join(''); const extra=[['Institución / grupo',s.institution],['País o procedencia',`${s.countryFlags} ${s.country}`],['Muestra',s.sample],['Diseño del estudio',s.design],['Modalidad / datos',s.modality],['Modelo / arquitectura',s.model],['Lenguaje',s.language||'No reportado'],['Framework',s.framework||'No reportado'],['Hardware',s.hardware||'No reportado'],['Costos',s.cost||'No reportado'],['Limitaciones',s.limitations||'No reportado']].map(([k,v])=>`<tr><th>${esc(k)}</th><td>${esc(v)}</td></tr>`).join(''); return rows+extra;}
 function supportCards(s){return (s.supportCaptions||[]).map((cap,i)=>`<div class="supportCard">${supportSVG(s,true)}<div class="cap"><b>Figura ${i+1}.</b> ${esc(cap)}</div></div>`).join('');}
@@ -196,9 +240,95 @@ function headlineMetrics(s){
   if(!base.length) return '<div class="mh"><span class="l">Métricas</span><span class="v">No reportado</span></div>';
   return base.map(m=>`<div class="mh"><span class="l">${esc(m.label)}</span><span class="v">${esc(m.value)}</span></div>`).join('');
 }
+function richStudyHTML(s,slug,codeBtn){
+  const r=s.rich||{};
+  const figures=(r.figures||[]).map(f=>`<figure class="figureFeature"><img src="${esc(f.url)}" alt="${esc(f.title)}" loading="lazy"><figcaption class="fcap"><b>${esc(f.number)} · ${esc(f.title)}</b><br>${esc(f.caption)}</figcaption></figure>`).join('');
+  const datasets=(r.dataset_cards||[]).map(d=>`<div class="datasetCard" style="border-top:4px solid ${esc(d.accent||'#0b8da5')}"><small>${esc(d.name)}</small><b>${esc(d.value)}</b><span>${esc(d.detail)}</span></div>`).join('');
+  const results=(r.result_cards||[]).map(d=>`<div class="resultCard"><small>${esc(d.label)}</small><b>${esc(d.main)}</b><span>${esc(d.sub)}</span></div>`).join('');
+  const impl=(r.implementation||[]).map(x=>`<div class="implItem">${esc(x)}</div>`).join('');
+  const rows=(r.metrics_table||[]).map(x=>`<tr><td>${esc(x[0])}</td><td><b>${esc(x[1])}</b></td><td>${esc(x[2])}</td></tr>`).join('');
+  return `<div class="backRow"><button class="backBtn" onclick="closeStudy()">← Volver a todos los estudios</button><div class="shareHint">Enlace directo: #${esc(slug)}</div></div>
+  <article class="richPaper">
+    <header class="richHero">
+      <div class="richMeta">
+        <span class="richChip">${s.countryFlags} ${esc(s.country)}</span>
+        <span class="richChip">${esc(s.area)}</span>
+        <span class="richChip">${esc(s.published||s.date)}</span>
+        <span class="richChip">${esc(s.journal||'')}</span>
+      </div>
+      <h1 class="richTitle">${esc(s.title)}</h1>
+      <div class="richTitleEs">${esc(s.title_es||'')}</div>
+      <div class="richByline">${esc(s.authors||'')} · DOI: ${esc(s.doi||'')}</div>
+      <div class="richIntroGrid">
+        <div class="richLead"><h3>Resumen para entenderlo rápido</h3><p>${esc(s.summary)}</p></div>
+        <div class="richRemember"><div class="ey">Idea que debes recordar</div><p>${esc(s.remember)}</p></div>
+      </div>
+      <div class="detailActions" style="margin-top:18px"><a class="btn" href="${esc(s.paper)}" target="_blank" rel="noopener">Abrir paper original</a>${codeBtn}</div>
+    </header>
+
+    <section class="infographicSection">
+      <div class="infographicBand"><span class="n">1</span><h3>El problema</h3></div>
+      <div class="richTwoCol">
+        <div class="richCard"><h4>¿Por qué es difícil?</h4><p>${esc(r.problem||'')}</p></div>
+        <div class="richCard"><h4>Reto central</h4><p><b>Multimodalidad + muestreo irregular.</b> Laboratorios, signos vitales, medicamentos, ECG, CXR y texto no llegan en el mismo formato ni al mismo ritmo.</p></div>
+      </div>
+    </section>
+
+    <section class="infographicSection">
+      <div class="infographicBand"><span class="n">2</span><h3>La idea de ViTiMM</h3></div>
+      <div class="richCard" style="margin-bottom:16px"><h4>Visual prompt engineering</h4><p>${esc(r.idea||'')}</p><p style="margin-top:10px">${esc(r.why||'')}</p></div>
+      ${figures[0]||''}
+    </section>
+
+    <section class="infographicSection">
+      <div class="infographicBand"><span class="n">3</span><h3>Arquitectura</h3></div>
+      ${figures[1]||''}
+      <div class="richSourceNote">Lectura rápida: cada modalidad visual tiene su propio encoder; el texto usa RoBERTa; los embeddings se fusionan al final para clasificar.</div>
+    </section>
+
+    <section class="infographicSection">
+      <div class="infographicBand"><span class="n">4</span><h3>Datasets evaluados</h3></div>
+      <div class="datasetGrid">${datasets}</div>
+    </section>
+
+    <section class="infographicSection">
+      <div class="infographicBand"><span class="n">5</span><h3>Resultados clave</h3></div>
+      <div class="resultGrid">${results}</div>
+      <div style="margin-top:18px;overflow:auto"><table class="richMetricTable"><thead><tr><th>Tarea / configuración</th><th>Métrica</th><th>Valor</th></tr></thead><tbody>${rows}</tbody></table></div>
+    </section>
+
+    <section class="infographicSection">
+      <div class="infographicBand"><span class="n">6</span><h3>¿Qué aprendió el modelo?</h3></div>
+      <div class="richCard" style="margin-bottom:16px"><h4>Interpretabilidad</h4><p>${esc(r.interpretability||'')}</p></div>
+      ${figures[2]||''}
+    </section>
+
+    <section class="infographicSection">
+      <div class="infographicBand"><span class="n">7</span><h3>Implementación y reproducibilidad</h3></div>
+      <div class="implGrid">${impl}</div>
+    </section>
+
+    <section class="infographicSection">
+      <div class="infographicBand"><span class="n">8</span><h3>Limitaciones</h3></div>
+      <div class="richLimit">${esc(s.limitations)}</div>
+      <div class="richSourceNote">${esc(r.attribution||'')} · Las figuras se muestran para explicar el paper y enlazan a los recursos del artículo original.</div>
+    </section>
+  </article>`;
+}
 function openStudy(slug, push=true){
   const s=DATA.find(x=>slugify(x.date+'-'+x.title)===slug); if(!s) return;
   const codeBtn=s.code?`<a class="btn secondary" href="${esc(s.code)}" target="_blank" rel="noopener">Código / repositorio</a>`:'';
+  if(s.rich_detail){
+    detailView.classList.add('lightMode');
+    detailView.innerHTML=richStudyHTML(s,slug,codeBtn);
+    indexWrap.style.display='none';
+    detailView.classList.add('open');
+    detailView.setAttribute('aria-hidden','false');
+    if(push) history.pushState({study:slug},'',`#${slug}`);
+    window.scrollTo({top:0,behavior:'instant'});
+    return;
+  }
+  detailView.classList.remove('lightMode');
   detailView.innerHTML=`
     <div class="backRow"><button class="backBtn" onclick="closeStudy()">← Volver a todos los estudios</button><div class="shareHint">Enlace directo: #${esc(slug)}</div></div>
     <article class="detailShell">
@@ -263,6 +393,7 @@ function openStudy(slug, push=true){
 }
 function closeStudy(push=true){
   detailView.classList.remove('open');
+  detailView.classList.remove('lightMode');
   detailView.setAttribute('aria-hidden','true');
   detailView.innerHTML='';
   indexWrap.style.display='block';
