@@ -1934,27 +1934,27 @@
   },
   {
     "date": "2026-09-03",
-    "flag": "🌍",
-    "country": "EE. UU. / Europa",
+    "flag": "🇩🇪",
+    "country": "Alemania",
     "area": "IA multimodal",
-    "modality": "RX + ECG + EHR",
-    "title": "ViTiMM: un Vision Transformer integra RX, ECG, laboratorio y medicamentos",
-    "institution": "Consorcio internacional",
-    "sample": "6.175 pacientes del subconjunto multimodal MIMIC-IV",
-    "design": "Retrospectivo",
-    "model": "Swin Transformer / ViT + RoBERTa",
-    "metrics": "AUROC 0,922 para mortalidad hospitalaria.",
-    "summary": "Convierte múltiples fuentes clínicas en representaciones que pueden integrarse con un transformer visual.",
-    "limitations": "Datasets retrospectivos; sin impacto clínico prospectivo.",
-    "remember": "La siguiente generación de IA clínica será multimodal.",
-    "language": "Python",
-    "framework": "PyTorch (repositorio público)",
-    "hardware": "RTX 3090 24 GB",
-    "cost": "Consumo reportado 0,224 kWh; costo monetario no reportado",
+    "modality": "Laboratorio + signos vitales + medicamentos + CXR + ECG + texto clínico",
+    "title": "Visual prompt engineering for multimodal and irregularly sampled medical data",
+    "institution": "Heidelberg University Hospital, Informatics for Life Institute, German Centre for Cardiovascular Research y University Medical Center Mainz",
+    "sample": "MIMIC-IV: 6.125 pacientes y 6.798 estancias UCI con CXR emparejada; 3.840 ECG (56%). CDSL: 4.406 pacientes en evaluación, 1.311 CXR y 4.387 con parámetros clínicos.",
+    "design": "Análisis retrospectivo de dos datasets públicos y desidentificados (MIMIC-IV y CDSL) con benchmarks de mortalidad intrahospitalaria, fenotipado y descompensación.",
+    "model": "ViTiMM: un Swin/ViT por modalidad visual + RoBERTa para texto + fusión tardía de embeddings",
+    "metrics": "MIMIC mortalidad, 4 modalidades: AUROC 0,922; AUPRC 0,764; Balanced Accuracy 0,847. CDSL mortalidad: AUROC 0,987; AUPRC 0,934; Balanced Accuracy 0,958. MIMIC fenotipado, 4 modalidades: AUROC 0,784; AUPRC 0,549; Balanced Accuracy 0,659. MIMIC descompensación: mejor AUROC 0,797 con datos clínicos + CXR; 4 modalidades AUROC 0,793.",
+    "summary": "El problema que aborda ViTiMM es práctico: en UCI los datos llegan en formatos y tiempos distintos. En lugar de diseñar una arquitectura específica para cada modalidad, el estudio convierte las series temporales clínicas y los medicamentos en imágenes tipo gráfico, conserva la radiografía de tórax como imagen, representa el ECG visualmente y procesa los metadatos e informes como texto. Cada modalidad visual pasa por un Vision Transformer y el texto por RoBERTa; después se fusionan sus embeddings para realizar predicciones clínicas.",
+    "limitations": "La rasterización de series temporales puede perder información cuando la frecuencia de muestreo supera la resolución visual; algunas medicaciones pueden actuar como variables confusoras; la generalización fuera de MIMIC-IV y CDSL requiere más datasets externos; para ciertas tareas añadir más modalidades no mejoró el resultado.",
+    "remember": "La innovación no es solo usar un Transformer: es transformar modalidades clínicas heterogéneas en representaciones visuales compatibles para reducir la complejidad de integración multimodal.",
+    "language": "No reportado en el artículo",
+    "framework": "Swin Transformer / ViT + RoBERTa; el artículo no especifica el framework de software",
+    "hardware": "1 × NVIDIA RTX 3090, 24 GB VRAM; imágenes 384 × 384; inferencia de todas las modalidades: 0,074 s",
+    "cost": "Costo monetario no reportado. Entrenamiento multimodal: CDSL 10 min 30 s / 0,129 kWh; MIMIC 27 min / 0,224 kWh.",
     "paper": "https://www.nature.com/articles/s43856-026-01817-x",
     "code": "https://github.com/Cardio-AI/ViTiMM",
-    "key_metric": "AUROC 0,922 para mortalidad hospitalaria.",
-    "countryFlags": "🇺🇸 🇪🇺",
+    "key_metric": "MIMIC mortalidad multimodal: AUROC 0,922 · AUPRC 0,764 · Balanced Accuracy 0,847",
+    "countryFlags": "🇩🇪",
     "explainer": {
       "que_hizo": "Convierte múltiples fuentes clínicas en representaciones que pueden integrarse con un transformer visual. La propuesta se apoyó en Swin Transformer / ViT + RoBERTa y trabajó sobre datos de tipo rx + ecg + ehr.",
       "donde_y_quien": "Se realizó en EE. UU. / Europa y se atribuye a Consorcio internacional. El estudio se organizó como retrospectivo.",
@@ -1962,17 +1962,151 @@
       "por_que_importa": "Importa porque La siguiente generación de IA clínica será multimodal. Limitación principal: Datasets retrospectivos; sin impacto clínico prospectivo."
     },
     "theme": {
-      "a": "#2f6ae5",
-      "b": "#8bc6ff",
+      "a": "#0d7ea4",
+      "b": "#72c7d4",
       "emoji": "🧠",
-      "label": "Imagen"
+      "label": "IA multimodal"
     },
     "supportCaptions": [
-      "Modalidad principal: RX + ECG + EHR",
-      "Pregunta clínica: IA multimodal",
-      "Tecnología central: Swin Transformer / ViT + RoBERTa"
+      "Modalidades: laboratorio, signos vitales, medicamentos, CXR, ECG y texto",
+      "Arquitectura: Swin/ViT + RoBERTa + fusión tardía",
+      "Tareas: mortalidad, fenotipado y descompensación"
     ],
-    "rubro": "IA clínica y datos"
+    "rubro": "IA clínica y datos",
+    "title_es": "Ingeniería de prompts visuales para datos médicos multimodales y muestreados irregularmente",
+    "rich_detail": true,
+    "authors": "Malte Tölle, Mohamad Scharaf, Samantha Fischer et al.",
+    "journal": "Communications Medicine · Vol. 6 · Article 474 · 2026",
+    "doi": "10.1038/s43856-026-01817-x",
+    "published": "01 septiembre 2026",
+    "rich": {
+      "problem": "En una UCI, los laboratorios, signos vitales, medicamentos, ECG, radiografías y textos clínicos no se registran con la misma frecuencia ni tienen el mismo formato. Los modelos multimodales tradicionales suelen necesitar un encoder y una estrategia de preprocesamiento específica para cada fuente.",
+      "idea": "ViTiMM convierte las series temporales clínicas y de medicamentos en gráficos que se tratan como imágenes. CXR y ECG también entran como imágenes; los metadatos e informes entran como texto. Cada modalidad visual usa su propio Swin Transformer o ViT, el texto usa RoBERTa y los embeddings se concatenan al final. Esto permite añadir o quitar modalidades sin rediseñar todo el sistema.",
+      "why": "La idea reduce la ingeniería específica por modalidad. El equipo llama a esto visual prompt engineering: el trabajo de diseño se desplaza desde crear nuevos encoders hacia decidir cómo visualizar cada tipo de dato para que un Transformer visual pueda interpretarlo.",
+      "interpretability": "Los mapas de atención mostraron que, para un paciente fallecido correctamente clasificado, el modelo se concentró en frecuencia respiratoria, presión arterial diastólica y frecuencia cardiaca; en medicamentos prestó especial atención a vasopresores e inotrópicos. En la CXR, la atención se concentró en un dispositivo implantado y en el ECG fue más difusa.",
+      "dataset_cards": [
+        {
+          "name": "MIMIC-IV",
+          "value": "6.125 pacientes",
+          "detail": "6.798 estancias UCI · 6.798 CXR · 3.840 ECG (56%)",
+          "accent": "#0c7ea5"
+        },
+        {
+          "name": "CDSL",
+          "value": "4.406 pacientes",
+          "detail": "1.311 CXR (30%) · 4.387 con parámetros clínicos · 538 muertes",
+          "accent": "#2a9d8f"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "MIMIC · Mortalidad",
+          "main": "AUROC 0,922",
+          "sub": "AUPRC 0,764 · Bal.Acc. 0,847"
+        },
+        {
+          "label": "CDSL · Mortalidad",
+          "main": "AUROC 0,987",
+          "sub": "AUPRC 0,934 · Bal.Acc. 0,958"
+        },
+        {
+          "label": "MIMIC · Fenotipado",
+          "main": "AUROC 0,784",
+          "sub": "AUPRC 0,549 · Bal.Acc. 0,659"
+        },
+        {
+          "label": "MIMIC · Descompensación",
+          "main": "AUROC 0,797",
+          "sub": "Mejor con datos clínicos + CXR"
+        }
+      ],
+      "implementation": [
+        "GPU: NVIDIA RTX 3090 (24 GB)",
+        "Resolución visual: 384 × 384",
+        "Inferencia multimodal: 0,074 s",
+        "MIMIC entrenamiento completo: ~27 min",
+        "CDSL entrenamiento completo: ~10 min 30 s",
+        "Código y pesos: repositorio público"
+      ],
+      "figures": [
+        {
+          "number": "Figura 2",
+          "url": "https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fs43856-026-01817-x/MediaObjects/43856_2026_1817_Fig2_HTML.png",
+          "title": "Cómo representan las cuatro modalidades",
+          "caption": "Los parámetros clínicos y medicamentos se convierten en gráficos; el ECG se visualiza como trazados y la radiografía se mantiene como imagen."
+        },
+        {
+          "number": "Figura 4",
+          "url": "https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fs43856-026-01817-x/MediaObjects/43856_2026_1817_Fig4_HTML.png",
+          "title": "Arquitectura de ViTiMM",
+          "caption": "Cada modalidad visual pasa por un Vision Transformer; el texto entra por RoBERTa. Después se concatenan los embeddings y se realiza la clasificación."
+        },
+        {
+          "number": "Figura 6",
+          "url": "https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fs43856-026-01817-x/MediaObjects/43856_2026_1817_Fig6_HTML.png",
+          "title": "Qué atendió el modelo",
+          "caption": "Los mapas de atención permiten ver qué regiones de los datos clínicos, medicamentos, ECG, CXR y texto influyeron en una predicción de mortalidad."
+        }
+      ],
+      "metrics_table": [
+        [
+          "MIMIC · Mortalidad · C|M|X|E",
+          "AUROC",
+          "0,922"
+        ],
+        [
+          "MIMIC · Mortalidad · C|M|X|E",
+          "AUPRC",
+          "0,764"
+        ],
+        [
+          "MIMIC · Mortalidad · C|M|X|E",
+          "Balanced Accuracy",
+          "0,847"
+        ],
+        [
+          "CDSL · Mortalidad · multimodal",
+          "AUROC",
+          "0,987"
+        ],
+        [
+          "CDSL · Mortalidad · multimodal",
+          "AUPRC",
+          "0,934"
+        ],
+        [
+          "CDSL · Mortalidad · multimodal",
+          "Balanced Accuracy",
+          "0,958"
+        ],
+        [
+          "MIMIC · Fenotipado · C|M|X|E",
+          "AUROC",
+          "0,784"
+        ],
+        [
+          "MIMIC · Fenotipado · C|M|X|E",
+          "AUPRC",
+          "0,549"
+        ],
+        [
+          "MIMIC · Fenotipado · C|M|X|E",
+          "Balanced Accuracy",
+          "0,659"
+        ],
+        [
+          "MIMIC · Descompensación · C|X",
+          "AUROC",
+          "0,797"
+        ],
+        [
+          "MIMIC · Descompensación · C|M|X|E",
+          "AUROC",
+          "0,793"
+        ]
+      ],
+      "attribution": "Figuras 2, 4 y 6: Tölle et al., Communications Medicine (2026), CC BY 4.0."
+    }
   },
   {
     "date": "2026-09-01",
