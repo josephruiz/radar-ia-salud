@@ -88,9 +88,26 @@ input,select{width:100%;background:var(--panel);color:var(--text);border:1px sol
 .linkRow{display:flex;flex-wrap:wrap;gap:10px}
 .note{color:#6e8796;font-size:13px;line-height:1.65;margin-top:10px}
 
-.vitimmShell{background:#fff;color:#17324a}
-.vitimmHero{padding:34px 42px;background:linear-gradient(180deg,#fbfeff,#f1f8fa)}
-.vitimmHeroGrid{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:center}
+.vitimmShell{background:#fffdf9;color:#17324a;width:100%;max-width:none;border-left:0;border-right:0}
+body.vitimm-focus{background:#fbfaf7}
+body.vitimm-focus .detailView{background:#fbfaf7;min-height:100vh;margin:0;padding:0}
+body.vitimm-focus .backRow{max-width:1600px;margin:0 auto;padding:16px 5vw 10px}
+body.vitimm-focus .backBtn{box-shadow:0 6px 18px rgba(42,73,62,.06)}
+.vInfographicHero{background:linear-gradient(180deg,#fffefb,#f6fbfa);border:1px solid #e1e9e5;border-radius:28px;padding:18px;box-shadow:0 16px 38px rgba(45,73,64,.07);margin-bottom:28px}
+.vInfographicHero img{width:100%;display:block;border-radius:20px;background:#fff;max-height:1180px;object-fit:contain}
+.vInfographicHero .cap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 4px 2px;color:#627b70;font-size:13px;line-height:1.55}
+.vInfographicHero .openInfo{white-space:nowrap;background:#eaf7f5;color:#176a68;border:1px solid #cfe6e1;border-radius:999px;padding:8px 11px;font-weight:800;text-decoration:none}
+.vVisualLead{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;align-items:stretch;margin-bottom:22px}
+.vVisualLead .leadCopy{background:linear-gradient(135deg,#eef9f7,#f8fbff);border:1px solid #dbe8e4;border-radius:22px;padding:20px}
+.vVisualLead .leadCopy h4{margin:0 0 8px;color:#0e6f78;font-size:20px}
+.vVisualLead .leadCopy p{margin:0;color:#45685f;line-height:1.65;font-size:15px}
+.vVisualLead .leadPoints{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.vVisualLead .point{background:#fff;border:1px solid #e1e9e6;border-radius:18px;padding:14px}
+.vVisualLead .point b{display:block;color:#143f59;margin-bottom:4px}
+.vVisualLead .point span{color:#6a8178;font-size:12px;line-height:1.45}
+@media(max-width:900px){.vVisualLead{grid-template-columns:1fr}.vInfographicHero .cap{flex-direction:column;align-items:flex-start}}
+.vitimmHero{padding:42px 5vw;background:linear-gradient(180deg,#fffdf9,#f7fbfa)}
+.vitimmHeroGrid{display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center;max-width:1600px;margin:0 auto}
 .vitimmChips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:16px}
 .vitimmChip{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid #d8e7ec;padding:8px 12px;border-radius:999px;font-size:12px;font-weight:800;color:#24566c}
 .vitimmTitle{font-size:clamp(34px,5vw,62px);line-height:1.03;margin:0 0 10px;color:#123f5b;max-width:760px}
@@ -103,10 +120,10 @@ input,select{width:100%;background:var(--panel);color:var(--text);border:1px sol
 .vitimmFigureCard{background:#fff;border:1px solid #dce9ed;border-radius:26px;padding:16px;box-shadow:0 15px 40px rgba(14,76,98,.08)}
 .vitimmFigureCard img{width:100%;display:block;border-radius:16px;max-height:520px;object-fit:contain;background:#fff}
 .vitimmFigureCard .cap{margin-top:10px;color:#5f7b8c;font-size:13px;line-height:1.55}
-.vitimmTabs{display:flex;gap:10px;flex-wrap:wrap;padding:18px 42px;background:#fff;border-top:1px solid #e3edf1;border-bottom:1px solid #e3edf1;position:sticky;top:0;z-index:8}
+.vitimmTabs{display:flex;gap:10px;flex-wrap:wrap;padding:18px 5vw;background:rgba(255,253,249,.96);border-top:1px solid #e7ece9;border-bottom:1px solid #e7ece9;position:sticky;top:0;z-index:8;backdrop-filter:blur(10px)}
 .vitimmTabBtn{background:#fff;border:1px solid #d7e7eb;color:#24566c;padding:11px 16px;border-radius:999px;font-weight:850;font-size:14px;cursor:pointer}
 .vitimmTabBtn.active{background:#0b8da5;color:#fff;border-color:#0b8da5;box-shadow:0 10px 22px rgba(11,141,165,.18)}
-.vitimmPanel{display:none;padding:28px 42px}.vitimmPanel.active{display:block}
+.vitimmPanel{display:none;padding:34px 5vw;max-width:1600px;margin:0 auto}.vitimmPanel.active{display:block}
 .vSectionTitle{display:flex;align-items:center;gap:12px;margin:0 0 18px}.vSectionTitle .n{width:38px;height:38px;border-radius:50%;background:#0b8da5;color:#fff;display:grid;place-items:center;font-weight:900;font-size:18px}.vSectionTitle h3{margin:0;color:#123f5b;font-size:28px}
 .vQuickGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
 .vQuickCard{background:#fff;border:1px solid #d9e8ec;border-radius:22px;padding:20px;min-height:180px;position:relative;overflow:hidden;box-shadow:0 8px 22px rgba(15,79,102,.05)}
@@ -115,8 +132,8 @@ input,select{width:100%;background:var(--panel);color:var(--text);border:1px sol
 .vMetricRow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:18px}
 .vMetric{background:linear-gradient(180deg,#f8fdfe,#eff8fb);border:1px solid #d7e7eb;border-radius:18px;padding:16px;text-align:center}
 .vMetric small{color:#698391;font-weight:800}.vMetric strong{display:block;color:#0b718c;font-size:27px;margin:6px 0}.vMetric span{display:block;color:#718896;font-size:12px;line-height:1.4}
-.vFigureFull{background:#fff;border:1px solid #dce9ed;border-radius:24px;padding:14px;box-shadow:0 10px 28px rgba(15,80,104,.06)}
-.vFigureFull img{width:100%;display:block;border-radius:16px;background:#fff}
+.vFigureFull{background:#fff;border:1px solid #e0e7e4;border-radius:24px;padding:16px;box-shadow:0 12px 30px rgba(55,74,65,.06)}
+.vFigureFull img{width:100%;display:block;border-radius:16px;background:#fff;max-height:none;object-fit:contain}
 .vFigureFull .cap{padding:10px 4px 2px;color:#607b8c;line-height:1.55}
 .vFigureTwo{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}
 .vExplain{background:#f8fcfd;border:1px solid #dbe9ed;border-radius:22px;padding:18px}.vExplain h4{margin:0 0 10px;color:#0b718c}.vExplain ul{margin:0;padding-left:18px;color:#45687a;line-height:1.7}
@@ -275,7 +292,27 @@ function renderVitimmStudy(s,slug,codeBtn){
     </nav>
 
     <section class="vitimmPanel active" data-tab="resumen">
-      <div class="vSectionTitle"><span class="n">1</span><h3>Entiéndelo rápido</h3></div>
+      <div class="vSectionTitle"><span class="n">1</span><h3>Resumen visual</h3></div>
+      <div class="vInfographicHero">
+        <img src="${figPaper}" alt="Infografía visual completa de ViTiMM" loading="eager">
+        <div class="cap">
+          <span>Vista completa del estudio: problema, arquitectura, datasets, resultados, interpretabilidad, implementación y limitaciones.</span>
+          <a class="openInfo" href="${figPaper}" target="_blank" rel="noopener">Abrir infografía ↗</a>
+        </div>
+      </div>
+      <div class="vVisualLead">
+        <div class="leadCopy">
+          <h4>¿Qué propone ViTiMM?</h4>
+          <p>Transforma casi todas las modalidades clínicas en representaciones visuales para que puedan procesarse con Vision Transformers, y luego fusiona esas representaciones con el texto clínico. Así reduce la necesidad de diseñar una arquitectura distinta para cada fuente.</p>
+        </div>
+        <div class="leadPoints">
+          <div class="point"><b>🏥 Problema</b><span>Datos clínicos heterogéneos y muestreados irregularmente.</span></div>
+          <div class="point"><b>🖼️ Idea</b><span>Convertir series temporales y medicación en imágenes.</span></div>
+          <div class="point"><b>🧠 Fusión</b><span>Swin/ViT + RoBERTa + concatenación de embeddings.</span></div>
+          <div class="point"><b>🎯 Resultado</b><span>AUROC 0,922 en mortalidad MIMIC y 0,987 en CDSL.</span></div>
+        </div>
+      </div>
+      <div class="vSectionTitle"><span class="n">2</span><h3>Lectura rápida</h3></div>
       <div class="vQuickGrid">
         <div class="vQuickCard"><div class="ico">🏥</div><h4>Problema</h4><p>En UCI, laboratorio, signos vitales, medicamentos, ECG, radiografías y texto llegan en formatos y tiempos diferentes. Integrarlos normalmente obliga a diseñar arquitecturas separadas.</p></div>
         <div class="vQuickCard"><div class="ico">🖼️</div><h4>Idea central</h4><p>ViTiMM convierte series clínicas y medicamentos en imágenes. Así, casi todo se puede procesar con Vision Transformers y luego fusionar con texto clínico.</p></div>
@@ -288,15 +325,26 @@ function renderVitimmStudy(s,slug,codeBtn){
         <div class="vMetric"><small>MIMIC · Descompensación</small><strong>0,797</strong><span>AUROC · clínica + CXR</span></div>
       </div>
       <div style="height:18px"></div>
-      <div class="vSectionTitle"><span class="n">2</span><h3>Infografía del paper</h3></div>
-      <div class="vFigureFull">
-        <img src="${figPaper}" alt="Infografía completa de ViTiMM" loading="lazy">
-        <div class="cap">Esta es la infografía completa del estudio para que el lector pueda captar de un vistazo el problema, la idea del modelo, los datasets evaluados, los resultados principales, la interpretabilidad y las limitaciones.</div>
+      <div class="vSectionTitle"><span class="n">3</span><h3>Arquitectura original del paper</h3></div>
+      <div class="vFigureTwo">
+        <div class="vFigureFull">
+          <img src="${figArch}" alt="Arquitectura original de ViTiMM" loading="lazy">
+          <div class="cap">Cada modalidad visual tiene su propio encoder; el texto usa RoBERTa y la fusión ocurre al concatenar los embeddings.</div>
+        </div>
+        <div class="vExplain"><h4>Cómo leer la figura</h4><ul><li>Datos clínicos, medicación, CXR y ECG entran como modalidades visuales.</li><li>El texto clínico se procesa por separado.</li><li>Las representaciones se combinan en una capa común.</li><li>El clasificador produce la predicción clínica final.</li></ul></div>
       </div>
     </section>
 
     <section class="vitimmPanel" data-tab="infografia">
-      <div class="vSectionTitle"><span class="n">1</span><h3>Recorrido completo del estudio</h3></div>
+      <div class="vSectionTitle"><span class="n">1</span><h3>Infografía completa</h3></div>
+      <div class="vInfographicHero">
+        <img src="${figPaper}" alt="Infografía completa de ViTiMM" loading="eager">
+        <div class="cap">
+          <span>Úsala como vista general del paper antes de bajar al detalle por bloques.</span>
+          <a class="openInfo" href="${figPaper}" target="_blank" rel="noopener">Ver en tamaño completo ↗</a>
+        </div>
+      </div>
+      <div class="vSectionTitle"><span class="n">2</span><h3>Recorrido completo del estudio</h3></div>
       <div class="vBoard">
         <div class="vBand">
           <div class="vBandHead"><span class="num">1</span><h4>El problema</h4></div>
@@ -346,7 +394,7 @@ function renderVitimmStudy(s,slug,codeBtn){
 function openStudy(slug, push=true){
   const s=DATA.find(x=>slugify(x.date+'-'+x.title)===slug); if(!s) return;
   const codeBtn=s.code?`<a class="btn secondary" href="${esc(s.code)}" target="_blank" rel="noopener">Código / repositorio</a>`:'';
-  if((s.title||'').includes('ViTiMM')){detailView.innerHTML=renderVitimmStudy(s,slug,codeBtn);} else {detailView.innerHTML=`
+  if((s.title||'').includes('ViTiMM')){document.body.classList.add('vitimm-focus');detailView.innerHTML=renderVitimmStudy(s,slug,codeBtn);} else {document.body.classList.remove('vitimm-focus');detailView.innerHTML=`
     <div class="backRow"><button class="backBtn" onclick="closeStudy()">← Volver a todos los estudios</button><div class="shareHint">Enlace directo: #${esc(slug)}</div></div>
     <article class="detailShell">
       <div class="sheetHero">
@@ -409,6 +457,7 @@ function openStudy(slug, push=true){
   window.scrollTo({top:0,behavior:'instant'});
 }
 function closeStudy(push=true){
+  document.body.classList.remove('vitimm-focus');
   detailView.classList.remove('open');
   detailView.setAttribute('aria-hidden','true');
   detailView.innerHTML='';
