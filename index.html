@@ -22,7 +22,29 @@
 html{scroll-behavior:smooth}
 body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto;background:radial-gradient(circle at top left,#121d42 0,#0b1226 28%,#08101e 100%);color:var(--text)}
 a{color:#a9c8ff;text-decoration:none}
-.wrap{max-width:1380px;margin:auto;padding:24px}
+.siteShell{display:grid;grid-template-columns:248px minmax(0,1fr);min-height:100vh}
+.sideNav{position:sticky;top:0;height:100vh;background:linear-gradient(180deg,#081426,#0a1a2e);border-right:1px solid #1b3350;padding:20px 16px;display:flex;flex-direction:column;gap:18px;z-index:60}
+.sideBrand{display:flex;align-items:center;gap:11px;padding:4px 8px 10px}
+.sideBrandMark{width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,#0ea5b7,#5278ff);display:grid;place-items:center;font-size:23px;box-shadow:0 10px 24px rgba(14,165,183,.2)}
+.sideBrandText b{display:block;color:#f2f7ff;font-size:15px}.sideBrandText span{display:block;color:#7f97b9;font-size:11px;margin-top:2px}
+.sideMenu{display:flex;flex-direction:column;gap:6px}
+.sideMenu button{width:100%;display:flex;align-items:center;gap:11px;padding:11px 12px;border-radius:13px;border:1px solid transparent;background:transparent;color:#a9bdd7;font-weight:760;text-align:left;cursor:pointer;font-size:13px}
+.sideMenu button:hover,.sideMenu button.active{background:#0b3844;color:#7af3e0;border-color:#135565}
+.sideMenu .ico{width:22px;text-align:center;font-size:16px}
+.sideDivider{height:1px;background:#18304a;margin:2px 6px}
+.sideSectionTitle{font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#637f9f;font-weight:850;padding:0 8px}
+.sideFilters{display:flex;flex-direction:column;gap:9px}
+.sideFilters input,.sideFilters select{font-size:12px;padding:10px 11px;border-radius:11px;background:#0d1b31;border-color:#203958}
+.sideStatus{margin-top:auto;border-top:1px solid #18304a;padding:14px 8px 4px;color:#7e97b7;font-size:11px;line-height:1.55}
+.sideStatus b{color:#dce9ff}
+.mainStage{min-width:0}
+.wrap{max-width:1450px;margin:auto;padding:24px 30px}
+@media(max-width:1050px){.siteShell{grid-template-columns:1fr}.sideNav{position:relative;height:auto;border-right:none;border-bottom:1px solid #1b3350}.sideMenu{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}.sideFilters{display:grid;grid-template-columns:1fr 1fr}.sideStatus{margin-top:0}.wrap{padding:20px}.sideBrand{padding-bottom:4px}}
+@media(max-width:620px){.sideMenu{grid-template-columns:1fr 1fr}.sideFilters{grid-template-columns:1fr}.sideNav{padding:14px 12px}}
+.areaThumb{width:100%;height:100%;display:block}
+.areaThumbBg{fill:#0b1730}
+.areaThumbLabel{font-family:Inter,system-ui,sans-serif;font-weight:800;fill:#eff6ff}
+.areaThumbSub{font-family:Inter,system-ui,sans-serif;fill:#9bb4d2}
 .hero{padding:24px 0 10px}
 .eyebrow{color:var(--accent2);font-weight:800;letter-spacing:.16em;text-transform:uppercase;font-size:12px}
 .heroGrid{display:grid;grid-template-columns:1.2fr .95fr;gap:28px;align-items:start}
@@ -37,11 +59,11 @@ h1{font-size:clamp(38px,5vw,64px);margin:10px 0 12px;line-height:1.02}
 .toolbar{display:grid;grid-template-columns:1.4fr repeat(4,minmax(150px,.6fr));gap:12px;position:sticky;top:0;z-index:40;padding:14px 0 16px;background:linear-gradient(180deg,rgba(10,16,32,.97),rgba(10,16,32,.86),rgba(10,16,32,0));backdrop-filter:blur(10px)}
 input,select{width:100%;background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:14px;padding:13px 14px;outline:none;font-size:15px}
 .stats{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0 26px}
-.worldMapSection{background:linear-gradient(180deg,#ffffff,#f6fbfc);border:1px solid #d8e7ec;border-radius:26px;padding:20px;margin:4px 0 34px;box-shadow:0 14px 34px rgba(20,72,94,.08)}
+.worldMapSection{background:linear-gradient(180deg,#0f1730,#0a1226);border:1px solid #263553;border-radius:26px;padding:20px;margin:4px 0 34px;box-shadow:0 18px 46px rgba(0,0,0,.24)}
 .worldMapHead{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:8px}
-.worldMapHead h2{margin:0;font-size:24px;color:#123f5b}
-.worldMapHead p{margin:5px 0 0;color:var(--muted);line-height:1.5}
-.mapHint{font-size:12px;color:#6d8796;white-space:nowrap}
+.worldMapHead h2{margin:0;font-size:24px;color:#eef3ff}
+.worldMapHead p{margin:5px 0 0;color:#9fb0d0;line-height:1.5}
+.mapHint{font-size:12px;color:#8fa4cb;white-space:nowrap}
 #worldMap{width:100%;height:480px;border-radius:18px;overflow:hidden}
 .stat{background:var(--panel);border:1px solid var(--line);padding:10px 14px;border-radius:999px;color:var(--muted)}
 .stat b{color:var(--text)}
@@ -256,15 +278,41 @@ input,select{width:100%;background:var(--panel);color:var(--text);border:1px sol
 <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
 </head>
 <body>
-<div class="wrap">
-  <header class="hero">
+<div class="siteShell">
+  <aside class="sideNav">
+    <div class="sideBrand">
+      <div class="sideBrandMark">🧠</div>
+      <div class="sideBrandText"><b>Radar IA Salud</b><span>Biblioteca viva</span></div>
+    </div>
+    <nav class="sideMenu">
+      <button class="active" onclick="goHomeSection('inicio',this)"><span class="ico">⌂</span>Inicio</button>
+      <button onclick="goHomeSection('estudios',this)"><span class="ico">▣</span>Estudios</button>
+      <button onclick="focusSideFilter('area',this)"><span class="ico">◉</span>Áreas</button>
+      <button onclick="goHomeSection('paises',this)"><span class="ico">◎</span>Países</button>
+      <button onclick="goHomeSection('estadisticas',this)"><span class="ico">▥</span>Estadísticas</button>
+      <button onclick="goHomeSection('acerca',this)"><span class="ico">ⓘ</span>Acerca de</button>
+    </nav>
+    <div class="sideDivider"></div>
+    <div class="sideSectionTitle">Filtros</div>
+    <div class="sideFilters">
+      <input id="q" placeholder="Buscar estudio..." />
+      <select id="date"><option value="">Todas las fechas</option></select>
+      <select id="country"><option value="">Todos los países</option></select>
+      <select id="rubro"><option value="">Todos los rubros</option></select>
+      <select id="area"><option value="">Todas las áreas</option></select>
+    </div>
+    <div class="sideStatus">Última actualización<br><b id="updated">—</b></div>
+  </aside>
+  <div class="mainStage">
+    <div class="wrap">
+      <header id="inicio" class="hero">
     <div class="eyebrow">Biblioteca viva de IA en salud</div>
     <div class="heroGrid">
       <div>
         <h1>Radar IA Salud</h1>
         <p class="sub">Tu archivo curado de estudios sobre inteligencia artificial aplicada a la salud, ingeniería biomédica y tecnología médica. La idea de esta versión es que no solo veas títulos: cada estudio abre una ficha realmente útil, con explicación clara, imagen de apoyo conceptual, contexto clínico, limitaciones y una tabla final con los valores que sí importan.</p>
       </div>
-      <aside class="heroAside">
+      <aside id="estadisticas" class="heroAside">
         <div class="miniTitle">Qué encontrarás aquí</div>
         <p>• Biblioteca organizada por día y área.<br>• Banderas pequeñas para ubicar de inmediato el país o la colaboración internacional.<br>• Apertura de cada estudio en una ficha detallada y visual.<br>• Métricas, muestra, diseño, modelo, hardware, costos y enlaces al paper/código cuando existen.</p>
         <div class="quickFacts">
@@ -276,19 +324,8 @@ input,select{width:100%;background:var(--panel);color:var(--text);border:1px sol
       </aside>
     </div>
   </header>
-  <section class="toolbar">
-    <input id="q" placeholder="Buscar: neumonía, OCT, AUC, PyTorch, wearables, etiología..." />
-    <select id="date"><option value="">Todas las fechas</option></select>
-    <select id="country"><option value="">Todos los países</option></select>
-    <select id="rubro"><option value="">Todos los rubros</option></select>
-    <select id="area"><option value="">Todas las áreas</option></select>
-  </section>
-  <div class="stats">
-    <div class="stat">Última actualización <b id="updated">—</b></div>
-    <div class="stat">Vista pensada para <b>LinkedIn y portafolio</b></div>
-    <div class="stat">Formato: <b>archivo + lectura guiada + ficha técnica</b></div>
-  </div>
-  <section class="worldMapSection">
+  
+      <section id="paises" class="worldMapSection">
     <div class="worldMapHead">
       <div>
         <h2>Mapa mundial de estudios recopilados</h2>
@@ -298,10 +335,15 @@ input,select{width:100%;background:var(--panel);color:var(--text);border:1px sol
     </div>
     <div id="worldMap" aria-label="Mapa mundial de cantidad de estudios por país"></div>
   </section>
-  <main id="app"></main>
-  <footer class="footer">Los datos provienen de los resúmenes ya construidos en esta conversación. Cuando un paper o artículo no reporta un dato, se mantiene como <b>No reportado</b>. Las imágenes internas son <b>visuales de apoyo conceptual</b> para facilitar comprensión rápida del tema y la modalidad del estudio.</footer>
+  
+      <main id="estudios"><div id="app"></div></main>
+
+      <footer id="acerca" class="footer">Los datos provienen de los resúmenes ya construidos en esta conversación. Cuando un paper o artículo no reporta un dato, se mantiene como <b>No reportado</b>. Las imágenes internas son <b>visuales de apoyo conceptual</b> para facilitar comprensión rápida del tema y la modalidad del estudio.</footer>
+
+    </div>
+    <section id="detailView" class="detailView" aria-hidden="true"></section>
+  </div>
 </div>
-<section id="detailView" class="detailView" aria-hidden="true"></section>
 <script>
 let DATA = [];
 const q = document.getElementById('q'), dateSel=document.getElementById('date'), countrySel=document.getElementById('country'), rubroSel=document.getElementById('rubro'), areaSel=document.getElementById('area');
@@ -321,16 +363,64 @@ function populateFilters(){
 function esc(s){return (s||'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));}
 function slugify(s){return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');}
 function splitMetrics(metrics){return (metrics||'No reportado').split(/[;•]/).map(s=>s.trim()).filter(Boolean).map((m,i)=>{const colon=m.indexOf(':'); if(colon>0) return {label:m.slice(0,colon).trim(), value:m.slice(colon+1).trim()}; return {label:i===0?'Resultado principal':'Métrica', value:m};});}
-function supportSVG(study, small=false){const w=small?280:560, h=small?180:280; const t=study.theme||{a:'#4e61ff',b:'#8aa4ff',emoji:'🩺',label:'Clínica'}; const title=esc(study.theme.label||study.area||'Estudio'); const modality=esc(study.modality||''); const icon=esc(t.emoji||'🩺'); const country=esc(study.countryFlags||study.flag||'🌍'); return `<svg class="thumbArt" viewBox="0 0 ${w} ${h}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="visual de apoyo"><defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="${t.a}"/><stop offset="100%" stop-color="${t.b}"/></linearGradient><linearGradient id="g2" x1="1" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff22"/><stop offset="100%" stop-color="#ffffff08"/></linearGradient></defs><rect width="100%" height="100%" rx="24" fill="#0f1a33"/><circle cx="${w*0.82}" cy="${h*0.18}" r="${h*0.24}" fill="url(#g2)"/><circle cx="${w*0.15}" cy="${h*0.80}" r="${h*0.20}" fill="url(#g2)"/><rect x="18" y="18" width="${w-36}" height="${h-36}" rx="24" fill="url(#g1)" opacity="0.16" stroke="rgba(255,255,255,.18)"/><g><circle cx="${w*0.21}" cy="${h*0.35}" r="${h*0.15}" fill="rgba(255,255,255,.14)"/><text x="${w*0.21}" y="${h*0.39}" text-anchor="middle" font-size="${small?28:42}">${icon}</text></g><g fill="none" stroke="rgba(255,255,255,.32)" stroke-width="2"><path d="M${w*0.12} ${h*0.68} C${w*0.24} ${h*0.60}, ${w*0.34} ${h*0.74}, ${w*0.48} ${h*0.62}"/><path d="M${w*0.16} ${h*0.74} C${w*0.28} ${h*0.66}, ${w*0.40} ${h*0.82}, ${w*0.56} ${h*0.68}"/></g><text x="28" y="${h-66}" fill="#eef3ff" font-size="${small?15:22}" font-weight="800">${title}</text><text x="28" y="${h-38}" fill="#d4e1ff" font-size="${small?12:16}">${country} · ${modality}</text></svg>`;}
+function setSideActive(btn){
+  document.querySelectorAll('.sideMenu button').forEach(b=>b.classList.remove('active'));
+  if(btn) btn.classList.add('active');
+}
+function goHomeSection(id,btn){
+  if(detailView.classList.contains('open')) closeStudy(false);
+  setSideActive(btn);
+  const el=document.getElementById(id); if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+}
+function focusSideFilter(id,btn){
+  if(detailView.classList.contains('open')) closeStudy(false);
+  setSideActive(btn);
+  const el=document.getElementById(id); if(el){el.focus();el.scrollIntoView({behavior:'smooth',block:'center'});}
+}
+function areaVisualConfig(study){
+  const a=String(study.area||'').toLowerCase(), r=String(study.rubro||'').toLowerCase(), m=String(study.modality||'').toLowerCase();
+  if(a.includes('oftal')||m.includes('oct')||m.includes('retina')) return {icon:'👁️',label:'Oftalmología',sub:'retina · fondo de ojo · OCT',a:'#22c6d6',b:'#5d75ff'};
+  if(a.includes('neuro')||a.includes('alzheimer')) return {icon:'🧠',label:'Neurología',sub:'neuroimagen · cognición',a:'#8b6cff',b:'#3aa6ff'};
+  if(a.includes('cardio')||a.includes('wear')||m.includes('ecg')) return {icon:'💓',label:'Cardiología',sub:'ECG · señales · wearables',a:'#ff718f',b:'#8e69ff'};
+  if(a.includes('odonto')||a.includes('estomato')) return {icon:'🦷',label:'Odontología',sub:'imagen dental · clínica',a:'#42d3b5',b:'#3b8ff3'};
+  if(a.includes('oncolo')||a.includes('patolog')||a.includes('hemat')) return {icon:'🔬',label:'Oncología',sub:'patología · biomarcadores',a:'#ff9e5e',b:'#a568ff'};
+  if(a.includes('infect')||a.includes('tubercul')||m.includes('malaria')) return {icon:'🦠',label:'Infecciosas',sub:'detección · diagnóstico',a:'#53d18d',b:'#27a7cc'};
+  if(a.includes('gastro')) return {icon:'🧬',label:'Gastroenterología',sub:'biomarcadores · multi-omics',a:'#f2a94a',b:'#e56f9b'};
+  if(a.includes('uro')) return {icon:'🩻',label:'Urología',sub:'MRI · próstata · imagen',a:'#58a6ff',b:'#6e6cff'};
+  if(a.includes('cirug')||a.includes('trauma')) return {icon:'🏥',label:'Cirugía',sub:'procedimientos · soporte',a:'#4dc6c6',b:'#5178e8'};
+  if(a.includes('radio')||a.includes('mri')||a.includes('imagen')||r.includes('imágenes')) return {icon:'🩻',label:'Imágenes médicas',sub:'RX · CT · MRI · ultrasonido',a:'#4a8dff',b:'#7065ff'};
+  if(a.includes('uci')||a.includes('agentes')||a.includes('flujo')||a.includes('multimodal')||r.includes('ia clínica')) return {icon:'🤖',label:'IA clínica',sub:'EHR · multimodal · decisión',a:'#20c7b5',b:'#4779f3'};
+  return {icon:'🧠',label:study.area||'IA en salud',sub:study.rubro||study.modality||'inteligencia artificial',a:'#2dd4bf',b:'#6d6cff'};
+}
+function supportSVG(study, small=false){
+  const w=small?300:560, h=small?190:280, v=areaVisualConfig(study);
+  const label=esc(v.label), sub=esc(v.sub), icon=esc(v.icon);
+  const gid='g'+Math.random().toString(36).slice(2,7);
+  return `<svg class="areaThumb" viewBox="0 0 ${w} ${h}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${label}">
+    <defs>
+      <linearGradient id="${gid}" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="${v.a}"/><stop offset="100%" stop-color="${v.b}"/></linearGradient>
+      <radialGradient id="${gid}r" cx="75%" cy="15%" r="75%"><stop offset="0%" stop-color="${v.a}" stop-opacity=".28"/><stop offset="100%" stop-color="#0b1730" stop-opacity="0"/></radialGradient>
+    </defs>
+    <rect width="100%" height="100%" rx="24" fill="#0b1730"/>
+    <rect width="100%" height="100%" rx="24" fill="url(#${gid}r)"/>
+    <circle cx="${w*.73}" cy="${h*.37}" r="${h*.25}" fill="url(#${gid})" opacity=".16"/>
+    <circle cx="${w*.73}" cy="${h*.37}" r="${h*.16}" fill="url(#${gid})" opacity=".22"/>
+    <text x="${w*.73}" y="${h*.44}" text-anchor="middle" font-size="${small?44:66}">${icon}</text>
+    <g fill="none" stroke="url(#${gid})" stroke-width="2" opacity=".7">
+      <path d="M${w*.08} ${h*.58} C${w*.20} ${h*.43},${w*.33} ${h*.72},${w*.47} ${h*.51}"/>
+      <path d="M${w*.08} ${h*.69} C${w*.22} ${h*.58},${w*.34} ${h*.80},${w*.51} ${h*.64}"/>
+      <circle cx="${w*.16}" cy="${h*.30}" r="5"/><circle cx="${w*.29}" cy="${h*.25}" r="4"/><circle cx="${w*.42}" cy="${h*.32}" r="5"/>
+      <path d="M${w*.16} ${h*.30} L${w*.29} ${h*.25} L${w*.42} ${h*.32}"/>
+    </g>
+    <text x="24" y="${h-48}" class="areaThumbLabel" font-size="${small?17:24}">${label}</text>
+    <text x="24" y="${h-25}" class="areaThumbSub" font-size="${small?11:15}">${sub}</text>
+  </svg>`;
+}
 function metricChips(metrics){return splitMetrics(metrics).slice(0,3).map(m=>`<span class="metricChip"><b>${esc(m.label)}:</b> ${esc(m.value)}</span>`).join('');}
 function card(x){
   const code=x.code?`<a class="btn secondary" href="${esc(x.code)}" target="_blank" rel="noopener">Código</a>`:'';
-  const isRich=!!x.rich_detail;
-  const heroImg=isRich && x.rich?.figures?.[1]?.url ? x.rich.figures[1].url : '';
-  const visual=isRich && heroImg
-    ? `<div class="thumbBox"><div class="thumbMeta"><span class="flagPill">${x.countryFlags} ${esc(x.country)}</span><span class="areaPill">${esc(x.area)}</span></div><img src="${esc(heroImg)}" alt="Arquitectura del estudio" loading="lazy"></div>`
-    : `<div class="thumbBox"><div class="thumbMeta"><span class="flagPill">${x.countryFlags} ${esc(x.country)}</span><span class="areaPill">${esc(x.area)}</span></div>${supportSVG(x,true)}</div>`;
-  return `<article class="card ${isRich?'richCardPreview':''}">
+  const visual=`<div class="thumbBox"><div class="thumbMeta"><span class="flagPill">${x.countryFlags} ${esc(x.country)}</span><span class="areaPill">${esc(x.area)}</span></div>${supportSVG(x,true)}</div>`;
+  return `<article class="card">
     <div class="thumb">${visual}</div>
     <div class="cardBody">
       <div class="kicker">${esc(x.date)} · ${esc(x.modality)}</div>
@@ -620,11 +710,11 @@ function renderWorldMap(items){
       showframe:false,
       showcoastlines:false,
       showland:true,
-      landcolor:'#121c35',
+      landcolor:'#111d35',
       showcountries:true,
       countrycolor:'#263553',
       showocean:true,
-      oceancolor:'#08101e'
+      oceancolor:'#08111f'
     },
     font:{family:'Inter, ui-sans-serif, system-ui',color:'#eef3ff'}
   },{displayModeBar:false,responsive:true});
