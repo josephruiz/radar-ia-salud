@@ -112,6 +112,44 @@ input,select{width:100%;background:var(--panel);color:var(--text);border:1px sol
 .richTitle{font-size:clamp(34px,5vw,58px);line-height:1.03;margin:0;color:#113b59;letter-spacing:-.035em}
 .richTitleEs{font-size:15px;line-height:1.5;color:#607b8e;margin-top:10px;font-weight:600}
 .richByline{margin-top:18px;color:#527184;font-size:14px;line-height:1.6}
+.richHeroLayout{display:grid;grid-template-columns:1.02fr .98fr;gap:26px;align-items:center;margin-top:20px}
+.richHeroVisual{position:relative;min-height:360px;border-radius:26px;overflow:hidden;background:#eaf4f7;border:1px solid #cfe2e8;box-shadow:0 16px 42px rgba(24,86,108,.12)}
+.richHeroVisual img{width:100%;height:100%;min-height:360px;object-fit:contain;display:block;background:#fff}
+.richHeroVisual:after{content:"Figura del paper";position:absolute;right:12px;bottom:12px;background:rgba(12,56,75,.78);color:#fff;padding:7px 10px;border-radius:999px;font-size:11px;font-weight:800;letter-spacing:.05em}
+.richHeroCopy{display:flex;flex-direction:column;justify-content:center}
+.visualNav{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.visualNav a{display:inline-flex;align-items:center;gap:7px;background:#fff;border:1px solid #cfe1e7;color:#17556d;padding:9px 11px;border-radius:999px;font-size:12px;font-weight:800}
+.visualInfographic{background:linear-gradient(180deg,#f8fcfd,#eef8fa);border:1px solid #d7e8ec;border-radius:24px;padding:18px}
+.visualInfographicGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.vStep{background:#fff;border:1px solid #dbe9ed;border-radius:18px;padding:15px;min-height:145px;box-shadow:0 7px 18px rgba(25,84,104,.05)}
+.vStep .top{display:flex;align-items:center;gap:10px;margin-bottom:9px}
+.vStep .num{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:900;background:#0b8da5}
+.vStep h4{margin:0;color:#15445c;font-size:16px}
+.vStep p{margin:0;color:#486677;line-height:1.5;font-size:13px}
+.modalityStrip{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-top:14px}
+.modalityCard{border-radius:16px;padding:13px;text-align:center;background:#fff;border:1px solid #d8e8ec}
+.modalityCard .ico{font-size:28px;display:block;margin-bottom:5px}
+.modalityCard b{display:block;color:#18485f;font-size:13px}
+.modalityCard small{color:#6a8493;line-height:1.35}
+.metricHeroGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.metricHero{background:linear-gradient(135deg,#eaf8fb,#fff);border:1px solid #cfe6eb;border-radius:19px;padding:15px;text-align:center}
+.metricHero small{color:#4f7182;font-weight:800}
+.metricHero strong{display:block;font-size:27px;color:#0d718c;margin:6px 0}
+.metricHero span{font-size:12px;color:#6a8390;line-height:1.4}
+.figurePair{display:grid;grid-template-columns:1.05fr .95fr;gap:16px;align-items:center}
+.figureExplain{background:#fff;border:1px solid #dbe9ed;border-radius:20px;padding:18px}
+.figureExplain h4{margin:0 0 10px;color:#0e6781}
+.figureExplain ul{margin:0;padding-left:19px;color:#3f5f71;line-height:1.7}
+.paperFigure{margin:0;background:#fff;border:1px solid #d9e8ec;border-radius:20px;padding:10px;box-shadow:0 10px 30px rgba(23,77,98,.07)}
+.paperFigure img{width:100%;display:block;border-radius:13px;object-fit:contain;max-height:600px}
+.paperFigure figcaption{padding:10px 5px 3px;color:#567384;font-size:12px;line-height:1.5}
+.paperFigure a{color:#0a7897;font-weight:800}
+.card.richCardPreview .thumbBox{height:230px;background:#eaf5f7}
+.card.richCardPreview .thumbBox>img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.9) contrast(.98)}
+.card.richCardPreview .thumbBox:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,28,40,.08),rgba(6,28,40,.42))}
+.card.richCardPreview .thumbMeta{z-index:3}
+@media(max-width:900px){.richHeroLayout,.figurePair{grid-template-columns:1fr}.visualInfographicGrid{grid-template-columns:1fr 1fr}.metricHeroGrid{grid-template-columns:1fr 1fr}.modalityStrip{grid-template-columns:1fr 1fr}.richHeroVisual,.richHeroVisual img{min-height:250px}}
+@media(max-width:560px){.visualInfographicGrid,.metricHeroGrid{grid-template-columns:1fr}.modalityStrip{grid-template-columns:1fr 1fr}}
 .richIntroGrid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;margin-top:24px}
 .richLead{background:#ffffff;border:1px solid #d6e7ed;border-radius:22px;padding:22px;line-height:1.75;font-size:17px}
 .richLead h3{margin:0 0 10px;color:#0d7896}
@@ -228,7 +266,27 @@ function slugify(s){return (s||'').toLowerCase().normalize('NFD').replace(/[\u03
 function splitMetrics(metrics){return (metrics||'No reportado').split(/[;•]/).map(s=>s.trim()).filter(Boolean).map((m,i)=>{const colon=m.indexOf(':'); if(colon>0) return {label:m.slice(0,colon).trim(), value:m.slice(colon+1).trim()}; return {label:i===0?'Resultado principal':'Métrica', value:m};});}
 function supportSVG(study, small=false){const w=small?280:560, h=small?180:280; const t=study.theme||{a:'#4e61ff',b:'#8aa4ff',emoji:'🩺',label:'Clínica'}; const title=esc(study.theme.label||study.area||'Estudio'); const modality=esc(study.modality||''); const icon=esc(t.emoji||'🩺'); const country=esc(study.countryFlags||study.flag||'🌍'); return `<svg class="thumbArt" viewBox="0 0 ${w} ${h}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="visual de apoyo"><defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="${t.a}"/><stop offset="100%" stop-color="${t.b}"/></linearGradient><linearGradient id="g2" x1="1" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff22"/><stop offset="100%" stop-color="#ffffff08"/></linearGradient></defs><rect width="100%" height="100%" rx="24" fill="#0f1a33"/><circle cx="${w*0.82}" cy="${h*0.18}" r="${h*0.24}" fill="url(#g2)"/><circle cx="${w*0.15}" cy="${h*0.80}" r="${h*0.20}" fill="url(#g2)"/><rect x="18" y="18" width="${w-36}" height="${h-36}" rx="24" fill="url(#g1)" opacity="0.16" stroke="rgba(255,255,255,.18)"/><g><circle cx="${w*0.21}" cy="${h*0.35}" r="${h*0.15}" fill="rgba(255,255,255,.14)"/><text x="${w*0.21}" y="${h*0.39}" text-anchor="middle" font-size="${small?28:42}">${icon}</text></g><g fill="none" stroke="rgba(255,255,255,.32)" stroke-width="2"><path d="M${w*0.12} ${h*0.68} C${w*0.24} ${h*0.60}, ${w*0.34} ${h*0.74}, ${w*0.48} ${h*0.62}"/><path d="M${w*0.16} ${h*0.74} C${w*0.28} ${h*0.66}, ${w*0.40} ${h*0.82}, ${w*0.56} ${h*0.68}"/></g><text x="28" y="${h-66}" fill="#eef3ff" font-size="${small?15:22}" font-weight="800">${title}</text><text x="28" y="${h-38}" fill="#d4e1ff" font-size="${small?12:16}">${country} · ${modality}</text></svg>`;}
 function metricChips(metrics){return splitMetrics(metrics).slice(0,3).map(m=>`<span class="metricChip"><b>${esc(m.label)}:</b> ${esc(m.value)}</span>`).join('');}
-function card(x){const code=x.code?`<a class="btn secondary" href="${esc(x.code)}" target="_blank" rel="noopener">Código</a>`:''; return `<article class="card"><div class="thumb"><div class="thumbBox"><div class="thumbMeta"><span class="flagPill">${x.countryFlags} ${esc(x.country)}</span><span class="areaPill">${esc(x.area)}</span></div>${supportSVG(x,true)}</div></div><div class="cardBody"><div class="kicker">${esc(x.date)} · ${esc(x.modality)}</div><h3 class="title">${esc(x.title)}</h3>${x.title_es?`<div style="font-size:12px;color:#8fa5c7;line-height:1.45;margin-top:-4px">${esc(x.title_es)}</div>`:''}<p class="desc">${esc(x.summary)}</p><div class="metaRow"><div class="mini"><span class="label">Muestra</span><span class="value">${esc(x.sample)}</span></div><div class="mini"><span class="label">Diseño</span><span class="value">${esc(x.design)}</span></div></div><div class="metricsPreview">${metricChips(x.metrics)}</div><div class="remember"><b>🧠 Lo que debes recordar:</b> ${esc(x.remember)}</div></div><div class="cardActions"><button class="btn" onclick="openStudy('${slugify(x.date+'-'+x.title)}')">Abrir estudio</button><a class="btn ghost" href="${esc(x.paper)}" target="_blank" rel="noopener">Paper / fuente</a>${code}</div></article>`;}
+function card(x){
+  const code=x.code?`<a class="btn secondary" href="${esc(x.code)}" target="_blank" rel="noopener">Código</a>`:'';
+  const isRich=!!x.rich_detail;
+  const heroImg=isRich && x.rich?.figures?.[1]?.url ? x.rich.figures[1].url : '';
+  const visual=isRich && heroImg
+    ? `<div class="thumbBox"><div class="thumbMeta"><span class="flagPill">${x.countryFlags} ${esc(x.country)}</span><span class="areaPill">${esc(x.area)}</span></div><img src="${esc(heroImg)}" alt="Arquitectura del estudio" loading="lazy"></div>`
+    : `<div class="thumbBox"><div class="thumbMeta"><span class="flagPill">${x.countryFlags} ${esc(x.country)}</span><span class="areaPill">${esc(x.area)}</span></div>${supportSVG(x,true)}</div>`;
+  return `<article class="card ${isRich?'richCardPreview':''}">
+    <div class="thumb">${visual}</div>
+    <div class="cardBody">
+      <div class="kicker">${esc(x.date)} · ${esc(x.modality)}</div>
+      <h3 class="title">${esc(x.title)}</h3>
+      ${x.title_es?`<div style="font-size:12px;color:#8fa5c7;line-height:1.45;margin-top:-4px">${esc(x.title_es)}</div>`:''}
+      <p class="desc">${esc(x.summary)}</p>
+      <div class="metaRow"><div class="mini"><span class="label">Muestra</span><span class="value">${esc(x.sample)}</span></div><div class="mini"><span class="label">Diseño</span><span class="value">${esc(x.design)}</span></div></div>
+      <div class="metricsPreview">${metricChips(x.metrics)}</div>
+      <div class="remember"><b>🧠 Lo que debes recordar:</b> ${esc(x.remember)}</div>
+    </div>
+    <div class="cardActions"><button class="btn" onclick="openStudy('${slugify(x.date+'-'+x.title)}')">Abrir estudio</button><a class="btn ghost" href="${esc(x.paper)}" target="_blank" rel="noopener">Paper / fuente</a>${code}</div>
+  </article>`;
+}
 function longIntro(s){return `${esc(s.summary)} Además, el estudio se apoya en <b>${esc(s.model)}</b> y utiliza <b>${esc(s.modality)}</b> como fuente principal de datos. La muestra reportada fue <b>${esc(s.sample)}</b> y el diseño se describe como <b>${esc(s.design)}</b>. Lo más relevante de sus resultados fue: <b>${esc(s.metrics)}</b>.`;}
 function metricTableRows(s){const rows=splitMetrics(s.metrics).map(m=>`<tr><th>${esc(m.label)}</th><td>${esc(m.value)}</td></tr>`).join(''); const extra=[['Institución / grupo',s.institution],['País o procedencia',`${s.countryFlags} ${s.country}`],['Muestra',s.sample],['Diseño del estudio',s.design],['Modalidad / datos',s.modality],['Modelo / arquitectura',s.model],['Lenguaje',s.language||'No reportado'],['Framework',s.framework||'No reportado'],['Hardware',s.hardware||'No reportado'],['Costos',s.cost||'No reportado'],['Limitaciones',s.limitations||'No reportado']].map(([k,v])=>`<tr><th>${esc(k)}</th><td>${esc(v)}</td></tr>`).join(''); return rows+extra;}
 function supportCards(s){return (s.supportCaptions||[]).map((cap,i)=>`<div class="supportCard">${supportSVG(s,true)}<div class="cap"><b>Figura ${i+1}.</b> ${esc(cap)}</div></div>`).join('');}
@@ -242,11 +300,13 @@ function headlineMetrics(s){
 }
 function richStudyHTML(s,slug,codeBtn){
   const r=s.rich||{};
-  const figures=(r.figures||[]).map(f=>`<figure class="figureFeature"><img src="${esc(f.url)}" alt="${esc(f.title)}" loading="lazy"><figcaption class="fcap"><b>${esc(f.number)} · ${esc(f.title)}</b><br>${esc(f.caption)}</figcaption></figure>`).join('');
+  const fig2=r.figures?.[0];
+  const fig4=r.figures?.[1];
+  const fig6=r.figures?.[2];
   const datasets=(r.dataset_cards||[]).map(d=>`<div class="datasetCard" style="border-top:4px solid ${esc(d.accent||'#0b8da5')}"><small>${esc(d.name)}</small><b>${esc(d.value)}</b><span>${esc(d.detail)}</span></div>`).join('');
-  const results=(r.result_cards||[]).map(d=>`<div class="resultCard"><small>${esc(d.label)}</small><b>${esc(d.main)}</b><span>${esc(d.sub)}</span></div>`).join('');
   const impl=(r.implementation||[]).map(x=>`<div class="implItem">${esc(x)}</div>`).join('');
   const rows=(r.metrics_table||[]).map(x=>`<tr><td>${esc(x[0])}</td><td><b>${esc(x[1])}</b></td><td>${esc(x[2])}</td></tr>`).join('');
+  const figureBlock=(f,extra='')=>f?`<figure class="paperFigure"><a href="${esc(f.url)}" target="_blank" rel="noopener"><img src="${esc(f.url)}" alt="${esc(f.title)}" loading="lazy"></a><figcaption><b>${esc(f.number)} · ${esc(f.title)}</b><br>${esc(f.caption)} ${extra}<br><a href="${esc(f.url)}" target="_blank" rel="noopener">Abrir imagen completa ↗</a></figcaption></figure>`:'';
   return `<div class="backRow"><button class="backBtn" onclick="closeStudy()">← Volver a todos los estudios</button><div class="shareHint">Enlace directo: #${esc(slug)}</div></div>
   <article class="richPaper">
     <header class="richHero">
@@ -256,34 +316,77 @@ function richStudyHTML(s,slug,codeBtn){
         <span class="richChip">${esc(s.published||s.date)}</span>
         <span class="richChip">${esc(s.journal||'')}</span>
       </div>
-      <h1 class="richTitle">${esc(s.title)}</h1>
-      <div class="richTitleEs">${esc(s.title_es||'')}</div>
-      <div class="richByline">${esc(s.authors||'')} · DOI: ${esc(s.doi||'')}</div>
-      <div class="richIntroGrid">
-        <div class="richLead"><h3>Resumen para entenderlo rápido</h3><p>${esc(s.summary)}</p></div>
-        <div class="richRemember"><div class="ey">Idea que debes recordar</div><p>${esc(s.remember)}</p></div>
+      <div class="richHeroLayout">
+        <div class="richHeroCopy">
+          <h1 class="richTitle">${esc(s.title)}</h1>
+          <div class="richTitleEs">${esc(s.title_es||'')}</div>
+          <div class="richByline">${esc(s.authors||'')} · DOI: ${esc(s.doi||'')}</div>
+          <div class="richRemember" style="margin-top:18px"><div class="ey">En una frase</div><p>${esc(s.remember)}</p></div>
+          <div class="visualNav">
+            <a href="#vitimm-infografia">▦ Ver infografía visual</a>
+            <a href="#vitimm-arquitectura">⌘ Ver arquitectura</a>
+            <a href="#vitimm-resultados">▥ Ver resultados</a>
+            <a href="#vitimm-interpretabilidad">◉ Ver interpretabilidad</a>
+          </div>
+          <div class="detailActions" style="margin-top:17px"><a class="btn" href="${esc(s.paper)}" target="_blank" rel="noopener">Abrir paper original</a>${codeBtn}</div>
+        </div>
+        <div class="richHeroVisual">${fig4?`<img src="${esc(fig4.url)}" alt="Arquitectura ViTiMM" loading="eager">`:''}</div>
       </div>
-      <div class="detailActions" style="margin-top:18px"><a class="btn" href="${esc(s.paper)}" target="_blank" rel="noopener">Abrir paper original</a>${codeBtn}</div>
     </header>
 
-    <section class="infographicSection">
-      <div class="infographicBand"><span class="n">1</span><h3>El problema</h3></div>
-      <div class="richTwoCol">
-        <div class="richCard"><h4>¿Por qué es difícil?</h4><p>${esc(r.problem||'')}</p></div>
-        <div class="richCard"><h4>Reto central</h4><p><b>Multimodalidad + muestreo irregular.</b> Laboratorios, signos vitales, medicamentos, ECG, CXR y texto no llegan en el mismo formato ni al mismo ritmo.</p></div>
+    <section id="vitimm-infografia" class="infographicSection">
+      <div class="infographicBand"><span class="n">1</span><h3>Infografía rápida: entiende el paper en 30 segundos</h3></div>
+      <div class="visualInfographic">
+        <div class="visualInfographicGrid">
+          <div class="vStep"><div class="top"><span class="num">1</span><h4>Problema</h4></div><p>En UCI los datos llegan en formatos y tiempos distintos. Integrarlos suele exigir arquitecturas específicas.</p></div>
+          <div class="vStep"><div class="top"><span class="num">2</span><h4>Idea</h4></div><p>Convertir series clínicas y medicamentos en imágenes para tratarlas con Vision Transformers.</p></div>
+          <div class="vStep"><div class="top"><span class="num">3</span><h4>Fusión</h4></div><p>Swin/ViT procesan lo visual, RoBERTa procesa texto y los embeddings se concatenan al final.</p></div>
+          <div class="vStep"><div class="top"><span class="num">4</span><h4>Datasets</h4></div><p>MIMIC-IV y CDSL: dos bases públicas multimodales con pacientes hospitalizados.</p></div>
+          <div class="vStep"><div class="top"><span class="num">5</span><h4>Resultado</h4></div><p>MIMIC mortalidad: AUROC 0,922. CDSL mortalidad: AUROC 0,987.</p></div>
+          <div class="vStep"><div class="top"><span class="num">6</span><h4>Valor</h4></div><p>Reduce la ingeniería por modalidad y facilita añadir nuevas fuentes sin rediseñar todo el sistema.</p></div>
+        </div>
+        <div class="modalityStrip">
+          <div class="modalityCard"><span class="ico">📈</span><b>Clínica</b><small>signos vitales y laboratorio</small></div>
+          <div class="modalityCard"><span class="ico">💊</span><b>Medicamentos</b><small>dosis acumuladas</small></div>
+          <div class="modalityCard"><span class="ico">🩻</span><b>CXR</b><small>radiografía de tórax</small></div>
+          <div class="modalityCard"><span class="ico">〰️</span><b>ECG</b><small>12 derivaciones</small></div>
+          <div class="modalityCard"><span class="ico">📝</span><b>Texto</b><small>metadatos e informes</small></div>
+        </div>
       </div>
     </section>
 
     <section class="infographicSection">
-      <div class="infographicBand"><span class="n">2</span><h3>La idea de ViTiMM</h3></div>
-      <div class="richCard" style="margin-bottom:16px"><h4>Visual prompt engineering</h4><p>${esc(r.idea||'')}</p><p style="margin-top:10px">${esc(r.why||'')}</p></div>
-      ${figures[0]||''}
+      <div class="infographicBand"><span class="n">2</span><h3>¿Cómo transforma los datos?</h3></div>
+      <div class="figurePair">
+        ${figureBlock(fig2)}
+        <div class="figureExplain">
+          <h4>La clave visual</h4>
+          <ul>
+            <li>Los parámetros clínicos se dibujan como múltiples series temporales.</li>
+            <li>Los medicamentos se representan como dosis acumuladas.</li>
+            <li>El ECG se conserva como trazado visual.</li>
+            <li>La radiografía de tórax ya es una imagen, así que no requiere conversión.</li>
+            <li>Esto convierte modalidades heterogéneas en entradas visuales comparables.</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
-    <section class="infographicSection">
-      <div class="infographicBand"><span class="n">3</span><h3>Arquitectura</h3></div>
-      ${figures[1]||''}
-      <div class="richSourceNote">Lectura rápida: cada modalidad visual tiene su propio encoder; el texto usa RoBERTa; los embeddings se fusionan al final para clasificar.</div>
+    <section id="vitimm-arquitectura" class="infographicSection">
+      <div class="infographicBand"><span class="n">3</span><h3>Arquitectura de ViTiMM</h3></div>
+      <div class="figurePair">
+        <div class="figureExplain">
+          <h4>Lee la arquitectura de abajo hacia arriba</h4>
+          <ul>
+            <li>Cada modalidad visual entra por su propio Swin Transformer o ViT.</li>
+            <li>Los metadatos e informes se procesan con RoBERTa.</li>
+            <li>Los embeddings se concatenan.</li>
+            <li>Una proyección lineal y el clasificador producen la predicción final.</li>
+            <li>La fusión tardía permite añadir o retirar modalidades con menos cambios.</li>
+          </ul>
+        </div>
+        ${figureBlock(fig4)}
+      </div>
     </section>
 
     <section class="infographicSection">
@@ -291,27 +394,43 @@ function richStudyHTML(s,slug,codeBtn){
       <div class="datasetGrid">${datasets}</div>
     </section>
 
-    <section class="infographicSection">
+    <section id="vitimm-resultados" class="infographicSection">
       <div class="infographicBand"><span class="n">5</span><h3>Resultados clave</h3></div>
-      <div class="resultGrid">${results}</div>
+      <div class="metricHeroGrid">
+        <div class="metricHero"><small>MIMIC · Mortalidad</small><strong>0,922</strong><span>AUROC · 4 modalidades</span></div>
+        <div class="metricHero"><small>CDSL · Mortalidad</small><strong>0,987</strong><span>AUROC · multimodal</span></div>
+        <div class="metricHero"><small>MIMIC · Fenotipado</small><strong>0,784</strong><span>AUROC · 4 modalidades</span></div>
+        <div class="metricHero"><small>MIMIC · Descompensación</small><strong>0,797</strong><span>AUROC · clínicos + CXR</span></div>
+      </div>
       <div style="margin-top:18px;overflow:auto"><table class="richMetricTable"><thead><tr><th>Tarea / configuración</th><th>Métrica</th><th>Valor</th></tr></thead><tbody>${rows}</tbody></table></div>
     </section>
 
-    <section class="infographicSection">
+    <section id="vitimm-interpretabilidad" class="infographicSection">
       <div class="infographicBand"><span class="n">6</span><h3>¿Qué aprendió el modelo?</h3></div>
-      <div class="richCard" style="margin-bottom:16px"><h4>Interpretabilidad</h4><p>${esc(r.interpretability||'')}</p></div>
-      ${figures[2]||''}
+      <div class="figurePair">
+        ${figureBlock(fig6)}
+        <div class="figureExplain">
+          <h4>Qué llamó la atención del modelo</h4>
+          <ul>
+            <li><b>Clínica:</b> frecuencia respiratoria, presión arterial diastólica y frecuencia cardiaca.</li>
+            <li><b>Medicamentos:</b> vasopresores e inotrópicos como norepinefrina, fenilefrina y dobutamina.</li>
+            <li><b>ECG:</b> atención más difusa, con señal repartida entre derivaciones.</li>
+            <li><b>CXR:</b> foco importante sobre un dispositivo cardiaco implantado.</li>
+            <li><b>Texto:</b> atención a medicamentos y al dispositivo implantado.</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <section class="infographicSection">
-      <div class="infographicBand"><span class="n">7</span><h3>Implementación y reproducibilidad</h3></div>
+      <div class="infographicBand"><span class="n">7</span><h3>Implementación</h3></div>
       <div class="implGrid">${impl}</div>
     </section>
 
     <section class="infographicSection">
       <div class="infographicBand"><span class="n">8</span><h3>Limitaciones</h3></div>
       <div class="richLimit">${esc(s.limitations)}</div>
-      <div class="richSourceNote">${esc(r.attribution||'')} · Las figuras se muestran para explicar el paper y enlazan a los recursos del artículo original.</div>
+      <div class="richSourceNote">${esc(r.attribution||'')} · Las figuras enlazan a las imágenes originales del artículo.</div>
     </section>
   </article>`;
 }
