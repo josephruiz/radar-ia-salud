@@ -37,11 +37,11 @@ h1{font-size:clamp(38px,5vw,64px);margin:10px 0 12px;line-height:1.02}
 .toolbar{display:grid;grid-template-columns:1.4fr repeat(4,minmax(150px,.6fr));gap:12px;position:sticky;top:0;z-index:40;padding:14px 0 16px;background:linear-gradient(180deg,rgba(10,16,32,.97),rgba(10,16,32,.86),rgba(10,16,32,0));backdrop-filter:blur(10px)}
 input,select{width:100%;background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:14px;padding:13px 14px;outline:none;font-size:15px}
 .stats{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0 26px}
-.worldMapSection{background:linear-gradient(180deg,#101937,#0b1430);border:1px solid var(--line);border-radius:26px;padding:20px;margin:4px 0 34px;box-shadow:var(--shadow)}
+.worldMapSection{background:linear-gradient(180deg,#ffffff,#f6fbfc);border:1px solid #d8e7ec;border-radius:26px;padding:20px;margin:4px 0 34px;box-shadow:0 14px 34px rgba(20,72,94,.08)}
 .worldMapHead{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:8px}
-.worldMapHead h2{margin:0;font-size:24px}
+.worldMapHead h2{margin:0;font-size:24px;color:#123f5b}
 .worldMapHead p{margin:5px 0 0;color:var(--muted);line-height:1.5}
-.mapHint{font-size:12px;color:#8fa4cb;white-space:nowrap}
+.mapHint{font-size:12px;color:#6d8796;white-space:nowrap}
 #worldMap{width:100%;height:480px;border-radius:18px;overflow:hidden}
 .stat{background:var(--panel);border:1px solid var(--line);padding:10px 14px;border-radius:999px;color:var(--muted)}
 .stat b{color:var(--text)}
@@ -112,7 +112,7 @@ input,select{width:100%;background:var(--panel);color:var(--text);border:1px sol
 .richTitle{font-size:clamp(30px,3.5vw,46px);line-height:1.04;margin:0;color:#113b59;letter-spacing:-.028em;max-width:760px}
 .richTitleEs{font-size:15px;line-height:1.5;color:#607b8e;margin-top:10px;font-weight:600}
 .richByline{margin-top:18px;color:#527184;font-size:14px;line-height:1.6}
-.richHeroLayout{display:grid;grid-template-columns:1.02fr .98fr;gap:26px;align-items:center;margin-top:20px}
+.richHeroLayout{display:block;margin-top:20px}
 .richHeroVisual{position:relative;min-height:360px;border-radius:26px;overflow:hidden;background:#eaf4f7;border:1px solid #cfe2e8;box-shadow:0 16px 42px rgba(24,86,108,.12)}
 .richHeroVisual img{width:100%;height:100%;min-height:360px;object-fit:contain;display:block;background:#fff}
 .richHeroVisual:after{content:"Figura del paper";position:absolute;right:12px;bottom:12px;background:rgba(12,56,75,.78);color:#fff;padding:7px 10px;border-radius:999px;font-size:11px;font-weight:800;letter-spacing:.05em}
@@ -291,7 +291,7 @@ input,select{width:100%;background:var(--panel);color:var(--text);border:1px sol
   <section class="worldMapSection">
     <div class="worldMapHead">
       <div>
-        <h2>Mapa mundial de estudios</h2>
+        <h2>Mapa mundial de estudios recopilados</h2>
         <p>Acerca el cursor o toca un país para ver cuántos estudios hemos recopilado. El mapa responde a los filtros actuales.</p>
       </div>
       <div class="mapHint">País · cantidad de estudios</div>
@@ -396,17 +396,14 @@ function richStudyHTML(s,slug,codeBtn){
             <div class="heroMetric"><small>Mortalidad MIMIC</small><strong>AUROC 0,922</strong></div>
             <div class="heroMetric"><small>Modalidades</small><strong>5 fuentes</strong></div>
           </div>
-          <div class="detailActions" style="margin-top:16px"><a class="btn" href="${esc(s.paper)}" target="_blank" rel="noopener">Abrir paper original</a><button class="btn secondary" onclick="openVitimmInfographic()">Resumen de infografía</button>${codeBtn}</div>
-        </div>
-        <div class="richHeroVisual">
-          ${fig4?`<img src="${esc(fig4.url)}" alt="Arquitectura ViTiMM" loading="eager">`:''}
+          <div class="detailActions" style="margin-top:16px"><a class="btn" href="${esc(s.paper)}" target="_blank" rel="noopener">Abrir paper original</a><button class="btn secondary" onclick="openVitimmInfographic()">Ver resumen de infografía</button>${codeBtn}</div>
         </div>
       </div>
     </header>
 
     <div id="vitimmTabsRoot">
       <nav class="studyTabs">
-        <button class="studyTabBtn active" onclick="switchVitimmTab('overview',this)">Resumen visual</button>
+        <button class="studyTabBtn active" onclick="switchVitimmTab('overview',this)">Resumen del estudio</button>
         <button class="studyTabBtn" onclick="switchVitimmTab('technical',this)">Datos técnicos</button>
       </nav>
 
@@ -438,7 +435,7 @@ function richStudyHTML(s,slug,codeBtn){
         </section>
 
         <section class="infographicSection">
-          <div class="infographicBand"><span class="n">3</span><h3>Arquitectura</h3></div>
+          <div class="infographicBand"><span class="n">3</span><h3>Arquitectura del paper</h3></div>
           <div class="figurePair">
             ${figureBlock(fig4)}
             <div class="figureExplain"><h4>Cómo leerla</h4><ul><li>Cada modalidad visual tiene un Swin Transformer o ViT.</li><li>Los metadatos e informes pasan por RoBERTa.</li><li>Los embeddings se concatenan al final.</li><li>La fusión tardía permite añadir o retirar modalidades con menos cambios.</li></ul></div>
