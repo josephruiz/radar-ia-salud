@@ -398,13 +398,41 @@ const MEDICAL_IMAGES=[
 "20_57_17-1.png","20_59_55.png","21_00_04.png","21_00_14.png","21_01_11.png","21_01_13.png","21_01_17.png","21_01_21.png","21_01_24.png","21_01_28.png","21_01_32.png","21_02_01.png","21_02_04.png","21_11_37.png","21_11_52.png","21_11_58.png","21_13_07.png","21_13_10.png","21_13_13.png","21_13_16.png","21_13_19.png","21_13_22.png","21_22_38.png","21_23_08.png","21_23_11.png","21_23_14.png","21_23_16.png","21_23_20.png","21_23_23.png","21_23_26.png"
 ];
 const IMAGE_BY_AREA={
-"Oncología":"20_57_17-1.png","Oncología de precisión":"20_57_17-1.png","Oftalmología":"20_59_55.png","Radiología":"21_00_04.png","MRI":"21_00_04.png","Neuroimagen":"21_00_04.png",
-"Decisión clínica":"21_00_14.png","Atención primaria":"21_01_11.png","Neurología neonatal":"21_01_13.png","Neurología":"21_01_13.png","Hematopatología":"21_01_17.png","Gastroenterología":"21_01_21.png",
-"Flujo clínico":"21_01_24.png","Enfermedades infecciosas":"21_01_28.png","Tuberculosis":"21_01_28.png","Educación quirúrgica":"21_01_32.png","Cirugía":"21_02_01.png","Obstetricia":"21_02_01.png",
-"Cardiología":"21_02_04.png","Bioinstrumentación":"21_11_37.png","Biofotónica":"21_11_52.png","Agentes clínicos":"21_11_58.png","Pediatría":"21_13_07.png","UCI":"21_13_10.png",
-"Odontología":"21_13_13.png","Neumología":"21_13_16.png","Trauma":"21_13_19.png","Robótica quirúrgica":"21_13_22.png","Wearables":"21_22_38.png","Urología":"21_23_08.png",
-"IA multimodal":"21_23_11.png","Patología digital":"21_23_14.png","Mamografía":"21_23_16.png","Seguridad farmacológica":"21_23_20.png"
-};
+"Atención primaria":"21_22_38.png",
+"Decisión clínica":"21_00_14.png",
+"Neurología neonatal":"21_00_04.png",
+"Cardiología":"21_23_26.png",
+"Neumología":"21_01_21.png",
+"Oncología":"21_01_17.png",
+"Agentes clínicos":"21_22_38.png",
+"Neurología":"21_00_04.png",
+"Urología":"21_23_23.png",
+"UCI":"21_01_28.png",
+"Gastroenterología":"21_02_01.png",
+"Radiología":"21_01_11.png",
+"Enfermedades infecciosas":"21_23_20.png",
+"Wearables":"21_23_26.png",
+"Flujo clínico":"21_00_14.png",
+"Neuroimagen":"21_00_04.png",
+"Patología digital":"21_23_14.png",
+"Oftalmología":"21_01_13.png",
+"Bioinstrumentación":"21_23_08.png",
+"Tuberculosis":"21_23_20.png",
+"Biofotónica":"21_23_16.png",
+"Educación quirúrgica":"21_23_11.png",
+"Pediatría":"21_01_32.png",
+"Odontología":"21_01_24.png",
+"Cirugía":"21_23_11.png",
+"Obstetricia":"21_23_16.png",
+"Robótica quirúrgica":"21_13_13.png",
+"Hematopatología":"21_23_14.png",
+"Oncología de precisión":"21_01_17.png",
+"MRI":"21_01_11.png",
+"Seguridad farmacológica":"21_00_14.png",
+"Mamografía":"21_23_16.png",
+"Trauma":"21_01_28.png",
+"IA multimodal":"21_23_16.png"
+}
 function medicalImage(study){
  let file=IMAGE_BY_AREA[study.area];
  if(!file){const key=Math.abs([...String(study.area||study.title||'')].reduce((a,c)=>((a*31)+c.charCodeAt(0))|0,7));file=MEDICAL_IMAGES[key%MEDICAL_IMAGES.length]}
