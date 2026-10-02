@@ -286,7 +286,10 @@ input,select{width:100%;background:var(--panel);color:var(--text);border:1px sol
 @media(max-width:700px){.countriesView{padding:20px 12px}.countriesTop{flex-direction:column}.countriesView #worldMap{height:310px!important}}
 </style>
 <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
-<style id="medicalSpriteStyle">:root{--medical-sprite:url("assets/medical-specialties.jpg?v=20261002-2")}.medicalSprite{width:100%;height:100%;min-height:154px;background-image:var(--medical-sprite);background-size:600% 600%;background-repeat:no-repeat;background-color:#06182a;border-radius:18px;box-shadow:inset 0 0 0 1px #2c80ad66}.thumbBox{overflow:hidden}.thumbMeta{z-index:4}.thumbBox:after{content:"";position:absolute;inset:auto 0 0;height:42%;background:linear-gradient(transparent,#03101bd9);pointer-events:none;z-index:2}</style></head>
+<style id="medicalSpriteStyle">
+.studyPhoto{width:100%;height:100%;display:block;object-fit:cover;object-position:center;border-radius:17px;transform:scale(1.002)}
+.thumbBox{overflow:hidden;background:#06182a}.thumbMeta{z-index:4}.thumbBox:after{content:"";position:absolute;inset:auto 0 0;height:35%;background:linear-gradient(transparent,rgba(3,16,27,.72));pointer-events:none;z-index:2}
+</style></head>
 <body>
 <div class="siteShell">
   <aside class="sideNav">
@@ -391,23 +394,25 @@ function areaVisualConfig(study){
   if(a.includes('uci')||a.includes('agentes')||a.includes('flujo')||a.includes('multimodal')||r.includes('ia clínica')) return {icon:'🤖',label:'IA clínica',sub:'EHR · multimodal · decisión',a:'#20c7b5',b:'#4779f3'};
   return {icon:'🧠',label:study.area||'IA en salud',sub:study.rubro||study.modality||'inteligencia artificial',a:'#2dd4bf',b:'#6d6cff'};
 }
-function spriteTile(study){
- const a=String(study.area||'').toLowerCase(), r=String(study.rubro||'').toLowerCase(), m=String(study.modality||'').toLowerCase();
- const tiles={
- 'agentes clínicos':[0,0],'atención primaria':[1,0],'biofotónica':[2,0],'bioinstrumentación':[3,0],'cardiología':[4,0],'cirugía':[5,0],
- 'decisión clínica':[0,1],'educación quirúrgica':[1,1],'enfermedades infecciosas':[2,1],'flujo clínico':[3,1],'gastroenterología':[4,1],'hematopatología':[5,1],
- 'ia multimodal':[0,2],'mri':[1,2],'mamografía':[2,2],'neumología':[3,2],'neuroimagen':[4,2],'neurología':[5,2],
- 'neurología neonatal':[0,3],'obstetricia':[1,3],'odontología':[2,3],'oftalmología':[3,3],'oncología':[4,3],'oncología de precisión':[5,3],
- 'patología digital':[0,4],'pediatría':[1,4],'radiología':[2,4],'robótica quirúrgica':[3,4],'seguridad farmacológica':[4,4],'trauma':[5,4],
- 'tuberculosis':[0,5],'uci':[1,5],'urología':[2,5],'wearables':[3,5]
- };
- let key=Object.keys(tiles).find(k=>a===k)||Object.keys(tiles).find(k=>a.includes(k)||k.includes(a));
- if(!key){if(m.includes('multimodal')||r.includes('multimodal'))key='ia multimodal';else if(m.includes('mri'))key='mri';else if(m.includes('oct')||m.includes('retina'))key='oftalmología';else if(m.includes('respir')||m.includes('tórax'))key='neumología';else if(r.includes('agente'))key='agentes clínicos';else key='bioinstrumentación'}
- return tiles[key]||[3,0];
+const MEDICAL_IMAGES=[
+"20_57_17-1.png","20_59_55.png","21_00_04.png","21_00_14.png","21_01_11.png","21_01_13.png","21_01_17.png","21_01_21.png","21_01_24.png","21_01_28.png","21_01_32.png","21_02_01.png","21_02_04.png","21_11_37.png","21_11_52.png","21_11_58.png","21_13_07.png","21_13_10.png","21_13_13.png","21_13_16.png","21_13_19.png","21_13_22.png","21_22_38.png","21_23_08.png","21_23_11.png","21_23_14.png","21_23_16.png","21_23_20.png","21_23_23.png","21_23_26.png"
+];
+const IMAGE_BY_AREA={
+"Oncología":"20_57_17-1.png","Oncología de precisión":"20_57_17-1.png","Oftalmología":"20_59_55.png","Radiología":"21_00_04.png","MRI":"21_00_04.png","Neuroimagen":"21_00_04.png",
+"Decisión clínica":"21_00_14.png","Atención primaria":"21_01_11.png","Neurología neonatal":"21_01_13.png","Neurología":"21_01_13.png","Hematopatología":"21_01_17.png","Gastroenterología":"21_01_21.png",
+"Flujo clínico":"21_01_24.png","Enfermedades infecciosas":"21_01_28.png","Tuberculosis":"21_01_28.png","Educación quirúrgica":"21_01_32.png","Cirugía":"21_02_01.png","Obstetricia":"21_02_01.png",
+"Cardiología":"21_02_04.png","Bioinstrumentación":"21_11_37.png","Biofotónica":"21_11_52.png","Agentes clínicos":"21_11_58.png","Pediatría":"21_13_07.png","UCI":"21_13_10.png",
+"Odontología":"21_13_13.png","Neumología":"21_13_16.png","Trauma":"21_13_19.png","Robótica quirúrgica":"21_13_22.png","Wearables":"21_22_38.png","Urología":"21_23_08.png",
+"IA multimodal":"21_23_11.png","Patología digital":"21_23_14.png","Mamografía":"21_23_16.png","Seguridad farmacológica":"21_23_20.png"
+};
+function medicalImage(study){
+ let file=IMAGE_BY_AREA[study.area];
+ if(!file){const key=Math.abs([...String(study.area||study.title||'')].reduce((a,c)=>((a*31)+c.charCodeAt(0))|0,7));file=MEDICAL_IMAGES[key%MEDICAL_IMAGES.length]}
+ return "imagenes/Imagen%20de%20ChatGPT%201%20oct%202026,%20"+encodeURIComponent(file);
 }
 function supportSVG(study, small=false){
- const [c,row]=spriteTile(study), px=c*20, py=row*20;
- return `<div class="medicalSprite" role="img" aria-label="${esc(study.area||'IA en salud')}" style="background-position:${px}% ${py}%"></div>`;
+ const src=medicalImage(study);
+ return `<img class="studyPhoto" src="${src}" alt="${esc(study.area||'IA aplicada a salud')}" loading="lazy" decoding="async" onerror="this.style.display='none'">`;
 }
 function metricChips(metrics){return splitMetrics(metrics).slice(0,3).map(m=>`<span class="metricChip"><b>${esc(m.label)}:</b> ${esc(m.value)}</span>`).join('');}
 function card(x){
@@ -725,5 +730,5 @@ fetch('data/studies.json', {cache:'no-store'})
     document.getElementById('app').innerHTML='<div class="empty">No se pudo cargar la biblioteca de estudios. Reintenta en unos minutos.</div>';
   }); openHashOnLoad();
 </script>
-<div style="position:fixed;right:10px;bottom:8px;font-size:9px;color:#58768a;opacity:.55;z-index:99">visual build 2026.10.02-2</div></body>
+</body>
 </html>
