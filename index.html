@@ -280,6 +280,10 @@ input,select{width:100%;background:var(--panel);color:var(--text);border:1px sol
 .worldMapHead{margin-bottom:4px}.worldMapHead h2{font-size:18px}.worldMapHead p{font-size:12px;margin-top:2px}.mapHint{font-size:10px}
 #worldMap{height:210px!important;border-radius:13px}.thumbBox{height:154px}.thumb{padding:12px}.areaThumb{object-fit:cover}
 @media(max-width:700px){#worldMap{height:170px!important}.worldMapHead{align-items:flex-start;flex-direction:column;gap:3px}.mapHint{white-space:normal}}
+
+.countriesView{display:none;min-height:100vh;background:radial-gradient(circle at 20% 0,#102743 0,#071522 42%,#03101b 100%);padding:34px;color:var(--text)}
+.countriesView.open{display:block}.countriesInner{max-width:1180px;margin:auto}.countriesTop{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;margin-bottom:22px}.countriesTop h1{font-size:44px;margin:7px 0}.countriesTop p{max-width:680px;color:#9fb7c9;line-height:1.6}.countriesView .worldMapSection{display:block!important;margin:0;padding:18px;border-radius:20px}.countriesView #worldMap{height:440px!important}.countryCards{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;margin-top:16px}.countryTile{border:1px solid #1b405c;background:#081d2f;border-radius:13px;padding:14px}.countryTile b{display:block;font-size:16px}.countryTile span{color:#86a4b8;font-size:12px}
+@media(max-width:700px){.countriesView{padding:20px 12px}.countriesTop{flex-direction:column}.countriesView #worldMap{height:310px!important}}
 </style>
 <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
 </head>
@@ -294,7 +298,7 @@ input,select{width:100%;background:var(--panel);color:var(--text);border:1px sol
       <button class="active" onclick="goHomeSection('inicio',this)"><span class="ico">⌂</span>Inicio</button>
       <button onclick="goHomeSection('estudios',this)"><span class="ico">▣</span>Estudios</button>
       <button onclick="focusSideFilter('area',this)"><span class="ico">◉</span>Áreas</button>
-      <button onclick="goHomeSection('paises',this)"><span class="ico">◎</span>Países</button>
+      <button onclick="openCountries(this)"><span class="ico">◎</span>Países</button>
       <button onclick="goHomeSection('estadisticas',this)"><span class="ico">▥</span>Estadísticas</button>
       <button onclick="goHomeSection('acerca',this)"><span class="ico">ⓘ</span>Acerca de</button>
     </nav>
@@ -331,23 +335,12 @@ input,select{width:100%;background:var(--panel);color:var(--text);border:1px sol
     </div>
   </header>
   
-      <section id="paises" class="worldMapSection">
-    <div class="worldMapHead">
-      <div>
-        <h2>Mapa mundial de estudios recopilados</h2>
-        <p>Acerca el cursor o toca un país para ver cuántos estudios hemos recopilado. El mapa responde a los filtros actuales.</p>
-      </div>
-      <div class="mapHint">País · cantidad de estudios</div>
-    </div>
-    <div id="worldMap" aria-label="Mapa mundial de cantidad de estudios por país"></div>
-  </section>
-  
       <main id="estudios"><div id="app"></div></main>
 
       <footer id="acerca" class="footer">Los datos provienen de los resúmenes ya construidos en esta conversación. Cuando un paper o artículo no reporta un dato, se mantiene como <b>No reportado</b>. Las imágenes internas son <b>visuales de apoyo conceptual</b> para facilitar comprensión rápida del tema y la modalidad del estudio.</footer>
 
     </div>
-    <section id="detailView" class="detailView" aria-hidden="true"></section>
+    <section id="detailView" class="detailView" aria-hidden="true"></section><section id="countriesView" class="countriesView" aria-hidden="true"><div class="countriesInner"><div class="countriesTop"><div><div class="eyebrow">Exploración geográfica</div><h1>Países</h1><p>Distribución de los estudios recopilados en Radar IA Salud. Esta vista está separada de la biblioteca para mantener la portada limpia.</p></div><button class="btn ghost" onclick="closeCountries()">← Volver a estudios</button></div><div class="worldMapSection"><div class="worldMapHead"><div><h2>Mapa mundial de estudios</h2><p>Selecciona o pasa el cursor por un país para consultar su presencia en la biblioteca.</p></div><div class="mapHint">País · cantidad de estudios</div></div><div id="worldMap"></div></div><div id="countryCards" class="countryCards"></div></div></section>
   </div>
 </div>
 <script>
@@ -674,6 +667,9 @@ const COUNTRY_LABELS={
 function countriesFromStudy(country){
   return String(country||"").split(" / ").map(x=>x.trim()).filter(x=>COUNTRY_ISO[x]);
 }
+function openCountries(btn){if(detailView.classList.contains('open')) closeStudy(false);setSideActive(btn);document.querySelector('.mainStage').style.display='none';const cv=document.getElementById('countriesView');cv.classList.add('open');cv.setAttribute('aria-hidden','false');renderWorldMap(DATA);renderCountryCards(DATA);window.scrollTo(0,0)}
+function closeCountries(){const cv=document.getElementById('countriesView');cv.classList.remove('open');cv.setAttribute('aria-hidden','true');document.querySelector('.mainStage').style.display='block';const home=document.querySelector('.sideMenu button');setSideActive(home);window.scrollTo(0,0)}
+function renderCountryCards(items){const box=document.getElementById('countryCards');if(!box)return;const counts={};items.forEach(s=>countriesFromStudy(s.country).forEach(c=>counts[c]=(counts[c]||0)+1));box.innerHTML=Object.entries(counts).sort((a,b)=>b[1]-a[1]).map(([c,n])=>`<div class="countryTile"><b>${esc(c)}</b><span>${n} ${n===1?'estudio':'estudios'}</span></div>`).join('')}
 function renderWorldMap(items){
   const el=document.getElementById('worldMap');
   if(!el || typeof Plotly==='undefined') return;
@@ -722,7 +718,7 @@ function renderWorldMap(items){
     font:{family:'Inter, ui-sans-serif, system-ui',color:'#eef3ff'}
   },{displayModeBar:false,responsive:true});
 }
-function render(){const query=q.value.trim().toLowerCase(); const f=DATA.filter(x=>(!dateSel.value||x.date===dateSel.value)&&(!countrySel.value||x.country===countrySel.value)&&(!rubroSel.value||x.rubro===rubroSel.value)&&(!areaSel.value||x.area===areaSel.value)&&(!query||Object.values(x).join(' ').toLowerCase().includes(query))); renderWorldMap(f); const groups={}; f.forEach(x=>(groups[x.date]??=[]).push(x)); const dates=Object.keys(groups).sort().reverse(); document.getElementById('count').textContent=f.length; document.getElementById('days').textContent=dates.length; document.getElementById('from').textContent=DATA.length?[...DATA].sort((a,b)=>a.date.localeCompare(b.date))[0].date:'—'; document.getElementById('total').textContent=DATA.length; document.getElementById('updated').textContent=DATA.length?[...DATA].sort((a,b)=>b.date.localeCompare(a.date))[0].date:'—'; const app=document.getElementById('app'); if(!dates.length){app.innerHTML='<div class="empty">No hay estudios que coincidan con los filtros.</div>'; return;} app.innerHTML=dates.map(d=>`<section class="day"><div class="dayhead"><h2>${d}</h2><span>${groups[d].length} estudios</span></div><div class="grid">${groups[d].map(card).join('')}</div></section>`).join('');}
+function render(){const query=q.value.trim().toLowerCase(); const f=DATA.filter(x=>(!dateSel.value||x.date===dateSel.value)&&(!countrySel.value||x.country===countrySel.value)&&(!rubroSel.value||x.rubro===rubroSel.value)&&(!areaSel.value||x.area===areaSel.value)&&(!query||Object.values(x).join(' ').toLowerCase().includes(query))); if(document.getElementById('countriesView')?.classList.contains('open')){renderWorldMap(f);renderCountryCards(f)} const groups={}; f.forEach(x=>(groups[x.date]??=[]).push(x)); const dates=Object.keys(groups).sort().reverse(); document.getElementById('count').textContent=f.length; document.getElementById('days').textContent=dates.length; document.getElementById('from').textContent=DATA.length?[...DATA].sort((a,b)=>a.date.localeCompare(b.date))[0].date:'—'; document.getElementById('total').textContent=DATA.length; document.getElementById('updated').textContent=DATA.length?[...DATA].sort((a,b)=>b.date.localeCompare(a.date))[0].date:'—'; const app=document.getElementById('app'); if(!dates.length){app.innerHTML='<div class="empty">No hay estudios que coincidan con los filtros.</div>'; return;} app.innerHTML=dates.map(d=>`<section class="day"><div class="dayhead"><h2>${d}</h2><span>${groups[d].length} estudios</span></div><div class="grid">${groups[d].map(card).join('')}</div></section>`).join('');}
 [q,dateSel,countrySel,rubroSel,areaSel].forEach(el=>el.addEventListener('input',render));
 fetch('data/studies.json', {cache:'no-store'})
   .then(r=>{if(!r.ok) throw new Error('No se pudo cargar la base de estudios'); return r.json();})
