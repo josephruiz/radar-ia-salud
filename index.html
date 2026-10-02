@@ -375,11 +375,13 @@ function setSideActive(btn){
   if(btn) btn.classList.add('active');
 }
 function goHomeSection(id,btn){
+  closeAuxViews(); document.querySelector('.mainStage').style.display='block';
   if(detailView.classList.contains('open')) closeStudy(false);
   setSideActive(btn);
   const el=document.getElementById(id); if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
 }
 function focusSideFilter(id,btn){
+  closeAuxViews(); document.querySelector('.mainStage').style.display='block';
   if(detailView.classList.contains('open')) closeStudy(false);
   setSideActive(btn);
   const el=document.getElementById(id); if(el){el.focus();el.scrollIntoView({behavior:'smooth',block:'center'});}
@@ -635,52 +637,16 @@ function extractComparableMetrics(s){const out=[];const src=[s.metrics,...((s.ri
 function renderStatistics(items){const areas={},models={};items.forEach(s=>{areas[s.area||'Sin área']=(areas[s.area||'Sin área']||0)+1;modelTokens(s).forEach(m=>models[m]=(models[m]||0)+1)});const topA=Object.entries(areas).sort((a,b)=>b[1]-a[1]).slice(0,10),topM=Object.entries(models).sort((a,b)=>b[1]-a[1]).slice(0,10);document.getElementById('statsSummary').innerHTML=`<div class="statKpi"><small>Estudios</small><strong>${items.length}</strong></div><div class="statKpi"><small>Áreas clínicas</small><strong>${Object.keys(areas).length}</strong></div><div class="statKpi"><small>Países</small><strong>${new Set(items.flatMap(s=>countriesFromStudy(s.country))).size}</strong></div><div class="statKpi"><small>Métodos identificados</small><strong>${Object.keys(models).length}</strong></div>`;const layout={margin:{l:130,r:20,t:10,b:35},paper_bgcolor:'rgba(0,0,0,0)',plot_bgcolor:'rgba(0,0,0,0)',font:{color:'#bcd1e5'},xaxis:{gridcolor:'#173650'},yaxis:{automargin:true}};Plotly.react('areaChart',[{type:'bar',orientation:'h',y:topA.map(x=>x[0]).reverse(),x:topA.map(x=>x[1]).reverse(),marker:{color:'#2dd4bf'},hovertemplate:'%{y}: %{x} estudios<extra></extra>'}],layout,{displayModeBar:false,responsive:true});Plotly.react('modelChart',[{type:'bar',orientation:'h',y:topM.map(x=>x[0]).reverse(),x:topM.map(x=>x[1]).reverse(),marker:{color:'#6f5cff'},hovertemplate:'%{y}: %{x} estudios<extra></extra>'}],layout,{displayModeBar:false,responsive:true});const all=items.flatMap(s=>extractComparableMetrics(s).map(m=>({...m,s})));const best=[];['AUC','Accuracy','Sensibilidad','F1'].forEach(type=>{const arr=all.filter(x=>x.type===type).sort((a,b)=>b.value-a.value).slice(0,3);best.push(...arr)});document.getElementById('bestResults').innerHTML=best.length?best.map(x=>`<div class="resultTile"><div class="metric">${x.type} ${(x.value*100).toFixed(1)}%</div><b>${esc(x.s.title)}</b><span>${x.s.countryFlags||COUNTRY_FLAG[x.s.country]||''} ${esc(x.s.country)} · ${esc(x.s.area)}</span></div>`).join(''):'<div class="empty">Aún no hay métricas comparables suficientes.</div>'}
 function openCountries(btn){if(detailView.classList.contains('open')) closeStudy(false);closeAuxViews();setSideActive(btn);document.querySelector('.mainStage').style.display='none';const cv=document.getElementById('countriesView');cv.classList.add('open');cv.setAttribute('aria-hidden','false');renderWorldMap(DATA);renderCountryCards(DATA);window.scrollTo(0,0)}
 function closeCountries(){const cv=document.getElementById('countriesView');cv.classList.remove('open');cv.setAttribute('aria-hidden','true');document.querySelector('.mainStage').style.display='block';const home=document.querySelector('.sideMenu button');setSideActive(home);window.scrollTo(0,0)}
-function renderCountryCards(items){const box=document.getElementById('countryCards');if(!box)return;const counts={};items.forEach(s=>countriesFromStudy(s.country).forEach(c=>counts[c]=(counts[c]||0)+1));box.innerHTML=Object.entries(counts).sort((a,b)=>b[1]-a[1]).map(([c,n])=>`<div class="countryTile"><b><span class="flag">${COUNTRY_FLAG[c]||''}</span>${esc(c)}</b><span>${n} ${n===1?'estudio':'estudios'}</span></div>`).join('');
-  if(!el || typeof Plotly==='undefined') return;
-  const counts={};
-  items.forEach(s=>{
-    const seen=new Set(countriesFromStudy(s.country));
-    seen.forEach(name=>{
-      const iso=COUNTRY_ISO[name];
-      counts[iso]=(counts[iso]||0)+1;
-    });
-  });
-  const locations=Object.keys(counts);
-  const z=locations.map(x=>counts[x]);
-  const text=locations.map(x=>COUNTRY_LABELS[x]||x);
-  const max=Math.max(1,...z);
-  Plotly.react(el,[{
-    type:'choropleth',
-    locationmode:'ISO-3',
-    locations,
-    z,
-    text,
-    customdata:z,
-    colorscale:[[0,'#1b2949'],[0.35,'#3658a8'],[0.7,'#6f5cff'],[1,'#2dd4bf']],
-    zmin:0,
-    zmax:max,
-    marker:{line:{color:'#0b1020',width:0.55}},
-    showscale:true,
-    colorbar:{title:'Estudios',tickfont:{color:'#9fb0d0'},titlefont:{color:'#eef3ff'},outlinewidth:0,bgcolor:'rgba(0,0,0,0)'},
-    hovertemplate:'<b>%{text}</b><br>%{customdata} estudios<extra></extra>'
-  }],{
-    margin:{l:0,r:0,t:0,b:0},
-    paper_bgcolor:'rgba(0,0,0,0)',
-    plot_bgcolor:'rgba(0,0,0,0)',
-    geo:{
-      projection:{type:'natural earth'},
-      bgcolor:'rgba(0,0,0,0)',
-      showframe:false,
-      showcoastlines:false,
-      showland:true,
-      landcolor:'#111d35',
-      showcountries:true,
-      countrycolor:'#263553',
-      showocean:true,
-      oceancolor:'#08111f'
-    },
-    font:{family:'Inter, ui-sans-serif, system-ui',color:'#eef3ff'}
-  },{displayModeBar:false,responsive:true});
+function renderCountryCards(items){
+ const box=document.getElementById('countryCards');if(!box)return;
+ const counts={};items.forEach(s=>countriesFromStudy(s.country).forEach(c=>counts[c]=(counts[c]||0)+1));
+ box.innerHTML=Object.entries(counts).sort((a,b)=>b[1]-a[1]).map(([c,n])=>`<div class="countryTile"><b><span class="flag">${COUNTRY_FLAG[c]||''}</span>${esc(c)}</b><span>${n} ${n===1?'estudio':'estudios'}</span></div>`).join('');
+}
+function renderWorldMap(items){
+ const el=document.getElementById('worldMap'); if(!el||typeof Plotly==='undefined')return;
+ const counts={};items.forEach(s=>{const seen=new Set(countriesFromStudy(s.country));seen.forEach(name=>{const iso=COUNTRY_ISO[name];if(iso)counts[iso]=(counts[iso]||0)+1})});
+ const locations=Object.keys(counts),z=locations.map(k=>counts[k]),labels=locations.map(k=>COUNTRY_LABELS[k]||k),max=Math.max(1,...z);
+ Plotly.react(el,[{type:'choropleth',locationmode:'ISO-3',locations,z,text:labels,customdata:z,colorscale:[[0,'#1b2949'],[.35,'#3658a8'],[.7,'#6f5cff'],[1,'#2dd4bf']],zmin:0,zmax:max,marker:{line:{color:'#0b1020',width:.55}},showscale:true,colorbar:{title:'Estudios',tickfont:{color:'#9fb0d0'},titlefont:{color:'#eef3ff'},outlinewidth:0},hovertemplate:'<b>%{text}</b><br>%{customdata} estudios<extra></extra>'}],{margin:{l:0,r:0,t:0,b:0},paper_bgcolor:'rgba(0,0,0,0)',plot_bgcolor:'rgba(0,0,0,0)',geo:{projection:{type:'natural earth'},bgcolor:'rgba(0,0,0,0)',showframe:false,showcoastlines:false,showland:true,landcolor:'#111d35',showcountries:true,countrycolor:'#263553',showocean:true,oceancolor:'#08111f'},font:{family:'Inter, ui-sans-serif, system-ui',color:'#eef3ff'}},{displayModeBar:false,responsive:true});
 }
 function render(){const query=q.value.trim().toLowerCase(); const f=DATA.filter(x=>(!dateSel.value||x.date===dateSel.value)&&(!countrySel.value||x.country===countrySel.value)&&(!rubroSel.value||x.rubro===rubroSel.value)&&(!areaSel.value||x.area===areaSel.value)&&(!query||Object.values(x).join(' ').toLowerCase().includes(query))); if(document.getElementById('countriesView')?.classList.contains('open')){renderWorldMap(f);renderCountryCards(f)} const groups={}; f.forEach(x=>(groups[x.date]??=[]).push(x)); const dates=Object.keys(groups).sort().reverse(); document.getElementById('count').textContent=f.length; document.getElementById('days').textContent=dates.length; document.getElementById('from').textContent=DATA.length?[...DATA].sort((a,b)=>a.date.localeCompare(b.date))[0].date:'—'; document.getElementById('total').textContent=DATA.length; document.getElementById('updated').textContent=DATA.length?[...DATA].sort((a,b)=>b.date.localeCompare(a.date))[0].date:'—'; const app=document.getElementById('app'); if(!dates.length){app.innerHTML='<div class="empty">No hay estudios que coincidan con los filtros.</div>'; return;} app.innerHTML=dates.map(d=>`<section class="day"><div class="dayhead"><h2>${d}</h2><span>${groups[d].length} estudios</span></div><div class="grid">${groups[d].map(card).join('')}</div></section>`).join('');}
 [q,dateSel,countrySel,rubroSel,areaSel].forEach(el=>el.addEventListener('input',render));
