@@ -10,10 +10,10 @@
     "title": "Influence of physician and consumer demographics on AI-use penalties in primary care: a vignette-based study",
     "title_es": "Cómo cambia la percepción de médicos de atención primaria cuando declaran usar IA",
     "institution": "Autores académicos; muestra estadounidense reclutada mediante Prolific",
-    "sample": "1.030 participantes adultos de Estados Unidos",
+    "sample": "1.030 adultos de Estados Unidos en la muestra final; 1.200 reclutados vía Prolific y 170 excluidos por fallar al menos un control de manipulación.",
     "design": "Experimento prerregistrado 2×2×2×3 con perfiles ficticios de médicos de familia",
     "model": "No evalúa un modelo diagnóstico; estudia la percepción del uso declarado de IA",
-    "metrics": "N=1.030; el uso declarado de IA redujo significativamente calidez, competencia e intención de solicitar cita; efectos más marcados en participantes <45 años.",
+    "metrics": "N=1.030. Declarar uso de IA redujo significativamente la percepción de calidez y competencia y la disposición a solicitar cita. Los efectos fueron más pronunciados en participantes <45 años; interacción edad×IA: Fs ≥5,82; ps ≤0,016 para casi todas las medidas.",
     "summary": "El estudio analiza una barrera humana para la adopción clínica: cómo reaccionan los pacientes cuando un médico declara utilizar IA en diagnóstico y tratamiento.",
     "limitations": "Evalúa anuncios y escenarios ficticios, no consultas clínicas reales; algunos análisis demográficos fueron exploratorios.",
     "remember": "La implementación de IA clínica no depende solo del rendimiento técnico: la confianza y la comunicación con el paciente también pueden afectar su adopción.",
@@ -22,7 +22,84 @@
     "hardware": "No aplica",
     "cost": "No reportado",
     "paper": "https://www.nature.com/articles/s41746-026-03361-3",
-    "key_metric": "N=1.030 participantes"
+    "key_metric": "N=1.030 participantes",
+    "authors": "Moritz Reis, Jungmin Choi, Yeun Joon Kim, Yingyue Luna Luan, Pengzhao Lyu et al.",
+    "journal": "npj Digital Medicine · Vol. 9 · Article 743 · 2026",
+    "doi": "10.1038/s41746-026-03361-3",
+    "published": "01 octubre 2026",
+    "rich": {
+      "problem": "La adopción clínica de IA puede fracasar aunque el sistema funcione técnicamente si los pacientes interpretan negativamente que su médico utiliza IA. El estudio cuantifica esta 'penalización por uso de IA' en atención primaria.",
+      "idea": "Experimento prerregistrado con anuncios ficticios de médicos de familia. Se manipularon el uso declarado de IA y características demográficas del médico, y se midieron calidez, competencia e intenciones de comportamiento del paciente.",
+      "why": "Separa un problema de implementación que normalmente no aparece en las métricas de un algoritmo: confianza, percepción profesional y disposición real del paciente a atenderse.",
+      "interpretability": "No es un modelo predictivo clínico. La interpretación se basa en efectos experimentales e interacciones demográficas; los análisis de tres vías fueron exploratorios.",
+      "dataset_cards": [
+        {
+          "name": "Muestra final",
+          "value": "1.030 participantes",
+          "detail": "Adultos de EE. UU. · Prolific · muestra aproximada a composición poblacional",
+          "accent": "#0c7ea5"
+        },
+        {
+          "name": "Reclutamiento",
+          "value": "1.200 personas",
+          "detail": "170 excluidas por controles de manipulación",
+          "accent": "#2a9d8f"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado principal",
+          "main": "Penalización por IA",
+          "sub": "Menor calidez, competencia e intención de cita"
+        },
+        {
+          "label": "Edad del participante",
+          "main": "<45 años",
+          "sub": "Efectos más negativos en la mayoría de medidas"
+        },
+        {
+          "label": "Interacciones",
+          "main": "Fs ≥ 5,82",
+          "sub": "ps ≤ 0,016 salvo segunda opinión"
+        }
+      ],
+      "implementation": [
+        "Datos recolectados en Prolific en noviembre de 2025",
+        "Diseño experimental prerregistrado",
+        "Análisis estadístico en R",
+        "Potencia a priori y análisis de sensibilidad",
+        "Escenarios y anuncios ficticios; no consultas reales"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Muestra final",
+          "N",
+          "1.030"
+        ],
+        [
+          "Excluidos por controles",
+          "n",
+          "170 (14%)"
+        ],
+        [
+          "Edad media",
+          "Media",
+          "46,9 años"
+        ],
+        [
+          "Interacción IA × edad",
+          "F",
+          "≥ 5,82"
+        ],
+        [
+          "Interacción IA × edad",
+          "p",
+          "≤ 0,016 en casi todas las medidas"
+        ]
+      ]
+    },
+    "rich_detail": true
   },
   {
     "date": "2026-10-01",
@@ -35,10 +112,10 @@
     "title": "Healthcare professionals’ perceptions on AI-assisted decision-making in clinical practice: a qualitative meta-synthesis",
     "title_es": "Cómo perciben los profesionales sanitarios la toma de decisiones clínicas asistida por IA",
     "institution": "Chengdu University of Traditional Chinese Medicine y colaboradores",
-    "sample": "Estudios cualitativos recuperados mediante búsqueda en 10 bases de datos hasta el 9 de noviembre de 2025",
+    "sample": "13 estudios cualitativos de 9 países, identificados mediante búsqueda en 10 bases de datos hasta el 9 de noviembre de 2025.",
     "design": "Meta-síntesis cualitativa guiada por Normalization Process Theory (NPT)",
     "model": "No desarrolla un modelo predictivo; sintetiza evidencia sobre AI-assisted decision-making",
-    "metrics": "Síntesis cualitativa; no corresponde reportar AUC, sensibilidad o especificidad.",
+    "metrics": "13 estudios · 9 países · 10 bases de datos. Síntesis cualitativa organizada con los cuatro constructos de Normalization Process Theory (NPT); no corresponde AUC/sensibilidad/especificidad.",
     "summary": "Integra evidencia cualitativa para identificar qué facilita o dificulta que profesionales sanitarios comprendan, acepten e incorporen decisiones asistidas por IA en la práctica clínica.",
     "limitations": "Depende de la calidad, contextos y heterogeneidad de los estudios cualitativos incluidos.",
     "remember": "Para llevar un modelo al hospital no basta con una buena AUC: integración al flujo, comprensión, confianza y responsabilidades son parte de la implementación.",
@@ -47,7 +124,84 @@
     "hardware": "No aplica",
     "cost": "No reportado",
     "paper": "https://www.nature.com/articles/s41746-026-03338-2",
-    "key_metric": "10 bases de datos revisadas"
+    "key_metric": "10 bases de datos revisadas",
+    "authors": "Zihao Song, Dongjiang Hou, Ting Zhang, Huaping Huang et al.",
+    "journal": "npj Digital Medicine · 2026",
+    "doi": "10.1038/s41746-026-03338-2",
+    "published": "01 octubre 2026",
+    "rich": {
+      "problem": "Los profesionales pueden reconocer el valor de la IA y aun así no incorporarla al trabajo cotidiano. La revisión busca entender por qué la toma de decisiones asistida por IA se normaliza —o no— en la práctica clínica.",
+      "idea": "Meta-síntesis cualitativa guiada por Normalization Process Theory. Combina las dos primeras etapas de la síntesis temática de Thomas y Harden con una interpretación deductiva mediante NPT.",
+      "why": "Convierte experiencias dispersas de profesionales en barreras de implementación concretas: comprensión del sistema, participación, trabajo operativo y evaluación posterior.",
+      "interpretability": "Los hallazgos se interpretan dentro de cuatro constructos NPT: Coherence, Cognitive Participation, Collective Action y Reflexive Monitoring.",
+      "dataset_cards": [
+        {
+          "name": "Evidencia incluida",
+          "value": "13 estudios",
+          "detail": "Estudios cualitativos procedentes de 9 países",
+          "accent": "#0c7ea5"
+        },
+        {
+          "name": "Búsqueda",
+          "value": "10 bases de datos",
+          "detail": "Desde inicio de cada base hasta 09 nov 2025",
+          "accent": "#2a9d8f"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Coherence",
+          "main": "Comprensión",
+          "sub": "Dificultad para entender razonamiento y evidencia de la IA"
+        },
+        {
+          "label": "Cognitive Participation",
+          "main": "Responsabilidad",
+          "sub": "Ambigüedad y preocupaciones por autonomía"
+        },
+        {
+          "label": "Collective Action",
+          "main": "Integración",
+          "sub": "Privacidad, seguridad de datos y consentimiento"
+        },
+        {
+          "label": "Reflexive Monitoring",
+          "main": "Uso real",
+          "sub": "Fiabilidad, sobredependencia, equidad y cuidado humano"
+        }
+      ],
+      "implementation": [
+        "Búsqueda sistemática en 10 bases de datos",
+        "13 estudios de 9 países",
+        "Síntesis temática de Thomas y Harden",
+        "Interpretación deductiva con Normalization Process Theory",
+        "Foco en implementación clínica, no en rendimiento de un clasificador"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Estudios incluidos",
+          "n",
+          "13"
+        ],
+        [
+          "Países representados",
+          "n",
+          "9"
+        ],
+        [
+          "Bases de datos",
+          "n",
+          "10"
+        ],
+        [
+          "Marco de implementación",
+          "NPT",
+          "4 constructos"
+        ]
+      ]
+    },
+    "rich_detail": true
   },
   {
     "date": "2026-10-01",
@@ -72,7 +226,89 @@
     "hardware": "No reportado",
     "cost": "No reportado",
     "paper": "https://www.frontiersin.org/journals/neurology/articles/10.3389/fneur.2026.1953566/full",
-    "key_metric": "AUC temporal 0,822"
+    "key_metric": "AUC temporal 0,822",
+    "authors": "Fei Shen, Cheng Jin, Feixiang Wang, Rui Cheng, Hui Rong, Yang Yang, Caihong Fu",
+    "journal": "Frontiers in Neurology · Vol. 17 · 2026",
+    "doi": "10.3389/fneur.2026.1953566",
+    "published": "01 octubre 2026",
+    "rich": {
+      "problem": "La hemorragia intraventricular grave en prematuros puede aparecer durante la hospitalización neonatal. El objetivo fue estratificar el riesgo desde el nacimiento usando únicamente variables prenatales e intraparto disponibles de inmediato.",
+      "idea": "Cohorte retrospectiva multicéntrica de la red de Jiangsu. Se compararon ocho algoritmos. Se seleccionaron seis predictores y la regresión logística resultó el modelo con mejor comportamiento global.",
+      "why": "Muestra que un modelo simple, validado de varias maneras, puede ser más útil que arquitecturas más complejas cuando las variables son clínicas, tempranas y bien seleccionadas.",
+      "interpretability": "Seis predictores: edad gestacional, peso al nacer, intubación en sala de partos, compresiones torácicas, surfactante en sala de partos y corioamnionitis.",
+      "dataset_cards": [
+        {
+          "name": "Cohorte principal",
+          "value": "3.320 prematuros",
+          "detail": "≤34 semanas · red multicéntrica Jiangsu · 2019–2021",
+          "accent": "#0c7ea5"
+        },
+        {
+          "name": "Evento",
+          "value": "6,66% SIVH",
+          "detail": "Hemorragia intraventricular grave",
+          "accent": "#2a9d8f"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Bootstrap interno",
+          "main": "AUC 0,809",
+          "sub": "AUC corregida del modelo LR"
+        },
+        {
+          "label": "Hold-out",
+          "main": "AUC 0,804",
+          "sub": "Mejor discriminación entre 8 algoritmos"
+        },
+        {
+          "label": "Temporal",
+          "main": "AUC 0,822",
+          "sub": "Cohorte independiente"
+        },
+        {
+          "label": "Geográfica",
+          "main": "0,729–0,885",
+          "sub": "Rango de AUC por subgrupos"
+        }
+      ],
+      "implementation": [
+        "R 4.4.2",
+        "División desarrollo/validación 70:30",
+        "Comparación de 8 algoritmos de ML",
+        "Validación bootstrap, temporal y geográfica",
+        "Herramienta interactiva desarrollada con DynNom/Shiny"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Bootstrap interno · LR",
+          "AUC",
+          "0,809"
+        ],
+        [
+          "Hold-out · LR",
+          "AUC",
+          "0,804"
+        ],
+        [
+          "Validación temporal",
+          "AUC",
+          "0,822"
+        ],
+        [
+          "Validación geográfica",
+          "AUC",
+          "0,729–0,885"
+        ],
+        [
+          "Incidencia SIVH",
+          "Porcentaje",
+          "6,66%"
+        ]
+      ]
+    },
+    "rich_detail": true
   },
   {
     "date": "2026-10-01",
@@ -85,10 +321,10 @@
     "title": "Machine learning prediction of mitral regurgitation improvement after TAVI",
     "title_es": "Machine learning para predecir mejoría de insuficiencia mitral después de TAVI",
     "institution": "Union Hospital, Tongji Medical College, Huazhong University of Science and Technology y colaboradores",
-    "sample": "Cohortes de desarrollo y validación temporal de un único centro; tamaño exacto no recuperado en el resumen consultado",
+    "sample": "444 pacientes con insuficiencia mitral moderada-grave sometidos a TAVI: 324 pacientes de 2019–2024 para desarrollo y 120 pacientes de 2025 para validación temporal.",
     "design": "Estudio retrospectivo con desarrollo y validación temporal",
-    "model": "Modelos de machine learning para predecir mejoría de insuficiencia mitral tras TAVI",
-    "metrics": "El artículo reporta desarrollo y validación temporal; las métricas numéricas completas requieren revisión de las tablas del texto final.",
+    "model": "11 algoritmos comparados; selección Boruta + LASSO. Regresión logística fue el mejor modelo en validación temporal; interpretación con SHAP.",
+    "metrics": "Validación temporal: regresión logística AUC 0,788 (IC95% 0,694–0,883); LASSO AUC 0,787 (0,693–0,882); CatBoost AUC 0,778 (0,683–0,872).",
     "summary": "Desarrolla un modelo para anticipar qué pacientes podrían mostrar mejoría de la insuficiencia mitral después de implantación transcatéter de válvula aórtica.",
     "limitations": "Desarrollo y validación temporal proceden de un solo centro; los autores indican que se necesita validación prospectiva multicéntrica.",
     "remember": "La validación temporal mejora la evidencia frente a una división aleatoria simple, pero no sustituye una validación externa multicéntrica.",
@@ -97,7 +333,89 @@
     "hardware": "No reportado",
     "cost": "No reportado",
     "paper": "https://www.nature.com/articles/s41598-026-74084-4",
-    "key_metric": "Validación temporal incluida"
+    "key_metric": "Validación temporal incluida",
+    "authors": "Yazheng Shan, Peng Liu, Zirui Zhao, Hanzhe Wang, Junlin Lai, Xiang Qiu, Xiaojing Li, Shijie Wang et al.",
+    "journal": "Scientific Reports · 2026",
+    "doi": "10.1038/s41598-026-74084-4",
+    "published": "01 octubre 2026",
+    "rich": {
+      "problem": "Tras TAVI, la insuficiencia mitral puede mejorar o persistir. Predecirlo antes del procedimiento ayudaría a individualizar el seguimiento y la estrategia terapéutica.",
+      "idea": "Estudio retrospectivo de un centro con cohorte de desarrollo 2019–2024 y validación temporal en 2025. Compara 11 algoritmos, selecciona variables con Boruta + LASSO y utiliza SHAP para explicar las predicciones.",
+      "why": "La validación temporal prueba el modelo en pacientes de un periodo posterior, una evaluación más cercana al cambio real de distribución clínica que una división aleatoria simple.",
+      "interpretability": "Seis predictores robustos: insuficiencia mitral funcional, grosor septal interventricular, fibrilación auricular, fracción de eyección del VI, abordaje quirúrgico y diámetro auricular izquierdo. SHAP se utilizó para contribuciones individuales.",
+      "dataset_cards": [
+        {
+          "name": "Desarrollo",
+          "value": "324 pacientes",
+          "detail": "TAVI 2019–2024 · insuficiencia mitral moderada-grave",
+          "accent": "#0c7ea5"
+        },
+        {
+          "name": "Validación temporal",
+          "value": "120 pacientes",
+          "detail": "Pacientes TAVI de 2025",
+          "accent": "#2a9d8f"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Regresión logística",
+          "main": "AUC 0,788",
+          "sub": "IC95% 0,694–0,883"
+        },
+        {
+          "label": "LASSO",
+          "main": "AUC 0,787",
+          "sub": "IC95% 0,693–0,882"
+        },
+        {
+          "label": "CatBoost",
+          "main": "AUC 0,778",
+          "sub": "IC95% 0,683–0,872"
+        },
+        {
+          "label": "Grosor septal",
+          "main": "≈1,1 cm",
+          "sub": "Punto de corte exploratorio provisional"
+        }
+      ],
+      "implementation": [
+        "Selección dual de características: Boruta + LASSO",
+        "11 algoritmos de machine learning",
+        "Validación temporal independiente por periodo",
+        "Curvas de calibración y Decision Curve Analysis",
+        "SHAP para interpretabilidad del modelo"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Validación temporal · LR",
+          "AUC",
+          "0,788 (IC95% 0,694–0,883)"
+        ],
+        [
+          "Validación temporal · LASSO",
+          "AUC",
+          "0,787 (0,693–0,882)"
+        ],
+        [
+          "Validación temporal · CatBoost",
+          "AUC",
+          "0,778 (0,683–0,872)"
+        ],
+        [
+          "Cohorte desarrollo",
+          "Pacientes",
+          "324"
+        ],
+        [
+          "Cohorte temporal",
+          "Pacientes",
+          "120"
+        ]
+      ]
+    },
+    "rich_detail": true
   },
   {
     "date": "2026-10-01",
@@ -110,10 +428,10 @@
     "title": "Cultural guidance optimized patch mix contrastive learning enabled ensemble model for asthma detection and classification from respiratory audio",
     "title_es": "Detección y clasificación de asma mediante aprendizaje contrastivo y audio respiratorio",
     "institution": "REVA University, Bengaluru",
-    "sample": "Dataset de audio respiratorio; tamaño exacto no recuperado en el resumen consultado",
+    "sample": "Asthma Detection Dataset Version 2: 1.181 audios (288 asma, 104 bronquiales, 401 COPD, 133 sanos, 255 neumonía) + COUGHVID; partición estratificada 80:20 por dataset.",
     "design": "Desarrollo de modelo de deep learning para detección y clasificación de asma",
-    "model": "Patch-mix contrastive learning + ensemble optimizado",
-    "metrics": "El resumen consultado describe mejora de clasificación, pero las métricas numéricas completas deben verificarse en resultados/tablas.",
+    "model": "CGO-PC2BM: S2AF (VGGish + CQT/STFT + estadísticos) + Patch-Mix Contrastive Learning + CNN-LightGBM + Cultural Guidance Optimization Algorithm.",
+    "metrics": "Asthma Dataset v2: accuracy 97,81%; especificidad 98,35%; F1 98,03%; precisión 98,68%; sensibilidad 97,38%. COUGHVID: accuracy 96,15%; especificidad 95,85%; F1 96,03%; precisión 95,67%; sensibilidad 96,38%.",
     "summary": "Propone analizar sonidos respiratorios con aprendizaje profundo para detectar y clasificar asma, buscando mejorar representación de características y generalización.",
     "limitations": "La utilidad clínica depende de validación externa, calidad de grabación y generalización entre dispositivos y poblaciones.",
     "remember": "El audio respiratorio abre una vía de IA de bajo costo, pero la robustez frente a ruido, dispositivo y entorno es esencial.",
@@ -122,7 +440,115 @@
     "hardware": "No reportado",
     "cost": "No reportado",
     "paper": "https://link.springer.com/article/10.1007/s44163-026-02308-7",
-    "key_metric": "Publicado 01 Oct 2026"
+    "key_metric": "Publicado 01 Oct 2026",
+    "authors": "Seema Shivapur, Pundalik Chavan",
+    "journal": "Discover Artificial Intelligence · Vol. 6 · Article 1325 · 2026",
+    "doi": "10.1007/s44163-026-02308-7",
+    "published": "01 octubre 2026",
+    "rich": {
+      "problem": "El audio respiratorio permite un cribado no invasivo, pero ruido ambiental, variabilidad acústica y representaciones pobres pueden reducir la generalización de los modelos.",
+      "idea": "El pipeline extrae regiones respiratorias activas, reduce ruido mediante spectral gating, combina VGGish, CQT/STFT y descriptores estadísticos, aprende representaciones con Patch-Mix contrastivo y clasifica mediante CNN + LightGBM; CGOA ajusta hiperparámetros.",
+      "why": "Integra procesamiento de señal y aprendizaje profundo en un único pipeline y prueba el enfoque en dos fuentes de audio. Los autores aclaran que esto no constituye validación externa cross-dataset estricta.",
+      "interpretability": "El sistema clasifica Healthy, Asthma, Bronchial, COPD o Pneumonia. La evaluación se centra en métricas agregadas; no se conservaron matrices de confusión detalladas por clase.",
+      "dataset_cards": [
+        {
+          "name": "Asthma Dataset v2",
+          "value": "1.181 audios",
+          "detail": "288 asma · 104 bronquial · 401 COPD · 133 sano · 255 neumonía",
+          "accent": "#0c7ea5"
+        },
+        {
+          "name": "COUGHVID",
+          "value": "Dataset público",
+          "detail": "Evaluado de forma independiente bajo protocolo 80:20",
+          "accent": "#2a9d8f"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Asthma v2",
+          "main": "Acc 97,81%",
+          "sub": "Sens 97,38% · Esp 98,35%"
+        },
+        {
+          "label": "Asthma v2",
+          "main": "F1 98,03%",
+          "sub": "Precisión 98,68%"
+        },
+        {
+          "label": "COUGHVID",
+          "main": "Acc 96,15%",
+          "sub": "Sens 96,38% · Esp 95,85%"
+        },
+        {
+          "label": "COUGHVID",
+          "main": "F1 96,03%",
+          "sub": "Precisión 95,67%"
+        }
+      ],
+      "implementation": [
+        "ROI: umbral de amplitud del 20% del máximo",
+        "Reducción de ruido mediante spectral gating",
+        "S2AF: VGGish + CQT/STFT + descriptores estadísticos",
+        "Partición estratificada 80:20 antes de augmentación",
+        "Patch-Mix solo en entrenamiento para evitar leakage",
+        "CNN + LightGBM; CGOA para hiperparámetros"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Asthma Dataset v2",
+          "Accuracy",
+          "97,81%"
+        ],
+        [
+          "Asthma Dataset v2",
+          "Sensibilidad",
+          "97,38%"
+        ],
+        [
+          "Asthma Dataset v2",
+          "Especificidad",
+          "98,35%"
+        ],
+        [
+          "Asthma Dataset v2",
+          "F1",
+          "98,03%"
+        ],
+        [
+          "Asthma Dataset v2",
+          "Precisión",
+          "98,68%"
+        ],
+        [
+          "COUGHVID",
+          "Accuracy",
+          "96,15%"
+        ],
+        [
+          "COUGHVID",
+          "Sensibilidad",
+          "96,38%"
+        ],
+        [
+          "COUGHVID",
+          "Especificidad",
+          "95,85%"
+        ],
+        [
+          "COUGHVID",
+          "F1",
+          "96,03%"
+        ],
+        [
+          "COUGHVID",
+          "Precisión",
+          "95,67%"
+        ]
+      ]
+    },
+    "rich_detail": true
   },
   {
     "date": "2026-09-30",
