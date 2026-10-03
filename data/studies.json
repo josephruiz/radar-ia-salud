@@ -2822,5 +2822,881 @@
       "Tecnología central: InceptionV3 + Grad-CAM"
     ],
     "rubro": "Cirugía y procedimientos"
+  },
+  {
+    "date": "2026-10-03",
+    "reviewed": "03 octubre 2026",
+    "rich_detail": true,
+    "code": "No reportado",
+    "cost": "No reportado",
+    "figures": [],
+    "flag": "🇨🇳",
+    "countryFlags": "🇨🇳",
+    "country": "China",
+    "rubro": "IA en imágenes médicas",
+    "area": "Radiología",
+    "modality": "CT + MRI + PET",
+    "title": "Artificial intelligence driven multimodal medical image segmentation algorithm: applied research and clinical verification",
+    "title_es": "Segmentación multimodal de imágenes médicas con AMIS-Net y verificación clínica",
+    "institution": "No reportado",
+    "sample": "No reportado",
+    "design": "Desarrollo y verificación de un algoritmo de segmentación multimodal",
+    "model": "AMIS-Net",
+    "metrics": "No reportado en la información verificada consultada",
+    "summary": "Propone AMIS-Net para integrar CT, MRI y PET y mejorar segmentación, lesiones pequeñas, generalización y compatibilidad clínica.",
+    "limitations": "No reportado en la información verificada consultada",
+    "remember": "La integración entre modalidades es el objetivo central, no solo optimizar una modalidad aislada.",
+    "language": "No reportado",
+    "framework": "No reportado",
+    "hardware": "No reportado",
+    "paper": "https://www.nature.com/articles/s41598-026-73505-8",
+    "doi": "10.1038/s41598-026-73505-8",
+    "published": "03 octubre 2026",
+    "journal": "Scientific Reports · 2026",
+    "key_metric": "AMIS-Net · CT/MRI/PET",
+    "rich": {
+      "problem": "La segmentación de CT, MRI y PET todavía enfrenta dificultades de fusión multimodal, lesiones pequeñas y generalización.",
+      "idea": "AMIS-Net busca integrar información complementaria de múltiples modalidades para segmentación médica.",
+      "why": "Una segmentación multimodal robusta puede apoyar localización de lesiones y planificación terapéutica.",
+      "interpretability": "No reportado",
+      "dataset_cards": [
+        {
+          "name": "Modalidades",
+          "value": "CT · MRI · PET",
+          "detail": "Segmentación multimodal",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Arquitectura",
+          "main": "AMIS-Net",
+          "sub": "Fusión multimodal para segmentación"
+        }
+      ],
+      "implementation": [
+        "Red de segmentación multimodal",
+        "Verificación clínica reportada por los autores"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Métricas verificadas",
+          "—",
+          "No reportado en la fuente consultada"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-03",
+    "reviewed": "03 octubre 2026",
+    "rich_detail": true,
+    "code": "No reportado",
+    "cost": "No reportado",
+    "figures": [],
+    "flag": "🇯🇵",
+    "countryFlags": "🇯🇵",
+    "country": "Japón",
+    "rubro": "IA generativa clínica",
+    "area": "Radiología",
+    "modality": "Texto, imágenes y texto+imagen",
+    "title": "Generative AI versus physicians in diagnostic radiology: a systematic review and meta-analysis",
+    "title_es": "IA generativa frente a médicos en radiología diagnóstica: revisión sistemática y metaanálisis",
+    "institution": "Osaka Metropolitan University y colaboradores",
+    "sample": "48 estudios; 12 con comparadores médicos; 40 médicos en total",
+    "design": "Revisión sistemática y metaanálisis PRISMA-DTA, PROSPERO CRD420251040000",
+    "model": "GPT-4, GPT-4V, GPT-4o, Claude, Gemini, Llama y otros modelos generativos",
+    "metrics": "Accuracy agrupada: 42,9% tareas de texto libre; 58,1% elección. Médicos expertos superaron a IA en 13,0 puntos porcentuales (IC95% 0,9–25,2).",
+    "summary": "Sintetiza el rendimiento diagnóstico de IA generativa en radiología y lo compara con médicos.",
+    "limitations": "Heterogeneidad, divulgación incompleta de versiones/prompts, comparaciones médico-IA principalmente entre estudios y predominio del inglés.",
+    "remember": "La IA generativa todavía rindió por debajo de radiólogos expertos; los usos asistivos basados en texto parecen más prometedores.",
+    "language": "R 4.4.2",
+    "framework": "metafor 4.6.0; clubSandwich 0.7.0",
+    "hardware": "No aplica",
+    "paper": "https://link.springer.com/article/10.1007/s11604-026-02090-7",
+    "doi": "10.1007/s11604-026-02090-7",
+    "published": "03 octubre 2026",
+    "journal": "Japanese Journal of Radiology · 2026",
+    "key_metric": "48 estudios · 42,9% vs expertos",
+    "rich": {
+      "problem": "La evidencia sobre diagnóstico radiológico con IA generativa estaba fragmentada entre tareas, modalidades y comparadores.",
+      "idea": "Meta-análisis de estudios de diagnóstico radiológico con IA generativa y comparación modelada con médicos.",
+      "why": "Entrega una referencia cuantitativa para valorar si los modelos están listos para diagnóstico clínico.",
+      "interpretability": "Estratifica por tipo de tarea, modalidad de entrada, riesgo de sesgo y experiencia médica.",
+      "dataset_cards": [
+        {
+          "name": "Estudios",
+          "value": "48",
+          "detail": "46 peer-reviewed · 2 preprints",
+          "accent": "#0c7ea5"
+        },
+        {
+          "name": "Comparadores",
+          "value": "40 médicos",
+          "detail": "24 expertos · 16 no expertos",
+          "accent": "#2a9d8f"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Texto libre",
+          "main": "42,9%",
+          "sub": "Accuracy agrupada IA"
+        },
+        {
+          "label": "Elección",
+          "main": "58,1%",
+          "sub": "Accuracy agrupada IA"
+        },
+        {
+          "label": "Expertos vs IA",
+          "main": "+13,0 pp",
+          "sub": "Favorece médicos expertos"
+        }
+      ],
+      "implementation": [
+        "PRISMA-DTA",
+        "PROBAST+AI",
+        "Meta-regresión multinivel de efectos aleatorios",
+        "R 4.4.2 · metafor · clubSandwich"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "IA · texto libre",
+          "Accuracy",
+          "42,9% (IC95% 35,8–50,1)"
+        ],
+        [
+          "IA · elección",
+          "Accuracy",
+          "58,1% (50,0–66,2)"
+        ],
+        [
+          "Expertos menos IA",
+          "Diferencia",
+          "+13,0 pp (0,9–25,2)"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-03",
+    "reviewed": "03 octubre 2026",
+    "rich_detail": true,
+    "code": "No reportado",
+    "cost": "No reportado",
+    "figures": [],
+    "flag": "🇮🇳 🇸🇦 🇰🇷",
+    "countryFlags": "🇮🇳 🇸🇦 🇰🇷",
+    "country": "India / Arabia Saudita / Corea del Sur",
+    "rubro": "IA en imágenes médicas",
+    "area": "Neurología",
+    "modality": "MRI cerebral multimodal 3D",
+    "title": "AMF-U-Net: an adaptive multimodal fusion residual attention 3D U-Net for boundary-aware brain tumour segmentation",
+    "title_es": "AMF-U-Net para segmentación de tumores cerebrales con fusión multimodal y atención 3D",
+    "institution": "Colaboración internacional; afiliaciones de India, Arabia Saudita y Corea del Sur",
+    "sample": "No reportado en la información verificada consultada",
+    "design": "Desarrollo de arquitectura de segmentación 3D",
+    "model": "AMF-U-Net · 3D U-Net residual con atención y fusión multimodal adaptativa",
+    "metrics": "No reportado en la información verificada consultada",
+    "summary": "Arquitectura orientada a segmentar tumores cerebrales preservando límites mediante fusión adaptativa de MRI multimodal.",
+    "limitations": "No reportado en la información verificada consultada",
+    "remember": "Combina fusión multimodal, bloques residuales y atención para enfatizar límites tumorales.",
+    "language": "No reportado",
+    "framework": "No reportado",
+    "hardware": "No reportado",
+    "paper": "https://www.nature.com/articles/s41598-026-72174-x",
+    "doi": "10.1038/s41598-026-72174-x",
+    "published": "03 octubre 2026",
+    "journal": "Scientific Reports · 2026",
+    "key_metric": "AMF-U-Net · MRI 3D",
+    "rich": {
+      "problem": "Los límites tumorales y la integración de secuencias MRI siguen siendo difíciles en segmentación cerebral.",
+      "idea": "Fusionar adaptativamente modalidades MRI dentro de una 3D U-Net residual con atención.",
+      "why": "La delimitación precisa es relevante para planificación y seguimiento neuro-oncológico.",
+      "interpretability": "No reportado",
+      "dataset_cards": [
+        {
+          "name": "Datos",
+          "value": "MRI multimodal",
+          "detail": "Volúmenes 3D de tumor cerebral",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Arquitectura",
+          "main": "AMF-U-Net",
+          "sub": "Residual + atención + fusión multimodal"
+        }
+      ],
+      "implementation": [
+        "Segmentación volumétrica 3D",
+        "Fusión multimodal adaptativa",
+        "Mecanismos de atención"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Métricas verificadas",
+          "—",
+          "No reportado en la fuente consultada"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-03",
+    "reviewed": "03 octubre 2026",
+    "rich_detail": true,
+    "code": "No reportado",
+    "cost": "No reportado",
+    "figures": [],
+    "flag": "🇮🇷",
+    "countryFlags": "🇮🇷",
+    "country": "Irán",
+    "rubro": "IA predictiva clínica",
+    "area": "Trauma",
+    "modality": "Datos clínicos tabulares longitudinales",
+    "title": "Explainable machine learning and deep learning models for predicting in-hospital mortality in burn patients",
+    "title_es": "Modelos explicables de ML y deep learning para predecir mortalidad hospitalaria en pacientes quemados",
+    "institution": "No reportado en la información verificada consultada",
+    "sample": "No reportado en la información verificada consultada",
+    "design": "Modelado predictivo de mortalidad intrahospitalaria con explicabilidad",
+    "model": "Machine learning y deep learning explicables",
+    "metrics": "No reportado en la información verificada consultada",
+    "summary": "Evalúa modelos explicables para identificar dinámicamente pacientes quemados con riesgo de mortalidad durante la hospitalización.",
+    "limitations": "No reportado en la información verificada consultada",
+    "remember": "La explicabilidad es central cuando el riesgo se actualiza durante la evolución hospitalaria.",
+    "language": "No reportado",
+    "framework": "No reportado",
+    "hardware": "No reportado",
+    "paper": "https://www.nature.com/articles/s41598-026-73630-4",
+    "doi": "10.1038/s41598-026-73630-4",
+    "published": "03 octubre 2026",
+    "journal": "Scientific Reports · 2026",
+    "key_metric": "Predicción explicable de mortalidad",
+    "rich": {
+      "problem": "La mortalidad por quemaduras cambia con la evolución clínica y requiere estratificación dinámica.",
+      "idea": "Comparar ML y DL e incorporar explicabilidad para predicción intrahospitalaria.",
+      "why": "Puede ayudar a reconocer tempranamente pacientes de mayor riesgo.",
+      "interpretability": "El trabajo se centra explícitamente en modelos explicables; detalle de técnica no reportado en la fuente consultada.",
+      "dataset_cards": [
+        {
+          "name": "Población",
+          "value": "Pacientes quemados",
+          "detail": "Predicción intrahospitalaria",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Objetivo",
+          "main": "Mortalidad",
+          "sub": "Predicción dinámica durante hospitalización"
+        }
+      ],
+      "implementation": [
+        "Comparación de ML y DL",
+        "Componente de explicabilidad"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Métricas verificadas",
+          "—",
+          "No reportado en la fuente consultada"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-03",
+    "reviewed": "03 octubre 2026",
+    "rich_detail": true,
+    "code": "No reportado",
+    "cost": "No reportado",
+    "figures": [],
+    "flag": "🇧🇷",
+    "countryFlags": "🇧🇷",
+    "country": "Brasil",
+    "rubro": "Revisión y evidencia",
+    "area": "Neurología neonatal",
+    "modality": "EHR, señales fisiológicas, radiografía, ultrasonido, auscultación y ventilador",
+    "title": "Artificial intelligence and digital technologies transforming neonatal respiratory assessment: a scoping review",
+    "title_es": "IA y tecnologías digitales en la evaluación respiratoria neonatal: revisión de alcance",
+    "institution": "Faculdade Ciências Médicas de Minas Gerais; Universidade Federal do Rio Grande do Norte",
+    "sample": "35 estudios publicados entre 2019 y 2026; 199 registros identificados inicialmente",
+    "design": "Scoping review",
+    "model": "ML (21/35), DL (10/35), híbridos ML/DL (3/35), control inteligente (1/35)",
+    "metrics": "60,0% ML; 28,6% DL; 8,6% híbridos; EHR 34,3%; señales fisiológicas 20,0%.",
+    "summary": "Mapea IA y tecnologías digitales para predicción, imagen y monitorización respiratoria neonatal.",
+    "limitations": "Heterogeneidad metodológica, validación externa insuficiente, muestras pequeñas y falta de estandarización.",
+    "remember": "La evidencia es prometedora, pero aún insuficiente para implementación clínica amplia.",
+    "language": "No aplica",
+    "framework": "Scoping review",
+    "hardware": "Diverso; no único",
+    "paper": "https://www.nature.com/articles/s41372-026-02894-5",
+    "doi": "10.1038/s41372-026-02894-5",
+    "published": "02 octubre 2026",
+    "journal": "Journal of Perinatology · 2026",
+    "key_metric": "35 estudios · 60% ML",
+    "rich": {
+      "problem": "La evidencia de IA respiratoria neonatal estaba dispersa entre predicción, imágenes y monitorización.",
+      "idea": "Revisión de alcance para mapear aplicaciones, rendimiento y limitaciones.",
+      "why": "Permite ver qué tecnologías están más maduras y dónde falta validación.",
+      "interpretability": "Síntesis descriptiva de enfoques y fuentes de datos.",
+      "dataset_cards": [
+        {
+          "name": "Incluidos",
+          "value": "35 estudios",
+          "detail": "2019–2026",
+          "accent": "#0c7ea5"
+        },
+        {
+          "name": "ML",
+          "value": "60,0%",
+          "detail": "21 de 35 estudios",
+          "accent": "#2a9d8f"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Deep learning",
+          "main": "28,6%",
+          "sub": "10/35 estudios"
+        },
+        {
+          "label": "EHR",
+          "main": "34,3%",
+          "sub": "Fuente de datos más común"
+        },
+        {
+          "label": "Señales",
+          "main": "20,0%",
+          "sub": "Segunda fuente más frecuente"
+        }
+      ],
+      "implementation": [
+        "Scoping review",
+        "Síntesis descriptiva",
+        "Predicción, imagen y monitorización continua"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Machine learning",
+          "Proporción",
+          "60,0%"
+        ],
+        [
+          "Deep learning",
+          "Proporción",
+          "28,6%"
+        ],
+        [
+          "Híbridos ML/DL",
+          "Proporción",
+          "8,6%"
+        ],
+        [
+          "EHR",
+          "Fuente",
+          "34,3%"
+        ],
+        [
+          "Señales fisiológicas",
+          "Fuente",
+          "20,0%"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-03",
+    "reviewed": "03 octubre 2026",
+    "rich_detail": true,
+    "code": "No reportado",
+    "cost": "No reportado",
+    "figures": [],
+    "flag": "🇩🇪",
+    "countryFlags": "🇩🇪",
+    "country": "Alemania",
+    "rubro": "IA generativa clínica",
+    "area": "Decisión clínica",
+    "modality": "Casos clínicos + texto + búsqueda de literatura",
+    "title": "Feasibility and expert evaluation of a medical large language model in an interdisciplinary clinical board",
+    "title_es": "Evaluación experta de un LLM médico en una junta clínica interdisciplinaria",
+    "institution": "Uniklinikum Erlangen; Friedrich-Alexander-Universität Erlangen-Nürnberg",
+    "sample": "100 casos reales consecutivos; 759 evaluaciones experto-caso",
+    "design": "Estudio prospectivo, observacional y unicéntrico",
+    "model": "OpenEvidence (perfil Osler); Claude Opus 5 para análisis temporal de texto",
+    "metrics": "Mediana 4/5 en los 8 ítems. Relevancia clínica 4,06±0,91; ahorro de tiempo 3,50±1,20. Acuerdo completo con junta: 40,2% y 50,5% según evaluador.",
+    "summary": "Prueba un LLM médico dentro de una junta interdisciplinaria con casos reales y evaluación de especialistas.",
+    "limitations": "Un solo centro; distribución desigual por especialidad; pocos evaluadores por especialidad; acuerdo médico variable.",
+    "remember": "El LLM fue bien valorado como apoyo, pero no sustituyó el juicio de la junta y el ahorro de tiempo fue el aspecto peor valorado.",
+    "language": "R 4.5.3 para análisis",
+    "framework": "OpenEvidence; análisis estadístico en R",
+    "hardware": "No reportado",
+    "paper": "https://www.nature.com/articles/s41598-026-72397-y",
+    "doi": "10.1038/s41598-026-72397-y",
+    "published": "02 octubre 2026",
+    "journal": "Scientific Reports · 16:30676 · 2026",
+    "key_metric": "100 casos · relevancia 4,06/5",
+    "rich": {
+      "problem": "No estaba claro si un LLM especializado podía integrarse de forma útil en una junta clínica real.",
+      "idea": "Introducir OpenEvidence después de la discusión inicial de cada caso y evaluar su aporte por especialistas.",
+      "why": "Evalúa implementación real, no solo preguntas de examen.",
+      "interpretability": "La utilidad se desglosa por relevancia, integración, confianza, guías, claridad, insights y tiempo.",
+      "dataset_cards": [
+        {
+          "name": "Casos",
+          "value": "100",
+          "detail": "Consecutivos · julio–noviembre 2025",
+          "accent": "#0c7ea5"
+        },
+        {
+          "name": "Evaluaciones",
+          "value": "759",
+          "detail": "Especialistas de múltiples disciplinas",
+          "accent": "#2a9d8f"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Relevancia clínica",
+          "main": "4,06/5",
+          "sub": "Media ±0,91"
+        },
+        {
+          "label": "Ahorro de tiempo",
+          "main": "3,50/5",
+          "sub": "Ítem con menor puntuación"
+        },
+        {
+          "label": "Consenso",
+          "main": "51,6%",
+          "sub": "Acuerdo completo en casos con consenso"
+        }
+      ],
+      "implementation": [
+        "Junta clínica interdisciplinaria real",
+        "OpenEvidence después de recomendación preliminar",
+        "Dos médicos evaluaron concordancia",
+        "R 4.5.3 para análisis"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Relevancia clínica",
+          "Media",
+          "4,06 ± 0,91"
+        ],
+        [
+          "Ahorro de tiempo",
+          "Media",
+          "3,50 ± 1,20"
+        ],
+        [
+          "Acuerdo completo · evaluador 1",
+          "Porcentaje",
+          "40,2%"
+        ],
+        [
+          "Acuerdo completo · evaluador 2",
+          "Porcentaje",
+          "50,5%"
+        ],
+        [
+          "Consenso · acuerdo completo",
+          "Porcentaje",
+          "51,6%"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-03",
+    "reviewed": "03 octubre 2026",
+    "rich_detail": true,
+    "code": "No reportado",
+    "cost": "No reportado",
+    "figures": [],
+    "flag": "🇮🇳",
+    "countryFlags": "🇮🇳",
+    "country": "India",
+    "rubro": "IA en imágenes médicas",
+    "area": "Oncología",
+    "modality": "CT pulmonar",
+    "title": "Deep learning driven lung cancer prediction using modified u-net segmentation and CNN classification",
+    "title_es": "Predicción de cáncer pulmonar con U-Net modificada y clasificación CNN",
+    "institution": "Shri Sant Gajanan Maharaj College of Engineering; Symbiosis Institute of Technology",
+    "sample": "LIDC-IDRI; partición de prueba a nivel de paciente",
+    "design": "Estudio retrospectivo con dataset público y test hold-out a nivel paciente",
+    "model": "U-Net modificada con ResNet-34, attention gates y ASPP + clasificador CNN con Squeeze-and-Excitation",
+    "metrics": "Segmentación: Dice 0,847; IoU 0,736. Clasificación: accuracy 94,5%±0,3; sensibilidad 92,3%; especificidad 96,1%; AUC 0,967.",
+    "summary": "Pipeline CAD que primero segmenta nódulos pulmonares y luego clasifica malignidad.",
+    "limitations": "Dataset retrospectivo único; requiere validación prospectiva multicéntrica y evaluación de latencia end-to-end.",
+    "remember": "Combina buena segmentación con clasificación de alta AUC, pero todavía no demuestra preparación clínica externa.",
+    "language": "Python 3.8.10",
+    "framework": "PyTorch 1.12.0 · CUDA 11.3",
+    "hardware": "NVIDIA RTX 3080 10GB; Intel Core i9-10900K; 32GB RAM",
+    "paper": "https://link.springer.com/article/10.1186/s43168-026-00688-z",
+    "doi": "10.1186/s43168-026-00688-z",
+    "published": "02 octubre 2026",
+    "journal": "Egyptian Journal of Bronchology · 2026",
+    "key_metric": "AUC 0,967 · Acc 94,5%",
+    "rich": {
+      "problem": "Detectar y caracterizar nódulos pulmonares exige segmentación precisa y clasificación robusta.",
+      "idea": "Pipeline en dos etapas: U-Net modificada para segmentación y SE-CNN para malignidad.",
+      "why": "Permite analizar rendimiento de localización y diagnóstico por separado.",
+      "interpretability": "No reportado como método explicativo específico.",
+      "dataset_cards": [
+        {
+          "name": "Dataset",
+          "value": "LIDC-IDRI",
+          "detail": "CT · test a nivel paciente",
+          "accent": "#0c7ea5"
+        },
+        {
+          "name": "Hardware",
+          "value": "RTX 3080",
+          "detail": "10GB VRAM · PyTorch",
+          "accent": "#2a9d8f"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Clasificación",
+          "main": "AUC 0,967",
+          "sub": "Accuracy 94,5%"
+        },
+        {
+          "label": "Segmentación",
+          "main": "Dice 0,847",
+          "sub": "IoU 0,736"
+        },
+        {
+          "label": "Especificidad",
+          "main": "96,1%",
+          "sub": "Sensibilidad 92,3%"
+        }
+      ],
+      "implementation": [
+        "Python 3.8.10",
+        "PyTorch 1.12.0",
+        "CUDA 11.3",
+        "RTX 3080 10GB",
+        "Split de prueba a nivel paciente"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Segmentación",
+          "Dice",
+          "0,847"
+        ],
+        [
+          "Segmentación",
+          "IoU",
+          "0,736"
+        ],
+        [
+          "Clasificación",
+          "Accuracy",
+          "94,5% ±0,3"
+        ],
+        [
+          "Clasificación",
+          "Sensibilidad",
+          "92,3%"
+        ],
+        [
+          "Clasificación",
+          "Especificidad",
+          "96,1%"
+        ],
+        [
+          "Clasificación",
+          "AUC",
+          "0,967"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-03",
+    "reviewed": "03 octubre 2026",
+    "rich_detail": true,
+    "code": "No reportado",
+    "cost": "No reportado",
+    "figures": [],
+    "flag": "🇨🇳 🇭🇰",
+    "countryFlags": "🇨🇳 🇭🇰",
+    "country": "China / Hong Kong",
+    "rubro": "IA multimodal clínica",
+    "area": "Otorrinolaringología",
+    "modality": "Audiometría tonal + timpanometría + texto estructurado",
+    "title": "Audiologist-Guided Multimodal AI for Pure-Tone Audiometry and Tympanometry Interpretation and Reporting",
+    "title_es": "IA multimodal guiada por audiólogos para interpretar audiometría y timpanometría",
+    "institution": "Ningbo Hospital; Ningbo College of Health Sciences; University of Hong Kong y colaboradores",
+    "sample": "151 pacientes; 50 desarrollo + 101 prueba bloqueada",
+    "design": "Evaluación multimodal modular con validación independiente",
+    "model": "Flujos agentic Codex y DeepSeek guiados por reglas/skill de audiología",
+    "metrics": "Codex: 99,4% exactitud en umbrales numéricos; 90,1% de pacientes cumplieron todos los criterios numéricos/N-NR; grado 101/101 y tipo 100/101.",
+    "summary": "Descompone el reporte audiológico en transcripción de imágenes, aplicación de reglas y generación de informe para localizar dónde falla la IA.",
+    "limitations": "Entornos de ejecución de Codex y DeepSeek no emparejados; algunos endpoints con pocos casos; modelos propietarios sujetos a cambios.",
+    "remember": "Separar transcripción, reglas clínicas y comunicación hace más auditable un sistema multimodal.",
+    "language": "No reportado",
+    "framework": "Codex y DeepSeek; esquema/skill guiado por audiólogos",
+    "hardware": "No reportado",
+    "paper": "https://link.springer.com/article/10.1007/s10916-026-02463-5",
+    "doi": "10.1007/s10916-026-02463-5",
+    "published": "01 octubre 2026",
+    "journal": "Journal of Medical Systems · 2026",
+    "key_metric": "99,4% umbrales · 90,1% paciente",
+    "rich": {
+      "problem": "Una métrica end-to-end puede ocultar si el error proviene de leer la imagen, aplicar reglas audiológicas o redactar.",
+      "idea": "Evaluación modular guiada por audiólogos con audiometría y timpanometría.",
+      "why": "Facilita auditoría clínica de sistemas multimodales.",
+      "interpretability": "La modularización permite atribuir errores a etapas concretas.",
+      "dataset_cards": [
+        {
+          "name": "Cohorte",
+          "value": "151 pacientes",
+          "detail": "50 desarrollo · 101 test",
+          "accent": "#0c7ea5"
+        },
+        {
+          "name": "Edad media",
+          "value": "40,9 años",
+          "detail": "Rango 6–90",
+          "accent": "#2a9d8f"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Umbrales exactos",
+          "main": "99,4%",
+          "sub": "1809/1820"
+        },
+        {
+          "label": "Paciente completo",
+          "main": "90,1%",
+          "sub": "91/101"
+        },
+        {
+          "label": "Tipo auditivo",
+          "main": "100/101",
+          "sub": "Codex locked test"
+        }
+      ],
+      "implementation": [
+        "Workflow modular",
+        "20.000 bootstrap resamples en análisis",
+        "Validación bloqueada de 101 pacientes",
+        "Codex y análisis post hoc DeepSeek"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Umbrales numéricos",
+          "Exactitud",
+          "99,4%"
+        ],
+        [
+          "Umbrales ±5 dB",
+          "Exactitud",
+          "99,5%"
+        ],
+        [
+          "Paciente · todos criterios",
+          "Exactitud",
+          "90,1%"
+        ],
+        [
+          "Grado",
+          "Correctos",
+          "101/101"
+        ],
+        [
+          "Tipo",
+          "Correctos",
+          "100/101"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-03",
+    "reviewed": "03 octubre 2026",
+    "rich_detail": true,
+    "code": "No reportado",
+    "cost": "No reportado",
+    "figures": [],
+    "flag": "🇺🇸 🇨🇳",
+    "countryFlags": "🇺🇸 🇨🇳",
+    "country": "Estados Unidos / China",
+    "rubro": "Gemelos digitales y monitoreo",
+    "area": "UCI",
+    "modality": "Glucosa continua (CGM) · serie temporal",
+    "title": "A digital twin for tracking and forecasting glycemia with septic patients in ICUs",
+    "title_es": "Gemelo digital para seguimiento y predicción de glucemia en pacientes sépticos de UCI",
+    "institution": "University of South Carolina; datos clínicos de Sichuan Provincial People’s Hospital",
+    "sample": "1 paciente fuente con 19.621 mediciones minuto a minuto + 10 pacientes sépticos adicionales",
+    "design": "Estudio observacional con transferencia y adaptación personalizada de modelo",
+    "model": "PatchTST; zero-shot, fine-tuning, linear probing, staged fine-tuning y entrenamiento desde cero",
+    "metrics": "No existe una única estrategia dominante; se reportan MAE/MRE por paciente. En S003, fine-tuning tomó 31 s; linear probing actualizó 0,36% de parámetros (23.055/6.337.039).",
+    "summary": "Gemelo digital que adapta un modelo de series temporales a cada paciente para pronosticar glucosa a corto plazo en UCI.",
+    "limitations": "Muestra clínica pequeña; rendimiento variable entre pacientes; se usa solo CGM para el gemelo actual.",
+    "remember": "La adaptación debe ser selectiva: zero-shot puede ser suficiente en algunos pacientes y fine-tuning ayuda en otros.",
+    "language": "No reportado",
+    "framework": "PatchTST",
+    "hardware": "No reportado",
+    "paper": "https://www.nature.com/articles/s44324-026-00132-2",
+    "doi": "10.1038/s44324-026-00132-2",
+    "published": "01 octubre 2026",
+    "journal": "npj Metabolic Health and Disease · 4:41 · 2026",
+    "key_metric": "10 pacientes + 19.621 puntos fuente",
+    "rich": {
+      "problem": "La glucosa en sepsis es dinámica y los modelos poblacionales pueden no adaptarse a cada paciente.",
+      "idea": "Usar un PatchTST preentrenado como plantilla de gemelo digital y adaptarlo según error y disponibilidad de datos.",
+      "why": "Conecta monitorización continua con actualización personalizada del modelo.",
+      "interpretability": "Se comparan explícitamente estrategias de adaptación y costo computacional.",
+      "dataset_cards": [
+        {
+          "name": "Fuente",
+          "value": "19.621 puntos",
+          "detail": "CGM minuto a minuto · 1 paciente",
+          "accent": "#0c7ea5"
+        },
+        {
+          "name": "Despliegue",
+          "value": "10 pacientes",
+          "detail": "Sépticos con diabetes",
+          "accent": "#2a9d8f"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Arquitectura",
+          "main": "PatchTST",
+          "sub": "Forecasting de series temporales"
+        },
+        {
+          "label": "Linear probing",
+          "main": "0,36%",
+          "sub": "23.055/6.337.039 parámetros"
+        },
+        {
+          "label": "Horizonte",
+          "main": "15 min",
+          "sub": "Look-back 30 min"
+        }
+      ],
+      "implementation": [
+        "Split 70/10/20 por paciente",
+        "Zero-shot",
+        "Fine-tuning completo",
+        "Linear probing",
+        "Staged fine-tuning"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Paciente fuente",
+          "Puntos CGM",
+          "19.621"
+        ],
+        [
+          "Nuevos pacientes",
+          "n",
+          "10"
+        ],
+        [
+          "Look-back",
+          "Ventana",
+          "30 min"
+        ],
+        [
+          "Predicción",
+          "Horizonte",
+          "15 min"
+        ],
+        [
+          "Linear probing",
+          "Parámetros actualizados",
+          "0,36%"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-03",
+    "reviewed": "03 octubre 2026",
+    "rich_detail": true,
+    "code": "No reportado",
+    "cost": "No reportado",
+    "figures": [],
+    "flag": "🇺🇸",
+    "countryFlags": "🇺🇸",
+    "country": "Estados Unidos",
+    "rubro": "Perspectiva y gobernanza",
+    "area": "Agentes clínicos",
+    "modality": "Perspectiva sobre agentes LLM clínicos",
+    "title": "The missing links in agentic AI autonomy",
+    "title_es": "Los eslabones faltantes en la autonomía de la IA agéntica",
+    "institution": "Icahn School of Medicine at Mount Sinai; Brigham and Women’s Hospital / Harvard Medical School",
+    "sample": "No aplica; News & Views",
+    "design": "Perspectiva / News & Views",
+    "model": "Agentes clínicos on-premise con mecanismos de consistencia y derivación",
+    "metrics": "No aplica; comenta evidencia reciente sobre autonomía selectiva y derivación de casos inciertos.",
+    "summary": "Analiza qué falta para pasar de agentes clínicos confiables en pruebas a autonomía segura en práctica, especialmente qué ocurre después de derivar un caso incierto.",
+    "limitations": "Es una perspectiva, no una validación primaria.",
+    "remember": "La autonomía selectiva no termina al detectar incertidumbre: el flujo posterior de revisión humana también debe validarse.",
+    "language": "No aplica",
+    "framework": "No aplica",
+    "hardware": "No aplica",
+    "paper": "https://www.nature.com/articles/s41591-026-04658-2",
+    "doi": "10.1038/s41591-026-04658-2",
+    "published": "02 octubre 2026",
+    "journal": "Nature Medicine · 2026",
+    "key_metric": "Perspectiva sobre autonomía selectiva",
+    "rich": {
+      "problem": "Los agentes pueden identificar casos inciertos, pero falta evidencia sobre qué sucede después de la derivación a humanos.",
+      "idea": "Examinar los huecos operativos y decisionales que quedan en sistemas agénticos clínicos.",
+      "why": "La seguridad depende del sistema completo de escalamiento, no solo del modelo.",
+      "interpretability": "Discute consistencia y gating como señales de confiabilidad.",
+      "dataset_cards": [
+        {
+          "name": "Tipo",
+          "value": "News & Views",
+          "detail": "Perspectiva clínica y tecnológica",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Tema",
+          "main": "Autonomía selectiva",
+          "sub": "Gating + derivación humana"
+        }
+      ],
+      "implementation": [
+        "Gobernanza local",
+        "Estimación de confiabilidad",
+        "Escalamiento de casos inciertos"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Métricas propias",
+          "—",
+          "No aplica"
+        ]
+      ]
+    }
   }
 ]
