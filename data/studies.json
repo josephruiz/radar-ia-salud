@@ -1,6 +1,98 @@
 [
   {
     "date": "2026-10-10",
+    "flag": "🇺🇸",
+    "countryFlags": "🇺🇸",
+    "country": "Estados Unidos",
+    "rubro": "IA en educación médica",
+    "area": "Educación y seguridad clínica",
+    "modality": "Síntesis conceptual y revisión narrativa de evidencia",
+    "title": "Artificial intelligence across the medical education continuum: institutional, learning, readiness and safety systems",
+    "title_es": "Inteligencia artificial a lo largo de la formación médica: sistemas institucionales, de aprendizaje, preparación y seguridad",
+    "institution": "University of Florida; UF AI for Health Institute",
+    "sample": "No aplica: artículo de perspectiva, no cohorte de pacientes.",
+    "design": "Perspectiva y síntesis de evidencia sobre educación médica de pregrado, posgrado y educación continua.",
+    "model": "No se evalúa una arquitectura específica de IA.",
+    "metrics": "No aplica: no presenta evaluación cuantitativa de un modelo diagnóstico.",
+    "summary": "Los autores proponen integrar IA a la educación médica mediante sistemas institucionales, de aprendizaje y de preparación y seguridad. La decisión de uso debe considerar estructura de la tarea, verificabilidad, consecuencias y supervisión. La educación médica continua está menos desarrollada.",
+    "limitations": "Perspectiva, no ensayo clínico ni revisión sistemática; no demuestra mejoras en resultados clínicos ni aprendizaje.",
+    "remember": "La integración responsable de IA médica requiere preparación institucional, evaluación de riesgos, supervisión y formación continua, no solo precisión del modelo.",
+    "language": "No reportado",
+    "framework": "No reportado",
+    "hardware": "No reportado",
+    "cost": "No reportado",
+    "paper": "https://doi.org/10.1038/s41746-026-03362-2",
+    "key_metric": "Marco de 3 sistemas; sin AUC",
+    "authors": "Rushi Patel, Ceyhun Haziroglu, Akshith Ullal et al.",
+    "journal": "npj Digital Medicine",
+    "doi": "10.1038/s41746-026-03362-2",
+    "published": "2026-10-10",
+    "rich_detail": true,
+    "rich": {
+      "problem": "La adopción de IA en la formación médica avanza más rápido que la orientación sobre su integración segura.",
+      "idea": "Organizar la incorporación de IA en sistemas institucionales, de aprendizaje, y de preparación y seguridad.",
+      "why": "Ayuda a diseñar capacitación y gobernanza antes de introducir IA en hospitales.",
+      "interpretability": "Artículo conceptual: no reporta métricas de validación de modelos.",
+      "dataset_cards": [
+        {
+          "name": "Tipo",
+          "value": "Perspectiva",
+          "detail": "Síntesis conceptual, no cohorte clínica",
+          "accent": "#0c7ea5"
+        },
+        {
+          "name": "Ámbitos",
+          "value": "3",
+          "detail": "Pregrado, posgrado, educación continua",
+          "accent": "#2a9d8f"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Enfoque",
+          "main": "3 sistemas",
+          "sub": "Institución, aprendizaje, preparación y seguridad"
+        },
+        {
+          "label": "Evidencia cuantitativa",
+          "main": "No aplica",
+          "sub": "Sin AUC ni muestra clínica"
+        }
+      ],
+      "implementation": [
+        "Evaluar verificabilidad de cada tarea",
+        "Definir supervisión humana según consecuencias clínicas",
+        "Capacitar a estudiantes, residentes y profesionales",
+        "Priorizar evaluación local y seguimiento de seguridad",
+        "Código, dataset, GPU y costos: No reportado"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Muestra clínica",
+          "n",
+          "No aplica"
+        ],
+        [
+          "AUC",
+          "—",
+          "No aplica"
+        ],
+        [
+          "Accuracy",
+          "—",
+          "No aplica"
+        ],
+        [
+          "Costo",
+          "—",
+          "No reportado"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-10",
     "flag": "🇮🇶",
     "countryFlags": "🇮🇶 🇸🇪",
     "country": "Irak / Suecia",
