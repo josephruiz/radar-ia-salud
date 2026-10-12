@@ -1,5 +1,130 @@
 [
   {
+    "date": "2026-10-10",
+    "flag": "🇮🇶",
+    "countryFlags": "🇮🇶 🇸🇪",
+    "country": "Irak / Suecia",
+    "rubro": "IA en patología digital",
+    "area": "Oncología — cáncer de próstata",
+    "modality": "Biopsia prostática, histopatología H&E y whole-slide imaging (WSI)",
+    "title": "Validation of diagnostic artificial intelligence models for prostate pathology in a Middle Eastern cohort",
+    "title_es": "Validación de modelos de IA diagnóstica para patología prostática en una cohorte de Oriente Medio",
+    "institution": "PAR Private Hospital (Erbil, Irak); Karolinska Institutet (Suecia); colaboración internacional",
+    "sample": "185 pacientes, 339 portaobjetos de biopsia prostática, digitalizados con tres escáneres para producir 1.017 imágenes WSI.",
+    "design": "Validación externa retrospectiva de una serie consecutiva de biopsias de 2013 a 2024; evaluación entre escáneres; protocolo prerregistrado y STARD-AI.",
+    "model": "Modelo específico de tarea (TS), foundation models UNI y Virchow2, entrenados/adaptados para clasificación Gleason; evaluación sin recalibración local.",
+    "metrics": "AUC detección de malignidad: 0,916 (UNI) a 0,966 (TS). Sensibilidad: 97,1% (TS) a 98,9% (Virchow2). Especificidad: 85,4% (UNI), 88,4% (Virchow2), 94,5% (TS). Concordancia de graduación QWK IA-patólogo 0,801 frente a 0,799 patólogo-patólogo. QWK entre escáneres >0,90.",
+    "summary": "Tres modelos de IA entrenados con datos de otras regiones mantuvieron concordancia diagnóstica elevada al analizar biopsias de próstata de una población de Irak poco representada. La robustez entre escáneres, incluido uno compacto, ofrece una vía para evaluar IA en laboratorios con menos infraestructura.",
+    "limitations": "Cohorte de un centro, 185 pacientes; estudio retrospectivo. Algoritmos de investigación sin autorización regulatoria para uso diagnóstico clínico; no prueba impacto prospectivo ni implementación rutinaria.",
+    "remember": "Validación externa geográfica y técnica: la concordancia IA-patólogo fue comparable a la concordancia entre patólogos, sin demostrar reemplazo del especialista.",
+    "language": "No reportado",
+    "framework": "No reportado",
+    "hardware": "Escáneres Hamamatsu NanoZoomer 2.0 HT, Leica Aperio GT450 DX y Grundium Ocus40; cómputo GPU no reportado.",
+    "cost": "No reportado en cifras monetarias; se destaca viabilidad de escáner compacto de menor costo.",
+    "paper": "https://doi.org/10.1007/s00428-026-04742-5",
+    "key_metric": "QWK 0,801 · AUC hasta 0,966",
+    "authors": "Peshawa J. Muhammad Ali, Navin Vincent et al.",
+    "journal": "Virchows Archiv",
+    "doi": "10.1007/s00428-026-04742-5",
+    "published": "2026-10-10",
+    "rich_detail": true,
+    "rich": {
+      "problem": "Los modelos de IA en histopatología se validan principalmente en poblaciones de Europa y Norteamérica; se desconoce su generalización en entornos poco digitalizados.",
+      "idea": "Validar tres modelos de IA sobre biopsias de próstata iraquíes, con tres escáneres diferentes y comparaciones frente a patólogos.",
+      "why": "Ejemplo reproducible de validación externa geográfica y de robustez entre equipos, relevante para hospitales con recursos limitados.",
+      "interpretability": "QWK mide concordancia de categorías de grado Gleason/ISUP, no equivalencia clínica total. Los falsos positivos y diferencias entre categorías próximas requieren revisión humana.",
+      "dataset_cards": [
+        {
+          "name": "Pacientes",
+          "value": "185",
+          "detail": "Biopsias 2013–2024 · Erbil, Irak",
+          "accent": "#0c7ea5"
+        },
+        {
+          "name": "Láminas",
+          "value": "339",
+          "detail": "Biopsias histológicas originales",
+          "accent": "#2a9d8f"
+        },
+        {
+          "name": "WSI",
+          "value": "1.017",
+          "detail": "Tres escáneres por lámina",
+          "accent": "#7756F1"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Concordancia IA-patólogo",
+          "main": "QWK 0,801",
+          "sub": "Frente a 0,799 entre patólogos"
+        },
+        {
+          "label": "Detección de malignidad",
+          "main": "AUC 0,916–0,966",
+          "sub": "UNI a modelo TS"
+        },
+        {
+          "label": "Robustez entre escáneres",
+          "main": "QWK >0,90",
+          "sub": "En los modelos y pares de escáneres"
+        }
+      ],
+      "implementation": [
+        "Diseño retrospectivo de validación externa",
+        "Referencias de tres patólogos",
+        "Escaneo 40× con Hamamatsu, Leica y Grundium",
+        "Comparación de TS, UNI y Virchow2",
+        "Dataset público BioImage Archive S-BIAD2323: https://doi.org/10.6019/S-BIAD2323",
+        "Código específico de esta validación: No reportado",
+        "Framework, GPU y costo monetario: No reportado"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Pacientes",
+          "n",
+          "185"
+        ],
+        [
+          "WSI",
+          "n",
+          "1.017"
+        ],
+        [
+          "AUC malignidad",
+          "AUC",
+          "0,916–0,966"
+        ],
+        [
+          "Sensibilidad",
+          "%",
+          "97,1–98,9"
+        ],
+        [
+          "Especificidad TS",
+          "%",
+          "94,5"
+        ],
+        [
+          "QWK IA-patólogo",
+          "QWK",
+          "0,801"
+        ],
+        [
+          "QWK patólogo-patólogo",
+          "QWK",
+          "0,799"
+        ],
+        [
+          "QWK entre escáneres",
+          "QWK",
+          ">0,90"
+        ]
+      ]
+    }
+  },
+  {
     "date": "2026-10-01",
     "flag": "🇺🇸",
     "countryFlags": "🇺🇸",
