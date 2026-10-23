@@ -1,5 +1,750 @@
 [
   {
+    "date": "2026-10-23",
+    "flag": "🇪🇬",
+    "country": "Egipto",
+    "rubro": "Ingeniería biomédica wearable",
+    "area": "Rehabilitación y análisis de marcha",
+    "modality": "sEMG inalámbrica",
+    "title": "An integrated wireless sEMG framework with Bayesian-optimized machine learning for multi-task locomotor classification and neuromuscular characterization",
+    "title_es": "Sistema inalámbrico de sEMG y aprendizaje automático optimizado para clasificar tareas de locomoción",
+    "institution": "Suez University y Cairo University, Egipto",
+    "sample": "25 voluntarios sanos; tres tareas: caminar en plano, subir escaleras y subir rampa; 120 características sEMG.",
+    "design": "Adquisición inalámbrica ESP32 de tibial anterior, sóleo y gastrocnemio lateral; filtro 20–500 Hz, rectificación, normalización y selección de características. Evaluación con validación anidada 5×5, LOSO y prueba independiente.",
+    "model": "SVM, Random Forest, regresión logística con optimización bayesiana y selección genética; comparadores 1D-CNN y BiLSTM.",
+    "metrics": "LOSO: SVM 92,40% con 17 variables; RF 89,02% con 44; 1D-CNN 91,39%; BiLSTM 87,72%. División exploratoria: regresión logística 98,33%, no equiparable a LOSO.",
+    "limitations": "25 participantes sanos, tres tareas; falta validación clínica con pacientes y en ambientes reales.",
+    "language": "No reportado",
+    "framework": "SVM, RF, 1D-CNN, BiLSTM; librerías y versiones no reportadas.",
+    "hardware": "ESP32 y electrodos sEMG en tres músculos; GPU no reportada.",
+    "cost": "No reportado.",
+    "doi": "10.1038/s41598-026-70404-w",
+    "journal": "Scientific Reports",
+    "authors": "Doaa Wagdy, Sounia M. Rashad, Abdel Salam Malek et al.",
+    "key_metric": "SVM LOSO 92,40% · n=25",
+    "countryFlags": "🇪🇬",
+    "paper": "https://doi.org/10.1038/s41598-026-70404-w",
+    "published": "2026-10-23",
+    "rich_detail": true,
+    "summary": "Base experimental para sensores biomédicos portátiles y rehabilitación. Combinar adquisición sEMG inalámbrica y clasificación interpretable con pocas variables.",
+    "remember": "SVM LOSO 92,40% · n=25; 25 participantes sanos, tres tareas; falta validación clínica con pacientes y en ambientes reales.",
+    "rich": {
+      "problem": "Reconocer tareas de marcha en sujetos nuevos con sensores de bajo costo.",
+      "idea": "Combinar adquisición sEMG inalámbrica y clasificación interpretable con pocas variables.",
+      "why": "Base experimental para sensores biomédicos portátiles y rehabilitación.",
+      "interpretability": "17 características seleccionadas permiten inspeccionar contribuciones musculares.",
+      "dataset_cards": [
+        {
+          "name": "Participantes",
+          "value": "25",
+          "detail": "Sanos",
+          "accent": "#0c7ea5"
+        },
+        {
+          "name": "Tareas",
+          "value": "3",
+          "detail": "Plano, escalera, rampa",
+          "accent": "#2a9d8f"
+        },
+        {
+          "name": "Variables",
+          "value": "120→17",
+          "detail": "Reducción 85,8%",
+          "accent": "#7756F1"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "SVM LOSO",
+          "main": "92,40%",
+          "sub": "17 variables"
+        },
+        {
+          "label": "RF LOSO",
+          "main": "89,02%",
+          "sub": "44 variables"
+        },
+        {
+          "label": "1D-CNN LOSO",
+          "main": "91,39%",
+          "sub": "Comparador"
+        }
+      ],
+      "implementation": [
+        "ESP32; tres canales musculares; filtrado 20–500 Hz.",
+        "Normalización Z-score y selección genética.",
+        "LOSO, validación anidada y optimización bayesiana.",
+        "GPU, versiones y costo: No reportado."
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Muestra",
+          "n",
+          "25"
+        ],
+        [
+          "SVM LOSO",
+          "Accuracy",
+          "92,40%"
+        ],
+        [
+          "RF LOSO",
+          "Accuracy",
+          "89,02%"
+        ],
+        [
+          "1D-CNN LOSO",
+          "Accuracy",
+          "91,39%"
+        ],
+        [
+          "Reducción de variables",
+          "%",
+          "85,8"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-22",
+    "flag": "🇮🇳",
+    "country": "India",
+    "rubro": "IA en neuroingeniería",
+    "area": "EEG y salud mental",
+    "modality": "EEG multicanal en reposo",
+    "title": "Schizophrenia classification from multichannel EEG using EEGNet with SHAP and Grad-CAM",
+    "title_es": "Clasificación de esquizofrenia mediante EEGNet y explicabilidad SHAP y Grad-CAM",
+    "institution": "Vellore Institute of Technology, Chennai, India",
+    "sample": "28 personas del dataset RepOD: 14 casos y 14 controles; 19 electrodos, 250 Hz.",
+    "design": "EEGNet sobre EEG y 3D-CNN sobre espectrogramas STFT; particiones por participante LOSO y Stratified Group 5-Fold; bootstrap e ICA.",
+    "model": "EEGNet, 3D-CNN, SHAP y Grad-CAM.",
+    "metrics": "EEGNet LOSO: accuracy 0,750, F1 0,767, κ 0,497, AUC 0,797. Group 5-Fold: accuracy 0,679, F1 0,695, κ 0,357, AUC 0,757. κ 3D-CNN 5-fold: 0,011.",
+    "limitations": "Muestra muy pequeña y único dataset; sin validación clínica independiente; discrepancias entre explicaciones SHAP y Grad-CAM.",
+    "language": "No reportado",
+    "framework": "EEGNet, STFT, ICA, SHAP, Grad-CAM; versiones no reportadas.",
+    "hardware": "EEG 19 electrodos a 250 Hz; GPU no reportada.",
+    "cost": "No reportado.",
+    "doi": "10.1038/s41598-026-74415-5",
+    "journal": "Scientific Reports",
+    "authors": "Manisha Pandey y Velmathi Guruviah",
+    "key_metric": "AUC LOSO 0,797 · n=28",
+    "countryFlags": "🇮🇳",
+    "paper": "https://doi.org/10.1038/s41598-026-74415-5",
+    "published": "2026-10-22",
+    "rich_detail": true,
+    "summary": "Protocolo útil para investigación de señales biomédicas. Validación por participante y comparación de arquitecturas explicables.",
+    "remember": "AUC LOSO 0,797 · n=28; Muestra muy pequeña y único dataset; sin validación clínica independiente; discrepancias entre explicaciones SHAP y Grad-CAM.",
+    "rich": {
+      "problem": "La fuga de datos entre épocas de un mismo sujeto infla métricas EEG.",
+      "idea": "Validación por participante y comparación de arquitecturas explicables.",
+      "why": "Protocolo útil para investigación de señales biomédicas.",
+      "interpretability": "SHAP y Grad-CAM no coincidieron al ordenar electrodos.",
+      "dataset_cards": [
+        {
+          "name": "Personas",
+          "value": "28",
+          "detail": "14 casos y 14 controles",
+          "accent": "#0c7ea5"
+        },
+        {
+          "name": "Canales",
+          "value": "19",
+          "detail": "250 Hz",
+          "accent": "#2a9d8f"
+        },
+        {
+          "name": "Validación",
+          "value": "LOSO",
+          "detail": "Separación por sujeto",
+          "accent": "#7756F1"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "AUC LOSO",
+          "main": "0,797",
+          "sub": "EEGNet"
+        },
+        {
+          "label": "F1 LOSO",
+          "main": "0,767",
+          "sub": "EEGNet"
+        },
+        {
+          "label": "AUC 5-fold",
+          "main": "0,757",
+          "sub": "EEGNet"
+        }
+      ],
+      "implementation": [
+        "Dataset RepOD y épocas EEG por persona.",
+        "EEGNet frente a CNN 3D con STFT.",
+        "LOSO, Group 5-Fold, SHAP y Grad-CAM.",
+        "GPU, versiones y costos: No reportado."
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Muestra",
+          "n",
+          "28"
+        ],
+        [
+          "AUC LOSO",
+          "AUC",
+          "0,797"
+        ],
+        [
+          "F1 LOSO",
+          "F1",
+          "0,767"
+        ],
+        [
+          "AUC Group 5-Fold",
+          "AUC",
+          "0,757"
+        ],
+        [
+          "Kappa 3D-CNN Group",
+          "κ",
+          "0,011"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-22",
+    "flag": "🇰🇷",
+    "country": "Corea del Sur",
+    "rubro": "Patología digital",
+    "area": "Carcinoma urotelial",
+    "modality": "Whole-slide histopatología",
+    "title": "Deep learning-based mitotic quantification for objective adjunct for grading of urothelial carcinoma: a multi-institutional validation study",
+    "title_es": "Cuantificación mitótica con aprendizaje profundo como apoyo a la graduación del carcinoma urotelial: validación multiinstitucional",
+    "institution": "MTS Company, Yonsei University, Ewha Womans University y Keimyung University, Corea del Sur",
+    "sample": "91.183 parches y 318.893 anotaciones; 149 casos internos y 316 externos; tres patólogos.",
+    "design": "Detección mitótica en láminas digitales y estudio cruzado multilector sin IA y con IA; AUC y concordancia de Fleiss.",
+    "model": "Detector profundo de mitosis WSI; backbone específico no confirmado en el resumen.",
+    "metrics": "AUC del conteo mitótico 0,91 (IC95% 0,89–0,94), umbral 17,5 mitosis/2 mm². AUC lectores interna 0,90→0,98 (p=0,038); externa 0,84→0,95 (p=0,11). κ interna 0,72→0,93; externa 0,62→0,85.",
+    "limitations": "Estudio retrospectivo; la mejora de AUC externa no fue estadísticamente significativa; falta validación prospectiva.",
+    "language": "No reportado",
+    "framework": "Detector profundo WSI; software exacto no reportado.",
+    "hardware": "Escáneres de patología digital; modelos y GPU no reportados.",
+    "cost": "No reportado.",
+    "doi": "10.1038/s41598-026-77014-6",
+    "journal": "Scientific Reports",
+    "authors": "Messi H. J. Lee, JaeMyung Jang, Jangwon Seo et al.",
+    "key_metric": "AUC 0,91 · κ externa 0,85",
+    "countryFlags": "🇰🇷",
+    "paper": "https://doi.org/10.1038/s41598-026-77014-6",
+    "published": "2026-10-22",
+    "rich_detail": true,
+    "summary": "Estudio de interacción humano-IA con validación externa. Conteo mitótico automático como apoyo estandarizado.",
+    "remember": "AUC 0,91 · κ externa 0,85; Estudio retrospectivo; la mejora de AUC externa no fue estadísticamente significativa; falta validación prospectiva.",
+    "rich": {
+      "problem": "Variabilidad entre patólogos en la graduación histológica.",
+      "idea": "Conteo mitótico automático como apoyo estandarizado.",
+      "why": "Estudio de interacción humano-IA con validación externa.",
+      "interpretability": "El número de mitosis por superficie es una variable clínicamente interpretable.",
+      "dataset_cards": [
+        {
+          "name": "Parches",
+          "value": "91.183",
+          "detail": "Entrenamiento",
+          "accent": "#0c7ea5"
+        },
+        {
+          "name": "Anotaciones",
+          "value": "318.893",
+          "detail": "Mitosis",
+          "accent": "#2a9d8f"
+        },
+        {
+          "name": "Casos",
+          "value": "465",
+          "detail": "149 internos y 316 externos",
+          "accent": "#7756F1"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "AUC mitótica",
+          "main": "0,91",
+          "sub": "IC95% 0,89–0,94"
+        },
+        {
+          "label": "κ externa asistida",
+          "main": "0,85",
+          "sub": "Antes 0,62"
+        },
+        {
+          "label": "AUC externa asistida",
+          "main": "0,95",
+          "sub": "Antes 0,84; p=0,11"
+        }
+      ],
+      "implementation": [
+        "Escaneo WSI y detección automática de mitosis.",
+        "Tres lectores; evaluación cruzada asistida/no asistida.",
+        "Validación interna y externa.",
+        "Backbone, GPU, versiones y costos: No reportado."
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Casos",
+          "n",
+          "465"
+        ],
+        [
+          "AUC conteo mitótico",
+          "AUC",
+          "0,91"
+        ],
+        [
+          "AUC externa antes/después",
+          "AUC",
+          "0,84 / 0,95"
+        ],
+        [
+          "κ externa antes/después",
+          "κ",
+          "0,62 / 0,85"
+        ],
+        [
+          "p AUC externa",
+          "p",
+          "0,11"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-22",
+    "flag": "🇨🇳",
+    "country": "China",
+    "rubro": "IA en oftalmología",
+    "area": "Biometría ocular y cataratas",
+    "modality": "Biometría ocular y refracción posoperatoria",
+    "title": "Multicenter evaluation of AI-based intraocular lens formulas and interpretable machine learning for cataract refractive prediction",
+    "title_es": "Evaluación multicéntrica de fórmulas de lentes intraoculares basadas en IA y modelos interpretables para predecir refracción",
+    "institution": "West China Hospital de Sichuan University y Chengdu Aidi Eye Hospital",
+    "sample": "1.203 ojos de desarrollo; 336 ojos externos con miopía alta; 257 ojos en análisis depurado.",
+    "design": "Estudio retrospectivo multicéntrico de fórmulas convencionales y de IA; MAE, RMSE, MedAE y errores por umbral; validación externa.",
+    "model": "Hill-RBF, regresión lineal, SVR, Random Forest y SHAP.",
+    "metrics": "Hill-RBF tuvo el menor error interno entre fórmulas comparadas en ojos sin cirugía corneal previa; modelos locales mostraron degradación externa. MAE numérico exacto no confirmado en el resumen.",
+    "limitations": "Retrospectivo; dificultades en ojos muy largos, córneas planas y cirugía refractiva previa; portabilidad externa reducida.",
+    "language": "No reportado",
+    "framework": "SVR, Random Forest, SHAP; versiones no reportadas.",
+    "hardware": "Equipos de biometría ocular; marcas, GPU y costo no reportados.",
+    "cost": "No reportado.",
+    "doi": "10.1038/s41598-026-76755-8",
+    "journal": "Scientific Reports",
+    "authors": "Ning Yang, Jiancheng Mu, Yi Liu et al.",
+    "key_metric": "1.203 ojos desarrollo · 336 externos",
+    "countryFlags": "🇨🇳",
+    "paper": "https://doi.org/10.1038/s41598-026-76755-8",
+    "published": "2026-10-22",
+    "rich_detail": true,
+    "summary": "Guía de validación local de algoritmos asociados a equipamiento oftalmológico. Comparar fórmulas de IA y modelos locales con prueba externa.",
+    "remember": "1.203 ojos desarrollo · 336 externos; Retrospectivo; dificultades en ojos muy largos, córneas planas y cirugía refractiva previa; portabilidad externa reducida.",
+    "rich": {
+      "problem": "Los errores refractivos aumentan en ojos con biometría extrema.",
+      "idea": "Comparar fórmulas de IA y modelos locales con prueba externa.",
+      "why": "Guía de validación local de algoritmos asociados a equipamiento oftalmológico.",
+      "interpretability": "SHAP destacó longitud axial, refracción objetivo y potencia de lente.",
+      "dataset_cards": [
+        {
+          "name": "Desarrollo",
+          "value": "1.203",
+          "detail": "Ojos",
+          "accent": "#0c7ea5"
+        },
+        {
+          "name": "Externa",
+          "value": "336",
+          "detail": "Ojos",
+          "accent": "#2a9d8f"
+        },
+        {
+          "name": "Depurada",
+          "value": "257",
+          "detail": "Ojos",
+          "accent": "#7756F1"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Mejor fórmula interna",
+          "main": "Hill-RBF",
+          "sub": "En grupo sin cirugía previa"
+        },
+        {
+          "label": "Validación externa",
+          "main": "Degradación",
+          "sub": "Modelos locales"
+        },
+        {
+          "label": "MAE exacto",
+          "main": "No confirmado",
+          "sub": "Resumen original"
+        }
+      ],
+      "implementation": [
+        "Datos de biometría y refracción posoperatoria.",
+        "Fórmulas tradicionales y de IA; LR, SVR y RF.",
+        "MAE, RMSE, MedAE y SHAP.",
+        "Hardware exacto y costos: No reportado."
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Desarrollo",
+          "ojos",
+          "1.203"
+        ],
+        [
+          "Validación externa",
+          "ojos",
+          "336"
+        ],
+        [
+          "Análisis depurado",
+          "ojos",
+          "257"
+        ],
+        [
+          "Mejor fórmula interna",
+          "nombre",
+          "Hill-RBF"
+        ],
+        [
+          "Costo",
+          "USD",
+          "No reportado"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-22",
+    "flag": "🇲🇴",
+    "country": "Macao, China",
+    "rubro": "Tecnología médica y visión computacional",
+    "area": "Dermatología",
+    "modality": "Imágenes dermatoscópicas",
+    "title": "Multi-bitplane edge detection of skin lesion contours in dermoscopic images",
+    "title_es": "Detección de contornos de lesiones cutáneas en dermatoscopia mediante múltiples planos de bits",
+    "institution": "Macao Polytechnic University, Macao",
+    "sample": "Dataset Skin Image Edge Detection Test (SIEDT); tamaño exacto no confirmado en resumen.",
+    "design": "Comparación de un algoritmo sin entrenamiento con métodos tradicionales de detección de bordes.",
+    "model": "SLCD: denoising Haar, morfología circular 3×3, tres planos de bits MSB y fusión de gradientes y desviaciones locales; no es red neuronal.",
+    "metrics": "F1 0,718, Jaccard 0,575, Matthews MCC 0,733.",
+    "limitations": "No es IA entrenada ni diagnóstico de cáncer; no hay validación clínica prospectiva; F1 de bordes no mide sensibilidad diagnóstica.",
+    "language": "No reportado",
+    "framework": "Transformada Haar y morfología; librerías no reportadas.",
+    "hardware": "Imágenes dermatoscópicas; GPU/CPU y dispositivos no reportados.",
+    "cost": "No reportado; no requiere entrenamiento neuronal.",
+    "doi": "10.1038/s41598-026-74365-y",
+    "journal": "Scientific Reports",
+    "authors": "Dang Li, Patrick Pang, Chi Kin Lam et al.",
+    "key_metric": "F1 0,718 · Jaccard 0,575",
+    "countryFlags": "🇲🇴",
+    "paper": "https://doi.org/10.1038/s41598-026-74365-y",
+    "published": "2026-10-22",
+    "rich_detail": true,
+    "summary": "Preprocesamiento reproducible de imágenes médicas. Algoritmo ligero de bordes con tres planos de bits.",
+    "remember": "F1 0,718 · Jaccard 0,575; No es IA entrenada ni diagnóstico de cáncer; no hay validación clínica prospectiva; F1 de bordes no mide sensibilidad diagnóstica.",
+    "rich": {
+      "problem": "Obtener contornos de lesiones con pocos recursos y sin grandes datasets etiquetados.",
+      "idea": "Algoritmo ligero de bordes con tres planos de bits.",
+      "why": "Preprocesamiento reproducible de imágenes médicas.",
+      "interpretability": "Operaciones matemáticas deterministas, sin red entrenada.",
+      "dataset_cards": [
+        {
+          "name": "Dataset",
+          "value": "SIEDT",
+          "detail": "Dermatoscopia",
+          "accent": "#0c7ea5"
+        },
+        {
+          "name": "Entrenamiento",
+          "value": "0",
+          "detail": "No necesita",
+          "accent": "#2a9d8f"
+        },
+        {
+          "name": "Planos MSB",
+          "value": "3",
+          "detail": "Fusión",
+          "accent": "#7756F1"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "F1",
+          "main": "0,718",
+          "sub": "Bordes"
+        },
+        {
+          "label": "Jaccard",
+          "main": "0,575",
+          "sub": "Bordes"
+        },
+        {
+          "label": "MCC",
+          "main": "0,733",
+          "sub": "Bordes"
+        }
+      ],
+      "implementation": [
+        "Denoising Haar y morfología 3×3.",
+        "Detección adaptativa por plano MSB.",
+        "Fusión de contornos.",
+        "Hardware y costos: No reportado."
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "F1",
+          "F1",
+          "0,718"
+        ],
+        [
+          "Jaccard",
+          "IoU",
+          "0,575"
+        ],
+        [
+          "MCC",
+          "MCC",
+          "0,733"
+        ],
+        [
+          "Entrenamiento neuronal",
+          "sí/no",
+          "No"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-23",
+    "flag": "🇺🇸",
+    "country": "Estados Unidos / China / Líbano",
+    "rubro": "IA en medicina de precisión",
+    "area": "Genómica y riesgo clínico",
+    "modality": "Puntuaciones poligénicas y biobancos",
+    "title": "Fine-tuning of polygenic score to local data improves risk prediction and clinical implementation",
+    "title_es": "Ajuste de puntuaciones poligénicas a datos locales para mejorar predicción de riesgo clínico",
+    "institution": "Mass General Brigham, Broad Institute, Harvard Medical School y colaboradores",
+    "sample": "Biobancos MGB y UK Biobank; tres enfermedades: coronaria, cáncer de mama y cáncer de próstata. Tamaños exactos no confirmados en resumen.",
+    "design": "Reponderación por aprendizaje automático de PRS publicados, optimizados en cohorte local; comparación con PRS individual mejor clasificado.",
+    "model": "Ensamble de puntuaciones de riesgo poligénico con calibración local.",
+    "metrics": "Mejora relativa de C-statistic: coronaria 19,8%; próstata 9,4%; mama 8,3%. Casos detectados: coronaria 27,7% vs 17,8%; mama 20,8% vs 7,1%; próstata 16,4% vs 8,8%.",
+    "limitations": "Mejor discriminación no equivale a beneficio clínico; composición genética de biobancos y equidad requieren validación adicional.",
+    "language": "No reportado",
+    "framework": "Optimización de PRS por ML; librerías y versiones no reportadas.",
+    "hardware": "Genotipado de biobancos; GPU y equipos no reportados.",
+    "cost": "No reportado; no requiere nuevo GWAS.",
+    "doi": "10.1038/s41467-026-77770-z",
+    "journal": "Nature Communications",
+    "authors": "Min Seo Kim, Yang Sui, Aniruddh P. Patel et al.",
+    "key_metric": "C-statistic relativa +19,8% coronaria",
+    "countryFlags": "🇺🇸",
+    "paper": "https://doi.org/10.1038/s41467-026-77770-z",
+    "published": "2026-10-23",
+    "rich_detail": true,
+    "summary": "Enseña adaptación poblacional de modelos clínicos. Recalibrar localmente varios PRS publicados.",
+    "remember": "C-statistic relativa +19,8% coronaria; Mejor discriminación no equivale a beneficio clínico; composición genética de biobancos y equidad requieren validación adicional.",
+    "rich": {
+      "problem": "Los PRS externos no siempre generalizan a otras poblaciones.",
+      "idea": "Recalibrar localmente varios PRS publicados.",
+      "why": "Enseña adaptación poblacional de modelos clínicos.",
+      "interpretability": "Los pesos indican contribución de cada PRS, no causalidad.",
+      "dataset_cards": [
+        {
+          "name": "Enfermedades",
+          "value": "3",
+          "detail": "Coronaria, mama, próstata",
+          "accent": "#0c7ea5"
+        },
+        {
+          "name": "Biobancos",
+          "value": "2",
+          "detail": "MGB y UK",
+          "accent": "#2a9d8f"
+        },
+        {
+          "name": "N exacto",
+          "value": "No confirmado",
+          "detail": "Resumen",
+          "accent": "#7756F1"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "C-stat coronaria",
+          "main": "+19,8%",
+          "sub": "Mejora relativa"
+        },
+        {
+          "label": "C-stat próstata",
+          "main": "+9,4%",
+          "sub": "Mejora relativa"
+        },
+        {
+          "label": "C-stat mama",
+          "main": "+8,3%",
+          "sub": "Mejora relativa"
+        }
+      ],
+      "implementation": [
+        "PRS ya publicados y datos genotípicos locales.",
+        "Optimización de ponderaciones y evaluación C-statistic.",
+        "Análisis de casos identificados.",
+        "Software, GPU y costos: No reportado."
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "C-stat coronaria",
+          "% relativo",
+          "+19,8"
+        ],
+        [
+          "C-stat próstata",
+          "% relativo",
+          "+9,4"
+        ],
+        [
+          "C-stat mama",
+          "% relativo",
+          "+8,3"
+        ],
+        [
+          "Casos CAD local/publicado",
+          "%",
+          "27,7 / 17,8"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-23",
+    "flag": "🇨🇳",
+    "country": "China",
+    "rubro": "IA y bioinformática",
+    "area": "Nefrología y biomarcadores",
+    "modality": "Transcriptómica bulk y unicelular, qRT-PCR",
+    "title": "Identification of complement system-related biomarkers in immunoglobulin A nephropathy through machine learning and single-cell data analysis",
+    "title_es": "Identificación de biomarcadores del complemento en nefropatía IgA mediante aprendizaje automático y datos unicelulares",
+    "institution": "People’s Hospital of Xinjiang Uygur Autonomous Region, China",
+    "sample": "GSE93798 desarrollo, GSE37460 validación, GSE171314 unicelular; qRT-PCR 5 casos IgAN y 5 controles; un control sano en unicelular.",
+    "design": "Genes diferenciales, LASSO, SVM-RFE, Boruta, ANN, CIBERSORT, análisis unicelular y qRT-PCR descriptiva.",
+    "model": "Red neuronal artificial de tres genes: A2M, C3AR1, SERPINA1.",
+    "metrics": "AUC aparente entrenamiento 1,000; AUC validación externa 0,959; AUC individual de los tres genes >0,7.",
+    "limitations": "Sobreajuste posible, único control sano en single-cell, qRT-PCR 5+5 sin datos individuales reanalizables; falta validación clínica.",
+    "language": "No reportado",
+    "framework": "LASSO, SVM-RFE, Boruta, ANN, CIBERSORT; versiones no reportadas.",
+    "hardware": "qRT-PCR y datos de secuenciación; GPU y equipos exactos no reportados.",
+    "cost": "No reportado.",
+    "doi": "10.1038/s41598-026-77340-9",
+    "journal": "Scientific Reports",
+    "authors": "Shufen Yang, Lu Bai, Xueqin Zhang et al.",
+    "key_metric": "AUC externa 0,959 · 3 genes",
+    "countryFlags": "🇨🇳",
+    "paper": "https://doi.org/10.1038/s41598-026-77340-9",
+    "published": "2026-10-23",
+    "rich_detail": true,
+    "summary": "Ejemplo de integración bioinformática con evaluación externa y limitaciones claras. Selección ML de genes en múltiples fuentes ómicas.",
+    "remember": "AUC externa 0,959 · 3 genes; Sobreajuste posible, único control sano en single-cell, qRT-PCR 5+5 sin datos individuales reanalizables; falta validación clínica.",
+    "rich": {
+      "problem": "Biomarcadores del complemento para nefropatía IgA requieren validación.",
+      "idea": "Selección ML de genes en múltiples fuentes ómicas.",
+      "why": "Ejemplo de integración bioinformática con evaluación externa y limitaciones claras.",
+      "interpretability": "A2M, C3AR1 y SERPINA1 son variables explícitas; no implica causalidad.",
+      "dataset_cards": [
+        {
+          "name": "Entrenamiento",
+          "value": "GSE93798",
+          "detail": "Bulk",
+          "accent": "#0c7ea5"
+        },
+        {
+          "name": "Validación",
+          "value": "GSE37460",
+          "detail": "Bulk",
+          "accent": "#2a9d8f"
+        },
+        {
+          "name": "Unicelular",
+          "value": "GSE171314",
+          "detail": "1 control sano",
+          "accent": "#7756F1"
+        },
+        {
+          "name": "qRT-PCR",
+          "value": "5+5",
+          "detail": "Exploratorio",
+          "accent": "#e89b38"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "AUC entrenamiento",
+          "main": "1,000",
+          "sub": "Aparente"
+        },
+        {
+          "label": "AUC externa",
+          "main": "0,959",
+          "sub": "ANN 3 genes"
+        },
+        {
+          "label": "Genes",
+          "main": "3",
+          "sub": "A2M, C3AR1, SERPINA1"
+        }
+      ],
+      "implementation": [
+        "GEO bulk y single-cell.",
+        "Selección LASSO, SVM-RFE y Boruta.",
+        "ANN de tres genes; qRT-PCR preliminar.",
+        "GPU, versiones y costos: No reportado."
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Genes candidatos",
+          "n",
+          "3"
+        ],
+        [
+          "AUC entrenamiento",
+          "AUC",
+          "1,000"
+        ],
+        [
+          "AUC externa",
+          "AUC",
+          "0,959"
+        ],
+        [
+          "qRT-PCR",
+          "n",
+          "10"
+        ],
+        [
+          "Controles scRNA-seq",
+          "n",
+          "1"
+        ]
+      ]
+    }
+  },
+  {
     "date": "2026-10-10",
     "flag": "🇺🇸",
     "countryFlags": "🇺🇸",
