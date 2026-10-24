@@ -1,5 +1,710 @@
 [
   {
+    "date": "2026-10-24",
+    "flag": "🇬🇧",
+    "country": "Reino Unido / encuesta internacional",
+    "rubro": "IA quirúrgica y factores humanos",
+    "area": "Neurocirugía y navegación anatómica",
+    "modality": "Encuesta a neurocirujanos",
+    "title": "Exploring clinician interpretability of AI decision support systems for surgical anatomy recognition",
+    "title_es": "Interpretabilidad clínica de sistemas de apoyo con IA para reconocer anatomía quirúrgica",
+    "institution": "University College London (UCL), UCL Hawkes Institute y colaboradores",
+    "sample": "47 neurocirujanos de una encuesta internacional; cinco técnicas explicativas evaluadas.",
+    "design": "Estudio transversal internacional. Los participantes ordenaron y puntuaron explicaciones de segmentaciones anatómicas en cirugía endoscópica hipofisaria; escala modificada de satisfacción y comentarios libres.",
+    "model": "No se entrenó un nuevo clasificador clínico. Se compararon puntuaciones y mapas de certeza, mapas de saliencia, similitud de escenas e ilustraciones de vecinos próximos.",
+    "metrics": "n=47. Puntuaciones y mapas de certeza fueron los más valorados; el resumen original no facilita porcentajes de exactitud ni AUC.",
+    "limitations": "Preferencias declaradas, no resultados de cirugía ni mejoras demostradas de seguridad; necesita evaluación prospectiva.",
+    "language": "No reportado en la fuente consultada",
+    "framework": "Análisis de preferencias y Explanation Satisfaction Scale modificada; software estadístico no verificado.",
+    "hardware": "Contexto de endoscopia hipofisaria; no se describió hardware de entrenamiento de IA.",
+    "cost": "No reportado (no se cuantificó presupuesto ni costo por inferencia).",
+    "doi": "10.1038/s41598-026-74953-y",
+    "journal": "Scientific Reports",
+    "authors": "D. Z. Khan, T. J. Adams, A. Wijekoon et al.",
+    "key_metric": "47 neurocirujanos; certeza > saliencia en preferencias",
+    "paper": "https://doi.org/10.1038/s41598-026-74953-y",
+    "published": "2026-10-24",
+    "rich_detail": true,
+    "summary": "Los cirujanos prefirieron explicaciones que expresan incertidumbre y delimitan estructuras anatómicas.",
+    "remember": "47 neurocirujanos; certeza > saliencia en preferencias; Preferencias declaradas, no resultados de cirugía ni mejoras demostradas de seguridad; necesita evaluación prospectiva.",
+    "rich": {
+      "problem": "La utilidad de una segmentación de IA depende de cómo se comunican sus límites y su incertidumbre.",
+      "idea": "Comparar sistemáticamente cinco formatos de explicación en un contexto quirúrgico de alto riesgo.",
+      "why": "Relevante para diseño de interfaces de IA biomédica y evaluación de interacción humano-máquina.",
+      "interpretability": "Certeza cuantificada y mapas de confianza fueron más aceptados que saliencia o similitud.",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "47",
+          "detail": "Neurocirujanos",
+          "accent": "#0c7ea5"
+        },
+        {
+          "name": "Modalidad",
+          "value": "Encuesta a neurocirujanos",
+          "detail": "Neurocirugía y navegación anatómica",
+          "accent": "#2a9d8f"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Participantes",
+          "main": "47",
+          "sub": "Encuesta internacional"
+        },
+        {
+          "label": "Explicación preferida",
+          "main": "Certeza",
+          "sub": "Puntuaciones y mapas"
+        },
+        {
+          "label": "AUC diagnóstica",
+          "main": "No aplica",
+          "sub": "Estudio de usuarios"
+        }
+      ],
+      "implementation": [
+        "Encuesta transversal con 47 neurocirujanos.",
+        "Cinco tipos de explicación y escala modificada de satisfacción.",
+        "No se evaluó una mejora prospectiva de decisiones o seguridad.",
+        "GPU, licencias y costos de implementación: no reportados."
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Participantes",
+          "n",
+          "47"
+        ],
+        [
+          "Técnicas explicativas",
+          "n",
+          "5"
+        ],
+        [
+          "Exactitud / AUC",
+          "No aplica",
+          "Estudio de preferencias"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-24",
+    "flag": "🇪🇸🇺🇸",
+    "country": "España / Estados Unidos",
+    "rubro": "Patología digital robusta",
+    "area": "Histopatología y control de calidad",
+    "modality": "Láminas histológicas digitalizadas",
+    "title": "LVAERMIL: enhancing multiple instance learning robustness via latent variational autoencoders",
+    "title_es": "LVAERMIL: mejora de robustez del aprendizaje por instancias múltiples mediante autoencoders variacionales latentes",
+    "institution": "University of Granada y Northwestern University",
+    "sample": "Dos datasets histopatológicos; contaminación experimental con cuatro tejidos ajenos y dos artefactos de escáner; ocho modelos MIL evaluados. Cantidad total de láminas no confirmada en el texto disponible.",
+    "design": "Se alteraron conjuntos de láminas con contaminantes y artefactos para evaluar robustez; un módulo probabilístico detectó parches fuera de distribución antes de clasificar.",
+    "model": "Latent-VAE-Robust-MIL: autoencoder variacional sobre embeddings de un extractor de características; filtrado OOD integrado con ocho modelos Multiple Instance Learning.",
+    "metrics": "Mantuvo o mejoró la exactitud de ocho modelos MIL en los escenarios de contaminación, especialmente cuando la contaminación era alta. El resumen original no comunica una AUC ni porcentaje único.",
+    "limitations": "Contaminaciones experimentales, sin demostración prospectiva de reducción de errores diagnósticos en laboratorios.",
+    "language": "No reportado en la fuente consultada",
+    "framework": "MIL y VAE; versiones, lenguaje y framework de ejecución no confirmados.",
+    "hardware": "Escáneres de histopatología como origen de imágenes; GPU no especificada en fuente verificada.",
+    "cost": "No reportado (no se cuantificó presupuesto ni costo por inferencia).",
+    "doi": "10.1038/s41598-026-76226-0",
+    "journal": "Scientific Reports",
+    "authors": "F. J. Sáez-Maldonado, L. García, L. A. D. Cooper et al.",
+    "key_metric": "8 modelos MIL; 4 tejidos ajenos + 2 artefactos",
+    "paper": "https://doi.org/10.1038/s41598-026-76226-0",
+    "published": "2026-10-24",
+    "rich_detail": true,
+    "summary": "Filtrar parches fuera de distribución puede mejorar la robustez de modelos de patología digital ante contaminación.",
+    "remember": "8 modelos MIL; 4 tejidos ajenos + 2 artefactos; Contaminaciones experimentales, sin demostración prospectiva de reducción de errores diagnósticos en laboratorios.",
+    "rich": {
+      "problem": "Los modelos MIL pueden confundirse por tejido contaminante o artefactos en láminas digitales.",
+      "idea": "Aprender la distribución latente de parches con VAE y excluir entradas atípicas.",
+      "why": "Permite incorporar control de calidad de imágenes en sistemas de patología asistida por IA.",
+      "interpretability": "La detección OOD proporciona una señal de qué parches deben excluirse; no prueba causalidad.",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "8 MIL",
+          "detail": "Modelos evaluados",
+          "accent": "#0c7ea5"
+        },
+        {
+          "name": "Modalidad",
+          "value": "Láminas histológicas digitalizadas",
+          "detail": "Histopatología y control de calidad",
+          "accent": "#2a9d8f"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Modelos MIL",
+          "main": "8",
+          "sub": "Robustez evaluada"
+        },
+        {
+          "label": "Tejidos extraños",
+          "main": "4",
+          "sub": "Contaminación simulada"
+        },
+        {
+          "label": "Artefactos",
+          "main": "2",
+          "sub": "De escáner"
+        }
+      ],
+      "implementation": [
+        "Autoencoder variacional entrenado sobre embeddings.",
+        "Evaluación con dos datasets, cuatro tejidos ajenos y dos artefactos.",
+        "Comparación con ocho modelos MIL.",
+        "GPU, versiones y costos: no reportados en el material verificable."
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Modelos evaluados",
+          "n",
+          "8"
+        ],
+        [
+          "Tejidos contaminantes",
+          "n",
+          "4"
+        ],
+        [
+          "Artefactos de escáner",
+          "n",
+          "2"
+        ],
+        [
+          "Mejora absoluta en exactitud",
+          "No reportada",
+          "Sin cifra única verificable"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-24",
+    "flag": "🇧🇩",
+    "country": "Bangladesh",
+    "rubro": "Radiología e IA explicable",
+    "area": "Oncología pulmonar",
+    "modality": "Tomografía torácica",
+    "title": "Explainable hybrid ensemble framework for lung cancer classification using deep CNNs and random forest",
+    "title_es": "Ensamble híbrido explicable de CNN profundas y bosque aleatorio para clasificar cáncer pulmonar",
+    "institution": "Islamic University (Kushtia), Center for Advanced Bioinformatics and Artificial Intelligence Research y colaboradores",
+    "sample": "Dos datasets públicos de tomografía: Chest CT e IQ-OTH/NCCD. Número de pacientes e imágenes no confirmado en el resumen original.",
+    "design": "Clasificación multiclase en dos datasets de TC; extracción por dos CNN de transferencia, combinación de probabilidades y explicaciones visuales posteriores.",
+    "model": "DenseNet169 y MobileNetV2; Random Forest como meta-clasificador (stacking); Grad-CAM para mapas de activación.",
+    "metrics": "Exactitud del Random Forest stacker: 99,50% en Chest CT y 99,54% en IQ-OTH/NCCD. No equivale a validación clínica prospectiva.",
+    "limitations": "No se confirmó validación multicéntrica independiente ni separación por paciente; riesgo de sesgos o fuga de información en datasets públicos.",
+    "language": "No reportado en la fuente consultada",
+    "framework": "DenseNet169, MobileNetV2, Random Forest y Grad-CAM; librerías y versiones no confirmadas.",
+    "hardware": "Tomografías de tórax; GPU y equipos de adquisición no especificados.",
+    "cost": "No reportado (no se cuantificó presupuesto ni costo por inferencia).",
+    "doi": "10.1038/s41598-026-74708-9",
+    "journal": "Scientific Reports",
+    "authors": "M. A. M. Suzon, M. S. R. Shohan, M. S. Islam et al.",
+    "key_metric": "Accuracy 99,50% / 99,54% en dos datasets",
+    "paper": "https://doi.org/10.1038/s41598-026-74708-9",
+    "published": "2026-10-24",
+    "rich_detail": true,
+    "summary": "La fusión de probabilidades de dos CNN mediante Random Forest produjo alta exactitud experimental, pero necesita validación externa rigurosa.",
+    "remember": "Accuracy 99,50% / 99,54% en dos datasets; No se confirmó validación multicéntrica independiente ni separación por paciente; riesgo de sesgos o fuga de información en datasets públicos.",
+    "rich": {
+      "problem": "Clasificar categorías de lesiones pulmonares por TC de manera interpretable.",
+      "idea": "Apilar probabilidades de DenseNet169 y MobileNetV2 con Random Forest.",
+      "why": "Referencia para evaluar ensembles de imagen médica sin confundir exactitud de benchmark con utilidad clínica.",
+      "interpretability": "Grad-CAM muestra regiones que influyen en predicciones; no garantiza causalidad ni seguridad.",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "2",
+          "detail": "Datasets públicos",
+          "accent": "#0c7ea5"
+        },
+        {
+          "name": "Modalidad",
+          "value": "Tomografía torácica",
+          "detail": "Oncología pulmonar",
+          "accent": "#2a9d8f"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Chest CT",
+          "main": "99,50%",
+          "sub": "Exactitud"
+        },
+        {
+          "label": "IQ-OTH/NCCD",
+          "main": "99,54%",
+          "sub": "Exactitud"
+        },
+        {
+          "label": "Validación prospectiva",
+          "main": "No",
+          "sub": "No demostrada"
+        }
+      ],
+      "implementation": [
+        "Dos CNN preentrenadas por transferencia.",
+        "Stacking de probabilidades con Random Forest.",
+        "Grad-CAM tras inferencia.",
+        "GPU, framework y costos monetarios no confirmados."
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Chest CT",
+          "Accuracy",
+          "99,50%"
+        ],
+        [
+          "IQ-OTH/NCCD",
+          "Accuracy",
+          "99,54%"
+        ],
+        [
+          "Datasets",
+          "n",
+          "2"
+        ],
+        [
+          "Validación clínica prospectiva",
+          "Estado",
+          "No reportada"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-24",
+    "flag": "🌍",
+    "country": "Multicéntrico internacional (afiliación principal no confirmada)",
+    "rubro": "Neuroimagen cuantitativa",
+    "area": "Médula espinal y ataxias",
+    "modality": "Resonancia magnética T1 cerebral",
+    "title": "A deep learning framework for automated cervical spinal cord vertebral labeling and morphometric extraction from brain MRI with large-scale multicenter validation",
+    "title_es": "Modelo de aprendizaje profundo para etiquetado vertebral cervical y morfometría medular en RM cerebral",
+    "institution": "Consorcio multicéntrico de 32 centros; autores G. M. Jarola, D. H. Shiraishi e I. M. Adanyeguh y colaboradores",
+    "sample": "998 controles y 879 pacientes con ataxias hereditarias de 32 centros (n=1.877) para desarrollo; 2.737 RM de cuatro datasets públicos para validación externa; cohorte longitudinal de 51 pacientes con esclerosis múltiple.",
+    "design": "Segmentación y etiquetado automático C1–C3 en RM T1, con clasificador secundario de errores y métricas de calidad de imagen; validación externa y análisis longitudinal de atrofia.",
+    "model": "Comparación de nnU-Net, U-Net con supervisión profunda y SwinUNETR; control de calidad con VGG, ResNet y EfficientNet.",
+    "metrics": "nnU-Net: Dice C1=0,85, C2=0,89, C3=0,89. Detectó 95,8% de casos mal etiquetados por Spinal Cord Toolbox; clasificador VGG: exactitud 97,9% y sensibilidad 98,7%. Exactitud externa >92% en cuatro de cinco conjuntos evaluados.",
+    "limitations": "Datos centrados en niveles cervicales altos y RM T1; no demuestra desempeño clínico general para todas las enfermedades y protocolos.",
+    "language": "No reportado en la fuente consultada",
+    "framework": "nnU-Net, U-Net, SwinUNETR, VGG, ResNet, EfficientNet, Spinal Cord Toolbox; versiones no confirmadas.",
+    "hardware": "Equipos de RM multicéntricos; GPU y configuración computacional no reportadas en resumen.",
+    "cost": "No reportado (no se cuantificó presupuesto ni costo por inferencia).",
+    "doi": "10.1038/s41746-026-03403-w",
+    "journal": "npj Digital Medicine",
+    "authors": "G. M. Jarola, D. H. Shiraishi, I. M. Adanyeguh et al.",
+    "key_metric": "Dice C1–C3: 0,85 / 0,89 / 0,89; 2.737 RM externas",
+    "paper": "https://doi.org/10.1038/s41746-026-03403-w",
+    "published": "2026-10-23",
+    "rich_detail": true,
+    "summary": "Pipeline automático de etiquetado C1–C3 y control de calidad en RM cerebral, validado en múltiples centros.",
+    "remember": "Dice C1–C3: 0,85 / 0,89 / 0,89; 2.737 RM externas; Datos centrados en niveles cervicales altos y RM T1; no demuestra desempeño clínico general para todas las enfermedades y protocolos.",
+    "rich": {
+      "problem": "Extraer biomarcadores medulares de RM cerebrales heterogéneas requiere etiquetado vertebral confiable.",
+      "idea": "Unir segmentación profunda, detector de errores y métricas de calidad de imagen.",
+      "why": "Permite reutilizar RM existentes para investigación neurodegenerativa multicéntrica.",
+      "interpretability": "La etapa de control de calidad identifica fallos de etiquetado; no elimina revisión experta.",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "1.877",
+          "detail": "Casos de desarrollo",
+          "accent": "#0c7ea5"
+        },
+        {
+          "name": "Modalidad",
+          "value": "Resonancia magnética T1 cerebral",
+          "detail": "Médula espinal y ataxias",
+          "accent": "#2a9d8f"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Dice C1",
+          "main": "0,85",
+          "sub": "nnU-Net"
+        },
+        {
+          "label": "Dice C2 / C3",
+          "main": "0,89",
+          "sub": "Cada nivel"
+        },
+        {
+          "label": "QC VGG",
+          "main": "97,9%",
+          "sub": "Exactitud"
+        }
+      ],
+      "implementation": [
+        "Entrenamiento en 1.877 controles/pacientes de 32 centros.",
+        "Validación en 2.737 RM públicas y cohorte longitudinal de 51 pacientes.",
+        "nnU-Net para niveles C1–C3; VGG para control de calidad.",
+        "GPU, costos y versiones exactas no reportados en resumen."
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Desarrollo",
+          "Casos",
+          "1.877"
+        ],
+        [
+          "Validación externa",
+          "RM",
+          "2.737"
+        ],
+        [
+          "C1",
+          "Dice",
+          "0,85"
+        ],
+        [
+          "C2",
+          "Dice",
+          "0,89"
+        ],
+        [
+          "C3",
+          "Dice",
+          "0,89"
+        ],
+        [
+          "QC VGG",
+          "Accuracy",
+          "97,9%"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-24",
+    "flag": "🇰🇷",
+    "country": "Corea del Sur",
+    "rubro": "Radiología pediátrica multimodal",
+    "area": "Cirugía pediátrica y segmentación",
+    "modality": "Tomografía abdominal + metadatos clínicos",
+    "title": "FusionSwinUNETR: A multimodal deep learning model for abdominal mass segmentation in pediatric CT",
+    "title_es": "FusionSwinUNETR: segmentación multimodal de masas abdominales pediátricas en TC",
+    "institution": "Gachon University, Seoul National University Hospital y centros clínicos colaboradores",
+    "sample": "750 pacientes pediátricos de varios centros con 12 tipos de masas; 60 pacientes reservados para prueba.",
+    "design": "Segmentación de masas abdominales con imágenes TC, metadatos y hallazgos clínicos redactados; comparación emparejada contra un modelo solo de imágenes en 60 pacientes no usados para entrenamiento.",
+    "model": "FusionSwinUNETR: backbone SwinUNETRv2 condicionado por metadatos del paciente y hallazgos clínicos.",
+    "metrics": "En 60 pacientes: DSC 0,900±0,044 frente a 0,882±0,064; precisión 0,928 frente a 0,913; recall 0,880 frente a 0,866; HD95 4,79±3,31 mm frente a 8,93±6,22 mm (46% menos error de borde). Mejora DSC ajustada q=5,6×10^-4.",
+    "limitations": "Evaluación retrospectiva y conjunto de prueba de 60 pacientes; requiere validación prospectiva de flujo clínico.",
+    "language": "No reportado en la fuente consultada",
+    "framework": "SwinUNETRv2 con fusión multimodal; versiones de software y lenguaje no confirmados.",
+    "hardware": "Tomógrafos pediátricos; GPU de entrenamiento no reportada en el texto disponible.",
+    "cost": "No reportado (no se cuantificó presupuesto ni costo por inferencia).",
+    "doi": "10.1038/s41598-026-69756-0",
+    "journal": "Scientific Reports",
+    "authors": "S. W. Moon, D. Ko, S. Park et al.",
+    "key_metric": "DSC 0,900 vs 0,882; HD95 4,79 vs 8,93 mm",
+    "paper": "https://doi.org/10.1038/s41598-026-69756-0",
+    "published": "2026-10-23",
+    "rich_detail": true,
+    "summary": "Añadir metadatos y hallazgos clínicos a TC pediátrica mejoró segmentación y redujo el error de bordes.",
+    "remember": "DSC 0,900 vs 0,882; HD95 4,79 vs 8,93 mm; Evaluación retrospectiva y conjunto de prueba de 60 pacientes; requiere validación prospectiva de flujo clínico.",
+    "rich": {
+      "problem": "La segmentación pediátrica de masas abdominales enfrenta heterogeneidad y escasez de datos.",
+      "idea": "Condicionar un SwinUNETRv2 con información clínica disponible al interpretar TC.",
+      "why": "Caso sólido de integración imagen+texto para aplicaciones de IA en equipamiento radiológico.",
+      "interpretability": "La ganancia se midió con comparación pareada y corrección de múltiples pruebas; no implica explicación causal.",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "750",
+          "detail": "Pacientes; 12 tipos de masa",
+          "accent": "#0c7ea5"
+        },
+        {
+          "name": "Modalidad",
+          "value": "Tomografía abdominal + metadatos clínicos",
+          "detail": "Cirugía pediátrica y segmentación",
+          "accent": "#2a9d8f"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "DSC multimodal",
+          "main": "0,900",
+          "sub": "Solo imagen: 0,882"
+        },
+        {
+          "label": "HD95",
+          "main": "4,79 mm",
+          "sub": "Solo imagen: 8,93 mm"
+        },
+        {
+          "label": "Prueba",
+          "main": "60",
+          "sub": "Pacientes reservados"
+        }
+      ],
+      "implementation": [
+        "Dataset multicéntrico emparejado de 750 pacientes.",
+        "SwinUNETRv2 y fusión de metadatos y hallazgos.",
+        "Prueba reservada de 60 pacientes.",
+        "GPU, versiones y costos: no reportados."
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Pacientes",
+          "n",
+          "750"
+        ],
+        [
+          "Pacientes prueba",
+          "n",
+          "60"
+        ],
+        [
+          "Tipos de masa",
+          "n",
+          "12"
+        ],
+        [
+          "Multimodal",
+          "DSC",
+          "0,900±0,044"
+        ],
+        [
+          "Solo imagen",
+          "DSC",
+          "0,882±0,064"
+        ],
+        [
+          "Multimodal",
+          "HD95",
+          "4,79±3,31 mm"
+        ],
+        [
+          "Solo imagen",
+          "HD95",
+          "8,93±6,22 mm"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-24",
+    "flag": "🇵🇱",
+    "country": "Polonia",
+    "rubro": "Patología digital y eficiencia computacional",
+    "area": "Cáncer de mama y colorrectal",
+    "modality": "Histopatología digital",
+    "title": "Histopathology image classification based on ensembles of highly compact features",
+    "title_es": "Clasificación histopatológica mediante ensambles de características altamente compactas",
+    "institution": "AGH University of Krakow",
+    "sample": "Dataset Kather: 5.000 imágenes colorrectales; BreakHis: 9.109 imágenes de cáncer mamario. Se evaluaron magnificaciones 40× y 100×.",
+    "design": "Extracción de embeddings de redes profundas, reducción dimensional PCA/NCA y clasificación mediante ensamble ECOC con validación cruzada de cinco particiones.",
+    "model": "ViT Small/DINO, ResNet-152 y DenseNet-161; PCA/NCA y ensamble MA-ECOC con SVM-RBF; vector final de 180 valores float16.",
+    "metrics": "Exactitud MA-ECOC: Kather 97,10%; BreakHis 40× 95,39%; BreakHis 100× 92,07%. Mejora hasta aproximadamente 7 puntos porcentuales sobre ciertas referencias.",
+    "limitations": "Particiones aleatorias estratificadas por clase, no necesariamente independientes por paciente; riesgo de correlación entre imágenes del mismo paciente. Sin validación prospectiva.",
+    "language": "No reportado en la fuente consultada",
+    "framework": "DINO, PCA, NCA, SVM, ECOC; versiones de lenguaje/framework no reportadas en el artículo.",
+    "hardware": "Imágenes histológicas digitalizadas; GPU y equipo de cómputo no reportados.",
+    "cost": "No reportado (no se cuantificó presupuesto ni costo por inferencia).",
+    "doi": "10.1038/s41598-026-66081-4",
+    "journal": "Scientific Reports",
+    "authors": "S. Łażewski y B. Cyganek",
+    "key_metric": "Kather 97,10%; BreakHis 95,39% (40×) / 92,07% (100×)",
+    "paper": "https://doi.org/10.1038/s41598-026-66081-4",
+    "published": "2026-10-23",
+    "rich_detail": true,
+    "summary": "Ensambles de características compactas alcanzaron alta exactitud en histopatología con menor memoria por representación.",
+    "remember": "Kather 97,10%; BreakHis 95,39% (40×) / 92,07% (100×); Particiones aleatorias estratificadas por clase, no necesariamente independientes por paciente; riesgo de correlación entre imágenes del mismo paciente. Sin validación prospectiva.",
+    "rich": {
+      "problem": "Los vectores de características de imágenes histológicas pueden ser costosos de almacenar y clasificar.",
+      "idea": "Reducir embeddings con PCA/NCA y combinar tres extractores en un ensamble MA-ECOC.",
+      "why": "Alternativa de menor huella de memoria para análisis histopatológico en entornos con recursos limitados.",
+      "interpretability": "La compresión facilita auditoría de componentes, pero no convierte al modelo en una explicación clínica.",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "14.109",
+          "detail": "Imágenes en dos datasets",
+          "accent": "#0c7ea5"
+        },
+        {
+          "name": "Modalidad",
+          "value": "Histopatología digital",
+          "detail": "Cáncer de mama y colorrectal",
+          "accent": "#2a9d8f"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Kather",
+          "main": "97,10%",
+          "sub": "Exactitud"
+        },
+        {
+          "label": "BreakHis 40×",
+          "main": "95,39%",
+          "sub": "Exactitud"
+        },
+        {
+          "label": "Vector",
+          "main": "180",
+          "sub": "Valores float16"
+        }
+      ],
+      "implementation": [
+        "Kather 5.000 imágenes; BreakHis 9.109 imágenes.",
+        "Entrenamiento y ajuste de DenseNet/ResNet y DINO-ViT.",
+        "MA-ECOC con SVM y vector 180×float16; validación cruzada de cinco particiones.",
+        "Hardware, costos monetarios y versiones exactas: no reportados."
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Kather",
+          "Imágenes",
+          "5.000"
+        ],
+        [
+          "BreakHis",
+          "Imágenes",
+          "9.109"
+        ],
+        [
+          "Kather",
+          "Accuracy",
+          "97,10%"
+        ],
+        [
+          "BreakHis 40×",
+          "Accuracy",
+          "95,39%"
+        ],
+        [
+          "BreakHis 100×",
+          "Accuracy",
+          "92,07%"
+        ],
+        [
+          "Vector final",
+          "float16",
+          "180 valores"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-24",
+    "flag": "🇩🇪",
+    "country": "Alemania (cohorte internacional)",
+    "rubro": "Neuroimagen veterinaria",
+    "area": "RM cerebral y triaje de anomalías",
+    "modality": "Resonancia magnética canina T1",
+    "title": "CNN model-based image classification for canine brain MRI abnormalities",
+    "title_es": "Clasificación de anomalías en RM cerebral canina mediante CNN",
+    "institution": "University of Veterinary Medicine Hannover, universidades colaboradoras y DOS Software-Systeme",
+    "sample": "550 perros de cuatro universidades; 65.120 cortes tras exclusión por calidad. Entrenamiento 444 pacientes; validación 53; prueba 53.",
+    "design": "RM T1 pre y poscontraste, tres planos; etiquetado corte por corte y partición por paciente; clasificación de normalidad/anomalía y agregación a nivel de paciente.",
+    "model": "SepNetDense: CNN compacta de 76.626 parámetros, convoluciones separables en profundidad, conexiones residuales y pooling global.",
+    "metrics": "Prueba por corte: 74% de cortes normales y 73% anormales correctamente clasificados. A nivel paciente: sensibilidad 83%, especificidad 78% y exactitud balanceada 80% con umbral de 51% de cortes anormales.",
+    "limitations": "Es medicina veterinaria, no validación humana; sensibilidad a centro, diagnóstico, raza y peso; artefactos graves excluidos.",
+    "language": "Python 3.11 (anonimización); lenguaje de entrenamiento de CNN no especificado.",
+    "framework": "RadiAnt 4.0.1, OsiriX MD, V7 Darwin, MATLAB R2022b, GraphPad Prism 8.4.3, SPSS 29.0.1.1; librería CNN no confirmada.",
+    "hardware": "Resonadores de cuatro centros; GPU no reportada.",
+    "cost": "No reportado (no se cuantificó presupuesto ni costo por inferencia).",
+    "doi": "10.1038/s41598-026-71470-w",
+    "journal": "Scientific Reports",
+    "authors": "S. Abani, M. Laue, P. J. Dickinson et al.",
+    "key_metric": "Sensibilidad 83%; especificidad 78%; 550 perros",
+    "paper": "https://doi.org/10.1038/s41598-026-71470-w",
+    "published": "2026-10-23",
+    "rich_detail": true,
+    "summary": "CNN compacta para triaje de RM cerebral veterinaria, con evaluación por paciente y análisis de sesgos por centro.",
+    "remember": "Sensibilidad 83%; especificidad 78%; 550 perros; Es medicina veterinaria, no validación humana; sensibilidad a centro, diagnóstico, raza y peso; artefactos graves excluidos.",
+    "rich": {
+      "problem": "La lectura de RM cerebral requiere especialistas y puede variar entre centros.",
+      "idea": "Clasificar cortes con SepNetDense y agregarlos para emitir una decisión por paciente.",
+      "why": "Caso de instrumentación y validación multicéntrica útil para evaluar robustez de modelos de imágenes médicas.",
+      "interpretability": "Se analizó influencia de centro, raza, peso y diagnóstico; no se probó utilidad en humanos.",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "550",
+          "detail": "Perros; 4 centros",
+          "accent": "#0c7ea5"
+        },
+        {
+          "name": "Modalidad",
+          "value": "Resonancia magnética canina T1",
+          "detail": "RM cerebral y triaje de anomalías",
+          "accent": "#2a9d8f"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Sensibilidad",
+          "main": "83%",
+          "sub": "A nivel paciente"
+        },
+        {
+          "label": "Especificidad",
+          "main": "78%",
+          "sub": "A nivel paciente"
+        },
+        {
+          "label": "Balanced accuracy",
+          "main": "80%",
+          "sub": "A nivel paciente"
+        }
+      ],
+      "implementation": [
+        "RM T1 de 550 perros; 65.120 cortes elegibles.",
+        "Partición por paciente: 444/53/53.",
+        "SepNetDense de 76.626 parámetros; procesamiento DICOM y anotación V7 Darwin.",
+        "Python 3.11, MATLAB R2022b, SPSS 29; GPU y costos no reportados."
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Perros",
+          "n",
+          "550"
+        ],
+        [
+          "Cortes",
+          "n",
+          "65.120"
+        ],
+        [
+          "Test",
+          "Pacientes",
+          "53"
+        ],
+        [
+          "Sensibilidad paciente",
+          "%",
+          "83"
+        ],
+        [
+          "Especificidad paciente",
+          "%",
+          "78"
+        ],
+        [
+          "Balanced accuracy",
+          "%",
+          "80"
+        ]
+      ]
+    }
+  },
+  {
     "date": "2026-10-23",
     "flag": "🇪🇬",
     "country": "Egipto",
