@@ -1,5 +1,754 @@
 [
   {
+    "date": "2026-10-25",
+    "reviewed": "25 octubre 2026",
+    "rich_detail": true,
+    "code": "No reportado",
+    "cost": "No reportado",
+    "figures": [],
+    "flag": "🇨🇳",
+    "countryFlags": "🇨🇳",
+    "country": "China",
+    "rubro": "Patología digital",
+    "area": "Oncología pulmonar",
+    "modality": "Histopatología digital · parches de tejido",
+    "title": "SCLC-SBT: a spectral-bilinear transformer for small cell lung cancer histopathology image classification",
+    "title_es": "SCLC-SBT: Transformer espectral-bilineal para clasificar histopatología de cáncer pulmonar de células pequeñas",
+    "institution": "Guangzhou First People’s Hospital; South China University of Technology",
+    "sample": "1.974 parches histopatológicos, dos clases (tejido normal y SCLC); prueba de 297 imágenes. Número de pacientes no confirmado.",
+    "design": "Clasificación binaria retrospectiva; comparación con 11 arquitecturas, bootstrap y prueba de McNemar; sin validación clínica prospectiva.",
+    "model": "SCLC-SBT: Hybrid-Conv Blocks reparametrizables, Spectral-Channel Attention y Dual-Branch Conv Linear Integration Transformer con modelado bilineal de espacio de estados.",
+    "metrics": "Accuracy 0,9697 (IC 95%: 0,9495–0,9865); F1 0,9728; AUC 0,9971; ~17 millones de parámetros y ~7,0 GFLOPs. Diferencias no significativas frente a seis de los comparadores más fuertes.",
+    "summary": "Combina atención espectral y modelado de dependencias espaciales para clasificar parches de carcinoma pulmonar de células pequeñas.",
+    "limitations": "297 imágenes en prueba y generalización clínica no demostrada; falta verificar particiones por paciente y validación externa. No interpretar la AUC como rendimiento hospitalario real.",
+    "remember": "La ventaja numérica sobre baselines fuertes no fue siempre estadísticamente significativa.",
+    "language": "No reportado",
+    "framework": "No reportado",
+    "hardware": "Imágenes de histopatología; modelo de ~17 M parámetros y 7,0 GFLOPs. GPU y escáner no reportados en la fuente original consultada.",
+    "paper": "https://doi.org/10.1038/s41598-026-76898-8",
+    "doi": "10.1038/s41598-026-76898-8",
+    "published": "24 octubre 2026",
+    "journal": "Scientific Reports (2026)",
+    "key_metric": "AUC 0,9971 · n=1.974 imágenes",
+    "rich": {
+      "problem": "Los patrones nucleares finos y la organización tisular de largo alcance son difíciles de modelar simultáneamente.",
+      "idea": "Usar bloques convolucionales espectrales en etapas tempranas y un módulo Transformer/estado espacial en la etapa profunda.",
+      "why": "Ilustra cómo medir discriminación, complejidad computacional e incertidumbre estadística en patología digital.",
+      "interpretability": "No confundir la atención espectral con una explicación clínica validada; se reportan IC bootstrap y contrastes McNemar.",
+      "dataset_cards": [
+        {
+          "name": "Evaluación",
+          "value": "1.974 imágenes",
+          "detail": "Normal / SCLC",
+          "accent": "#0c7ea5"
+        },
+        {
+          "name": "Prueba",
+          "value": "297",
+          "detail": "Imágenes de test",
+          "accent": "#2a9d8f"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "AUC",
+          "main": "0,9971",
+          "sub": "Clasificación binaria de parches"
+        },
+        {
+          "label": "Accuracy",
+          "main": "96,97%",
+          "sub": "IC 95%: 94,95–98,65%"
+        },
+        {
+          "label": "Complejidad",
+          "main": "17 M",
+          "sub": "Parámetros · ~7,0 GFLOPs"
+        }
+      ],
+      "implementation": [
+        "Patología digital; normal/SCLC",
+        "Extracción local con Hybrid-Conv + atención espectral",
+        "DBCLIT para dependencias globales",
+        "Comparación de 11 arquitecturas",
+        "Bootstrap y McNemar"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Muestra",
+          "Parches",
+          "1.974"
+        ],
+        [
+          "Prueba",
+          "Parches",
+          "297"
+        ],
+        [
+          "Clasificación",
+          "Accuracy",
+          "0,9697"
+        ],
+        [
+          "Clasificación",
+          "F1",
+          "0,9728"
+        ],
+        [
+          "Clasificación",
+          "AUC",
+          "0,9971"
+        ],
+        [
+          "Computación",
+          "Parámetros / FLOPs",
+          "~17 M / 7,0 G"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-25",
+    "reviewed": "25 octubre 2026",
+    "rich_detail": true,
+    "code": "No reportado",
+    "cost": "No reportado",
+    "figures": [],
+    "flag": "🇨🇳 🇺🇸",
+    "countryFlags": "🇨🇳 🇺🇸",
+    "country": "China / Estados Unidos (base clínica MIMIC-IV)",
+    "rubro": "Predicción clínica",
+    "area": "Neurología / UCI",
+    "modality": "Historias clínicas electrónicas · datos de laboratorio",
+    "title": "Risk model for predicting mortality risk in patients with cerebral infarction: a cohort study using the MIMIC-IV database",
+    "title_es": "Modelo de riesgo de mortalidad tras infarto cerebral usando la base MIMIC-IV",
+    "institution": "Sichuan Provincial People’s Hospital; Sixth People’s Hospital of Chengdu; People’s Hospital of Jian Yang City",
+    "sample": "109 pacientes con infarto cerebral ingresados en UCI, extraídos de MIMIC-IV (datos 2008–2019).",
+    "design": "Cohorte retrospectiva; Cox univariable, prueba de riesgos proporcionales, selección LASSO y Cox multivariable; estratificación de supervivencia.",
+    "model": "Regresión de Cox con selección de variables por LASSO; no es una red neuronal ni un modelo de imagen.",
+    "metrics": "Anion gap HR 1,1040 (IC 95% 1,0070–1,2110); plaquetas HR 0,9965 (0,9939–0,9990); glucosa HR 1,0050 (1,0000–1,0090). AUC >0,7 en los horizontes analizados; valores puntuales no confirmados.",
+    "summary": "Modelo de supervivencia que utiliza brecha aniónica, plaquetas y glucemia para estimar riesgo en pacientes críticos con infarto cerebral.",
+    "limitations": "Solo 109 pacientes; posible sesgo de selección, ausencia de validación externa prospectiva y de beneficio clínico demostrado.",
+    "remember": "Un AUC superior a 0,7 en una cohorte pequeña no garantiza transportabilidad clínica.",
+    "language": "No reportado",
+    "framework": "No reportado",
+    "hardware": "Infraestructura de análisis de datos; sin dispositivo específico ni GPU reportada.",
+    "paper": "https://doi.org/10.1038/s41598-026-76494-w",
+    "doi": "10.1038/s41598-026-76494-w",
+    "published": "24 octubre 2026",
+    "journal": "Scientific Reports (2026)",
+    "key_metric": "n=109 · AUC >0,7",
+    "rich": {
+      "problem": "Identificar variables tempranas asociadas a mortalidad tras infarto cerebral en UCI.",
+      "idea": "Seleccionar biomarcadores rutinarios con LASSO y estimar riesgos con un modelo de Cox.",
+      "why": "Enseña cómo aprovechar datos de laboratorio ya disponibles para investigación de pronóstico hospitalario.",
+      "interpretability": "Los hazard ratios cuantifican asociaciones ajustadas, no efectos causales.",
+      "dataset_cards": [
+        {
+          "name": "Cohorte",
+          "value": "109 pacientes",
+          "detail": "MIMIC-IV · 2008–2019",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "AUC",
+          "main": ">0,70",
+          "sub": "Horizontes evaluados"
+        },
+        {
+          "label": "Variables",
+          "main": "3",
+          "sub": "Anion gap, plaquetas, glucosa"
+        },
+        {
+          "label": "Diseño",
+          "main": "Retrospectivo",
+          "sub": "Cox + LASSO"
+        }
+      ],
+      "implementation": [
+        "Extraer pacientes con infarto cerebral de MIMIC-IV",
+        "Filtrar elegibilidad y variables",
+        "Cox univariable y prueba de supuestos",
+        "LASSO para selección",
+        "Cox multivariable y ROC"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Muestra",
+          "Pacientes",
+          "109"
+        ],
+        [
+          "Brecha aniónica",
+          "HR (IC 95%)",
+          "1,1040 (1,0070–1,2110)"
+        ],
+        [
+          "Plaquetas",
+          "HR (IC 95%)",
+          "0,9965 (0,9939–0,9990)"
+        ],
+        [
+          "Glucosa",
+          "HR (IC 95%)",
+          "1,0050 (1,0000–1,0090)"
+        ],
+        [
+          "Discriminación",
+          "AUC",
+          ">0,7"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-25",
+    "reviewed": "25 octubre 2026",
+    "rich_detail": true,
+    "code": "https://github.com/JanaShenLab/KaML-ESM",
+    "cost": "Costo de entrenamiento no reportado; repositorio no comercial, ESM Forge puede requerir créditos/API.",
+    "figures": [],
+    "flag": "🇺🇸",
+    "countryFlags": "🇺🇸",
+    "country": "Estados Unidos",
+    "rubro": "Bioinformática e IA molecular",
+    "area": "Ingeniería de proteínas",
+    "modality": "Secuencias de aminoácidos · valores de pKa",
+    "title": "Predicting protein electrostatics with protein language models",
+    "title_es": "Predicción de electrostática de proteínas mediante modelos de lenguaje proteico",
+    "institution": "University of Maryland School of Pharmacy",
+    "sample": "PKAD-3r ampliado con GAINES; cuatro benchmarks y 89 mutaciones enterradas diseñadas. Tamaño total de entrenamiento no confirmado en la fuente consultada.",
+    "design": "Desarrollo y validación computacional de predictores de pKa a partir de secuencias; comparación con métodos estructurales y de secuencia; evaluación en proteoma humano.",
+    "model": "KaML-ESM2 y KaML-ESMC: cabezales neuronales sobre embeddings ESM-2/ESM-C; aumento latente GAINES. Repositorio ofrece CLI y atlas proteómico.",
+    "metrics": "RMSE ~0,5 unidades de pKa para seis tipos de residuos en proteínas nativas y cuatro benchmarks; en 89 mutaciones enterradas artificiales KaML-ESMC alcanza RMSE 1,89 (preprint de autores).",
+    "summary": "Modelos de lenguaje proteico que estiman constantes de ionización desde secuencias y permiten explorar sitios funcionales.",
+    "limitations": "Desempeño deteriorado en mutaciones enterradas sin soporte evolutivo; predicción molecular no equivale a validación experimental funcional.",
+    "remember": "Los requisitos de hardware del software distribuido no son costos ni especificaciones de entrenamiento.",
+    "language": "Python 3.10+ (repositorio)",
+    "framework": "Modelos ESM-2 y ESM-C; código KaML-ESM",
+    "hardware": "Requisitos documentados para CLI: GPU NVIDIA ≥24 GB VRAM (ej. RTX 4090), RAM 128 GB y disco 40 GB. No equivalen al hardware usado en el entrenamiento.",
+    "paper": "https://doi.org/10.1038/s41467-026-78406-y",
+    "doi": "10.1038/s41467-026-78406-y",
+    "published": "24 octubre 2026",
+    "journal": "Nature Communications (2026)",
+    "key_metric": "RMSE ~0,5 pKa · 4 benchmarks",
+    "rich": {
+      "problem": "La predicción de pKa de residuos ionizables es compleja y existen pocos datos experimentales.",
+      "idea": "Transferir representaciones de modelos de lenguaje proteico y ampliar datos con GAINES.",
+      "why": "Aplicable a bioingeniería molecular, simulación y exploración de proteínas.",
+      "interpretability": "Predicciones por residuo y desplazamientos de pKa; no sustituyen experimentos de validación biofísica.",
+      "dataset_cards": [
+        {
+          "name": "Benchmarks",
+          "value": "4",
+          "detail": "Evaluaciones comparativas",
+          "accent": "#0c7ea5"
+        },
+        {
+          "name": "Prueba difícil",
+          "value": "89",
+          "detail": "Mutaciones enterradas",
+          "accent": "#2a9d8f"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "RMSE nativas",
+          "main": "~0,5",
+          "sub": "Unidades pKa"
+        },
+        {
+          "label": "RMSE mutaciones",
+          "main": "1,89",
+          "sub": "KaML-ESMC · preprint"
+        },
+        {
+          "label": "GPU CLI",
+          "main": "≥24 GB",
+          "sub": "VRAM según repositorio"
+        }
+      ],
+      "implementation": [
+        "Secuencia proteica",
+        "Embeddings ESM2/ESMC",
+        "Aumento GAINES de PKAD-3r",
+        "Cabezales para pKa de residuos",
+        "Validación en cuatro benchmarks y proteoma"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Proteínas nativas",
+          "RMSE",
+          "~0,5 unidades pKa"
+        ],
+        [
+          "Mutaciones enterradas",
+          "n",
+          "89"
+        ],
+        [
+          "Mutaciones enterradas",
+          "RMSE ESMC",
+          "1,89 (preprint)"
+        ],
+        [
+          "CLI local",
+          "VRAM mínima",
+          "24 GB"
+        ],
+        [
+          "CLI local",
+          "RAM / disco",
+          "128 GB / 40 GB"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-25",
+    "reviewed": "25 octubre 2026",
+    "rich_detail": true,
+    "code": "No reportado",
+    "cost": "No reportado; interpretaciones autónomas aportadas en especie por proveedor, no constituye costo real de despliegue.",
+    "figures": [],
+    "flag": "🇺🇸",
+    "countryFlags": "🇺🇸",
+    "country": "Estados Unidos",
+    "rubro": "IA clínica prospectiva",
+    "area": "Oftalmología pediátrica",
+    "modality": "Retinografía · tomografía de coherencia óptica",
+    "title": "ACCESS2 study: the potential for autonomous AI to mitigate disparities in diabetic retinopathy screening in youth",
+    "title_es": "ACCESS2: IA autónoma para reducir desigualdades en el tamizaje de retinopatía diabética juvenil",
+    "institution": "Johns Hopkins School of Medicine; University of Wisconsin–Madison; University of Iowa y colaboradores",
+    "sample": "397 jóvenes con diabetes tipo 1 (72%) o tipo 2 (28%).",
+    "design": "Estudio prospectivo en consultas de diabetes; compara finalización del tamizaje entre grupos y rendimiento de IA frente a lectura de referencia. Registro NCT05463289.",
+    "model": "Sistema autónomo comercial de IA para examen ocular diabético; arquitectura interna no divulgada. Se adquirieron imágenes de retina y OCT.",
+    "metrics": "Antes del programa: examen previo 79,8% vs 61,8% (grupo blanco vs no blanco). Tras intervención: completitud 99,5% vs 98%. Sensibilidad 100% (IC 95%: 67,6–100%) y especificidad 76% (71,4–79,9%) para retinopatía mayor que leve.",
+    "summary": "Estudio prospectivo que examina acceso y exactitud de IA autónoma para retinopatía diabética en población joven.",
+    "limitations": "IC de sensibilidad muy amplio, número reducido de casos positivos, estudio de entorno específico; mejor acceso no equivale a reducción demostrada de pérdida visual.",
+    "remember": "La sensibilidad puntual 100% tiene IC 67,6–100%; comunicar la incertidumbre.",
+    "language": "No reportado",
+    "framework": "Algoritmo comercial propietario; no reportado",
+    "hardware": "Cámara retiniana y equipo OCT en consulta; modelos específicos de los dispositivos de la cohorte principal no confirmados en artículo consultado.",
+    "paper": "https://doi.org/10.1038/s41467-026-78842-w",
+    "doi": "10.1038/s41467-026-78842-w",
+    "published": "23 octubre 2026",
+    "journal": "Nature Communications (2026)",
+    "key_metric": "n=397 · tamizaje 98–99,5%",
+    "rich": {
+      "problem": "Desigualdades de acceso al tamizaje ocular en jóvenes con diabetes.",
+      "idea": "Realizar el examen con IA autónoma durante la visita de atención de diabetes.",
+      "why": "Evalúa un resultado de implementación real: completar el tamizaje, además de sensibilidad/especificidad.",
+      "interpretability": "Algoritmo propietario; métricas clínicas y comparación de grupos reportadas, no explicaciones internas del modelo.",
+      "dataset_cards": [
+        {
+          "name": "Participantes",
+          "value": "397",
+          "detail": "72% DM1 · 28% DM2",
+          "accent": "#0c7ea5"
+        },
+        {
+          "name": "Registro",
+          "value": "NCT05463289",
+          "detail": "Estudio prospectivo",
+          "accent": "#2a9d8f"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Tamizaje grupo 1",
+          "main": "99,5%",
+          "sub": "Finalización después de IA"
+        },
+        {
+          "label": "Tamizaje grupo 2",
+          "main": "98,0%",
+          "sub": "Finalización después de IA"
+        },
+        {
+          "label": "Sensibilidad",
+          "main": "100%",
+          "sub": "IC 95%: 67,6–100%"
+        }
+      ],
+      "implementation": [
+        "Consulta de diabetes",
+        "Adquisición de imagen retiniana",
+        "Interpretación autónoma IA",
+        "OCT y referencia clínica",
+        "Análisis de completitud y exactitud"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Muestra",
+          "Jóvenes",
+          "397"
+        ],
+        [
+          "Tipo 1",
+          "Porcentaje",
+          "72%"
+        ],
+        [
+          "Tipo 2",
+          "Porcentaje",
+          "28%"
+        ],
+        [
+          "Tamizaje tras IA",
+          "Blancos / no blancos",
+          "99,5% / 98%"
+        ],
+        [
+          "Diagnóstico",
+          "Sensibilidad",
+          "100% (IC 95% 67,6–100%)"
+        ],
+        [
+          "Diagnóstico",
+          "Especificidad",
+          "76% (IC 95% 71,4–79,9%)"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-25",
+    "reviewed": "25 octubre 2026",
+    "rich_detail": true,
+    "code": "No reportado",
+    "cost": "No reportado",
+    "figures": [],
+    "flag": "🇺🇸",
+    "countryFlags": "🇺🇸",
+    "country": "Estados Unidos",
+    "rubro": "Neuroimagen e IA",
+    "area": "Neurología / esclerosis múltiple",
+    "modality": "Resonancia magnética estructural · conectividad cerebral",
+    "title": "Predicting follow-up cognition using estimated structural and functional connectivity networks and artificial intelligence in multiple sclerosis",
+    "title_es": "Predicción de cognición futura en esclerosis múltiple mediante conectomas estimados e IA",
+    "institution": "Weill Cornell Medicine; Cornell University",
+    "sample": "171 personas con esclerosis múltiple, con medidas cognitivas basales y seguimiento a cuatro años.",
+    "design": "Estudio de cohorte longitudinal con estimación de conectomas a partir de máscaras de lesiones en resonancia estructural.",
+    "model": "Network Modification Tool para conectividad estructural estimada (eSC) y Krakencoder, encoder-decoder, para conectividad funcional estimada (eFC).",
+    "metrics": "Correlación de Spearman mediana con SDMT a cuatro años: ρ=0,58 usando eSC regional y ρ=0,56 usando eFC regional.",
+    "summary": "Reconstruye conectividad estructural y funcional estimada desde resonancias habituales para predecir cognición a cuatro años.",
+    "limitations": "Predicción correlacional en cohorte observacional; sin prueba de que modificar circuitos cambie la evolución cognitiva ni validación prospectiva de decisiones clínicas.",
+    "remember": "Correlación de Spearman no es AUC ni exactitud diagnóstica.",
+    "language": "No reportado",
+    "framework": "Network Modification Tool; Krakencoder",
+    "hardware": "Resonancia magnética estructural T1/lesiones; GPU no reportada.",
+    "paper": "https://doi.org/10.1038/s41467-026-75827-7",
+    "doi": "10.1038/s41467-026-75827-7",
+    "published": "23 octubre 2026",
+    "journal": "Nature Communications (2026)",
+    "key_metric": "n=171 · ρ=0,58 / 0,56",
+    "rich": {
+      "problem": "La difusión y la fMRI son costosas y no siempre están disponibles en seguimiento clínico de EM.",
+      "idea": "Inferir conectomas desde lesiones de resonancia convencional y usar redes estimadas para predicción cognitiva.",
+      "why": "Ejemplo de extracción de biomarcadores computacionales a partir de imágenes ya adquiridas.",
+      "interpretability": "Asocia redes cerebelosas y red por defecto con puntuaciones futuras; asociaciones no causales.",
+      "dataset_cards": [
+        {
+          "name": "Cohorte",
+          "value": "171",
+          "detail": "Personas con EM",
+          "accent": "#0c7ea5"
+        },
+        {
+          "name": "Seguimiento",
+          "value": "4 años",
+          "detail": "Cognición con SDMT",
+          "accent": "#2a9d8f"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "eSC",
+          "main": "ρ=0,58",
+          "sub": "Spearman mediana"
+        },
+        {
+          "label": "eFC",
+          "main": "ρ=0,56",
+          "sub": "Spearman mediana"
+        },
+        {
+          "label": "Seguimiento",
+          "main": "4 años",
+          "sub": "Resultado cognitivo"
+        }
+      ],
+      "implementation": [
+        "Resonancia estructural y máscaras de lesión",
+        "Network Modification Tool → eSC",
+        "Krakencoder → eFC",
+        "Selección de circuitos regionales",
+        "Predicción de SDMT y análisis de asociaciones"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Muestra",
+          "Pacientes",
+          "171"
+        ],
+        [
+          "Seguimiento",
+          "Tiempo",
+          "4 años"
+        ],
+        [
+          "eSC regional",
+          "Spearman ρ",
+          "0,58"
+        ],
+        [
+          "eFC regional",
+          "Spearman ρ",
+          "0,56"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-25",
+    "reviewed": "25 octubre 2026",
+    "rich_detail": true,
+    "code": "https://github.com/RegAItool/ai-standardized-patient",
+    "cost": "Sin análisis monetario formal confirmado; no asumir ahorros cuantificados.",
+    "figures": [],
+    "flag": "🇨🇳 🇬🇧",
+    "countryFlags": "🇨🇳 🇬🇧",
+    "country": "China / Reino Unido",
+    "rubro": "IA en educación médica",
+    "area": "Simulación clínica",
+    "modality": "Conversaciones de texto con pacientes virtuales",
+    "title": "From simulation to pedagogy: multi-model and randomized evaluation of structured AI standardized patients",
+    "title_es": "De la simulación a la enseñanza: evaluación multimodelo y aleatorizada de pacientes simulados con IA",
+    "institution": "First Affiliated Hospital of Dalian Medical University; University of Oxford y colaboradores",
+    "sample": "350 evaluaciones expertas de diálogos simulados; 155 consultas en vivo de estudiantes; ensayo piloto aleatorizado de tres brazos con 58 estudiantes analizados.",
+    "design": "Tres fases: evaluación ciega por expertos, uso real por estudiantes y ensayo piloto aleatorizado AI-SP vs paciente estandarizado humano vs currículo habitual.",
+    "model": "Arquitectura de información de tres niveles (espontánea, solicitada, condicionada) sobre cinco LLM: GPT-4o, Claude 4.5 Sonnet, Gemini 2.5 Flash, Qwen-2.5 Plus y DeepSeek-R1.",
+    "metrics": "La variación por habilidad del estudiante η²=0,31 y por modelo η²=0,06. En ensayo n=58, no hubo diferencia estadísticamente significativa en ganancia OSCE. Mayor autoconfianza exploratoria en brazo IA no resistió corrección por comparaciones múltiples.",
+    "summary": "Plataforma de pacientes simulados con IA que regula qué información revela el personaje según la calidad de la entrevista.",
+    "limitations": "Ensayo piloto sin potencia para demostrar equivalencia; un centro, escenarios en chino y diferencia entre chat IA y voz humana; resultado de autoconfianza exploratorio.",
+    "remember": "El artículo revisado aclara que el piloto NO demuestra equivalencia y la autoconfianza no resistió corrección múltiple.",
+    "language": "Python 3.9 para análisis (preprint/repo)",
+    "framework": "Plataforma web y API de LLM; prompts con reglas de divulgación",
+    "hardware": "Infraestructura web, sin GPU local ni especificaciones de servidores verificadas; modalidad textual.",
+    "paper": "https://doi.org/10.1038/s41746-026-03372-0",
+    "doi": "10.1038/s41746-026-03372-0",
+    "published": "23 octubre 2026",
+    "journal": "npj Digital Medicine (2026)",
+    "key_metric": "n=58 RCT · 350 evaluaciones",
+    "rich": {
+      "problem": "La práctica con pacientes estandarizados humanos requiere recursos y disponibilidad.",
+      "idea": "Usar reglas de divulgación en tres capas y comparar múltiples modelos con un diseño educativo común.",
+      "why": "Proporciona un ejemplo de evaluación con expertos, estudiantes y ensayo controlado.",
+      "interpretability": "Las reglas de divulgación son auditables; las mejoras de autoconfianza no se sostienen tras multiplicidad.",
+      "dataset_cards": [
+        {
+          "name": "Evaluación experta",
+          "value": "350",
+          "detail": "Valoraciones ciegas",
+          "accent": "#0c7ea5"
+        },
+        {
+          "name": "Interacciones",
+          "value": "155",
+          "detail": "Consultas de estudiantes",
+          "accent": "#2a9d8f"
+        },
+        {
+          "name": "Ensayo",
+          "value": "58",
+          "detail": "Participantes analizados",
+          "accent": "#7c5cff"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Habilidad",
+          "main": "η²=0,31",
+          "sub": "Variación asociada al estudiante"
+        },
+        {
+          "label": "Modelo",
+          "main": "η²=0,06",
+          "sub": "Variación asociada al LLM"
+        },
+        {
+          "label": "OSCE",
+          "main": "Sin diferencia",
+          "sub": "Ensayo piloto; no prueba equivalencia"
+        }
+      ],
+      "implementation": [
+        "Cinco escenarios preoperatorios",
+        "Prompts con tres niveles de información",
+        "Cinco LLM y siete evaluadores",
+        "155 consultas en vivo",
+        "RCT piloto con tres brazos"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Fase 1",
+          "Evaluaciones",
+          "350"
+        ],
+        [
+          "Fase 1b",
+          "Consultas",
+          "155"
+        ],
+        [
+          "Fase 2",
+          "Participantes",
+          "58"
+        ],
+        [
+          "Habilidad estudiante",
+          "η²",
+          "0,31"
+        ],
+        [
+          "Modelo LLM",
+          "η²",
+          "0,06"
+        ],
+        [
+          "OSCE",
+          "Comparación",
+          "No significativa; no equivalencia"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-25",
+    "reviewed": "25 octubre 2026",
+    "rich_detail": true,
+    "code": "No reportado",
+    "cost": "Acceso a dataset según repositorio/licencia; costos de adquisición y cómputo no reportados.",
+    "figures": [],
+    "flag": "🇨🇭 🇦🇺",
+    "countryFlags": "🇨🇭 🇦🇺",
+    "country": "Suiza / Australia",
+    "rubro": "Datos abiertos para IA médica",
+    "area": "Radiología / hepatología",
+    "modality": "Resonancia magnética hepática 1,5 T y 3 T · múltiples fases",
+    "title": "A multiparametric liver MRI dataset with multiple tumor and liver segmentations of pre-treatment hepatocellular carcinomas",
+    "title_es": "OpenSwissHCC: conjunto multiparamétrico de resonancias hepáticas con segmentaciones tumorales y del hígado",
+    "institution": "Lausanne University Hospital; University of Lausanne; CIBM Center for Biomedical Imaging; South Metropolitan Health Service",
+    "sample": "132 estudios de RM (2011–2020): 63 pacientes HCC positivos y 69 negativos. Se anotaron 140 lesiones, 97 HCC confirmados.",
+    "design": "Descriptor de dataset retrospectivo; segmentaciones manuales validadas por expertos y máscaras hepáticas T1 generadas con nnU-Net preentrenado.",
+    "model": "OpenSwissHCC es un dataset, no un nuevo clasificador. nnU-Net preentrenado para máscaras hepáticas y transformaciones precalculadas de registro entre fases.",
+    "metrics": "132 exploraciones, 140 lesiones anotadas, 97 HCC confirmados. No corresponde reportar AUC/Dice de un modelo nuevo en este descriptor.",
+    "summary": "Recurso de resonancia multiparamétrica hepática con segmentaciones expertas para entrenar y evaluar IA de hepatocarcinoma.",
+    "limitations": "Cohorte limitada y seleccionada; datos retrospectivos, posibles diferencias de protocolo y anotación. No demuestra desempeño diagnóstico de un algoritmo.",
+    "remember": "Los conteos de lesiones no son pacientes; no inventar métricas diagnósticas para un descriptor de datos.",
+    "language": "No reportado",
+    "framework": "nnU-Net preentrenado; imágenes multiparamétricas y máscaras de segmentación",
+    "hardware": "Resonadores clínicos de 1,5 T y 3 T.",
+    "paper": "https://doi.org/10.1038/s41597-026-08506-3",
+    "doi": "10.1038/s41597-026-08506-3",
+    "published": "22 octubre 2026",
+    "journal": "Scientific Data (2026)",
+    "key_metric": "132 RM · 140 lesiones",
+    "rich": {
+      "problem": "Escasean bases de resonancia hepática con segmentación experta y metadatos LI-RADS.",
+      "idea": "Publicar RM multiphase y máscaras de hígado/lesión con anotaciones clínicas estandarizadas.",
+      "why": "Permite construir validaciones y experimentos de segmentación de tumores hepáticos con trazabilidad.",
+      "interpretability": "Metadatos LI-RADS y segmentaciones de expertos; no se valida un nuevo sistema de IA.",
+      "dataset_cards": [
+        {
+          "name": "RM",
+          "value": "132",
+          "detail": "1,5 T y 3 T",
+          "accent": "#0c7ea5"
+        },
+        {
+          "name": "HCC positivo",
+          "value": "63",
+          "detail": "Pacientes",
+          "accent": "#2a9d8f"
+        },
+        {
+          "name": "Lesiones",
+          "value": "140",
+          "detail": "97 HCC confirmadas",
+          "accent": "#7c5cff"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "RM",
+          "main": "132",
+          "sub": "63 HCC+ / 69 HCC−"
+        },
+        {
+          "label": "Lesiones",
+          "main": "140",
+          "sub": "97 HCC"
+        },
+        {
+          "label": "Rendimiento IA",
+          "main": "No aplica",
+          "sub": "Descriptor de dataset"
+        }
+      ],
+      "implementation": [
+        "RM de 2011–2020",
+        "Segmentación experta de hígado y lesiones",
+        "Metadatos LI-RADS",
+        "nnU-Net preentrenado para máscaras T1",
+        "Registro entre fases y distribución"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Exploraciones",
+          "n",
+          "132"
+        ],
+        [
+          "HCC positivo",
+          "Pacientes",
+          "63"
+        ],
+        [
+          "HCC negativo",
+          "Pacientes",
+          "69"
+        ],
+        [
+          "Lesiones",
+          "Anotadas",
+          "140"
+        ],
+        [
+          "Lesiones",
+          "HCC confirmadas",
+          "97"
+        ],
+        [
+          "Resonadores",
+          "Campo",
+          "1,5 T / 3 T"
+        ]
+      ]
+    }
+  },
+  {
     "date": "2026-10-24",
     "flag": "🇬🇧",
     "country": "Reino Unido / encuesta internacional",
