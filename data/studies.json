@@ -1,5 +1,734 @@
 [
   {
+    "date": "2026-10-26",
+    "reviewed": "26 octubre 2026",
+    "rich_detail": true,
+    "code": "https://github.com/JoelSjoberg/RamanSpectrumEffectGithub",
+    "cost": "No reportado; no se estiman costos del espectrómetro ni de entrenamiento.",
+    "figures": [],
+    "flag": "🇫🇮 🇺🇸",
+    "countryFlags": "🇫🇮 🇺🇸",
+    "country": "Finlandia / Estados Unidos",
+    "rubro": "Espectroscopia biomédica",
+    "area": "Neurooncología / control de sesgos",
+    "modality": "Espectros Raman de gliomas (tejido FFPE)",
+    "title": "Deep learning mitigates batch effects in Raman spectroscopy",
+    "title_es": "El aprendizaje profundo reduce los efectos de lote en espectroscopia Raman",
+    "institution": "University of Turku; National Cancer Institute, NIH",
+    "sample": "APOLLO: 59 muestras tumorales de glioma correspondientes a 46 identificadores únicos de paciente/muestra; 300.506 espectros iniciales y 260.922 tras retirar 39.584 valores atípicos.",
+    "design": "Experimento retrospectivo de corrección de efecto de lote. Comparó datos crudos, preprocesamiento manual y RADAR; validación cruzada estratificada en 10 particiones a nivel de espectro, no evaluación independiente por paciente.",
+    "model": "Red neuronal de dos cabezales (identidad de muestra y mutación IDH1), capa aprendible de importancia espectral entrenada adversarialmente, y clasificación posterior; 392 características espectrales retenidas.",
+    "metrics": "Exactitud balanceada para reconocer identidad de muestra: 68% antes y 12% después de mitigar sesgo; clasificación de estado IDH1: 85% antes y 81% después. Las cifras no equivalen a validación en pacientes externos.",
+    "summary": "La información Raman permite identificar accidentalmente la muestra de origen; una capa de importancia entrenada adversarialmente reduce esa señal espuria conservando gran parte de la información de IDH1.",
+    "limitations": "Los espectros de los mismos pacientes están en entrenamiento y validación; el método no demuestra generalización a pacientes o equipos nuevos. Puede eliminar señales biológicas útiles y requiere numerosos espectros.",
+    "remember": "Advertencia metodológica clave para estudios con múltiples espectros por paciente o varios espectrómetros.",
+    "language": "No confirmado",
+    "framework": "Keras; preprocesamiento RADAR; repositorio de autores disponible.",
+    "hardware": "Microscopio Raman Thermo Fisher DXR2xi; láser de 532 nm a 10 mW; detector EMCCD; resolución de 4 cm⁻¹. GPU de entrenamiento no reportada.",
+    "paper": "https://doi.org/10.1038/s41598-026-62086-1",
+    "doi": "10.1038/s41598-026-62086-1",
+    "published": "26 octubre 2026",
+    "journal": "Scientific Reports (2026)",
+    "key_metric": "68% → 12% sesgo de identidad; IDH1 85% → 81%",
+    "rich": {
+      "problem": "El modelo aprende señales de instrumento, procesamiento o paciente que no son la variable biológica de interés.",
+      "idea": "Usar clasificación adversarial de identidad y de IDH1 para suprimir longitudes de onda que codifican sesgos.",
+      "why": "Advertencia metodológica clave para estudios con múltiples espectros por paciente o varios espectrómetros.",
+      "interpretability": "Los pesos de 392 características espectrales permiten auditar qué señales conserva el modelo; no prueban mecanismos causales.",
+      "dataset_cards": [
+        {
+          "name": "APOLLO",
+          "value": "46 IDs",
+          "detail": "59 muestras tumorales"
+        },
+        {
+          "name": "Espectros tras QC",
+          "value": "260.922",
+          "detail": "39.584 excluidos"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Identidad de muestra",
+          "main": "68% → 12%",
+          "sub": "Exactitud balanceada"
+        },
+        {
+          "label": "IDH1",
+          "main": "85% → 81%",
+          "sub": "Exactitud balanceada"
+        },
+        {
+          "label": "Espectro",
+          "main": "392",
+          "sub": "Características retenidas"
+        }
+      ],
+      "implementation": [
+        "Adquirir espectros de gliomas con microscopía Raman",
+        "Control de valores atípicos y corrección de línea base",
+        "Comparar sesgo de identificación de muestra",
+        "Entrenar capa adversarial de importancia espectral",
+        "Evaluar simultáneamente sesgo e información de IDH1"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Dataset",
+          "Pacientes/IDs",
+          "46"
+        ],
+        [
+          "Dataset",
+          "Muestras",
+          "59"
+        ],
+        [
+          "Dataset",
+          "Espectros originales",
+          "300.506"
+        ],
+        [
+          "Control de calidad",
+          "Espectros restantes",
+          "260.922"
+        ],
+        [
+          "Identidad",
+          "Exactitud balanceada",
+          "68% → 12%"
+        ],
+        [
+          "IDH1",
+          "Exactitud balanceada",
+          "85% → 81%"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-26",
+    "reviewed": "26 octubre 2026",
+    "rich_detail": true,
+    "code": "No reportado",
+    "cost": "No reportado; sin análisis económico de implementación.",
+    "figures": [],
+    "flag": "🇨🇳",
+    "countryFlags": "🇨🇳",
+    "country": "China",
+    "rubro": "Predicción clínica pediátrica",
+    "area": "Neumología / pediatría",
+    "modality": "Datos clínicos al ingreso",
+    "title": "Development and validation of an interpretable machine learning model for early prediction of refractory mycoplasma pneumoniae pneumonia: a multi-center study",
+    "title_es": "Desarrollo y validación multicéntrica de un modelo interpretable para predecir neumonía refractaria por Mycoplasma pneumoniae",
+    "institution": "Children’s Hospital of Nanjing Medical University; Nanjing Jiangning Hospital; Wuxi Children’s Hospital; Fourth Affiliated Hospital of Nanjing Medical University",
+    "sample": "6.587 niños con neumonía por Mycoplasma pneumoniae atendidos en cuatro centros entre 2019 y 2023; 5.546 para derivación y 696 y 345 para dos cohortes externas.",
+    "design": "Cohorte retrospectiva multicéntrica. Comparación de seis algoritmos, evaluación de discriminación, calibración y curvas de decisión; dos validaciones externas independientes y análisis SHAP.",
+    "model": "Random Forest como mejor modelo, comparado con cinco alternativas; explicación de predicciones mediante SHAP y recalibración local del intercepto.",
+    "metrics": "AUC interna de prueba 0,809; AUC externa 0,774 y 0,807. La recalibración del intercepto mejoró calibración en centros con diferente prevalencia basal.",
+    "summary": "Modelo de predicción de neumonía refractaria al ingreso pediátrico con validación externa en dos hospitales.",
+    "limitations": "Datos retrospectivos de una región; deriva de calibración por prevalencia y necesidad de recalibración antes de aplicación en nuevas poblaciones; sin estudio de impacto clínico prospectivo.",
+    "remember": "Ejemplo de por qué discriminación y calibración deben evaluarse por separado en cada hospital.",
+    "language": "No reportado",
+    "framework": "Random Forest y SHAP; lenguaje, versiones y código no reportados en el resumen original.",
+    "hardware": "Historias clínicas y pruebas de laboratorio de cuatro hospitales; computadoras/GPU no especificadas.",
+    "paper": "https://doi.org/10.1038/s41598-026-77238-6",
+    "doi": "10.1038/s41598-026-77238-6",
+    "published": "26 octubre 2026",
+    "journal": "Scientific Reports (2026)",
+    "key_metric": "AUC externa 0,774 y 0,807 · n=6.587",
+    "rich": {
+      "problem": "Detectar tempranamente qué pacientes pediátricos evolucionarán a neumonía refractaria.",
+      "idea": "Integrar variables clínicas al ingreso en un Random Forest con validación y recalibración externa.",
+      "why": "Ejemplo de por qué discriminación y calibración deben evaluarse por separado en cada hospital.",
+      "interpretability": "SHAP señaló duración de fiebre previa al ingreso, porcentaje de neutrófilos y edad; las contribuciones no son efectos causales.",
+      "dataset_cards": [
+        {
+          "name": "Total",
+          "value": "6.587",
+          "detail": "Cuatro centros"
+        },
+        {
+          "name": "Derivación",
+          "value": "5.546",
+          "detail": "Dos centros"
+        },
+        {
+          "name": "Externas",
+          "value": "696 + 345",
+          "detail": "Dos hospitales"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "AUC interna",
+          "main": "0,809",
+          "sub": "Prueba reservada"
+        },
+        {
+          "label": "AUC externa 1",
+          "main": "0,774",
+          "sub": "n=696"
+        },
+        {
+          "label": "AUC externa 2",
+          "main": "0,807",
+          "sub": "n=345"
+        }
+      ],
+      "implementation": [
+        "Extraer datos pediátricos 2019–2023",
+        "Entrenar y comparar seis clasificadores",
+        "Validar internamente en prueba reservada",
+        "Validar en dos cohortes externas",
+        "Evaluar SHAP y recalibrar intercepto local"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Población",
+          "Niños",
+          "6.587"
+        ],
+        [
+          "Desarrollo",
+          "n",
+          "5.546"
+        ],
+        [
+          "Validación externa 1",
+          "n / AUC",
+          "696 / 0,774"
+        ],
+        [
+          "Validación externa 2",
+          "n / AUC",
+          "345 / 0,807"
+        ],
+        [
+          "Prueba interna",
+          "AUC",
+          "0,809"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-26",
+    "reviewed": "26 octubre 2026",
+    "rich_detail": true,
+    "code": "No reportado",
+    "cost": "No reportado; no se calculó el costo real de adquisición ni sustitución de OCT.",
+    "figures": [],
+    "flag": "🇮🇳",
+    "countryFlags": "🇮🇳",
+    "country": "India",
+    "rubro": "IA oftalmológica",
+    "area": "Glaucoma / retina",
+    "modality": "Retinografía con smartphone y tomografía de coherencia óptica (OCT)",
+    "title": "Retinal layer thickness prediction from smartphone fundus imaging for early glaucoma detection",
+    "title_es": "Predicción del espesor de capas retinianas mediante retinografías de teléfono inteligente para detección temprana de glaucoma",
+    "institution": "T.J.S Engineering College; K.S. Rangasamy College of Technology; Excel Engineering College",
+    "sample": "Cohorte piloto Glauco Twin con 23 pacientes, imágenes pareadas de fondo de ojo y OCT de ojos izquierdo y derecho. Número de imágenes no especificado en el resumen.",
+    "design": "Estudio piloto de factibilidad con extracción multimodal de rasgos vasculares, estructurales y biomecánicos y clasificación normal/sospecha/glaucoma.",
+    "model": "MPIML (aprendizaje multimodal informado por física): Segmentation-Modified TransUNet para límites RNFL/ILM en OCT; Modified SegFormer para disco, copa, vasos y mácula en fondo de ojo.",
+    "metrics": "Exactitud de clasificación aproximadamente 94,3% y AUC 0,95. El resumen menciona estimaciones de espesor RNFL de 3,1–3,4 μm sin identificar inequívocamente una métrica de error; no se presenta como MAE.",
+    "summary": "Explora la estimación indirecta del espesor RNFL con fotografías de fondo de ojo de teléfono inteligente, utilizando OCT pareada como referencia.",
+    "limitations": "Solo 23 pacientes; no se ha demostrado equivalencia con OCT ni validez poblacional o multicéntrica. La cifra de 3,1–3,4 μm no se interpreta como error de predicción sin definición explícita.",
+    "remember": "Línea prometedora para evaluación de factibilidad en teleoftalmología, no sustituto demostrado de OCT.",
+    "language": "No reportado",
+    "framework": "TransUNet modificado, SegFormer modificado y MPIML; framework y versiones no reportados.",
+    "hardware": "Teléfono inteligente con adquisición de fondo de ojo y equipo OCT; marcas, modelos y GPU no reportados.",
+    "paper": "https://doi.org/10.1038/s41598-026-74655-5",
+    "doi": "10.1038/s41598-026-74655-5",
+    "published": "26 octubre 2026",
+    "journal": "Scientific Reports (2026)",
+    "key_metric": "n=23 pacientes · accuracy ~94,3% · AUC 0,95",
+    "rich": {
+      "problem": "El acceso a OCT para seguimiento de glaucoma puede ser limitado por costos e infraestructura.",
+      "idea": "Relacionar rasgos de retinografía de smartphone con biomarcadores RNFL medidos en OCT.",
+      "why": "Línea prometedora para evaluación de factibilidad en teleoftalmología, no sustituto demostrado de OCT.",
+      "interpretability": "La segmentación separa disco/copa/vasos y límites de RNFL; no se ha demostrado explicabilidad clínica prospectiva.",
+      "dataset_cards": [
+        {
+          "name": "Glauco Twin",
+          "value": "23 pacientes",
+          "detail": "OCT + fondo de ojo"
+        },
+        {
+          "name": "Clases",
+          "value": "3",
+          "detail": "Normal, sospecha, glaucoma"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Accuracy",
+          "main": "~94,3%",
+          "sub": "Clasificación piloto"
+        },
+        {
+          "label": "AUC",
+          "main": "0,95",
+          "sub": "Cohorte pequeña"
+        },
+        {
+          "label": "Validación",
+          "main": "Piloto",
+          "sub": "Sin multicentro demostrado"
+        }
+      ],
+      "implementation": [
+        "Adquirir pares OCT y fondo de ojo",
+        "Segmentar RNFL/ILM con TransUNet modificado",
+        "Segmentar estructuras de fondo con SegFormer",
+        "Combinar rasgos estructurales y biomecánicos",
+        "Estimar espesor y clasificar riesgo"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Muestra",
+          "Pacientes",
+          "23"
+        ],
+        [
+          "Clasificación",
+          "Exactitud",
+          "~94,3%"
+        ],
+        [
+          "Clasificación",
+          "AUC",
+          "0,95"
+        ],
+        [
+          "RNFL",
+          "Cifra citada",
+          "3,1–3,4 μm (definición de error no confirmada)"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-26",
+    "reviewed": "26 octubre 2026",
+    "rich_detail": true,
+    "code": "No reportado",
+    "cost": "No reportado; sin evaluación económica del dispositivo.",
+    "figures": [],
+    "flag": "🇺🇸",
+    "countryFlags": "🇺🇸",
+    "country": "Estados Unidos",
+    "rubro": "Sensores y wearables",
+    "area": "Actividad física / salud digital pediátrica",
+    "modality": "Acelerometría triaxial continua",
+    "title": "Unsupervised ensemble methods for non-wear detection from triaxial accelerometer data in children following continuous monitoring",
+    "title_es": "Métodos de ensamble no supervisados para detectar periodos sin uso de acelerómetros triaxiales en niños",
+    "institution": "Stanford University; University of Massachusetts Amherst; U.S. Food and Drug Administration y colaboradores",
+    "sample": "Stanford Sleep Accelerometer Study: 15 niños de 4–18 años; simulación adicional de 100 sujetos generada con datos pediátricos reales.",
+    "design": "Comparación de ensambles no supervisados SUMMA, Bayesian Integrator y voto mayoritario frente a nueve clasificadores base de las familias Choi, NHANES y Hidden Markov Model.",
+    "model": "SUMMA (Strategy for Unsupervised Multiple Method Aggregation), integrador bayesiano y voto mayoritario; modelos base Choi, NHANES y HMM.",
+    "metrics": "En datos simulados, SUMMA: sensibilidad 67,7%, especificidad 87,1%, exactitud balanceada 77,5%. Mejor referencia individual NHANES_VM: 63,4%, 90,3% y 77,1%, respectivamente.",
+    "summary": "Un ensamble de detectores puede equilibrar sensibilidad y especificidad para distinguir cuando un dispositivo no está puesto de periodos de sueño o inactividad.",
+    "limitations": "Cohorte real de solo 15 niños; 100 sujetos adicionales simulados; la variabilidad individual y los periodos breves sin uso siguen siendo difíciles de detectar.",
+    "remember": "Importante para calidad de datos de wearables, investigación pediátrica y endpoints digitales.",
+    "language": "No reportado",
+    "framework": "SUMMA, Bayesian Integrator, Choi, NHANES y HMM; lenguaje y versiones no confirmados.",
+    "hardware": "Acelerómetros triaxiales de monitorización continua; marca/modelo no confirmados en el resumen. GPU no reportada.",
+    "paper": "https://doi.org/10.1038/s41598-026-75825-1",
+    "doi": "10.1038/s41598-026-75825-1",
+    "published": "26 octubre 2026",
+    "journal": "Scientific Reports (2026)",
+    "key_metric": "SUMMA: sensibilidad 67,7% · especificidad 87,1%",
+    "rich": {
+      "problem": "Los periodos sin usar un sensor pueden confundirse con sueño o sedentarismo y distorsionar indicadores de actividad.",
+      "idea": "Combinar detectores con errores complementarios sin requerir etiquetas para el ensamble.",
+      "why": "Importante para calidad de datos de wearables, investigación pediátrica y endpoints digitales.",
+      "interpretability": "Se comparan tasas de falsos positivos/negativos y estabilidad entre sujetos; la detección no equivale a medir actividad física.",
+      "dataset_cards": [
+        {
+          "name": "Cohorte real",
+          "value": "15 niños",
+          "detail": "4–18 años"
+        },
+        {
+          "name": "Simulación",
+          "value": "100 sujetos",
+          "detail": "Basada en datos pediátricos"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Sensibilidad",
+          "main": "67,7%",
+          "sub": "SUMMA simulado"
+        },
+        {
+          "label": "Especificidad",
+          "main": "87,1%",
+          "sub": "SUMMA simulado"
+        },
+        {
+          "label": "Exactitud balanceada",
+          "main": "77,5%",
+          "sub": "SUMMA vs 77,1% NHANES_VM"
+        }
+      ],
+      "implementation": [
+        "Registrar señales triaxiales continuas",
+        "Ejecutar Choi, NHANES y HMM",
+        "Combinar con SUMMA/BI/voto",
+        "Evaluar no uso como clase positiva",
+        "Auditar variabilidad de error por sujeto"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Cohorte real",
+          "Niños",
+          "15"
+        ],
+        [
+          "Simulación",
+          "Sujetos",
+          "100"
+        ],
+        [
+          "SUMMA",
+          "Sensibilidad",
+          "67,7%"
+        ],
+        [
+          "SUMMA",
+          "Especificidad",
+          "87,1%"
+        ],
+        [
+          "SUMMA",
+          "Balanced accuracy",
+          "77,5%"
+        ],
+        [
+          "NHANES_VM",
+          "Balanced accuracy",
+          "77,1%"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-26",
+    "reviewed": "26 octubre 2026",
+    "rich_detail": true,
+    "code": "No reportado",
+    "cost": "No reportado; no hay evaluación de costos de integración a sala de electrofisiología.",
+    "figures": [],
+    "flag": "🇯🇵",
+    "countryFlags": "🇯🇵",
+    "country": "Japón",
+    "rubro": "Electrofisiología biomédica",
+    "area": "Cardiología / arritmias",
+    "modality": "Electrogramas intracardiacos unipolares y mapeo óptico",
+    "title": "Deep-learning-based electrode action potential mapping from annotation-free unipolar electrograms for substrate characterization in atrial fibrillation",
+    "title_es": "Reconstrucción de potenciales de acción con aprendizaje profundo a partir de electrogramas unipolares sin anotaciones para estudiar fibrilación auricular",
+    "institution": "The University of Tokyo; Japanese Red Cross Medical Center; Tokyo Denki University",
+    "sample": "13.824 muestras de simulación de un modelo bidominio de aurícula humana fibrótica; validación ex vivo en seis corazones porcinos y estudio retrospectivo en 12 pacientes con fibrilación auricular no paroxística.",
+    "design": "Entrenamiento in silico, comparación ex vivo contra mapeo óptico y evaluación retrospectiva de patrones de conducción en pacientes.",
+    "model": "DEAP Mapping: red neuronal convolucional que reconstruye distribuciones de potencial de membrana desde electrogramas unipolares, sin anotación manual de tiempo de activación local.",
+    "metrics": "Similitud estructural (SSIM) de mapas de varianza de fase: 0,87 ± 0,07 para DEAP frente a 0,36 ± 0,14 para mapas convencionales, en seis corazones ex vivo.",
+    "summary": "Reconstruye patrones de conducción eléctrica para visualizar sustratos complejos de fibrilación auricular desde señales de catéter.",
+    "limitations": "Solo seis corazones ex vivo y 12 pacientes retrospectivos; no demuestra mejor selección de ablación ni resultados clínicos. Un paso de supresión de señales far-field es propietario.",
+    "remember": "Aplicación de ingeniería biomédica que conecta simulación electrofisiológica, catéteres y reconstrucción espacial.",
+    "language": "No reportado",
+    "framework": "CNN y procesamiento de electrogramas; componente de supresión far-field propietario de OpMap Inc. Lenguaje/versiones no reportados.",
+    "hardware": "Catéteres/electrodos intracardiacos para electrogramas unipolares; sistema de mapeo óptico para referencia ex vivo; GPU y modelos comerciales no confirmados.",
+    "paper": "https://doi.org/10.1038/s41598-026-77057-9",
+    "doi": "10.1038/s41598-026-77057-9",
+    "published": "25 octubre 2026",
+    "journal": "Scientific Reports (2026)",
+    "key_metric": "SSIM 0,87 ± 0,07 vs 0,36 ± 0,14",
+    "rich": {
+      "problem": "Los mapas de activación convencionales dependen de anotaciones temporales poco fiables cuando la conducción es compleja.",
+      "idea": "Inferir directamente potenciales de membrana desde señales intracardiacas usando CNN entrenada con simulaciones.",
+      "why": "Aplicación de ingeniería biomédica que conecta simulación electrofisiológica, catéteres y reconstrucción espacial.",
+      "interpretability": "El mapa de varianza de fase ofrece visualización fisiológica, pero no está demostrado que mejore decisiones de ablación.",
+      "dataset_cards": [
+        {
+          "name": "Entrenamiento",
+          "value": "13.824",
+          "detail": "Muestras in silico"
+        },
+        {
+          "name": "Ex vivo",
+          "value": "6 corazones",
+          "detail": "Porcinos"
+        },
+        {
+          "name": "Clínica",
+          "value": "12 pacientes",
+          "detail": "Retrospectiva"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "DEAP SSIM",
+          "main": "0,87 ± 0,07",
+          "sub": "Frente a mapeo óptico"
+        },
+        {
+          "label": "Mapa convencional",
+          "main": "0,36 ± 0,14",
+          "sub": "SSIM ex vivo"
+        }
+      ],
+      "implementation": [
+        "Simular aurícula humana fibrótica",
+        "Generar electrogramas unipolares y potenciales",
+        "Entrenar CNN de reconstrucción",
+        "Validar contra mapeo óptico ex vivo",
+        "Examinar patrones en pacientes retrospectivos"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Simulación",
+          "Muestras",
+          "13.824"
+        ],
+        [
+          "Ex vivo",
+          "Corazones",
+          "6"
+        ],
+        [
+          "Clínica",
+          "Pacientes",
+          "12"
+        ],
+        [
+          "DEAP",
+          "SSIM",
+          "0,87 ± 0,07"
+        ],
+        [
+          "Convencional",
+          "SSIM",
+          "0,36 ± 0,14"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-26",
+    "reviewed": "26 octubre 2026",
+    "rich_detail": true,
+    "code": "No reportado",
+    "cost": "No reportado; sin estudio económico.",
+    "figures": [],
+    "flag": "🇨🇳",
+    "countryFlags": "🇨🇳",
+    "country": "China",
+    "rubro": "Anestesiología y monitoreo",
+    "area": "Cirugía torácica / ventilación mecánica",
+    "modality": "Variables clínicas y parámetros ventilatorios intraoperatorios",
+    "title": "Interpretable machine learning for predicting intraoperative oxygenation impairment during one-lung ventilation in thoracic surgery: a retrospective cohort study",
+    "title_es": "Aprendizaje automático interpretable para predecir deterioro de oxigenación durante ventilación unipulmonar en cirugía torácica",
+    "institution": "Affiliated Hospital of Panzhihua University",
+    "sample": "519 pacientes sometidos a cirugía torácica con ventilación unipulmonar.",
+    "design": "Cohorte retrospectiva; comparación de cinco algoritmos para predecir deterioro de oxigenación; interpretación mediante SHAP.",
+    "model": "Random Forest como modelo de mejor discriminación frente a regresión logística y otros tres clasificadores; SHAP para asociaciones no lineales.",
+    "metrics": "AUC de Random Forest 0,924 frente a 0,790 para regresión logística. Variables destacadas: PEEP, PaO₂ preoperatoria e índice de masa corporal.",
+    "summary": "Un modelo de bosque aleatorio distinguió mejor los casos con deterioro de oxigenación durante ventilación unipulmonar en esta cohorte.",
+    "limitations": "Retrospectivo, un centro, sin validación prospectiva; los patrones no lineales observados con SHAP no son recomendaciones de parámetros ventilatorios ni efectos causales.",
+    "remember": "Ejemplo de evaluación predictiva de variables generadas por equipamiento biomédico durante cirugía.",
+    "language": "No reportado",
+    "framework": "Random Forest, regresión logística y SHAP; framework, lenguaje y versiones no confirmados.",
+    "hardware": "Ventiladores de anestesia y monitorización intraoperatoria; marcas y GPU no reportadas.",
+    "paper": "https://doi.org/10.1038/s41598-026-74032-2",
+    "doi": "10.1038/s41598-026-74032-2",
+    "published": "25 octubre 2026",
+    "journal": "Scientific Reports (2026)",
+    "key_metric": "AUC RF 0,924 vs regresión logística 0,790",
+    "rich": {
+      "problem": "Anticipar deterioro de oxigenación durante anestesia torácica con ventilación unipulmonar.",
+      "idea": "Combinar datos clínicos y ventilatorios en un clasificador no lineal e inspeccionar sus contribuciones.",
+      "why": "Ejemplo de evaluación predictiva de variables generadas por equipamiento biomédico durante cirugía.",
+      "interpretability": "SHAP sugirió interacciones y patrones no lineales; no deben convertirse en instrucciones terapéuticas.",
+      "dataset_cards": [
+        {
+          "name": "Cohorte",
+          "value": "519",
+          "detail": "Pacientes quirúrgicos"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Random Forest",
+          "main": "0,924",
+          "sub": "AUC"
+        },
+        {
+          "label": "Regresión logística",
+          "main": "0,790",
+          "sub": "AUC"
+        },
+        {
+          "label": "Interpretación",
+          "main": "SHAP",
+          "sub": "Asociaciones exploratorias"
+        }
+      ],
+      "implementation": [
+        "Extraer datos retrospectivos de cirugía torácica",
+        "Definir deterioro de oxigenación",
+        "Entrenar cinco clasificadores",
+        "Comparar AUC",
+        "Interpretar variables mediante SHAP"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Muestra",
+          "Pacientes",
+          "519"
+        ],
+        [
+          "Random Forest",
+          "AUC",
+          "0,924"
+        ],
+        [
+          "Regresión logística",
+          "AUC",
+          "0,790"
+        ],
+        [
+          "Principales variables",
+          "SHAP",
+          "PEEP, PaO₂ preoperatoria, IMC"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-26",
+    "reviewed": "26 octubre 2026",
+    "rich_detail": true,
+    "code": "No reportado",
+    "cost": "Costo de inferencia no reportado. El artículo indica que la tasa de publicación fue cubierta por Dicle University, sin monto.",
+    "figures": [],
+    "flag": "🇹🇷",
+    "countryFlags": "🇹🇷",
+    "country": "Turquía",
+    "rubro": "IA odontológica",
+    "area": "Endodoncia / evaluación de LLM",
+    "modality": "Escenarios clínicos ficticios estandarizados",
+    "title": "Effect of guideline-assisted prompting on large language model performance in medication-related osteonecrosis of the jaw–related endodontic decision-making",
+    "title_es": "Efecto de proporcionar guías clínicas a modelos de lenguaje en decisiones endodónticas relacionadas con osteonecrosis maxilar asociada a medicamentos",
+    "institution": "Dicle University, Department of Endodontics, Faculty of Dentistry",
+    "sample": "18 escenarios ficticios de endodoncia; tres LLM (ChatGPT, Claude, DeepSeek), dos fases (sin y con guía); evaluación ciega por dos especialistas de cinco dominios clínicos.",
+    "design": "Estudio experimental de respuestas de modelos de lenguaje; referencia basada en la guía AAOMS 2022; análisis con modelos lineales mixtos, modelos ordinales mixtos y ajuste Bonferroni.",
+    "model": "Tres LLM comerciales evaluados con prompting basal y prompting asistido por el texto completo de la guía AAOMS 2022; sin entrenamiento de modelo nuevo.",
+    "metrics": "Puntuación global basal ChatGPT 4,68 ± 0,14 frente a Claude 4,29 ± 0,38 (escala 0–5). Claude tras guía: 4,68 ± 0,28 (+0,39). Efecto de fase p<0,001 e interacción modelo×fase p=0,004.",
+    "summary": "Aportar la guía clínica mejoró la concordancia de respuestas con la referencia, especialmente en Claude; no es una validación independiente de precisión clínica.",
+    "limitations": "Los casos, estándar de referencia e intervención se basaron en la misma guía; 18 casos ficticios, sin pacientes reales, y riesgo de circularidad de evaluación. No demuestra seguridad en decisiones clínicas.",
+    "remember": "Metodología aplicable a evaluación de asistentes odontológicos; alerta sobre circularidad del estándar.",
+    "language": "No reportado",
+    "framework": "ChatGPT, Claude y DeepSeek; modelos mixtos LMM/CLMM; versiones de LLM y costos API no reportados en el resumen.",
+    "hardware": "No se usó dispositivo médico ni hardware clínico; infraestructura de inferencia de LLM no reportada.",
+    "paper": "https://doi.org/10.1038/s41598-026-78154-5",
+    "doi": "10.1038/s41598-026-78154-5",
+    "published": "26 octubre 2026",
+    "journal": "Scientific Reports (2026)",
+    "key_metric": "Claude 4,29 → 4,68/5 con guía · 18 casos",
+    "rich": {
+      "problem": "Los LLM pueden producir respuestas clínicas inconsistentes sin una referencia de guías.",
+      "idea": "Comparar respuestas a escenarios ficticios antes y después de suministrar la guía AAOMS 2022.",
+      "why": "Metodología aplicable a evaluación de asistentes odontológicos; alerta sobre circularidad del estándar.",
+      "interpretability": "Dos endodoncistas evaluaron cinco dominios; los puntajes no prueban decisiones correctas en pacientes.",
+      "dataset_cards": [
+        {
+          "name": "Escenarios",
+          "value": "18",
+          "detail": "Ficticios"
+        },
+        {
+          "name": "Modelos",
+          "value": "3",
+          "detail": "ChatGPT, Claude, DeepSeek"
+        },
+        {
+          "name": "Evaluadores",
+          "value": "2",
+          "detail": "Endodoncistas"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Claude basal",
+          "main": "4,29/5",
+          "sub": "±0,38"
+        },
+        {
+          "label": "Claude con guía",
+          "main": "4,68/5",
+          "sub": "±0,28"
+        },
+        {
+          "label": "Interacción",
+          "main": "p=0,004",
+          "sub": "Modelo × fase"
+        }
+      ],
+      "implementation": [
+        "Definir 18 escenarios a partir de AAOMS 2022",
+        "Evaluar tres LLM sin guía",
+        "Entregar texto completo de la guía",
+        "Evaluar las mismas preguntas con guía",
+        "Calificar ciegamente cinco dominios y analizar LMM/CLMM"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Escenarios",
+          "n",
+          "18"
+        ],
+        [
+          "Modelos",
+          "n",
+          "3"
+        ],
+        [
+          "Claude basal",
+          "Puntuación 0–5",
+          "4,29 ± 0,38"
+        ],
+        [
+          "Claude con guía",
+          "Puntuación 0–5",
+          "4,68 ± 0,28"
+        ],
+        [
+          "ChatGPT basal",
+          "Puntuación 0–5",
+          "4,68 ± 0,14"
+        ],
+        [
+          "Efecto fase",
+          "p",
+          "<0,001"
+        ],
+        [
+          "Interacción",
+          "p",
+          "0,004"
+        ]
+      ]
+    }
+  },
+  {
     "date": "2026-10-25",
     "reviewed": "25 octubre 2026",
     "rich_detail": true,
