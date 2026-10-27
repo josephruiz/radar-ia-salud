@@ -1,5 +1,612 @@
 [
   {
+    "date": "2026-10-27",
+    "reviewed": "27 octubre 2026",
+    "rich_detail": true,
+    "code": "No reportado.",
+    "cost": "No reportado.",
+    "figures": [],
+    "flag": "🇺🇸",
+    "countryFlags": "🇺🇸",
+    "country": "Estados Unidos",
+    "rubro": "Imagen médica",
+    "area": "Oncología mamaria",
+    "modality": "Mamografía digital y tomosíntesis",
+    "title": "Fourier multiscale analysis of bilateral breast asymmetry associated with breast cancer",
+    "title_es": "Análisis multiescala de Fourier de la asimetría mamaria bilateral asociada con cáncer de mama",
+    "institution": "H. Lee Moffitt Cancer Center & Research Institute, Tampa",
+    "sample": "368 pares de casos y controles emparejados; imágenes FFDM y DBT sintética 2D.",
+    "design": "Casos y controles emparejados. Análisis espectral de Fourier de asimetría entre mamas contralaterales; regresión logística condicional ajustada por IMC y etnicidad.",
+    "model": "Transformada de Fourier y potencia en bandas radiales para puntuación ASM; regresión logística condicional. No es una red neuronal.",
+    "metrics": "FFDM cruda: OR 1,90 (IC95% 1,58–2,29), AUC 0,72 (0,67–0,76); FFDM clínica: OR 1,31, AUC 0,63; DBT: OR 1,48, AUC 0,65.",
+    "summary": "La asimetría espectral bilateral se asoció con cáncer, más fuertemente en FFDM cruda.",
+    "limitations": "Asociación retrospectiva cerca del diagnóstico; no validación prospectiva de tamizaje ni algoritmo autónomo.",
+    "remember": "Una asociación de casos y controles no demuestra rendimiento en cribado temprano.",
+    "language": "No aplica / no reportado",
+    "framework": "Análisis de Fourier y regresión logística; software específico no reportado.",
+    "hardware": "Mamografía FFDM 70 µm/píxel; DBT 90–110 µm/píxel. GPU y fabricante no reportados.",
+    "paper": "https://doi.org/10.1038/s41598-026-75890-6",
+    "doi": "10.1038/s41598-026-75890-6",
+    "published": "27 octubre 2026",
+    "journal": "Scientific Reports · 2026",
+    "key_metric": "AUC 0,72 (FFDM cruda)",
+    "rich": {
+      "problem": "La asimetría espectral bilateral se asoció con cáncer, más fuertemente en FFDM cruda.",
+      "idea": "Transformada de Fourier y potencia en bandas radiales para puntuación ASM; regresión logística condicional. No es una red neuronal.",
+      "why": "Una asociación de casos y controles no demuestra rendimiento en cribado temprano.",
+      "interpretability": "Asociación retrospectiva cerca del diagnóstico; no validación prospectiva de tamizaje ni algoritmo autónomo.",
+      "dataset_cards": [
+        {
+          "name": "Cohorte",
+          "value": "368 pares",
+          "detail": "Casos y controles"
+        },
+        {
+          "name": "Modalidades",
+          "value": "FFDM / DBT",
+          "detail": "Imágenes bilaterales"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "AUC FFDM cruda",
+          "main": "0,72",
+          "sub": "IC95% 0,67–0,76"
+        },
+        {
+          "label": "OR FFDM cruda",
+          "main": "1,90",
+          "sub": "Por desviación estándar"
+        }
+      ],
+      "implementation": [
+        "Casos y controles emparejados. Análisis espectral de Fourier de asimetría entre mamas contralaterales; regresión logística condicional ajustada por IMC y etnicidad.",
+        "Análisis de Fourier y regresión logística; software específico no reportado.",
+        "Hardware: Mamografía FFDM 70 µm/píxel; DBT 90–110 µm/píxel. GPU y fabricante no reportados.",
+        "Costos: No reportado."
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "FFDM cruda",
+          "AUC 0,72",
+          "OR 1,90"
+        ],
+        [
+          "FFDM clínica",
+          "AUC 0,63",
+          "OR 1,31"
+        ],
+        [
+          "DBT",
+          "AUC 0,65",
+          "OR 1,48"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-26",
+    "reviewed": "27 octubre 2026",
+    "rich_detail": true,
+    "code": "No confirmado.",
+    "cost": "Costo monetario no reportado; modelos fundacionales hasta 35× más energía en esta comparación.",
+    "figures": [],
+    "flag": "🇸🇪 🇳🇴 🇫🇮",
+    "countryFlags": "🇸🇪 🇳🇴 🇫🇮",
+    "country": "Suecia, Noruega, Finlandia y colaboración internacional",
+    "rubro": "Patología digital",
+    "area": "Oncología prostática",
+    "modality": "Biopsias histopatológicas digitalizadas",
+    "title": "Comparative analysis of end-to-end learning and foundation models for clinical-grade prostate pathology",
+    "title_es": "Comparación de aprendizaje extremo a extremo y modelos fundacionales en patología prostática clínica",
+    "institution": "Karolinska Institutet; Stavanger University Hospital; University of Turku y otros centros",
+    "sample": "Más de 100.000 biopsias de próstata de 6.268 pacientes en 15 centros.",
+    "design": "Comparación multicéntrica de modelos específicos y fundacionales, con gradación histológica y validación externa, bajo distintas cantidades de datos etiquetados.",
+    "model": "Modelo específico de tarea end-to-end (TS) versus modelos fundacionales UNI y Virchow2.",
+    "metrics": "Kappa cuadrático interno 0,91 (IC95% 0,90–0,92); externo TS 0,87 (0,86–0,88), UNI 0,86 (0,84–0,87), Virchow2 0,85 (0,84–0,86). Modelos fundacionales consumieron hasta 35 veces más energía.",
+    "summary": "Los modelos específicos igualaron o superaron modelos fundacionales cuando había suficientes datos anotados, con menor consumo energético.",
+    "limitations": "Resultados de patología prostática no extrapolables a todas las patologías; costo energético depende de configuración.",
+    "remember": "Un modelo más grande no es necesariamente más útil ni económico.",
+    "language": "No aplica / no reportado",
+    "framework": "Modelos TS, UNI, Virchow2; versiones no verificadas.",
+    "hardware": "Escáneres de patología digital; cómputo NAISS/SNIC, Berzelius y CSC; GPU específica no confirmada.",
+    "paper": "https://doi.org/10.1038/s41467-026-78996-7",
+    "doi": "10.1038/s41467-026-78996-7",
+    "published": "26 octubre 2026",
+    "journal": "Nature Communications · 2026",
+    "key_metric": "κ externa TS 0,87; energía FM hasta 35×",
+    "rich": {
+      "problem": "Los modelos específicos igualaron o superaron modelos fundacionales cuando había suficientes datos anotados, con menor consumo energético.",
+      "idea": "Modelo específico de tarea end-to-end (TS) versus modelos fundacionales UNI y Virchow2.",
+      "why": "Un modelo más grande no es necesariamente más útil ni económico.",
+      "interpretability": "Resultados de patología prostática no extrapolables a todas las patologías; costo energético depende de configuración.",
+      "dataset_cards": [
+        {
+          "name": "Biopsias",
+          "value": ">100.000",
+          "detail": "6.268 pacientes"
+        },
+        {
+          "name": "Centros",
+          "value": "15",
+          "detail": "Evaluación externa"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "κ externa TS",
+          "main": "0,87",
+          "sub": "IC95% 0,86–0,88"
+        },
+        {
+          "label": "Energía FM",
+          "main": "Hasta 35×",
+          "sub": "Respecto al modelo TS"
+        }
+      ],
+      "implementation": [
+        "Comparación multicéntrica de modelos específicos y fundacionales, con gradación histológica y validación externa, bajo distintas cantidades de datos etiquetados.",
+        "Modelos TS, UNI, Virchow2; versiones no verificadas.",
+        "Hardware: Escáneres de patología digital; cómputo NAISS/SNIC, Berzelius y CSC; GPU específica no confirmada.",
+        "Costos: Costo monetario no reportado; modelos fundacionales hasta 35× más energía en esta comparación."
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "TS externo",
+          "κ 0,87",
+          "IC95% 0,86–0,88"
+        ],
+        [
+          "UNI externo",
+          "κ 0,86",
+          "IC95% 0,84–0,87"
+        ],
+        [
+          "Virchow2 externo",
+          "κ 0,85",
+          "IC95% 0,84–0,86"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-26",
+    "reviewed": "27 octubre 2026",
+    "rich_detail": true,
+    "code": "No reportado.",
+    "cost": "Precio unitario de prueba genómica y costo de inferencia no reportados.",
+    "figures": [],
+    "flag": "🇧🇷",
+    "countryFlags": "🇧🇷",
+    "country": "Brasil",
+    "rubro": "IA clínica",
+    "area": "Cáncer de mama / predicción genómica",
+    "modality": "Variables clinicopatológicas",
+    "title": "Interpretable machine learning models for oncotypedDX® prediction using clinicopathologic data: a brazilian cohort study",
+    "title_es": "Modelos interpretables para predecir Oncotype DX con datos clinicopatológicos: cohorte brasileña",
+    "institution": "GBECAM; ICESP; Hospital Israelita Albert Einstein y colaboradores",
+    "sample": "935 pacientes brasileñas con cáncer de mama temprano, cohorte 2005–2024.",
+    "design": "Cohorte retrospectiva para estimar puntuación de recurrencia RS>25 usando variables clinicopatológicas; estratificación por riesgo y supervivencia Kaplan–Meier.",
+    "model": "Regresión Ridge interpretable seleccionada por rendimiento y eficiencia computacional.",
+    "metrics": "AUROC 0,818 (IC95% 0,780–0,852); sensibilidad 0,556; especificidad 0,859; cuartil de riesgo alto incluye 60,8% de casos RS>25.",
+    "summary": "Modelo clínico sencillo para estudiar priorización de pruebas genómicas en entornos con recursos limitados.",
+    "limitations": "Sensibilidad moderada, cohorte retrospectiva; necesita validación prospectiva externa. Propuesta de priorización no demuestra ahorro económico.",
+    "remember": "La sensibilidad 55,6% impide considerarlo sustituto directo de la prueba.",
+    "language": "No aplica / no reportado",
+    "framework": "Regresión Ridge y Kaplan–Meier; librerías no especificadas.",
+    "hardware": "Registros clínicos y patológicos; CPU/GPU no reportados.",
+    "paper": "https://doi.org/10.1038/s41523-026-01065-1",
+    "doi": "10.1038/s41523-026-01065-1",
+    "published": "26 octubre 2026",
+    "journal": "npj Breast Cancer · 2026",
+    "key_metric": "AUROC 0,818 (n=935)",
+    "rich": {
+      "problem": "Modelo clínico sencillo para estudiar priorización de pruebas genómicas en entornos con recursos limitados.",
+      "idea": "Regresión Ridge interpretable seleccionada por rendimiento y eficiencia computacional.",
+      "why": "La sensibilidad 55,6% impide considerarlo sustituto directo de la prueba.",
+      "interpretability": "Sensibilidad moderada, cohorte retrospectiva; necesita validación prospectiva externa. Propuesta de priorización no demuestra ahorro económico.",
+      "dataset_cards": [
+        {
+          "name": "Pacientes",
+          "value": "935",
+          "detail": "Cohorte GBECAM"
+        },
+        {
+          "name": "Objetivo",
+          "value": "RS>25",
+          "detail": "Riesgo genómico"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "AUROC",
+          "main": "0,818",
+          "sub": "IC95% 0,780–0,852"
+        },
+        {
+          "label": "Sensibilidad",
+          "main": "55,6%",
+          "sub": "Especificidad 85,9%"
+        }
+      ],
+      "implementation": [
+        "Cohorte retrospectiva para estimar puntuación de recurrencia RS>25 usando variables clinicopatológicas; estratificación por riesgo y supervivencia Kaplan–Meier.",
+        "Regresión Ridge y Kaplan–Meier; librerías no especificadas.",
+        "Hardware: Registros clínicos y patológicos; CPU/GPU no reportados.",
+        "Costos: Precio unitario de prueba genómica y costo de inferencia no reportados."
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "AUROC",
+          "0,818",
+          "IC95% 0,780–0,852"
+        ],
+        [
+          "Sensibilidad",
+          "0,556",
+          "Cohorte retrospectiva"
+        ],
+        [
+          "Especificidad",
+          "0,859",
+          "Cohorte retrospectiva"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-26",
+    "reviewed": "27 octubre 2026",
+    "rich_detail": true,
+    "code": "No reportado.",
+    "cost": "No reportado; no se cuantificó ahorro neto.",
+    "figures": [],
+    "flag": "🇺🇸",
+    "countryFlags": "🇺🇸",
+    "country": "Estados Unidos",
+    "rubro": "Salud digital",
+    "area": "Documentación clínica",
+    "modality": "EHR y registros de uso",
+    "title": "Systemwide adoption patterns of ambient AI scribe technology in an integrated academic health system",
+    "title_es": "Patrones de adopción de escribas ambientales de IA en un sistema académico integrado de salud",
+    "institution": "Johns Hopkins University School of Medicine",
+    "sample": "2.901 profesionales ambulatorios, registros de historia clínica y proveedor de diciembre de 2024 a mayo de 2025.",
+    "design": "Cohorte observacional retrospectiva; adopción = al menos un uso por profesional; uso por visita = proporción de consultas elegibles con escriba.",
+    "model": "Escriba de IA ambiental comercial; arquitectura interna no divulgada. Análisis de trayectorias longitudinales de adopción.",
+    "metrics": "Adopción: pediatría comunitaria 69%, medicina interna comunitaria 67%, neurología académica 53%, cirugía académica 16%, obstetricia/ginecología 18%, psiquiatría 19%. Uso por visita ~80–90% en ciertos grupos al final.",
+    "summary": "La adopción de escribas varía mucho según especialidad, entorno y trayectoria temporal.",
+    "limitations": "Adopción no equivale a mejora de calidad, productividad ni resultados clínicos; un solo sistema sanitario.",
+    "remember": "La aceptación tecnológica no demuestra ahorro de tiempo ni calidad clínica.",
+    "language": "No aplica / no reportado",
+    "framework": "Historia clínica electrónica y telemetría de proveedor; modelo y API no divulgados.",
+    "hardware": "Captura ambiental de consulta y EHR; micrófonos, GPU y CPU no especificados.",
+    "paper": "https://doi.org/10.1038/s41746-026-03326-6",
+    "doi": "10.1038/s41746-026-03326-6",
+    "published": "26 octubre 2026",
+    "journal": "npj Digital Medicine · 2026",
+    "key_metric": "2.901 profesionales; adopción 16–69%",
+    "rich": {
+      "problem": "La adopción de escribas varía mucho según especialidad, entorno y trayectoria temporal.",
+      "idea": "Escriba de IA ambiental comercial; arquitectura interna no divulgada. Análisis de trayectorias longitudinales de adopción.",
+      "why": "La aceptación tecnológica no demuestra ahorro de tiempo ni calidad clínica.",
+      "interpretability": "Adopción no equivale a mejora de calidad, productividad ni resultados clínicos; un solo sistema sanitario.",
+      "dataset_cards": [
+        {
+          "name": "Profesionales",
+          "value": "2.901",
+          "detail": "Cohorte ambulatoria"
+        },
+        {
+          "name": "Seguimiento",
+          "value": "6 meses",
+          "detail": "Dic. 2024–may. 2025"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Pediatría comunitaria",
+          "main": "69%",
+          "sub": "Adopción"
+        },
+        {
+          "label": "Cirugía académica",
+          "main": "16%",
+          "sub": "Adopción"
+        }
+      ],
+      "implementation": [
+        "Cohorte observacional retrospectiva; adopción = al menos un uso por profesional; uso por visita = proporción de consultas elegibles con escriba.",
+        "Historia clínica electrónica y telemetría de proveedor; modelo y API no divulgados.",
+        "Hardware: Captura ambiental de consulta y EHR; micrófonos, GPU y CPU no especificados.",
+        "Costos: No reportado; no se cuantificó ahorro neto."
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Pediatría comunitaria",
+          "69%",
+          "Adopción"
+        ],
+        [
+          "Medicina interna comunitaria",
+          "67%",
+          "Adopción"
+        ],
+        [
+          "Cirugía académica",
+          "16%",
+          "Adopción"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-26",
+    "reviewed": "27 octubre 2026",
+    "rich_detail": true,
+    "code": "https://github.com/KwonDoRyoung/audiometry_VotingOCR",
+    "cost": "Código abierto; costos de implementación y ahorro monetario no cuantificados.",
+    "figures": [],
+    "flag": "🇰🇷",
+    "countryFlags": "🇰🇷",
+    "country": "Corea del Sur",
+    "rubro": "Ingeniería biomédica",
+    "area": "Audiología / gestión documental",
+    "modality": "Imágenes de tablas audiométricas",
+    "title": "Development of an automated method for audiometric data extraction and analysis using voting optical character recognition",
+    "title_es": "Método automatizado para extraer datos audiométricos mediante OCR con votación",
+    "institution": "Kyungpook National University; Kyungpook National University Hospital",
+    "sample": "2.000 imágenes de informes de 710 pacientes; todas para validación, sin entrenamiento adicional.",
+    "design": "Comparación de OCR básico y Voting OCR (VOCR) con preprocesamiento morfológico y consenso; criterio estricto de imagen completa correcta.",
+    "model": "Tesseract LSTM preentrenado + OpenCV + múltiples transformaciones y votación por celda; sin fine-tuning.",
+    "metrics": "Exactitud por imagen 97,60% VOCR vs 24,95% OCR básico (McNemar p<0,001); PTA 99,95%, SRT 98,95%, WRS% 98,05%, WRS estímulo 99,80%.",
+    "summary": "Una canalización local de OCR y votación permite extraer datos tabulados de audiometría sin reentrenar redes.",
+    "limitations": "Un solo hospital, un formato tabular y tipografía monoespaciada; no validado en otros centros ni audiogramas gráficos.",
+    "remember": "Solución interesante para digitalizar documentos de equipos médicos en redes cerradas.",
+    "language": "No aplica / no reportado",
+    "framework": "Tesseract OCR, OpenCV, transformaciones morfológicas y votación.",
+    "hardware": "Informes audiométricos digitalizados; audiómetro, CPU y GPU no especificados.",
+    "paper": "https://doi.org/10.1038/s41598-026-62755-1",
+    "doi": "10.1038/s41598-026-62755-1",
+    "published": "26 octubre 2026",
+    "journal": "Scientific Reports · 2026",
+    "key_metric": "97,60% por imagen (2.000 informes)",
+    "rich": {
+      "problem": "Una canalización local de OCR y votación permite extraer datos tabulados de audiometría sin reentrenar redes.",
+      "idea": "Tesseract LSTM preentrenado + OpenCV + múltiples transformaciones y votación por celda; sin fine-tuning.",
+      "why": "Solución interesante para digitalizar documentos de equipos médicos en redes cerradas.",
+      "interpretability": "Un solo hospital, un formato tabular y tipografía monoespaciada; no validado en otros centros ni audiogramas gráficos.",
+      "dataset_cards": [
+        {
+          "name": "Informes",
+          "value": "2.000",
+          "detail": "710 pacientes"
+        },
+        {
+          "name": "Entrenamiento",
+          "value": "0",
+          "detail": "Tesseract preentrenado"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "VOCR",
+          "main": "97,60%",
+          "sub": "Exactitud por imagen"
+        },
+        {
+          "label": "OCR básico",
+          "main": "24,95%",
+          "sub": "Mismo criterio"
+        }
+      ],
+      "implementation": [
+        "Comparación de OCR básico y Voting OCR (VOCR) con preprocesamiento morfológico y consenso; criterio estricto de imagen completa correcta.",
+        "Tesseract OCR, OpenCV, transformaciones morfológicas y votación.",
+        "Hardware: Informes audiométricos digitalizados; audiómetro, CPU y GPU no especificados.",
+        "Costos: Código abierto; costos de implementación y ahorro monetario no cuantificados."
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "VOCR",
+          "97,60%",
+          "Exactitud por imagen"
+        ],
+        [
+          "OCR básico",
+          "24,95%",
+          "Comparador"
+        ],
+        [
+          "PTA",
+          "99,95%",
+          "Por categoría"
+        ],
+        [
+          "SRT",
+          "98,95%",
+          "Por categoría"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-26",
+    "reviewed": "27 octubre 2026",
+    "rich_detail": true,
+    "code": "No reportado.",
+    "cost": "No reportado.",
+    "figures": [],
+    "flag": "🇨🇳",
+    "countryFlags": "🇨🇳",
+    "country": "China",
+    "rubro": "IA oncológica",
+    "area": "Melanoma / metástasis",
+    "modality": "Datos clínicos, ecografía y PET-CT",
+    "title": "Machine learning model for predicting regional lymph node metastasis in acral melanoma",
+    "title_es": "Modelo de aprendizaje automático para predecir metástasis ganglionar regional en melanoma acral",
+    "institution": "Fujian Cancer Hospital; Fujian Medical University",
+    "sample": "189 pacientes con melanoma acral confirmado: 132 entrenamiento y 57 validación interna.",
+    "design": "Cohorte retrospectiva 7:3; Boruta y LASSO en entrenamiento, siete algoritmos con validación cruzada anidada; modelo y umbral bloqueados antes de validación.",
+    "model": "GradientBoost con cinco predictores: espesor Breslow, diámetro ganglionar de eje corto, ecografía con contraste positiva, invasión vascular y PET-CT positivo; SHAP.",
+    "metrics": "AUC 0,868 (IC95% 0,769–0,967) en validación; sensibilidad 0,889, especificidad 0,733; Breslow solo AUC 0,610 y TNM-T AUC 0,562; Brier 0,156.",
+    "summary": "El modelo multimodal bloqueado superó comparadores Breslow y TNM-T en validación interna.",
+    "limitations": "Validación solo interna con 57 casos, un centro, diseño retrospectivo; falta evaluación externa prospectiva.",
+    "remember": "La evaluación bloqueada mejora rigor, pero no sustituye validación externa.",
+    "language": "No aplica / no reportado",
+    "framework": "GradientBoost, Boruta, LASSO, SHAP; versiones no reportadas.",
+    "hardware": "Ecografía con contraste y PET-CT; modelos de equipos y GPU no reportados.",
+    "paper": "https://doi.org/10.1038/s41598-026-76972-1",
+    "doi": "10.1038/s41598-026-76972-1",
+    "published": "26 octubre 2026",
+    "journal": "Scientific Reports · 2026",
+    "key_metric": "AUC 0,868 (n=57)",
+    "rich": {
+      "problem": "El modelo multimodal bloqueado superó comparadores Breslow y TNM-T en validación interna.",
+      "idea": "GradientBoost con cinco predictores: espesor Breslow, diámetro ganglionar de eje corto, ecografía con contraste positiva, invasión vascular y PET-CT positivo; SHAP.",
+      "why": "La evaluación bloqueada mejora rigor, pero no sustituye validación externa.",
+      "interpretability": "Validación solo interna con 57 casos, un centro, diseño retrospectivo; falta evaluación externa prospectiva.",
+      "dataset_cards": [
+        {
+          "name": "Pacientes",
+          "value": "189",
+          "detail": "132 / 57"
+        },
+        {
+          "name": "Predictores",
+          "value": "5",
+          "detail": "Clínicos e imagen"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "AUC",
+          "main": "0,868",
+          "sub": "IC95% 0,769–0,967"
+        },
+        {
+          "label": "Sensibilidad",
+          "main": "88,9%",
+          "sub": "Especificidad 73,3%"
+        }
+      ],
+      "implementation": [
+        "Cohorte retrospectiva 7:3; Boruta y LASSO en entrenamiento, siete algoritmos con validación cruzada anidada; modelo y umbral bloqueados antes de validación.",
+        "GradientBoost, Boruta, LASSO, SHAP; versiones no reportadas.",
+        "Hardware: Ecografía con contraste y PET-CT; modelos de equipos y GPU no reportados.",
+        "Costos: No reportado."
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "GradientBoost",
+          "AUC 0,868",
+          "Validación interna"
+        ],
+        [
+          "Breslow solo",
+          "AUC 0,610",
+          "Comparador"
+        ],
+        [
+          "TNM-T",
+          "AUC 0,562",
+          "Comparador"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-26",
+    "reviewed": "27 octubre 2026",
+    "rich_detail": true,
+    "code": "No aplica.",
+    "cost": "No reportado.",
+    "figures": [],
+    "flag": "🇹🇷",
+    "countryFlags": "🇹🇷",
+    "country": "Turquía",
+    "rubro": "Tecnología médica",
+    "area": "Seguridad radiológica odontológica",
+    "modality": "Cuestionario de conocimientos",
+    "title": "AI chatbots showed higher response accuracy than dentists, medical doctors, and the general public on radiation safety questions",
+    "title_es": "Chatbots de IA superaron en preguntas teóricas de seguridad radiológica a odontólogos, médicos y público general",
+    "institution": "Mersin University, Facultad de Odontología",
+    "sample": "344 participantes humanos; 25 preguntas de opción múltiple y siete chatbots.",
+    "design": "Comparación transversal de conocimientos sobre radiación y estabilidad de respuestas entre usuarios y horas del día.",
+    "model": "Claude, DeepSeek, Microsoft Copilot, Gemini, Perplexity AI, ChatGPT-5 y ChatGPT-4o; sin entrenamiento por autores.",
+    "metrics": "Exactitud de IA 80–90,67%; participantes humanos 32–60%; Copilot máximo y Perplexity mínimo entre chatbots. ChatGPT-5 presentó diferencia temporal p<0,001.",
+    "summary": "Los chatbots obtuvieron más aciertos en preguntas de conocimiento, sin demostrar superioridad en decisiones clínicas.",
+    "limitations": "Solo 25 preguntas; exactitud teórica no demuestra criterio clínico ni seguridad de procedimientos. Versiones y prompts condicionan resultados.",
+    "remember": "La evaluación educativa no valida decisiones radiológicas reales.",
+    "language": "No aplica / no reportado",
+    "framework": "Siete plataformas de chatbot; versiones y parámetros no reportados por completo.",
+    "hardware": "No se utilizaron equipos de radiología para la prueba; GPU de inferencia no reportada.",
+    "paper": "https://doi.org/10.1038/s41598-026-77832-8",
+    "doi": "10.1038/s41598-026-77832-8",
+    "published": "26 octubre 2026",
+    "journal": "Scientific Reports · 2026",
+    "key_metric": "IA 80–90,67%; humanos 32–60%",
+    "rich": {
+      "problem": "Los chatbots obtuvieron más aciertos en preguntas de conocimiento, sin demostrar superioridad en decisiones clínicas.",
+      "idea": "Claude, DeepSeek, Microsoft Copilot, Gemini, Perplexity AI, ChatGPT-5 y ChatGPT-4o; sin entrenamiento por autores.",
+      "why": "La evaluación educativa no valida decisiones radiológicas reales.",
+      "interpretability": "Solo 25 preguntas; exactitud teórica no demuestra criterio clínico ni seguridad de procedimientos. Versiones y prompts condicionan resultados.",
+      "dataset_cards": [
+        {
+          "name": "Participantes",
+          "value": "344",
+          "detail": "Médicos, odontólogos y público"
+        },
+        {
+          "name": "Cuestionario",
+          "value": "25 ítems",
+          "detail": "Siete chatbots"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "IA",
+          "main": "80–90,67%",
+          "sub": "Aciertos teóricos"
+        },
+        {
+          "label": "Humanos",
+          "main": "32–60%",
+          "sub": "Aciertos teóricos"
+        }
+      ],
+      "implementation": [
+        "Comparación transversal de conocimientos sobre radiación y estabilidad de respuestas entre usuarios y horas del día.",
+        "Siete plataformas de chatbot; versiones y parámetros no reportados por completo.",
+        "Hardware: No se utilizaron equipos de radiología para la prueba; GPU de inferencia no reportada.",
+        "Costos: No reportado."
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Chatbots",
+          "80–90,67%",
+          "Cuestionario"
+        ],
+        [
+          "Humanos",
+          "32–60%",
+          "Cuestionario"
+        ],
+        [
+          "ChatGPT-5",
+          "p<0,001",
+          "Variación temporal"
+        ]
+      ]
+    }
+  },
+  {
     "date": "2026-10-26",
     "reviewed": "26 octubre 2026",
     "rich_detail": true,
