@@ -1,6 +1,630 @@
 [
   {
     "date": "2026-10-27",
+    "reviewed": "28 octubre 2026",
+    "rich_detail": true,
+    "code": "No se verificó repositorio oficial.",
+    "cost": "Costo de entrenamiento, inferencia e implantación no reportado.",
+    "figures": [],
+    "flag": "🇬🇧",
+    "countryFlags": "🇬🇧",
+    "country": "Reino Unido y Estados Unidos",
+    "rubro": "Imagen médica",
+    "area": "Oncología mamaria",
+    "modality": "Mamografía digital",
+    "title": "BREST-AI: Three-year breast cancer risk prediction from screening mammograms",
+    "title_es": "BREST-AI: predicción del riesgo de cáncer de mama a tres años mediante mamografías de cribado",
+    "institution": "University of Warwick; Queen Mary University of London; University of Cambridge; hospitales NHS",
+    "sample": "Desarrollo: 65.419 mujeres; entrenamiento 58.591. Validación externa Reino Unido: 1.899 casos y 5.697 controles; Estados Unidos: 97 casos y 291 controles; validación entre fabricantes: 400 casos y 1.200 controles.",
+    "design": "Modelo de aprendizaje profundo con curriculum learning para estimar riesgo a tres años tras mamografía negativa; validación externa caso-control, comparación con Mirai y evaluación de cambio de fabricante.",
+    "model": "BREST-AI, red de aprendizaje profundo para mamografías con entrenamiento curricular. Backbone exacto y pesos no confirmados en el resumen original.",
+    "metrics": "AUC Reino Unido 0,751 (IC95% 0,738–0,764) frente a Mirai 0,700; EE. UU. 0,670 frente a 0,633 (p=0,199); otro fabricante 0,719 frente a 0,685 (p=0,019).",
+    "summary": "El modelo discrimina riesgo a tres años en validación externa, aunque la precisión cae al cambiar población y fabricante.",
+    "limitations": "Diseño caso-control; las AUC no equivalen a desempeño prospectivo poblacional. La cohorte estadounidense es pequeña; el VPP de 8% es proyectado, no observado prospectivamente.",
+    "remember": "La transferencia entre países y fabricantes debe verificarse antes de usar predicciones de riesgo para orientar decisiones de cribado.",
+    "language": "No confirmado en la publicación consultada",
+    "framework": "Deep learning y curriculum learning; framework y versión no verificados.",
+    "hardware": "Mamógrafos digitales; cohorte externa entre fabricantes con sistemas Siemens. GPU y modelos de los demás equipos no confirmados.",
+    "paper": "https://doi.org/10.1038/s41523-026-01069-x",
+    "doi": "10.1038/s41523-026-01069-x",
+    "published": "27 octubre 2026",
+    "journal": "npj Breast Cancer · 2026",
+    "key_metric": "AUC externa UK 0,751",
+    "rich": {
+      "problem": "El modelo discrimina riesgo a tres años en validación externa, aunque la precisión cae al cambiar población y fabricante.",
+      "idea": "BREST-AI, red de aprendizaje profundo para mamografías con entrenamiento curricular. Backbone exacto y pesos no confirmados en el resumen original.",
+      "why": "La transferencia entre países y fabricantes debe verificarse antes de usar predicciones de riesgo para orientar decisiones de cribado.",
+      "interpretability": "Diseño caso-control; las AUC no equivalen a desempeño prospectivo poblacional. La cohorte estadounidense es pequeña; el VPP de 8% es proyectado, no observado prospectivamente.",
+      "dataset_cards": [
+        {
+          "name": "Desarrollo",
+          "value": "65.419 mujeres",
+          "detail": "Entrenamiento 58.591"
+        },
+        {
+          "name": "Validación UK",
+          "value": "7.596 personas",
+          "detail": "1.899 casos + 5.697 controles"
+        },
+        {
+          "name": "Validación USA",
+          "value": "388 personas",
+          "detail": "97 casos + 291 controles"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "AUC UK",
+          "main": "0,751",
+          "sub": "IC95% 0,738–0,764"
+        },
+        {
+          "label": "AUC otro fabricante",
+          "main": "0,719",
+          "sub": "Frente a Mirai 0,685"
+        }
+      ],
+      "implementation": [
+        "Modelo de aprendizaje profundo con curriculum learning para estimar riesgo a tres años tras mamografía negativa; validación externa caso-control, comparación con Mirai y evaluación de cambio de fabricante.",
+        "Software: Deep learning y curriculum learning; framework y versión no verificados.",
+        "Hardware: Mamógrafos digitales; cohorte externa entre fabricantes con sistemas Siemens. GPU y modelos de los demás equipos no confirmados.",
+        "Costos: Costo de entrenamiento, inferencia e implantación no reportado.",
+        "Código: No se verificó repositorio oficial."
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "UK",
+          "AUC 0,751",
+          "Mirai 0,700"
+        ],
+        [
+          "EE. UU.",
+          "AUC 0,670",
+          "Mirai 0,633"
+        ],
+        [
+          "Siemens UK",
+          "AUC 0,719",
+          "Mirai 0,685"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-27",
+    "reviewed": "28 octubre 2026",
+    "rich_detail": true,
+    "code": "https://github.com/FJDorfner/MedImaging-ModelDriftMonitoring/tree/MMC_plus",
+    "cost": "Los autores proponen menor carga de monitorización, sin costo monetario unitario confirmado.",
+    "figures": [],
+    "flag": "🇺🇸",
+    "countryFlags": "🇺🇸",
+    "country": "Estados Unidos y Alemania",
+    "rubro": "Seguridad y calidad de IA",
+    "area": "Radiología y monitoreo de modelos",
+    "modality": "Radiografías torácicas y metadatos DICOM",
+    "title": "Scalable drift monitoring in medical imaging AI",
+    "title_es": "Monitorización escalable de deriva de datos en inteligencia artificial para imágenes médicas",
+    "institution": "Microsoft Health and Life Sciences; Massachusetts General Hospital; Harvard Medical School; colaboración Charité",
+    "sample": "Cohorte retrospectiva de radiografías torácicas de Massachusetts General Hospital durante el periodo de COVID-19. El manuscrito de autores describe 90.581 estudios de 60.062 pacientes (2019–2021).",
+    "design": "Monitorización temporal de distribuciones de imágenes, metadatos DICOM y predicciones; comparación de ventanas de referencia y detección y análisis de incertidumbre.",
+    "model": "MMC+ amplía CheXstray: concordancia multimodal, distancias de distribución, embeddings del modelo fundacional MedImageInsight y bandas de incertidumbre; modelo clínico de ejemplo DenseNet-121.",
+    "metrics": "Detectó cambios de distribución relevantes y correlación con cambios de rendimiento del modelo clínico. No se verificó un único valor de AUC o sensibilidad de detección en la fuente original accesible.",
+    "summary": "MMC+ permite alertar sobre cambios de distribución en radiología sin exigir etiquetas contemporáneas para cada estudio.",
+    "limitations": "Detectar deriva no equivale a predecir una caída de exactitud; las alertas requieren auditoría humana y seguimiento con etiquetas clínicas.",
+    "remember": "La fiabilidad de la IA médica debe auditarse después de desplegarse, no solo al finalizar su entrenamiento.",
+    "language": "No confirmado en la publicación consultada",
+    "framework": "MMC+, CheXstray, MedImageInsight, DenseNet-121; código de autores: github.com/FJDorfner/MedImaging-ModelDriftMonitoring/tree/MMC_plus.",
+    "hardware": "Radiografía digital e infraestructura DICOM; GPU y servidores no especificados en el resumen de la versión publicada.",
+    "paper": "https://doi.org/10.1038/s41746-026-03301-1",
+    "doi": "10.1038/s41746-026-03301-1",
+    "published": "27 octubre 2026",
+    "journal": "npj Digital Medicine · 2026",
+    "key_metric": "Vigilancia continua de deriva",
+    "rich": {
+      "problem": "MMC+ permite alertar sobre cambios de distribución en radiología sin exigir etiquetas contemporáneas para cada estudio.",
+      "idea": "MMC+ amplía CheXstray: concordancia multimodal, distancias de distribución, embeddings del modelo fundacional MedImageInsight y bandas de incertidumbre; modelo clínico de ejemplo DenseNet-121.",
+      "why": "La fiabilidad de la IA médica debe auditarse después de desplegarse, no solo al finalizar su entrenamiento.",
+      "interpretability": "Detectar deriva no equivale a predecir una caída de exactitud; las alertas requieren auditoría humana y seguimiento con etiquetas clínicas.",
+      "dataset_cards": [
+        {
+          "name": "Cohorte de autores",
+          "value": "90.581 estudios",
+          "detail": "60.062 pacientes, manuscrito"
+        },
+        {
+          "name": "Entorno",
+          "value": "MGH",
+          "detail": "Radiografías 2019–2021"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Salida principal",
+          "main": "Alerta de deriva",
+          "sub": "No es diagnóstico"
+        },
+        {
+          "label": "Métrica de vigilancia",
+          "main": "MMC+",
+          "sub": "Con incertidumbre"
+        }
+      ],
+      "implementation": [
+        "Monitorización temporal de distribuciones de imágenes, metadatos DICOM y predicciones; comparación de ventanas de referencia y detección y análisis de incertidumbre.",
+        "Software: MMC+, CheXstray, MedImageInsight, DenseNet-121; código de autores: github.com/FJDorfner/MedImaging-ModelDriftMonitoring/tree/MMC_plus.",
+        "Hardware: Radiografía digital e infraestructura DICOM; GPU y servidores no especificados en el resumen de la versión publicada.",
+        "Costos: Los autores proponen menor carga de monitorización, sin costo monetario unitario confirmado.",
+        "Código: https://github.com/FJDorfner/MedImaging-ModelDriftMonitoring/tree/MMC_plus"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Cambio de distribución",
+          "Detectado",
+          "Cohorte temporal"
+        ],
+        [
+          "AUC clínica única",
+          "No reportada",
+          "No inventar"
+        ],
+        [
+          "Reentrenamiento local",
+          "No requerido",
+          "Para embeddings preentrenados"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-27",
+    "reviewed": "28 octubre 2026",
+    "rich_detail": true,
+    "code": "No se verificó repositorio específico de esta versión.",
+    "cost": "Costo por mensaje y costo de ajuste fino no reportados.",
+    "figures": [],
+    "flag": "🇺🇸",
+    "countryFlags": "🇺🇸",
+    "country": "Estados Unidos",
+    "rubro": "Salud digital",
+    "area": "Procesamiento de lenguaje clínico",
+    "modality": "Mensajes de portales clínicos y encuestas",
+    "title": "PVminerLLM: structured extraction of patient voice from patient-generated text using large language models",
+    "title_es": "PVminerLLM: extracción estructurada de la voz del paciente a partir de mensajes mediante modelos de lenguaje",
+    "institution": "Yale School of Medicine; Yale School of Public Health; Texas State University",
+    "sample": "1.137 mensajes anotados (757 redactados por pacientes y 380 por profesionales), 46.038 palabras; fuentes Yale New Haven Health, clínicas benéficas de Texas y encuestas.",
+    "design": "Extracción de categorías jerárquicas, subcategorías y fragmentos textuales de evidencia; comparación de prompting zero/few-shot con ajuste fino supervisado en varios tamaños de LLM.",
+    "model": "PVminerLLM: modelos instruct de 1,5B a 70B parámetros adaptados por supervised fine-tuning; esquema Code/Sub-code/Span; Llama 3.3 70B entre los evaluados.",
+    "metrics": "Mejor F1: Code 84,18%; Sub-code 81,39%; Span 88,24%. Los fragmentos generados por modelos ajustados coinciden literalmente con la entrada en 98,68–99,27% de los casos.",
+    "summary": "El ajuste supervisado mejora la extracción estructurada de necesidades y determinantes sociales expresados en mensajes clínicos.",
+    "limitations": "Sesgo de clases raras, dependencia de textos en inglés, no se ha probado impacto clínico de utilizar etiquetas en la atención.",
+    "remember": "La trazabilidad del texto original y las categorías poco frecuentes son críticas para evitar interpretaciones clínicas incorrectas.",
+    "language": "No confirmado en la publicación consultada",
+    "framework": "Modelos Llama y Qwen, ajuste fino supervisado y evaluación de salidas estructuradas; librerías y versiones no verificadas.",
+    "hardware": "Infraestructura de entrenamiento e inferencia de LLM; GPU y memoria exactas no confirmadas.",
+    "paper": "https://doi.org/10.1038/s44482-026-00039-1",
+    "doi": "10.1038/s44482-026-00039-1",
+    "published": "27 octubre 2026",
+    "journal": "npj Digital Public Health · 2026",
+    "key_metric": "F1 Span 88,24%",
+    "rich": {
+      "problem": "El ajuste supervisado mejora la extracción estructurada de necesidades y determinantes sociales expresados en mensajes clínicos.",
+      "idea": "PVminerLLM: modelos instruct de 1,5B a 70B parámetros adaptados por supervised fine-tuning; esquema Code/Sub-code/Span; Llama 3.3 70B entre los evaluados.",
+      "why": "La trazabilidad del texto original y las categorías poco frecuentes son críticas para evitar interpretaciones clínicas incorrectas.",
+      "interpretability": "Sesgo de clases raras, dependencia de textos en inglés, no se ha probado impacto clínico de utilizar etiquetas en la atención.",
+      "dataset_cards": [
+        {
+          "name": "Mensajes",
+          "value": "1.137",
+          "detail": "757 paciente / 380 profesional"
+        },
+        {
+          "name": "Corpus",
+          "value": "46.038 palabras",
+          "detail": "Mensajería y encuestas"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "F1 Code",
+          "main": "84,18%",
+          "sub": "Mejor modelo"
+        },
+        {
+          "label": "F1 Span",
+          "main": "88,24%",
+          "sub": "Extracción de evidencia"
+        }
+      ],
+      "implementation": [
+        "Extracción de categorías jerárquicas, subcategorías y fragmentos textuales de evidencia; comparación de prompting zero/few-shot con ajuste fino supervisado en varios tamaños de LLM.",
+        "Software: Modelos Llama y Qwen, ajuste fino supervisado y evaluación de salidas estructuradas; librerías y versiones no verificadas.",
+        "Hardware: Infraestructura de entrenamiento e inferencia de LLM; GPU y memoria exactas no confirmadas.",
+        "Costos: Costo por mensaje y costo de ajuste fino no reportados.",
+        "Código: No se verificó repositorio específico de esta versión."
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Code",
+          "F1 84,18%",
+          "Mejor valor"
+        ],
+        [
+          "Sub-code",
+          "F1 81,39%",
+          "Mejor valor"
+        ],
+        [
+          "Span",
+          "F1 88,24%",
+          "Mejor valor"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-27",
+    "reviewed": "28 octubre 2026",
+    "rich_detail": true,
+    "code": "No se verificó repositorio oficial.",
+    "cost": "No reportado; los autores declaran no haber recibido financiación específica.",
+    "figures": [],
+    "flag": "🇮🇳",
+    "countryFlags": "🇮🇳",
+    "country": "India",
+    "rubro": "Ingeniería biomédica",
+    "area": "Monitorización de signos vitales",
+    "modality": "Frecuencia cardíaca, temperatura, SpO2 y presión arterial",
+    "title": "Vital sign analysis and correlation of physiological parameters using edge AI and IoT technology",
+    "title_es": "Análisis de signos vitales y correlación fisiológica con IA en el borde e Internet de las cosas",
+    "institution": "GITAM University; datos clínicos de Great Eastern Medical School and Hospital",
+    "sample": "Dos fuentes: MIMIC-IV-ED v2.2 y un conjunto clínico real. Número exacto de personas y registros no confirmado en el resumen original.",
+    "design": "Diseño de dispositivo de captura de signos vitales y evaluación de un clasificador de riesgo; cuantización INT8 y despliegue local para inferencia de baja latencia.",
+    "model": "Gradient Boosting cuantizado a INT8 para ARM Cortex-A72; estratificación de riesgo con variables fisiológicas.",
+    "metrics": "Exactitud 99,84%; precisión 99,40%; tasa de falsos positivos 0,06%; latencia de inferencia 0,596 ms en ARM Cortex-A72.",
+    "summary": "Demuestra una prueba de concepto de clasificación de riesgo de baja latencia en hardware de borde.",
+    "limitations": "No se ha verificado el número total de participantes ni la generalización prospectiva. Las métricas de clasificación no demuestran precisión metrológica de cada sensor.",
+    "remember": "Una alta exactitud algorítmica no sustituye la validación de calibración, seguridad eléctrica y exactitud de los sensores del dispositivo.",
+    "language": "No confirmado en la publicación consultada",
+    "framework": "Gradient Boosting con cuantización INT8; stack de despliegue no confirmado.",
+    "hardware": "Procesador ARM Cortex-A72 y dispositivo de adquisición fisiológica; modelos exactos de sensores no confirmados.",
+    "paper": "https://doi.org/10.1038/s41598-026-77362-3",
+    "doi": "10.1038/s41598-026-77362-3",
+    "published": "27 octubre 2026",
+    "journal": "Scientific Reports · 2026",
+    "key_metric": "0,596 ms por inferencia",
+    "rich": {
+      "problem": "Demuestra una prueba de concepto de clasificación de riesgo de baja latencia en hardware de borde.",
+      "idea": "Gradient Boosting cuantizado a INT8 para ARM Cortex-A72; estratificación de riesgo con variables fisiológicas.",
+      "why": "Una alta exactitud algorítmica no sustituye la validación de calibración, seguridad eléctrica y exactitud de los sensores del dispositivo.",
+      "interpretability": "No se ha verificado el número total de participantes ni la generalización prospectiva. Las métricas de clasificación no demuestran precisión metrológica de cada sensor.",
+      "dataset_cards": [
+        {
+          "name": "Datos",
+          "value": "MIMIC-IV-ED v2.2",
+          "detail": "Más cohorte clínica"
+        },
+        {
+          "name": "Hardware",
+          "value": "ARM Cortex-A72",
+          "detail": "Modelo INT8"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Exactitud",
+          "main": "99,84%",
+          "sub": "Clasificación de riesgo"
+        },
+        {
+          "label": "Latencia",
+          "main": "0,596 ms",
+          "sub": "Inferencia en borde"
+        }
+      ],
+      "implementation": [
+        "Diseño de dispositivo de captura de signos vitales y evaluación de un clasificador de riesgo; cuantización INT8 y despliegue local para inferencia de baja latencia.",
+        "Software: Gradient Boosting con cuantización INT8; stack de despliegue no confirmado.",
+        "Hardware: Procesador ARM Cortex-A72 y dispositivo de adquisición fisiológica; modelos exactos de sensores no confirmados.",
+        "Costos: No reportado; los autores declaran no haber recibido financiación específica.",
+        "Código: No se verificó repositorio oficial."
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Exactitud",
+          "99,84%",
+          "Clasificación"
+        ],
+        [
+          "Precisión",
+          "99,40%",
+          "Clasificación"
+        ],
+        [
+          "FPR",
+          "0,06%",
+          "Clasificación"
+        ],
+        [
+          "Latencia",
+          "0,596 ms",
+          "ARM Cortex-A72"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-27",
+    "reviewed": "28 octubre 2026",
+    "rich_detail": true,
+    "code": "No se verificó repositorio oficial.",
+    "cost": "No se reportó costo unitario; financiación de la Comisión Europea mediante proyecto SENTINEL.",
+    "figures": [],
+    "flag": "🇮🇹",
+    "countryFlags": "🇮🇹",
+    "country": "Italia y Austria",
+    "rubro": "Instrumentación biomédica",
+    "area": "Biosensores y vigilancia ambiental",
+    "modality": "Dispersión óptica hiperespectral de partículas aéreas",
+    "title": "Detection of airborne virus particles using hyperspectral dark field microscopy and machine learning",
+    "title_es": "Detección de partículas virales suspendidas en el aire mediante microscopía hiperespectral de campo oscuro y aprendizaje automático",
+    "institution": "European Commission Joint Research Centre, Ispra; Hufnagl Chemometrics GmbH, Austria",
+    "sample": "Prueba de concepto con partículas capturadas y clases morfológicas/espectrales de objetivos virales; cantidad total de partículas no confirmada en el resumen original.",
+    "design": "Captura óptica de partículas suspendidas, obtención de firmas de dispersión hiperespectral con campo oscuro mejorado y clasificación computacional no destructiva.",
+    "model": "Sistema de aprendizaje automático aplicado a firmas espectrales y morfología; algoritmo específico y parámetros no confirmados en el resumen original.",
+    "metrics": "Demostración de identificación de clases de partículas sin marcadores; no se verificaron sensibilidad, especificidad, AUC ni límite de detección cuantitativos en el resumen.",
+    "summary": "Propone una plataforma de análisis óptico de partículas para vigilancia ambiental; permanece en etapa de prueba de concepto.",
+    "limitations": "No demuestra detección clínica ni diagnóstico individual; la clasificación morfológica no equivale a prueba de infectividad ni a identificación molecular definitiva.",
+    "remember": "La identificación óptica de partículas necesita validación analítica independiente antes de utilizarse como herramienta sanitaria.",
+    "language": "No confirmado en la publicación consultada",
+    "framework": "Clasificador de aprendizaje automático y análisis espectral; software y versiones no confirmados.",
+    "hardware": "Microscopio de campo oscuro mejorado con adquisición hiperespectral y sistema de captura de aerosoles; fabricante y GPU no confirmados.",
+    "paper": "https://doi.org/10.1038/s44303-026-00202-6",
+    "doi": "10.1038/s44303-026-00202-6",
+    "published": "27 octubre 2026",
+    "journal": "npj Imaging · 2026",
+    "key_metric": "Prueba de concepto óptica",
+    "rich": {
+      "problem": "Propone una plataforma de análisis óptico de partículas para vigilancia ambiental; permanece en etapa de prueba de concepto.",
+      "idea": "Sistema de aprendizaje automático aplicado a firmas espectrales y morfología; algoritmo específico y parámetros no confirmados en el resumen original.",
+      "why": "La identificación óptica de partículas necesita validación analítica independiente antes de utilizarse como herramienta sanitaria.",
+      "interpretability": "No demuestra detección clínica ni diagnóstico individual; la clasificación morfológica no equivale a prueba de infectividad ni a identificación molecular definitiva.",
+      "dataset_cards": [
+        {
+          "name": "Material",
+          "value": "Partículas aéreas",
+          "detail": "Número no confirmado"
+        },
+        {
+          "name": "Instrumentación",
+          "value": "Campo oscuro",
+          "detail": "Hiperespectral"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado",
+          "main": "Identificación de clases",
+          "sub": "Prueba de concepto"
+        },
+        {
+          "label": "Sensibilidad",
+          "main": "No reportada",
+          "sub": "No inferir"
+        }
+      ],
+      "implementation": [
+        "Captura óptica de partículas suspendidas, obtención de firmas de dispersión hiperespectral con campo oscuro mejorado y clasificación computacional no destructiva.",
+        "Software: Clasificador de aprendizaje automático y análisis espectral; software y versiones no confirmados.",
+        "Hardware: Microscopio de campo oscuro mejorado con adquisición hiperespectral y sistema de captura de aerosoles; fabricante y GPU no confirmados.",
+        "Costos: No se reportó costo unitario; financiación de la Comisión Europea mediante proyecto SENTINEL.",
+        "Código: No se verificó repositorio oficial."
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "AUC",
+          "No confirmada",
+          "Resumen original"
+        ],
+        [
+          "Sensibilidad",
+          "No confirmada",
+          "Resumen original"
+        ],
+        [
+          "Validación clínica",
+          "No demostrada",
+          "Prueba de concepto"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-27",
+    "reviewed": "28 octubre 2026",
+    "rich_detail": true,
+    "code": "https://github.com/Kashif-Qureshi/neuromaude",
+    "cost": "No se publicó presupuesto de implementación ni costo por reporte; estudio sin financiación específica.",
+    "figures": [],
+    "flag": "🇺🇸",
+    "countryFlags": "🇺🇸",
+    "country": "Estados Unidos e India",
+    "rubro": "Tecnología médica",
+    "area": "Tecnovigilancia de dispositivos médicos",
+    "modality": "Informes narrativos FDA MAUDE",
+    "title": "A generalizable pipeline for specialty-curated postmarket device surveillance: a reference implementation in neurosurgery",
+    "title_es": "Pipeline generalizable para vigilancia poscomercialización de dispositivos médicos: aplicación en neurocirugía",
+    "institution": "Yale School of Medicine; Barrow Neurological Institute; Sher-i-Kashmir Institute of Medical Sciences",
+    "sample": "2.086.176 reportes asociados a 10.102 dispositivos y 641 fabricantes, en nueve categorías; 7.058 códigos candidatos FDA.",
+    "design": "Pipeline de cuatro capas: filtro de especialidad con dos LLM y adjudicación humana; etiquetado de fallos y desenlaces; búsqueda semántica; agregación por dispositivo y fabricante.",
+    "model": "Gemini 2.5 Flash y Claude Sonnet 4.5 para selección; Gemini 2.5 Flash Lite para etiquetado; gemini-embedding-001 (768 dimensiones), índice HNSW con cuantización 8-bit.",
+    "metrics": "Cobertura de etiquetas válidas 99,99% (2.072.457/2.072.722); Jaccard@10 0,83; top-1 0,81; precisión@10 clínica 0,85; exactitud de etiquetas de fallos 67% y desenlaces 58%.",
+    "summary": "Convierte informes libres de incidentes de dispositivos en registros estructurados consultables y auditables.",
+    "limitations": "MAUDE es una base de notificación espontánea: no permite estimar incidencia ni riesgo causal de eventos. Las etiquetas de fallos y resultados presentan errores significativos.",
+    "remember": "La vigilancia de dispositivos exige distinguir errores de extracción, subregistro y causalidad; no interpretar recuentos de MAUDE como tasas de fallos.",
+    "language": "No confirmado en la publicación consultada",
+    "framework": "Gemini, Claude, embeddings semánticos, HNSW y cuantización; código en github.com/Kashif-Qureshi/neuromaude.",
+    "hardware": "Infraestructura informática para indexación de más de dos millones de registros; GPU no reportada.",
+    "paper": "https://doi.org/10.1038/s41598-026-77585-4",
+    "doi": "10.1038/s41598-026-77585-4",
+    "published": "27 octubre 2026",
+    "journal": "Scientific Reports · 2026",
+    "key_metric": "2,09 millones de reportes",
+    "rich": {
+      "problem": "Convierte informes libres de incidentes de dispositivos en registros estructurados consultables y auditables.",
+      "idea": "Gemini 2.5 Flash y Claude Sonnet 4.5 para selección; Gemini 2.5 Flash Lite para etiquetado; gemini-embedding-001 (768 dimensiones), índice HNSW con cuantización 8-bit.",
+      "why": "La vigilancia de dispositivos exige distinguir errores de extracción, subregistro y causalidad; no interpretar recuentos de MAUDE como tasas de fallos.",
+      "interpretability": "MAUDE es una base de notificación espontánea: no permite estimar incidencia ni riesgo causal de eventos. Las etiquetas de fallos y resultados presentan errores significativos.",
+      "dataset_cards": [
+        {
+          "name": "Informes",
+          "value": "2.086.176",
+          "detail": "FDA MAUDE"
+        },
+        {
+          "name": "Dispositivos",
+          "value": "10.102",
+          "detail": "641 fabricantes"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Etiquetado válido",
+          "main": "99,99%",
+          "sub": "Cobertura"
+        },
+        {
+          "label": "Precision@10",
+          "main": "0,85",
+          "sub": "Revisión clínica"
+        }
+      ],
+      "implementation": [
+        "Pipeline de cuatro capas: filtro de especialidad con dos LLM y adjudicación humana; etiquetado de fallos y desenlaces; búsqueda semántica; agregación por dispositivo y fabricante.",
+        "Software: Gemini, Claude, embeddings semánticos, HNSW y cuantización; código en github.com/Kashif-Qureshi/neuromaude.",
+        "Hardware: Infraestructura informática para indexación de más de dos millones de registros; GPU no reportada.",
+        "Costos: No se publicó presupuesto de implementación ni costo por reporte; estudio sin financiación específica.",
+        "Código: https://github.com/Kashif-Qureshi/neuromaude"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Etiquetado",
+          "99,99%",
+          "Validez de esquema"
+        ],
+        [
+          "Fallos",
+          "67%",
+          "Exactitud vs expertos"
+        ],
+        [
+          "Desenlaces",
+          "58%",
+          "Exactitud vs expertos"
+        ],
+        [
+          "Jaccard@10",
+          "0,83",
+          "Búsqueda"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-27",
+    "reviewed": "28 octubre 2026",
+    "rich_detail": true,
+    "code": "https://pda-ota.pdamethods.org",
+    "cost": "No se cuantificó el costo monetario; se reduce la comunicación frente a métodos federados iterativos.",
+    "figures": [],
+    "flag": "🇺🇸",
+    "countryFlags": "🇺🇸",
+    "country": "Estados Unidos",
+    "rubro": "Investigación clínica",
+    "area": "Aprendizaje federado e inferencia causal",
+    "modality": "Historias clínicas electrónicas multicéntricas",
+    "title": "FLAT-WHITE: from target trial emulation to federated high-throughput causal machine learning using decentralized real-world data",
+    "title_es": "FLAT-WHITE: emulación federada de ensayos y aprendizaje automático causal con datos clínicos descentralizados",
+    "institution": "University of Pennsylvania; Johns Hopkins Bloomberg School of Public Health; redes INSIGHT, OneFlorida+, Yale New Haven y TriNetX",
+    "sample": "123.971 personas con deterioro cognitivo leve en cuatro redes de desarrollo; validación externa en 339.180 personas de TriNetX; 181 tratamientos candidatos evaluados.",
+    "design": "Emulación de ensayos objetivo con análisis distribuido, ponderación de solapamiento por propensity score, resultados de control negativo y calibración del sesgo.",
+    "model": "FLAT-WHITE: algoritmo federado lossless de una ronda de comunicación con regresión logística penalizada L1 para propensity score y agregación de estadísticas resumidas.",
+    "metrics": "Una ronda de comunicación; diferencia media de estimaciones frente a análisis agrupado 6,62×10^-5 en simulación; diferencia máxima 0,0177. No es una AUC diagnóstica.",
+    "summary": "Permite estimar asociaciones ajustadas de tratamientos entre hospitales sin intercambiar registros individuales.",
+    "limitations": "Los resultados observacionales no demuestran causalidad farmacológica ni justifican modificar tratamientos; posibles factores de confusión no medidos; modelos comunes entre sedes y exposición binaria.",
+    "remember": "Equivalencia numérica con análisis centralizado no elimina sesgo de confusión en datos observacionales ni garantiza privacidad absoluta.",
+    "language": "No confirmado en la publicación consultada",
+    "framework": "FLAT-WHITE y plataforma PDA-OTA; regresión logística penalizada, ponderación por propensity score y controles negativos.",
+    "hardware": "Infraestructura de servidores de redes clínicas; GPU y recursos específicos no confirmados.",
+    "paper": "https://doi.org/10.1038/s44401-026-00160-6",
+    "doi": "10.1038/s44401-026-00160-6",
+    "published": "27 octubre 2026",
+    "journal": "npj Health Systems · 2026",
+    "key_metric": "123.971 pacientes; 1 ronda",
+    "rich": {
+      "problem": "Permite estimar asociaciones ajustadas de tratamientos entre hospitales sin intercambiar registros individuales.",
+      "idea": "FLAT-WHITE: algoritmo federado lossless de una ronda de comunicación con regresión logística penalizada L1 para propensity score y agregación de estadísticas resumidas.",
+      "why": "Equivalencia numérica con análisis centralizado no elimina sesgo de confusión en datos observacionales ni garantiza privacidad absoluta.",
+      "interpretability": "Los resultados observacionales no demuestran causalidad farmacológica ni justifican modificar tratamientos; posibles factores de confusión no medidos; modelos comunes entre sedes y exposición binaria.",
+      "dataset_cards": [
+        {
+          "name": "Redes iniciales",
+          "value": "123.971 pacientes",
+          "detail": "Cuatro sistemas"
+        },
+        {
+          "name": "Externa",
+          "value": "339.180 pacientes",
+          "detail": "TriNetX"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Comunicación",
+          "main": "1 ronda",
+          "sub": "Federación"
+        },
+        {
+          "label": "Diferencia media",
+          "main": "6,62×10^-5",
+          "sub": "Frente a análisis agrupado"
+        }
+      ],
+      "implementation": [
+        "Emulación de ensayos objetivo con análisis distribuido, ponderación de solapamiento por propensity score, resultados de control negativo y calibración del sesgo.",
+        "Software: FLAT-WHITE y plataforma PDA-OTA; regresión logística penalizada, ponderación por propensity score y controles negativos.",
+        "Hardware: Infraestructura de servidores de redes clínicas; GPU y recursos específicos no confirmados.",
+        "Costos: No se cuantificó el costo monetario; se reduce la comunicación frente a métodos federados iterativos.",
+        "Código: https://pda-ota.pdamethods.org"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Rondas",
+          "1",
+          "Comunicación federada"
+        ],
+        [
+          "Diferencia media",
+          "6,62×10^-5",
+          "Estimación de efecto"
+        ],
+        [
+          "Validación externa",
+          "339.180",
+          "Personas"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-27",
     "reviewed": "27 octubre 2026",
     "rich_detail": true,
     "code": "No reportado.",
