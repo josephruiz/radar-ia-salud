@@ -1,5 +1,734 @@
 [
   {
+    "date": "2026-10-29",
+    "reviewed": "29 octubre 2026",
+    "rich_detail": true,
+    "code": "https://github.com/BittermanLab/AEGIS",
+    "cost": "Costo de inferencia estimado de la mejor configuración: aproximadamente USD 0,02 por nota; no incluye despliegue, revisión humana ni mantenimiento.",
+    "figures": [],
+    "flag": "🇺🇸",
+    "countryFlags": "🇺🇸",
+    "country": "Estados Unidos",
+    "rubro": "Agentes clínicos y farmacovigilancia",
+    "area": "Oncología e inmunoterapia",
+    "modality": "Notas clínicas no estructuradas · EHR",
+    "title": "An agentic AI system enhances clinical detection of immune-related adverse events in a multi-phase validation study",
+    "title_es": "Un sistema de IA agéntica mejora la detección clínica de eventos adversos inmunitarios mediante validación multifase",
+    "institution": "Mass General Brigham; Dana-Farber Cancer Institute; Harvard Medical School",
+    "sample": "289 notas retrospectivas anotadas por expertos (26 de desarrollo y 263 de prueba); 884 notas en despliegue prospectivo silencioso de tres meses; estudio cruzado con 17 profesionales y 20 notas únicas.",
+    "design": "Tres fases: desarrollo y prueba retrospectiva, validación prospectiva silenciosa en EHR y estudio aleatorizado cruzado de asistencia humana. Extracción de presencia, temporalidad, grado CTCAE, atribución y certeza para seis tipos de eventos adversos inmunitarios.",
+    "model": "Pipeline AEGIS de seis agentes LLM especializados con autocoherencia y evidencia textual; modelos GPT-4.1 y GPT-4.1-mini por API institucional conforme a requisitos de privacidad.",
+    "metrics": "F1 macro retrospectivo 0,92 para evento actual; F1 0,66 para grado de gravedad multiclase; F1 prospectivo binario 0,72–0,79. La asistencia redujo 2,71 min por anotación, mejoró exactitud de coincidencia completa (OR 1,45; IC95% 1,01–2,08) y elevó α de Krippendorff a 0,82–0,85.",
+    "summary": "Un sistema de agentes asistió la extracción estructurada de toxicidades oncológicas; la validación prospectiva mostró degradación frente al test retrospectivo, pero mejoró la eficiencia y consistencia de revisores humanos.",
+    "limitations": "Un solo sistema sanitario, lenguaje local y documentación clínica heterogénea; F1 prospectivo inferior; sesgo de anclaje a etiquetas sugeridas; no demuestra mejores resultados terapéuticos.",
+    "remember": "Un solo sistema sanitario, lenguaje local y documentación clínica heterogénea; F1 prospectivo inferior; sesgo de anclaje a etiquetas sugeridas; no demuestra mejores resultados terapéuticos.",
+    "language": "No se especificó un lenguaje de implementación único en los apartados verificados.",
+    "framework": "GPT-4.1 / GPT-4.1-mini, agentes AEGIS, API institucional, scripts de análisis R; código abierto en GitHub.",
+    "hardware": "Servidores y acceso institucional a EHR; modelos de CPU/GPU y dispositivos no detallados en la fuente consultada.",
+    "paper": "https://doi.org/10.1038/s43018-026-01264-6",
+    "doi": "10.1038/s43018-026-01264-6",
+    "published": "29 octubre 2026",
+    "journal": "Nature Cancer · 2026",
+    "key_metric": "F1 0,92 · USD 0,02/nota",
+    "rich": {
+      "problem": "Un sistema de agentes asistió la extracción estructurada de toxicidades oncológicas; la validación prospectiva mostró degradación frente al test retrospectivo, pero mejoró la eficiencia y consistencia de revisores humanos.",
+      "idea": "Pipeline AEGIS de seis agentes LLM especializados con autocoherencia y evidencia textual; modelos GPT-4.1 y GPT-4.1-mini por API institucional conforme a requisitos de privacidad.",
+      "why": "Estudio revisado en fuente original con métricas y limitaciones específicas; la utilidad clínica requiere evaluación independiente.",
+      "interpretability": "Un solo sistema sanitario, lenguaje local y documentación clínica heterogénea; F1 prospectivo inferior; sesgo de anclaje a etiquetas sugeridas; no demuestra mejores resultados terapéuticos.",
+      "dataset_cards": [
+        {
+          "name": "Prueba retrospectiva",
+          "value": "263 notas",
+          "detail": "26 para desarrollo"
+        },
+        {
+          "name": "Despliegue silencioso",
+          "value": "884 notas",
+          "detail": "3 meses"
+        },
+        {
+          "name": "Evaluación humana",
+          "value": "17 profesionales",
+          "detail": "Cruzado aleatorizado"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "F1 retrospectivo",
+          "main": "0,92",
+          "sub": "Evento actual"
+        },
+        {
+          "label": "F1 prospectivo",
+          "main": "0,72–0,79",
+          "sub": "Etiquetas binarias"
+        },
+        {
+          "label": "Tiempo ahorrado",
+          "main": "2,71 min",
+          "sub": "Por anotación"
+        }
+      ],
+      "implementation": [
+        "Tres fases: desarrollo y prueba retrospectiva, validación prospectiva silenciosa en EHR y estudio aleatorizado cruzado de asistencia humana. Extracción de presencia, temporalidad, grado CTCAE, atribución y certeza para seis tipos de eventos adversos inmunitarios.",
+        "Software: GPT-4.1 / GPT-4.1-mini, agentes AEGIS, API institucional, scripts de análisis R; código abierto en GitHub.",
+        "Hardware: Servidores y acceso institucional a EHR; modelos de CPU/GPU y dispositivos no detallados en la fuente consultada.",
+        "Costos: Costo de inferencia estimado de la mejor configuración: aproximadamente USD 0,02 por nota; no incluye despliegue, revisión humana ni mantenimiento.",
+        "Código: https://github.com/BittermanLab/AEGIS"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Detección retrospectiva",
+          "F1 macro",
+          "0,92"
+        ],
+        [
+          "Grado de severidad",
+          "F1 multiclase",
+          "0,66"
+        ],
+        [
+          "Validación prospectiva",
+          "F1 binario",
+          "0,72–0,79"
+        ],
+        [
+          "Acuerdo entre revisores",
+          "Krippendorff α asistido",
+          "0,82–0,85"
+        ],
+        [
+          "Costo estimado de inferencia",
+          "USD/nota",
+          "≈0,02"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-29",
+    "reviewed": "29 octubre 2026",
+    "rich_detail": true,
+    "code": "No se verificó repositorio oficial de código para este artículo.",
+    "cost": "Costo de entrenamiento, inferencia y despliegue no cuantificado en las secciones verificadas.",
+    "figures": [],
+    "flag": "🇸🇬",
+    "countryFlags": "🇸🇬",
+    "country": "Singapur y colaboradores internacionales",
+    "rubro": "Modelos fundacionales médicos",
+    "area": "Radiología, oftalmología, patología y multimodalidad",
+    "modality": "TC, RM, radiografía, ecografía, PET, histopatología, dermatoscopia, retinografía, OCT y endoscopia",
+    "title": "A clinical multimodal vision language foundation model with fine-grain explainability",
+    "title_es": "Modelo fundacional multimodal de visión y lenguaje clínico con explicabilidad de grano fino",
+    "institution": "A*STAR Institute of Advanced Intelligence and Computing; Singapore Eye Research Institute; Singapore National Eye Centre; Duke-NUS Medical School",
+    "sample": "Más de 1,3 millones de muestras procedentes de 18 datasets globales para desarrollo y pruebas; validación externa en 13.443 muestras independientes de 17 datasets adicionales.",
+    "design": "Desarrollo de un modelo generalista con tres tareas (diagnóstico, preguntas visuales y localización de hallazgos) y comparación con modelos generalistas, fundacionales especializados y redes convencionales; evaluación externa zero-shot/few-shot y evaluación humana de explicaciones.",
+    "model": "EVLF-FM con encoder visual de enfermedad, encoder visual de píxel y conectores visión-lenguaje; fine-tuning supervisado LoRA y refuerzo visual mediante GRPO con recompensas de coherencia y localización.",
+    "metrics": "Exactitud diagnóstica interna promedio 0,895; Acc@IoU 0,5 para localización visual 0,842; puntuación humana S.C.O.R.E. de explicaciones 4,25/5; 13.443 muestras de validación externa.",
+    "summary": "Un modelo multimodal integra clasificación, VQA y localización visual; la calidad de sus explicaciones fue evaluada por profesionales y se estudiaron generalización y sesgos.",
+    "limitations": "No es un ensayo de resultados clínicos; riesgo de sesgos en datasets abiertos y poblaciones subrepresentadas; explicaciones post hoc no garantizan fidelidad causal; validación en flujos clínicos reales aún necesaria.",
+    "remember": "No es un ensayo de resultados clínicos; riesgo de sesgos en datasets abiertos y poblaciones subrepresentadas; explicaciones post hoc no garantizan fidelidad causal; validación en flujos clínicos reales aún necesaria.",
+    "language": "No se especificó un lenguaje de implementación único en los apartados verificados.",
+    "framework": "EVLF-FM, LoRA, supervised fine-tuning y GRPO; comparadores Qwen2.5-VL, LLaVA, Virchow, RETFound y otros. Versiones de framework no confirmadas.",
+    "hardware": "Imágenes de diez modalidades clínicas; configuración exacta de GPU, VRAM, aceleradores y costo energético no confirmados en los apartados consultados.",
+    "paper": "https://doi.org/10.1038/s41591-026-04655-5",
+    "doi": "10.1038/s41591-026-04655-5",
+    "published": "29 octubre 2026",
+    "journal": "Nature Medicine · 2026",
+    "key_metric": "1,3 M imágenes · 0,895 accuracy",
+    "rich": {
+      "problem": "Un modelo multimodal integra clasificación, VQA y localización visual; la calidad de sus explicaciones fue evaluada por profesionales y se estudiaron generalización y sesgos.",
+      "idea": "EVLF-FM con encoder visual de enfermedad, encoder visual de píxel y conectores visión-lenguaje; fine-tuning supervisado LoRA y refuerzo visual mediante GRPO con recompensas de coherencia y localización.",
+      "why": "Estudio revisado en fuente original con métricas y limitaciones específicas; la utilidad clínica requiere evaluación independiente.",
+      "interpretability": "No es un ensayo de resultados clínicos; riesgo de sesgos en datasets abiertos y poblaciones subrepresentadas; explicaciones post hoc no garantizan fidelidad causal; validación en flujos clínicos reales aún necesaria.",
+      "dataset_cards": [
+        {
+          "name": "Datos de desarrollo",
+          "value": ">1,3 millones",
+          "detail": "18 conjuntos"
+        },
+        {
+          "name": "Validación externa",
+          "value": "13.443 muestras",
+          "detail": "17 conjuntos"
+        },
+        {
+          "name": "Cobertura",
+          "value": "10 modalidades",
+          "detail": "6 especialidades"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Accuracy media",
+          "main": "0,895",
+          "sub": "Diagnóstico interno"
+        },
+        {
+          "label": "Acc@0,5",
+          "main": "0,842",
+          "sub": "Localización visual"
+        },
+        {
+          "label": "S.C.O.R.E.",
+          "main": "4,25/5",
+          "sub": "Evaluación humana"
+        }
+      ],
+      "implementation": [
+        "Desarrollo de un modelo generalista con tres tareas (diagnóstico, preguntas visuales y localización de hallazgos) y comparación con modelos generalistas, fundacionales especializados y redes convencionales; evaluación externa zero-shot/few-shot y evaluación humana de explicaciones.",
+        "Software: EVLF-FM, LoRA, supervised fine-tuning y GRPO; comparadores Qwen2.5-VL, LLaVA, Virchow, RETFound y otros. Versiones de framework no confirmadas.",
+        "Hardware: Imágenes de diez modalidades clínicas; configuración exacta de GPU, VRAM, aceleradores y costo energético no confirmados en los apartados consultados.",
+        "Costos: Costo de entrenamiento, inferencia y despliegue no cuantificado en las secciones verificadas.",
+        "Código: No se verificó repositorio oficial de código para este artículo."
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Diagnóstico interno",
+          "Accuracy media",
+          "0,895"
+        ],
+        [
+          "Grounding visual",
+          "Acc@IoU 0,5",
+          "0,842"
+        ],
+        [
+          "Explicaciones",
+          "S.C.O.R.E. promedio",
+          "4,25/5"
+        ],
+        [
+          "Validación externa",
+          "Muestras independientes",
+          "13.443"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-28",
+    "reviewed": "29 octubre 2026",
+    "rich_detail": true,
+    "code": "No se verificó código oficial.",
+    "cost": "Sin financiación declarada; costos de dispositivo, entrenamiento y despliegue no reportados.",
+    "figures": [],
+    "flag": "🇹🇷",
+    "countryFlags": "🇹🇷",
+    "country": "Turquía",
+    "rubro": "Biosensores y aprendizaje automático",
+    "area": "Medicina del sueño",
+    "modality": "Oximetría nocturna SpO₂ y datos clínicos",
+    "title": "Multimodal fusion of SpO₂ time series and clinical data for explainable classification of obstructive sleep apnea severity",
+    "title_es": "Fusión multimodal de series SpO₂ y datos clínicos para clasificar de forma explicable la gravedad de la apnea obstructiva del sueño",
+    "institution": "Afyonkarahisar Health Sciences University; Afyon Kocatepe University",
+    "sample": "78 personas sometidas a polisomnografía, distribuidas en cuatro categorías de ronquido simple y apnea leve, moderada y grave.",
+    "design": "Estudio retrospectivo: SpO₂ a 16 Hz dividida en segmentos no superpuestos de 60 segundos; estadísticas temporales y PSD mediante Welch; agregación por individuo y fusión temprana con IMC, escala Epworth y hemograma; validación cruzada estratificada, repetida y anidada.",
+    "model": "Extra Trees, Random Forest y kNN, con explicaciones SHAP y análisis de ablación de características.",
+    "metrics": "Extra Trees: exactitud 89,83% ± 5,45; macro-F1 89,88% ± 5,60; ROC-AUC 0,9881 ± 0,0131 en cinco particiones. Exactitud 85,53% ± 2,40 en 10 repeticiones de cinco particiones y 85,38% ± 1,93 con validación anidada.",
+    "summary": "La fusión de rasgos de oximetría y variables clínicas clasificó gravedad de apnea; la evaluación más estricta redujo el rendimiento estimado.",
+    "limitations": "Muestra de 78 personas, retrospectiva, sin validación externa; rendimiento depende de la adquisición y del criterio de polisomnografía; no sustituye una evaluación clínica del sueño.",
+    "remember": "Muestra de 78 personas, retrospectiva, sin validación externa; rendimiento depende de la adquisición y del criterio de polisomnografía; no sustituye una evaluación clínica del sueño.",
+    "language": "No se especificó un lenguaje de implementación único en los apartados verificados.",
+    "framework": "Extracción PSD/Welch, Extra Trees, Random Forest, kNN y SHAP; framework exacto no confirmado.",
+    "hardware": "Pulsioxímetro de dedo con registro nocturno a 16 Hz y polisomnografía como referencia; marca, procesador y GPU no reportados.",
+    "paper": "https://doi.org/10.1038/s41598-026-78404-6",
+    "doi": "10.1038/s41598-026-78404-6",
+    "published": "28 octubre 2026",
+    "journal": "Scientific Reports · 2026",
+    "key_metric": "AUC 0,9881 · n=78",
+    "rich": {
+      "problem": "La fusión de rasgos de oximetría y variables clínicas clasificó gravedad de apnea; la evaluación más estricta redujo el rendimiento estimado.",
+      "idea": "Extra Trees, Random Forest y kNN, con explicaciones SHAP y análisis de ablación de características.",
+      "why": "Estudio revisado en fuente original con métricas y limitaciones específicas; la utilidad clínica requiere evaluación independiente.",
+      "interpretability": "Muestra de 78 personas, retrospectiva, sin validación externa; rendimiento depende de la adquisición y del criterio de polisomnografía; no sustituye una evaluación clínica del sueño.",
+      "dataset_cards": [
+        {
+          "name": "Participantes",
+          "value": "78",
+          "detail": "PSG como referencia"
+        },
+        {
+          "name": "Frecuencia SpO₂",
+          "value": "16 Hz",
+          "detail": "Ventanas de 60 s"
+        },
+        {
+          "name": "Clases",
+          "value": "4",
+          "detail": "Ronquido a apnea grave"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "ROC-AUC",
+          "main": "0,9881",
+          "sub": "CV 5 particiones"
+        },
+        {
+          "label": "Accuracy",
+          "main": "89,83%",
+          "sub": "CV 5 particiones"
+        },
+        {
+          "label": "CV anidada",
+          "main": "85,38%",
+          "sub": "Accuracy"
+        }
+      ],
+      "implementation": [
+        "Estudio retrospectivo: SpO₂ a 16 Hz dividida en segmentos no superpuestos de 60 segundos; estadísticas temporales y PSD mediante Welch; agregación por individuo y fusión temprana con IMC, escala Epworth y hemograma; validación cruzada estratificada, repetida y anidada.",
+        "Software: Extracción PSD/Welch, Extra Trees, Random Forest, kNN y SHAP; framework exacto no confirmado.",
+        "Hardware: Pulsioxímetro de dedo con registro nocturno a 16 Hz y polisomnografía como referencia; marca, procesador y GPU no reportados.",
+        "Costos: Sin financiación declarada; costos de dispositivo, entrenamiento y despliegue no reportados.",
+        "Código: No se verificó código oficial."
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "CV estratificada 5 folds",
+          "Accuracy",
+          "89,83% ± 5,45"
+        ],
+        [
+          "CV estratificada 5 folds",
+          "Macro-F1",
+          "89,88% ± 5,60"
+        ],
+        [
+          "CV estratificada 5 folds",
+          "ROC-AUC",
+          "0,9881 ± 0,0131"
+        ],
+        [
+          "CV anidada",
+          "Accuracy",
+          "85,38% ± 1,93"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-28",
+    "reviewed": "29 octubre 2026",
+    "rich_detail": true,
+    "code": "No se verificó repositorio oficial.",
+    "cost": "No se informa costo monetario; se reporta objetivo de ≤12 MB de memoria y ≤3 millones de parámetros, sin evaluación económica.",
+    "figures": [],
+    "flag": "🇮🇳",
+    "countryFlags": "🇮🇳",
+    "country": "India",
+    "rubro": "Procesamiento de señales y dispositivos auditivos",
+    "area": "Tecnología de audífonos",
+    "modality": "Señales de voz y ruido acústico",
+    "title": "Efficient speech enhancement using Harris hawks optimized feature selection and a hybrid Wiener-Bi-GRU model for real-time deployment",
+    "title_es": "Mejora eficiente del habla con selección de características Harris Hawks y modelo híbrido Wiener–Bi-GRU para ejecución en tiempo real",
+    "institution": "VSB College of Engineering Technical Campus; Dr. Mahalingam College of Engineering and Technology",
+    "sample": "Benchmarks públicos VoiceBank y DEMAND; evaluación en 46.643 muestras de test ampliado y en el test estándar de 824 enunciados.",
+    "design": "Filtro de Wiener para preprocesamiento, extracción de 352 características, optimización Harris Hawks para reducir a 42 y red neuronal de mejora de habla; pruebas de ablación, estabilidad entre semillas y comparación con baselines.",
+    "model": "Wiener Filtering + Harris Hawks Optimization + Bi-GRU bidireccional ligera con atención temporal.",
+    "metrics": "Reducción dimensional de 88%; 2,18 millones de parámetros; latencia de inferencia 6,8 ms; PESQ 2,58–2,66; STOI hasta 0,86; SI-SDR 13,9 dB.",
+    "summary": "Un pipeline híbrido mejora calidad e inteligibilidad de voz con menos características y baja latencia en benchmarks de habla ruidosa.",
+    "limitations": "No se ensayó con usuarios de audífonos ni se verificó consumo energético de un dispositivo comercial real. Los límites típicos de 20–50 mW y 128–512 kB citados en introducción no son mediciones de este prototipo.",
+    "remember": "No se ensayó con usuarios de audífonos ni se verificó consumo energético de un dispositivo comercial real. Los límites típicos de 20–50 mW y 128–512 kB citados en introducción no son mediciones de este prototipo.",
+    "language": "No se especificó un lenguaje de implementación único en los apartados verificados.",
+    "framework": "Filtro de Wiener, Harris Hawks Optimization, Bi-GRU con atención; framework y versiones no confirmados.",
+    "hardware": "Objetivo de ejecución embebida con latencia <10 ms; procesador y equipo de inferencia concreto no confirmados; no se reporta prueba de autonomía de batería.",
+    "paper": "https://doi.org/10.1038/s41598-026-77101-8",
+    "doi": "10.1038/s41598-026-77101-8",
+    "published": "28 octubre 2026",
+    "journal": "Scientific Reports · 2026",
+    "key_metric": "6,8 ms · PESQ hasta 2,66",
+    "rich": {
+      "problem": "Un pipeline híbrido mejora calidad e inteligibilidad de voz con menos características y baja latencia en benchmarks de habla ruidosa.",
+      "idea": "Wiener Filtering + Harris Hawks Optimization + Bi-GRU bidireccional ligera con atención temporal.",
+      "why": "Estudio revisado en fuente original con métricas y limitaciones específicas; la utilidad clínica requiere evaluación independiente.",
+      "interpretability": "No se ensayó con usuarios de audífonos ni se verificó consumo energético de un dispositivo comercial real. Los límites típicos de 20–50 mW y 128–512 kB citados en introducción no son mediciones de este prototipo.",
+      "dataset_cards": [
+        {
+          "name": "Test estándar",
+          "value": "824 enunciados",
+          "detail": "VoiceBank+DEMAND"
+        },
+        {
+          "name": "Test ampliado",
+          "value": "46.643 muestras",
+          "detail": "Voz y ruido"
+        },
+        {
+          "name": "Características",
+          "value": "352 → 42",
+          "detail": "Reducción del 88%"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Latencia",
+          "main": "6,8 ms",
+          "sub": "Inferencia"
+        },
+        {
+          "label": "Parámetros",
+          "main": "2,18 M",
+          "sub": "Modelo"
+        },
+        {
+          "label": "SI-SDR",
+          "main": "13,9 dB",
+          "sub": "Calidad de señal"
+        }
+      ],
+      "implementation": [
+        "Filtro de Wiener para preprocesamiento, extracción de 352 características, optimización Harris Hawks para reducir a 42 y red neuronal de mejora de habla; pruebas de ablación, estabilidad entre semillas y comparación con baselines.",
+        "Software: Filtro de Wiener, Harris Hawks Optimization, Bi-GRU con atención; framework y versiones no confirmados.",
+        "Hardware: Objetivo de ejecución embebida con latencia <10 ms; procesador y equipo de inferencia concreto no confirmados; no se reporta prueba de autonomía de batería.",
+        "Costos: No se informa costo monetario; se reporta objetivo de ≤12 MB de memoria y ≤3 millones de parámetros, sin evaluación económica.",
+        "Código: No se verificó repositorio oficial."
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Calidad de voz",
+          "PESQ",
+          "2,58–2,66"
+        ],
+        [
+          "Inteligibilidad",
+          "STOI",
+          "Hasta 0,86"
+        ],
+        [
+          "Relación señal/distorsión",
+          "SI-SDR",
+          "13,9 dB"
+        ],
+        [
+          "Inferencia",
+          "Latencia",
+          "6,8 ms"
+        ],
+        [
+          "Tamaño",
+          "Parámetros",
+          "2,18 millones"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-28",
+    "reviewed": "29 octubre 2026",
+    "rich_detail": true,
+    "code": "No se verificó repositorio oficial.",
+    "cost": "Sin financiación directa declarada; costo de uso de Vertex AI y despliegue no reportado.",
+    "figures": [],
+    "flag": "🇺🇸",
+    "countryFlags": "🇺🇸",
+    "country": "Estados Unidos",
+    "rubro": "Imagen médica y explicabilidad",
+    "area": "Neuroimagen y urgencias",
+    "modality": "Tomografía cerebral sin contraste",
+    "title": "Evaluation of explainable artificial intelligence for subarachnoid hemorrhage detection and outcome modelling using neuroimaging data",
+    "title_es": "Evaluación de IA explicable para detectar hemorragia subaracnoidea y modelar resultados mediante neuroimagen",
+    "institution": "Mayo Clinic (Jacksonville y Rochester)",
+    "sample": "Cuatro rondas experimentales con conjuntos crecientes de 20 a 300 imágenes TC etiquetadas; la cantidad total de pacientes únicos no se confirmó.",
+    "design": "Fase 1: AutoML de Google Vertex AI para clasificar hemorragia en ocho espacios anatómicos y analizar resultados de rondas crecientes. Fase 2: mapas topográficos mediante BLAST-CT, que segmenta cuatro regiones hemorrágicas.",
+    "model": "SAHDAI-XAI: Google Cloud Vertex AI AutoML y BLAST-CT para visualización y cuantificación.",
+    "metrics": "Precisión 100% en primeras rondas muy pequeñas; 97,9% en tercera ronda (un falso negativo reportado) y 94,4% en cuarta (dos falsos positivos). Los mapas de segmentación fueron variables y no se reporta Dice global único.",
+    "summary": "Una demostración de IA explicable para clasificar TC y localizar hallazgos; la alta precisión en conjuntos pequeños no permite concluir rendimiento clínico generalizable.",
+    "limitations": "Muestras muy pequeñas, evaluación por rondas y ausencia de validación prospectiva multicéntrica; la precisión puede ser engañosa sin sensibilidad, prevalencia y particiones por paciente; segmentación inconsistente.",
+    "remember": "Muestras muy pequeñas, evaluación por rondas y ausencia de validación prospectiva multicéntrica; la precisión puede ser engañosa sin sensibilidad, prevalencia y particiones por paciente; segmentación inconsistente.",
+    "language": "No se especificó un lenguaje de implementación único en los apartados verificados.",
+    "framework": "Google Cloud Vertex AI AutoML; BLAST-CT para segmentación y mapas de localización.",
+    "hardware": "Tomografía computarizada cerebral sin contraste; inferencia en nube Google Cloud, GPU y especificaciones del tomógrafo no reportadas.",
+    "paper": "https://doi.org/10.1038/s41598-026-76843-9",
+    "doi": "10.1038/s41598-026-76843-9",
+    "published": "28 octubre 2026",
+    "journal": "Scientific Reports · 2026",
+    "key_metric": "Precisión 94,4% · fase final",
+    "rich": {
+      "problem": "Una demostración de IA explicable para clasificar TC y localizar hallazgos; la alta precisión en conjuntos pequeños no permite concluir rendimiento clínico generalizable.",
+      "idea": "SAHDAI-XAI: Google Cloud Vertex AI AutoML y BLAST-CT para visualización y cuantificación.",
+      "why": "Estudio revisado en fuente original con métricas y limitaciones específicas; la utilidad clínica requiere evaluación independiente.",
+      "interpretability": "Muestras muy pequeñas, evaluación por rondas y ausencia de validación prospectiva multicéntrica; la precisión puede ser engañosa sin sensibilidad, prevalencia y particiones por paciente; segmentación inconsistente.",
+      "dataset_cards": [
+        {
+          "name": "Datos por ronda",
+          "value": "20–300 TC",
+          "detail": "Etiquetadas por clase"
+        },
+        {
+          "name": "Regiones",
+          "value": "8 espacios",
+          "detail": "Detección de SAH"
+        },
+        {
+          "name": "Segmentación",
+          "value": "4 regiones",
+          "detail": "BLAST-CT"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Precisión ronda 3",
+          "main": "97,9%",
+          "sub": "Un FN reportado"
+        },
+        {
+          "label": "Precisión ronda 4",
+          "main": "94,4%",
+          "sub": "Dos FP reportados"
+        },
+        {
+          "label": "Explicabilidad",
+          "main": "BLAST-CT",
+          "sub": "Mapas topográficos"
+        }
+      ],
+      "implementation": [
+        "Fase 1: AutoML de Google Vertex AI para clasificar hemorragia en ocho espacios anatómicos y analizar resultados de rondas crecientes. Fase 2: mapas topográficos mediante BLAST-CT, que segmenta cuatro regiones hemorrágicas.",
+        "Software: Google Cloud Vertex AI AutoML; BLAST-CT para segmentación y mapas de localización.",
+        "Hardware: Tomografía computarizada cerebral sin contraste; inferencia en nube Google Cloud, GPU y especificaciones del tomógrafo no reportadas.",
+        "Costos: Sin financiación directa declarada; costo de uso de Vertex AI y despliegue no reportado.",
+        "Código: No se verificó repositorio oficial."
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Rondas 1–2",
+          "Precisión",
+          "100% (muestra pequeña)"
+        ],
+        [
+          "Ronda 3",
+          "Precisión",
+          "97,9%"
+        ],
+        [
+          "Ronda 4",
+          "Precisión",
+          "94,4%"
+        ],
+        [
+          "Segmentación",
+          "Dice global",
+          "No reportado"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-28",
+    "reviewed": "29 octubre 2026",
+    "rich_detail": true,
+    "code": "No se verificó repositorio oficial.",
+    "cost": "Costos de entrenamiento, integración y uso no reportados.",
+    "figures": [],
+    "flag": "🇹🇼",
+    "countryFlags": "🇹🇼",
+    "country": "Taiwán",
+    "rubro": "Ecografía e imagen médica",
+    "area": "Medicina fetal",
+    "modality": "Ecografía fetal y Doppler color",
+    "title": "Enhancing prenatal diagnostic workflow: a deep learning-based system for multi-class fetal ultrasound classification across all gestational stages",
+    "title_es": "Mejora del flujo prenatal mediante aprendizaje profundo para clasificar ecografías fetales en todas las etapas gestacionales",
+    "institution": "Taipei Medical University; Taiji Clinic; Taipei Medical University Hospital; Wan Fang Hospital",
+    "sample": "Aproximadamente 121.000 imágenes de ecografía fetal de 121 categorías anatómicas: 43 del primer trimestre, 54 del segundo y 24 del tercero.",
+    "design": "Estudio retrospectivo de clasificación anatómica por trimestre; comparación de cuatro familias de CNN entrenadas independientemente en tres tareas (12 modelos) e integración de apoyo en gestión de imágenes de una clínica.",
+    "model": "DenseNet, GoogLeNet, ResNet y EfficientNet, cada uno entrenado para cada etapa gestacional.",
+    "metrics": "DenseNet obtuvo exactitud máxima de validación de 97,73% y kappa de Cohen de 0,9754 en tercer trimestre. Se evaluaron 12 modelos sobre 121 categorías.",
+    "summary": "Las CNN facilitaron la clasificación y organización anatómica de ecografías fetales en distintas etapas de gestación; no equivale a detección de anomalías clínicas.",
+    "limitations": "Sin estudio prospectivo formal de eficiencia del flujo de trabajo; falta validación independiente por paciente y multicéntrica; exactitud de clasificación de categorías no es sensibilidad diagnóstica de malformaciones.",
+    "remember": "Sin estudio prospectivo formal de eficiencia del flujo de trabajo; falta validación independiente por paciente y multicéntrica; exactitud de clasificación de categorías no es sensibilidad diagnóstica de malformaciones.",
+    "language": "No se especificó un lenguaje de implementación único en los apartados verificados.",
+    "framework": "DenseNet, GoogLeNet, ResNet y EfficientNet; versiones no reportadas.",
+    "hardware": "Equipos de ecografía prenatal y Doppler color; modelos de ecógrafo y GPU no reportados en el resumen original.",
+    "paper": "https://doi.org/10.1038/s41598-026-78023-1",
+    "doi": "10.1038/s41598-026-78023-1",
+    "published": "28 octubre 2026",
+    "journal": "Scientific Reports · 2026",
+    "key_metric": "121.000 imágenes · 97,73%",
+    "rich": {
+      "problem": "Las CNN facilitaron la clasificación y organización anatómica de ecografías fetales en distintas etapas de gestación; no equivale a detección de anomalías clínicas.",
+      "idea": "DenseNet, GoogLeNet, ResNet y EfficientNet, cada uno entrenado para cada etapa gestacional.",
+      "why": "Estudio revisado en fuente original con métricas y limitaciones específicas; la utilidad clínica requiere evaluación independiente.",
+      "interpretability": "Sin estudio prospectivo formal de eficiencia del flujo de trabajo; falta validación independiente por paciente y multicéntrica; exactitud de clasificación de categorías no es sensibilidad diagnóstica de malformaciones.",
+      "dataset_cards": [
+        {
+          "name": "Imágenes",
+          "value": "≈121.000",
+          "detail": "Datos retrospectivos"
+        },
+        {
+          "name": "Categorías",
+          "value": "121",
+          "detail": "43 / 54 / 24"
+        },
+        {
+          "name": "Arquitecturas",
+          "value": "12 modelos",
+          "detail": "4 familias × 3 etapas"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Mejor accuracy",
+          "main": "97,73%",
+          "sub": "Tercer trimestre"
+        },
+        {
+          "label": "Kappa",
+          "main": "0,9754",
+          "sub": "Tercer trimestre"
+        },
+        {
+          "label": "Uso",
+          "main": "Organización",
+          "sub": "Flujo interno clínico"
+        }
+      ],
+      "implementation": [
+        "Estudio retrospectivo de clasificación anatómica por trimestre; comparación de cuatro familias de CNN entrenadas independientemente en tres tareas (12 modelos) e integración de apoyo en gestión de imágenes de una clínica.",
+        "Software: DenseNet, GoogLeNet, ResNet y EfficientNet; versiones no reportadas.",
+        "Hardware: Equipos de ecografía prenatal y Doppler color; modelos de ecógrafo y GPU no reportados en el resumen original.",
+        "Costos: Costos de entrenamiento, integración y uso no reportados.",
+        "Código: No se verificó repositorio oficial."
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Tercer trimestre DenseNet",
+          "Accuracy validación",
+          "97,73%"
+        ],
+        [
+          "Tercer trimestre DenseNet",
+          "Cohen κ",
+          "0,9754"
+        ],
+        [
+          "Cobertura",
+          "Categorías anatómicas",
+          "121"
+        ],
+        [
+          "Ensayos",
+          "Modelos comparados",
+          "12"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-28",
+    "reviewed": "29 octubre 2026",
+    "rich_detail": true,
+    "code": "No se verificó repositorio oficial.",
+    "cost": "Costos de laboratorio, desarrollo, inferencia e implementación no reportados.",
+    "figures": [],
+    "flag": "🇨🇳",
+    "countryFlags": "🇨🇳",
+    "country": "China",
+    "rubro": "Modelos predictivos clínicos",
+    "area": "Obstetricia y endocrinología",
+    "modality": "Datos de laboratorio y antecedentes clínicos del primer trimestre",
+    "title": "A machine learning-based predictive model for gestational diabetes mellitus based on first trimester clinical indicators",
+    "title_es": "Modelo de aprendizaje automático para predecir diabetes gestacional mediante indicadores clínicos del primer trimestre",
+    "institution": "Jiaxing Maternity and Child Health Care Hospital / Jiaxing University; Fujian Cancer Hospital / Fujian Medical University",
+    "sample": "260 gestantes (130 con diabetes gestacional y 130 controles), separadas aleatoriamente en entrenamiento (182) y prueba (78).",
+    "design": "Estudio clínico de casos y controles; 16 indicadores iniciales, selección LASSO de nueve variables, diagnóstico de colinealidad, comparación de ocho algoritmos y análisis de calibración, decisión clínica y SHAP.",
+    "model": "Regresión logística como modelo seleccionado; LASSO para selección de características y SHAP para explicación; ocho clasificadores comparados.",
+    "metrics": "En prueba: AUC 0,865 (IC95% 0,777–0,954); sensibilidad 0,795; especificidad 0,846; exactitud 0,821; F1 0,816. Glucosa plasmática en ayunas fue la variable con mayor contribución.",
+    "summary": "Un modelo interpretable con variables rutinarias del primer trimestre alcanzó discriminación moderada-alta en una prueba interna, con beneficio incremental limitado respecto a glucosa basal.",
+    "limitations": "Solo 78 personas en prueba; muestra equilibrada artificialmente entre casos y controles; calibración imperfecta, sin validación externa; no usar como herramienta diagnóstica clínica sin recalibración.",
+    "remember": "Solo 78 personas en prueba; muestra equilibrada artificialmente entre casos y controles; calibración imperfecta, sin validación externa; no usar como herramienta diagnóstica clínica sin recalibración.",
+    "language": "No se especificó un lenguaje de implementación único en los apartados verificados.",
+    "framework": "LASSO, regresión logística, SHAP y curvas de calibración/decisión; software y versiones no confirmados.",
+    "hardware": "Análisis de laboratorio de rutina; plataformas analíticas, CPU/GPU y servidores no reportados.",
+    "paper": "https://doi.org/10.1038/s41598-026-77579-2",
+    "doi": "10.1038/s41598-026-77579-2",
+    "published": "28 octubre 2026",
+    "journal": "Scientific Reports · 2026",
+    "key_metric": "AUC 0,865 · n=260",
+    "rich": {
+      "problem": "Un modelo interpretable con variables rutinarias del primer trimestre alcanzó discriminación moderada-alta en una prueba interna, con beneficio incremental limitado respecto a glucosa basal.",
+      "idea": "Regresión logística como modelo seleccionado; LASSO para selección de características y SHAP para explicación; ocho clasificadores comparados.",
+      "why": "Estudio revisado en fuente original con métricas y limitaciones específicas; la utilidad clínica requiere evaluación independiente.",
+      "interpretability": "Solo 78 personas en prueba; muestra equilibrada artificialmente entre casos y controles; calibración imperfecta, sin validación externa; no usar como herramienta diagnóstica clínica sin recalibración.",
+      "dataset_cards": [
+        {
+          "name": "Cohorte",
+          "value": "260 gestantes",
+          "detail": "130 casos y 130 controles"
+        },
+        {
+          "name": "Entrenamiento",
+          "value": "182",
+          "detail": "Separación aleatoria"
+        },
+        {
+          "name": "Prueba",
+          "value": "78",
+          "detail": "Validación interna"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "AUC",
+          "main": "0,865",
+          "sub": "IC95% 0,777–0,954"
+        },
+        {
+          "label": "Sensibilidad",
+          "main": "79,5%",
+          "sub": "Prueba interna"
+        },
+        {
+          "label": "Especificidad",
+          "main": "84,6%",
+          "sub": "Prueba interna"
+        }
+      ],
+      "implementation": [
+        "Estudio clínico de casos y controles; 16 indicadores iniciales, selección LASSO de nueve variables, diagnóstico de colinealidad, comparación de ocho algoritmos y análisis de calibración, decisión clínica y SHAP.",
+        "Software: LASSO, regresión logística, SHAP y curvas de calibración/decisión; software y versiones no confirmados.",
+        "Hardware: Análisis de laboratorio de rutina; plataformas analíticas, CPU/GPU y servidores no reportados.",
+        "Costos: Costos de laboratorio, desarrollo, inferencia e implementación no reportados.",
+        "Código: No se verificó repositorio oficial."
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Prueba interna",
+          "AUC",
+          "0,865"
+        ],
+        [
+          "Prueba interna",
+          "Sensibilidad",
+          "0,795"
+        ],
+        [
+          "Prueba interna",
+          "Especificidad",
+          "0,846"
+        ],
+        [
+          "Prueba interna",
+          "Exactitud",
+          "0,821"
+        ],
+        [
+          "Prueba interna",
+          "F1",
+          "0,816"
+        ]
+      ]
+    }
+  },
+  {
     "date": "2026-10-27",
     "reviewed": "28 octubre 2026",
     "rich_detail": true,
