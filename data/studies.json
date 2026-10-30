@@ -1,5 +1,723 @@
 [
   {
+    "date": "2026-10-30",
+    "reviewed": "30 octubre 2026",
+    "rich_detail": true,
+    "code": "No confirmado en la fuente original consultada",
+    "cost": "Costos monetarios de entrenamiento, adquisición e inferencia no reportados. Recursos HPC financiados por IDRIS/GENCI.",
+    "figures": [],
+    "flag": "🇫🇷 🇰🇷",
+    "countryFlags": "🇫🇷 🇰🇷",
+    "country": "Francia; Corea del Sur",
+    "rubro": "IA interpretable y radiología",
+    "area": "Oncología hepática",
+    "modality": "Tomografía computarizada hepática multifásica",
+    "title": "An interpretable deep learning method for early hepatocellular carcinoma diagnosis on multiphase CT",
+    "title_es": "Método interpretable de aprendizaje profundo para diagnóstico temprano de carcinoma hepatocelular en TC multifásica",
+    "institution": "Guerbet Research; Télécom Paris; Université Paris Cité; Seoul National University Hospital; CHU Angers",
+    "sample": "143 pacientes y 196 lesiones para entrenamiento; 62 pacientes y 84 lesiones para evaluación interna; 133 pacientes y 171 lesiones para validación externa. Lesiones de hasta 40 mm.",
+    "design": "Estudio retrospectivo multicéntrico; lesiones segmentadas manualmente en TC multifásica; histología como referencia para carcinoma hepatocelular y referencia compuesta para lesiones no HCC. Pruebas bootstrap de no inferioridad con 10.000 repeticiones.",
+    "model": "dLI-RADS: predicciones de red neuronal combinadas con mediciones cuantitativas diseñadas para reflejar rasgos LI-RADS, integradas por regresión logística.",
+    "metrics": "Exactitud interna 80% frente a 74% de LI-RADS (no inferioridad p=0,04). Validación externa: sensibilidad 93% frente a 78% de LI-RADS; especificidad 74%, exactitud 86%, AUC 0,84.",
+    "summary": "El sistema híbrido ofrece predicciones interpretables para lesiones hepáticas pequeñas en TC multifásica, con validación externa multicéntrica.",
+    "limitations": "Requiere segmentación manual; diseño retrospectivo; no se dispuso de rasgos LI-RADS en lesiones no HCC del conjunto externo, por lo que solo la sensibilidad pudo compararse directamente con LI-RADS; no demuestra impacto clínico prospectivo.",
+    "remember": "Requiere segmentación manual; diseño retrospectivo; no se dispuso de rasgos LI-RADS en lesiones no HCC del conjunto externo, por lo que solo la sensibilidad pudo compararse directamente con LI-RADS; no demuestra impacto clínico prospectivo.",
+    "language": "No confirmado en la fuente original consultada",
+    "framework": "Red neuronal de imagen, mediciones radiológicas cuantitativas, regresión logística y pruebas bootstrap; framework y versiones no confirmados.",
+    "hardware": "Tomógrafos multifásicos y recursos de cálculo de alto rendimiento IDRIS/GENCI; modelo de GPU no confirmado.",
+    "paper": "https://doi.org/10.1038/s41598-026-77611-5",
+    "doi": "10.1038/s41598-026-77611-5",
+    "published": "30 octubre 2026",
+    "journal": "Scientific Reports · 2026",
+    "key_metric": "AUC externa 0,84 · sensibilidad 93%",
+    "rich": {
+      "problem": "El sistema híbrido ofrece predicciones interpretables para lesiones hepáticas pequeñas en TC multifásica, con validación externa multicéntrica.",
+      "idea": "dLI-RADS: predicciones de red neuronal combinadas con mediciones cuantitativas diseñadas para reflejar rasgos LI-RADS, integradas por regresión logística.",
+      "why": "Fuente primaria científica verificada; la utilidad clínica debe interpretarse según diseño, población y validación.",
+      "interpretability": "Requiere segmentación manual; diseño retrospectivo; no se dispuso de rasgos LI-RADS en lesiones no HCC del conjunto externo, por lo que solo la sensibilidad pudo compararse directamente con LI-RADS; no demuestra impacto clínico prospectivo.",
+      "dataset_cards": [
+        {
+          "name": "Entrenamiento",
+          "value": "143 pacientes",
+          "detail": "196 lesiones"
+        },
+        {
+          "name": "Prueba interna",
+          "value": "62 pacientes",
+          "detail": "84 lesiones"
+        },
+        {
+          "name": "Validación externa",
+          "value": "133 pacientes",
+          "detail": "171 lesiones"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Exactitud interna",
+          "main": "80%",
+          "sub": "LI-RADS 74%"
+        },
+        {
+          "label": "Sensibilidad externa",
+          "main": "93%",
+          "sub": "LI-RADS 78%"
+        },
+        {
+          "label": "AUC externa",
+          "main": "0,84",
+          "sub": "Especificidad 74%"
+        }
+      ],
+      "implementation": [
+        "Metodología: Estudio retrospectivo multicéntrico; lesiones segmentadas manualmente en TC multifásica; histología como referencia para carcinoma hepatocelular y referencia compuesta para lesiones no HCC. Pruebas bootstrap de no inferioridad con 10.000 repeticiones.",
+        "Arquitectura: dLI-RADS: predicciones de red neuronal combinadas con mediciones cuantitativas diseñadas para reflejar rasgos LI-RADS, integradas por regresión logística.",
+        "Hardware: Tomógrafos multifásicos y recursos de cálculo de alto rendimiento IDRIS/GENCI; modelo de GPU no confirmado.",
+        "Software: Red neuronal de imagen, mediciones radiológicas cuantitativas, regresión logística y pruebas bootstrap; framework y versiones no confirmados.",
+        "Costos: Costos monetarios de entrenamiento, adquisición e inferencia no reportados. Recursos HPC financiados por IDRIS/GENCI.",
+        "Limitaciones: Requiere segmentación manual; diseño retrospectivo; no se dispuso de rasgos LI-RADS en lesiones no HCC del conjunto externo, por lo que solo la sensibilidad pudo compararse directamente con LI-RADS; no demuestra impacto clínico prospectivo.",
+        "Fuente original: https://doi.org/10.1038/s41598-026-77611-5"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Evaluación interna",
+          "Exactitud dLI-RADS / LI-RADS",
+          "80% / 74%"
+        ],
+        [
+          "Validación externa",
+          "Sensibilidad dLI-RADS / LI-RADS",
+          "93% / 78%"
+        ],
+        [
+          "Validación externa",
+          "Especificidad",
+          "74%"
+        ],
+        [
+          "Validación externa",
+          "AUC",
+          "0,84"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-29",
+    "reviewed": "30 octubre 2026",
+    "rich_detail": true,
+    "code": "No confirmado en la fuente original consultada",
+    "cost": "Costos monetarios no reportados.",
+    "figures": [],
+    "flag": "🇨🇳",
+    "countryFlags": "🇨🇳",
+    "country": "China (cohortes de datos de EE. UU.)",
+    "rubro": "Predicción clínica interpretable",
+    "area": "Cardiología y cuidados intensivos",
+    "modality": "Historias clínicas MIMIC-IV y eICU",
+    "title": "Interpretable prediction of in-hospital venous thromboembolism in critically ill patients with heart failure receiving early thromboprophylaxis",
+    "title_es": "Predicción interpretable de tromboembolismo venoso intrahospitalario en pacientes críticos con insuficiencia cardíaca",
+    "institution": "Zhejiang University School of Medicine; The Second Affiliated Hospital of Zhejiang University",
+    "sample": "8.825 pacientes de MIMIC-IV para desarrollo y evaluación interna; 5.425 registros de eICU para validación externa.",
+    "design": "Estudio retrospectivo de nueve modelos; selección de 15 predictores mediante LASSO y Boruta; validación externa, análisis SHAP, calibración del intercepto con validación cruzada y curvas de decisión.",
+    "model": "XGBoost como mejor clasificador observado entre nueve modelos, con LASSO, Boruta y explicaciones SHAP.",
+    "metrics": "AUC interna 0,764 (IC95% 0,723–0,805); AUC externa 0,731 (IC95% 0,676–0,786). Recalibración exploratoria mejoró calibración y exactitud predictiva global.",
+    "summary": "Modelo de riesgo basado en datos rutinarios para identificar pacientes con insuficiencia cardíaca y riesgo de tromboembolismo pese a tromboprofilaxis temprana.",
+    "limitations": "Diseño retrospectivo; discriminación moderada; deriva de calibración entre bases; la asociación de predictores no demuestra causalidad ni valida cambios de tratamiento.",
+    "remember": "Diseño retrospectivo; discriminación moderada; deriva de calibración entre bases; la asociación de predictores no demuestra causalidad ni valida cambios de tratamiento.",
+    "language": "No confirmado en la fuente original consultada",
+    "framework": "XGBoost, LASSO, Boruta, SHAP y recalibración estadística; versiones y lenguaje no confirmados.",
+    "hardware": "Sistemas de historias clínicas de UCI y servidores analíticos; procesador y GPU no especificados.",
+    "paper": "https://doi.org/10.1038/s41598-026-77293-z",
+    "doi": "10.1038/s41598-026-77293-z",
+    "published": "29 octubre 2026",
+    "journal": "Scientific Reports · 2026",
+    "key_metric": "AUC externa 0,731",
+    "rich": {
+      "problem": "Modelo de riesgo basado en datos rutinarios para identificar pacientes con insuficiencia cardíaca y riesgo de tromboembolismo pese a tromboprofilaxis temprana.",
+      "idea": "XGBoost como mejor clasificador observado entre nueve modelos, con LASSO, Boruta y explicaciones SHAP.",
+      "why": "Fuente primaria científica verificada; la utilidad clínica debe interpretarse según diseño, población y validación.",
+      "interpretability": "Diseño retrospectivo; discriminación moderada; deriva de calibración entre bases; la asociación de predictores no demuestra causalidad ni valida cambios de tratamiento.",
+      "dataset_cards": [
+        {
+          "name": "MIMIC-IV",
+          "value": "8.825",
+          "detail": "Desarrollo/interna"
+        },
+        {
+          "name": "eICU",
+          "value": "5.425",
+          "detail": "Validación externa"
+        },
+        {
+          "name": "Predictores",
+          "value": "15",
+          "detail": "LASSO + Boruta"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "AUC interna",
+          "main": "0,764",
+          "sub": "IC95% 0,723–0,805"
+        },
+        {
+          "label": "AUC externa",
+          "main": "0,731",
+          "sub": "IC95% 0,676–0,786"
+        },
+        {
+          "label": "Explicabilidad",
+          "main": "SHAP",
+          "sub": "Variables clínicas"
+        }
+      ],
+      "implementation": [
+        "Metodología: Estudio retrospectivo de nueve modelos; selección de 15 predictores mediante LASSO y Boruta; validación externa, análisis SHAP, calibración del intercepto con validación cruzada y curvas de decisión.",
+        "Arquitectura: XGBoost como mejor clasificador observado entre nueve modelos, con LASSO, Boruta y explicaciones SHAP.",
+        "Hardware: Sistemas de historias clínicas de UCI y servidores analíticos; procesador y GPU no especificados.",
+        "Software: XGBoost, LASSO, Boruta, SHAP y recalibración estadística; versiones y lenguaje no confirmados.",
+        "Costos: Costos monetarios no reportados.",
+        "Limitaciones: Diseño retrospectivo; discriminación moderada; deriva de calibración entre bases; la asociación de predictores no demuestra causalidad ni valida cambios de tratamiento.",
+        "Fuente original: https://doi.org/10.1038/s41598-026-77293-z"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Interna",
+          "AUC ROC",
+          "0,764"
+        ],
+        [
+          "Externa",
+          "AUC ROC",
+          "0,731"
+        ],
+        [
+          "Selección de variables",
+          "Número de predictores",
+          "15"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-29",
+    "reviewed": "30 octubre 2026",
+    "rich_detail": true,
+    "code": "No confirmado en la fuente original consultada",
+    "cost": "Costos de tokens, inferencia, entrenamiento y revisión humana no reportados en el resumen.",
+    "figures": [],
+    "flag": "🇭🇰 🇨🇳 🇺🇸",
+    "countryFlags": "🇭🇰 🇨🇳 🇺🇸",
+    "country": "Hong Kong; China; Estados Unidos",
+    "rubro": "Seguridad de LLM clínicos",
+    "area": "Diagnóstico clínico y gobernanza de IA",
+    "modality": "Historias clínicas longitudinales; benchmark AIMS-LDR",
+    "title": "The accuracy-safety trade-off of large reasoning models in clinical diagnostics",
+    "title_es": "Compromiso entre exactitud y seguridad de los modelos de razonamiento avanzado en diagnóstico clínico",
+    "institution": "The University of Hong Kong; Tsinghua University; Harvard Medical School; Massachusetts General Hospital y colaboradores",
+    "sample": "Seis pares emparejados de modelos LRM/LLM evaluados en 12 especialidades; validación de colaboración humano-IA con 15 médicos. Número de historias clínicas no confirmado en el resumen original.",
+    "design": "Benchmark retrospectivo AIMS-LDR basado en historias clínicas reales; comparación de exactitud diagnóstica, falsos positivos, reproducibilidad y relevancia de diferenciales; ensayos de prompts e hiperparámetros; estudio de 15 médicos.",
+    "model": "Seis pares de large reasoning models (LRM) y large language models (LLM), con flujo colaborativo: el LRM propone diferenciales y el clínico verifica confiabilidad.",
+    "metrics": "LRM generaron más de 34% más diagnósticos falsos positivos y aproximadamente 40% menor reproducibilidad que LLM emparejados. Colaboración estructurada con médicos: +20% de exactitud diagnóstica y -44% de falsos positivos en evaluación controlada.",
+    "summary": "El razonamiento extenso puede mejorar diagnósticos principales, pero aumentar falsos positivos e inestabilidad; la supervisión clínica estructurada mitigó parte del riesgo.",
+    "limitations": "Evaluación retrospectiva controlada, no atención clínica prospectiva; la mejora relativa no debe interpretarse como eficacia o seguridad probada en despliegue real.",
+    "remember": "Evaluación retrospectiva controlada, no atención clínica prospectiva; la mejora relativa no debe interpretarse como eficacia o seguridad probada en despliegue real.",
+    "language": "No confirmado en la fuente original consultada",
+    "framework": "AIMS-LDR, seis pares de LRM/LLM, estrategias de prompting y evaluación médico-IA; versiones exactas de modelos no confirmadas en el resumen.",
+    "hardware": "Infraestructura de inferencia para LLM/LRM; GPU, memoria y consumo no reportados en el resumen original.",
+    "paper": "https://doi.org/10.1038/s41467-026-78520-x",
+    "doi": "10.1038/s41467-026-78520-x",
+    "published": "29 octubre 2026",
+    "journal": "Nature Communications · 2026",
+    "key_metric": "+34% falsos positivos LRM",
+    "rich": {
+      "problem": "El razonamiento extenso puede mejorar diagnósticos principales, pero aumentar falsos positivos e inestabilidad; la supervisión clínica estructurada mitigó parte del riesgo.",
+      "idea": "Seis pares de large reasoning models (LRM) y large language models (LLM), con flujo colaborativo: el LRM propone diferenciales y el clínico verifica confiabilidad.",
+      "why": "Fuente primaria científica verificada; la utilidad clínica debe interpretarse según diseño, población y validación.",
+      "interpretability": "Evaluación retrospectiva controlada, no atención clínica prospectiva; la mejora relativa no debe interpretarse como eficacia o seguridad probada en despliegue real.",
+      "dataset_cards": [
+        {
+          "name": "Benchmark",
+          "value": "12 especialidades",
+          "detail": "Historias clínicas reales"
+        },
+        {
+          "name": "Modelos",
+          "value": "6 pares",
+          "detail": "LRM frente a LLM"
+        },
+        {
+          "name": "Validación humana",
+          "value": "15 médicos",
+          "detail": "Estudio controlado"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Falsos positivos LRM",
+          "main": "+34%",
+          "sub": "Frente a LLM"
+        },
+        {
+          "label": "Reproducibilidad",
+          "main": "≈40% menor",
+          "sub": "LRM vs LLM"
+        },
+        {
+          "label": "Con médico",
+          "main": "+20%",
+          "sub": "Exactitud diagnóstica"
+        }
+      ],
+      "implementation": [
+        "Metodología: Benchmark retrospectivo AIMS-LDR basado en historias clínicas reales; comparación de exactitud diagnóstica, falsos positivos, reproducibilidad y relevancia de diferenciales; ensayos de prompts e hiperparámetros; estudio de 15 médicos.",
+        "Arquitectura: Seis pares de large reasoning models (LRM) y large language models (LLM), con flujo colaborativo: el LRM propone diferenciales y el clínico verifica confiabilidad.",
+        "Hardware: Infraestructura de inferencia para LLM/LRM; GPU, memoria y consumo no reportados en el resumen original.",
+        "Software: AIMS-LDR, seis pares de LRM/LLM, estrategias de prompting y evaluación médico-IA; versiones exactas de modelos no confirmadas en el resumen.",
+        "Costos: Costos de tokens, inferencia, entrenamiento y revisión humana no reportados en el resumen.",
+        "Limitaciones: Evaluación retrospectiva controlada, no atención clínica prospectiva; la mejora relativa no debe interpretarse como eficacia o seguridad probada en despliegue real.",
+        "Fuente original: https://doi.org/10.1038/s41467-026-78520-x"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "LRM vs LLM",
+          "Falsos positivos",
+          "Más de +34%"
+        ],
+        [
+          "LRM vs LLM",
+          "Reproducibilidad",
+          "≈40% menor"
+        ],
+        [
+          "Colaboración",
+          "Cambio en exactitud",
+          "+20%"
+        ],
+        [
+          "Colaboración",
+          "Cambio en falsos positivos",
+          "-44%"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-29",
+    "reviewed": "30 octubre 2026",
+    "rich_detail": true,
+    "code": "No confirmado en la fuente original consultada",
+    "cost": "Costos de digitalización, cómputo y análisis molecular no reportados.",
+    "figures": [],
+    "flag": "🇩🇪 🇺🇸",
+    "countryFlags": "🇩🇪 🇺🇸",
+    "country": "Alemania; Estados Unidos",
+    "rubro": "Patología digital y biomarcadores",
+    "area": "Leucemia mieloide aguda",
+    "modality": "Láminas completas digitalizadas de aspirado de médula ósea",
+    "title": "Deep learning predicts IDH1 mutation status in acute myeloid leukemia from bone marrow smears",
+    "title_es": "Aprendizaje profundo para predecir mutación IDH1 en leucemia mieloide aguda a partir de frotis medulares",
+    "institution": "TUD Dresden University of Technology; University Hospital Carl Gustav Carus; The Ohio State University Comprehensive Cancer Center; Cancilico",
+    "sample": "436 pacientes con leucemia mieloide aguda procedentes de cuatro centros de Alemania y Estados Unidos.",
+    "design": "Estudio multicéntrico de imágenes histológicas de frotis de médula ósea; predicción del estado de mutación IDH1 a nivel de lámina mediante aprendizaje por instancias múltiples y análisis de parches de mayor contribución.",
+    "model": "Multiple Instance Learning (MIL) basado en mecanismos de atención sobre parches de whole-slide images.",
+    "metrics": "ROC-AUC media agrupada 0,81 para predicción de mutación IDH1. Los parches más relevantes se asociaron con fenotipos leucémicos inmaduros.",
+    "summary": "Las imágenes de frotis medular contienen señales morfológicas asociadas al estado IDH1, potencialmente útiles como herramienta investigativa de priorización.",
+    "limitations": "AUC moderada, diseño retrospectivo, no sustituye secuenciación molecular ni prueba de mutación validada; rendimiento clínico prospectivo y robustez fuera de los cuatro centros no demostrados.",
+    "remember": "AUC moderada, diseño retrospectivo, no sustituye secuenciación molecular ni prueba de mutación validada; rendimiento clínico prospectivo y robustez fuera de los cuatro centros no demostrados.",
+    "language": "No confirmado en la fuente original consultada",
+    "framework": "MIL con atención y análisis de tiles; lenguaje, framework y versiones no confirmados en resumen.",
+    "hardware": "Escáneres de láminas de médula ósea y cómputo para WSI; modelos de escáner/GPU no confirmados.",
+    "paper": "https://doi.org/10.1038/s41698-026-01762-x",
+    "doi": "10.1038/s41698-026-01762-x",
+    "published": "29 octubre 2026",
+    "journal": "npj Precision Oncology · 2026",
+    "key_metric": "AUC 0,81 · 436 pacientes",
+    "rich": {
+      "problem": "Las imágenes de frotis medular contienen señales morfológicas asociadas al estado IDH1, potencialmente útiles como herramienta investigativa de priorización.",
+      "idea": "Multiple Instance Learning (MIL) basado en mecanismos de atención sobre parches de whole-slide images.",
+      "why": "Fuente primaria científica verificada; la utilidad clínica debe interpretarse según diseño, población y validación.",
+      "interpretability": "AUC moderada, diseño retrospectivo, no sustituye secuenciación molecular ni prueba de mutación validada; rendimiento clínico prospectivo y robustez fuera de los cuatro centros no demostrados.",
+      "dataset_cards": [
+        {
+          "name": "Pacientes",
+          "value": "436",
+          "detail": "LMA"
+        },
+        {
+          "name": "Centros",
+          "value": "4",
+          "detail": "Alemania y EE. UU."
+        },
+        {
+          "name": "Modalidad",
+          "value": "WSI",
+          "detail": "Frotis medular"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Predicción IDH1",
+          "main": "AUC 0,81",
+          "sub": "Media agrupada"
+        },
+        {
+          "label": "Arquitectura",
+          "main": "Attention MIL",
+          "sub": "Parches histológicos"
+        },
+        {
+          "label": "Análisis morfológico",
+          "main": "Top tiles",
+          "sub": "Fenotipos inmaduros"
+        }
+      ],
+      "implementation": [
+        "Metodología: Estudio multicéntrico de imágenes histológicas de frotis de médula ósea; predicción del estado de mutación IDH1 a nivel de lámina mediante aprendizaje por instancias múltiples y análisis de parches de mayor contribución.",
+        "Arquitectura: Multiple Instance Learning (MIL) basado en mecanismos de atención sobre parches de whole-slide images.",
+        "Hardware: Escáneres de láminas de médula ósea y cómputo para WSI; modelos de escáner/GPU no confirmados.",
+        "Software: MIL con atención y análisis de tiles; lenguaje, framework y versiones no confirmados en resumen.",
+        "Costos: Costos de digitalización, cómputo y análisis molecular no reportados.",
+        "Limitaciones: AUC moderada, diseño retrospectivo, no sustituye secuenciación molecular ni prueba de mutación validada; rendimiento clínico prospectivo y robustez fuera de los cuatro centros no demostrados.",
+        "Fuente original: https://doi.org/10.1038/s41698-026-01762-x"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Mutación IDH1",
+          "ROC-AUC media agrupada",
+          "0,81"
+        ],
+        [
+          "Evaluación multicéntrica",
+          "Pacientes",
+          "436"
+        ],
+        [
+          "Evaluación multicéntrica",
+          "Centros",
+          "4"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-30",
+    "reviewed": "30 octubre 2026",
+    "rich_detail": true,
+    "code": "No confirmado en la fuente original consultada",
+    "cost": "Costo de hardware, inferencia y despliegue no reportado; financiación de investigación y cargos de publicación declarados.",
+    "figures": [],
+    "flag": "🇸🇦 🇾🇪 🇰🇷",
+    "countryFlags": "🇸🇦 🇾🇪 🇰🇷",
+    "country": "Arabia Saudita; Yemen; Corea del Sur",
+    "rubro": "Visión artificial de heridas",
+    "area": "Pie diabético y dermatología",
+    "modality": "Imágenes clínicas de úlceras de pie diabético",
+    "title": "Hybrid deep feature fusion framework with maximum entropy based selection for accurate diabetic foot ulcer diagnosis from enhanced and segmented medical images",
+    "title_es": "Fusión híbrida de características profundas y selección por máxima entropía para clasificar úlceras de pie diabético",
+    "institution": "Najran University; Al-Razi University; Prince Sultan University; Korea University y colaboradores",
+    "sample": "Conjunto de imágenes de úlceras diabéticas evaluado por los autores; número de imágenes y pacientes no confirmado en el resumen original accesible.",
+    "design": "Mejora de imagen con filtros promedio y laplaciano, contorno activo geométrico (GAC) para aislar lesión; extracción de características CNN, fusión, selección por PCA o máxima entropía (MESbS) y clasificación ANN.",
+    "model": "AlexNet, MobileNetV2 y VGG16 como extractores de características; concatenación y selección MESbS; clasificador ANN híbrido.",
+    "metrics": "Configuración AlexNet-MobileNetV2-VGG16-ANN con MESbS: AUC 99%, sensibilidad 99,7%, exactitud 99,5%, precisión 99,5% y especificidad 99,75% en dataset experimental.",
+    "summary": "La combinación de segmentación, fusión de CNN y selección de características logró métricas altas en la evaluación del conjunto de imágenes utilizado.",
+    "limitations": "Tamaño de muestra no verificable en resumen; no se ha demostrado validación clínica prospectiva ni generalización a imágenes de otros hospitales o teléfonos. Cifras cercanas a 100% requieren revisar particiones y fuga de datos.",
+    "remember": "Tamaño de muestra no verificable en resumen; no se ha demostrado validación clínica prospectiva ni generalización a imágenes de otros hospitales o teléfonos. Cifras cercanas a 100% requieren revisar particiones y fuga de datos.",
+    "language": "No confirmado en la fuente original consultada",
+    "framework": "AlexNet, MobileNetV2, VGG16, GAC, PCA, MESbS y ANN; versiones y lenguaje no confirmados.",
+    "hardware": "Cámaras clínicas usadas para imágenes de heridas; dispositivo y GPU no reportados en resumen original.",
+    "paper": "https://doi.org/10.1038/s41598-026-74375-w",
+    "doi": "10.1038/s41598-026-74375-w",
+    "published": "30 octubre 2026",
+    "journal": "Scientific Reports · 2026",
+    "key_metric": "Exactitud 99,5% (experimental)",
+    "rich": {
+      "problem": "La combinación de segmentación, fusión de CNN y selección de características logró métricas altas en la evaluación del conjunto de imágenes utilizado.",
+      "idea": "AlexNet, MobileNetV2 y VGG16 como extractores de características; concatenación y selección MESbS; clasificador ANN híbrido.",
+      "why": "Fuente primaria científica verificada; la utilidad clínica debe interpretarse según diseño, población y validación.",
+      "interpretability": "Tamaño de muestra no verificable en resumen; no se ha demostrado validación clínica prospectiva ni generalización a imágenes de otros hospitales o teléfonos. Cifras cercanas a 100% requieren revisar particiones y fuga de datos.",
+      "dataset_cards": [
+        {
+          "name": "Entrada",
+          "value": "Imágenes DFU",
+          "detail": "N no confirmado"
+        },
+        {
+          "name": "Segmentación",
+          "value": "GAC",
+          "detail": "Contorno activo"
+        },
+        {
+          "name": "Fusión",
+          "value": "3 CNN",
+          "detail": "AlexNet/MobileNet/VGG"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Exactitud",
+          "main": "99,5%",
+          "sub": "Dataset evaluado"
+        },
+        {
+          "label": "Sensibilidad",
+          "main": "99,7%",
+          "sub": "Dataset evaluado"
+        },
+        {
+          "label": "Especificidad",
+          "main": "99,75%",
+          "sub": "Dataset evaluado"
+        }
+      ],
+      "implementation": [
+        "Metodología: Mejora de imagen con filtros promedio y laplaciano, contorno activo geométrico (GAC) para aislar lesión; extracción de características CNN, fusión, selección por PCA o máxima entropía (MESbS) y clasificación ANN.",
+        "Arquitectura: AlexNet, MobileNetV2 y VGG16 como extractores de características; concatenación y selección MESbS; clasificador ANN híbrido.",
+        "Hardware: Cámaras clínicas usadas para imágenes de heridas; dispositivo y GPU no reportados en resumen original.",
+        "Software: AlexNet, MobileNetV2, VGG16, GAC, PCA, MESbS y ANN; versiones y lenguaje no confirmados.",
+        "Costos: Costo de hardware, inferencia y despliegue no reportado; financiación de investigación y cargos de publicación declarados.",
+        "Limitaciones: Tamaño de muestra no verificable en resumen; no se ha demostrado validación clínica prospectiva ni generalización a imágenes de otros hospitales o teléfonos. Cifras cercanas a 100% requieren revisar particiones y fuga de datos.",
+        "Fuente original: https://doi.org/10.1038/s41598-026-74375-w"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Clasificación",
+          "AUC",
+          "0,99"
+        ],
+        [
+          "Clasificación",
+          "Exactitud",
+          "99,5%"
+        ],
+        [
+          "Clasificación",
+          "Sensibilidad",
+          "99,7%"
+        ],
+        [
+          "Clasificación",
+          "Especificidad",
+          "99,75%"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-30",
+    "reviewed": "30 octubre 2026",
+    "rich_detail": true,
+    "code": "No confirmado en la fuente original consultada",
+    "cost": "Costos monetarios no reportados.",
+    "figures": [],
+    "flag": "🇨🇳",
+    "countryFlags": "🇨🇳",
+    "country": "China",
+    "rubro": "Bioinformática y biomarcadores",
+    "area": "Osteoartritis y sinovitis",
+    "modality": "Transcriptómica de tejido sinovial; qRT-PCR; Western blot",
+    "title": "Identification of ferroptosis-related key genes influencing synovitis development in osteoarthritis based on machine learning",
+    "title_es": "Identificación de genes relacionados con ferroptosis asociados a sinovitis por osteoartritis mediante aprendizaje automático",
+    "institution": "Hainan General Hospital; Hainan Medical University",
+    "sample": "64 muestras de tejido sinovial de GEO: 32 con osteoartritis y 32 controles (GSE55235, GSE55457, GSE46750). División 45 entrenamiento / 19 prueba.",
+    "design": "Análisis diferencial de expresión, redes WGCNA, intersección de genes asociados a ferroptosis, comparación RF/SVM/XGBoost con validación cruzada de diez particiones y prueba; análisis inmunitario y comprobación molecular qRT-PCR/Western blot.",
+    "model": "Support Vector Machine (SVM) con mejor AUC de prueba frente a Random Forest y XGBoost; WGCNA para priorización del gen candidato CARS.",
+    "metrics": "AUC prueba: SVM 0,950; Random Forest 0,850; XGBoost 0,750. AUC entrenamiento: 0,963 (SVM), 1,000 (RF) y 1,000 (XGBoost). CARS elevado en tejido OA.",
+    "summary": "Identifica CARS como gen candidato asociado a sinovitis y cambios inmunitarios, con comprobación de expresión a nivel de RNA y proteína.",
+    "limitations": "Muestra pequeña y prueba de 19 muestras; posible sobreajuste; sin validación externa multicéntrica; asociaciones de CARS con ferroptosis no demuestran mecanismo causal.",
+    "remember": "Muestra pequeña y prueba de 19 muestras; posible sobreajuste; sin validación externa multicéntrica; asociaciones de CARS con ferroptosis no demuestran mecanismo causal.",
+    "language": "No confirmado en la fuente original consultada",
+    "framework": "R (limma, WGCNA, ggord, pheatmap), Random Forest, SVM, XGBoost, GO/KEGG y análisis ceRNA.",
+    "hardware": "Muestras de tejido y equipos de qRT-PCR/Western blot; plataforma de secuenciación original y GPU no especificadas.",
+    "paper": "https://doi.org/10.1038/s41598-026-61921-9",
+    "doi": "10.1038/s41598-026-61921-9",
+    "published": "30 octubre 2026",
+    "journal": "Scientific Reports · 2026",
+    "key_metric": "AUC SVM prueba 0,95",
+    "rich": {
+      "problem": "Identifica CARS como gen candidato asociado a sinovitis y cambios inmunitarios, con comprobación de expresión a nivel de RNA y proteína.",
+      "idea": "Support Vector Machine (SVM) con mejor AUC de prueba frente a Random Forest y XGBoost; WGCNA para priorización del gen candidato CARS.",
+      "why": "Fuente primaria científica verificada; la utilidad clínica debe interpretarse según diseño, población y validación.",
+      "interpretability": "Muestra pequeña y prueba de 19 muestras; posible sobreajuste; sin validación externa multicéntrica; asociaciones de CARS con ferroptosis no demuestran mecanismo causal.",
+      "dataset_cards": [
+        {
+          "name": "GEO",
+          "value": "64 muestras",
+          "detail": "32 OA + 32 control"
+        },
+        {
+          "name": "Entrenamiento",
+          "value": "45",
+          "detail": "Estratificado"
+        },
+        {
+          "name": "Prueba",
+          "value": "19",
+          "detail": "Independiente interna"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "AUC SVM",
+          "main": "0,950",
+          "sub": "Prueba"
+        },
+        {
+          "label": "AUC RF",
+          "main": "0,850",
+          "sub": "Prueba"
+        },
+        {
+          "label": "Gen candidato",
+          "main": "CARS",
+          "sub": "Confirmación molecular"
+        }
+      ],
+      "implementation": [
+        "Metodología: Análisis diferencial de expresión, redes WGCNA, intersección de genes asociados a ferroptosis, comparación RF/SVM/XGBoost con validación cruzada de diez particiones y prueba; análisis inmunitario y comprobación molecular qRT-PCR/Western blot.",
+        "Arquitectura: Support Vector Machine (SVM) con mejor AUC de prueba frente a Random Forest y XGBoost; WGCNA para priorización del gen candidato CARS.",
+        "Hardware: Muestras de tejido y equipos de qRT-PCR/Western blot; plataforma de secuenciación original y GPU no especificadas.",
+        "Software: R (limma, WGCNA, ggord, pheatmap), Random Forest, SVM, XGBoost, GO/KEGG y análisis ceRNA.",
+        "Costos: Costos monetarios no reportados.",
+        "Limitaciones: Muestra pequeña y prueba de 19 muestras; posible sobreajuste; sin validación externa multicéntrica; asociaciones de CARS con ferroptosis no demuestran mecanismo causal.",
+        "Fuente original: https://doi.org/10.1038/s41598-026-61921-9"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Prueba",
+          "AUC SVM",
+          "0,950"
+        ],
+        [
+          "Prueba",
+          "AUC Random Forest",
+          "0,850"
+        ],
+        [
+          "Prueba",
+          "AUC XGBoost",
+          "0,750"
+        ],
+        [
+          "Entrenamiento",
+          "AUC RF",
+          "1,000"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-30",
+    "reviewed": "30 octubre 2026",
+    "rich_detail": true,
+    "code": "No confirmado en la fuente original consultada",
+    "cost": "No se reportaron costos de implementación; artículo declara no haber recibido financiación de investigación.",
+    "figures": [],
+    "flag": "🇪🇬",
+    "countryFlags": "🇪🇬",
+    "country": "Egipto",
+    "rubro": "Implementación de IA odontológica",
+    "area": "Odontología y salud digital",
+    "modality": "Encuesta a profesionales sobre IA para lesiones orales potencialmente malignas",
+    "title": "Dentists’ acceptance of artificial intelligence-assisted decision support for oral potentially malignant disorder detection: a structural equation modeling study",
+    "title_es": "Aceptación de sistemas de apoyo odontológico con IA para detectar trastornos orales potencialmente malignos",
+    "institution": "The British University in Egypt, Faculty of Dentistry",
+    "sample": "Encuesta transversal a 500 odontólogos.",
+    "design": "Modelo ampliado de aceptación tecnológica TAM; análisis factorial confirmatorio, modelos de ecuaciones estructurales y mediación bootstrap para estudiar intención de uso de IA de apoyo clínico.",
+    "model": "Modelo estadístico de ecuaciones estructurales (SEM), no red neuronal ni herramienta diagnóstica entrenada; analiza adopción de tecnología.",
+    "metrics": "Actitud hacia IA β=0,550; dependencia de apoyo clínico β=0,220; utilidad percibida β=0,180; confianza β=0,140; facilidad de uso β=0,120. El modelo explica 67,5% de la varianza de intención de uso.",
+    "summary": "La actitud y confianza profesional están asociadas con la intención de usar IA en la evaluación de lesiones orales; estudio de implementación, no exactitud diagnóstica.",
+    "limitations": "Autorreporte transversal, sin medida de uso real ni evaluación de rendimiento clínico; las asociaciones SEM no demuestran causalidad.",
+    "remember": "Autorreporte transversal, sin medida de uso real ni evaluación de rendimiento clínico; las asociaciones SEM no demuestran causalidad.",
+    "language": "No confirmado en la fuente original consultada",
+    "framework": "Análisis factorial confirmatorio, SEM, mediación bootstrap y TAM ampliado; paquete estadístico no confirmado.",
+    "hardware": "No aplica equipamiento diagnóstico: encuesta a profesionales; infraestructura de análisis no especificada.",
+    "paper": "https://doi.org/10.1038/s41598-026-73787-y",
+    "doi": "10.1038/s41598-026-73787-y",
+    "published": "30 octubre 2026",
+    "journal": "Scientific Reports · 2026",
+    "key_metric": "500 odontólogos · R² 67,5%",
+    "rich": {
+      "problem": "La actitud y confianza profesional están asociadas con la intención de usar IA en la evaluación de lesiones orales; estudio de implementación, no exactitud diagnóstica.",
+      "idea": "Modelo estadístico de ecuaciones estructurales (SEM), no red neuronal ni herramienta diagnóstica entrenada; analiza adopción de tecnología.",
+      "why": "Fuente primaria científica verificada; la utilidad clínica debe interpretarse según diseño, población y validación.",
+      "interpretability": "Autorreporte transversal, sin medida de uso real ni evaluación de rendimiento clínico; las asociaciones SEM no demuestran causalidad.",
+      "dataset_cards": [
+        {
+          "name": "Encuestados",
+          "value": "500",
+          "detail": "Odontólogos"
+        },
+        {
+          "name": "Diseño",
+          "value": "Transversal",
+          "detail": "TAM ampliado"
+        },
+        {
+          "name": "Objeto",
+          "value": "Aceptación IA",
+          "detail": "No diagnóstico"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Actitud → intención",
+          "main": "β 0,550",
+          "sub": "Mayor asociación"
+        },
+        {
+          "label": "Varianza explicada",
+          "main": "67,5%",
+          "sub": "Intención de uso"
+        },
+        {
+          "label": "Confianza → intención",
+          "main": "β 0,140",
+          "sub": "Asociación"
+        }
+      ],
+      "implementation": [
+        "Metodología: Modelo ampliado de aceptación tecnológica TAM; análisis factorial confirmatorio, modelos de ecuaciones estructurales y mediación bootstrap para estudiar intención de uso de IA de apoyo clínico.",
+        "Arquitectura: Modelo estadístico de ecuaciones estructurales (SEM), no red neuronal ni herramienta diagnóstica entrenada; analiza adopción de tecnología.",
+        "Hardware: No aplica equipamiento diagnóstico: encuesta a profesionales; infraestructura de análisis no especificada.",
+        "Software: Análisis factorial confirmatorio, SEM, mediación bootstrap y TAM ampliado; paquete estadístico no confirmado.",
+        "Costos: No se reportaron costos de implementación; artículo declara no haber recibido financiación de investigación.",
+        "Limitaciones: Autorreporte transversal, sin medida de uso real ni evaluación de rendimiento clínico; las asociaciones SEM no demuestran causalidad.",
+        "Fuente original: https://doi.org/10.1038/s41598-026-73787-y"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Intención de uso",
+          "β actitud",
+          "0,550"
+        ],
+        [
+          "Intención de uso",
+          "β apoyo clínico",
+          "0,220"
+        ],
+        [
+          "Intención de uso",
+          "β confianza",
+          "0,140"
+        ],
+        [
+          "Modelo SEM",
+          "Varianza explicada",
+          "67,5%"
+        ]
+      ]
+    }
+  },
+  {
     "date": "2026-10-29",
     "reviewed": "29 octubre 2026",
     "rich_detail": true,
