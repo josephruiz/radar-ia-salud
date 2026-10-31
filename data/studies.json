@@ -1,5 +1,693 @@
 [
   {
+    "date": "2026-10-31",
+    "reviewed": "31 octubre 2026",
+    "rich_detail": true,
+    "code": "No se verificó repositorio de código original.",
+    "cost": "No se informan costos monetarios de entrenamiento, inferencia ni despliegue.",
+    "figures": [],
+    "flag": "🇮🇳",
+    "countryFlags": "🇮🇳",
+    "country": "India",
+    "rubro": "IA explicable y señales biomédicas",
+    "area": "Cardiología",
+    "modality": "Electrocardiograma de 12 derivaciones",
+    "title": "XAI-ECGNet: an explainable hybrid CNN-BiLSTM framework for multi-label cardiac diagnosis classification from 12-lead ECG signals using the PTB-XL dataset",
+    "title_es": "XAI-ECGNet: red híbrida CNN-BiLSTM explicable para clasificación multietiqueta de diagnósticos cardíacos mediante ECG de 12 derivaciones",
+    "institution": "Manipal Institute of Technology Bengaluru, Manipal Academy of Higher Education; Christ University, Bengaluru",
+    "sample": "PTB-XL: 21.799 electrocardiogramas de 18.885 pacientes; prueba de transferencia sin reentrenamiento en CPSC 2018 (cantidad exacta no confirmada).",
+    "design": "Estudio retrospectivo de datos públicos desidentificados; clasificación multietiqueta en cinco superclases diagnósticas; comparación con modelos de referencia, ablación, evaluación de explicabilidad y transferencia entre datasets.",
+    "model": "XAI-ECGNet: convoluciones residuales 1D, atención squeeze-and-excitation y BiLSTM; explicaciones Grad-CAM, SHAP e Integrated Gradients.",
+    "metrics": "Macro-AUROC PTB-XL 0,9337; cuatro de cinco superclases con AUROC >0,90. CNN sin BiLSTM 0,9333; variabilidad entre cinco semillas σ=0,0023. Generalización variable en CPSC 2018 según equivalencia de etiquetas.",
+    "summary": "Clasificador multietiqueta de ECG con explicaciones cuantificadas y prueba de transferencia a otra base, aún sin validación clínica prospectiva.",
+    "limitations": "La diferencia de AUROC frente a la CNN sola es pequeña y está dentro de la variabilidad; las taxonomías entre bases difieren; faltan estudios prospectivos con cardiólogos.",
+    "remember": "La diferencia de AUROC frente a la CNN sola es pequeña y está dentro de la variabilidad; las taxonomías entre bases difieren; faltan estudios prospectivos con cardiólogos.",
+    "language": "No confirmado",
+    "framework": "CNN 1D, BiLSTM, SE, Grad-CAM, SHAP e Integrated Gradients; librerías y versiones exactas no verificadas.",
+    "hardware": "ECG de 12 derivaciones; recursos GPU de Google Colab y Kaggle Notebook, sin modelo exacto de GPU confirmado.",
+    "paper": "https://doi.org/10.1038/s41598-026-76799-w",
+    "doi": "10.1038/s41598-026-76799-w",
+    "published": "31 octubre 2026",
+    "journal": "Scientific Reports · 2026",
+    "key_metric": "Macro-AUROC 0,9337 en 21.799 ECG",
+    "rich": {
+      "problem": "Clasificador multietiqueta de ECG con explicaciones cuantificadas y prueba de transferencia a otra base, aún sin validación clínica prospectiva.",
+      "idea": "XAI-ECGNet: convoluciones residuales 1D, atención squeeze-and-excitation y BiLSTM; explicaciones Grad-CAM, SHAP e Integrated Gradients.",
+      "why": "Aplicación en Cardiología. Evidencia primaria con límites de generalización documentados.",
+      "interpretability": "La diferencia de AUROC frente a la CNN sola es pequeña y está dentro de la variabilidad; las taxonomías entre bases difieren; faltan estudios prospectivos con cardiólogos.",
+      "dataset_cards": [
+        {
+          "name": "PTB-XL",
+          "value": "21.799 ECG",
+          "detail": "18.885 pacientes"
+        },
+        {
+          "name": "CPSC 2018",
+          "value": "Prueba externa",
+          "detail": "Zero-shot; tamaño no confirmado"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Macro-AUROC",
+          "main": "0,9337",
+          "sub": "PTB-XL"
+        },
+        {
+          "label": "Superclases",
+          "main": "4 de 5",
+          "sub": "AUROC > 0,90"
+        },
+        {
+          "label": "CNN sola",
+          "main": "0,9333",
+          "sub": "Comparador de ablación"
+        }
+      ],
+      "implementation": [
+        "Metodología: Estudio retrospectivo de datos públicos desidentificados; clasificación multietiqueta en cinco superclases diagnósticas; comparación con modelos de referencia, ablación, evaluación de explicabilidad y transferencia entre datasets.",
+        "Arquitectura: XAI-ECGNet: convoluciones residuales 1D, atención squeeze-and-excitation y BiLSTM; explicaciones Grad-CAM, SHAP e Integrated Gradients.",
+        "Hardware: ECG de 12 derivaciones; recursos GPU de Google Colab y Kaggle Notebook, sin modelo exacto de GPU confirmado.",
+        "Software: CNN 1D, BiLSTM, SE, Grad-CAM, SHAP e Integrated Gradients; librerías y versiones exactas no verificadas.",
+        "Costos: No se informan costos monetarios de entrenamiento, inferencia ni despliegue.",
+        "Limitaciones: La diferencia de AUROC frente a la CNN sola es pequeña y está dentro de la variabilidad; las taxonomías entre bases difieren; faltan estudios prospectivos con cardiólogos.",
+        "Fuente original: https://doi.org/10.1038/s41598-026-76799-w"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "PTB-XL",
+          "Macro-AUROC XAI-ECGNet",
+          "0,9337"
+        ],
+        [
+          "PTB-XL",
+          "Macro-AUROC CNN sola",
+          "0,9333"
+        ],
+        [
+          "Cinco semillas",
+          "Desviación estándar AUROC",
+          "0,0023"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-31",
+    "reviewed": "31 octubre 2026",
+    "rich_detail": true,
+    "code": "Código original no confirmado.",
+    "cost": "No se reportan costos de infraestructura ni análisis de costo-efectividad.",
+    "figures": [],
+    "flag": "🇨🇳",
+    "countryFlags": "🇨🇳",
+    "country": "China",
+    "rubro": "IA clínica interpretable",
+    "area": "Hepatología",
+    "modality": "Historias clínicas y variables de laboratorio",
+    "title": "Interpretability-driven feature engineering enables compact and accurate multi-outcome risk stratification at hospitalization for chronic hepatitis B",
+    "title_es": "Ingeniería de variables interpretable para estratificar múltiples riesgos hospitalarios en hepatitis B crónica",
+    "institution": "The Second Affiliated Hospital of Chongqing Medical University y colaboradores",
+    "sample": "36.024 registros de hospitalización correspondientes a 22.001 pacientes.",
+    "design": "Análisis retrospectivo de registros hospitalarios; separación por paciente, validación temporal y externa; selección de 15 variables por resultado mediante SHAP y cuatro interacciones mediante TreeSHAP; calibración y curvas de decisión.",
+    "model": "Modelos compactos de machine learning con selección de efectos principales SHAP e interacciones TreeSHAP para tres resultados: no progresión, cirrosis y carcinoma hepatocelular.",
+    "metrics": "AUC modelos completos: 0,927 / 0,897 / 0,899; compactos: 0,911 / 0,882 / 0,890 con 80,8% menos variables; temporal: 0,863 / 0,827 / 0,847; externa: 0,829 / 0,865 / 0,827 (orden: no progresión / cirrosis / HCC).",
+    "summary": "Modelos clínicos más compactos mantienen gran parte de la discriminación con una reducción sustancial de variables.",
+    "limitations": "Clasificación de estados documentados durante hospitalización, no predicción causal de progresión futura; deriva temporal y externa; generalización y utilidad clínica requieren evaluación prospectiva.",
+    "remember": "Clasificación de estados documentados durante hospitalización, no predicción causal de progresión futura; deriva temporal y externa; generalización y utilidad clínica requieren evaluación prospectiva.",
+    "language": "No confirmado",
+    "framework": "Machine learning tabular, SHAP, TreeSHAP, calibración y curvas de decisión; framework y versiones no confirmados.",
+    "hardware": "Sistemas hospitalarios de registros electrónicos y laboratorio; servidores/GPU no detallados en la fuente consultada.",
+    "paper": "https://doi.org/10.1038/s41746-026-03439-y",
+    "doi": "10.1038/s41746-026-03439-y",
+    "published": "31 octubre 2026",
+    "journal": "npj Digital Medicine · 2026",
+    "key_metric": "AUC externa 0,829 / 0,865 / 0,827",
+    "rich": {
+      "problem": "Modelos clínicos más compactos mantienen gran parte de la discriminación con una reducción sustancial de variables.",
+      "idea": "Modelos compactos de machine learning con selección de efectos principales SHAP e interacciones TreeSHAP para tres resultados: no progresión, cirrosis y carcinoma hepatocelular.",
+      "why": "Aplicación en Hepatología. Evidencia primaria con límites de generalización documentados.",
+      "interpretability": "Clasificación de estados documentados durante hospitalización, no predicción causal de progresión futura; deriva temporal y externa; generalización y utilidad clínica requieren evaluación prospectiva.",
+      "dataset_cards": [
+        {
+          "name": "Registros",
+          "value": "36.024",
+          "detail": "Hospitalizaciones"
+        },
+        {
+          "name": "Pacientes",
+          "value": "22.001",
+          "detail": "Separación por paciente"
+        },
+        {
+          "name": "Validación",
+          "value": "Temporal + externa",
+          "detail": "Tres desenlaces"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "AUC externa cirrosis",
+          "main": "0,865",
+          "sub": "Validación independiente"
+        },
+        {
+          "label": "Reducción de variables",
+          "main": "80,8%",
+          "sub": "Modelo compacto"
+        },
+        {
+          "label": "AUC externa HCC",
+          "main": "0,827",
+          "sub": "Carcinoma hepatocelular"
+        }
+      ],
+      "implementation": [
+        "Metodología: Análisis retrospectivo de registros hospitalarios; separación por paciente, validación temporal y externa; selección de 15 variables por resultado mediante SHAP y cuatro interacciones mediante TreeSHAP; calibración y curvas de decisión.",
+        "Arquitectura: Modelos compactos de machine learning con selección de efectos principales SHAP e interacciones TreeSHAP para tres resultados: no progresión, cirrosis y carcinoma hepatocelular.",
+        "Hardware: Sistemas hospitalarios de registros electrónicos y laboratorio; servidores/GPU no detallados en la fuente consultada.",
+        "Software: Machine learning tabular, SHAP, TreeSHAP, calibración y curvas de decisión; framework y versiones no confirmados.",
+        "Costos: No se reportan costos de infraestructura ni análisis de costo-efectividad.",
+        "Limitaciones: Clasificación de estados documentados durante hospitalización, no predicción causal de progresión futura; deriva temporal y externa; generalización y utilidad clínica requieren evaluación prospectiva.",
+        "Fuente original: https://doi.org/10.1038/s41746-026-03439-y"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "No progresión",
+          "AUC completa / compacta",
+          "0,927 / 0,911"
+        ],
+        [
+          "Cirrosis",
+          "AUC completa / compacta",
+          "0,897 / 0,882"
+        ],
+        [
+          "HCC",
+          "AUC completa / compacta",
+          "0,899 / 0,890"
+        ],
+        [
+          "Validación externa",
+          "AUC no progresión / cirrosis / HCC",
+          "0,829 / 0,865 / 0,827"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-31",
+    "reviewed": "31 octubre 2026",
+    "rich_detail": true,
+    "code": "Repositorio original no confirmado.",
+    "cost": "Costos monetarios de procesamiento y validación no reportados.",
+    "figures": [],
+    "flag": "🇺🇸",
+    "countryFlags": "🇺🇸",
+    "country": "Estados Unidos",
+    "rubro": "IA y bioinformática multi-ómica",
+    "area": "Oncología de precisión",
+    "modality": "Variación en número de copias, metilación de ADN, mRNA y miRNA",
+    "title": "Multi-omic cancer subtype clustering with random-walk-refined cross-view contrastive learning",
+    "title_es": "Agrupamiento de subtipos de cáncer multi-ómicos con aprendizaje contrastivo entre modalidades refinado por caminatas aleatorias",
+    "institution": "University of West Florida; Binghamton University; Florida State University",
+    "sample": "Nueve cohortes TCGA; validación externa en 222 casos CPTAC-3 de carcinoma renal de células claras y 1.980 tumores de mama METABRIC. Número agregado de pacientes TCGA no confirmado.",
+    "design": "Aprendizaje auto-supervisado de subtipos multi-ómicos, análisis de supervivencia Cox, pruebas leave-one-cluster-out, controles de covariables técnicas, ablaciones y validación externa sin reajustar hiperparámetros.",
+    "model": "Subtype-DIVIDE: encoders por modalidad, alineamiento contrastivo entre vistas condicionado por afinidad de la modalidad objetivo y máscaras de positivos suaves por caminatas aleatorias en grafos.",
+    "metrics": "Separación de supervivencia estadísticamente significativa en las nueve cohortes TCGA; asociación externa con estadio y categoría T en 222 casos CPTAC-3, y separación de supervivencia en 1.980 tumores METABRIC. No se presenta una AUC única global comparable.",
+    "summary": "El aprendizaje contrastivo multi-vista identifica subtipos de cáncer con asociaciones clínicas en cohortes internas y externas.",
+    "limitations": "Diseño retrospectivo de datos ómicos, subtipos no validados como decisiones terapéuticas; no hay métrica diagnóstica única; posible influencia de sesgos de cohortes.",
+    "remember": "Diseño retrospectivo de datos ómicos, subtipos no validados como decisiones terapéuticas; no hay métrica diagnóstica única; posible influencia de sesgos de cohortes.",
+    "language": "No confirmado",
+    "framework": "Encoders auto-supervisados, contraste entre vistas, grafos de afinidad, caminatas aleatorias y regresión Cox; framework no confirmado.",
+    "hardware": "Datos multi-ómicos TCGA, CPTAC-3 y METABRIC; GPU/CPU específicas no confirmadas.",
+    "paper": "https://doi.org/10.1038/s41598-026-77559-6",
+    "doi": "10.1038/s41598-026-77559-6",
+    "published": "31 octubre 2026",
+    "journal": "Scientific Reports · 2026",
+    "key_metric": "9 cohortes TCGA + 2 validaciones externas",
+    "rich": {
+      "problem": "El aprendizaje contrastivo multi-vista identifica subtipos de cáncer con asociaciones clínicas en cohortes internas y externas.",
+      "idea": "Subtype-DIVIDE: encoders por modalidad, alineamiento contrastivo entre vistas condicionado por afinidad de la modalidad objetivo y máscaras de positivos suaves por caminatas aleatorias en grafos.",
+      "why": "Aplicación en Oncología de precisión. Evidencia primaria con límites de generalización documentados.",
+      "interpretability": "Diseño retrospectivo de datos ómicos, subtipos no validados como decisiones terapéuticas; no hay métrica diagnóstica única; posible influencia de sesgos de cohortes.",
+      "dataset_cards": [
+        {
+          "name": "TCGA",
+          "value": "9 cohortes",
+          "detail": "Multi-ómica"
+        },
+        {
+          "name": "CPTAC-3",
+          "value": "222 casos",
+          "detail": "Carcinoma renal"
+        },
+        {
+          "name": "METABRIC",
+          "value": "1.980 tumores",
+          "detail": "Cáncer de mama"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Cohortes TCGA",
+          "main": "9/9",
+          "sub": "Separación de supervivencia"
+        },
+        {
+          "label": "CPTAC-3",
+          "main": "222",
+          "sub": "Asociación con estadio"
+        },
+        {
+          "label": "METABRIC",
+          "main": "1.980",
+          "sub": "Separación de supervivencia"
+        }
+      ],
+      "implementation": [
+        "Metodología: Aprendizaje auto-supervisado de subtipos multi-ómicos, análisis de supervivencia Cox, pruebas leave-one-cluster-out, controles de covariables técnicas, ablaciones y validación externa sin reajustar hiperparámetros.",
+        "Arquitectura: Subtype-DIVIDE: encoders por modalidad, alineamiento contrastivo entre vistas condicionado por afinidad de la modalidad objetivo y máscaras de positivos suaves por caminatas aleatorias en grafos.",
+        "Hardware: Datos multi-ómicos TCGA, CPTAC-3 y METABRIC; GPU/CPU específicas no confirmadas.",
+        "Software: Encoders auto-supervisados, contraste entre vistas, grafos de afinidad, caminatas aleatorias y regresión Cox; framework no confirmado.",
+        "Costos: Costos monetarios de procesamiento y validación no reportados.",
+        "Limitaciones: Diseño retrospectivo de datos ómicos, subtipos no validados como decisiones terapéuticas; no hay métrica diagnóstica única; posible influencia de sesgos de cohortes.",
+        "Fuente original: https://doi.org/10.1038/s41598-026-77559-6"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "TCGA",
+          "Cohortes con separación significativa",
+          "9 de 9"
+        ],
+        [
+          "CPTAC-3",
+          "Casos externos",
+          "222"
+        ],
+        [
+          "METABRIC",
+          "Tumores externos",
+          "1.980"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-31",
+    "reviewed": "31 octubre 2026",
+    "rich_detail": true,
+    "code": "Código original no confirmado.",
+    "cost": "No se reportaron costos monetarios ni evaluación económica.",
+    "figures": [],
+    "flag": "🇲🇾 🇮🇳",
+    "countryFlags": "🇲🇾 🇮🇳",
+    "country": "Malasia; India",
+    "rubro": "IA predictiva materno-infantil",
+    "area": "Pediatría y salud materna",
+    "modality": "Datos psicométricos, biométricos, clínicos y antropométricos",
+    "title": "A hybrid bio-inspired optimization framework for modeling infant neurodevelopment from maternal mental health and biometric data",
+    "title_es": "Optimización bioinspirada híbrida para modelar neurodesarrollo infantil mediante salud mental materna y datos biométricos",
+    "institution": "Lincoln University College (Malasia); Kongu Engineering College; SRM Institute of Science and Technology Tiruchirappalli",
+    "sample": "199 díadas madre–bebé en el conjunto analizado.",
+    "design": "Modelo computacional multimodal para clasificación del estado de desarrollo a 12 meses; optimización de selección de características e hiperparámetros; comparación con dos benchmarks reportados.",
+    "model": "HWFO-EXGBoost: optimización híbrida Whale–Firefly y eXtreme Gradient Boosting mejorado.",
+    "metrics": "Exactitud 94,47%; especificidad 96,34%; sensibilidad 88,57%; AUROC 0,953; AUPRC 0,742.",
+    "summary": "Modelo exploratorio de riesgo de neurodesarrollo basado en variables maternas y del lactante.",
+    "limitations": "Conjunto pequeño (199 díadas), no se confirmó validación prospectiva externa; el manuscrito describe datos de díadas y simultáneamente indica que no hubo participación humana nueva, por lo que la procedencia debe aclararse antes de extrapolar.",
+    "remember": "Conjunto pequeño (199 díadas), no se confirmó validación prospectiva externa; el manuscrito describe datos de díadas y simultáneamente indica que no hubo participación humana nueva, por lo que la procedencia debe aclararse antes de extrapolar.",
+    "language": "No confirmado",
+    "framework": "XGBoost mejorado, Whale Optimization y Firefly Optimization; framework/versiones no confirmados.",
+    "hardware": "Registros de biometría, antropometría y análisis clínicos; dispositivos y GPU no especificados.",
+    "paper": "https://doi.org/10.1038/s41598-026-72522-x",
+    "doi": "10.1038/s41598-026-72522-x",
+    "published": "31 octubre 2026",
+    "journal": "Scientific Reports · 2026",
+    "key_metric": "AUROC 0,953 · 199 díadas",
+    "rich": {
+      "problem": "Modelo exploratorio de riesgo de neurodesarrollo basado en variables maternas y del lactante.",
+      "idea": "HWFO-EXGBoost: optimización híbrida Whale–Firefly y eXtreme Gradient Boosting mejorado.",
+      "why": "Aplicación en Pediatría y salud materna. Evidencia primaria con límites de generalización documentados.",
+      "interpretability": "Conjunto pequeño (199 díadas), no se confirmó validación prospectiva externa; el manuscrito describe datos de díadas y simultáneamente indica que no hubo participación humana nueva, por lo que la procedencia debe aclararse antes de extrapolar.",
+      "dataset_cards": [
+        {
+          "name": "Díadas",
+          "value": "199",
+          "detail": "Madre–bebé"
+        },
+        {
+          "name": "Desenlace",
+          "value": "12 meses",
+          "detail": "Neurodesarrollo"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "AUROC",
+          "main": "0,953",
+          "sub": "Evaluación reportada"
+        },
+        {
+          "label": "Exactitud",
+          "main": "94,47%",
+          "sub": "Evaluación reportada"
+        },
+        {
+          "label": "AUPRC",
+          "main": "0,742",
+          "sub": "Evaluación reportada"
+        }
+      ],
+      "implementation": [
+        "Metodología: Modelo computacional multimodal para clasificación del estado de desarrollo a 12 meses; optimización de selección de características e hiperparámetros; comparación con dos benchmarks reportados.",
+        "Arquitectura: HWFO-EXGBoost: optimización híbrida Whale–Firefly y eXtreme Gradient Boosting mejorado.",
+        "Hardware: Registros de biometría, antropometría y análisis clínicos; dispositivos y GPU no especificados.",
+        "Software: XGBoost mejorado, Whale Optimization y Firefly Optimization; framework/versiones no confirmados.",
+        "Costos: No se reportaron costos monetarios ni evaluación económica.",
+        "Limitaciones: Conjunto pequeño (199 díadas), no se confirmó validación prospectiva externa; el manuscrito describe datos de díadas y simultáneamente indica que no hubo participación humana nueva, por lo que la procedencia debe aclararse antes de extrapolar.",
+        "Fuente original: https://doi.org/10.1038/s41598-026-72522-x"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Clasificación",
+          "Exactitud",
+          "94,47%"
+        ],
+        [
+          "Clasificación",
+          "Sensibilidad / especificidad",
+          "88,57% / 96,34%"
+        ],
+        [
+          "Discriminación",
+          "AUROC / AUPRC",
+          "0,953 / 0,742"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-31",
+    "reviewed": "31 octubre 2026",
+    "rich_detail": true,
+    "code": "Código original no confirmado.",
+    "cost": "No reportados.",
+    "figures": [],
+    "flag": "🇨🇳 🇺🇸",
+    "countryFlags": "🇨🇳 🇺🇸",
+    "country": "China (análisis de registros estadounidenses)",
+    "rubro": "Machine learning y análisis de supervivencia",
+    "area": "Oncología de sarcomas",
+    "modality": "Base poblacional SEER y datos clínicos",
+    "title": "Dynamic survival prognosis and the role of radiotherapy in retroperitoneal liposarcoma",
+    "title_es": "Pronóstico dinámico de supervivencia y evaluación observacional de radioterapia en liposarcoma retroperitoneal",
+    "institution": "Shaoxing Central Hospital, hospital afiliado a Shaoxing University",
+    "sample": "1.186 pacientes de SEER: 830 para entrenamiento y 356 para validación.",
+    "design": "Estudio observacional retrospectivo con supervivencia condicional, Random Survival Forest y LASSO para selección de factores; nomograma pronóstico; propensity-score matching para asociación de radioterapia y supervivencia.",
+    "model": "Random Survival Forest, LASSO, nomograma de supervivencia condicional y emparejamiento por puntuación de propensión.",
+    "metrics": "Probabilidad condicional de alcanzar 10 años: 41% al diagnóstico y 87% después de sobrevivir 8 años. Asociación radioterapia-supervivencia ajustada: HR 1,06 (IC95% 0,84–1,34; p=0,62).",
+    "summary": "Nomograma de supervivencia dinámica para un cáncer raro; no se observó asociación significativa de radioterapia con supervivencia tras ajuste observacional.",
+    "limitations": "Confusión residual por indicación; los datos SEER no son un ensayo; no demuestra que radioterapia carezca de beneficio causal; no se verificó AUC numérica única en el resumen.",
+    "remember": "Confusión residual por indicación; los datos SEER no son un ensayo; no demuestra que radioterapia carezca de beneficio causal; no se verificó AUC numérica única en el resumen.",
+    "language": "No confirmado",
+    "framework": "Random Survival Forest, LASSO, propensity-score matching, curvas ROC, calibración y análisis de decisión; versiones no confirmadas.",
+    "hardware": "Infraestructura de análisis de registros SEER; no se requirió equipo de imagen específico para este análisis; GPU no reportada.",
+    "paper": "https://doi.org/10.1038/s41598-026-77838-2",
+    "doi": "10.1038/s41598-026-77838-2",
+    "published": "31 octubre 2026",
+    "journal": "Scientific Reports · 2026",
+    "key_metric": "1.186 pacientes · HR radioterapia 1,06",
+    "rich": {
+      "problem": "Nomograma de supervivencia dinámica para un cáncer raro; no se observó asociación significativa de radioterapia con supervivencia tras ajuste observacional.",
+      "idea": "Random Survival Forest, LASSO, nomograma de supervivencia condicional y emparejamiento por puntuación de propensión.",
+      "why": "Aplicación en Oncología de sarcomas. Evidencia primaria con límites de generalización documentados.",
+      "interpretability": "Confusión residual por indicación; los datos SEER no son un ensayo; no demuestra que radioterapia carezca de beneficio causal; no se verificó AUC numérica única en el resumen.",
+      "dataset_cards": [
+        {
+          "name": "SEER",
+          "value": "1.186 pacientes",
+          "detail": "Cohorte total"
+        },
+        {
+          "name": "Entrenamiento",
+          "value": "830",
+          "detail": "Pacientes"
+        },
+        {
+          "name": "Validación",
+          "value": "356",
+          "detail": "Pacientes"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Supervivencia a 10 años",
+          "main": "41% → 87%",
+          "sub": "Condicionada a 8 años de supervivencia"
+        },
+        {
+          "label": "HR radioterapia",
+          "main": "1,06",
+          "sub": "IC95% 0,84–1,34"
+        },
+        {
+          "label": "p",
+          "main": "0,62",
+          "sub": "Asociación no significativa"
+        }
+      ],
+      "implementation": [
+        "Metodología: Estudio observacional retrospectivo con supervivencia condicional, Random Survival Forest y LASSO para selección de factores; nomograma pronóstico; propensity-score matching para asociación de radioterapia y supervivencia.",
+        "Arquitectura: Random Survival Forest, LASSO, nomograma de supervivencia condicional y emparejamiento por puntuación de propensión.",
+        "Hardware: Infraestructura de análisis de registros SEER; no se requirió equipo de imagen específico para este análisis; GPU no reportada.",
+        "Software: Random Survival Forest, LASSO, propensity-score matching, curvas ROC, calibración y análisis de decisión; versiones no confirmadas.",
+        "Costos: No reportados.",
+        "Limitaciones: Confusión residual por indicación; los datos SEER no son un ensayo; no demuestra que radioterapia carezca de beneficio causal; no se verificó AUC numérica única en el resumen.",
+        "Fuente original: https://doi.org/10.1038/s41598-026-77838-2"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Cohorte",
+          "Entrenamiento / validación",
+          "830 / 356"
+        ],
+        [
+          "Supervivencia condicional",
+          "A 10 años, diagnóstico / tras 8 años",
+          "41% / 87%"
+        ],
+        [
+          "Radioterapia",
+          "HR (IC95%)",
+          "1,06 (0,84–1,34)"
+        ],
+        [
+          "Radioterapia",
+          "p",
+          "0,62"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-31",
+    "reviewed": "31 octubre 2026",
+    "rich_detail": true,
+    "code": "Código disponible solo bajo solicitud a los autores según la publicación.",
+    "cost": "No reportados; no existe análisis de costos de fabricación.",
+    "figures": [],
+    "flag": "🇪🇬 🇰🇼 🇸🇦 🇮🇳",
+    "countryFlags": "🇪🇬 🇰🇼 🇸🇦 🇮🇳",
+    "country": "Egipto; Kuwait; Arabia Saudita; India",
+    "rubro": "Ingeniería biomédica y sensores fotónicos",
+    "area": "Tecnología de detección óptica de cáncer oral",
+    "modality": "Simulación de espectroscopia terahercios de tejidos orales congelados",
+    "title": "Terahertz sensor with parity time symmetry for enhanced detection of frozen oral cancer tissues",
+    "title_es": "Sensor terahercios con simetría paridad-tiempo para detectar diferencias ópticas en tejidos orales congelados",
+    "institution": "Beni-Suef University; Gulf University for Science and Technology; Imam Mohammad Ibn Saud Islamic University; CMR Institute of Technology",
+    "sample": "Estudio de simulación numérica basado en propiedades ópticas de tejidos orales sanos y cancerosos a −20 °C; no se reportó cohorte clínica nueva.",
+    "design": "Diseño y simulación de cristal fotónico unidimensional con capas SiO₂/silicio poroso y defecto central; método de matrices de transferencia y capas de ganancia/pérdida con simetría PT.",
+    "model": "Modelo físico determinista de matrices de transferencia y optimización de parámetros de sensor fotónico; no es un modelo de IA ni dispositivo clínico construido.",
+    "metrics": "Sensibilidad espectral simulada 68,8 GHz/RIU; sensibilidad de transmitancia simulada hasta 2,4×10¹¹ %/RIU en configuración Q=10,695. Son métricas de simulación, no sensibilidad diagnóstica clínica.",
+    "summary": "Propuesta de sensor óptico THz para discriminar propiedades ópticas de tejidos orales congelados; evidencia exclusivamente de modelado físico.",
+    "limitations": "No se fabricó ni validó prospectivamente un dispositivo clínico; no se reportan sensibilidad/especificidad diagnósticas; los valores elevados de %/RIU dependen de condiciones idealizadas.",
+    "remember": "No se fabricó ni validó prospectivamente un dispositivo clínico; no se reportan sensibilidad/especificidad diagnósticas; los valores elevados de %/RIU dependen de condiciones idealizadas.",
+    "language": "No confirmado",
+    "framework": "Método de matrices de transferencia y simulación de espectros THz; lenguaje y software específicos no confirmados.",
+    "hardware": "Diseño conceptual: capas de SiO₂, silicio poroso, medio de ganancia/pérdida y detector THz; no se verificó prototipo físico.",
+    "paper": "https://doi.org/10.1038/s41598-026-73529-0",
+    "doi": "10.1038/s41598-026-73529-0",
+    "published": "31 octubre 2026",
+    "journal": "Scientific Reports · 2026",
+    "key_metric": "68,8 GHz/RIU (simulado)",
+    "rich": {
+      "problem": "Propuesta de sensor óptico THz para discriminar propiedades ópticas de tejidos orales congelados; evidencia exclusivamente de modelado físico.",
+      "idea": "Modelo físico determinista de matrices de transferencia y optimización de parámetros de sensor fotónico; no es un modelo de IA ni dispositivo clínico construido.",
+      "why": "Aplicación en Tecnología de detección óptica de cáncer oral. Evidencia primaria con límites de generalización documentados.",
+      "interpretability": "No se fabricó ni validó prospectivamente un dispositivo clínico; no se reportan sensibilidad/especificidad diagnósticas; los valores elevados de %/RIU dependen de condiciones idealizadas.",
+      "dataset_cards": [
+        {
+          "name": "Tipo",
+          "value": "Simulación",
+          "detail": "Sin cohorte clínica nueva"
+        },
+        {
+          "name": "Muestra",
+          "value": "Tejido oral congelado",
+          "detail": "Propiedades ópticas a −20 °C"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Sensibilidad espectral",
+          "main": "68,8 GHz/RIU",
+          "sub": "Simulación"
+        },
+        {
+          "label": "Sensibilidad transmitancia",
+          "main": "2,4×10¹¹ %/RIU",
+          "sub": "Simulación Q=10,695"
+        },
+        {
+          "label": "Validación clínica",
+          "main": "No",
+          "sub": "Prototipo no confirmado"
+        }
+      ],
+      "implementation": [
+        "Metodología: Diseño y simulación de cristal fotónico unidimensional con capas SiO₂/silicio poroso y defecto central; método de matrices de transferencia y capas de ganancia/pérdida con simetría PT.",
+        "Arquitectura: Modelo físico determinista de matrices de transferencia y optimización de parámetros de sensor fotónico; no es un modelo de IA ni dispositivo clínico construido.",
+        "Hardware: Diseño conceptual: capas de SiO₂, silicio poroso, medio de ganancia/pérdida y detector THz; no se verificó prototipo físico.",
+        "Software: Método de matrices de transferencia y simulación de espectros THz; lenguaje y software específicos no confirmados.",
+        "Costos: No reportados; no existe análisis de costos de fabricación.",
+        "Limitaciones: No se fabricó ni validó prospectivamente un dispositivo clínico; no se reportan sensibilidad/especificidad diagnósticas; los valores elevados de %/RIU dependen de condiciones idealizadas.",
+        "Fuente original: https://doi.org/10.1038/s41598-026-73529-0"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Sensor THz",
+          "Sensibilidad espectral simulada",
+          "68,8 GHz/RIU"
+        ],
+        [
+          "Sensor THz",
+          "Sensibilidad de transmitancia simulada",
+          "2,4×10¹¹ %/RIU"
+        ],
+        [
+          "Evaluación clínica",
+          "Sensibilidad/especificidad diagnósticas",
+          "No reportadas"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-30",
+    "reviewed": "31 octubre 2026",
+    "rich_detail": true,
+    "code": "https://github.com/dslaborg/AnySleep",
+    "cost": "Código abierto MIT; no se informan costos monetarios de entrenamiento, inferencia o adquisición de equipos.",
+    "figures": [],
+    "flag": "🇩🇪 🇳🇱",
+    "countryFlags": "🇩🇪 🇳🇱",
+    "country": "Alemania; Países Bajos",
+    "rubro": "Deep learning de señales biomédicas",
+    "area": "Medicina del sueño",
+    "modality": "Electroencefalograma (EEG) y electrooculograma (EOG)",
+    "title": "AnySleep: a channel-agnostic deep learning system for high-resolution sleep staging in multi-center cohorts",
+    "title_es": "AnySleep: sistema de aprendizaje profundo independiente del montaje de canales para estadificación del sueño de alta resolución",
+    "institution": "FH Aachen University of Applied Sciences; Utrecht University",
+    "sample": "20.589 registros nocturnos de 28 conjuntos de datos; aproximadamente 200.000 horas de EEG/EOG.",
+    "design": "Análisis secundario multicéntrico de datos desidentificados; entrenamiento y evaluación en conjuntos heterogéneos, incluyendo hold-out no utilizado para entrenamiento; comparación con U-Sleep y variantes de fusión; evaluación de épocas de 30 segundos y resolución más fina.",
+    "model": "AnySleep: encoder-decoder tipo U-Net con atención entre canales, selección dinámica de cualquier número/combinación de EEG y EOG y salida temporal configurable hasta 128 Hz.",
+    "metrics": "Macro-F1 ponderado en pruebas in-distribution 0,812 frente a 0,799 de U-Sleep; en hold-out 0,777 frente a 0,768 de U-Sleep. Resolución de salida hasta 1/128 s (aprox. 0,008 s).",
+    "summary": "Modelo abierto capaz de clasificar sueño con montajes EEG/EOG heterogéneos y analizar microeventos del sueño a alta resolución.",
+    "limitations": "La referencia humana está anotada típicamente en épocas de 30 s; predicciones subsegundo no son verdades clínicas etiquetadas a esa escala; diferencias entre centros persisten; no reemplaza valoración especializada.",
+    "remember": "La referencia humana está anotada típicamente en épocas de 30 s; predicciones subsegundo no son verdades clínicas etiquetadas a esa escala; diferencias entre centros persisten; no reemplaza valoración especializada.",
+    "language": "Python (repositorio original)",
+    "framework": "Python, PyTorch, Hydra y formatos HDF5 según repositorio original; pesos publicados mediante Git LFS.",
+    "hardware": "Polisomnografía EEG/EOG de distintos centros; modelo específico de GPU de entrenamiento no confirmado.",
+    "paper": "https://doi.org/10.1038/s41746-026-03406-7",
+    "doi": "10.1038/s41746-026-03406-7",
+    "published": "30 octubre 2026",
+    "journal": "npj Digital Medicine · 2026",
+    "key_metric": "20.589 noches · macro-F1 hold-out 0,777",
+    "rich": {
+      "problem": "Modelo abierto capaz de clasificar sueño con montajes EEG/EOG heterogéneos y analizar microeventos del sueño a alta resolución.",
+      "idea": "AnySleep: encoder-decoder tipo U-Net con atención entre canales, selección dinámica de cualquier número/combinación de EEG y EOG y salida temporal configurable hasta 128 Hz.",
+      "why": "Aplicación en Medicina del sueño. Evidencia primaria con límites de generalización documentados.",
+      "interpretability": "La referencia humana está anotada típicamente en épocas de 30 s; predicciones subsegundo no son verdades clínicas etiquetadas a esa escala; diferencias entre centros persisten; no reemplaza valoración especializada.",
+      "dataset_cards": [
+        {
+          "name": "Grabaciones",
+          "value": "20.589",
+          "detail": "Noches"
+        },
+        {
+          "name": "Datasets",
+          "value": "28",
+          "detail": "Multicéntricos"
+        },
+        {
+          "name": "Señales",
+          "value": "≈200.000 h",
+          "detail": "EEG/EOG"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Macro-F1 hold-out",
+          "main": "0,777",
+          "sub": "U-Sleep 0,768"
+        },
+        {
+          "label": "Macro-F1 interno",
+          "main": "0,812",
+          "sub": "U-Sleep 0,799"
+        },
+        {
+          "label": "Resolución",
+          "main": "≈0,008 s",
+          "sub": "Salida hasta 128 Hz"
+        }
+      ],
+      "implementation": [
+        "Metodología: Análisis secundario multicéntrico de datos desidentificados; entrenamiento y evaluación en conjuntos heterogéneos, incluyendo hold-out no utilizado para entrenamiento; comparación con U-Sleep y variantes de fusión; evaluación de épocas de 30 segundos y resolución más fina.",
+        "Arquitectura: AnySleep: encoder-decoder tipo U-Net con atención entre canales, selección dinámica de cualquier número/combinación de EEG y EOG y salida temporal configurable hasta 128 Hz.",
+        "Hardware: Polisomnografía EEG/EOG de distintos centros; modelo específico de GPU de entrenamiento no confirmado.",
+        "Software: Python, PyTorch, Hydra y formatos HDF5 según repositorio original; pesos publicados mediante Git LFS.",
+        "Costos: Código abierto MIT; no se informan costos monetarios de entrenamiento, inferencia o adquisición de equipos.",
+        "Limitaciones: La referencia humana está anotada típicamente en épocas de 30 s; predicciones subsegundo no son verdades clínicas etiquetadas a esa escala; diferencias entre centros persisten; no reemplaza valoración especializada.",
+        "Fuente original: https://doi.org/10.1038/s41746-026-03406-7"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "In-distribution",
+          "Macro-F1 AnySleep / U-Sleep",
+          "0,812 / 0,799"
+        ],
+        [
+          "Hold-out",
+          "Macro-F1 AnySleep / U-Sleep",
+          "0,777 / 0,768"
+        ],
+        [
+          "Salida",
+          "Resolución temporal mínima",
+          "1/128 s"
+        ]
+      ]
+    }
+  },
+  {
     "date": "2026-10-30",
     "reviewed": "30 octubre 2026",
     "rich_detail": true,
