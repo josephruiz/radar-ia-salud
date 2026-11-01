@@ -1,5 +1,680 @@
 [
   {
+    "date": "2026-11-01",
+    "reviewed": "01 noviembre 2026",
+    "rich_detail": true,
+    "code": "https://doi.org/10.5281/zenodo.19675029",
+    "cost": "Costos monetarios de adquisición, entrenamiento e inferencia no reportados.",
+    "figures": [],
+    "flag": "🇨🇾 🇩🇪",
+    "countryFlags": "🇨🇾 🇩🇪",
+    "country": "Chipre / Alemania",
+    "rubro": "IA multimodal e imagen ecográfica",
+    "area": "Oncología",
+    "modality": "Elastografía SWE + ecografía con contraste CEUS",
+    "title": "Deep learning integration of ultrasound perfusion and stiffness maps predicts tumor response to treatment",
+    "title_es": "Integración mediante aprendizaje profundo de mapas ecográficos de perfusión y rigidez para predecir la respuesta tumoral al tratamiento",
+    "institution": "University of Cyprus; German Oncology Center / European University Cyprus; University of Freiburg",
+    "sample": "587 imágenes pretratamiento SWE/CEUS en modelos murinos de cáncer de mama, sarcoma y melanoma: 175 respuestas, 136 estables y 276 sin respuesta; las cifras corresponden a imágenes/casos, no a 587 pacientes humanos.",
+    "design": "Investigación preclínica. Imágenes antes de quimioinmunoterapia; etiquetas de respuesta basadas en cambios volumétricos adaptados de RECIST; comparación de modelos por modalidad y fusión.",
+    "model": "CNN-ultra: CNN entrenada separadamente en SWE y CEUS. CNN-combi: fusión de características de ambas modalidades para clasificación en tres clases.",
+    "metrics": "Exactitud de prueba CNN-combi 0,930; CNN-ultra SWE 0,877; CNN-ultra CEUS 0,825. Exactitud por clase del combinado: respondedores 0,983; estables 0,930; no respondedores 0,947.",
+    "summary": "La combinación de rigidez y perfusión ecográfica mejoró la predicción preclínica de respuesta terapéutica frente a las modalidades aisladas.",
+    "limitations": "Solo modelos murinos y respuesta volumétrica adaptada; no validación clínica humana. El artículo final presenta cifras diferentes del preprint: se utilizaron exclusivamente las cifras de la versión publicada.",
+    "remember": "Solo modelos murinos y respuesta volumétrica adaptada; no validación clínica humana. El artículo final presenta cifras diferentes del preprint: se utilizaron exclusivamente las cifras de la versión publicada.",
+    "language": "No confirmado",
+    "framework": "CNN-ultra/CNN-combi; archivos de modelos .keras depositados en Zenodo; versiones de librerías no verificadas.",
+    "hardware": "Ecógrafo con elastografía por ondas de corte y ecografía con contraste de microburbujas; modelo comercial, GPU y memoria no confirmados.",
+    "paper": "https://doi.org/10.1038/s44303-026-00213-3",
+    "doi": "10.1038/s44303-026-00213-3",
+    "published": "01 noviembre 2026",
+    "journal": "npj Imaging · 2026",
+    "key_metric": "Exactitud 0,930 en estudio murino",
+    "rich": {
+      "problem": "La combinación de rigidez y perfusión ecográfica mejoró la predicción preclínica de respuesta terapéutica frente a las modalidades aisladas.",
+      "idea": "CNN-ultra: CNN entrenada separadamente en SWE y CEUS. CNN-combi: fusión de características de ambas modalidades para clasificación en tres clases.",
+      "why": "Aplicación en Oncología. Evidencia original con límites y procedencia de métricas documentados.",
+      "interpretability": "Solo modelos murinos y respuesta volumétrica adaptada; no validación clínica humana. El artículo final presenta cifras diferentes del preprint: se utilizaron exclusivamente las cifras de la versión publicada.",
+      "dataset_cards": [
+        {
+          "name": "SWE + CEUS",
+          "value": "587 imágenes",
+          "detail": "Modelos murinos"
+        },
+        {
+          "name": "Clases",
+          "value": "175 / 136 / 276",
+          "detail": "Respuesta / estable / no respuesta"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "CNN-combi",
+          "main": "0,930",
+          "sub": "Exactitud de prueba"
+        },
+        {
+          "label": "CNN SWE",
+          "main": "0,877",
+          "sub": "Solo rigidez"
+        },
+        {
+          "label": "CNN CEUS",
+          "main": "0,825",
+          "sub": "Solo perfusión"
+        }
+      ],
+      "implementation": [
+        "Metodología: Investigación preclínica. Imágenes antes de quimioinmunoterapia; etiquetas de respuesta basadas en cambios volumétricos adaptados de RECIST; comparación de modelos por modalidad y fusión.",
+        "Arquitectura: CNN-ultra: CNN entrenada separadamente en SWE y CEUS. CNN-combi: fusión de características de ambas modalidades para clasificación en tres clases.",
+        "Hardware: Ecógrafo con elastografía por ondas de corte y ecografía con contraste de microburbujas; modelo comercial, GPU y memoria no confirmados.",
+        "Software: CNN-ultra/CNN-combi; archivos de modelos .keras depositados en Zenodo; versiones de librerías no verificadas.",
+        "Costos: Costos monetarios de adquisición, entrenamiento e inferencia no reportados.",
+        "Limitaciones: Solo modelos murinos y respuesta volumétrica adaptada; no validación clínica humana. El artículo final presenta cifras diferentes del preprint: se utilizaron exclusivamente las cifras de la versión publicada.",
+        "Fuente primaria: https://doi.org/10.1038/s44303-026-00213-3",
+        "Código/datos: https://doi.org/10.5281/zenodo.19675029"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "CNN-combi",
+          "Exactitud",
+          "0,930"
+        ],
+        [
+          "CNN-ultra SWE",
+          "Exactitud",
+          "0,877"
+        ],
+        [
+          "CNN-ultra CEUS",
+          "Exactitud",
+          "0,825"
+        ],
+        [
+          "CNN-combi respondedores",
+          "Exactitud de clase",
+          "0,983"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-11-01",
+    "reviewed": "01 noviembre 2026",
+    "rich_detail": true,
+    "code": "Código y dataset reproducibles declarados en el artículo; URL específica no confirmada en el resumen primario.",
+    "cost": "Presupuesto de desarrollo, entrenamiento y mantenimiento no reportado; dataset y código declarados disponibles con licencias permisivas.",
+    "figures": [],
+    "flag": "🇨🇳",
+    "countryFlags": "🇨🇳",
+    "country": "China",
+    "rubro": "Vigilancia epidemiológica e IA clínica",
+    "area": "Infecciones hospitalarias",
+    "modality": "Historias clínicas / vigilancia de infecciones",
+    "title": "Surveillance epidemiology and an open machine-learning benchmark of antimicrobial-resistant healthcare-associated infections in a Chinese district hospital",
+    "title_es": "Vigilancia epidemiológica y benchmark abierto de aprendizaje automático para infecciones hospitalarias resistentes a antimicrobianos",
+    "institution": "People’s Hospital of Chongqing Hechuan, Chongqing",
+    "sample": "1.240 episodios de infección en 1.054 pacientes durante 39 meses (febrero de 2023–abril de 2026); 256.993 ingresos y 1,14 millones de días-paciente en hospital de 1.100 camas.",
+    "design": "Análisis retrospectivo de vigilancia hospitalaria recogida prospectivamente; predicción con variables previas a la infección; validación cruzada repetida 10 × 5 agrupada por paciente y auditoría de fuga de datos.",
+    "model": "Tres modelos tabulares transparentes de referencia; regresión logística y Random Forest para fenotipo de resistencia y clasificación del sitio de infección.",
+    "metrics": "AUROC media 0,74–0,75; AUPRC 0,55–0,56 frente a prevalencia de resistencia 0,31. Clasificación del sitio de infección: exactitud 0,39–0,52 frente a basal mayoritaria 0,46. AUROC 0,91 previa fue corregida por fuga de datos.",
+    "summary": "Benchmark abierto que muestra rendimiento moderado y la importancia de impedir fugas por solapamiento de pacientes o variables futuras.",
+    "limitations": "Un hospital, datos observacionales, variabilidad microbiológica local y modelos no aptos para uso clínico autónomo; no se deben interpretar los riesgos como causales.",
+    "remember": "Un hospital, datos observacionales, variabilidad microbiológica local y modelos no aptos para uso clínico autónomo; no se deben interpretar los riesgos como causales.",
+    "language": "No confirmado",
+    "framework": "Regresión logística, Random Forest, validación agrupada y pipeline reproducible; versiones no verificadas.",
+    "hardware": "Sistemas de vigilancia de infecciones y laboratorio de microbiología; GPU no reportada.",
+    "paper": "https://doi.org/10.1038/s41598-026-79197-4",
+    "doi": "10.1038/s41598-026-79197-4",
+    "published": "01 noviembre 2026",
+    "journal": "Scientific Reports · 2026",
+    "key_metric": "AUROC 0,74–0,75 sin fuga de datos",
+    "rich": {
+      "problem": "Benchmark abierto que muestra rendimiento moderado y la importancia de impedir fugas por solapamiento de pacientes o variables futuras.",
+      "idea": "Tres modelos tabulares transparentes de referencia; regresión logística y Random Forest para fenotipo de resistencia y clasificación del sitio de infección.",
+      "why": "Aplicación en Infecciones hospitalarias. Evidencia original con límites y procedencia de métricas documentados.",
+      "interpretability": "Un hospital, datos observacionales, variabilidad microbiológica local y modelos no aptos para uso clínico autónomo; no se deben interpretar los riesgos como causales.",
+      "dataset_cards": [
+        {
+          "name": "Vigilancia",
+          "value": "1.240 episodios",
+          "detail": "1.054 pacientes"
+        },
+        {
+          "name": "Hospital",
+          "value": "256.993 ingresos",
+          "detail": "39 meses"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "AUROC",
+          "main": "0,74–0,75",
+          "sub": "Resistencia"
+        },
+        {
+          "label": "AUPRC",
+          "main": "0,55–0,56",
+          "sub": "Prevalencia 0,31"
+        },
+        {
+          "label": "Fuga corregida",
+          "main": "0,91",
+          "sub": "AUROC previa inválida"
+        }
+      ],
+      "implementation": [
+        "Metodología: Análisis retrospectivo de vigilancia hospitalaria recogida prospectivamente; predicción con variables previas a la infección; validación cruzada repetida 10 × 5 agrupada por paciente y auditoría de fuga de datos.",
+        "Arquitectura: Tres modelos tabulares transparentes de referencia; regresión logística y Random Forest para fenotipo de resistencia y clasificación del sitio de infección.",
+        "Hardware: Sistemas de vigilancia de infecciones y laboratorio de microbiología; GPU no reportada.",
+        "Software: Regresión logística, Random Forest, validación agrupada y pipeline reproducible; versiones no verificadas.",
+        "Costos: Presupuesto de desarrollo, entrenamiento y mantenimiento no reportado; dataset y código declarados disponibles con licencias permisivas.",
+        "Limitaciones: Un hospital, datos observacionales, variabilidad microbiológica local y modelos no aptos para uso clínico autónomo; no se deben interpretar los riesgos como causales.",
+        "Fuente primaria: https://doi.org/10.1038/s41598-026-79197-4",
+        "Código/datos: Código y dataset reproducibles declarados en el artículo; URL específica no confirmada en el resumen primario."
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "AMR",
+          "AUROC",
+          "0,74–0,75"
+        ],
+        [
+          "AMR",
+          "AUPRC",
+          "0,55–0,56"
+        ],
+        [
+          "Infección sitio",
+          "Exactitud",
+          "0,39–0,52"
+        ],
+        [
+          "Basal",
+          "Exactitud",
+          "0,46"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-31",
+    "reviewed": "01 noviembre 2026",
+    "rich_detail": true,
+    "code": "No se verificó repositorio original.",
+    "cost": "No se reportan costos monetarios de inferencia ni evaluación económica.",
+    "figures": [],
+    "flag": "🇩🇪 🇳🇱 🇺🇸",
+    "countryFlags": "🇩🇪 🇳🇱 🇺🇸",
+    "country": "Alemania / Países Bajos / Estados Unidos",
+    "rubro": "Predicción clínica y salud digital",
+    "area": "Oncología / infectología",
+    "modality": "Historia clínica electrónica / signos vitales",
+    "title": "Predicting persistent fever in patients with cancer receiving antibiotics: a machine learning approach",
+    "title_es": "Predicción mediante aprendizaje automático de fiebre persistente en pacientes con cáncer que reciben antibióticos",
+    "institution": "University Hospital Essen; Amsterdam UMC; Brigham and Women’s Hospital / Harvard Medical School",
+    "sample": "Pacientes adultos con cáncer y fiebre tras inicio de antibióticos intravenosos, procedentes de dos hospitales académicos; número total de pacientes no confirmado en el resumen original.",
+    "design": "Desarrollo y validación externa retrospectiva. Predicción de fiebre persistente a las 48–72 h tras inicio de tratamiento con datos demográficos, comorbilidades, laboratorio, signos vitales y evolución de temperatura.",
+    "model": "Modelos de aprendizaje automático tabular comparados; arquitectura exacta del mejor modelo no confirmada en el resumen accesible.",
+    "metrics": "AUROC interna 0,82 (IC95% 0,79–0,84); AUROC externa 0,78 (IC95% 0,77–0,79). Temperatura fue la variable dominante. Aproximadamente una cuarta parte de escaladas antibióticas y TC torácicas ocurrieron en pacientes correctamente previstos sin fiebre persistente.",
+    "summary": "La evolución de temperatura y datos clínicos rutinarios predijeron persistencia de fiebre; posible apoyo para reevaluación, no para decidir suspensiones de forma automática.",
+    "limitations": "Retrospectivo; el análisis de decisiones es hipotético y no demuestra que se puedan evitar procedimientos sin daño. Se requieren estudios prospectivos de seguridad y adopción.",
+    "remember": "Retrospectivo; el análisis de decisiones es hipotético y no demuestra que se puedan evitar procedimientos sin daño. Se requieren estudios prospectivos de seguridad y adopción.",
+    "language": "No confirmado",
+    "framework": "Modelos de ML tabular y curvas de decisión; plataforma hospitalaria SHIP con integración FHIR; versiones de librerías no verificadas.",
+    "hardware": "Historia clínica electrónica y sistemas de registro de temperatura y laboratorio; GPU no reportada.",
+    "paper": "https://doi.org/10.1038/s41746-026-03449-w",
+    "doi": "10.1038/s41746-026-03449-w",
+    "published": "31 octubre 2026",
+    "journal": "npj Digital Medicine · 2026",
+    "key_metric": "AUROC externa 0,78",
+    "rich": {
+      "problem": "La evolución de temperatura y datos clínicos rutinarios predijeron persistencia de fiebre; posible apoyo para reevaluación, no para decidir suspensiones de forma automática.",
+      "idea": "Modelos de aprendizaje automático tabular comparados; arquitectura exacta del mejor modelo no confirmada en el resumen accesible.",
+      "why": "Aplicación en Oncología / infectología. Evidencia original con límites y procedencia de métricas documentados.",
+      "interpretability": "Retrospectivo; el análisis de decisiones es hipotético y no demuestra que se puedan evitar procedimientos sin daño. Se requieren estudios prospectivos de seguridad y adopción.",
+      "dataset_cards": [
+        {
+          "name": "Centros",
+          "value": "2 hospitales",
+          "detail": "Validación externa"
+        },
+        {
+          "name": "Horizonte",
+          "value": "48–72 h",
+          "detail": "Tras antibióticos IV"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "AUROC interna",
+          "main": "0,82",
+          "sub": "IC95% 0,79–0,84"
+        },
+        {
+          "label": "AUROC externa",
+          "main": "0,78",
+          "sub": "IC95% 0,77–0,79"
+        },
+        {
+          "label": "Factor dominante",
+          "main": "Temperatura",
+          "sub": "Series de signos vitales"
+        }
+      ],
+      "implementation": [
+        "Metodología: Desarrollo y validación externa retrospectiva. Predicción de fiebre persistente a las 48–72 h tras inicio de tratamiento con datos demográficos, comorbilidades, laboratorio, signos vitales y evolución de temperatura.",
+        "Arquitectura: Modelos de aprendizaje automático tabular comparados; arquitectura exacta del mejor modelo no confirmada en el resumen accesible.",
+        "Hardware: Historia clínica electrónica y sistemas de registro de temperatura y laboratorio; GPU no reportada.",
+        "Software: Modelos de ML tabular y curvas de decisión; plataforma hospitalaria SHIP con integración FHIR; versiones de librerías no verificadas.",
+        "Costos: No se reportan costos monetarios de inferencia ni evaluación económica.",
+        "Limitaciones: Retrospectivo; el análisis de decisiones es hipotético y no demuestra que se puedan evitar procedimientos sin daño. Se requieren estudios prospectivos de seguridad y adopción.",
+        "Fuente primaria: https://doi.org/10.1038/s41746-026-03449-w",
+        "Código/datos: No se verificó repositorio original."
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Validación interna",
+          "AUROC",
+          "0,82"
+        ],
+        [
+          "Validación externa",
+          "AUROC",
+          "0,78"
+        ],
+        [
+          "Horizonte",
+          "Horas",
+          "48–72"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-31",
+    "reviewed": "01 noviembre 2026",
+    "rich_detail": true,
+    "code": "No se verificó repositorio original de software.",
+    "cost": "No reportados; hay financiación y declaraciones de patentes, sin desglose monetario de plataforma.",
+    "figures": [],
+    "flag": "🇨🇳 🇭🇰",
+    "countryFlags": "🇨🇳 🇭🇰",
+    "country": "China / Hong Kong",
+    "rubro": "IA y administración de ARNm",
+    "area": "Bioingeniería molecular",
+    "modality": "Proteómica / proteínas humanas / validación experimental",
+    "title": "AI-driven discovery and engineering of human-derived protein scaffolds for mRNA delivery",
+    "title_es": "Descubrimiento e ingeniería mediante IA de andamios proteicos humanos para transporte de ARNm",
+    "institution": "Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences; Zhejiang Lab; The Chinese University of Hong Kong",
+    "sample": "Cribado computacional del proteoma humano con 512 candidatos priorizados; 15 proteínas seleccionadas para validación experimental y 12 con actividad como componentes de andamio.",
+    "design": "Descubrimiento computacional de proteínas humanas, selección de candidatos y evaluación experimental de ensamblaje de partículas y transporte de ARNm; análisis de interpretabilidad y perturbaciones de dominios TRIM.",
+    "model": "DeepDelivery, plataforma de IA de cribado proteómico y análisis de características proteicas; la arquitectura neuronal exacta no se confirmó en el resumen original.",
+    "metrics": "512 candidatos computacionales; 12 de 15 proteínas evaluadas mostraron actividad de andamio (80% en el subconjunto seleccionado). Ingeniería de dominios de TRIM25 mejoró la entrega; no se verificó una métrica clínica de eficacia o seguridad.",
+    "summary": "Exploración preclínica de proteínas humanas como componentes de sistemas de transporte de ARNm, con validación experimental inicial.",
+    "limitations": "La selección experimental no es aleatoria ni representa sensibilidad global; no se demostró seguridad clínica, eficacia terapéutica humana ni menor inmunogenicidad in vivo.",
+    "remember": "La selección experimental no es aleatoria ni representa sensibilidad global; no se demostró seguridad clínica, eficacia terapéutica humana ni menor inmunogenicidad in vivo.",
+    "language": "No confirmado",
+    "framework": "DeepDelivery, interpretabilidad de predicciones y análisis de perturbación de dominios; código y versiones no confirmados.",
+    "hardware": "Equipamiento de caracterización y microscopía electrónica TEM descrito en agradecimientos; GPU, instrumentación completa y configuración no confirmadas.",
+    "paper": "https://doi.org/10.1038/s41467-026-79039-x",
+    "doi": "10.1038/s41467-026-79039-x",
+    "published": "31 octubre 2026",
+    "journal": "Nature Communications · 2026",
+    "key_metric": "12/15 proteínas validadas experimentalmente",
+    "rich": {
+      "problem": "Exploración preclínica de proteínas humanas como componentes de sistemas de transporte de ARNm, con validación experimental inicial.",
+      "idea": "DeepDelivery, plataforma de IA de cribado proteómico y análisis de características proteicas; la arquitectura neuronal exacta no se confirmó en el resumen original.",
+      "why": "Aplicación en Bioingeniería molecular. Evidencia original con límites y procedencia de métricas documentados.",
+      "interpretability": "La selección experimental no es aleatoria ni representa sensibilidad global; no se demostró seguridad clínica, eficacia terapéutica humana ni menor inmunogenicidad in vivo.",
+      "dataset_cards": [
+        {
+          "name": "Proteoma",
+          "value": "512 candidatas",
+          "detail": "Priorización computacional"
+        },
+        {
+          "name": "Validación",
+          "value": "15 proteínas",
+          "detail": "12 con actividad"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Validación",
+          "main": "12/15",
+          "sub": "Subconjunto seleccionado"
+        },
+        {
+          "label": "Familia",
+          "main": "TRIM",
+          "sub": "Proteínas con actividad"
+        },
+        {
+          "label": "Ingeniería",
+          "main": "TRIM25",
+          "sub": "Modificación de dominios"
+        }
+      ],
+      "implementation": [
+        "Metodología: Descubrimiento computacional de proteínas humanas, selección de candidatos y evaluación experimental de ensamblaje de partículas y transporte de ARNm; análisis de interpretabilidad y perturbaciones de dominios TRIM.",
+        "Arquitectura: DeepDelivery, plataforma de IA de cribado proteómico y análisis de características proteicas; la arquitectura neuronal exacta no se confirmó en el resumen original.",
+        "Hardware: Equipamiento de caracterización y microscopía electrónica TEM descrito en agradecimientos; GPU, instrumentación completa y configuración no confirmadas.",
+        "Software: DeepDelivery, interpretabilidad de predicciones y análisis de perturbación de dominios; código y versiones no confirmados.",
+        "Costos: No reportados; hay financiación y declaraciones de patentes, sin desglose monetario de plataforma.",
+        "Limitaciones: La selección experimental no es aleatoria ni representa sensibilidad global; no se demostró seguridad clínica, eficacia terapéutica humana ni menor inmunogenicidad in vivo.",
+        "Fuente primaria: https://doi.org/10.1038/s41467-026-79039-x",
+        "Código/datos: No se verificó repositorio original de software."
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Cribado",
+          "Candidatas",
+          "512"
+        ],
+        [
+          "Validación",
+          "Proteínas ensayadas",
+          "15"
+        ],
+        [
+          "Validación",
+          "Con actividad",
+          "12"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-31",
+    "reviewed": "01 noviembre 2026",
+    "rich_detail": true,
+    "code": "No se verificó repositorio de código original.",
+    "cost": "Se plantea una alternativa potencialmente menos costosa a proteómica, pero no se publicó una comparación económica cuantificada.",
+    "figures": [],
+    "flag": "🇨🇳",
+    "countryFlags": "🇨🇳",
+    "country": "China",
+    "rubro": "IA histopatológica y proteómica",
+    "area": "Patología oncológica",
+    "modality": "Láminas H&E WSI / proteómica",
+    "title": "AI-HistoPS: decoding proteomic heterogeneity with subtype resolution from histopathology in liver metastases",
+    "title_es": "AI-HistoPS: caracterización de heterogeneidad proteómica y subtipos a partir de histopatología de metástasis hepáticas",
+    "institution": "Nanchang University; Fuzhou University; Sun Yat-sen University; Tsinghua University",
+    "sample": "Cohortes multicéntricas de metástasis hepáticas de diversos tumores primarios; número total de pacientes y láminas no confirmado en el resumen original accesible.",
+    "design": "Estudio computacional con cohortes de descubrimiento y validación externa; predicción de tres estados proteómicos LMS1–LMS3 a partir de láminas H&E, análisis de atención e inmunohistoquímica multiplex.",
+    "model": "AI-HistoPS: representaciones de modelo fundacional de patología + multiple instance learning (MIL) mediado por agentes, con mapas de atención.",
+    "metrics": "Evaluación de discriminación de subtipos en descubrimiento y cohortes externas; el resumen primario no proporciona AUC, F1 ni sensibilidad numéricas verificables. Tres subtipos LMS1–LMS3.",
+    "summary": "Las láminas histológicas pueden contener señales asociadas con estados proteómicos de metástasis hepáticas; evidencia exploratoria con validación externa.",
+    "limitations": "No reemplaza proteómica ni demuestra decisiones terapéuticas o pronósticas; falta validación prospectiva amplia. Métricas numéricas no confirmadas en el resumen accesible.",
+    "remember": "No reemplaza proteómica ni demuestra decisiones terapéuticas o pronósticas; falta validación prospectiva amplia. Métricas numéricas no confirmadas en el resumen accesible.",
+    "language": "No confirmado",
+    "framework": "Modelo fundacional de patología, MIL basado en agentes y mapas de atención; versiones y código no confirmados.",
+    "hardware": "Escáneres de patología digital e inmunohistoquímica multiplex; modelos de escáner y GPU no reportados en el resumen.",
+    "paper": "https://doi.org/10.1038/s41698-026-01752-z",
+    "doi": "10.1038/s41698-026-01752-z",
+    "published": "31 octubre 2026",
+    "journal": "npj Precision Oncology · 2026",
+    "key_metric": "3 subtipos proteómicos; AUC no confirmada",
+    "rich": {
+      "problem": "Las láminas histológicas pueden contener señales asociadas con estados proteómicos de metástasis hepáticas; evidencia exploratoria con validación externa.",
+      "idea": "AI-HistoPS: representaciones de modelo fundacional de patología + multiple instance learning (MIL) mediado por agentes, con mapas de atención.",
+      "why": "Aplicación en Patología oncológica. Evidencia original con límites y procedencia de métricas documentados.",
+      "interpretability": "No reemplaza proteómica ni demuestra decisiones terapéuticas o pronósticas; falta validación prospectiva amplia. Métricas numéricas no confirmadas en el resumen accesible.",
+      "dataset_cards": [
+        {
+          "name": "Cohortes",
+          "value": "Multicéntricas",
+          "detail": "Descubrimiento + externas"
+        },
+        {
+          "name": "Subtipos",
+          "value": "LMS1–LMS3",
+          "detail": "3 estados proteómicos"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Método",
+          "main": "AI-HistoPS",
+          "sub": "MIL + foundation model"
+        },
+        {
+          "label": "Verificación",
+          "main": "Multiplex IHQ",
+          "sub": "Correlatos espaciales"
+        },
+        {
+          "label": "AUC",
+          "main": "No confirmada",
+          "sub": "No inventar"
+        }
+      ],
+      "implementation": [
+        "Metodología: Estudio computacional con cohortes de descubrimiento y validación externa; predicción de tres estados proteómicos LMS1–LMS3 a partir de láminas H&E, análisis de atención e inmunohistoquímica multiplex.",
+        "Arquitectura: AI-HistoPS: representaciones de modelo fundacional de patología + multiple instance learning (MIL) mediado por agentes, con mapas de atención.",
+        "Hardware: Escáneres de patología digital e inmunohistoquímica multiplex; modelos de escáner y GPU no reportados en el resumen.",
+        "Software: Modelo fundacional de patología, MIL basado en agentes y mapas de atención; versiones y código no confirmados.",
+        "Costos: Se plantea una alternativa potencialmente menos costosa a proteómica, pero no se publicó una comparación económica cuantificada.",
+        "Limitaciones: No reemplaza proteómica ni demuestra decisiones terapéuticas o pronósticas; falta validación prospectiva amplia. Métricas numéricas no confirmadas en el resumen accesible.",
+        "Fuente primaria: https://doi.org/10.1038/s41698-026-01752-z",
+        "Código/datos: No se verificó repositorio de código original."
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Subtipos",
+          "Cantidad",
+          "3"
+        ],
+        [
+          "AUC externa",
+          "Valor",
+          "No confirmada"
+        ],
+        [
+          "Muestra total",
+          "n",
+          "No confirmada"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-11-01",
+    "reviewed": "01 noviembre 2026",
+    "rich_detail": true,
+    "code": "No se verificó repositorio original.",
+    "cost": "No reportados.",
+    "figures": [],
+    "flag": "🇮🇳",
+    "countryFlags": "🇮🇳",
+    "country": "India",
+    "rubro": "IA de apoyo a detección de aneurismas",
+    "area": "Neuroimagen",
+    "modality": "Imagen cerebral / benchmark de aneurismas",
+    "title": "Intelligent clinical decision support system for intracranial aneurysm lesion-based detection using biomedical imaging data",
+    "title_es": "Sistema inteligente de apoyo clínico para detección de lesiones de aneurisma intracraneal mediante imágenes biomédicas",
+    "institution": "VIT-AP University; Mahatma Gandhi Institute of Technology; Aditya University; KIIT University y colaboradores",
+    "sample": "Benchmark público denominado Intracranial Aneurysm Dataset; número de pacientes, lesiones e imágenes no confirmado en el resumen original.",
+    "design": "Estudio experimental de procesamiento de imágenes: normalización, reducción de ruido, realce de contraste, skull stripping y clasificación; comparación con métodos previos sobre un benchmark.",
+    "model": "CDSS-IALD: extractor jerárquico ConvNeXt seguido de una spiking neural network (SNN) para detección y clasificación.",
+    "metrics": "El resumen editorial afirma mejor rendimiento que comparadores, pero no contiene cifras de exactitud/AUC reproducibles. Una fuente secundaria menciona 98,77% de exactitud, que no se incorpora como métrica primaria verificada.",
+    "summary": "Propuesta de sistema híbrido ConvNeXt–SNN para imágenes de aneurismas, pendiente de confirmación detallada de tamaño de muestra y evaluación externa.",
+    "limitations": "No se pudo comprobar en el resumen el tamaño muestral ni separación por paciente; no existe evidencia de validación clínica prospectiva. Las métricas de terceros no se presentan como verificadas.",
+    "remember": "No se pudo comprobar en el resumen el tamaño muestral ni separación por paciente; no existe evidencia de validación clínica prospectiva. Las métricas de terceros no se presentan como verificadas.",
+    "language": "No confirmado",
+    "framework": "ConvNeXt y Spiking Neural Network; librerías y versiones no confirmadas.",
+    "hardware": "Imágenes cerebrales; modalidad específica de adquisición, GPU y CPU no confirmadas en el resumen original.",
+    "paper": "https://doi.org/10.1038/s41598-026-76815-z",
+    "doi": "10.1038/s41598-026-76815-z",
+    "published": "01 noviembre 2026",
+    "journal": "Scientific Reports · 2026",
+    "key_metric": "ConvNeXt + SNN; exactitud no confirmada",
+    "rich": {
+      "problem": "Propuesta de sistema híbrido ConvNeXt–SNN para imágenes de aneurismas, pendiente de confirmación detallada de tamaño de muestra y evaluación externa.",
+      "idea": "CDSS-IALD: extractor jerárquico ConvNeXt seguido de una spiking neural network (SNN) para detección y clasificación.",
+      "why": "Aplicación en Neuroimagen. Evidencia original con límites y procedencia de métricas documentados.",
+      "interpretability": "No se pudo comprobar en el resumen el tamaño muestral ni separación por paciente; no existe evidencia de validación clínica prospectiva. Las métricas de terceros no se presentan como verificadas.",
+      "dataset_cards": [
+        {
+          "name": "Benchmark",
+          "value": "Aneurysm Dataset",
+          "detail": "Tamaño no confirmado"
+        },
+        {
+          "name": "Evaluación",
+          "value": "Experimental",
+          "detail": "Sin validación clínica"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Extractor",
+          "main": "ConvNeXt",
+          "sub": "Jerárquico"
+        },
+        {
+          "label": "Clasificador",
+          "main": "SNN",
+          "sub": "Red de impulsos"
+        },
+        {
+          "label": "Exactitud",
+          "main": "No confirmada",
+          "sub": "Fuente primaria accesible"
+        }
+      ],
+      "implementation": [
+        "Metodología: Estudio experimental de procesamiento de imágenes: normalización, reducción de ruido, realce de contraste, skull stripping y clasificación; comparación con métodos previos sobre un benchmark.",
+        "Arquitectura: CDSS-IALD: extractor jerárquico ConvNeXt seguido de una spiking neural network (SNN) para detección y clasificación.",
+        "Hardware: Imágenes cerebrales; modalidad específica de adquisición, GPU y CPU no confirmadas en el resumen original.",
+        "Software: ConvNeXt y Spiking Neural Network; librerías y versiones no confirmadas.",
+        "Costos: No reportados.",
+        "Limitaciones: No se pudo comprobar en el resumen el tamaño muestral ni separación por paciente; no existe evidencia de validación clínica prospectiva. Las métricas de terceros no se presentan como verificadas.",
+        "Fuente primaria: https://doi.org/10.1038/s41598-026-76815-z",
+        "Código/datos: No se verificó repositorio original."
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Muestra",
+          "n",
+          "No confirmada"
+        ],
+        [
+          "Exactitud",
+          "Valor primario",
+          "No confirmada"
+        ],
+        [
+          "Validación clínica",
+          "Estado",
+          "No reportada"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-10-31",
+    "reviewed": "01 noviembre 2026",
+    "rich_detail": true,
+    "code": "Se declara calculadora web, URL específica no confirmada en el resumen.",
+    "cost": "No se reportó análisis económico ni costo de despliegue.",
+    "figures": [],
+    "flag": "🇨🇳",
+    "countryFlags": "🇨🇳",
+    "country": "China",
+    "rubro": "Predicción de metástasis y validación externa",
+    "area": "Urooncología",
+    "modality": "Registros oncológicos SEER / historias clínicas",
+    "title": "Machine learning predicts postoperative lung metastasis in upper tract urothelial carcinoma",
+    "title_es": "Aprendizaje automático para predecir metástasis pulmonar posoperatoria en carcinoma urotelial del tracto superior",
+    "institution": "First Hospital of Jilin University; Tongji Hospital / Huazhong University of Science and Technology",
+    "sample": "Datos SEER 2000–2017 divididos 70/30 para desarrollo y prueba; cohorte externa de 569 pacientes del First Hospital of Jilin University. Tamaño total SEER no confirmado en resumen original.",
+    "design": "Cohorte retrospectiva; selección de variables Boruta y regresión multivariable; comparación de cinco técnicas ML; AUC, AUPRC, curvas de decisión y SHAP; sin sobremuestreo sintético en análisis final.",
+    "model": "Regresión logística elegida para calculadora de riesgo por mayor estabilidad y generalización; Random Forest tuvo alto rendimiento aparente en algunas métricas.",
+    "metrics": "569 pacientes en validación externa; el resumen original no proporciona valores numéricos de AUROC/AUPRC. El resultado principal es estabilidad de regresión logística frente a Random Forest.",
+    "summary": "Calculadora exploratoria de riesgo de metástasis pulmonar con evaluación externa, sin demostración de mejora clínica prospectiva.",
+    "limitations": "Retrospectivo, posible sesgo de selección y cambios temporales; tamaño total de SEER y AUC no verificables desde resumen accesible.",
+    "remember": "Retrospectivo, posible sesgo de selección y cambios temporales; tamaño total de SEER y AUC no verificables desde resumen accesible.",
+    "language": "No confirmado",
+    "framework": "Boruta, regresión logística, Random Forest, SHAP, AUPRC y análisis de decisión; versiones no reportadas.",
+    "hardware": "Infraestructura de registros SEER e historia clínica; GPU no reportada.",
+    "paper": "https://doi.org/10.1038/s41598-026-77312-z",
+    "doi": "10.1038/s41598-026-77312-z",
+    "published": "31 octubre 2026",
+    "journal": "Scientific Reports · 2026",
+    "key_metric": "Validación externa en 569 pacientes",
+    "rich": {
+      "problem": "Calculadora exploratoria de riesgo de metástasis pulmonar con evaluación externa, sin demostración de mejora clínica prospectiva.",
+      "idea": "Regresión logística elegida para calculadora de riesgo por mayor estabilidad y generalización; Random Forest tuvo alto rendimiento aparente en algunas métricas.",
+      "why": "Aplicación en Urooncología. Evidencia original con límites y procedencia de métricas documentados.",
+      "interpretability": "Retrospectivo, posible sesgo de selección y cambios temporales; tamaño total de SEER y AUC no verificables desde resumen accesible.",
+      "dataset_cards": [
+        {
+          "name": "SEER",
+          "value": "2000–2017",
+          "detail": "Split 70/30"
+        },
+        {
+          "name": "Validación",
+          "value": "569 pacientes",
+          "detail": "Jilin University"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Modelo final",
+          "main": "Logística",
+          "sub": "Mayor estabilidad"
+        },
+        {
+          "label": "Comparador",
+          "main": "Random Forest",
+          "sub": "Alto rendimiento aparente"
+        },
+        {
+          "label": "AUC externa",
+          "main": "No confirmada",
+          "sub": "No inventar"
+        }
+      ],
+      "implementation": [
+        "Metodología: Cohorte retrospectiva; selección de variables Boruta y regresión multivariable; comparación de cinco técnicas ML; AUC, AUPRC, curvas de decisión y SHAP; sin sobremuestreo sintético en análisis final.",
+        "Arquitectura: Regresión logística elegida para calculadora de riesgo por mayor estabilidad y generalización; Random Forest tuvo alto rendimiento aparente en algunas métricas.",
+        "Hardware: Infraestructura de registros SEER e historia clínica; GPU no reportada.",
+        "Software: Boruta, regresión logística, Random Forest, SHAP, AUPRC y análisis de decisión; versiones no reportadas.",
+        "Costos: No se reportó análisis económico ni costo de despliegue.",
+        "Limitaciones: Retrospectivo, posible sesgo de selección y cambios temporales; tamaño total de SEER y AUC no verificables desde resumen accesible.",
+        "Fuente primaria: https://doi.org/10.1038/s41598-026-77312-z",
+        "Código/datos: Se declara calculadora web, URL específica no confirmada en el resumen."
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Cohorte externa",
+          "Pacientes",
+          "569"
+        ],
+        [
+          "Entrenamiento/test",
+          "Proporción",
+          "70/30"
+        ],
+        [
+          "AUC externa",
+          "Valor",
+          "No confirmada"
+        ]
+      ]
+    }
+  },
+  {
     "date": "2026-10-31",
     "reviewed": "31 octubre 2026",
     "rich_detail": true,
