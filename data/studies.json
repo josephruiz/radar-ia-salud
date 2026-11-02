@@ -1,5 +1,578 @@
 [
   {
+    "date": "2026-11-02",
+    "reviewed": "02 noviembre 2026",
+    "rich_detail": true,
+    "code": "https://github.com/Gliomethods/GlioTrace",
+    "cost": "No reportados.",
+    "figures": [],
+    "flag": "🇸🇪",
+    "countryFlags": "🇸🇪",
+    "country": "Suecia",
+    "rubro": "Oncología experimental y microscopía",
+    "area": "Oncología experimental y microscopía",
+    "modality": "Microscopía confocal de glioblastoma",
+    "title": "Reconstructing the single-cell spatiotemporal dynamics of glioblastoma invasion",
+    "title_es": "Reconstrucción de la dinámica espaciotemporal unicelular de la invasión del glioblastoma",
+    "institution": "Uppsala University; Chalmers University of Technology / University of Gothenburg",
+    "sample": "Seis modelos PDCX derivados de pacientes; CNN morfológica entrenada con 7.800 imágenes; U-Net vascular con 400 imágenes.",
+    "design": "Seguimiento ex vivo en cortes cerebrales de ratón de 300 μm hasta cinco días; evaluación de fenotipos, migración y respuesta a fármacos.",
+    "model": "GlioTrace: CNN de morfología, seguimiento con filtro de Kalman, HMM con covariables, U-Net vascular.",
+    "metrics": "Exactitud CNN morfológica 87%; segmentación de vasos F1=0,74 ± 0,015.",
+    "summary": "Investigación original sobre oncología experimental y microscopía. Exactitud CNN morfológica 87%; segmentación de vasos F1=0,74 ± 0,015.",
+    "limitations": "Seis modelos ex vivo; no predice supervivencia ni eficacia clínica; no permite atribuir causalidad a las asociaciones microambientales.",
+    "remember": "Seis modelos ex vivo; no predice supervivencia ni eficacia clínica; no permite atribuir causalidad a las asociaciones microambientales.",
+    "language": "No confirmado",
+    "framework": "MATLAB R2023b, Deep Learning Toolbox 23.2, MetaXpress 6.5; GlioTrace v0.2.0.",
+    "hardware": "Microscopio ImageXpress Micro Confocal, objetivo 10×; GPU no confirmada.",
+    "paper": "https://doi.org/10.1038/s41467-026-78908-9",
+    "doi": "10.1038/s41467-026-78908-9",
+    "published": "02 noviembre 2026",
+    "journal": "Nature Communications · 2026",
+    "key_metric": "87% exactitud morfológica",
+    "rich": {
+      "problem": "Problema investigado: Oncología experimental y microscopía. Seis modelos PDCX derivados de pacientes; CNN morfológica entrenada con 7.800 imágenes; U-Net vascular con 400 imágenes.",
+      "idea": "GlioTrace: CNN de morfología, seguimiento con filtro de Kalman, HMM con covariables, U-Net vascular.",
+      "why": "Interés para ingeniería biomédica: Microscopía confocal de glioblastoma.",
+      "interpretability": "Seis modelos ex vivo; no predice supervivencia ni eficacia clínica; no permite atribuir causalidad a las asociaciones microambientales.",
+      "dataset_cards": [
+        {
+          "name": "Modelos",
+          "value": "6",
+          "detail": "PDCX"
+        },
+        {
+          "name": "CNN",
+          "value": "7.800",
+          "detail": "Imágenes anotadas"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Exactitud",
+          "main": "87%",
+          "sub": "CNN morfológica"
+        },
+        {
+          "label": "F1",
+          "main": "0,74",
+          "sub": "Vasos"
+        }
+      ],
+      "implementation": [
+        "Seguimiento ex vivo en cortes cerebrales de ratón de 300 μm hasta cinco días; evaluación de fenotipos, migración y respuesta a fármacos.",
+        "GlioTrace: CNN de morfología, seguimiento con filtro de Kalman, HMM con covariables, U-Net vascular."
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "CNN",
+          "Exactitud",
+          "87%"
+        ],
+        [
+          "Vasos",
+          "F1",
+          "0,74 ± 0,015"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-11-02",
+    "reviewed": "02 noviembre 2026",
+    "rich_detail": true,
+    "code": "No reportado",
+    "cost": "No reportados.",
+    "figures": [],
+    "flag": "🇨🇳",
+    "countryFlags": "🇨🇳",
+    "country": "China",
+    "rubro": "Medicina nuclear e IA",
+    "area": "Medicina nuclear e IA",
+    "modality": "SPECT de perfusión miocárdica",
+    "title": "Development and internal validation of survival models for predicting a composite clinical endpoint using clinical variables and quantitative SPECT/CT imaging features",
+    "title_es": "Modelos de supervivencia mediante datos clínicos y características cuantitativas de SPECT/CT",
+    "institution": "First Hospital of Shanxi Medical University; Shanxi Medical University; Beijing Anzhen Hospital",
+    "sample": "1.674 pacientes; 1.171 entrenamiento y 503 validación interna; 662 eventos compuestos.",
+    "design": "Cohorte retrospectiva, seguimiento mediano 36,6 meses; comparación de siete modelos de supervivencia con C-index, AUC temporal y calibración.",
+    "model": "CoxPH, LASSO Cox, RPart, Random Survival Forest, GBM, SVM y XGBoost.",
+    "metrics": "AUC a 60 meses 0,702–0,717 y C-index 0,662–0,674 en validación para modelos principales; RPart cayó de AUC 0,825 a 0,600; entropía de fase ΔC-index=0,0009.",
+    "summary": "Investigación original sobre medicina nuclear e ia. AUC a 60 meses 0,702–0,717 y C-index 0,662–0,674 en validación para modelos principales; RPart cayó de AUC 0,825 a 0,600; entropía de fase ΔC-index=0,0009.",
+    "limitations": "Sin validación externa; endpoint compuesto heterogéneo; XGBoost se utilizó exploratoriamente y no por superioridad.",
+    "remember": "Sin validación externa; endpoint compuesto heterogéneo; XGBoost se utilizó exploratoriamente y no por superioridad.",
+    "language": "No confirmado",
+    "framework": "CoxPH, LASSO, RSF, GBM, SVM, XGBoost; versiones no confirmadas.",
+    "hardware": "Equipo SPECT-MPI; fabricante y GPU no confirmados.",
+    "paper": "https://doi.org/10.1038/s41598-026-79118-5",
+    "doi": "10.1038/s41598-026-79118-5",
+    "published": "02 noviembre 2026",
+    "journal": "Scientific Reports · 2026",
+    "key_metric": "1.674 pacientes; AUC 0,702–0,717",
+    "rich": {
+      "problem": "Problema investigado: Medicina nuclear e IA. 1.674 pacientes; 1.171 entrenamiento y 503 validación interna; 662 eventos compuestos.",
+      "idea": "CoxPH, LASSO Cox, RPart, Random Survival Forest, GBM, SVM y XGBoost.",
+      "why": "Interés para ingeniería biomédica: SPECT de perfusión miocárdica.",
+      "interpretability": "Sin validación externa; endpoint compuesto heterogéneo; XGBoost se utilizó exploratoriamente y no por superioridad.",
+      "dataset_cards": [
+        {
+          "name": "Pacientes",
+          "value": "1.674",
+          "detail": "1.171 / 503"
+        },
+        {
+          "name": "Eventos",
+          "value": "662",
+          "detail": "39,5%"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "AUC 60 meses",
+          "main": "0,702–0,717",
+          "sub": "Validación interna"
+        },
+        {
+          "label": "C-index",
+          "main": "0,662–0,674",
+          "sub": "Validación interna"
+        }
+      ],
+      "implementation": [
+        "Cohorte retrospectiva, seguimiento mediano 36,6 meses; comparación de siete modelos de supervivencia con C-index, AUC temporal y calibración.",
+        "CoxPH, LASSO Cox, RPart, Random Survival Forest, GBM, SVM y XGBoost."
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Modelos principales",
+          "AUC 60 meses",
+          "0,702–0,717"
+        ],
+        [
+          "RPart",
+          "AUC entrenamiento / prueba",
+          "0,825 / 0,600"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-11-02",
+    "reviewed": "02 noviembre 2026",
+    "rich_detail": true,
+    "code": "No reportado",
+    "cost": "No reportados.",
+    "figures": [],
+    "flag": "🇰🇷 🇯🇵",
+    "countryFlags": "🇰🇷 🇯🇵",
+    "country": "Corea del Sur / Japón",
+    "rubro": "Neuroimagen pediátrica",
+    "area": "Neuroimagen pediátrica",
+    "modality": "Resonancia magnética cerebral T1",
+    "title": "Transfer learning enables automated pituitary gland segmentation on brain MRI in 6-year-old children",
+    "title_es": "Transfer learning para segmentar la hipófisis en resonancias de niños de seis años",
+    "institution": "Daegu-Gyeongbuk Medical Innovation Foundation; Gachon University Gil Medical Center; Korea University; Tohoku Fukushi University",
+    "sample": "153 resonancias de adultos para preentrenamiento; 61 niños de seis años para adaptación; prueba independiente con 15 niños.",
+    "design": "Transfer learning de U-Net 3D, consenso de tres expertos, recorte ROI dinámico, jitter ±8 vóxeles y aumento de datos ×20.",
+    "model": "U-Net 3D preentrenada en adultos y adaptada a niños; ablación del jitter espacial.",
+    "metrics": "Dice 0,83 ± 0,23 con TL frente a 0,72 ± 0,22 sin TL (p=0,0002); error relativo de volumen 17,1%; ICC 0,48.",
+    "summary": "Investigación original sobre neuroimagen pediátrica. Dice 0,83 ± 0,23 con TL frente a 0,72 ± 0,22 sin TL (p=0,0002); error relativo de volumen 17,1%; ICC 0,48.",
+    "limitations": "Solo 15 niños en prueba; concordancia volumétrica moderada; generalización a otras edades no demostrada; patente declarada.",
+    "remember": "Solo 15 niños en prueba; concordancia volumétrica moderada; generalización a otras edades no demostrada; patente declarada.",
+    "language": "No confirmado",
+    "framework": "U-Net 3D y aumentos de datos; framework no confirmado.",
+    "hardware": "RM T1; fabricante y GPU no confirmados.",
+    "paper": "https://doi.org/10.1038/s41598-026-77436-2",
+    "doi": "10.1038/s41598-026-77436-2",
+    "published": "02 noviembre 2026",
+    "journal": "Scientific Reports · 2026",
+    "key_metric": "Dice 0,83 vs 0,72",
+    "rich": {
+      "problem": "Problema investigado: Neuroimagen pediátrica. 153 resonancias de adultos para preentrenamiento; 61 niños de seis años para adaptación; prueba independiente con 15 niños.",
+      "idea": "U-Net 3D preentrenada en adultos y adaptada a niños; ablación del jitter espacial.",
+      "why": "Interés para ingeniería biomédica: Resonancia magnética cerebral T1.",
+      "interpretability": "Solo 15 niños en prueba; concordancia volumétrica moderada; generalización a otras edades no demostrada; patente declarada.",
+      "dataset_cards": [
+        {
+          "name": "Preentrenamiento",
+          "value": "153 RM",
+          "detail": "Adultos"
+        },
+        {
+          "name": "Pediatría",
+          "value": "61",
+          "detail": "15 en prueba"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Dice TL",
+          "main": "0,83",
+          "sub": "±0,23"
+        },
+        {
+          "label": "Volumen",
+          "main": "17,1%",
+          "sub": "Error relativo"
+        }
+      ],
+      "implementation": [
+        "Transfer learning de U-Net 3D, consenso de tres expertos, recorte ROI dinámico, jitter ±8 vóxeles y aumento de datos ×20.",
+        "U-Net 3D preentrenada en adultos y adaptada a niños; ablación del jitter espacial."
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "U-Net TL",
+          "Dice",
+          "0,83 ± 0,23"
+        ],
+        [
+          "Adult-only",
+          "Dice",
+          "0,72 ± 0,22"
+        ],
+        [
+          "Volumen",
+          "ICC",
+          "0,48"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-11-02",
+    "reviewed": "02 noviembre 2026",
+    "rich_detail": true,
+    "code": "No disponible públicamente",
+    "cost": "Autores estiman visor ~USD 500 y caja/encoder ~USD 200; no es presupuesto hospitalario completo.",
+    "figures": [],
+    "flag": "🇺🇸",
+    "countryFlags": "🇺🇸",
+    "country": "Estados Unidos",
+    "rubro": "Instrumentación biomédica y visión computacional",
+    "area": "Instrumentación biomédica y visión computacional",
+    "modality": "Visión biplanar + XR de catéter",
+    "title": "Real-time XR-based 6-DOF catheter tracking enhances cardiac intervention navigation efficiency and depth perception",
+    "title_es": "Seguimiento de catéter con realidad extendida y seis grados de libertad para navegación cardíaca",
+    "institution": "Weill Cornell Medicine / Cornell University y colaboradores",
+    "sample": "20 estudiantes de medicina novatos; seis objetivos anatómicos en simulador.",
+    "design": "Comparación de navegación en 3D inmersivo y 2D, midiendo tiempo, distancia y trayectoria.",
+    "model": "Visión por computadora para 5-DOF y encoder de giro electromecánico para completar 6-DOF; renderizado en Meta Quest 3.",
+    "metrics": "Tiempo 54,6 s (3D) frente a 263,5 s (2D); distancia 1.939 frente a 7.854 mm; 24 FPS; p<0,001.",
+    "summary": "Investigación original sobre instrumentación biomédica y visión computacional. Tiempo 54,6 s (3D) frente a 263,5 s (2D); distancia 1.939 frente a 7.854 mm; 24 FPS; p<0,001.",
+    "limitations": "Solo estudiantes novatos, corazón estático y entrenamiento; sin validación clínica ni latencia extremo a extremo; software privado.",
+    "remember": "Solo estudiantes novatos, corazón estático y entrenamiento; sin validación clínica ni latencia extremo a extremo; software privado.",
+    "language": "No confirmado",
+    "framework": "Python, OpenCV, Arduino, SolidWorks; software específico no público.",
+    "hardware": "Meta Quest 3; dos cámaras, caja impresa 3D, encoder, Arduino Nano, impresora Prusa MK4.",
+    "paper": "https://doi.org/10.1038/s44385-026-00122-5",
+    "doi": "10.1038/s44385-026-00122-5",
+    "published": "02 noviembre 2026",
+    "journal": "npj Biomedical Innovations · 2026",
+    "key_metric": "4,8× menor tiempo; ~USD 700 componentes",
+    "rich": {
+      "problem": "Problema investigado: Instrumentación biomédica y visión computacional. 20 estudiantes de medicina novatos; seis objetivos anatómicos en simulador.",
+      "idea": "Visión por computadora para 5-DOF y encoder de giro electromecánico para completar 6-DOF; renderizado en Meta Quest 3.",
+      "why": "Interés para ingeniería biomédica: Visión biplanar + XR de catéter.",
+      "interpretability": "Solo estudiantes novatos, corazón estático y entrenamiento; sin validación clínica ni latencia extremo a extremo; software privado.",
+      "dataset_cards": [
+        {
+          "name": "Participantes",
+          "value": "20",
+          "detail": "Novatos"
+        },
+        {
+          "name": "Hardware",
+          "value": "~USD 700",
+          "detail": "Visor + encoder"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "3D",
+          "main": "54,6 s",
+          "sub": "2D: 263,5 s"
+        },
+        {
+          "label": "3D",
+          "main": "1.939 mm",
+          "sub": "2D: 7.854 mm"
+        }
+      ],
+      "implementation": [
+        "Comparación de navegación en 3D inmersivo y 2D, midiendo tiempo, distancia y trayectoria.",
+        "Visión por computadora para 5-DOF y encoder de giro electromecánico para completar 6-DOF; renderizado en Meta Quest 3."
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Tiempo",
+          "3D / 2D",
+          "54,6 / 263,5 s"
+        ],
+        [
+          "Recorrido",
+          "3D / 2D",
+          "1.939 / 7.854 mm"
+        ],
+        [
+          "Pipeline",
+          "FPS",
+          "24"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-11-01",
+    "reviewed": "02 noviembre 2026",
+    "rich_detail": true,
+    "code": "No reportado",
+    "cost": "No reportados.",
+    "figures": [],
+    "flag": "🇹🇼 🇵🇰",
+    "countryFlags": "🇹🇼 🇵🇰",
+    "country": "Taiwán / Pakistán",
+    "rubro": "Seguridad de imágenes médicas",
+    "area": "Seguridad de imágenes médicas",
+    "modality": "Resonancia abdominal CHAOS",
+    "title": "FS-VMADW: a frequency–spatial vision mamba framework for dual watermarking of medical MRI images",
+    "title_es": "FS-VMADW: doble marca de agua con Vision Mamba espacial-frecuencial para resonancias médicas",
+    "institution": "Chaoyang University of Technology; Feng Chia University; Qurtuba University",
+    "sample": "Benchmark de resonancia abdominal CHAOS; número exacto de sujetos e imágenes no confirmado en el resumen original.",
+    "design": "Incrustación de dos marcas de 64 bits, entrenamiento en dos fases y comparación de backbones CNN, Transformer y Mamba.",
+    "model": "Vision Mamba con escaneo de cuatro direcciones, transformada Haar DWT de dos niveles, gating y spread-spectrum.",
+    "metrics": "PSNR 42,37 dB; SSIM 0,9557; NC 0,9511; BER 0,0491; BitAcc 0,9509 en condiciones limpias.",
+    "summary": "Investigación original sobre seguridad de imágenes médicas. PSNR 42,37 dB; SSIM 0,9557; NC 0,9511; BER 0,0491; BitAcc 0,9509 en condiciones limpias.",
+    "limitations": "Benchmark de protección digital, no prueba diagnóstica; no validado en PACS clínico ni con flujos DICOM reales.",
+    "remember": "Benchmark de protección digital, no prueba diagnóstica; no validado en PACS clínico ni con flujos DICOM reales.",
+    "language": "No confirmado",
+    "framework": "Vision Mamba, DWT y modelos de espacio de estados; versiones no reportadas.",
+    "hardware": "Imágenes de RM abdominal; GPU y escáner de origen no confirmados.",
+    "paper": "https://doi.org/10.1038/s41598-026-77827-5",
+    "doi": "10.1038/s41598-026-77827-5",
+    "published": "01 noviembre 2026",
+    "journal": "Scientific Reports · 2026",
+    "key_metric": "PSNR 42,37 dB; SSIM 0,9557",
+    "rich": {
+      "problem": "Problema investigado: Seguridad de imágenes médicas. Benchmark de resonancia abdominal CHAOS; número exacto de sujetos e imágenes no confirmado en el resumen original.",
+      "idea": "Vision Mamba con escaneo de cuatro direcciones, transformada Haar DWT de dos niveles, gating y spread-spectrum.",
+      "why": "Interés para ingeniería biomédica: Resonancia abdominal CHAOS.",
+      "interpretability": "Benchmark de protección digital, no prueba diagnóstica; no validado en PACS clínico ni con flujos DICOM reales.",
+      "dataset_cards": [
+        {
+          "name": "Datos",
+          "value": "CHAOS",
+          "detail": "RM abdominal"
+        },
+        {
+          "name": "Watermarks",
+          "value": "2×64 bits",
+          "detail": "Doble marca"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "PSNR",
+          "main": "42,37 dB",
+          "sub": "Imagen limpia"
+        },
+        {
+          "label": "SSIM",
+          "main": "0,9557",
+          "sub": "Imagen limpia"
+        }
+      ],
+      "implementation": [
+        "Incrustación de dos marcas de 64 bits, entrenamiento en dos fases y comparación de backbones CNN, Transformer y Mamba.",
+        "Vision Mamba con escaneo de cuatro direcciones, transformada Haar DWT de dos niveles, gating y spread-spectrum."
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Calidad",
+          "PSNR",
+          "42,37 dB"
+        ],
+        [
+          "Calidad",
+          "SSIM",
+          "0,9557"
+        ],
+        [
+          "Recuperación",
+          "BitAcc",
+          "0,9509"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-11-02",
+    "reviewed": "02 noviembre 2026",
+    "rich_detail": true,
+    "code": "https://physionet.org/content/cudb/1.0.0/",
+    "cost": "No reportados; KL-KDE no requiere entrenamiento neuronal.",
+    "figures": [],
+    "flag": "🇺🇸",
+    "countryFlags": "🇺🇸",
+    "country": "Estados Unidos",
+    "rubro": "Procesamiento de señales biomédicas",
+    "area": "Procesamiento de señales biomédicas",
+    "modality": "ECG PhysioNet CU Ventricular Tachyarrhythmia",
+    "title": "Entropic analysis of time series through kernel density estimation",
+    "title_es": "Análisis entrópico de series temporales mediante estimación de densidad por kernels",
+    "institution": "Pacific Northwest National Laboratory; California State University Los Angeles",
+    "sample": "35 registros ECG de ocho minutos con estados ventriculares etiquetados.",
+    "design": "Embeddings de Takens 2D, KDE, entropía multiescala y divergencia KL en ventanas deslizantes; comparación con autoencoders.",
+    "model": "KDEE / KL-KDE estadístico no supervisado, sin entrenamiento neuronal; autoencoders como comparadores.",
+    "metrics": "F1 de KL-KDE 87,1% ± 8,7% en la tarea experimental ECG; no constituye eficacia diagnóstica.",
+    "summary": "Investigación original sobre procesamiento de señales biomédicas. F1 de KL-KDE 87,1% ± 8,7% en la tarea experimental ECG; no constituye eficacia diagnóstica.",
+    "limitations": "35 registros y clasificación binaria simplificada; dependencia del ancho de banda y ventanas; los autores niegan explícitamente validación clínica.",
+    "remember": "35 registros y clasificación binaria simplificada; dependencia del ancho de banda y ventanas; los autores niegan explícitamente validación clínica.",
+    "language": "No confirmado",
+    "framework": "Python, SciPy, KDE/Takens/KL; versiones no confirmadas.",
+    "hardware": "ECG de base de datos pública; dispositivo y GPU no reportados.",
+    "paper": "https://doi.org/10.1038/s41598-026-48307-7",
+    "doi": "10.1038/s41598-026-48307-7",
+    "published": "02 noviembre 2026",
+    "journal": "Scientific Reports · 2026",
+    "key_metric": "F1 ECG 87,1% ± 8,7%",
+    "rich": {
+      "problem": "Problema investigado: Procesamiento de señales biomédicas. 35 registros ECG de ocho minutos con estados ventriculares etiquetados.",
+      "idea": "KDEE / KL-KDE estadístico no supervisado, sin entrenamiento neuronal; autoencoders como comparadores.",
+      "why": "Interés para ingeniería biomédica: ECG PhysioNet CU Ventricular Tachyarrhythmia.",
+      "interpretability": "35 registros y clasificación binaria simplificada; dependencia del ancho de banda y ventanas; los autores niegan explícitamente validación clínica.",
+      "dataset_cards": [
+        {
+          "name": "ECG",
+          "value": "35 registros",
+          "detail": "8 min cada uno"
+        },
+        {
+          "name": "Datos",
+          "value": "PhysioNet CU",
+          "detail": "Base abierta"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "F1 KL-KDE",
+          "main": "87,1%",
+          "sub": "±8,7%"
+        },
+        {
+          "label": "Entrenamiento",
+          "main": "Ninguno",
+          "sub": "Estadístico"
+        }
+      ],
+      "implementation": [
+        "Embeddings de Takens 2D, KDE, entropía multiescala y divergencia KL en ventanas deslizantes; comparación con autoencoders.",
+        "KDEE / KL-KDE estadístico no supervisado, sin entrenamiento neuronal; autoencoders como comparadores."
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "ECG",
+          "F1",
+          "87,1% ± 8,7%"
+        ],
+        [
+          "Muestra",
+          "Registros",
+          "35"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-11-01",
+    "reviewed": "02 noviembre 2026",
+    "rich_detail": true,
+    "code": "https://github.com/EileenYXu/envRS",
+    "cost": "No reportados.",
+    "figures": [],
+    "flag": "🇬🇧 🇺🇸",
+    "countryFlags": "🇬🇧 🇺🇸",
+    "country": "Reino Unido / Estados Unidos (cohorte)",
+    "rubro": "Machine learning y epidemiología",
+    "area": "Machine learning y epidemiología",
+    "modality": "Datos longitudinales de encuestas y genética",
+    "title": "Longitudinal prediction of adolescent depression from environmental and polygenic risk scores",
+    "title_es": "Predicción longitudinal de depresión adolescente mediante puntuaciones de riesgo ambiental y poligénico",
+    "institution": "University of Edinburgh; cohorte Adolescent Brain Cognitive Development (ABCD)",
+    "sample": "9.797 participantes de ABCD; factores basales a los 9–11 años y evaluación a los 11–13.",
+    "design": "Regresión Elastic Net con validación cruzada de diez particiones para generar depRS; comparación con puntuación poligénica PRS y combinación de ambas.",
+    "model": "Elastic Net de 12 predictores ambientales; integración aditiva depRS+PRS, no red neuronal.",
+    "metrics": "depRS explica 12,3% de varianza; AUC 0,69 parental y 0,67 autorreporte; PRS 0,64 parental; combinación AUC 0,71 parental y 0,70 autorreporte.",
+    "summary": "Investigación original sobre machine learning y epidemiología. depRS explica 12,3% de varianza; AUC 0,69 parental y 0,67 autorreporte; PRS 0,64 parental; combinación AUC 0,71 parental y 0,70 autorreporte.",
+    "limitations": "Discriminación moderada, sin validación externa intercultural; preocupaciones éticas; no sirve como diagnóstico individual.",
+    "remember": "Discriminación moderada, sin validación externa intercultural; preocupaciones éticas; no sirve como diagnóstico individual.",
+    "language": "No confirmado",
+    "framework": "Elastic Net, validación cruzada y R; código de análisis disponible.",
+    "hardware": "Infraestructura de análisis estadístico/genético; GPU no especificada.",
+    "paper": "https://doi.org/10.1038/s41380-026-03934-4",
+    "doi": "10.1038/s41380-026-03934-4",
+    "published": "01 noviembre 2026",
+    "journal": "Molecular Psychiatry · 2026",
+    "key_metric": "N=9.797; AUC combinada 0,71",
+    "rich": {
+      "problem": "Problema investigado: Machine learning y epidemiología. 9.797 participantes de ABCD; factores basales a los 9–11 años y evaluación a los 11–13.",
+      "idea": "Elastic Net de 12 predictores ambientales; integración aditiva depRS+PRS, no red neuronal.",
+      "why": "Interés para ingeniería biomédica: Datos longitudinales de encuestas y genética.",
+      "interpretability": "Discriminación moderada, sin validación externa intercultural; preocupaciones éticas; no sirve como diagnóstico individual.",
+      "dataset_cards": [
+        {
+          "name": "Cohorte",
+          "value": "9.797",
+          "detail": "ABCD"
+        },
+        {
+          "name": "Seguimiento",
+          "value": "2 años",
+          "detail": "Longitudinal"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "AUC combinada",
+          "main": "0,71",
+          "sub": "Reporte parental"
+        },
+        {
+          "label": "Varianza depRS",
+          "main": "12,3%",
+          "sub": "Síntomas"
+        }
+      ],
+      "implementation": [
+        "Regresión Elastic Net con validación cruzada de diez particiones para generar depRS; comparación con puntuación poligénica PRS y combinación de ambas.",
+        "Elastic Net de 12 predictores ambientales; integración aditiva depRS+PRS, no red neuronal."
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "depRS",
+          "AUC parental",
+          "0,69"
+        ],
+        [
+          "depRS",
+          "AUC autorreporte",
+          "0,67"
+        ],
+        [
+          "depRS+PRS",
+          "AUC parental",
+          "0,71"
+        ]
+      ]
+    }
+  },
+  {
     "date": "2026-11-01",
     "reviewed": "01 noviembre 2026",
     "rich_detail": true,
