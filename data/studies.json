@@ -1,5 +1,595 @@
 [
   {
+    "date": "2026-11-03",
+    "reviewed": "03 noviembre 2026",
+    "rich_detail": true,
+    "code": "No reportado o no confirmado",
+    "cost": "No reportado; no se atribuye costo de entrenamiento, inferencia ni implementación.",
+    "figures": [],
+    "flag": "🇨🇳",
+    "countryFlags": "🇨🇳",
+    "country": "China",
+    "rubro": "Cuidados intensivos",
+    "area": "Cuidados intensivos",
+    "modality": "Datos clínicos y soporte respiratorio",
+    "title": "A machine-learning model for HFNC failure in older adults with COVID-19 showed inconclusive cross-site performance",
+    "title_es": "Modelo de IA para fracaso de oxigenoterapia de alto flujo en adultos mayores: validación externa inconclusa",
+    "institution": "Fujian Provincial Hospital; Fujian Provincial Geriatric Hospital; Fujian Medical University",
+    "sample": "238 adultos ≥65 años; cohorte externa de 26 pacientes",
+    "design": "Retrospectivo; 70/30 en cohorte de desarrollo y evaluación intercentros sin modificar el modelo; RF-5 exploratorio pos hoc.",
+    "model": "Random Forest de 13 predictores (RF-13); RF-5 exploratorio; comparación APACHE II y ROX",
+    "metrics": "RF-13 AUC 0,812 (IC95% 0,700–0,908) en selección; AUC 0,527 (0,273–0,767) externa; RF-5 AUC 0,788 externa, pos hoc e imprecisa.",
+    "summary": "Modelo de IA para fracaso de oxigenoterapia de alto flujo en adultos mayores: validación externa inconclusa. RF-13 AUC 0,812 (IC95% 0,700–0,908) en selección; AUC 0,527 (0,273–0,767) externa; RF-5 AUC 0,788 externa, pos hoc e imprecisa.",
+    "limitations": "Solo 26 pacientes externos; el mismo hold-out sirvió para seleccionar y reportar el modelo; no se demuestra transportabilidad ni utilidad clínica.",
+    "remember": "Solo 26 pacientes externos; el mismo hold-out sirvió para seleccionar y reportar el modelo; no se demuestra transportabilidad ni utilidad clínica.",
+    "language": "No confirmado",
+    "framework": "Random Forest; bootstrap; análisis de curvas de decisión",
+    "hardware": "Cánulas nasales de alto flujo y monitorización hospitalaria; fabricante/GPU no reportados.",
+    "paper": "https://doi.org/10.1038/s41598-026-77448-y",
+    "doi": "10.1038/s41598-026-77448-y",
+    "published": "03 11 2026 (fecha ISO 2026-11-03)",
+    "journal": "Scientific Reports · 2026",
+    "key_metric": "AUC externa RF-13: 0,527",
+    "rich": {
+      "problem": "Modelo de IA para fracaso de oxigenoterapia de alto flujo en adultos mayores: validación externa inconclusa",
+      "idea": "Random Forest de 13 predictores (RF-13); RF-5 exploratorio; comparación APACHE II y ROX",
+      "why": "Relevancia para Cuidados intensivos: Datos clínicos y soporte respiratorio",
+      "interpretability": "Solo 26 pacientes externos; el mismo hold-out sirvió para seleccionar y reportar el modelo; no se demuestra transportabilidad ni utilidad clínica.",
+      "dataset_cards": [
+        {
+          "name": "Derivación",
+          "value": "238",
+          "detail": "Pacientes ≥65 años"
+        },
+        {
+          "name": "Externa",
+          "value": "26",
+          "detail": "Pacientes de otro centro"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "AUC selección",
+          "main": "0,812",
+          "sub": "RF-13"
+        },
+        {
+          "label": "AUC externa",
+          "main": "0,527",
+          "sub": "RF-13"
+        }
+      ],
+      "implementation": [
+        "Retrospectivo; 70/30 en cohorte de desarrollo y evaluación intercentros sin modificar el modelo; RF-5 exploratorio pos hoc.",
+        "Random Forest de 13 predictores (RF-13); RF-5 exploratorio; comparación APACHE II y ROX",
+        "Fuente original: https://doi.org/10.1038/s41598-026-77448-y"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "RF-13 selección",
+          "AUC",
+          "0,812"
+        ],
+        [
+          "RF-13 externa",
+          "AUC",
+          "0,527"
+        ],
+        [
+          "RF-5 externa (pos hoc)",
+          "AUC",
+          "0,788"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-11-02",
+    "reviewed": "03 noviembre 2026",
+    "rich_detail": true,
+    "code": "No reportado o no confirmado",
+    "cost": "No reportado; no se atribuye costo de entrenamiento, inferencia ni implementación.",
+    "figures": [],
+    "flag": "🇨🇳",
+    "countryFlags": "🇨🇳",
+    "country": "China",
+    "rubro": "Cardiología preventiva",
+    "area": "Cardiología preventiva",
+    "modality": "Datos clínicos tabulares",
+    "title": "Machine learning classification of prevalent cardiovascular disease in middle-aged and older Chinese adults with circadian syndrome from CHARLS",
+    "title_es": "Clasificación de enfermedad cardiovascular prevalente en adultos con síndrome circadiano mediante IA",
+    "institution": "Shaoxing Seventh People's Hospital; Beijing Hospital; Peking University People's Hospital",
+    "sample": "4.091 adultos CHARLS 2015; 2.863 entrenamiento y 1.228 prueba; 1.101 con ECV autodeclarada.",
+    "design": "Transversal; imputación MICE ajustada solo con entrenamiento; validación cruzada de cinco pliegues, bootstrap y calibración.",
+    "model": "GLM, GBM, Random Forest, deep learning y stacking ensemble",
+    "metrics": "En prueba: ensemble AUC 0,733 (IC95% 0,703–0,764), Brier 0,176; RF AUC 0,730; GLM 0,728.",
+    "summary": "Clasificación de enfermedad cardiovascular prevalente en adultos con síndrome circadiano mediante IA. En prueba: ensemble AUC 0,733 (IC95% 0,703–0,764), Brier 0,176; RF AUC 0,730; GLM 0,728.",
+    "limitations": "ECV autodeclarada y transversal; no predice eventos incidentes; ganancia del ensamble frente a GLM/RF pequeña.",
+    "remember": "ECV autodeclarada y transversal; no predice eventos incidentes; ganancia del ensamble frente a GLM/RF pequeña.",
+    "language": "No confirmado",
+    "framework": "MICE; GLM; GBM; RF; DL; stacking; bootstrap",
+    "hardware": "Encuestas y datos de salud CHARLS; hardware computacional no reportado.",
+    "paper": "https://doi.org/10.1038/s41598-026-78223-9",
+    "doi": "10.1038/s41598-026-78223-9",
+    "published": "02 11 2026 (fecha ISO 2026-11-02)",
+    "journal": "Scientific Reports · 2026",
+    "key_metric": "AUC 0,733",
+    "rich": {
+      "problem": "Clasificación de enfermedad cardiovascular prevalente en adultos con síndrome circadiano mediante IA",
+      "idea": "GLM, GBM, Random Forest, deep learning y stacking ensemble",
+      "why": "Relevancia para Cardiología preventiva: Datos clínicos tabulares",
+      "interpretability": "ECV autodeclarada y transversal; no predice eventos incidentes; ganancia del ensamble frente a GLM/RF pequeña.",
+      "dataset_cards": [
+        {
+          "name": "Total",
+          "value": "4.091",
+          "detail": "Participantes"
+        },
+        {
+          "name": "Prueba",
+          "value": "1.228",
+          "detail": "30% independiente"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Stacking AUC",
+          "main": "0,733",
+          "sub": "Prueba"
+        },
+        {
+          "label": "GLM AUC",
+          "main": "0,728",
+          "sub": "Prueba"
+        }
+      ],
+      "implementation": [
+        "Transversal; imputación MICE ajustada solo con entrenamiento; validación cruzada de cinco pliegues, bootstrap y calibración.",
+        "GLM, GBM, Random Forest, deep learning y stacking ensemble",
+        "Fuente original: https://doi.org/10.1038/s41598-026-78223-9"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Ensemble",
+          "AUC",
+          "0,733"
+        ],
+        [
+          "Random Forest",
+          "AUC",
+          "0,730"
+        ],
+        [
+          "GLM",
+          "AUC",
+          "0,728"
+        ],
+        [
+          "Ensemble",
+          "Brier",
+          "0,176"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-11-02",
+    "reviewed": "03 noviembre 2026",
+    "rich_detail": true,
+    "code": "No reportado o no confirmado",
+    "cost": "No reportado; no se atribuye costo de entrenamiento, inferencia ni implementación.",
+    "figures": [],
+    "flag": "🇰🇷",
+    "countryFlags": "🇰🇷",
+    "country": "Corea del Sur",
+    "rubro": "Radiología odontológica",
+    "area": "Radiología odontológica",
+    "modality": "Radiografía cefalométrica",
+    "title": "Bone age estimation from lateral cephalograms using cervical vertebrae–centered ROIs: a multicenter deep learning study",
+    "title_es": "Estimación de edad ósea con telerradiografías laterales y regiones cervicales mediante aprendizaje profundo",
+    "institution": "Ulsan University Hospital; Pusan National University School of Dentistry",
+    "sample": "1.100 pares de telerradiografías laterales y radiografías de mano-muñeca; edades 4–18 años; dos centros.",
+    "design": "Retrospectivo multicéntrico; cinco pliegues, prueba interna y externa; tres estrategias de ROI; etiquetas de referencia generadas por software comercial.",
+    "model": "Regresión deep learning con recorte cervical, máscara CV y máscara CV+vía aérea; interpretación Grad-RAM",
+    "metrics": "MAE externa: máscara cervical 1,91 años; máscara CV+vía aérea 1,72 años; recorte sin máscara 1,67 años.",
+    "summary": "Estimación de edad ósea con telerradiografías laterales y regiones cervicales mediante aprendizaje profundo. MAE externa: máscara cervical 1,91 años; máscara CV+vía aérea 1,72 años; recorte sin máscara 1,67 años.",
+    "limitations": "Referencia es edad ósea estimada por otra IA, no estándar humano independiente; errores externos mayores que internos.",
+    "remember": "Referencia es edad ósea estimada por otra IA, no estándar humano independiente; errores externos mayores que internos.",
+    "language": "No confirmado",
+    "framework": "Regresión deep learning; Grad-RAM",
+    "hardware": "Equipo de radiografía cefalométrica y radiografía de mano-muñeca; GPU no reportada.",
+    "paper": "https://doi.org/10.1038/s41598-026-79093-x",
+    "doi": "10.1038/s41598-026-79093-x",
+    "published": "02 11 2026 (fecha ISO 2026-11-02)",
+    "journal": "Scientific Reports · 2026",
+    "key_metric": "MAE externa: 1,67 años",
+    "rich": {
+      "problem": "Estimación de edad ósea con telerradiografías laterales y regiones cervicales mediante aprendizaje profundo",
+      "idea": "Regresión deep learning con recorte cervical, máscara CV y máscara CV+vía aérea; interpretación Grad-RAM",
+      "why": "Relevancia para Radiología odontológica: Radiografía cefalométrica",
+      "interpretability": "Referencia es edad ósea estimada por otra IA, no estándar humano independiente; errores externos mayores que internos.",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "1.100",
+          "detail": "Pares radiográficos"
+        },
+        {
+          "name": "Centros",
+          "value": "2",
+          "detail": "Validación cruzada entre centros"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Mejor MAE",
+          "main": "1,67 años",
+          "sub": "ROI recortada"
+        },
+        {
+          "label": "CV solo",
+          "main": "1,91 años",
+          "sub": "MAE externa"
+        }
+      ],
+      "implementation": [
+        "Retrospectivo multicéntrico; cinco pliegues, prueba interna y externa; tres estrategias de ROI; etiquetas de referencia generadas por software comercial.",
+        "Regresión deep learning con recorte cervical, máscara CV y máscara CV+vía aérea; interpretación Grad-RAM",
+        "Fuente original: https://doi.org/10.1038/s41598-026-79093-x"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Máscara CV",
+          "MAE externa",
+          "1,91 años"
+        ],
+        [
+          "CV + vía aérea",
+          "MAE externa",
+          "1,72 años"
+        ],
+        [
+          "Recorte sin máscara",
+          "MAE externa",
+          "1,67 años"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-11-02",
+    "reviewed": "03 noviembre 2026",
+    "rich_detail": true,
+    "code": "No reportado o no confirmado",
+    "cost": "No reportado; no se atribuye costo de entrenamiento, inferencia ni implementación.",
+    "figures": [],
+    "flag": "🇮🇳",
+    "countryFlags": "🇮🇳",
+    "country": "India",
+    "rubro": "Oncología y bioinformática",
+    "area": "Oncología y bioinformática",
+    "modality": "Variables diagnósticas tabulares",
+    "title": "Hybrid feature selection for dimensionality reduction while preserving predictive performance in breast cancer diagnosis",
+    "title_es": "Selección híbrida de variables para reducir dimensionalidad en clasificación de cáncer de mama",
+    "institution": "ITM University Gwalior; VIT-AP University; Symbiosis Institute of Technology y colaboradores",
+    "sample": "Wisconsin Breast Cancer (WBC), dataset público; número exacto de registros no indicado en el resumen.",
+    "design": "Comparación de selección de características filtro/wrapper; partición única y validación cruzada de 10 pliegues; prueba Wilcoxon.",
+    "model": "Random Forest y árboles de decisión con selección híbrida de características",
+    "metrics": "RF cerca de 98% de exactitud con 10/30 variables; árbol de decisión cerca de 95% con 6–8 variables (73–80% de reducción).",
+    "summary": "Selección híbrida de variables para reducir dimensionalidad en clasificación de cáncer de mama. RF cerca de 98% de exactitud con 10/30 variables; árbol de decisión cerca de 95% con 6–8 variables (73–80% de reducción).",
+    "limitations": "Dataset público único; sin validación clínica externa ni análisis por subgrupos; cifras de partición única no equivalen a rendimiento prospectivo.",
+    "remember": "Dataset público único; sin validación clínica externa ni análisis por subgrupos; cifras de partición única no equivalen a rendimiento prospectivo.",
+    "language": "No confirmado",
+    "framework": "RF; Decision Tree; feature selection filtro/wrapper; Wilcoxon",
+    "hardware": "Computación tabular; CPU/GPU no reportada.",
+    "paper": "https://doi.org/10.1038/s41598-026-78058-4",
+    "doi": "10.1038/s41598-026-78058-4",
+    "published": "02 11 2026 (fecha ISO 2026-11-02)",
+    "journal": "Scientific Reports · 2026",
+    "key_metric": "10 de 30 variables",
+    "rich": {
+      "problem": "Selección híbrida de variables para reducir dimensionalidad en clasificación de cáncer de mama",
+      "idea": "Random Forest y árboles de decisión con selección híbrida de características",
+      "why": "Relevancia para Oncología y bioinformática: Variables diagnósticas tabulares",
+      "interpretability": "Dataset público único; sin validación clínica externa ni análisis por subgrupos; cifras de partición única no equivalen a rendimiento prospectivo.",
+      "dataset_cards": [
+        {
+          "name": "Variables",
+          "value": "30 → 10",
+          "detail": "Random Forest"
+        },
+        {
+          "name": "Reducción",
+          "value": "73–80%",
+          "detail": "Árbol de decisión"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "RF exactitud",
+          "main": "≈98%",
+          "sub": "Partición única"
+        },
+        {
+          "label": "DT exactitud",
+          "main": "≈95%",
+          "sub": "Partición única"
+        }
+      ],
+      "implementation": [
+        "Comparación de selección de características filtro/wrapper; partición única y validación cruzada de 10 pliegues; prueba Wilcoxon.",
+        "Random Forest y árboles de decisión con selección híbrida de características",
+        "Fuente original: https://doi.org/10.1038/s41598-026-78058-4"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Random Forest",
+          "Exactitud",
+          "≈98%"
+        ],
+        [
+          "Árbol de decisión",
+          "Exactitud",
+          "≈95%"
+        ],
+        [
+          "DT",
+          "Variables",
+          "6–8 de 30"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-11-02",
+    "reviewed": "03 noviembre 2026",
+    "rich_detail": true,
+    "code": "No reportado o no confirmado",
+    "cost": "No reportado; no se atribuye costo de entrenamiento, inferencia ni implementación.",
+    "figures": [],
+    "flag": "🇺🇸",
+    "countryFlags": "🇺🇸",
+    "country": "Estados Unidos",
+    "rubro": "Salud digital y envejecimiento",
+    "area": "Salud digital y envejecimiento",
+    "modality": "Cartera de proyectos de tecnología médica",
+    "title": "Review of artificial intelligence technologies for older adult health and wellbeing in NIA AITC Program",
+    "title_es": "Análisis de tecnologías de IA para salud y bienestar de adultos mayores en el programa NIA AITC",
+    "institution": "Johns Hopkins University; NORC at University of Chicago; colaboradores NIA AITC",
+    "sample": "100 proyectos piloto financiados entre 2021 y 2024.",
+    "design": "Análisis documental descriptivo de métodos mixtos de una cartera de proyectos; clasificación de objetivos, usuarios, entornos y técnicas.",
+    "model": "Clasificación de metodologías de IA de proyectos; no se entrena ni valida un clasificador nuevo.",
+    "metrics": "100 proyectos revisados; predominaron demencia, atención domiciliaria y clasificación ML; sin AUC/F1 diagnósticos propios.",
+    "summary": "Análisis de tecnologías de IA para salud y bienestar de adultos mayores en el programa NIA AITC. 100 proyectos revisados; predominaron demencia, atención domiciliaria y clasificación ML; sin AUC/F1 diagnósticos propios.",
+    "limitations": "Análisis de portafolio financiado, no ensayo de eficacia; heterogeneidad y escasa representación explícita de poblaciones desatendidas.",
+    "remember": "Análisis de portafolio financiado, no ensayo de eficacia; heterogeneidad y escasa representación explícita de poblaciones desatendidas.",
+    "language": "No confirmado",
+    "framework": "Análisis documental de métodos mixtos; no se especifica stack único.",
+    "hardware": "Dispositivos y sensores heterogéneos de proyectos revisados; no se evaluó un equipo único.",
+    "paper": "https://doi.org/10.1038/s41514-026-00549-5",
+    "doi": "10.1038/s41514-026-00549-5",
+    "published": "02 11 2026 (fecha ISO 2026-11-02)",
+    "journal": "npj Aging · 2026",
+    "key_metric": "100 proyectos piloto",
+    "rich": {
+      "problem": "Análisis de tecnologías de IA para salud y bienestar de adultos mayores en el programa NIA AITC",
+      "idea": "Clasificación de metodologías de IA de proyectos; no se entrena ni valida un clasificador nuevo.",
+      "why": "Relevancia para Salud digital y envejecimiento: Cartera de proyectos de tecnología médica",
+      "interpretability": "Análisis de portafolio financiado, no ensayo de eficacia; heterogeneidad y escasa representación explícita de poblaciones desatendidas.",
+      "dataset_cards": [
+        {
+          "name": "Proyectos",
+          "value": "100",
+          "detail": "NIA AITC"
+        },
+        {
+          "name": "Periodo",
+          "value": "2021–2024",
+          "detail": "Pilotos financiados"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Tendencia",
+          "main": "Demencia",
+          "sub": "Aplicación frecuente"
+        },
+        {
+          "label": "Entorno",
+          "main": "Domicilio",
+          "sub": "Predominante"
+        }
+      ],
+      "implementation": [
+        "Análisis documental descriptivo de métodos mixtos de una cartera de proyectos; clasificación de objetivos, usuarios, entornos y técnicas.",
+        "Clasificación de metodologías de IA de proyectos; no se entrena ni valida un clasificador nuevo.",
+        "Fuente original: https://doi.org/10.1038/s41514-026-00549-5"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Proyectos revisados",
+          "n",
+          "100"
+        ],
+        [
+          "Métricas diagnósticas propias",
+          "AUC/F1",
+          "No aplica"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-11-02",
+    "reviewed": "03 noviembre 2026",
+    "rich_detail": true,
+    "code": "No reportado o no confirmado",
+    "cost": "No reportado; no se atribuye costo de entrenamiento, inferencia ni implementación.",
+    "figures": [],
+    "flag": "🇦🇪 🇸🇴 🇪🇬",
+    "countryFlags": "🇦🇪 🇸🇴 🇪🇬",
+    "country": "Emiratos Árabes Unidos / Somalia / Egipto",
+    "rubro": "Implementación y educación en salud",
+    "area": "Implementación y educación en salud",
+    "modality": "Encuestas de adopción de IA",
+    "title": "Development and psychometric validation of the barriers to AI integration in nursing education scale (BAI-NE): a multi-institutional study",
+    "title_es": "Validación de escala de barreras para integrar IA en la educación de enfermería",
+    "institution": "RAK Medical and Health Sciences University; Salaam University; Tanta University",
+    "sample": "470 docentes de enfermería de siete facultades; EFA n=235, CFA n=235; diez expertos para validez de contenido.",
+    "design": "Desarrollo psicométrico exploratorio de escala de 15 ítems con cuatro factores; test-retest de dos semanas.",
+    "model": "Análisis factorial exploratorio y confirmatorio (EFA/CFA), basado en UTAUT; no se entrenó IA predictiva.",
+    "metrics": "Cuatro factores explicaron 42,7% de varianza; alfa 0,713–0,754; omega 0,715–0,754; ICC 0,85–0,92.",
+    "summary": "Validación de escala de barreras para integrar IA en la educación de enfermería. Cuatro factores explicaron 42,7% de varianza; alfa 0,713–0,754; omega 0,715–0,754; ICC 0,85–0,92.",
+    "limitations": "Muestreo por conveniencia; índices CFA en límites requieren replicación; instrumento evalúa barreras percibidas, no desempeño de IA.",
+    "remember": "Muestreo por conveniencia; índices CFA en límites requieren replicación; instrumento evalúa barreras percibidas, no desempeño de IA.",
+    "language": "No confirmado",
+    "framework": "EFA, CFA, UTAUT, alfa Cronbach, omega McDonald",
+    "hardware": "Encuesta en línea; hardware no reportado.",
+    "paper": "https://doi.org/10.1038/s41598-026-76573-y",
+    "doi": "10.1038/s41598-026-76573-y",
+    "published": "02 11 2026 (fecha ISO 2026-11-02)",
+    "journal": "Scientific Reports · 2026",
+    "key_metric": "470 docentes",
+    "rich": {
+      "problem": "Validación de escala de barreras para integrar IA en la educación de enfermería",
+      "idea": "Análisis factorial exploratorio y confirmatorio (EFA/CFA), basado en UTAUT; no se entrenó IA predictiva.",
+      "why": "Relevancia para Implementación y educación en salud: Encuestas de adopción de IA",
+      "interpretability": "Muestreo por conveniencia; índices CFA en límites requieren replicación; instrumento evalúa barreras percibidas, no desempeño de IA.",
+      "dataset_cards": [
+        {
+          "name": "Participantes",
+          "value": "470",
+          "detail": "Siete facultades"
+        },
+        {
+          "name": "Escala",
+          "value": "15 ítems",
+          "detail": "Cuatro dimensiones"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Varianza",
+          "main": "42,7%",
+          "sub": "Cuatro factores"
+        },
+        {
+          "label": "ICC",
+          "main": "0,85–0,92",
+          "sub": "Test-retest"
+        }
+      ],
+      "implementation": [
+        "Desarrollo psicométrico exploratorio de escala de 15 ítems con cuatro factores; test-retest de dos semanas.",
+        "Análisis factorial exploratorio y confirmatorio (EFA/CFA), basado en UTAUT; no se entrenó IA predictiva.",
+        "Fuente original: https://doi.org/10.1038/s41598-026-76573-y"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Factores",
+          "Varianza explicada",
+          "42,7%"
+        ],
+        [
+          "Consistencia",
+          "Alfa",
+          "0,713–0,754"
+        ],
+        [
+          "Repetibilidad",
+          "ICC",
+          "0,85–0,92"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-11-03",
+    "reviewed": "03 noviembre 2026",
+    "rich_detail": true,
+    "code": "No reportado o no confirmado",
+    "cost": "No reportado; no se atribuye costo de entrenamiento, inferencia ni implementación.",
+    "figures": [],
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "country": "No confirmado en resumen consultado",
+    "rubro": "Neuroingeniería y sueño",
+    "area": "Neuroingeniería y sueño",
+    "modality": "Electroencefalografía",
+    "title": "An integrated deep learning framework for EEG-based sleep disorder detection",
+    "title_es": "Arquitectura integrada de aprendizaje profundo para detectar trastornos del sueño con EEG",
+    "institution": "Autores: Prathyusha Kuncha, Bhuvan Unhelkar, Parvathanani Rajendra Kumar y Prasun Chakrabarti; afiliaciones por verificar.",
+    "sample": "Datos EEG de trastornos del sueño; número de sujetos y registros no confirmados en la fuente primaria accesible.",
+    "design": "Clasificación de señales EEG con procesamiento y extracción de características; diseño completo no verificable en el resumen indexado.",
+    "model": "Marco integrado de aprendizaje profundo; arquitectura exacta no confirmada.",
+    "metrics": "No se verificó una métrica cuantitativa en el resumen primario accesible; no se atribuyen exactitud ni AUC.",
+    "summary": "Arquitectura integrada de aprendizaje profundo para detectar trastornos del sueño con EEG. No se verificó una métrica cuantitativa en el resumen primario accesible; no se atribuyen exactitud ni AUC.",
+    "limitations": "No se pudo inspeccionar el texto íntegro ni validar particiones por paciente, muestra, hardware o cifras; ficha preliminar con datos faltantes explícitos.",
+    "remember": "No se pudo inspeccionar el texto íntegro ni validar particiones por paciente, muestra, hardware o cifras; ficha preliminar con datos faltantes explícitos.",
+    "language": "No confirmado",
+    "framework": "Deep learning para EEG; librerías no confirmadas.",
+    "hardware": "Electroencefalografía; equipo y GPU no reportados en fuente accesible.",
+    "paper": "https://doi.org/10.1038/s41598-026-78324-5",
+    "doi": "10.1038/s41598-026-78324-5",
+    "published": "03 11 2026 (fecha ISO 2026-11-03)",
+    "journal": "Scientific Reports · 2026",
+    "key_metric": "Métricas no confirmadas",
+    "rich": {
+      "problem": "Arquitectura integrada de aprendizaje profundo para detectar trastornos del sueño con EEG",
+      "idea": "Marco integrado de aprendizaje profundo; arquitectura exacta no confirmada.",
+      "why": "Relevancia para Neuroingeniería y sueño: Electroencefalografía",
+      "interpretability": "No se pudo inspeccionar el texto íntegro ni validar particiones por paciente, muestra, hardware o cifras; ficha preliminar con datos faltantes explícitos.",
+      "dataset_cards": [
+        {
+          "name": "Modalidad",
+          "value": "EEG",
+          "detail": "Señales de sueño"
+        },
+        {
+          "name": "Muestra",
+          "value": "N/D",
+          "detail": "No confirmada"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Arquitectura",
+          "main": "DL",
+          "sub": "Detalle no confirmado"
+        },
+        {
+          "label": "Métricas",
+          "main": "N/D",
+          "sub": "No verificadas"
+        }
+      ],
+      "implementation": [
+        "Clasificación de señales EEG con procesamiento y extracción de características; diseño completo no verificable en el resumen indexado.",
+        "Marco integrado de aprendizaje profundo; arquitectura exacta no confirmada.",
+        "Fuente original: https://doi.org/10.1038/s41598-026-78324-5"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Exactitud",
+          "Valor",
+          "No confirmado"
+        ],
+        [
+          "AUC",
+          "Valor",
+          "No confirmado"
+        ]
+      ]
+    }
+  },
+  {
     "date": "2026-11-02",
     "reviewed": "02 noviembre 2026",
     "rich_detail": true,
