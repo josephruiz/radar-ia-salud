@@ -1,6 +1,566 @@
 [
   {
     "date": "2026-11-03",
+    "reviewed": "04 noviembre 2026",
+    "rich_detail": true,
+    "code": "No confirmado",
+    "cost": "Costo de entrenamiento, inferencia y almacenamiento no reportado.",
+    "figures": [],
+    "flag": "🇨🇳 🇭🇰 🇺🇸",
+    "countryFlags": "🇨🇳 🇭🇰 🇺🇸",
+    "country": "China / Hong Kong / Estados Unidos",
+    "rubro": "Ingeniería biomédica",
+    "area": "Infraestructura de imágenes",
+    "modality": "TC, RM, PET, CTA, histopatología",
+    "title": "DSIN: dynamic system-empowered implicit neural representation for medical image compression",
+    "title_es": "DSIN: representación neuronal implícita con sistemas dinámicos para comprimir imágenes médicas",
+    "institution": "Southern Medical University; City University of Hong Kong",
+    "sample": "Cinco conjuntos clínicos de TC, RM, PET, angio-TC e histopatología; número total de pacientes no confirmado",
+    "design": "Comparación experimental multimodal de compresión, fidelidad de reconstrucción y desempeño de segmentación/clasificación posteriores.",
+    "model": "Representación neuronal implícita específica de cada imagen y módulo apilado de compresión basado en sistemas dinámicos (DSIN).",
+    "metrics": "Compresión de hasta 183 veces; preservación de bordes anatómicos y tareas posteriores; no equivale a una tasa uniforme para todas las modalidades.",
+    "summary": "DSIN: representación neuronal implícita con sistemas dinámicos para comprimir imágenes médicas. Compresión de hasta 183 veces; preservación de bordes anatómicos y tareas posteriores; no equivale a una tasa uniforme para todas las modalidades.",
+    "limitations": "Validado en cinco datasets; el rendimiento depende de modalidad y tarea. No se demuestra ahorro económico ni seguridad de archivo clínico a largo plazo.",
+    "remember": "Validado en cinco datasets; el rendimiento depende de modalidad y tarea. No se demuestra ahorro económico ni seguridad de archivo clínico a largo plazo.",
+    "language": "No reportado",
+    "framework": "DSIN; representación neuronal implícita.",
+    "hardware": "Imágenes de TC, RM, PET, angio-TC y patología digital; GPU no especificada en el resumen.",
+    "paper": "https://doi.org/10.1038/s44172-026-00812-3",
+    "doi": "10.1038/s44172-026-00812-3",
+    "published": "2026-11-03",
+    "journal": "Communications Engineering · 2026",
+    "key_metric": "183×",
+    "rich": {
+      "problem": "DSIN: representación neuronal implícita con sistemas dinámicos para comprimir imágenes médicas",
+      "idea": "Representación neuronal implícita específica de cada imagen y módulo apilado de compresión basado en sistemas dinámicos (DSIN).",
+      "why": "Aplicación en Infraestructura de imágenes: TC, RM, PET, CTA, histopatología",
+      "interpretability": "Validado en cinco datasets; el rendimiento depende de modalidad y tarea. No se demuestra ahorro económico ni seguridad de archivo clínico a largo plazo.",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "Cinco conjuntos clínicos de TC, RM, PET, angio-T",
+          "detail": "Comparación experimental multimodal de compresión, fidelidad de reconstrucción y desempeño de segmentación/cla"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Compresión",
+          "main": "183×",
+          "sub": "Máxima reportada"
+        },
+        {
+          "label": "Datasets",
+          "main": "5",
+          "sub": "Modalidades clínicas"
+        }
+      ],
+      "implementation": [
+        "Comparación experimental multimodal de compresión, fidelidad de reconstrucción y desempeño de segmentación/clasificación posteriores.",
+        "Representación neuronal implícita específica de cada imagen y módulo apilado de compresión basado en sistemas dinámicos (DSIN).",
+        "Fuente primaria: https://doi.org/10.1038/s44172-026-00812-3"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Compresión máxima",
+          "Razón",
+          "183×"
+        ],
+        [
+          "Modalidades",
+          "Conjuntos",
+          "5"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-11-03",
+    "reviewed": "04 noviembre 2026",
+    "rich_detail": true,
+    "code": "No confirmado",
+    "cost": "No se reportan costos; autores señalan ausencia de costo adicional en inferencia.",
+    "figures": [],
+    "flag": "🇮🇳",
+    "countryFlags": "🇮🇳",
+    "country": "India",
+    "rubro": "Seguridad de IA clínica",
+    "area": "Confiabilidad y calibración",
+    "modality": "Oftalmología, histología, neuroimagen, tórax",
+    "title": "RELAX: Reliability enhancement by limiting adverse eXertions",
+    "title_es": "RELAX: mejora de confiabilidad de la IA clínica limitando el peso de ejemplos inestables",
+    "institution": "GE HealthCare, Advanced Technology Group, Bangalore",
+    "sample": "Cuatro conjuntos de imágenes médicas: oftalmología, histopatología, neuroimagen y radiografía torácica.",
+    "design": "Evaluación experimental de calibración y F1 en múltiples arquitecturas; ponderación por dificultad observada durante entrenamiento.",
+    "model": "RELAX y Perpetual Burden Score (PBS), optimización independiente de arquitectura que reduce peso de muestras persistentemente inestables.",
+    "metrics": "En oftalmología y cinco configuraciones: reducción promedio de ECE de 2,38% y MCE de 11,72%; disminución de F1 de 0,86%.",
+    "summary": "RELAX: mejora de confiabilidad de la IA clínica limitando el peso de ejemplos inestables. En oftalmología y cinco configuraciones: reducción promedio de ECE de 2,38% y MCE de 11,72%; disminución de F1 de 0,86%.",
+    "limitations": "Mejor calibración no equivale a seguridad clínica prospectiva; posible perjuicio en subgrupos difíciles y patologías raras.",
+    "remember": "Mejor calibración no equivale a seguridad clínica prospectiva; posible perjuicio en subgrupos difíciles y patologías raras.",
+    "language": "No reportado",
+    "framework": "RELAX, PBS, redes de clasificación.",
+    "hardware": "Imágenes médicas digitales; GPU no especificada.",
+    "paper": "https://doi.org/10.1038/s41598-026-70532-3",
+    "doi": "10.1038/s41598-026-70532-3",
+    "published": "2026-11-03",
+    "journal": "Scientific Reports · 2026",
+    "key_metric": "2,38%",
+    "rich": {
+      "problem": "RELAX: mejora de confiabilidad de la IA clínica limitando el peso de ejemplos inestables",
+      "idea": "RELAX y Perpetual Burden Score (PBS), optimización independiente de arquitectura que reduce peso de muestras persistentemente inestables.",
+      "why": "Aplicación en Confiabilidad y calibración: Oftalmología, histología, neuroimagen, tórax",
+      "interpretability": "Mejor calibración no equivale a seguridad clínica prospectiva; posible perjuicio en subgrupos difíciles y patologías raras.",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "Cuatro conjuntos de imágenes médicas: oftalmolog",
+          "detail": "Evaluación experimental de calibración y F1 en múltiples arquitecturas; ponderación por dificultad observada d"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "ECE",
+          "main": "−2,38%",
+          "sub": "Calibración"
+        },
+        {
+          "label": "MCE",
+          "main": "−11,72%",
+          "sub": "Error máximo"
+        }
+      ],
+      "implementation": [
+        "Evaluación experimental de calibración y F1 en múltiples arquitecturas; ponderación por dificultad observada durante entrenamiento.",
+        "RELAX y Perpetual Burden Score (PBS), optimización independiente de arquitectura que reduce peso de muestras persistentemente inestables.",
+        "Fuente primaria: https://doi.org/10.1038/s41598-026-70532-3"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "ECE",
+          "Reducción media",
+          "2,38%"
+        ],
+        [
+          "MCE",
+          "Reducción media",
+          "11,72%"
+        ],
+        [
+          "F1",
+          "Cambio",
+          "−0,86%"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-11-03",
+    "reviewed": "04 noviembre 2026",
+    "rich_detail": true,
+    "code": "No confirmado",
+    "cost": "No reportado.",
+    "figures": [],
+    "flag": "🇮🇳 🇺🇸",
+    "countryFlags": "🇮🇳 🇺🇸",
+    "country": "India / Estados Unidos (datos MIMIC-III)",
+    "rubro": "Salud digital",
+    "area": "NLP clínico",
+    "modality": "Notas de admisión y evolución",
+    "title": "MedClassNet: a novel NLP framework for automated disease classification from clinical text using transformer and graph attention networks",
+    "title_es": "MedClassNet: clasificación automatizada de enfermedades desde texto clínico con Transformers y grafos de atención",
+    "institution": "Galgotias University; Sharda University; JAIN University; Manipal Academy of Higher Education",
+    "sample": "1.748 narrativas clínicas anotadas de MIMIC-III con categorías ICD-9 de una sola etiqueta.",
+    "design": "Estudio retrospectivo de clasificación; excluye resúmenes de alta, códigos ICD-9 explícitos y datos posteriores al diagnóstico para limitar fuga de información.",
+    "model": "BioBERT para embeddings contextuales; grafo de similitud coseno entre pacientes y Graph Attention Network (GAT); interpretación SHAP.",
+    "metrics": "Exactitud 94,2%; precisión 94,6%; F1 0,93 en protocolo experimental.",
+    "summary": "MedClassNet: clasificación automatizada de enfermedades desde texto clínico con Transformers y grafos de atención. Exactitud 94,2%; precisión 94,6%; F1 0,93 en protocolo experimental.",
+    "limitations": "Corpus relativamente pequeño y monoinstitucional; no se confirma validación prospectiva ni generalización a otros idiomas.",
+    "remember": "Corpus relativamente pequeño y monoinstitucional; no se confirma validación prospectiva ni generalización a otros idiomas.",
+    "language": "No reportado",
+    "framework": "BioBERT, GAT, SHAP.",
+    "hardware": "Registros clínicos electrónicos; GPU no reportada.",
+    "paper": "https://doi.org/10.1038/s41598-026-76483-z",
+    "doi": "10.1038/s41598-026-76483-z",
+    "published": "2026-11-03",
+    "journal": "Scientific Reports · 2026",
+    "key_metric": "94,2%",
+    "rich": {
+      "problem": "MedClassNet: clasificación automatizada de enfermedades desde texto clínico con Transformers y grafos de atención",
+      "idea": "BioBERT para embeddings contextuales; grafo de similitud coseno entre pacientes y Graph Attention Network (GAT); interpretación SHAP.",
+      "why": "Aplicación en NLP clínico: Notas de admisión y evolución",
+      "interpretability": "Corpus relativamente pequeño y monoinstitucional; no se confirma validación prospectiva ni generalización a otros idiomas.",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "1.748 narrativas clínicas anotadas de MIMIC-III ",
+          "detail": "Estudio retrospectivo de clasificación; excluye resúmenes de alta, códigos ICD-9 explícitos y datos posteriore"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Exactitud",
+          "main": "94,2%",
+          "sub": "Evaluación"
+        },
+        {
+          "label": "F1",
+          "main": "0,93",
+          "sub": "Clasificación"
+        }
+      ],
+      "implementation": [
+        "Estudio retrospectivo de clasificación; excluye resúmenes de alta, códigos ICD-9 explícitos y datos posteriores al diagnóstico para limitar fuga de información.",
+        "BioBERT para embeddings contextuales; grafo de similitud coseno entre pacientes y Graph Attention Network (GAT); interpretación SHAP.",
+        "Fuente primaria: https://doi.org/10.1038/s41598-026-76483-z"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Exactitud",
+          "Clasificación",
+          "94,2%"
+        ],
+        [
+          "Precisión",
+          "Clasificación",
+          "94,6%"
+        ],
+        [
+          "F1",
+          "Clasificación",
+          "0,93"
+        ],
+        [
+          "Corpus",
+          "Narrativas",
+          "1.748"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-11-03",
+    "reviewed": "04 noviembre 2026",
+    "rich_detail": true,
+    "code": "No confirmado",
+    "cost": "No reportado.",
+    "figures": [],
+    "flag": "🇰🇷",
+    "countryFlags": "🇰🇷",
+    "country": "Corea del Sur",
+    "rubro": "Instrumentación biomédica",
+    "area": "Señales cardiovasculares",
+    "modality": "Ondas de presión arterial",
+    "title": "Joint estimation of multiple cardiovascular parameters from blood pressure waveforms using multi-task learning",
+    "title_es": "Estimación conjunta de parámetros cardiovasculares a partir de ondas de presión arterial mediante aprendizaje multitarea",
+    "institution": "KAIST; Seoul National University Hospital",
+    "sample": "Dataset generado con simulador físico cardiovascular; número de ondas no confirmado en el resumen.",
+    "design": "Estudio experimental con parámetros controlados; comparación de modelos individuales, multitarea, troncales compartidos y arquitecturas cross-talk.",
+    "model": "RNDR-TCA: reductor dimensional neuronal residual con atención temporal y de canales y transferencia entre tareas.",
+    "metrics": "Macro-F1 promedio 0,836 frente a 0,784 en modelos separados, 0,771 en multiclase y 0,781–0,816 en modelos de tronco compartido.",
+    "summary": "Estimación conjunta de parámetros cardiovasculares a partir de ondas de presión arterial mediante aprendizaje multitarea. Macro-F1 promedio 0,836 frente a 0,784 en modelos separados, 0,771 en multiclase y 0,781–0,816 en modelos de tronco compartido.",
+    "limitations": "Señales de simulador, no cohorte clínica; falta validación en pacientes y equipos reales.",
+    "remember": "Señales de simulador, no cohorte clínica; falta validación en pacientes y equipos reales.",
+    "language": "No reportado",
+    "framework": "RNDR-TCA, aprendizaje multitarea, atención temporal/canal.",
+    "hardware": "Simulador cardiovascular físico para ondas de presión arterial.",
+    "paper": "https://doi.org/10.1038/s41598-026-77504-7",
+    "doi": "10.1038/s41598-026-77504-7",
+    "published": "2026-11-03",
+    "journal": "Scientific Reports · 2026",
+    "key_metric": "0,836",
+    "rich": {
+      "problem": "Estimación conjunta de parámetros cardiovasculares a partir de ondas de presión arterial mediante aprendizaje multitarea",
+      "idea": "RNDR-TCA: reductor dimensional neuronal residual con atención temporal y de canales y transferencia entre tareas.",
+      "why": "Aplicación en Señales cardiovasculares: Ondas de presión arterial",
+      "interpretability": "Señales de simulador, no cohorte clínica; falta validación en pacientes y equipos reales.",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "Dataset generado con simulador físico cardiovasc",
+          "detail": "Estudio experimental con parámetros controlados; comparación de modelos individuales, multitarea, troncales co"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Macro-F1",
+          "main": "0,836",
+          "sub": "RNDR-TCA"
+        },
+        {
+          "label": "Control",
+          "main": "0,784",
+          "sub": "Modelos separados"
+        }
+      ],
+      "implementation": [
+        "Estudio experimental con parámetros controlados; comparación de modelos individuales, multitarea, troncales compartidos y arquitecturas cross-talk.",
+        "RNDR-TCA: reductor dimensional neuronal residual con atención temporal y de canales y transferencia entre tareas.",
+        "Fuente primaria: https://doi.org/10.1038/s41598-026-77504-7"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "RNDR-TCA",
+          "Macro-F1",
+          "0,836"
+        ],
+        [
+          "Modelos separados",
+          "Macro-F1",
+          "0,784"
+        ],
+        [
+          "Clasificador multiclase",
+          "Macro-F1",
+          "0,771"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-11-03",
+    "reviewed": "04 noviembre 2026",
+    "rich_detail": true,
+    "code": "https://freergq.shinyapps.io/GNRISHAP_Model/",
+    "cost": "No reportado.",
+    "figures": [],
+    "flag": "🇨🇳 🇰🇷",
+    "countryFlags": "🇨🇳 🇰🇷",
+    "country": "China / Corea del Sur (datos clínicos)",
+    "rubro": "Predicción clínica",
+    "area": "Cuidados intensivos",
+    "modality": "Datos clínicos y laboratorio",
+    "title": "Predicting short-term mortality in sepsis-associated acute kidney injury: an explainable machine learning model with a web-based prototype",
+    "title_es": "Predicción interpretable de mortalidad a 28 días en lesión renal aguda asociada a sepsis",
+    "institution": "Zhongshan Hospital of Traditional Chinese Medicine; Guangzhou University of Chinese Medicine",
+    "sample": "773 pacientes críticos con lesión renal aguda asociada a sepsis que recibían terapia continua de reemplazo renal.",
+    "design": "Análisis retrospectivo; selección LASSO de 25 variables; comparación de algoritmos y selección final por rendimiento en prueba; SHAP, calibración y curvas de decisión.",
+    "model": "Regresión logística con nueve predictores; SHAP y prototipo web Shiny.",
+    "metrics": "AUC prueba 0,765 (IC95% 0,706–0,824); Hosmer–Lemeshow p=0,004 indica calibración subóptima; GNRI asociado con riesgo elevado por debajo de 75.",
+    "summary": "Predicción interpretable de mortalidad a 28 días en lesión renal aguda asociada a sepsis. AUC prueba 0,765 (IC95% 0,706–0,824); Hosmer–Lemeshow p=0,004 indica calibración subóptima; GNRI asociado con riesgo elevado por debajo de 75.",
+    "limitations": "Modelo seleccionado por el mismo conjunto de prueba; calibración subóptima; sin validación externa prospectiva. No apto para decisión autónoma.",
+    "remember": "Modelo seleccionado por el mismo conjunto de prueba; calibración subóptima; sin validación externa prospectiva. No apto para decisión autónoma.",
+    "language": "No reportado",
+    "framework": "LASSO, regresión logística, SHAP, Shiny.",
+    "hardware": "Datos de UCI, laboratorio y equipos CRRT; CPU/GPU no especificada.",
+    "paper": "https://doi.org/10.1038/s41598-026-78406-4",
+    "doi": "10.1038/s41598-026-78406-4",
+    "published": "2026-11-03",
+    "journal": "Scientific Reports · 2026",
+    "key_metric": "0,765 (0,706–0,824)",
+    "rich": {
+      "problem": "Predicción interpretable de mortalidad a 28 días en lesión renal aguda asociada a sepsis",
+      "idea": "Regresión logística con nueve predictores; SHAP y prototipo web Shiny.",
+      "why": "Aplicación en Cuidados intensivos: Datos clínicos y laboratorio",
+      "interpretability": "Modelo seleccionado por el mismo conjunto de prueba; calibración subóptima; sin validación externa prospectiva. No apto para decisión autónoma.",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "773 pacientes críticos con lesión renal aguda as",
+          "detail": "Análisis retrospectivo; selección LASSO de 25 variables; comparación de algoritmos y selección final por rendi"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "AUC",
+          "main": "0,765",
+          "sub": "Prueba"
+        },
+        {
+          "label": "Cohorte",
+          "main": "773",
+          "sub": "Pacientes"
+        }
+      ],
+      "implementation": [
+        "Análisis retrospectivo; selección LASSO de 25 variables; comparación de algoritmos y selección final por rendimiento en prueba; SHAP, calibración y curvas de decisión.",
+        "Regresión logística con nueve predictores; SHAP y prototipo web Shiny.",
+        "Fuente primaria: https://doi.org/10.1038/s41598-026-78406-4"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "AUC prueba",
+          "IC95%",
+          "0,765 (0,706–0,824)"
+        ],
+        [
+          "Pacientes",
+          "n",
+          "773"
+        ],
+        [
+          "Calibración",
+          "Hosmer–Lemeshow p",
+          "0,004"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-11-03",
+    "reviewed": "04 noviembre 2026",
+    "rich_detail": true,
+    "code": "No confirmado",
+    "cost": "No reportado.",
+    "figures": [],
+    "flag": "🇺🇸",
+    "countryFlags": "🇺🇸",
+    "country": "Estados Unidos / colaboración internacional",
+    "rubro": "Oncología de precisión",
+    "area": "Neurooncología pediátrica",
+    "modality": "Metilación ADN y CNV",
+    "title": "AI-based precision prognostics and therapy personalization for childhood brain tumors",
+    "title_es": "Pronóstico de precisión y personalización terapéutica mediante IA para tumores cerebrales pediátricos",
+    "institution": "Dana-Farber Cancer Institute; St. Jude Children's Research Hospital y colaboradores",
+    "sample": "Cohortes de meduloblastoma y ependimoma; tamaño exacto no confirmado en el extracto editorial consultado.",
+    "design": "Modelado retrospectivo de supervivencia individual a diez años usando metilación del ADN, variación del número de copias y seguimiento clínico.",
+    "model": "MANTIS, red neuronal de supervivencia basada en multi-task logistic regression (MTLR); MANTIS-ITE para análisis exploratorio de efectos de tratamiento.",
+    "metrics": "Curvas individuales de supervivencia a diez años; el artículo informa superioridad sobre indicadores pronósticos convencionales, pero no se extrajo una cifra global verificable.",
+    "summary": "Pronóstico de precisión y personalización terapéutica mediante IA para tumores cerebrales pediátricos. Curvas individuales de supervivencia a diez años; el artículo informa superioridad sobre indicadores pronósticos convencionales, pero no se extrajo una cifra global verificable.",
+    "limitations": "Asociaciones retrospectivas y personalización terapéutica exploratoria; no justifican modificar tratamiento sin ensayo prospectivo.",
+    "remember": "Asociaciones retrospectivas y personalización terapéutica exploratoria; no justifican modificar tratamiento sin ensayo prospectivo.",
+    "language": "No reportado",
+    "framework": "MANTIS, MTLR, análisis de CNV.",
+    "hardware": "Microarrays de metilación de ADN; hardware de entrenamiento no confirmado.",
+    "paper": "https://doi.org/10.1038/s41588-026-02815-4",
+    "doi": "10.1038/s41588-026-02815-4",
+    "published": "2026-11-03",
+    "journal": "Nature Genetics · 2026",
+    "key_metric": ">350.000",
+    "rich": {
+      "problem": "Pronóstico de precisión y personalización terapéutica mediante IA para tumores cerebrales pediátricos",
+      "idea": "MANTIS, red neuronal de supervivencia basada en multi-task logistic regression (MTLR); MANTIS-ITE para análisis exploratorio de efectos de tratamiento.",
+      "why": "Aplicación en Neurooncología pediátrica: Metilación ADN y CNV",
+      "interpretability": "Asociaciones retrospectivas y personalización terapéutica exploratoria; no justifican modificar tratamiento sin ensayo prospectivo.",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "Cohortes de meduloblastoma y ependimoma; tamaño ",
+          "detail": "Modelado retrospectivo de supervivencia individual a diez años usando metilación del ADN, variación del número"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Horizonte",
+          "main": "10 años",
+          "sub": "Curvas de supervivencia"
+        },
+        {
+          "label": "Metilación",
+          "main": ">350 mil",
+          "sub": "Sondas"
+        }
+      ],
+      "implementation": [
+        "Modelado retrospectivo de supervivencia individual a diez años usando metilación del ADN, variación del número de copias y seguimiento clínico.",
+        "MANTIS, red neuronal de supervivencia basada en multi-task logistic regression (MTLR); MANTIS-ITE para análisis exploratorio de efectos de tratamiento.",
+        "Fuente primaria: https://doi.org/10.1038/s41588-026-02815-4"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Entradas",
+          "Sondas de metilación",
+          ">350.000"
+        ],
+        [
+          "Horizonte",
+          "Supervivencia",
+          "10 años"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-11-02",
+    "reviewed": "04 noviembre 2026",
+    "rich_detail": true,
+    "code": "No confirmado",
+    "cost": "No reportado.",
+    "figures": [],
+    "flag": "🇨🇳 🇭🇰",
+    "countryFlags": "🇨🇳 🇭🇰",
+    "country": "China / Hong Kong / Macao",
+    "rubro": "Oncología molecular",
+    "area": "Patología digital",
+    "modality": "WSI y transcriptómica en entrenamiento",
+    "title": "Genome-anchored foundation model embeddings improve molecular prediction from histology images",
+    "title_es": "Embeddings de modelos fundacionales anclados al genoma mejoran la predicción molecular desde histopatología",
+    "institution": "Hong Kong University of Science and Technology; Sun Yat-sen University",
+    "sample": "11.361 casos de 20 cohortes; 49 tareas de oncología molecular.",
+    "design": "Evaluación multicohorte de biomarcadores, subtipos moleculares y supervivencia; transcriptómica disponible como información privilegiada solo durante entrenamiento.",
+    "model": "PathLUPI: aprendizaje con información privilegiada transcriptómica para embeddings histológicos; inferencia solo con imágenes de lámina completa (WSI).",
+    "metrics": "AUC ≥0,80 en 18 tareas de biomarcadores/subtipos; C-index ≥0,70 en cohortes de supervivencia de cinco tipos principales de cáncer.",
+    "summary": "Embeddings de modelos fundacionales anclados al genoma mejoran la predicción molecular desde histopatología. AUC ≥0,80 en 18 tareas de biomarcadores/subtipos; C-index ≥0,70 en cohortes de supervivencia de cinco tipos principales de cáncer.",
+    "limitations": "No sustituye pruebas moleculares; generalización clínica prospectiva y costo de escaneo no demostrados. Las cifras difieren del preprint: se usa versión final.",
+    "remember": "No sustituye pruebas moleculares; generalización clínica prospectiva y costo de escaneo no demostrados. Las cifras difieren del preprint: se usa versión final.",
+    "language": "No reportado",
+    "framework": "PathLUPI, embeddings de modelos fundacionales y transcriptómica.",
+    "hardware": "Escáneres de patología digital; hardware de entrenamiento no reportado.",
+    "paper": "https://doi.org/10.1038/s41467-026-78947-2",
+    "doi": "10.1038/s41467-026-78947-2",
+    "published": "2026-11-02",
+    "journal": "Nature Communications · 2026",
+    "key_metric": "11.361",
+    "rich": {
+      "problem": "Embeddings de modelos fundacionales anclados al genoma mejoran la predicción molecular desde histopatología",
+      "idea": "PathLUPI: aprendizaje con información privilegiada transcriptómica para embeddings histológicos; inferencia solo con imágenes de lámina completa (WSI).",
+      "why": "Aplicación en Patología digital: WSI y transcriptómica en entrenamiento",
+      "interpretability": "No sustituye pruebas moleculares; generalización clínica prospectiva y costo de escaneo no demostrados. Las cifras difieren del preprint: se usa versión final.",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "11.361 casos de 20 cohortes; 49 tareas de oncolo",
+          "detail": "Evaluación multicohorte de biomarcadores, subtipos moleculares y supervivencia; transcriptómica disponible com"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Casos",
+          "main": "11.361",
+          "sub": "20 cohortes"
+        },
+        {
+          "label": "Tareas",
+          "main": "49",
+          "sub": "Oncología"
+        }
+      ],
+      "implementation": [
+        "Evaluación multicohorte de biomarcadores, subtipos moleculares y supervivencia; transcriptómica disponible como información privilegiada solo durante entrenamiento.",
+        "PathLUPI: aprendizaje con información privilegiada transcriptómica para embeddings histológicos; inferencia solo con imágenes de lámina completa (WSI).",
+        "Fuente primaria: https://doi.org/10.1038/s41467-026-78947-2"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Casos",
+          "n",
+          "11.361"
+        ],
+        [
+          "Cohortes",
+          "n",
+          "20"
+        ],
+        [
+          "Tareas",
+          "n",
+          "49"
+        ],
+        [
+          "AUC ≥0,80",
+          "Tareas",
+          "18"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-11-03",
     "reviewed": "03 noviembre 2026",
     "rich_detail": true,
     "code": "No reportado o no confirmado",
