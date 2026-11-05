@@ -1,5 +1,502 @@
 [
   {
+    "date": "2026-11-05",
+    "reviewed": "05 noviembre 2026",
+    "rich_detail": true,
+    "code": "https://github.com/RPIDIAL/Quest2Dx",
+    "cost": "No reportado",
+    "figures": [],
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "country": "Estados Unidos",
+    "rubro": "Investigación original",
+    "area": "IA en salud e ingeniería biomédica",
+    "modality": "Clínica / señales / imagen / laboratorio",
+    "title": "Language modeling screens Parkinson’s disease with self-reported questionnaires",
+    "title_es": "Modelado del lenguaje para cribado de Parkinson mediante cuestionarios",
+    "institution": "Rensselaer Polytechnic Institute y colaboradores",
+    "sample": "PPMI Online y Fox Insight; tamaño de cohortes no confirmado en el resumen consultado",
+    "design": "Evaluación de dos cohortes y transferencia entre cuestionarios, con manejo de respuestas faltantes",
+    "model": "Quest2Dx; codificación lingüística de preguntas y respuestas",
+    "metrics": "AUROC 0,977 (PPMI) y 0,974 (Fox Insight); transferencia cruzada 0,920 y 0,952",
+    "summary": "Estudio original sobre modelado del lenguaje para cribado de parkinson mediante cuestionarios. Resultados y alcance limitados a las cohortes o experimentos descritos.",
+    "limitations": "Sin demostración prospectiva de utilidad como diagnóstico clínico",
+    "remember": "No extrapolar resultados de benchmarks o experimentos a decisiones clínicas sin validación externa.",
+    "language": "Inglés",
+    "framework": "Quest2Dx; código disponible",
+    "hardware": "Datos de cuestionarios; hardware no informado",
+    "paper": "https://doi.org/10.1038/s43587-026-01260-6",
+    "doi": "10.1038/s43587-026-01260-6",
+    "published": "04 noviembre 2026",
+    "journal": "Nature Aging",
+    "key_metric": "AUROC 0,977 (PPMI) y 0,974 (Fox Insight)",
+    "rich": {
+      "problem": "Modelado del lenguaje para cribado de Parkinson mediante cuestionarios",
+      "idea": "Evaluación de dos cohortes y transferencia entre cuestionarios, con manejo de respuestas faltantes",
+      "why": "Investigación reciente para evaluar aplicaciones de IA biomédica y sus límites.",
+      "interpretability": "Sin demostración prospectiva de utilidad como diagnóstico clínico",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "PPMI Online y Fox Insight; tamaño de cohortes no confirmado en el resumen consultado",
+          "detail": "Datos descritos por la fuente editorial",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado",
+          "main": "AUROC 0,977 (PPMI) y 0,974 (Fox Insight)",
+          "sub": "Consultar metodología y limitaciones"
+        }
+      ],
+      "implementation": [
+        "Quest2Dx; codificación lingüística de preguntas y respuestas",
+        "Quest2Dx; código disponible",
+        "Datos de cuestionarios; hardware no informado"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Resultados reportados",
+          "AUROC 0,977 (PPMI) y 0,974 (Fox Insight); transferencia cruzada 0,920 y 0,952",
+          "No inferir métricas no publicadas"
+        ],
+        [
+          "Costos",
+          "No reportado",
+          "No estimados"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-11-05",
+    "reviewed": "05 noviembre 2026",
+    "rich_detail": true,
+    "code": "No reportado",
+    "cost": "No reportado",
+    "figures": [],
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "country": "Afiliaciones internacionales; países no confirmados completamente",
+    "rubro": "Investigación original",
+    "area": "IA en salud e ingeniería biomédica",
+    "modality": "Clínica / señales / imagen / laboratorio",
+    "title": "ResNet-GA: genetic algorithm-driven optimization of ResNet for automated dental caries detection in medical imaging",
+    "title_es": "ResNet optimizada mediante algoritmo genético para detectar caries",
+    "institution": "Equipo de Aida Chefrour y colaboradores",
+    "sample": "1554 imágenes: entrenamiento 1260; prueba 294 (210 caries y 84 sin caries)",
+    "design": "Clasificación binaria con partición previa, ponderación de clases, aumentos solo en entrenamiento y cinco semillas",
+    "model": "ResNet-50 con transferencia ImageNet y búsqueda genética de filtros y kernels",
+    "metrics": "Exactitud 87,89% ±1,41%; macro-F1 83,32% ±2,58%; AUC 0,926",
+    "summary": "Estudio original sobre resnet optimizada mediante algoritmo genético para detectar caries. Resultados y alcance limitados a las cohortes o experimentos descritos.",
+    "limitations": "Benchmark Kaggle pequeño; no hay validación clínica multicéntrica; en corrida primaria especificidad 52,38%",
+    "remember": "No extrapolar resultados de benchmarks o experimentos a decisiones clínicas sin validación externa.",
+    "language": "Inglés",
+    "framework": "Python 3.9; TensorFlow 2.10; Keras 2.10; scikit-learn",
+    "hardware": "Intel Core i7, 16 GB RAM, GPU NVIDIA CUDA",
+    "paper": "https://doi.org/10.1038/s41598-026-69608-x",
+    "doi": "10.1038/s41598-026-69608-x",
+    "published": "04 noviembre 2026",
+    "journal": "Scientific Reports",
+    "key_metric": "Exactitud 87,89% ±1,41%",
+    "rich": {
+      "problem": "ResNet optimizada mediante algoritmo genético para detectar caries",
+      "idea": "Clasificación binaria con partición previa, ponderación de clases, aumentos solo en entrenamiento y cinco semillas",
+      "why": "Investigación reciente para evaluar aplicaciones de IA biomédica y sus límites.",
+      "interpretability": "Benchmark Kaggle pequeño; no hay validación clínica multicéntrica; en corrida primaria especificidad 52,38%",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "1554 imágenes: entrenamiento 1260; prueba 294 (210 caries y 84 sin caries)",
+          "detail": "Datos descritos por la fuente editorial",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado",
+          "main": "Exactitud 87,89% ±1,41%",
+          "sub": "Consultar metodología y limitaciones"
+        }
+      ],
+      "implementation": [
+        "ResNet-50 con transferencia ImageNet y búsqueda genética de filtros y kernels",
+        "Python 3.9; TensorFlow 2.10; Keras 2.10; scikit-learn",
+        "Intel Core i7, 16 GB RAM, GPU NVIDIA CUDA"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Resultados reportados",
+          "Exactitud 87,89% ±1,41%; macro-F1 83,32% ±2,58%; AUC 0,926",
+          "No inferir métricas no publicadas"
+        ],
+        [
+          "Costos",
+          "No reportado",
+          "No estimados"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-11-05",
+    "reviewed": "05 noviembre 2026",
+    "rich_detail": true,
+    "code": "No reportado",
+    "cost": "No reportado",
+    "figures": [],
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "country": "China",
+    "rubro": "Investigación original",
+    "area": "IA en salud e ingeniería biomédica",
+    "modality": "Clínica / señales / imagen / laboratorio",
+    "title": "Explainable machine learning estimates clinically significant prostate cancer risk in men with PSA 4–20 ng/mL",
+    "title_es": "Aprendizaje automático explicable para estimar riesgo de cáncer prostático clínicamente significativo",
+    "institution": "Affiliated Hospital of North Sichuan Medical College",
+    "sample": "859 hombres con PSA 4–20 ng/mL; 76 con cáncer clínicamente significativo",
+    "design": "Estudio retrospectivo; 500 bootstrap con selección LASSO y ajuste dentro de entrenamiento; evaluación out-of-bag por paciente",
+    "model": "C5.0 entre doce algoritmos evaluados",
+    "metrics": "AUROC 0,843 (IC95% 0,801–0,886); AUPRC 0,421; Brier 0,066",
+    "summary": "Estudio original sobre aprendizaje automático explicable para estimar riesgo de cáncer prostático clínicamente significativo. Resultados y alcance limitados a las cohortes o experimentos descritos.",
+    "limitations": "Sin validación externa; calibración incierta en riesgo alto; posible omisión de casos si se aplica umbral",
+    "remember": "No extrapolar resultados de benchmarks o experimentos a decisiones clínicas sin validación externa.",
+    "language": "Inglés",
+    "framework": "LASSO, C5.0, bootstrap",
+    "hardware": "Laboratorio PSA y anatomía patológica; equipo de cómputo no reportado",
+    "paper": "https://doi.org/10.1038/s41598-026-78763-0",
+    "doi": "10.1038/s41598-026-78763-0",
+    "published": "04 noviembre 2026",
+    "journal": "Scientific Reports",
+    "key_metric": "AUROC 0,843 (IC95% 0,801–0,886)",
+    "rich": {
+      "problem": "Aprendizaje automático explicable para estimar riesgo de cáncer prostático clínicamente significativo",
+      "idea": "Estudio retrospectivo; 500 bootstrap con selección LASSO y ajuste dentro de entrenamiento; evaluación out-of-bag por paciente",
+      "why": "Investigación reciente para evaluar aplicaciones de IA biomédica y sus límites.",
+      "interpretability": "Sin validación externa; calibración incierta en riesgo alto; posible omisión de casos si se aplica umbral",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "859 hombres con PSA 4–20 ng/mL; 76 con cáncer clínicamente significativo",
+          "detail": "Datos descritos por la fuente editorial",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado",
+          "main": "AUROC 0,843 (IC95% 0,801–0,886)",
+          "sub": "Consultar metodología y limitaciones"
+        }
+      ],
+      "implementation": [
+        "C5.0 entre doce algoritmos evaluados",
+        "LASSO, C5.0, bootstrap",
+        "Laboratorio PSA y anatomía patológica; equipo de cómputo no reportado"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Resultados reportados",
+          "AUROC 0,843 (IC95% 0,801–0,886); AUPRC 0,421; Brier 0,066",
+          "No inferir métricas no publicadas"
+        ],
+        [
+          "Costos",
+          "No reportado",
+          "No estimados"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-11-05",
+    "reviewed": "05 noviembre 2026",
+    "rich_detail": true,
+    "code": "No reportado",
+    "cost": "No reportado",
+    "figures": [],
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "country": "China",
+    "rubro": "Investigación original",
+    "area": "IA en salud e ingeniería biomédica",
+    "modality": "Clínica / señales / imagen / laboratorio",
+    "title": "AI-integrated multi-omics fusion for precision cardiovascular diagnostics",
+    "title_es": "Fusión multi-ómica con IA para diagnóstico cardiovascular de precisión",
+    "institution": "Ganzhou People's Hospital; Second Affiliated Hospital of Xi'an Jiaotong University",
+    "sample": "Cohortes independientes no emparejadas; validación transcriptómica externa con 332 muestras GSE141910",
+    "design": "Integración latente a nivel de cohorte, no fusión de mediciones multi-ómicas del mismo paciente; evaluación externa de rama transcriptómica",
+    "model": "CardioPrecision-BioFusion: encoders por modalidad, atención multicabezal, Transformer, autoencoder y stacking",
+    "metrics": "Exactitud interna 97,96% (IC95% 97,14–98,55%); externa transcriptómica 84,64%, AUC 0,912",
+    "summary": "Estudio original sobre fusión multi-ómica con ia para diagnóstico cardiovascular de precisión. Resultados y alcance limitados a las cohortes o experimentos descritos.",
+    "limitations": "Proteómica simulada; cohortes no emparejadas; no prueba uso clínico en paciente individual",
+    "remember": "No extrapolar resultados de benchmarks o experimentos a decisiones clínicas sin validación externa.",
+    "language": "Inglés",
+    "framework": "Transformer, autoencoder, SHAP, stacking",
+    "hardware": "Datos clínicos y ómicos; hardware no informado",
+    "paper": "https://doi.org/10.1038/s41598-026-69435-0",
+    "doi": "10.1038/s41598-026-69435-0",
+    "published": "04 noviembre 2026",
+    "journal": "Scientific Reports",
+    "key_metric": "Exactitud interna 97,96% (IC95% 97,14–98,55%)",
+    "rich": {
+      "problem": "Fusión multi-ómica con IA para diagnóstico cardiovascular de precisión",
+      "idea": "Integración latente a nivel de cohorte, no fusión de mediciones multi-ómicas del mismo paciente; evaluación externa de rama transcriptómica",
+      "why": "Investigación reciente para evaluar aplicaciones de IA biomédica y sus límites.",
+      "interpretability": "Proteómica simulada; cohortes no emparejadas; no prueba uso clínico en paciente individual",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "Cohortes independientes no emparejadas; validación transcriptómica externa con 332 muestras GSE141910",
+          "detail": "Datos descritos por la fuente editorial",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado",
+          "main": "Exactitud interna 97,96% (IC95% 97,14–98,55%)",
+          "sub": "Consultar metodología y limitaciones"
+        }
+      ],
+      "implementation": [
+        "CardioPrecision-BioFusion: encoders por modalidad, atención multicabezal, Transformer, autoencoder y stacking",
+        "Transformer, autoencoder, SHAP, stacking",
+        "Datos clínicos y ómicos; hardware no informado"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Resultados reportados",
+          "Exactitud interna 97,96% (IC95% 97,14–98,55%); externa transcriptómica 84,64%, AUC 0,912",
+          "No inferir métricas no publicadas"
+        ],
+        [
+          "Costos",
+          "No reportado",
+          "No estimados"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-11-05",
+    "reviewed": "05 noviembre 2026",
+    "rich_detail": true,
+    "code": "No reportado",
+    "cost": "No reportado",
+    "figures": [],
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "country": "País no confirmado en el resumen",
+    "rubro": "Investigación original",
+    "area": "IA en salud e ingeniería biomédica",
+    "modality": "Clínica / señales / imagen / laboratorio",
+    "title": "An AI-native experimental laboratory for autonomous biomolecular operations",
+    "title_es": "Laboratorio experimental nativo de IA para operaciones biomoleculares autónomas",
+    "institution": "Wu, Wang y colaboradores; afiliación exacta pendiente de verificación",
+    "sample": "Experimentos biomoleculares multiobjetivo; número exacto de ensayos no confirmado",
+    "design": "Codiseño de modelos, experimentos e instrumentos en entorno automatizado multiusuario",
+    "model": "AutoDNA: sistema de IA y automatización experimental de extremo a extremo",
+    "metrics": "Demostración de operaciones autónomas multiobjetivo; métricas numéricas no verificadas",
+    "summary": "Estudio original sobre laboratorio experimental nativo de ia para operaciones biomoleculares autónomas. Resultados y alcance limitados a las cohortes o experimentos descritos.",
+    "limitations": "No es validación clínica; falta desglose de tasa de éxito y reproducibilidad por tarea",
+    "remember": "No extrapolar resultados de benchmarks o experimentos a decisiones clínicas sin validación externa.",
+    "language": "Inglés",
+    "framework": "AutoDNA; detalles de implementación no confirmados",
+    "hardware": "Instrumentación de laboratorio automatizada; modelos concretos no confirmados",
+    "paper": "https://doi.org/10.1038/s41586-026-11228-6",
+    "doi": "10.1038/s41586-026-11228-6",
+    "published": "04 noviembre 2026",
+    "journal": "Nature",
+    "key_metric": "Demostración de operaciones autónomas multiobjetivo",
+    "rich": {
+      "problem": "Laboratorio experimental nativo de IA para operaciones biomoleculares autónomas",
+      "idea": "Codiseño de modelos, experimentos e instrumentos en entorno automatizado multiusuario",
+      "why": "Investigación reciente para evaluar aplicaciones de IA biomédica y sus límites.",
+      "interpretability": "No es validación clínica; falta desglose de tasa de éxito y reproducibilidad por tarea",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "Experimentos biomoleculares multiobjetivo; número exacto de ensayos no confirmado",
+          "detail": "Datos descritos por la fuente editorial",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado",
+          "main": "Demostración de operaciones autónomas multiobjetivo",
+          "sub": "Consultar metodología y limitaciones"
+        }
+      ],
+      "implementation": [
+        "AutoDNA: sistema de IA y automatización experimental de extremo a extremo",
+        "AutoDNA; detalles de implementación no confirmados",
+        "Instrumentación de laboratorio automatizada; modelos concretos no confirmados"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Resultados reportados",
+          "Demostración de operaciones autónomas multiobjetivo; métricas numéricas no verificadas",
+          "No inferir métricas no publicadas"
+        ],
+        [
+          "Costos",
+          "No reportado",
+          "No estimados"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-11-05",
+    "reviewed": "05 noviembre 2026",
+    "rich_detail": true,
+    "code": "No reportado",
+    "cost": "No reportado",
+    "figures": [],
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "country": "Cuatro cohortes internacionales; países no confirmados",
+    "rubro": "Investigación original",
+    "area": "IA en salud e ingeniería biomédica",
+    "modality": "Clínica / señales / imagen / laboratorio",
+    "title": "A precision health approach to medication management in neurodevelopmental conditions: a model development and validation study using four international cohorts",
+    "title_es": "Salud de precisión para analizar patrones de prescripción en condiciones del neurodesarrollo",
+    "institution": "Instituciones no confirmadas en resumen consultado",
+    "sample": "Cuatro cohortes internacionales; tamaño total no confirmado",
+    "design": "Desarrollo y validación de modelos para patrones de prescripción de estimulantes, antidepresivos y antipsicóticos",
+    "model": "Modelos de inteligencia artificial; algoritmo exacto no confirmado",
+    "metrics": "No se verificaron cifras de discriminación en el resumen consultado",
+    "summary": "Estudio original sobre salud de precisión para analizar patrones de prescripción en condiciones del neurodesarrollo. Resultados y alcance limitados a las cohortes o experimentos descritos.",
+    "limitations": "Predice patrones de prescripción, no eficacia ni seguridad individual de tratamientos",
+    "remember": "No extrapolar resultados de benchmarks o experimentos a decisiones clínicas sin validación externa.",
+    "language": "Inglés",
+    "framework": "Modelos IA no especificados",
+    "hardware": "Datos clínicos; hardware no reportado",
+    "paper": "https://doi.org/10.1038/s41398-026-04541-1",
+    "doi": "10.1038/s41398-026-04541-1",
+    "published": "04 noviembre 2026",
+    "journal": "Translational Psychiatry",
+    "key_metric": "No se verificaron cifras de discriminación en el resumen consultado",
+    "rich": {
+      "problem": "Salud de precisión para analizar patrones de prescripción en condiciones del neurodesarrollo",
+      "idea": "Desarrollo y validación de modelos para patrones de prescripción de estimulantes, antidepresivos y antipsicóticos",
+      "why": "Investigación reciente para evaluar aplicaciones de IA biomédica y sus límites.",
+      "interpretability": "Predice patrones de prescripción, no eficacia ni seguridad individual de tratamientos",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "Cuatro cohortes internacionales; tamaño total no confirmado",
+          "detail": "Datos descritos por la fuente editorial",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado",
+          "main": "No se verificaron cifras de discriminación en el resumen consultado",
+          "sub": "Consultar metodología y limitaciones"
+        }
+      ],
+      "implementation": [
+        "Modelos de inteligencia artificial; algoritmo exacto no confirmado",
+        "Modelos IA no especificados",
+        "Datos clínicos; hardware no reportado"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Resultados reportados",
+          "No se verificaron cifras de discriminación en el resumen consultado",
+          "No inferir métricas no publicadas"
+        ],
+        [
+          "Costos",
+          "No reportado",
+          "No estimados"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-11-05",
+    "reviewed": "05 noviembre 2026",
+    "rich_detail": true,
+    "code": "No reportado",
+    "cost": "No reportado",
+    "figures": [],
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "country": "País no confirmado",
+    "rubro": "Investigación original",
+    "area": "IA en salud e ingeniería biomédica",
+    "modality": "Clínica / señales / imagen / laboratorio",
+    "title": "Integrated computational pipelines using machine learning and deep neural networks for modelling Drosophila cardiac aging and disease classification",
+    "title_es": "Pipelines de aprendizaje automático para modelar envejecimiento cardíaco en Drosophila",
+    "institution": "Equipo de Veeresh Kondapaneni, Yash Melkani y Girish C. Melkani",
+    "sample": "Microscopía óptica de alta velocidad de corazones de Drosophila; cantidad no confirmada",
+    "design": "Análisis de imágenes de corazón de Drosophila y clasificación experimental de envejecimiento/enfermedad",
+    "model": "Pipeline ML y redes neuronales profundas; arquitectura exacta no confirmada",
+    "metrics": "No se verificaron cifras numéricas en el resumen consultado",
+    "summary": "Estudio original sobre pipelines de aprendizaje automático para modelar envejecimiento cardíaco en drosophila. Resultados y alcance limitados a las cohortes o experimentos descritos.",
+    "limitations": "Modelo animal; no implica validación diagnóstica humana",
+    "remember": "No extrapolar resultados de benchmarks o experimentos a decisiones clínicas sin validación externa.",
+    "language": "Inglés",
+    "framework": "Pipeline ML/DNN; versiones no reportadas",
+    "hardware": "Microscopía óptica de alta velocidad; GPU no confirmada",
+    "paper": "https://doi.org/10.1038/s41598-026-75107-w",
+    "doi": "10.1038/s41598-026-75107-w",
+    "published": "04 noviembre 2026",
+    "journal": "Scientific Reports",
+    "key_metric": "No se verificaron cifras numéricas en el resumen consultado",
+    "rich": {
+      "problem": "Pipelines de aprendizaje automático para modelar envejecimiento cardíaco en Drosophila",
+      "idea": "Análisis de imágenes de corazón de Drosophila y clasificación experimental de envejecimiento/enfermedad",
+      "why": "Investigación reciente para evaluar aplicaciones de IA biomédica y sus límites.",
+      "interpretability": "Modelo animal; no implica validación diagnóstica humana",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "Microscopía óptica de alta velocidad de corazones de Drosophila; cantidad no confirmada",
+          "detail": "Datos descritos por la fuente editorial",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado",
+          "main": "No se verificaron cifras numéricas en el resumen consultado",
+          "sub": "Consultar metodología y limitaciones"
+        }
+      ],
+      "implementation": [
+        "Pipeline ML y redes neuronales profundas; arquitectura exacta no confirmada",
+        "Pipeline ML/DNN; versiones no reportadas",
+        "Microscopía óptica de alta velocidad; GPU no confirmada"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Resultados reportados",
+          "No se verificaron cifras numéricas en el resumen consultado",
+          "No inferir métricas no publicadas"
+        ],
+        [
+          "Costos",
+          "No reportado",
+          "No estimados"
+        ]
+      ]
+    }
+  },
+  {
     "date": "2026-11-03",
     "reviewed": "04 noviembre 2026",
     "rich_detail": true,
