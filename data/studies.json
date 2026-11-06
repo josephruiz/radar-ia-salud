@@ -1,5 +1,534 @@
 [
   {
+    "date": "2026-11-06",
+    "reviewed": "06 noviembre 2026",
+    "published": "05 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-77687-z",
+    "code": "No confirmado",
+    "figures": [],
+    "language": "Inglés",
+    "title": "Interpretable machine learning for postoperative atrial fibrillation after noncardiac surgery",
+    "title_es": "Aprendizaje automático interpretable para fibrilación auricular posoperatoria tras cirugía no cardíaca",
+    "doi": "10.1038/s41598-026-77687-z",
+    "country": "China",
+    "institution": "First Affiliated Hospital of Zhengzhou University",
+    "sample": "99.887 pacientes; 1.058 (1,1%) con fibrilación auricular posoperatoria documentada",
+    "design": "Cohorte retrospectiva INSPIRE; predictores preoperatorios, intraoperatorios y primeras 24 horas; Boruta, partición estratificada y SHAP",
+    "model": "LASSO logística, AdaBoost, LightGBM, XGBoost y CatBoost",
+    "metrics": "AUROC 0,80–0,85; AdaBoost y CatBoost 0,85",
+    "limitations": "No hay validación externa; monitorización heterogénea, desenlace infrecuente y calibración por comprobar.",
+    "hardware": "ECG, monitorización de ritmo y constantes perioperatorias; equipos y GPU no detallados.",
+    "framework": "Boruta, SHAP y clasificadores boosting; versiones no informadas.",
+    "cost": "No reportado",
+    "modality": "Datos clínicos y monitorización perioperatoria",
+    "rubro": "Cardiología",
+    "area": "Riesgo perioperatorio",
+    "key_metric": "AUROC 0,85",
+    "summary": "Predicción dinámica de fibrilación auricular posoperatoria con variables clínicas y fisiológicas.",
+    "remember": "Una AUC de 0,85 no demuestra beneficio prospectivo de vigilancia.",
+    "rich": {
+      "problem": "Estratificar el riesgo de arritmia después de cirugía no cardíaca.",
+      "idea": "Combinar variables de varias ventanas perioperatorias.",
+      "why": "Puede orientar investigaciones de vigilancia dinámica, no sustituye monitorización.",
+      "interpretability": "Boruta y SHAP identificaron variables clínicas y fisiológicas.",
+      "dataset_cards": [
+        {
+          "name": "INSPIRE",
+          "value": "99.887 pacientes",
+          "detail": "1.058 eventos documentados"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Mejor AUROC",
+          "main": "0,85",
+          "sub": "AdaBoost y CatBoost"
+        }
+      ],
+      "metrics_table": [
+        [
+          "AUROC",
+          "0,80–0,85",
+          "Comparación de clasificadores"
+        ],
+        [
+          "Prevalencia",
+          "1,1%",
+          "POAF documentada"
+        ]
+      ],
+      "implementation": [
+        "Validar externamente",
+        "Auditar calibración y umbrales"
+      ],
+      "figures": []
+    }
+  },
+  {
+    "date": "2026-11-06",
+    "reviewed": "06 noviembre 2026",
+    "published": "05 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-78721-w",
+    "code": "No confirmado",
+    "figures": [],
+    "language": "Inglés",
+    "title": "AI-generated medical advice is rated favourably but GP advice is more trusted in India",
+    "title_es": "Los consejos médicos generados por IA reciben valoraciones favorables, pero se confía más en médicos generales en India",
+    "doi": "10.1038/s41598-026-78721-w",
+    "country": "India (estudio); Singapur (afiliación)",
+    "institution": "National University of Singapore, Yong Loo Lin School of Medicine",
+    "sample": "797 participantes de Mumbai; 3.188 evaluaciones de viñetas",
+    "design": "Experimento factorial 2×2×2 parcialmente intra-sujeto; fuente atribuida, transparencia y riesgo clínico; modelos mixtos",
+    "model": "Análisis estadístico de efectos mixtos; no entrena modelo predictivo",
+    "metrics": "Intención declarada de seguir consejo: IA 86,5%; médico general 97,3%; alfa 0,944 para escala de dos ítems",
+    "limitations": "Intención declarada no es conducta real ni exactitud médica; el compuesto inicial de tres ítems tuvo alfa 0,15.",
+    "hardware": "Encuestas y viñetas; sin instrumentación biomédica.",
+    "framework": "Modelos lineales/logísticos mixtos y análisis temático; software no reportado.",
+    "cost": "No reportado",
+    "modality": "Evaluación de consejos médicos",
+    "rubro": "Salud digital",
+    "area": "Confianza y adopción de IA",
+    "key_metric": "86,5% vs 97,3%",
+    "summary": "Experimento sobre confianza, exactitud percibida e intención de seguir recomendaciones atribuidas a IA o médicos.",
+    "remember": "Alta aceptación no implica confianza equivalente ni eficacia clínica.",
+    "rich": {
+      "problem": "Medir la aceptación de consejos atribuidos a IA frente a profesionales.",
+      "idea": "Manipular fuente, transparencia y riesgo en viñetas.",
+      "why": "Informa diseño responsable de asistentes sanitarios.",
+      "interpretability": "Modelos mixtos y análisis temático.",
+      "dataset_cards": [
+        {
+          "name": "Encuesta",
+          "value": "797 personas",
+          "detail": "3.188 respuestas"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Seguiría consejo IA",
+          "main": "86,5%",
+          "sub": "Intención declarada"
+        },
+        {
+          "label": "Seguiría consejo médico",
+          "main": "97,3%",
+          "sub": "Intención declarada"
+        }
+      ],
+      "metrics_table": [
+        [
+          "IA",
+          "86,5%",
+          "Intención declarada"
+        ],
+        [
+          "Médico general",
+          "97,3%",
+          "Intención declarada"
+        ]
+      ],
+      "implementation": [
+        "No confundir percepción con seguridad",
+        "Mantener responsabilidad clínica"
+      ],
+      "figures": []
+    }
+  },
+  {
+    "date": "2026-11-06",
+    "reviewed": "06 noviembre 2026",
+    "published": "04 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-75900-7",
+    "code": "No confirmado",
+    "figures": [],
+    "language": "Inglés",
+    "title": "Lesion-aware prototype contrastive learning for port-wine stain classification",
+    "title_es": "Aprendizaje contrastivo de prototipos atento a lesiones para clasificar manchas en vino de Oporto",
+    "doi": "10.1038/s41598-026-75900-7",
+    "country": "China",
+    "institution": "People's Hospital of Xinjiang Uygur Autonomous Region; Xinjiang Clinical Research Center for Dermatology",
+    "sample": "887 imágenes de manchas vasculares; validación cruzada de cinco particiones",
+    "design": "Clasificación de subtipos rosado-rojo y púrpura-rojo; ablaciones en dos backbones y evaluación suplementaria PH2",
+    "model": "LAPC: atención canal-espacial con estadísticas promedio/máximo y aprendizaje contrastivo supervisado con prototipos",
+    "metrics": "Mejoras medias de exactitud, recall, AUC y exactitud balanceada frente a comparadores; valores numéricos no confirmados en resumen",
+    "limitations": "Las diferencias numéricas no establecen significación estadística; falta validación clínica externa independiente.",
+    "hardware": "Fotografías clínicas de lesiones; cámara y GPU no informadas.",
+    "framework": "LAPC, atención canal-espacial y contraste supervisado; framework no confirmado.",
+    "cost": "No reportado",
+    "modality": "Fotografía dermatológica",
+    "rubro": "Dermatología",
+    "area": "Clasificación de lesiones vasculares",
+    "key_metric": "887 imágenes",
+    "summary": "Marco de visión artificial para distinguir subtipos de manchas vasculares mediante atención y prototipos.",
+    "remember": "Mejoras de medias sin prueba de significación no deben interpretarse como superioridad concluyente.",
+    "rich": {
+      "problem": "Distinguir clases con diferencias cromáticas sutiles.",
+      "idea": "Combinar atención a lesiones y aprendizaje contrastivo por prototipos.",
+      "why": "Relevante para fotografía clínica.",
+      "interpretability": "Atención espacial y prototipos de clase.",
+      "dataset_cards": [
+        {
+          "name": "Cohorte interna",
+          "value": "887 imágenes",
+          "detail": "Cinco particiones"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Comparación",
+          "main": "Mejora reportada",
+          "sub": "Sin significación estadística establecida"
+        }
+      ],
+      "metrics_table": [
+        [
+          "N",
+          "887",
+          "Imágenes"
+        ],
+        [
+          "AUC",
+          "No confirmado",
+          "El resumen no ofrece cifra"
+        ]
+      ],
+      "implementation": [
+        "Validar con cámaras externas",
+        "Evaluar intervalos de confianza"
+      ],
+      "figures": []
+    }
+  },
+  {
+    "date": "2026-11-06",
+    "reviewed": "06 noviembre 2026",
+    "published": "05 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-79468-0",
+    "code": "No confirmado",
+    "figures": [],
+    "language": "Inglés",
+    "title": "Hierarchical AI classification of benign laryngeal disorders using acoustic voice features",
+    "title_es": "Clasificación jerárquica mediante IA de trastornos laríngeos benignos usando características acústicas",
+    "doi": "10.1038/s41598-026-79468-0",
+    "country": "Estados Unidos (afiliaciones internacionales)",
+    "institution": "Equipo de Mohsen Annabestani, Anaïs Rameau, Olivier Elemento y Gloria Chia-Yi Chiang",
+    "sample": "15.132 grabaciones de 1.261 hablantes de Saarbrücken Voice Database",
+    "design": "Vocales sostenidas /a/, /i/, /u/ con diferentes tonos; tres etapas de clasificación y derivación de baja confianza",
+    "model": "CNN sobre mel-espectrogramas + 21 características acústicas; jerarquía de cribado, agrupación y subtipos; comparación con HuBERT y HeAR",
+    "metrics": "Mejor rendimiento frente a clasificadores planos, HuBERT y HeAR; cifras específicas no confirmadas en resumen editorial",
+    "limitations": "Base de voz de investigación; no se confirma validación externa prospectiva ni desempeño por dispositivo.",
+    "hardware": "Grabaciones de voz; micrófonos, GPU y procesadores no especificados.",
+    "framework": "CNN, mel-espectrogramas, HuBERT, HeAR; versiones no informadas.",
+    "cost": "No reportado",
+    "modality": "Señal acústica de voz",
+    "rubro": "Otorrinolaringología",
+    "area": "IA de voz clínica",
+    "key_metric": "15.132 grabaciones",
+    "summary": "Clasificación jerárquica de ocho trastornos benignos de la voz y controles sanos.",
+    "remember": "La derivación de predicciones inciertas requiere evaluación del flujo humano.",
+    "rich": {
+      "problem": "Clasificación fina de trastornos laríngeos con señales cortas.",
+      "idea": "Tres etapas clínicas jerárquicas y revisión por incertidumbre.",
+      "why": "Conecta ingeniería de señales con apoyo clínico.",
+      "interpretability": "21 características acústicas interpretables.",
+      "dataset_cards": [
+        {
+          "name": "Saarbrücken",
+          "value": "15.132 grabaciones",
+          "detail": "1.261 hablantes"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Etapas",
+          "main": "3",
+          "sub": "Cribado, grupos y subtipos"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Grabaciones",
+          "15.132",
+          "Vocales sostenidas"
+        ],
+        [
+          "Métricas exactas",
+          "No confirmadas",
+          "Consultar tablas completas"
+        ]
+      ],
+      "implementation": [
+        "Partición por hablante",
+        "Validación externa"
+      ],
+      "figures": []
+    }
+  },
+  {
+    "date": "2026-11-06",
+    "reviewed": "06 noviembre 2026",
+    "published": "05 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-78124-x",
+    "code": "No confirmado",
+    "figures": [],
+    "language": "Inglés",
+    "title": "Multimodal deep learning with clinical metadata for skin lesion classification",
+    "title_es": "Aprendizaje profundo multimodal con metadatos clínicos para clasificar lesiones cutáneas",
+    "doi": "10.1038/s41598-026-78124-x",
+    "country": "China (cohorte institucional) e internacionales (datasets públicos)",
+    "institution": "Peking University Shenzhen Hospital y colaboradores",
+    "sample": "PAD-UFES-20: 2.298 imágenes; ISIC 2019: 25.331; PKU-Skin: 800 imágenes de 643 pacientes",
+    "design": "Estudio diagnóstico retrospectivo con entrenamiento y evaluación separados por dataset; fusión de imágenes y metadatos clínicos",
+    "model": "Modelo multimodal de aprendizaje profundo con integración de imágenes y variables estructuradas; capas exactas no confirmadas",
+    "metrics": "Balanced accuracy PAD 85,6% vs 75,1% basal; ISIC 86,0%; PKU 99,6% (tarea binaria distinta)",
+    "limitations": "PKU-Skin no es validación externa del mismo modelo fijo: tarea y entrenamiento específicos; falta evaluación prospectiva.",
+    "hardware": "Imágenes clínicas y dermatoscópicas; cámaras y GPU no reportadas.",
+    "framework": "Deep learning multimodal; versiones no confirmadas.",
+    "cost": "No reportado",
+    "modality": "Fotografía/dermatoscopia + metadatos",
+    "rubro": "Dermatología",
+    "area": "Clasificación multimodal",
+    "key_metric": "85,6% BACC",
+    "summary": "Comparación de clasificación multimodal en tres datasets con tareas diferentes.",
+    "remember": "No confundir evaluación por dataset con validación externa de un mismo modelo.",
+    "rich": {
+      "problem": "Combinar contexto clínico con apariencia visual.",
+      "idea": "Fusionar imágenes y datos estructurados.",
+      "why": "Demuestra utilidad y límites de la información multimodal.",
+      "interpretability": "No se confirmó explicación causal de la fusión.",
+      "dataset_cards": [
+        {
+          "name": "PAD-UFES-20",
+          "value": "2.298 imágenes",
+          "detail": "6 clases; 21 variables"
+        },
+        {
+          "name": "ISIC 2019",
+          "value": "25.331 imágenes",
+          "detail": "8 categorías"
+        },
+        {
+          "name": "PKU-Skin",
+          "value": "800 imágenes",
+          "detail": "643 pacientes; clasificación binaria"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "PAD BACC",
+          "main": "85,6%",
+          "sub": "Basal 75,1%"
+        },
+        {
+          "label": "ISIC BACC",
+          "main": "86,0%",
+          "sub": "Evaluación separada"
+        }
+      ],
+      "metrics_table": [
+        [
+          "PAD-UFES-20 BACC",
+          "85,6%",
+          "6 clases"
+        ],
+        [
+          "ISIC BACC",
+          "86,0%",
+          "8 categorías"
+        ],
+        [
+          "PKU BACC",
+          "99,6%",
+          "Tarea binaria distinta"
+        ]
+      ],
+      "implementation": [
+        "Evitar presentar PKU como validación externa fija",
+        "Validar por paciente"
+      ],
+      "figures": []
+    }
+  },
+  {
+    "date": "2026-11-06",
+    "reviewed": "06 noviembre 2026",
+    "published": "05 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "npj Digital Medicine · 2026",
+    "paper": "https://doi.org/10.1038/s41746-026-03447-y",
+    "code": "No confirmado",
+    "figures": [],
+    "language": "Inglés",
+    "title": "Collaborative generalist-specialist AI for safe worklist deprioritization of non-contrast brain computed tomography",
+    "title_es": "IA colaborativa generalista-especialista para reducir de forma segura la prioridad de TC cerebrales sin contraste",
+    "doi": "10.1038/s41746-026-03447-y",
+    "country": "Corea del Sur",
+    "institution": "University of Ulsan College of Medicine, Asan Medical Center, Gangneung Asan Hospital y Jeju Halla General Hospital",
+    "sample": "2.001 TC cerebrales sin contraste en validación externa multicéntrica; 324 exámenes con hallazgos relevantes",
+    "design": "Validación retrospectiva multicéntrica en urgencias y trauma; umbral fijado previamente; ninguna TC se excluye de lectura radiológica",
+    "model": "BrainCT-CLIP generalista de visión-lenguaje + detectores comerciales especializados; criterio positivo si cualquiera alerta",
+    "metrics": "Sensibilidad 100% y VPN 100% en 2.001 exámenes; 368/2.001 (18%; IC95% 17–20) relegados; detectores solos relegaron 31/324 casos relevantes",
+    "limitations": "Retrospectivo, un país, sin población pediátrica; sensibilidad 100% en muestra finita no garantiza cero errores futuros.",
+    "hardware": "Tomógrafos cerebrales NCCT y flujo PACS/radiología; GPU no reportada.",
+    "framework": "BrainCT-CLIP y detectores comerciales Coreline Soft/JLK; versiones no confirmadas.",
+    "cost": "No reportado",
+    "modality": "Tomografía cerebral sin contraste",
+    "rubro": "Radiología",
+    "area": "Priorización de listas de trabajo",
+    "key_metric": "100% sensibilidad; 18% relegados",
+    "summary": "Un modelo generalista combinado con detectores específicos recuperó hallazgos relevantes omitidos por sistemas especializados.",
+    "remember": "La despriorización no significa omitir la lectura radiológica.",
+    "rich": {
+      "problem": "Relegar estudios de bajo riesgo sin perder hallazgos relevantes.",
+      "idea": "Combinar alertas de IA generalista y especializada.",
+      "why": "Evalúa un resultado operativo de seguridad.",
+      "interpretability": "Sistema CLIP y reglas explícitas de combinación; la atribución no sustituye revisión.",
+      "dataset_cards": [
+        {
+          "name": "Validación externa",
+          "value": "2.001 TC",
+          "detail": "324 con hallazgos relevantes"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Sensibilidad",
+          "main": "100%",
+          "sub": "Cohorte retrospectiva"
+        },
+        {
+          "label": "Despriorización",
+          "main": "18%",
+          "sub": "368 estudios"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Sensibilidad",
+          "100%",
+          "Validación externa"
+        ],
+        [
+          "VPN",
+          "100%",
+          "Validación externa"
+        ],
+        [
+          "Despriorizados",
+          "368/2.001",
+          "18%; IC95% 17–20"
+        ]
+      ],
+      "implementation": [
+        "No retirar estudios de la lectura",
+        "Monitorizar errores y cambios de distribución"
+      ],
+      "figures": []
+    }
+  },
+  {
+    "date": "2026-11-06",
+    "reviewed": "06 noviembre 2026",
+    "published": "05 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-77853-3",
+    "code": "No confirmado",
+    "figures": [],
+    "language": "Inglés",
+    "title": "An accuracy and calibration benchmark of scGPT pipelines and matched classical models for cell type annotation",
+    "title_es": "Benchmark de exactitud y calibración de scGPT frente a modelos clásicos para anotación de tipos celulares",
+    "doi": "10.1038/s41598-026-77853-3",
+    "country": "Polonia",
+    "institution": "Medical University of Gdańsk y colaboradores",
+    "sample": "965.427 células de 312 donantes; cinco particiones con donantes excluidos de entrenamiento",
+    "design": "Comparación de embeddings congelados scGPT 0.2.5 y expresión génica; regresión logística, Random Forest, XGBoost; SVD-512 y calibración",
+    "model": "scGPT 0.2.5 embeddings congelados; clasificadores LR, RF y XGBoost frente a expresión original y SVD-512",
+    "metrics": "En PBMC con etiquetas escasas, macro-F1 expresión 0,818–0,930 vs scGPT 0,779–0,881; ECE media 0,0072 a 0,0057 con temperature scaling",
+    "limitations": "No evalúa fine-tuning oficial, checkpoints nuevos ni transferencia entre cohortes; diferencias dependen del atlas.",
+    "hardware": "GPU de nube RunPod; modelo y costo exactos no reportados.",
+    "framework": "scGPT 0.2.5, LR, Random Forest, XGBoost y SVD-512.",
+    "cost": "No reportado; recursos GPU RunPod reconocidos.",
+    "modality": "Transcriptómica unicelular scRNA-seq",
+    "rubro": "Bioinformática",
+    "area": "Modelos fundacionales celulares",
+    "key_metric": "965.427 células",
+    "summary": "Benchmark controlado que muestra cuándo la expresión génica clásica supera embeddings de un modelo fundacional.",
+    "remember": "Un foundation model no supera automáticamente modelos simples bien ajustados.",
+    "rich": {
+      "problem": "Evaluar valor real de embeddings scGPT con comparadores justos.",
+      "idea": "Separar donantes y comparar clasificadores idénticos.",
+      "why": "Evita atribuir mejoras al preentrenamiento sin control adecuado.",
+      "interpretability": "Comparación por atlas y errores de clases raras.",
+      "dataset_cards": [
+        {
+          "name": "Atlas unicelulares",
+          "value": "965.427 células",
+          "detail": "312 donantes"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Macro-F1 PBMC expresión",
+          "main": "0,818–0,930",
+          "sub": "Etiquetas escasas"
+        },
+        {
+          "label": "Macro-F1 scGPT",
+          "main": "0,779–0,881",
+          "sub": "Mismo contexto"
+        }
+      ],
+      "metrics_table": [
+        [
+          "PBMC expresión Macro-F1",
+          "0,818–0,930",
+          "Etiquetas escasas"
+        ],
+        [
+          "PBMC scGPT Macro-F1",
+          "0,779–0,881",
+          "Embeddings congelados"
+        ],
+        [
+          "ECE",
+          "0,0072 → 0,0057",
+          "Escalado de temperatura"
+        ]
+      ],
+      "implementation": [
+        "Separar por donante",
+        "Evaluar calibración",
+        "Comparar modelos clásicos"
+      ],
+      "figures": []
+    }
+  },
+  {
     "date": "2026-11-05",
     "reviewed": "05 noviembre 2026",
     "rich_detail": true,
