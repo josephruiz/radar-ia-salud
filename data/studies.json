@@ -2,6 +2,77 @@
   {
     "date": "2026-11-07",
     "reviewed": "07 noviembre 2026",
+    "published": "05 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Nature Communications · 2026",
+    "paper": "https://doi.org/10.1038/s41467-026-79287-x",
+    "code": "https://github.com/biomed-AI/DeltaCata",
+    "figures": [],
+    "language": "Inglés",
+    "title": "Effective enzyme engineering through modeling kinetic parameter changes upon mutations with geometric deep learning",
+    "title_es": "Ingeniería de enzimas mediante predicción de cambios cinéticos por mutaciones con aprendizaje profundo geométrico",
+    "doi": "10.1038/s41467-026-79287-x",
+    "country": "China",
+    "institution": "Sun Yat-sen University; National Supercomputing Center in Shenzhen",
+    "sample": "Conjunto de pares de enzimas silvestres y mutantes con parámetros cinéticos medidos en condiciones equivalentes; tamaño exacto no confirmado en resumen editorial",
+    "design": "Extracción semiautomática de datos con modelos de lenguaje y verificación manual; predicción de cambios Δkcat y ΔKm; validación con mutagénesis y ensayo in vitro",
+    "model": "DeltaCata, red neuronal siamesa de grafos geométricos para estructuras de proteínas",
+    "metrics": "Hasta 7,0 veces mayor eficiencia catalítica de metiltransferasa sGmOMT2 en síntesis in vitro de icaritina; cifras de error predictivo no confirmadas",
+    "limitations": "Validación de ingeniería enzimática, no evaluación clínica; resultados no extrapolables a otras enzimas sin comprobación",
+    "hardware": "Equipamiento de ensayo enzimático y supercomputación; GPU exacta no confirmada",
+    "framework": "Python; código y checkpoints https://github.com/biomed-AI/DeltaCata",
+    "cost": "No reportado",
+    "modality": "Estructuras de proteínas y cinética enzimática",
+    "rubro": "Bioingeniería e IA",
+    "area": "Ingeniería de proteínas",
+    "key_metric": "7,0× eficiencia catalítica",
+    "summary": "DeltaCata predice cambios en parámetros cinéticos tras mutaciones mediante una red siamesa de grafos; validación experimental in vitro de mejora catalítica.",
+    "rich": {
+      "overview": "Predicción de mutaciones útiles para ingeniería enzimática",
+      "methodology": "Pares silvestre-mutante verificados; entrenamiento geométrico y ensayo experimental",
+      "architecture": "Siamese geometric graph neural network",
+      "limitations": [
+        "Estudio de ingeniería enzimática, no clínico",
+        "No se verificó el número de muestras en resumen editorial"
+      ],
+      "dataset_cards": [
+        {
+          "label": "Datos",
+          "main": "Pares enzima mutante/silvestre",
+          "sub": "Cinética comparable"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Validación in vitro",
+          "main": "Hasta 7,0×",
+          "sub": "Eficiencia catalítica sGmOMT2"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Eficiencia catalítica",
+          "7,0×",
+          "Máximo observado in vitro"
+        ]
+      ],
+      "implementation": [
+        "Python y código abierto",
+        "Supercomputación; GPU no detallada",
+        "Costos no reportados"
+      ],
+      "figures": [],
+      "sources": [
+        "https://www.nature.com/articles/s41467-026-79287-x",
+        "https://github.com/biomed-AI/DeltaCata"
+      ]
+    }
+  },
+  {
+    "date": "2026-11-07",
+    "reviewed": "07 noviembre 2026",
     "published": "06 noviembre 2026",
     "rich_detail": true,
     "flag": "🌐",
@@ -347,7 +418,7 @@
   {
     "date": "2026-11-07",
     "reviewed": "07 noviembre 2026",
-    "published": "06 noviembre 2026",
+    "published": "05 noviembre 2026",
     "rich_detail": true,
     "flag": "🌐",
     "countryFlags": "🌐",
@@ -410,75 +481,6 @@
       "figures": [],
       "sources": [
         "https://www.nature.com/articles/s41598-026-78624-w"
-      ]
-    }
-  },
-  {
-    "date": "2026-11-07",
-    "reviewed": "07 noviembre 2026",
-    "published": "06 noviembre 2026",
-    "rich_detail": true,
-    "flag": "🌐",
-    "countryFlags": "🌐",
-    "journal": "Scientific Reports · 2026",
-    "paper": "https://doi.org/10.1038/s41598-026-79158-x",
-    "code": "No confirmado",
-    "figures": [],
-    "language": "Inglés",
-    "title": "NCOA1 and PRPS1 as novel metabolism-related biomarkers in myocardial ischemia–reperfusion injury",
-    "title_es": "NCOA1 y PRPS1 como biomarcadores metabólicos candidatos de lesión por isquemia-reperfusión miocárdica",
-    "doi": "10.1038/s41598-026-79158-x",
-    "country": "China",
-    "institution": "Equipo de Tong Liu, Jiajie Kong y Lei Liu; institución específica pendiente de verificación",
-    "sample": "Datos de expresión génica y análisis de biomarcadores; tamaño exacto no confirmado en el resumen accesible",
-    "design": "Investigación exploratoria de biomarcadores relacionados con metabolismo mitocondrial en lesión por isquemia-reperfusión",
-    "model": "Análisis bioinformático; arquitectura de aprendizaje automático no confirmada",
-    "metrics": "Se proponen NCOA1 y PRPS1 como candidatos; AUC y validación numérica no verificadas",
-    "limitations": "Sin cifras metodológicas completas verificadas; biomarcadores exploratorios, no prueba diagnóstica validada",
-    "hardware": "Ensayos moleculares y bioinformática; equipamiento exacto no confirmado",
-    "framework": "Bioinformática; paquetes no confirmados",
-    "cost": "No reportado",
-    "modality": "Expresión génica",
-    "rubro": "Ingeniería biomédica e IA en salud",
-    "area": "Cardiología molecular",
-    "key_metric": "Métricas no confirmadas",
-    "summary": "NCOA1 y PRPS1 como biomarcadores metabólicos candidatos de lesión por isquemia-reperfusión miocárdica. Se proponen NCOA1 y PRPS1 como candidatos; AUC y validación numérica no verificadas",
-    "rich": {
-      "overview": "NCOA1 y PRPS1 como biomarcadores metabólicos candidatos de lesión por isquemia-reperfusión miocárdica",
-      "methodology": "Investigación exploratoria de biomarcadores relacionados con metabolismo mitocondrial en lesión por isquemia-reperfusión",
-      "architecture": "Análisis bioinformático; arquitectura de aprendizaje automático no confirmada",
-      "limitations": [
-        "Sin cifras metodológicas completas verificadas; biomarcadores exploratorios, no prueba diagnóstica validada"
-      ],
-      "dataset_cards": [
-        {
-          "label": "Muestra",
-          "main": "Datos de expresión génica y análisis de biomarcadores; tamaño exacto no confirmado en el resumen accesible",
-          "sub": "China"
-        }
-      ],
-      "result_cards": [
-        {
-          "label": "Resultado principal",
-          "main": "Métricas no confirmadas",
-          "sub": "Se proponen NCOA1 y PRPS1 como candidatos; AUC y validación numérica no verificadas"
-        }
-      ],
-      "metrics_table": [
-        [
-          "Resultado",
-          "Métricas no confirmadas",
-          "Se proponen NCOA1 y PRPS1 como candidatos; AUC y validación numérica no verificadas"
-        ]
-      ],
-      "implementation": [
-        "Ensayos moleculares y bioinformática; equipamiento exacto no confirmado",
-        "Bioinformática; paquetes no confirmados",
-        "Costos: No reportado"
-      ],
-      "figures": [],
-      "sources": [
-        "https://www.nature.com/articles/s41598-026-79158-x"
       ]
     }
   },
