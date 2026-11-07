@@ -1,5 +1,488 @@
 [
   {
+    "date": "2026-11-07",
+    "reviewed": "07 noviembre 2026",
+    "published": "06 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Nature Medicine · 2026",
+    "paper": "https://doi.org/10.1038/s41591-026-04724-9",
+    "code": "No confirmado",
+    "figures": [],
+    "language": "Inglés",
+    "title": "A gait foundation model for prediction of multisystem health phenotypes from 3D skeletal motion",
+    "title_es": "Modelo fundacional de marcha para predecir fenotipos de salud multisistémicos a partir del movimiento esquelético 3D",
+    "doi": "10.1038/s41591-026-04724-9",
+    "country": "Israel",
+    "institution": "Weizmann Institute of Science; Newton VR Ltd.; Mohamed bin Zayed University of Artificial Intelligence",
+    "sample": "3.328 adultos fenotipados; cinco tareas motoras; 3.210 fenotipos evaluados",
+    "design": "Captura 3D con una cámara de profundidad; embeddings aprendidos del movimiento articular comparados con características de marcha diseñadas manualmente",
+    "model": "Modelo fundacional de secuencias de movimiento esquelético tridimensional; detalles de capas no confirmados",
+    "metrics": "r de Pearson 0,69 para edad, 0,91 para IMC y 0,83 para área de grasa visceral; asociación significativa con 1.887/3.210 fenotipos",
+    "limitations": "Estudio observacional; asociaciones no equivalen a causalidad ni a validación prospectiva de diagnóstico; potencial sesgo de selección",
+    "hardware": "Cámara única de profundidad; sistema Movement Lab de Newton VR",
+    "framework": "Modelo de embeddings de movimiento; librerías y GPU no confirmadas",
+    "cost": "No reportado",
+    "modality": "Movimiento esquelético 3D",
+    "rubro": "Ingeniería biomédica e IA en salud",
+    "area": "Biomecánica y salud digital",
+    "key_metric": "1.887 fenotipos asociados",
+    "summary": "Modelo fundacional de marcha para predecir fenotipos de salud multisistémicos a partir del movimiento esquelético 3D. r de Pearson 0,69 para edad, 0,91 para IMC y 0,83 para área de grasa visceral; asociación significativa con 1.887/3.210 fenotipos",
+    "rich": {
+      "overview": "Modelo fundacional de marcha para predecir fenotipos de salud multisistémicos a partir del movimiento esquelético 3D",
+      "methodology": "Captura 3D con una cámara de profundidad; embeddings aprendidos del movimiento articular comparados con características de marcha diseñadas manualmente",
+      "architecture": "Modelo fundacional de secuencias de movimiento esquelético tridimensional; detalles de capas no confirmados",
+      "limitations": [
+        "Estudio observacional; asociaciones no equivalen a causalidad ni a validación prospectiva de diagnóstico; potencial sesgo de selección"
+      ],
+      "dataset_cards": [
+        {
+          "label": "Muestra",
+          "main": "3.328 adultos fenotipados; cinco tareas motoras; 3.210 fenotipos evaluados",
+          "sub": "Israel"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado principal",
+          "main": "1.887 fenotipos asociados",
+          "sub": "r de Pearson 0,69 para edad, 0,91 para IMC y 0,83 para área de grasa visceral; asociación significativa con 1.887/3.210 fenotipos"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Resultado",
+          "1.887 fenotipos asociados",
+          "r de Pearson 0,69 para edad, 0,91 para IMC y 0,83 para área de grasa visceral; asociación significativa con 1.887/3.210 fenotipos"
+        ]
+      ],
+      "implementation": [
+        "Cámara única de profundidad; sistema Movement Lab de Newton VR",
+        "Modelo de embeddings de movimiento; librerías y GPU no confirmadas",
+        "Costos: No reportado"
+      ],
+      "figures": [],
+      "sources": [
+        "https://www.nature.com/articles/s41591-026-04724-9"
+      ]
+    }
+  },
+  {
+    "date": "2026-11-07",
+    "reviewed": "07 noviembre 2026",
+    "published": "06 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-77773-2",
+    "code": "https://github.com/SusuNeu/GenderBias_AD",
+    "figures": [],
+    "language": "Inglés",
+    "title": "Sex and gender bias in the diagnosis of Alzheimer’s disease",
+    "title_es": "Sesgos relacionados con sexo y género en la clasificación de la enfermedad de Alzheimer",
+    "doi": "10.1038/s41598-026-77773-2",
+    "country": "Alemania",
+    "institution": "Equipo de Susanne Neufang, Atae Akhrif y Oya D. Beyan; datos ADNI",
+    "sample": "757 participantes ADNI: 600 con deterioro cognitivo leve y 157 con Alzheimer",
+    "design": "Comparación de cuatro clasificadores y métodos de mitigación de sesgo; variables demográficas, genéticas, cognitivas y volumetría RM; explicabilidad SHAP/LIME",
+    "model": "Regresión logística, SVM, Random Forest, XGBoost; IBM AI Fairness 360 y Disparate Impact Remover",
+    "metrics": "Exactitud balanceada de regresión logística 85,16% a 88,08% tras mitigación; diferencia equalized odds −0,036 a −0,003",
+    "limitations": "No incluye controles cognitivamente normales; análisis transversal; mitigación estadística no demuestra equidad clínica en nuevos hospitales",
+    "hardware": "Resonancia magnética para volumetría cerebral; hardware computacional no reportado",
+    "framework": "IBM AI Fairness 360, SHAP, LIME; código https://github.com/SusuNeu/GenderBias_AD",
+    "cost": "No reportado",
+    "modality": "RM y datos clínicos",
+    "rubro": "Ingeniería biomédica e IA en salud",
+    "area": "Neurodegeneración y equidad algorítmica",
+    "key_metric": "88,08% exactitud balanceada",
+    "summary": "Sesgos relacionados con sexo y género en la clasificación de la enfermedad de Alzheimer. Exactitud balanceada de regresión logística 85,16% a 88,08% tras mitigación; diferencia equalized odds −0,036 a −0,003",
+    "rich": {
+      "overview": "Sesgos relacionados con sexo y género en la clasificación de la enfermedad de Alzheimer",
+      "methodology": "Comparación de cuatro clasificadores y métodos de mitigación de sesgo; variables demográficas, genéticas, cognitivas y volumetría RM; explicabilidad SHAP/LIME",
+      "architecture": "Regresión logística, SVM, Random Forest, XGBoost; IBM AI Fairness 360 y Disparate Impact Remover",
+      "limitations": [
+        "No incluye controles cognitivamente normales; análisis transversal; mitigación estadística no demuestra equidad clínica en nuevos hospitales"
+      ],
+      "dataset_cards": [
+        {
+          "label": "Muestra",
+          "main": "757 participantes ADNI: 600 con deterioro cognitivo leve y 157 con Alzheimer",
+          "sub": "Alemania"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado principal",
+          "main": "88,08% exactitud balanceada",
+          "sub": "Exactitud balanceada de regresión logística 85,16% a 88,08% tras mitigación; diferencia equalized odds −0,036 a −0,003"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Resultado",
+          "88,08% exactitud balanceada",
+          "Exactitud balanceada de regresión logística 85,16% a 88,08% tras mitigación; diferencia equalized odds −0,036 a −0,003"
+        ]
+      ],
+      "implementation": [
+        "Resonancia magnética para volumetría cerebral; hardware computacional no reportado",
+        "IBM AI Fairness 360, SHAP, LIME; código https://github.com/SusuNeu/GenderBias_AD",
+        "Costos: No reportado"
+      ],
+      "figures": [],
+      "sources": [
+        "https://www.nature.com/articles/s41598-026-77773-2"
+      ]
+    }
+  },
+  {
+    "date": "2026-11-07",
+    "reviewed": "07 noviembre 2026",
+    "published": "06 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-77205-1",
+    "code": "No confirmado",
+    "figures": [],
+    "language": "Inglés",
+    "title": "Artificial intelligence-driven computed tomography analysis of upper airway morphology in patients undergoing multilevel sleep surgery",
+    "title_es": "Análisis de morfología de vía aérea superior mediante IA y tomografía en cirugía multinivel del sueño",
+    "doi": "10.1038/s41598-026-77205-1",
+    "country": "Corea del Sur",
+    "institution": "Yonsei University College of Medicine; Yongin Severance Hospital; Chung-Ang University",
+    "sample": "25 adultos con apnea obstructiva del sueño moderada-grave; 18 respondedores (72%)",
+    "design": "Análisis post hoc de cohorte prospectiva; segmentación TC antes/después de cirugía y 13 parámetros morfológicos; respuesta AHI posoperatorio <15/h",
+    "model": "Pipeline previo de segmentación mediante deep learning; arquitectura específica no confirmada",
+    "metrics": "Dice medio 0,868 ± 0,034; 8/13 parámetros cambiaron; ningún parámetro preoperatorio predijo respuesta (p>0,05)",
+    "limitations": "Muestra pequeña; exploratorio; la segmentación anatómica no debe confundirse con predicción de éxito quirúrgico",
+    "hardware": "Tomografía computarizada pre y posoperatoria; GPU no especificada",
+    "framework": "Segmentación de TC por aprendizaje profundo y análisis estadístico",
+    "cost": "No reportado",
+    "modality": "TC de vía aérea",
+    "rubro": "Ingeniería biomédica e IA en salud",
+    "area": "Otorrinolaringología",
+    "key_metric": "Dice 0,868",
+    "summary": "Análisis de morfología de vía aérea superior mediante IA y tomografía en cirugía multinivel del sueño. Dice medio 0,868 ± 0,034; 8/13 parámetros cambiaron; ningún parámetro preoperatorio predijo respuesta (p>0,05)",
+    "rich": {
+      "overview": "Análisis de morfología de vía aérea superior mediante IA y tomografía en cirugía multinivel del sueño",
+      "methodology": "Análisis post hoc de cohorte prospectiva; segmentación TC antes/después de cirugía y 13 parámetros morfológicos; respuesta AHI posoperatorio <15/h",
+      "architecture": "Pipeline previo de segmentación mediante deep learning; arquitectura específica no confirmada",
+      "limitations": [
+        "Muestra pequeña; exploratorio; la segmentación anatómica no debe confundirse con predicción de éxito quirúrgico"
+      ],
+      "dataset_cards": [
+        {
+          "label": "Muestra",
+          "main": "25 adultos con apnea obstructiva del sueño moderada-grave; 18 respondedores (72%)",
+          "sub": "Corea del Sur"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado principal",
+          "main": "Dice 0,868",
+          "sub": "Dice medio 0,868 ± 0,034; 8/13 parámetros cambiaron; ningún parámetro preoperatorio predijo respuesta (p>0,05)"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Resultado",
+          "Dice 0,868",
+          "Dice medio 0,868 ± 0,034; 8/13 parámetros cambiaron; ningún parámetro preoperatorio predijo respuesta (p>0,05)"
+        ]
+      ],
+      "implementation": [
+        "Tomografía computarizada pre y posoperatoria; GPU no especificada",
+        "Segmentación de TC por aprendizaje profundo y análisis estadístico",
+        "Costos: No reportado"
+      ],
+      "figures": [],
+      "sources": [
+        "https://www.nature.com/articles/s41598-026-77205-1"
+      ]
+    }
+  },
+  {
+    "date": "2026-11-07",
+    "reviewed": "07 noviembre 2026",
+    "published": "06 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-79589-6",
+    "code": "No confirmado",
+    "figures": [],
+    "language": "Inglés",
+    "title": "Plasmonic biosensors based on X-shaped resonators for cancer cell detection with machine learning-driven transmittance prediction",
+    "title_es": "Biosensores plasmónicos con resonadores en X y predicción de transmitancia mediante aprendizaje automático",
+    "doi": "10.1038/s41598-026-79589-6",
+    "country": "No confirmado",
+    "institution": "Shiva Khani y Mohammad Rahmanimanesh; afiliación geográfica pendiente de corroboración",
+    "sample": "Cinco diseños simulados de biosensores MIM con 1 a 5 resonadores X; sin cohorte clínica",
+    "design": "Simulación de transmisión óptica y cambios de índice de refracción; comparación FDTD con regresión de árboles extremadamente aleatorizados",
+    "model": "Extreme Randomized Tree Regression y simulación electromagnética FDTD",
+    "metrics": "Figura de mérito 5,82 a 80,76; reducción de tiempo computacional cercana al 90% respecto a FDTD",
+    "limitations": "Simulación de dispositivo, no validación clínica de detección de cáncer; ausencia de fabricación y costos experimentales verificados",
+    "hardware": "Guías metal-aislante-metal y resonadores X conceptuales; prototipo físico no confirmado",
+    "framework": "FDTD y regresión Extra Trees; software específico no reportado",
+    "cost": "No reportado",
+    "modality": "Simulación óptica",
+    "rubro": "Ingeniería biomédica e IA en salud",
+    "area": "Biosensores y fotónica biomédica",
+    "key_metric": "FoM 80,76",
+    "summary": "Biosensores plasmónicos con resonadores en X y predicción de transmitancia mediante aprendizaje automático. Figura de mérito 5,82 a 80,76; reducción de tiempo computacional cercana al 90% respecto a FDTD",
+    "rich": {
+      "overview": "Biosensores plasmónicos con resonadores en X y predicción de transmitancia mediante aprendizaje automático",
+      "methodology": "Simulación de transmisión óptica y cambios de índice de refracción; comparación FDTD con regresión de árboles extremadamente aleatorizados",
+      "architecture": "Extreme Randomized Tree Regression y simulación electromagnética FDTD",
+      "limitations": [
+        "Simulación de dispositivo, no validación clínica de detección de cáncer; ausencia de fabricación y costos experimentales verificados"
+      ],
+      "dataset_cards": [
+        {
+          "label": "Muestra",
+          "main": "Cinco diseños simulados de biosensores MIM con 1 a 5 resonadores X; sin cohorte clínica",
+          "sub": "No confirmado"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado principal",
+          "main": "FoM 80,76",
+          "sub": "Figura de mérito 5,82 a 80,76; reducción de tiempo computacional cercana al 90% respecto a FDTD"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Resultado",
+          "FoM 80,76",
+          "Figura de mérito 5,82 a 80,76; reducción de tiempo computacional cercana al 90% respecto a FDTD"
+        ]
+      ],
+      "implementation": [
+        "Guías metal-aislante-metal y resonadores X conceptuales; prototipo físico no confirmado",
+        "FDTD y regresión Extra Trees; software específico no reportado",
+        "Costos: No reportado"
+      ],
+      "figures": [],
+      "sources": [
+        "https://www.nature.com/articles/s41598-026-79589-6"
+      ]
+    }
+  },
+  {
+    "date": "2026-11-07",
+    "reviewed": "07 noviembre 2026",
+    "published": "06 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "npj Digital Medicine · 2026",
+    "paper": "https://doi.org/10.1038/s41746-026-03424-5",
+    "code": "https://github.com/DrNahianC/PainWaive-Evaluation-Paper",
+    "figures": [],
+    "language": "Inglés",
+    "title": "Evaluation of PainWaive: a consumer-grade EEG headset for remote EEG monitoring and neurofeedback research in chronic pain",
+    "title_es": "Evaluación de PainWaive, un EEG asequible para monitorización remota e investigación de neurofeedback",
+    "doi": "10.1038/s41746-026-03424-5",
+    "country": "Australia",
+    "institution": "University of New South Wales y colaboradores",
+    "sample": "80 voluntarios en validación instrumental; ocho participantes clínicos con dolor crónico y 160 sesiones domiciliarias",
+    "design": "Comparación de registros en reposo ojos abiertos/cerrados con EEG de investigación; repetibilidad, concordancia espectral y evaluación domiciliaria",
+    "model": "Análisis de potencia alfa, beta y theta y frecuencia alfa máxima; no se entrenó un modelo predictivo de IA",
+    "metrics": "ICC test-retest alfa/PAF 0,72–0,93; correlación de forma espectral r>0,91; ICC entre equipos alfa/PAF 0,53–0,74",
+    "limitations": "Estudio de instrumentación, no eficacia clínica de neurofeedback; intercambio numérico entre dispositivos no demostrado; cohorte clínica pequeña",
+    "hardware": "PainWaive EEG de dos canales; Brain Products LiveAmp EEG de investigación",
+    "framework": "MATLAB; código https://github.com/DrNahianC/PainWaive-Evaluation-Paper",
+    "cost": "Precio de dispositivo no reportado; algunos voluntarios recibieron compensación de AUD 50",
+    "modality": "Señales EEG",
+    "rubro": "Ingeniería biomédica e IA en salud",
+    "area": "Instrumentación EEG",
+    "key_metric": "ICC 0,72–0,93",
+    "summary": "Evaluación de PainWaive, un EEG asequible para monitorización remota e investigación de neurofeedback. ICC test-retest alfa/PAF 0,72–0,93; correlación de forma espectral r>0,91; ICC entre equipos alfa/PAF 0,53–0,74",
+    "rich": {
+      "overview": "Evaluación de PainWaive, un EEG asequible para monitorización remota e investigación de neurofeedback",
+      "methodology": "Comparación de registros en reposo ojos abiertos/cerrados con EEG de investigación; repetibilidad, concordancia espectral y evaluación domiciliaria",
+      "architecture": "Análisis de potencia alfa, beta y theta y frecuencia alfa máxima; no se entrenó un modelo predictivo de IA",
+      "limitations": [
+        "Estudio de instrumentación, no eficacia clínica de neurofeedback; intercambio numérico entre dispositivos no demostrado; cohorte clínica pequeña"
+      ],
+      "dataset_cards": [
+        {
+          "label": "Muestra",
+          "main": "80 voluntarios en validación instrumental; ocho participantes clínicos con dolor crónico y 160 sesiones domiciliarias",
+          "sub": "Australia"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado principal",
+          "main": "ICC 0,72–0,93",
+          "sub": "ICC test-retest alfa/PAF 0,72–0,93; correlación de forma espectral r>0,91; ICC entre equipos alfa/PAF 0,53–0,74"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Resultado",
+          "ICC 0,72–0,93",
+          "ICC test-retest alfa/PAF 0,72–0,93; correlación de forma espectral r>0,91; ICC entre equipos alfa/PAF 0,53–0,74"
+        ]
+      ],
+      "implementation": [
+        "PainWaive EEG de dos canales; Brain Products LiveAmp EEG de investigación",
+        "MATLAB; código https://github.com/DrNahianC/PainWaive-Evaluation-Paper",
+        "Costos: Precio de dispositivo no reportado; algunos voluntarios recibieron compensación de AUD 50"
+      ],
+      "figures": [],
+      "sources": [
+        "https://www.nature.com/articles/s41746-026-03424-5"
+      ]
+    }
+  },
+  {
+    "date": "2026-11-07",
+    "reviewed": "07 noviembre 2026",
+    "published": "06 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-78624-w",
+    "code": "https://doi.org/10.5281/zenodo.23331924",
+    "figures": [],
+    "language": "Inglés",
+    "title": "Deep learning-based pediatric colorectal polyp classification: evaluation of training strategies, robustness, and generalization",
+    "title_es": "Clasificación de pólipos colorrectales pediátricos con aprendizaje profundo: estrategias de entrenamiento y generalización",
+    "doi": "10.1038/s41598-026-78624-w",
+    "country": "India",
+    "institution": "Vellore Institute of Technology, Chennai",
+    "sample": "Datasets CP-CHILD-A y CP-CHILD-B; número de pacientes no confirmado en resumen; evaluación externa Kvasir y VIM-Polyp",
+    "design": "Transfer learning en dos fases, ablaciones con cinco semillas, análisis de duplicados y transferencia entre datasets",
+    "model": "ConvNeXt-Small y varias CNN preentrenadas",
+    "metrics": "CP-CHILD-A exactitud 98,88±0,54% a 99,77±0,16%; CP-CHILD-B 89,21±4,23% a 99,88±0,27% con protocolo de dos fases",
+    "limitations": "Cambio de dominio importante en Kvasir; VIM-Polyp es cohorte adulta solo de positivos; requiere validación pediátrica independiente por paciente",
+    "hardware": "Endoscopia/colonoscopia; GPU no reportada",
+    "framework": "Transfer learning CNN; código https://doi.org/10.5281/zenodo.23331924",
+    "cost": "No reportado",
+    "modality": "Imágenes endoscópicas",
+    "rubro": "Ingeniería biomédica e IA en salud",
+    "area": "Endoscopia pediátrica",
+    "key_metric": "99,77% CP-CHILD-A",
+    "summary": "Clasificación de pólipos colorrectales pediátricos con aprendizaje profundo: estrategias de entrenamiento y generalización. CP-CHILD-A exactitud 98,88±0,54% a 99,77±0,16%; CP-CHILD-B 89,21±4,23% a 99,88±0,27% con protocolo de dos fases",
+    "rich": {
+      "overview": "Clasificación de pólipos colorrectales pediátricos con aprendizaje profundo: estrategias de entrenamiento y generalización",
+      "methodology": "Transfer learning en dos fases, ablaciones con cinco semillas, análisis de duplicados y transferencia entre datasets",
+      "architecture": "ConvNeXt-Small y varias CNN preentrenadas",
+      "limitations": [
+        "Cambio de dominio importante en Kvasir; VIM-Polyp es cohorte adulta solo de positivos; requiere validación pediátrica independiente por paciente"
+      ],
+      "dataset_cards": [
+        {
+          "label": "Muestra",
+          "main": "Datasets CP-CHILD-A y CP-CHILD-B; número de pacientes no confirmado en resumen; evaluación externa Kvasir y VIM-Polyp",
+          "sub": "India"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado principal",
+          "main": "99,77% CP-CHILD-A",
+          "sub": "CP-CHILD-A exactitud 98,88±0,54% a 99,77±0,16%; CP-CHILD-B 89,21±4,23% a 99,88±0,27% con protocolo de dos fases"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Resultado",
+          "99,77% CP-CHILD-A",
+          "CP-CHILD-A exactitud 98,88±0,54% a 99,77±0,16%; CP-CHILD-B 89,21±4,23% a 99,88±0,27% con protocolo de dos fases"
+        ]
+      ],
+      "implementation": [
+        "Endoscopia/colonoscopia; GPU no reportada",
+        "Transfer learning CNN; código https://doi.org/10.5281/zenodo.23331924",
+        "Costos: No reportado"
+      ],
+      "figures": [],
+      "sources": [
+        "https://www.nature.com/articles/s41598-026-78624-w"
+      ]
+    }
+  },
+  {
+    "date": "2026-11-07",
+    "reviewed": "07 noviembre 2026",
+    "published": "06 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-79158-x",
+    "code": "No confirmado",
+    "figures": [],
+    "language": "Inglés",
+    "title": "NCOA1 and PRPS1 as novel metabolism-related biomarkers in myocardial ischemia–reperfusion injury",
+    "title_es": "NCOA1 y PRPS1 como biomarcadores metabólicos candidatos de lesión por isquemia-reperfusión miocárdica",
+    "doi": "10.1038/s41598-026-79158-x",
+    "country": "China",
+    "institution": "Equipo de Tong Liu, Jiajie Kong y Lei Liu; institución específica pendiente de verificación",
+    "sample": "Datos de expresión génica y análisis de biomarcadores; tamaño exacto no confirmado en el resumen accesible",
+    "design": "Investigación exploratoria de biomarcadores relacionados con metabolismo mitocondrial en lesión por isquemia-reperfusión",
+    "model": "Análisis bioinformático; arquitectura de aprendizaje automático no confirmada",
+    "metrics": "Se proponen NCOA1 y PRPS1 como candidatos; AUC y validación numérica no verificadas",
+    "limitations": "Sin cifras metodológicas completas verificadas; biomarcadores exploratorios, no prueba diagnóstica validada",
+    "hardware": "Ensayos moleculares y bioinformática; equipamiento exacto no confirmado",
+    "framework": "Bioinformática; paquetes no confirmados",
+    "cost": "No reportado",
+    "modality": "Expresión génica",
+    "rubro": "Ingeniería biomédica e IA en salud",
+    "area": "Cardiología molecular",
+    "key_metric": "Métricas no confirmadas",
+    "summary": "NCOA1 y PRPS1 como biomarcadores metabólicos candidatos de lesión por isquemia-reperfusión miocárdica. Se proponen NCOA1 y PRPS1 como candidatos; AUC y validación numérica no verificadas",
+    "rich": {
+      "overview": "NCOA1 y PRPS1 como biomarcadores metabólicos candidatos de lesión por isquemia-reperfusión miocárdica",
+      "methodology": "Investigación exploratoria de biomarcadores relacionados con metabolismo mitocondrial en lesión por isquemia-reperfusión",
+      "architecture": "Análisis bioinformático; arquitectura de aprendizaje automático no confirmada",
+      "limitations": [
+        "Sin cifras metodológicas completas verificadas; biomarcadores exploratorios, no prueba diagnóstica validada"
+      ],
+      "dataset_cards": [
+        {
+          "label": "Muestra",
+          "main": "Datos de expresión génica y análisis de biomarcadores; tamaño exacto no confirmado en el resumen accesible",
+          "sub": "China"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado principal",
+          "main": "Métricas no confirmadas",
+          "sub": "Se proponen NCOA1 y PRPS1 como candidatos; AUC y validación numérica no verificadas"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Resultado",
+          "Métricas no confirmadas",
+          "Se proponen NCOA1 y PRPS1 como candidatos; AUC y validación numérica no verificadas"
+        ]
+      ],
+      "implementation": [
+        "Ensayos moleculares y bioinformática; equipamiento exacto no confirmado",
+        "Bioinformática; paquetes no confirmados",
+        "Costos: No reportado"
+      ],
+      "figures": [],
+      "sources": [
+        "https://www.nature.com/articles/s41598-026-79158-x"
+      ]
+    }
+  },
+  {
     "date": "2026-11-06",
     "reviewed": "06 noviembre 2026",
     "published": "05 noviembre 2026",
