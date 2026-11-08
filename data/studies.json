@@ -1,5 +1,488 @@
 [
   {
+    "date": "2026-11-08",
+    "reviewed": "08 noviembre 2026",
+    "published": "07 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-78737-2",
+    "code": "",
+    "figures": [],
+    "language": "Inglés",
+    "title": "NeuroFusionNet: an integrated Swin Transformer and CNN–RNN framework",
+    "title_es": "NeuroFusionNet: arquitectura integrada Swin Transformer y CNN–RNN",
+    "doi": "10.1038/s41598-026-78737-2",
+    "country": "India",
+    "institution": "SR University, Warangal",
+    "sample": "BraTS 2023; número exacto de casos no confirmado en el resumen editorial",
+    "design": "Segmentación y clasificación de tumores cerebrales mediante RM multimodal; partición 80/10/10 de entrenamiento, validación y prueba",
+    "model": "Swin Transformer jerárquico combinado con CNN y RNN para información espacial y secuencial",
+    "metrics": "Exactitud 85,6%; F1 85%",
+    "limitations": "Sin validación clínica prospectiva ni validación externa independiente confirmada; tamaño de muestra no informado en resumen",
+    "hardware": "Imágenes RM; GPU y escáner no especificados",
+    "framework": "Swin Transformer, CNN, RNN; framework no especificado",
+    "cost": "No reportados",
+    "modality": "RM cerebral",
+    "rubro": "IA en salud e ingeniería biomédica",
+    "area": "Neurooncología",
+    "key_metric": "Exactitud 85,6%",
+    "summary": "NeuroFusionNet: arquitectura integrada Swin Transformer y CNN–RNN. Exactitud 85,6%; F1 85%. Limitación: Sin validación clínica prospectiva ni validación externa independiente confirmada; tamaño de muestra no informado en resumen",
+    "rich": {
+      "overview": "NeuroFusionNet: arquitectura integrada Swin Transformer y CNN–RNN",
+      "methodology": "Segmentación y clasificación de tumores cerebrales mediante RM multimodal; partición 80/10/10 de entrenamiento, validación y prueba",
+      "architecture": "Swin Transformer jerárquico combinado con CNN y RNN para información espacial y secuencial",
+      "limitations": [
+        "Sin validación clínica prospectiva ni validación externa independiente confirmada; tamaño de muestra no informado en resumen"
+      ],
+      "dataset_cards": [
+        {
+          "label": "Muestra",
+          "main": "BraTS 2023; número exacto de casos no confirmado en el resumen editorial",
+          "sub": "Fuente editorial original"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultados",
+          "main": "Exactitud 85,6%; F1 85%",
+          "sub": "Interpretar según validación descrita"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Resultados verificados",
+          "Exactitud 85,6%; F1 85%",
+          "No completar métricas ausentes"
+        ]
+      ],
+      "implementation": [
+        "Imágenes RM; GPU y escáner no especificados",
+        "Swin Transformer, CNN, RNN; framework no especificado",
+        "Costos: No reportados"
+      ],
+      "figures": [],
+      "sources": [
+        "https://www.nature.com/articles/s41598-026-78737-2"
+      ]
+    }
+  },
+  {
+    "date": "2026-11-08",
+    "reviewed": "08 noviembre 2026",
+    "published": "07 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-79334-z",
+    "code": "",
+    "figures": [],
+    "language": "Inglés",
+    "title": "Deep-learning surrogate modeling for rapid design of high-sensitivity terahertz metasurface sensors",
+    "title_es": "Modelado sustituto con aprendizaje profundo para diseñar rápidamente sensores de metasuperficie de terahercios",
+    "doi": "10.1038/s41598-026-79334-z",
+    "country": "No confirmado",
+    "institution": "Afiliaciones no confirmadas en resumen consultado",
+    "sample": "Diseños simulados de metasuperficies; cantidad no confirmada",
+    "design": "Modelado sustituto de simulaciones electromagnéticas para optimización de sensores sensibles al índice de refracción",
+    "model": "Modelo sustituto de aprendizaje profundo; configuración no confirmada",
+    "metrics": "Mejora del proceso de optimización descrita; métricas numéricas no confirmadas",
+    "limitations": "Validación por simulación; no hay pruebas clínicas ni demostración diagnóstica confirmada",
+    "hardware": "Metasuperficies THz conceptuales; instrumentación no confirmada",
+    "framework": "Simulación electromagnética y deep learning; versiones no informadas",
+    "cost": "No reportados",
+    "modality": "Biosensores THz",
+    "rubro": "IA en salud e ingeniería biomédica",
+    "area": "Ingeniería biomédica",
+    "key_metric": "Mejora del proceso de optimización descrita",
+    "summary": "Modelado sustituto con aprendizaje profundo para diseñar rápidamente sensores de metasuperficie de terahercios. Mejora del proceso de optimización descrita; métricas numéricas no confirmadas. Limitación: Validación por simulación; no hay pruebas clínicas ni demostración diagnóstica confirmada",
+    "rich": {
+      "overview": "Modelado sustituto con aprendizaje profundo para diseñar rápidamente sensores de metasuperficie de terahercios",
+      "methodology": "Modelado sustituto de simulaciones electromagnéticas para optimización de sensores sensibles al índice de refracción",
+      "architecture": "Modelo sustituto de aprendizaje profundo; configuración no confirmada",
+      "limitations": [
+        "Validación por simulación; no hay pruebas clínicas ni demostración diagnóstica confirmada"
+      ],
+      "dataset_cards": [
+        {
+          "label": "Muestra",
+          "main": "Diseños simulados de metasuperficies; cantidad no confirmada",
+          "sub": "Fuente editorial original"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultados",
+          "main": "Mejora del proceso de optimización descrita; métricas numéricas no confirmadas",
+          "sub": "Interpretar según validación descrita"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Resultados verificados",
+          "Mejora del proceso de optimización descrita; métricas numéricas no confirmadas",
+          "No completar métricas ausentes"
+        ]
+      ],
+      "implementation": [
+        "Metasuperficies THz conceptuales; instrumentación no confirmada",
+        "Simulación electromagnética y deep learning; versiones no informadas",
+        "Costos: No reportados"
+      ],
+      "figures": [],
+      "sources": [
+        "https://www.nature.com/articles/s41598-026-79334-z"
+      ]
+    }
+  },
+  {
+    "date": "2026-11-08",
+    "reviewed": "08 noviembre 2026",
+    "published": "07 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-68761-7",
+    "code": "",
+    "figures": [],
+    "language": "Inglés",
+    "title": "An optimized convolutional dense network for skin cancer detection in dermatological diagnostics",
+    "title_es": "Red convolucional densa optimizada para detectar cáncer de piel en diagnóstico dermatológico",
+    "doi": "10.1038/s41598-026-68761-7",
+    "country": "No confirmado",
+    "institution": "Afiliaciones de N. Raghava Rao y D. Vasumathi no confirmadas",
+    "sample": "Imágenes dermatológicas; número de pacientes e imágenes no confirmado",
+    "design": "Clasificación de imágenes dermatológicas y comparación con modelos de referencia",
+    "model": "Red convolucional densa optimizada; hiperparámetros no confirmados",
+    "metrics": "Métricas numéricas no verificadas en extracto editorial accesible",
+    "limitations": "Sin comprobación independiente de partición por paciente, calibración o validación externa",
+    "hardware": "Imágenes de piel; cámara y GPU no especificadas",
+    "framework": "CNN densa; framework no confirmado",
+    "cost": "No reportados",
+    "modality": "Dermatología",
+    "rubro": "IA en salud e ingeniería biomédica",
+    "area": "IA en imágenes",
+    "key_metric": "Métricas numéricas no verificadas en extracto editorial accesible",
+    "summary": "Red convolucional densa optimizada para detectar cáncer de piel en diagnóstico dermatológico. Métricas numéricas no verificadas en extracto editorial accesible. Limitación: Sin comprobación independiente de partición por paciente, calibración o validación externa",
+    "rich": {
+      "overview": "Red convolucional densa optimizada para detectar cáncer de piel en diagnóstico dermatológico",
+      "methodology": "Clasificación de imágenes dermatológicas y comparación con modelos de referencia",
+      "architecture": "Red convolucional densa optimizada; hiperparámetros no confirmados",
+      "limitations": [
+        "Sin comprobación independiente de partición por paciente, calibración o validación externa"
+      ],
+      "dataset_cards": [
+        {
+          "label": "Muestra",
+          "main": "Imágenes dermatológicas; número de pacientes e imágenes no confirmado",
+          "sub": "Fuente editorial original"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultados",
+          "main": "Métricas numéricas no verificadas en extracto editorial accesible",
+          "sub": "Interpretar según validación descrita"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Resultados verificados",
+          "Métricas numéricas no verificadas en extracto editorial accesible",
+          "No completar métricas ausentes"
+        ]
+      ],
+      "implementation": [
+        "Imágenes de piel; cámara y GPU no especificadas",
+        "CNN densa; framework no confirmado",
+        "Costos: No reportados"
+      ],
+      "figures": [],
+      "sources": [
+        "https://www.nature.com/articles/s41598-026-68761-7"
+      ]
+    }
+  },
+  {
+    "date": "2026-11-08",
+    "reviewed": "08 noviembre 2026",
+    "published": "07 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-79507-w",
+    "code": "",
+    "figures": [],
+    "language": "Inglés",
+    "title": "Enhanced labor activity recognition via wearable physiological signals: a comparative machine learning study",
+    "title_es": "Reconocimiento de actividad durante el trabajo de parto mediante señales fisiológicas portátiles",
+    "doi": "10.1038/s41598-026-79507-w",
+    "country": "No confirmado",
+    "institution": "Afiliaciones de L. Ali y colaboradores no confirmadas",
+    "sample": "Señales fisiológicas de dispositivos portátiles; número de participantes no confirmado",
+    "design": "Comparación de modelos de aprendizaje automático para reconocer actividad durante el trabajo de parto; el artículo menciona validación por muestra",
+    "model": "Modelos de ML comparativos; algoritmos específicos no confirmados",
+    "metrics": "No se confirmaron valores numéricos en el extracto editorial",
+    "limitations": "La validación por muestra puede sobrestimar generalización si existen registros correlacionados de una misma persona; validación externa no confirmada",
+    "hardware": "Sensores fisiológicos portátiles; modelos no confirmados",
+    "framework": "Machine learning; paquetes no confirmados",
+    "cost": "No reportados",
+    "modality": "Wearables obstétricos",
+    "rubro": "IA en salud e ingeniería biomédica",
+    "area": "Instrumentación biomédica",
+    "key_metric": "No se confirmaron valores numéricos en el extracto editorial",
+    "summary": "Reconocimiento de actividad durante el trabajo de parto mediante señales fisiológicas portátiles. No se confirmaron valores numéricos en el extracto editorial. Limitación: La validación por muestra puede sobrestimar generalización si existen registros correlacionados de una misma persona; validación externa no confirmada",
+    "rich": {
+      "overview": "Reconocimiento de actividad durante el trabajo de parto mediante señales fisiológicas portátiles",
+      "methodology": "Comparación de modelos de aprendizaje automático para reconocer actividad durante el trabajo de parto; el artículo menciona validación por muestra",
+      "architecture": "Modelos de ML comparativos; algoritmos específicos no confirmados",
+      "limitations": [
+        "La validación por muestra puede sobrestimar generalización si existen registros correlacionados de una misma persona; validación externa no confirmada"
+      ],
+      "dataset_cards": [
+        {
+          "label": "Muestra",
+          "main": "Señales fisiológicas de dispositivos portátiles; número de participantes no confirmado",
+          "sub": "Fuente editorial original"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultados",
+          "main": "No se confirmaron valores numéricos en el extracto editorial",
+          "sub": "Interpretar según validación descrita"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Resultados verificados",
+          "No se confirmaron valores numéricos en el extracto editorial",
+          "No completar métricas ausentes"
+        ]
+      ],
+      "implementation": [
+        "Sensores fisiológicos portátiles; modelos no confirmados",
+        "Machine learning; paquetes no confirmados",
+        "Costos: No reportados"
+      ],
+      "figures": [],
+      "sources": [
+        "https://www.nature.com/articles/s41598-026-79507-w"
+      ]
+    }
+  },
+  {
+    "date": "2026-11-08",
+    "reviewed": "08 noviembre 2026",
+    "published": "07 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-78247-1",
+    "code": "",
+    "figures": [],
+    "language": "Inglés",
+    "title": "MH-EABERT: an adaptive fusion approach with emotion knowledge-enhanced BERT for explainable mental health sentiment analysis from social media",
+    "title_es": "MH-EABERT: fusión adaptativa de BERT con conocimiento emocional para analizar textos de salud mental",
+    "doi": "10.1038/s41598-026-78247-1",
+    "country": "No confirmado",
+    "institution": "Afiliaciones de Sayedur Rahman y colaboradores no confirmadas",
+    "sample": "Corpus de publicaciones en redes sociales; tamaño no confirmado; léxico de 13.872 términos emocionales y 181 expresiones clínicas",
+    "design": "Análisis de sentimientos y patrones lingüísticos mediante cinco módulos y diez reglas clínicas",
+    "model": "BERT aumentado con léxico emocional, puntuación de conocimiento y fusión neuro-simbólica",
+    "metrics": "No se confirmaron métricas de clasificación numéricas en resumen editorial",
+    "limitations": "Textos de redes sociales no equivalen a diagnóstico clínico; riesgo de sesgos lingüísticos y de población",
+    "hardware": "Infraestructura NLP; GPU no especificada",
+    "framework": "BERT y reglas neuro-simbólicas",
+    "cost": "No reportados",
+    "modality": "Texto clínico/social",
+    "rubro": "IA en salud e ingeniería biomédica",
+    "area": "NLP salud",
+    "key_metric": "No se confirmaron métricas de clasificación numéricas en resumen editorial",
+    "summary": "MH-EABERT: fusión adaptativa de BERT con conocimiento emocional para analizar textos de salud mental. No se confirmaron métricas de clasificación numéricas en resumen editorial. Limitación: Textos de redes sociales no equivalen a diagnóstico clínico; riesgo de sesgos lingüísticos y de población",
+    "rich": {
+      "overview": "MH-EABERT: fusión adaptativa de BERT con conocimiento emocional para analizar textos de salud mental",
+      "methodology": "Análisis de sentimientos y patrones lingüísticos mediante cinco módulos y diez reglas clínicas",
+      "architecture": "BERT aumentado con léxico emocional, puntuación de conocimiento y fusión neuro-simbólica",
+      "limitations": [
+        "Textos de redes sociales no equivalen a diagnóstico clínico; riesgo de sesgos lingüísticos y de población"
+      ],
+      "dataset_cards": [
+        {
+          "label": "Muestra",
+          "main": "Corpus de publicaciones en redes sociales; tamaño no confirmado; léxico de 13.872 términos emocional",
+          "sub": "Fuente editorial original"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultados",
+          "main": "No se confirmaron métricas de clasificación numéricas en resumen editorial",
+          "sub": "Interpretar según validación descrita"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Resultados verificados",
+          "No se confirmaron métricas de clasificación numéricas en resumen editorial",
+          "No completar métricas ausentes"
+        ]
+      ],
+      "implementation": [
+        "Infraestructura NLP; GPU no especificada",
+        "BERT y reglas neuro-simbólicas",
+        "Costos: No reportados"
+      ],
+      "figures": [],
+      "sources": [
+        "https://www.nature.com/articles/s41598-026-78247-1"
+      ]
+    }
+  },
+  {
+    "date": "2026-11-08",
+    "reviewed": "08 noviembre 2026",
+    "published": "06 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-78761-2",
+    "code": "",
+    "figures": [],
+    "language": "Inglés",
+    "title": "Adaptive selection of MICE algorithm parameters for pulmonary function value prediction models",
+    "title_es": "Selección adaptativa de parámetros MICE para predicción de función pulmonar",
+    "doi": "10.1038/s41598-026-78761-2",
+    "country": "Corea del Sur y Estados Unidos",
+    "institution": "Daejeon University; California State University Long Beach",
+    "sample": "596 pacientes y 2.112 visitas; subcohorte controlada de 367 pacientes y 396 ventanas de predicción",
+    "design": "Comparación de doce métodos de imputación bajo mecanismos MCAR/MAR de 5%, 10% y 20%, cinco particiones separadas por paciente y 360 ejecuciones LSTM",
+    "model": "Imputación MICE con inicialización adaptativa y predictor latest-LSTM",
+    "metrics": "MICE con media fue mejor en cuatro condiciones, MICE adaptativo en una y LOCF en una; ninguna de 66 comparaciones pareadas siguió significativa tras corrección Holm",
+    "limitations": "La inicialización adaptativa no fue universalmente superior; cohorte específica y datos faltantes simulados",
+    "hardware": "Pruebas de función pulmonar; hardware de adquisición y GPU no confirmados",
+    "framework": "MICE, Random Forest, LSTM",
+    "cost": "No reportados",
+    "modality": "Función pulmonar",
+    "rubro": "IA en salud e ingeniería biomédica",
+    "area": "Predicción longitudinal",
+    "key_metric": "MICE con media fue mejor en cuatro condiciones, MICE adaptativo en una y LOCF en una",
+    "summary": "Selección adaptativa de parámetros MICE para predicción de función pulmonar. MICE con media fue mejor en cuatro condiciones, MICE adaptativo en una y LOCF en una; ninguna de 66 comparaciones pareadas siguió significativa tras corrección Holm. Limitación: La inicialización adaptativa no fue universalmente superior; cohorte específica y datos faltantes simulados",
+    "rich": {
+      "overview": "Selección adaptativa de parámetros MICE para predicción de función pulmonar",
+      "methodology": "Comparación de doce métodos de imputación bajo mecanismos MCAR/MAR de 5%, 10% y 20%, cinco particiones separadas por paciente y 360 ejecuciones LSTM",
+      "architecture": "Imputación MICE con inicialización adaptativa y predictor latest-LSTM",
+      "limitations": [
+        "La inicialización adaptativa no fue universalmente superior; cohorte específica y datos faltantes simulados"
+      ],
+      "dataset_cards": [
+        {
+          "label": "Muestra",
+          "main": "596 pacientes y 2.112 visitas; subcohorte controlada de 367 pacientes y 396 ventanas de predicción",
+          "sub": "Fuente editorial original"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultados",
+          "main": "MICE con media fue mejor en cuatro condiciones, MICE adaptativo en una y LOCF en una; ninguna de 66 compa",
+          "sub": "Interpretar según validación descrita"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Resultados verificados",
+          "MICE con media fue mejor en cuatro condiciones, MICE adaptativo en una y LOCF en una; ninguna de 66 comparaciones pareadas siguió significativa tras corrección Holm",
+          "No completar métricas ausentes"
+        ]
+      ],
+      "implementation": [
+        "Pruebas de función pulmonar; hardware de adquisición y GPU no confirmados",
+        "MICE, Random Forest, LSTM",
+        "Costos: No reportados"
+      ],
+      "figures": [],
+      "sources": [
+        "https://www.nature.com/articles/s41598-026-78761-2"
+      ]
+    }
+  },
+  {
+    "date": "2026-11-08",
+    "reviewed": "08 noviembre 2026",
+    "published": "07 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-80237-2",
+    "code": "",
+    "figures": [],
+    "language": "Inglés",
+    "title": "Predicting caregiver reported antibiotic administration among febrile children under five in Bangladesh using explainable machine learning",
+    "title_es": "Predicción del uso de antibióticos informado por cuidadores en niños febriles menores de cinco años mediante ML explicable",
+    "doi": "10.1038/s41598-026-80237-2",
+    "country": "Bangladés",
+    "institution": "Islamic University, Kushtia",
+    "sample": "2.540 niños de 0 a 59 meses con fiebre reciente, encuesta BDHS 2022",
+    "design": "Regresión logística ponderada, seis métodos de selección y siete clasificadores; validación con unidades primarias de muestreo separadas",
+    "model": "Regresión logística con conjunto consensuado de variables",
+    "metrics": "ROC-AUC desarrollo 0,676; holdout 0,561 (IC95% 0,480–0,649); precisión promedio holdout 0,144; pendiente de calibración 0,249",
+    "limitations": "Autorreporte, ausencia de confirmación clínica de indicación o prescripción; discriminación externa próxima al azar",
+    "hardware": "Datos de encuesta; hardware no aplicable",
+    "framework": "Regresión logística y modelos de ML tabulares",
+    "cost": "No reportados",
+    "modality": "Salud pública",
+    "rubro": "IA en salud e ingeniería biomédica",
+    "area": "Epidemiología",
+    "key_metric": "ROC-AUC desarrollo 0,676",
+    "summary": "Predicción del uso de antibióticos informado por cuidadores en niños febriles menores de cinco años mediante ML explicable. ROC-AUC desarrollo 0,676; holdout 0,561 (IC95% 0,480–0,649); precisión promedio holdout 0,144; pendiente de calibración 0,249. Limitación: Autorreporte, ausencia de confirmación clínica de indicación o prescripción; discriminación externa próxima al azar",
+    "rich": {
+      "overview": "Predicción del uso de antibióticos informado por cuidadores en niños febriles menores de cinco años mediante ML explicable",
+      "methodology": "Regresión logística ponderada, seis métodos de selección y siete clasificadores; validación con unidades primarias de muestreo separadas",
+      "architecture": "Regresión logística con conjunto consensuado de variables",
+      "limitations": [
+        "Autorreporte, ausencia de confirmación clínica de indicación o prescripción; discriminación externa próxima al azar"
+      ],
+      "dataset_cards": [
+        {
+          "label": "Muestra",
+          "main": "2.540 niños de 0 a 59 meses con fiebre reciente, encuesta BDHS 2022",
+          "sub": "Fuente editorial original"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultados",
+          "main": "ROC-AUC desarrollo 0,676; holdout 0,561 (IC95% 0,480–0,649); precisión promedio holdout 0,144; pendiente ",
+          "sub": "Interpretar según validación descrita"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Resultados verificados",
+          "ROC-AUC desarrollo 0,676; holdout 0,561 (IC95% 0,480–0,649); precisión promedio holdout 0,144; pendiente de calibración 0,249",
+          "No completar métricas ausentes"
+        ]
+      ],
+      "implementation": [
+        "Datos de encuesta; hardware no aplicable",
+        "Regresión logística y modelos de ML tabulares",
+        "Costos: No reportados"
+      ],
+      "figures": [],
+      "sources": [
+        "https://www.nature.com/articles/s41598-026-80237-2"
+      ]
+    }
+  },
+  {
     "date": "2026-11-07",
     "reviewed": "07 noviembre 2026",
     "published": "05 noviembre 2026",
