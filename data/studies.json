@@ -1,5 +1,488 @@
 [
   {
+    "date": "2026-11-09",
+    "reviewed": "09 noviembre 2026",
+    "published": "07 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://www.nature.com/articles/s41598-026-79792-5",
+    "code": "",
+    "figures": [],
+    "language": "Inglés",
+    "title": "Clinical classification of multiple sclerosis by machine learning",
+    "title_es": "Clasificación clínica de esclerosis múltiple mediante aprendizaje automático",
+    "doi": "10.1038/s41598-026-79792-5",
+    "country": "China",
+    "institution": "Zhejiang Provincial People's Hospital; Longjiang First People's Hospital; Southwest University of Political Science and Law",
+    "sample": "594 perfiles transcriptómicos de células mononucleares de sangre periférica de tres bases públicas",
+    "design": "Matriz de 6033 genes; cuatro tareas binarias; partición 3:1; estandarización y PCA de dos componentes",
+    "model": "AdaBoost, Random Forest y XGBoost",
+    "metrics": "Rendimiento alto en las cuatro tareas, sin cifras verificables de AUC en el resumen",
+    "limitations": "Validación retrospectiva; no demuestra aplicación diagnóstica prospectiva; comprobar separación por cohortes",
+    "hardware": "Transcriptómica sanguínea; equipo de secuenciación no especificado",
+    "framework": "PCA, AdaBoost, Random Forest, XGBoost",
+    "cost": "No reportados",
+    "modality": "Datos clínicos y biomédicos",
+    "rubro": "IA en salud",
+    "area": "Investigación biomédica",
+    "key_metric": "Rendimiento alto en las cuatro tareas, sin cifras verificables de AUC en el resumen",
+    "summary": "Clasificación clínica de esclerosis múltiple mediante aprendizaje automático. Rendimiento alto en las cuatro tareas, sin cifras verificables de AUC en el resumen. Limitación principal: Validación retrospectiva; no demuestra aplicación diagnóstica prospectiva; comprobar separación por cohortes",
+    "rich": {
+      "overview": "Clasificación clínica de esclerosis múltiple mediante aprendizaje automático",
+      "methodology": "Matriz de 6033 genes; cuatro tareas binarias; partición 3:1; estandarización y PCA de dos componentes",
+      "architecture": "AdaBoost, Random Forest y XGBoost",
+      "limitations": [
+        "Validación retrospectiva; no demuestra aplicación diagnóstica prospectiva; comprobar separación por cohortes"
+      ],
+      "dataset_cards": [
+        {
+          "label": "Muestra",
+          "main": "594 perfiles transcriptómicos de células mononucleares de sangre periférica de tres bases públicas",
+          "sub": "Fuente editorial original"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultados",
+          "main": "Rendimiento alto en las cuatro tareas, sin cifras verificables de AUC en el resumen",
+          "sub": "Solo resultados confirmados"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Resultados reportados",
+          "Rendimiento alto en las cuatro tareas, sin cifras verificables de AUC en el resumen",
+          "Interpretar en contexto de diseño y validación"
+        ]
+      ],
+      "implementation": [
+        "Hardware: Transcriptómica sanguínea; equipo de secuenciación no especificado",
+        "Software: PCA, AdaBoost, Random Forest, XGBoost",
+        "Costos: No reportados"
+      ],
+      "figures": [],
+      "sources": [
+        "https://www.nature.com/articles/s41598-026-79792-5"
+      ]
+    }
+  },
+  {
+    "date": "2026-11-09",
+    "reviewed": "09 noviembre 2026",
+    "published": "07 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://www.nature.com/articles/s41598-026-78009-z",
+    "code": "",
+    "figures": [],
+    "language": "Inglés",
+    "title": "A consensus-based interpretable machine learning framework for robust early diagnosis of ovarian cancer using hematological and tumor biomarkers",
+    "title_es": "Aprendizaje automático interpretable por consenso para diagnóstico temprano de cáncer ovárico con biomarcadores",
+    "doi": "10.1038/s41598-026-78009-z",
+    "country": "Bangladés; Estados Unidos; Corea del Sur",
+    "institution": "Daffodil International University; United International University; colaboradores",
+    "sample": "Cohorte de un solo centro; tamaño no confirmado en el resumen consultado",
+    "design": "15 clasificadores; selección Stability Selection, BorutaSHAP y consenso; validación cruzada estratificada de cinco pliegues y prueba independiente",
+    "model": "Clasificador SGD con selección consensuada; SHAP",
+    "metrics": "Exactitud 97,14%; sensibilidad 100%; especificidad 94,12%; Brier 0,088",
+    "limitations": "Muestra limitada y monocéntrica; sensibilidad perfecta observada no implica cero falsos negativos futuros",
+    "hardware": "Análisis hematológicos y marcadores HE4/CA125; dispositivos no detallados",
+    "framework": "SGD, BorutaSHAP, SHAP y calibración",
+    "cost": "No reportados",
+    "modality": "Datos clínicos y biomédicos",
+    "rubro": "IA en salud",
+    "area": "Investigación biomédica",
+    "key_metric": "Exactitud 97,14%; sensibilidad 100%; especificidad 94,12%; Brier 0,088",
+    "summary": "Aprendizaje automático interpretable por consenso para diagnóstico temprano de cáncer ovárico con biomarcadores. Exactitud 97,14%; sensibilidad 100%; especificidad 94,12%; Brier 0,088. Limitación principal: Muestra limitada y monocéntrica; sensibilidad perfecta observada no implica cero falsos negativos futuros",
+    "rich": {
+      "overview": "Aprendizaje automático interpretable por consenso para diagnóstico temprano de cáncer ovárico con biomarcadores",
+      "methodology": "15 clasificadores; selección Stability Selection, BorutaSHAP y consenso; validación cruzada estratificada de cinco pliegues y prueba independiente",
+      "architecture": "Clasificador SGD con selección consensuada; SHAP",
+      "limitations": [
+        "Muestra limitada y monocéntrica; sensibilidad perfecta observada no implica cero falsos negativos futuros"
+      ],
+      "dataset_cards": [
+        {
+          "label": "Muestra",
+          "main": "Cohorte de un solo centro; tamaño no confirmado en el resumen consultado",
+          "sub": "Fuente editorial original"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultados",
+          "main": "Exactitud 97,14%; sensibilidad 100%; especificidad 94,12%; Brier 0,088",
+          "sub": "Solo resultados confirmados"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Resultados reportados",
+          "Exactitud 97,14%; sensibilidad 100%; especificidad 94,12%; Brier 0,088",
+          "Interpretar en contexto de diseño y validación"
+        ]
+      ],
+      "implementation": [
+        "Hardware: Análisis hematológicos y marcadores HE4/CA125; dispositivos no detallados",
+        "Software: SGD, BorutaSHAP, SHAP y calibración",
+        "Costos: No reportados"
+      ],
+      "figures": [],
+      "sources": [
+        "https://www.nature.com/articles/s41598-026-78009-z"
+      ]
+    }
+  },
+  {
+    "date": "2026-11-09",
+    "reviewed": "09 noviembre 2026",
+    "published": "07 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://www.nature.com/articles/s41598-026-80104-0",
+    "code": "",
+    "figures": [],
+    "language": "Inglés",
+    "title": "Multi-omics and machine learning reveal a senescence-associated lipid-metabolic macrophage phenotype driving immunosuppression and poor prognosis in colorectal cancer",
+    "title_es": "Multi-ómica e IA identifican fenotipo de macrófagos asociado con senescencia y metabolismo lipídico en cáncer colorrectal",
+    "doi": "10.1038/s41598-026-80104-0",
+    "country": "China",
+    "institution": "Second Affiliated Hospital of Guangxi Medical University; Guangxi Medical University",
+    "sample": "Cohortes TCGA y GSE39582; total de pacientes no confirmado en resumen",
+    "design": "Transcriptómica unicelular y multi-ómica; validación cruzada anidada; inmunofluorescencia espacial multiplex y qPCR",
+    "model": "Comparación de ocho algoritmos ML para firma pronóstica SALM",
+    "metrics": "AUC 0,972 en evaluación interna descrita",
+    "limitations": "Sin validación prospectiva; asociación mecanística no prueba causalidad ni utilidad clínica",
+    "hardware": "Microscopía de inmunofluorescencia y qPCR; modelos no especificados",
+    "framework": "Herramientas bioinformáticas R y algoritmos ML; versiones no especificadas",
+    "cost": "No reportados",
+    "modality": "Datos clínicos y biomédicos",
+    "rubro": "IA en salud",
+    "area": "Investigación biomédica",
+    "key_metric": "AUC 0,972 en evaluación interna descrita",
+    "summary": "Multi-ómica e IA identifican fenotipo de macrófagos asociado con senescencia y metabolismo lipídico en cáncer colorrectal. AUC 0,972 en evaluación interna descrita. Limitación principal: Sin validación prospectiva; asociación mecanística no prueba causalidad ni utilidad clínica",
+    "rich": {
+      "overview": "Multi-ómica e IA identifican fenotipo de macrófagos asociado con senescencia y metabolismo lipídico en cáncer colorrectal",
+      "methodology": "Transcriptómica unicelular y multi-ómica; validación cruzada anidada; inmunofluorescencia espacial multiplex y qPCR",
+      "architecture": "Comparación de ocho algoritmos ML para firma pronóstica SALM",
+      "limitations": [
+        "Sin validación prospectiva; asociación mecanística no prueba causalidad ni utilidad clínica"
+      ],
+      "dataset_cards": [
+        {
+          "label": "Muestra",
+          "main": "Cohortes TCGA y GSE39582; total de pacientes no confirmado en resumen",
+          "sub": "Fuente editorial original"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultados",
+          "main": "AUC 0,972 en evaluación interna descrita",
+          "sub": "Solo resultados confirmados"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Resultados reportados",
+          "AUC 0,972 en evaluación interna descrita",
+          "Interpretar en contexto de diseño y validación"
+        ]
+      ],
+      "implementation": [
+        "Hardware: Microscopía de inmunofluorescencia y qPCR; modelos no especificados",
+        "Software: Herramientas bioinformáticas R y algoritmos ML; versiones no especificadas",
+        "Costos: No reportados"
+      ],
+      "figures": [],
+      "sources": [
+        "https://www.nature.com/articles/s41598-026-80104-0"
+      ]
+    }
+  },
+  {
+    "date": "2026-11-09",
+    "reviewed": "09 noviembre 2026",
+    "published": "07 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "npj Science of Learning · 2026",
+    "paper": "https://www.nature.com/articles/s41539-026-00462-2",
+    "code": "",
+    "figures": [],
+    "language": "Inglés",
+    "title": "Beyond performance scores: directed functional connectivity as a brain-based biomarker for tracking motor skill learning and retention",
+    "title_es": "Conectividad funcional dirigida como biomarcador de aprendizaje y retención de habilidades motoras",
+    "doi": "10.1038/s41539-026-00462-2",
+    "country": "Estados Unidos",
+    "institution": "Rensselaer Polytechnic Institute; University at Buffalo; Florida A&M University–Florida State University",
+    "sample": "25 aprendices, 27 controles no entrenados y 15 cirujanos expertos",
+    "design": "15 días de entrenamiento de sutura laparoscópica; prueba de retención a seis semanas; EEG de cinco regiones corticales",
+    "model": "Conectividad funcional dirigida por causalidad de Granger no lineal y CNN unidimensional",
+    "metrics": "Exactitud pre/post 94,4% frente a 84,5% FLS; retención 87,5% frente a 88,5% FLS",
+    "limitations": "Muestra pequeña; evaluación de formación simulada; no prueba mejoría en desenlaces quirúrgicos",
+    "hardware": "Electroencefalografía y simulador de sutura laparoscópica; marcas no especificadas",
+    "framework": "Causalidad de Granger no lineal, CNN 1D, detección de puntos de cambio",
+    "cost": "No reportados",
+    "modality": "Datos clínicos y biomédicos",
+    "rubro": "IA en salud",
+    "area": "Investigación biomédica",
+    "key_metric": "Exactitud pre/post 94,4% frente a 84,5% FLS; retención 87,5% frente a 88,5% FLS",
+    "summary": "Conectividad funcional dirigida como biomarcador de aprendizaje y retención de habilidades motoras. Exactitud pre/post 94,4% frente a 84,5% FLS; retención 87,5% frente a 88,5% FLS. Limitación principal: Muestra pequeña; evaluación de formación simulada; no prueba mejoría en desenlaces quirúrgicos",
+    "rich": {
+      "overview": "Conectividad funcional dirigida como biomarcador de aprendizaje y retención de habilidades motoras",
+      "methodology": "15 días de entrenamiento de sutura laparoscópica; prueba de retención a seis semanas; EEG de cinco regiones corticales",
+      "architecture": "Conectividad funcional dirigida por causalidad de Granger no lineal y CNN unidimensional",
+      "limitations": [
+        "Muestra pequeña; evaluación de formación simulada; no prueba mejoría en desenlaces quirúrgicos"
+      ],
+      "dataset_cards": [
+        {
+          "label": "Muestra",
+          "main": "25 aprendices, 27 controles no entrenados y 15 cirujanos expertos",
+          "sub": "Fuente editorial original"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultados",
+          "main": "Exactitud pre/post 94,4% frente a 84,5% FLS; retención 87,5% frente a 88,5% FLS",
+          "sub": "Solo resultados confirmados"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Resultados reportados",
+          "Exactitud pre/post 94,4% frente a 84,5% FLS; retención 87,5% frente a 88,5% FLS",
+          "Interpretar en contexto de diseño y validación"
+        ]
+      ],
+      "implementation": [
+        "Hardware: Electroencefalografía y simulador de sutura laparoscópica; marcas no especificadas",
+        "Software: Causalidad de Granger no lineal, CNN 1D, detección de puntos de cambio",
+        "Costos: No reportados"
+      ],
+      "figures": [],
+      "sources": [
+        "https://www.nature.com/articles/s41539-026-00462-2"
+      ]
+    }
+  },
+  {
+    "date": "2026-11-09",
+    "reviewed": "09 noviembre 2026",
+    "published": "07 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://www.nature.com/articles/s41598-026-76304-3",
+    "code": "",
+    "figures": [],
+    "language": "Inglés",
+    "title": "Synergies in streamlining: AI and Lean Management in Polish healthcare administration",
+    "title_es": "Sinergias entre IA y gestión Lean en administración sanitaria polaca",
+    "doi": "10.1038/s41598-026-76304-3",
+    "country": "Polonia",
+    "institution": "Poznan University of Medical Sciences",
+    "sample": "330 profesionales sanitarios encuestados entre abril y septiembre de 2025",
+    "design": "Encuesta transversal de 39 ítems; índice exploratorio de sinergia IA-Lean y comparación por profesiones",
+    "model": "Índice compuesto formativo y análisis estadístico; no se entrenó un modelo de IA",
+    "metrics": "Mediana índice 0,60; 88,9% percibió sinergia moderada-alta; brecha percepción-aplicación 41,8 puntos porcentuales",
+    "limitations": "Percepciones autodeclaradas; no mide ahorros reales ni eficiencia causada por IA",
+    "hardware": "Encuesta digital; sin equipamiento clínico",
+    "framework": "Análisis estadístico y cuestionario TAM/UTAUT; software no especificado",
+    "cost": "No reportados",
+    "modality": "Datos clínicos y biomédicos",
+    "rubro": "IA en salud",
+    "area": "Investigación biomédica",
+    "key_metric": "Mediana índice 0,60; 88,9% percibió sinergia moderada-alta; brecha percepción-aplicación 41,8 puntos porcentuales",
+    "summary": "Sinergias entre IA y gestión Lean en administración sanitaria polaca. Mediana índice 0,60; 88,9% percibió sinergia moderada-alta; brecha percepción-aplicación 41,8 puntos porcentuales. Limitación principal: Percepciones autodeclaradas; no mide ahorros reales ni eficiencia causada por IA",
+    "rich": {
+      "overview": "Sinergias entre IA y gestión Lean en administración sanitaria polaca",
+      "methodology": "Encuesta transversal de 39 ítems; índice exploratorio de sinergia IA-Lean y comparación por profesiones",
+      "architecture": "Índice compuesto formativo y análisis estadístico; no se entrenó un modelo de IA",
+      "limitations": [
+        "Percepciones autodeclaradas; no mide ahorros reales ni eficiencia causada por IA"
+      ],
+      "dataset_cards": [
+        {
+          "label": "Muestra",
+          "main": "330 profesionales sanitarios encuestados entre abril y septiembre de 2025",
+          "sub": "Fuente editorial original"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultados",
+          "main": "Mediana índice 0,60; 88,9% percibió sinergia moderada-alta; brecha percepción-aplicación 41,8 puntos porcentuales",
+          "sub": "Solo resultados confirmados"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Resultados reportados",
+          "Mediana índice 0,60; 88,9% percibió sinergia moderada-alta; brecha percepción-aplicación 41,8 puntos porcentuales",
+          "Interpretar en contexto de diseño y validación"
+        ]
+      ],
+      "implementation": [
+        "Hardware: Encuesta digital; sin equipamiento clínico",
+        "Software: Análisis estadístico y cuestionario TAM/UTAUT; software no especificado",
+        "Costos: No reportados"
+      ],
+      "figures": [],
+      "sources": [
+        "https://www.nature.com/articles/s41598-026-76304-3"
+      ]
+    }
+  },
+  {
+    "date": "2026-11-09",
+    "reviewed": "09 noviembre 2026",
+    "published": "07 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "BDJ Open · 2026",
+    "paper": "https://www.nature.com/articles/s41405-026-00508-y",
+    "code": "",
+    "figures": [],
+    "language": "Inglés",
+    "title": "Evaluation of colour parameters at different preparation depths and prediction of tooth colour using machine learning",
+    "title_es": "Evaluación de color dental a distintas profundidades y predicción mediante aprendizaje automático",
+    "doi": "10.1038/s41405-026-00508-y",
+    "country": "Turquía",
+    "institution": "Trakya University; afiliaciones de autores no completamente verificadas",
+    "sample": "106 dientes anteriores extraídos",
+    "design": "Preparaciones de 0,3; 0,5; 0,7; 1,0 y 1,5 mm; espectrofotometría CIE L*a*b* y ΔE00",
+    "model": "Regresión lineal, polinómica, árbol de decisión, Random Forest y SVR",
+    "metrics": "Todos los modelos mostraron R² bajos; ΔE00 >0,8 en la mayoría de muestras a 0,3 mm",
+    "limitations": "Estudio ex vivo; profundidad sola insuficiente; dientes desvitalizados y espesores heterogéneos",
+    "hardware": "Espectrofotómetro Vita Easyshade V; fresas Horico FGAS",
+    "framework": "Regresión, Random Forest, SVR; librerías no reportadas",
+    "cost": "No reportados",
+    "modality": "Datos clínicos y biomédicos",
+    "rubro": "IA en salud",
+    "area": "Investigación biomédica",
+    "key_metric": "Todos los modelos mostraron R² bajos; ΔE00 >0,8 en la mayoría de muestras a 0,3 mm",
+    "summary": "Evaluación de color dental a distintas profundidades y predicción mediante aprendizaje automático. Todos los modelos mostraron R² bajos; ΔE00 >0,8 en la mayoría de muestras a 0,3 mm. Limitación principal: Estudio ex vivo; profundidad sola insuficiente; dientes desvitalizados y espesores heterogéneos",
+    "rich": {
+      "overview": "Evaluación de color dental a distintas profundidades y predicción mediante aprendizaje automático",
+      "methodology": "Preparaciones de 0,3; 0,5; 0,7; 1,0 y 1,5 mm; espectrofotometría CIE L*a*b* y ΔE00",
+      "architecture": "Regresión lineal, polinómica, árbol de decisión, Random Forest y SVR",
+      "limitations": [
+        "Estudio ex vivo; profundidad sola insuficiente; dientes desvitalizados y espesores heterogéneos"
+      ],
+      "dataset_cards": [
+        {
+          "label": "Muestra",
+          "main": "106 dientes anteriores extraídos",
+          "sub": "Fuente editorial original"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultados",
+          "main": "Todos los modelos mostraron R² bajos; ΔE00 >0,8 en la mayoría de muestras a 0,3 mm",
+          "sub": "Solo resultados confirmados"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Resultados reportados",
+          "Todos los modelos mostraron R² bajos; ΔE00 >0,8 en la mayoría de muestras a 0,3 mm",
+          "Interpretar en contexto de diseño y validación"
+        ]
+      ],
+      "implementation": [
+        "Hardware: Espectrofotómetro Vita Easyshade V; fresas Horico FGAS",
+        "Software: Regresión, Random Forest, SVR; librerías no reportadas",
+        "Costos: No reportados"
+      ],
+      "figures": [],
+      "sources": [
+        "https://www.nature.com/articles/s41405-026-00508-y"
+      ]
+    }
+  },
+  {
+    "date": "2026-11-09",
+    "reviewed": "09 noviembre 2026",
+    "published": "07 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://www.nature.com/articles/s41598-026-79446-6",
+    "code": "",
+    "figures": [],
+    "language": "Inglés",
+    "title": "Network toxicology and machine learning reveal the potential role of dioctyl terephthalate in systemic lupus erythematosus pathogenesis",
+    "title_es": "Toxicología de redes e IA investigan asociaciones moleculares con lupus eritematoso sistémico",
+    "doi": "10.1038/s41598-026-79446-6",
+    "country": "China",
+    "institution": "Affiliated Hospital of Southwest Medical University; Sichuan Clinical Research Center for Birth Defects",
+    "sample": "Datos transcriptómicos y redes moleculares; tamaño de pacientes no confirmado",
+    "design": "Análisis GO/KEGG, PPI, selección ML, CIBERSORT y docking molecular exploratorio",
+    "model": "Modelos ML de priorización de genes; algoritmo exacto no confirmado",
+    "metrics": "39 dianas candidatas y seis genes priorizados: NFKB1, TLR4, CASP9, CDK5, DNMT1 y PRKCD",
+    "limitations": "Predicciones in silico no demuestran causalidad, exposición clínica ni utilidad diagnóstica",
+    "hardware": "Cómputo bioinformático; equipamiento experimental no reportado",
+    "framework": "GO/KEGG, CIBERSORT, análisis PPI y ML",
+    "cost": "No reportados",
+    "modality": "Datos clínicos y biomédicos",
+    "rubro": "IA en salud",
+    "area": "Investigación biomédica",
+    "key_metric": "39 dianas candidatas y seis genes priorizados: NFKB1, TLR4, CASP9, CDK5, DNMT1 y PRKCD",
+    "summary": "Toxicología de redes e IA investigan asociaciones moleculares con lupus eritematoso sistémico. 39 dianas candidatas y seis genes priorizados: NFKB1, TLR4, CASP9, CDK5, DNMT1 y PRKCD. Limitación principal: Predicciones in silico no demuestran causalidad, exposición clínica ni utilidad diagnóstica",
+    "rich": {
+      "overview": "Toxicología de redes e IA investigan asociaciones moleculares con lupus eritematoso sistémico",
+      "methodology": "Análisis GO/KEGG, PPI, selección ML, CIBERSORT y docking molecular exploratorio",
+      "architecture": "Modelos ML de priorización de genes; algoritmo exacto no confirmado",
+      "limitations": [
+        "Predicciones in silico no demuestran causalidad, exposición clínica ni utilidad diagnóstica"
+      ],
+      "dataset_cards": [
+        {
+          "label": "Muestra",
+          "main": "Datos transcriptómicos y redes moleculares; tamaño de pacientes no confirmado",
+          "sub": "Fuente editorial original"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultados",
+          "main": "39 dianas candidatas y seis genes priorizados: NFKB1, TLR4, CASP9, CDK5, DNMT1 y PRKCD",
+          "sub": "Solo resultados confirmados"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Resultados reportados",
+          "39 dianas candidatas y seis genes priorizados: NFKB1, TLR4, CASP9, CDK5, DNMT1 y PRKCD",
+          "Interpretar en contexto de diseño y validación"
+        ]
+      ],
+      "implementation": [
+        "Hardware: Cómputo bioinformático; equipamiento experimental no reportado",
+        "Software: GO/KEGG, CIBERSORT, análisis PPI y ML",
+        "Costos: No reportados"
+      ],
+      "figures": [],
+      "sources": [
+        "https://www.nature.com/articles/s41598-026-79446-6"
+      ]
+    }
+  },
+  {
     "date": "2026-11-08",
     "reviewed": "08 noviembre 2026",
     "published": "07 noviembre 2026",
