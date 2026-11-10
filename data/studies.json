@@ -1,5 +1,488 @@
 [
   {
+    "date": "2026-11-10",
+    "reviewed": "10 noviembre 2026",
+    "published": "10 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-78196-9",
+    "code": "",
+    "figures": [],
+    "language": "Inglés",
+    "title": "AutoSNAP enables automated nerve segmentation and morphometry quantification",
+    "title_es": "AutoSNAP permite segmentación automática de nervios y cuantificación morfométrica",
+    "doi": "10.1038/s41598-026-78196-9",
+    "country": "Estados Unidos",
+    "institution": "Washington University School of Medicine in St. Louis",
+    "sample": "Cortes transversales de nervios murinos lesionados y no lesionados; número de cortes no confirmado en resumen",
+    "design": "Segmentación de axones y vainas de mielina frente a anotaciones manuales; reconstrucción de parches ponderada por confianza y separación geométrica",
+    "model": "CNN personalizada y posprocesamiento geométrico",
+    "metrics": "Exactitud por píxel: mielina 98,6%; axones 96,7%; ICC y Pearson >0,9 para casi todas las métricas morfométricas",
+    "limitations": "Validación en tejido murino, no humana; exactitud por píxel no equivale a Dice; número de imágenes no corroborado",
+    "hardware": "Microscopía histológica de cortes nerviosos; GPU no especificada",
+    "framework": "Aplicación web AutoSNAP; arquitectura CNN; dependencias no confirmadas",
+    "cost": "No reportados",
+    "modality": "Microscopía e histología",
+    "rubro": "Ingeniería biomédica",
+    "area": "Investigación biomédica",
+    "key_metric": "Exactitud por píxel: mielina 98,6%; axones 96,7%; ICC y Pearson >0,9 para casi todas las métricas morfométricas",
+    "summary": "AutoSNAP permite segmentación automática de nervios y cuantificación morfométrica. Exactitud por píxel: mielina 98,6%; axones 96,7%; ICC y Pearson >0,9 para casi todas las métricas morfométricas",
+    "rich": {
+      "overview": "AutoSNAP permite segmentación automática de nervios y cuantificación morfométrica",
+      "methodology": "Segmentación de axones y vainas de mielina frente a anotaciones manuales; reconstrucción de parches ponderada por confianza y separación geométrica",
+      "architecture": "CNN personalizada y posprocesamiento geométrico",
+      "limitations": [
+        "Validación en tejido murino, no humana; exactitud por píxel no equivale a Dice; número de imágenes no corroborado"
+      ],
+      "dataset_cards": [
+        {
+          "label": "Muestra",
+          "main": "Cortes transversales de nervios murinos lesionados y no lesionados; número de cortes no confirmado en resumen",
+          "sub": "Fuente editorial original"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultados",
+          "main": "Exactitud por píxel: mielina 98,6%; axones 96,7%; ICC y Pearson >0,9 para casi todas las métricas morfométricas",
+          "sub": "Métricas verificadas o incertidumbre explícita"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Resultados reportados",
+          "Exactitud por píxel: mielina 98,6%; axones 96,7%; ICC y Pearson >0,9 para casi todas las métricas morfométricas",
+          "Consultar limitaciones de diseño"
+        ]
+      ],
+      "implementation": [
+        "Hardware: Microscopía histológica de cortes nerviosos; GPU no especificada",
+        "Software: Aplicación web AutoSNAP; arquitectura CNN; dependencias no confirmadas",
+        "Costos: No reportados"
+      ],
+      "figures": [],
+      "sources": [
+        "https://doi.org/10.1038/s41598-026-78196-9"
+      ]
+    }
+  },
+  {
+    "date": "2026-11-10",
+    "reviewed": "10 noviembre 2026",
+    "published": "09 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Nature Communications · 2026",
+    "paper": "https://doi.org/10.1038/s41467-026-77651-5",
+    "code": "",
+    "figures": [],
+    "language": "Inglés",
+    "title": "Single-cell machine learning uncovers genetically anchored, cell-type specific programs of Alzheimer’s disease",
+    "title_es": "Aprendizaje automático unicelular identifica programas específicos de Alzheimer con soporte genético",
+    "doi": "10.1038/s41467-026-77651-5",
+    "country": "Estados Unidos",
+    "institution": "Equipo de Chirag J. Patel y colaboradores; instituciones académicas estadounidenses",
+    "sample": "~4,2 millones de núcleos de 627 donantes en seis conjuntos snRNA-seq",
+    "design": "TriSCOPE integra predicción multivariante, expresión diferencial consciente del donante, pseudotiempo y colocalización GWAS-eQTL; validación entre cohortes",
+    "model": "AutoML con árboles potenciados, regresión LASSO/Elastic Net y Random Forest; análisis de pseudotiempo",
+    "metrics": "27 pares gen–tipo celular con apoyo genético; AUC clínica 0,738±0,031 en microglía de SEA-AD; AUC 0,699 en subgrupo Oli3 para trayectoria clínica",
+    "limitations": "Datos post mortem y transversales: no pronóstico clínico ni causalidad; limitado a corteza prefrontal",
+    "hardware": "Secuenciación snRNA-seq y computación bioinformática; GPU no confirmada",
+    "framework": "AutoML, modelos tabulares, GWAS-eQTL y pseudotiempo",
+    "cost": "No reportados",
+    "modality": "Transcriptómica unicelular",
+    "rubro": "IA en salud",
+    "area": "Investigación biomédica",
+    "key_metric": "27 pares gen–tipo celular con apoyo genético; AUC clínica 0,738±0,031 en microglía de SEA-AD; AUC 0,699 en subgrupo Oli3 para trayectoria clínica",
+    "summary": "Aprendizaje automático unicelular identifica programas específicos de Alzheimer con soporte genético. 27 pares gen–tipo celular con apoyo genético; AUC clínica 0,738±0,031 en microglía de SEA-AD; AUC 0,699 en subgrupo Oli3 para trayectoria clínica",
+    "rich": {
+      "overview": "Aprendizaje automático unicelular identifica programas específicos de Alzheimer con soporte genético",
+      "methodology": "TriSCOPE integra predicción multivariante, expresión diferencial consciente del donante, pseudotiempo y colocalización GWAS-eQTL; validación entre cohortes",
+      "architecture": "AutoML con árboles potenciados, regresión LASSO/Elastic Net y Random Forest; análisis de pseudotiempo",
+      "limitations": [
+        "Datos post mortem y transversales: no pronóstico clínico ni causalidad; limitado a corteza prefrontal"
+      ],
+      "dataset_cards": [
+        {
+          "label": "Muestra",
+          "main": "~4,2 millones de núcleos de 627 donantes en seis conjuntos snRNA-seq",
+          "sub": "Fuente editorial original"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultados",
+          "main": "27 pares gen–tipo celular con apoyo genético; AUC clínica 0,738±0,031 en microglía de SEA-AD; AUC 0,699 en subgrupo Oli3 para trayectoria clínica",
+          "sub": "Métricas verificadas o incertidumbre explícita"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Resultados reportados",
+          "27 pares gen–tipo celular con apoyo genético; AUC clínica 0,738±0,031 en microglía de SEA-AD; AUC 0,699 en subgrupo Oli3 para trayectoria clínica",
+          "Consultar limitaciones de diseño"
+        ]
+      ],
+      "implementation": [
+        "Hardware: Secuenciación snRNA-seq y computación bioinformática; GPU no confirmada",
+        "Software: AutoML, modelos tabulares, GWAS-eQTL y pseudotiempo",
+        "Costos: No reportados"
+      ],
+      "figures": [],
+      "sources": [
+        "https://doi.org/10.1038/s41467-026-77651-5"
+      ]
+    }
+  },
+  {
+    "date": "2026-11-10",
+    "reviewed": "10 noviembre 2026",
+    "published": "09 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-74475-7",
+    "code": "",
+    "figures": [],
+    "language": "Inglés",
+    "title": "SkinFusionNet: MobileNetV2 and vision transformer hybrid deep learning model with automated skin cancer classification",
+    "title_es": "SkinFusionNet: modelo híbrido MobileNetV2 y Transformer para clasificación de cáncer cutáneo",
+    "doi": "10.1038/s41598-026-74475-7",
+    "country": "Pakistán, China y Yemen",
+    "institution": "The Superior University; COMSATS University Islamabad; Westlake University; Sana’a Community College",
+    "sample": "ISIC 2018; conjunto aumentado y equilibrado a 3.000 imágenes malignas y 3.000 benignas",
+    "design": "Clasificación dermatoscópica binaria, aumentos y balanceo; interpretabilidad Grad-CAM",
+    "model": "Fusión MobileNetV2 con Vision Transformer",
+    "metrics": "Exactitud 95,44%; precisión 95,48%; recall 95,44%; Dice reportado 0,9544",
+    "limitations": "Balanceo y aumentos pueden limitar generalización; separación por paciente y validación externa independiente no confirmadas",
+    "hardware": "Imágenes dermatoscópicas; GPU no confirmada",
+    "framework": "MobileNetV2, ViT, Grad-CAM",
+    "cost": "No reportados",
+    "modality": "Dermatoscopia",
+    "rubro": "IA en salud",
+    "area": "Investigación biomédica",
+    "key_metric": "Exactitud 95,44%; precisión 95,48%; recall 95,44%; Dice reportado 0,9544",
+    "summary": "SkinFusionNet: modelo híbrido MobileNetV2 y Transformer para clasificación de cáncer cutáneo. Exactitud 95,44%; precisión 95,48%; recall 95,44%; Dice reportado 0,9544",
+    "rich": {
+      "overview": "SkinFusionNet: modelo híbrido MobileNetV2 y Transformer para clasificación de cáncer cutáneo",
+      "methodology": "Clasificación dermatoscópica binaria, aumentos y balanceo; interpretabilidad Grad-CAM",
+      "architecture": "Fusión MobileNetV2 con Vision Transformer",
+      "limitations": [
+        "Balanceo y aumentos pueden limitar generalización; separación por paciente y validación externa independiente no confirmadas"
+      ],
+      "dataset_cards": [
+        {
+          "label": "Muestra",
+          "main": "ISIC 2018; conjunto aumentado y equilibrado a 3.000 imágenes malignas y 3.000 benignas",
+          "sub": "Fuente editorial original"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultados",
+          "main": "Exactitud 95,44%; precisión 95,48%; recall 95,44%; Dice reportado 0,9544",
+          "sub": "Métricas verificadas o incertidumbre explícita"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Resultados reportados",
+          "Exactitud 95,44%; precisión 95,48%; recall 95,44%; Dice reportado 0,9544",
+          "Consultar limitaciones de diseño"
+        ]
+      ],
+      "implementation": [
+        "Hardware: Imágenes dermatoscópicas; GPU no confirmada",
+        "Software: MobileNetV2, ViT, Grad-CAM",
+        "Costos: No reportados"
+      ],
+      "figures": [],
+      "sources": [
+        "https://doi.org/10.1038/s41598-026-74475-7"
+      ]
+    }
+  },
+  {
+    "date": "2026-11-10",
+    "reviewed": "10 noviembre 2026",
+    "published": "09 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-78494-2",
+    "code": "",
+    "figures": [],
+    "language": "Inglés",
+    "title": "Clinical application of deep neural networks in laser endomicroscopic molecular imaging for accurate assessment of lung nodules",
+    "title_es": "Aplicación clínica de redes profundas en endomicroscopía láser molecular para evaluar nódulos pulmonares",
+    "doi": "10.1038/s41598-026-78494-2",
+    "country": "Estados Unidos",
+    "institution": "University of Pennsylvania Perelman School of Medicine y colaboradores",
+    "sample": "50 pacientes prospectivos, 248 lesiones muestreadas; análisis archivado: 121 grabaciones (70 malignas, 51 benignas), 23.589 fotogramas; exploración adicional 10 pacientes",
+    "design": "Endomicroscopía confocal infrarroja con pafolacianina y referencia histopatológica; validación cruzada de cinco pliegues por lesión",
+    "model": "AlexNet CNN para fotogramas; agregación por lesión con umbral de 2% de fotogramas malignos; regresión logística comparativa",
+    "metrics": "Sensibilidad 98,6%; especificidad 72,5%; exactitud 87,6%; AUROC 0,97; modelo simple de fluorescencia AUROC 0,97",
+    "limitations": "No se pudo separar por paciente por pérdida de vínculos; muestra interna y exploratoria; modelo simple comparable; requiere validación externa",
+    "hardware": "Endomicroscopía láser confocal NIR y marcaje fluorescente; GPU no especificada",
+    "framework": "AlexNet CNN; regresión logística; red de 100 unidades",
+    "cost": "No reportados",
+    "modality": "Endomicroscopía",
+    "rubro": "Tecnología médica",
+    "area": "Investigación biomédica",
+    "key_metric": "Sensibilidad 98,6%; especificidad 72,5%; exactitud 87,6%; AUROC 0,97; modelo simple de fluorescencia AUROC 0,97",
+    "summary": "Aplicación clínica de redes profundas en endomicroscopía láser molecular para evaluar nódulos pulmonares. Sensibilidad 98,6%; especificidad 72,5%; exactitud 87,6%; AUROC 0,97; modelo simple de fluorescencia AUROC 0,97",
+    "rich": {
+      "overview": "Aplicación clínica de redes profundas en endomicroscopía láser molecular para evaluar nódulos pulmonares",
+      "methodology": "Endomicroscopía confocal infrarroja con pafolacianina y referencia histopatológica; validación cruzada de cinco pliegues por lesión",
+      "architecture": "AlexNet CNN para fotogramas; agregación por lesión con umbral de 2% de fotogramas malignos; regresión logística comparativa",
+      "limitations": [
+        "No se pudo separar por paciente por pérdida de vínculos; muestra interna y exploratoria; modelo simple comparable; requiere validación externa"
+      ],
+      "dataset_cards": [
+        {
+          "label": "Muestra",
+          "main": "50 pacientes prospectivos, 248 lesiones muestreadas; análisis archivado: 121 grabaciones (70 malignas, 51 benignas), 23.589 fotogramas; exploración adicional 10 pacientes",
+          "sub": "Fuente editorial original"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultados",
+          "main": "Sensibilidad 98,6%; especificidad 72,5%; exactitud 87,6%; AUROC 0,97; modelo simple de fluorescencia AUROC 0,97",
+          "sub": "Métricas verificadas o incertidumbre explícita"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Resultados reportados",
+          "Sensibilidad 98,6%; especificidad 72,5%; exactitud 87,6%; AUROC 0,97; modelo simple de fluorescencia AUROC 0,97",
+          "Consultar limitaciones de diseño"
+        ]
+      ],
+      "implementation": [
+        "Hardware: Endomicroscopía láser confocal NIR y marcaje fluorescente; GPU no especificada",
+        "Software: AlexNet CNN; regresión logística; red de 100 unidades",
+        "Costos: No reportados"
+      ],
+      "figures": [],
+      "sources": [
+        "https://doi.org/10.1038/s41598-026-78494-2"
+      ]
+    }
+  },
+  {
+    "date": "2026-11-10",
+    "reviewed": "10 noviembre 2026",
+    "published": "09 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-79860-w",
+    "code": "",
+    "figures": [],
+    "language": "Inglés",
+    "title": "Decoding the night: a machine learning approach to diagnose and predict the severity of obstructive sleep apnea through clinical parameters",
+    "title_es": "Descifrando la noche: IA para detectar y clasificar gravedad de apnea obstructiva del sueño con variables clínicas",
+    "doi": "10.1038/s41598-026-79860-w",
+    "country": "Turquía",
+    "institution": "Recep Tayyip Erdogan University y diez centros de sueño colaboradores",
+    "sample": "1.954 adultos de diez centros; 70,2% hombres",
+    "design": "Estudio multicéntrico retrospectivo; 18 variables clínicas y demográficas; cuatro clases de gravedad según polisomnografía; partición aleatoria 80/20",
+    "model": "Red neuronal ANN con capa oculta de 50 neuronas ReLU y salida Softmax",
+    "metrics": "AUC por clase 0,89–0,96; 39,2% apnea grave, 29,4% leve, 15% moderada, 16,4% sin apnea",
+    "limitations": "Partición aleatoria no equivale a validación externa por centro; sin evaluación prospectiva",
+    "hardware": "Polisomnografía de referencia; equipos y GPU no reportados",
+    "framework": "ANN ReLU/Softmax; framework no especificado",
+    "cost": "No reportados",
+    "modality": "Polisomnografía",
+    "rubro": "IA en salud",
+    "area": "Investigación biomédica",
+    "key_metric": "AUC por clase 0,89–0,96; 39,2% apnea grave, 29,4% leve, 15% moderada, 16,4% sin apnea",
+    "summary": "Descifrando la noche: IA para detectar y clasificar gravedad de apnea obstructiva del sueño con variables clínicas. AUC por clase 0,89–0,96; 39,2% apnea grave, 29,4% leve, 15% moderada, 16,4% sin apnea",
+    "rich": {
+      "overview": "Descifrando la noche: IA para detectar y clasificar gravedad de apnea obstructiva del sueño con variables clínicas",
+      "methodology": "Estudio multicéntrico retrospectivo; 18 variables clínicas y demográficas; cuatro clases de gravedad según polisomnografía; partición aleatoria 80/20",
+      "architecture": "Red neuronal ANN con capa oculta de 50 neuronas ReLU y salida Softmax",
+      "limitations": [
+        "Partición aleatoria no equivale a validación externa por centro; sin evaluación prospectiva"
+      ],
+      "dataset_cards": [
+        {
+          "label": "Muestra",
+          "main": "1.954 adultos de diez centros; 70,2% hombres",
+          "sub": "Fuente editorial original"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultados",
+          "main": "AUC por clase 0,89–0,96; 39,2% apnea grave, 29,4% leve, 15% moderada, 16,4% sin apnea",
+          "sub": "Métricas verificadas o incertidumbre explícita"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Resultados reportados",
+          "AUC por clase 0,89–0,96; 39,2% apnea grave, 29,4% leve, 15% moderada, 16,4% sin apnea",
+          "Consultar limitaciones de diseño"
+        ]
+      ],
+      "implementation": [
+        "Hardware: Polisomnografía de referencia; equipos y GPU no reportados",
+        "Software: ANN ReLU/Softmax; framework no especificado",
+        "Costos: No reportados"
+      ],
+      "figures": [],
+      "sources": [
+        "https://doi.org/10.1038/s41598-026-79860-w"
+      ]
+    }
+  },
+  {
+    "date": "2026-11-10",
+    "reviewed": "10 noviembre 2026",
+    "published": "10 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-80282-x",
+    "code": "",
+    "figures": [],
+    "language": "Inglés",
+    "title": "A hybrid neural deep belief networks-gated recurrent unit algorithm with a leakage-aware evaluation protocol for ECG-HRV-based cognitive load classification",
+    "title_es": "Red híbrida DBN-GRU con evaluación sin fuga de información para clasificar carga cognitiva mediante HRV de ECG",
+    "doi": "10.1038/s41598-026-80282-x",
+    "country": "Finlandia, Malasia y China",
+    "institution": "University of Oulu; Universiti Sains Malaysia; Bijie Medical College",
+    "sample": "Bases WESAD y SWELL; WESAD: 15 participantes referidos en análisis de características relativas",
+    "design": "Validación dejando un participante fuera, selección mediante validación, evaluación entre datasets y calibración sin etiquetas",
+    "model": "Deep Belief Network con preentrenamiento RBM y cabeza GRU",
+    "metrics": "LOSO: exactitud 68,4%; exactitud balanceada 62,8%; macro-F1 0,614; mayoría macro-F1 0,230; mejora en 13/15 participantes con características relativas",
+    "limitations": "Transferencia cero-shot entre datasets inferior a baseline mayoritario; calibración por participante necesaria; otras ocho arquitecturas sin diferencia significativa",
+    "hardware": "ECG para HRV; modelos de dispositivos y GPU no reportados",
+    "framework": "DBN, RBM, GRU y evaluación por participante",
+    "cost": "No reportados",
+    "modality": "Electrocardiografía",
+    "rubro": "Ingeniería biomédica",
+    "area": "Investigación biomédica",
+    "key_metric": "LOSO: exactitud 68,4%; exactitud balanceada 62,8%; macro-F1 0,614; mayoría macro-F1 0,230; mejora en 13/15 participantes con características relativas",
+    "summary": "Red híbrida DBN-GRU con evaluación sin fuga de información para clasificar carga cognitiva mediante HRV de ECG. LOSO: exactitud 68,4%; exactitud balanceada 62,8%; macro-F1 0,614; mayoría macro-F1 0,230; mejora en 13/15 participantes con características relativas",
+    "rich": {
+      "overview": "Red híbrida DBN-GRU con evaluación sin fuga de información para clasificar carga cognitiva mediante HRV de ECG",
+      "methodology": "Validación dejando un participante fuera, selección mediante validación, evaluación entre datasets y calibración sin etiquetas",
+      "architecture": "Deep Belief Network con preentrenamiento RBM y cabeza GRU",
+      "limitations": [
+        "Transferencia cero-shot entre datasets inferior a baseline mayoritario; calibración por participante necesaria; otras ocho arquitecturas sin diferencia significativa"
+      ],
+      "dataset_cards": [
+        {
+          "label": "Muestra",
+          "main": "Bases WESAD y SWELL; WESAD: 15 participantes referidos en análisis de características relativas",
+          "sub": "Fuente editorial original"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultados",
+          "main": "LOSO: exactitud 68,4%; exactitud balanceada 62,8%; macro-F1 0,614; mayoría macro-F1 0,230; mejora en 13/15 participantes con características relativas",
+          "sub": "Métricas verificadas o incertidumbre explícita"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Resultados reportados",
+          "LOSO: exactitud 68,4%; exactitud balanceada 62,8%; macro-F1 0,614; mayoría macro-F1 0,230; mejora en 13/15 participantes con características relativas",
+          "Consultar limitaciones de diseño"
+        ]
+      ],
+      "implementation": [
+        "Hardware: ECG para HRV; modelos de dispositivos y GPU no reportados",
+        "Software: DBN, RBM, GRU y evaluación por participante",
+        "Costos: No reportados"
+      ],
+      "figures": [],
+      "sources": [
+        "https://doi.org/10.1038/s41598-026-80282-x"
+      ]
+    }
+  },
+  {
+    "date": "2026-11-10",
+    "reviewed": "10 noviembre 2026",
+    "published": "10 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-64608-3",
+    "code": "",
+    "figures": [],
+    "language": "Inglés",
+    "title": "Machine learning model using contrast-enhanced CT for predicting overall survival in unresectable hepatocellular carcinoma treated with TACE plus targeted and immunotherapy: a multicenter study",
+    "title_es": "Modelo ML con TC contrastada para supervivencia en hepatocarcinoma irresecable tratado con TACE, terapia dirigida e inmunoterapia",
+    "doi": "10.1038/s41598-026-64608-3",
+    "country": "China",
+    "institution": "Equipo de Shuyao Ning, Yunchao Chen y colaboradores; afiliaciones completas no verificadas",
+    "sample": "Cohorte multicéntrica de hepatocarcinoma irresecable; tamaño no confirmado en extracto editorial",
+    "design": "Modelado de supervivencia global usando TC contrastada en pacientes tratados con TACE y terapia sistémica; detalles de partición no confirmados",
+    "model": "Modelo de aprendizaje automático; algoritmo exacto no confirmado en fuente accesible",
+    "metrics": "Métricas numéricas de discriminación y calibración no verificadas: pendiente lectura íntegra",
+    "limitations": "No evaluar utilidad clínica sin tamaño muestral, C-index, validación externa y calibración; solo metadatos bibliográficos y objetivo contrastados",
+    "hardware": "TC con contraste; hardware computacional no reportado",
+    "framework": "Software y arquitectura no confirmados",
+    "cost": "No reportados",
+    "modality": "Tomografía computarizada",
+    "rubro": "IA en salud",
+    "area": "Investigación biomédica",
+    "key_metric": "Métricas numéricas de discriminación y calibración no verificadas: pendiente lectura íntegra",
+    "summary": "Modelo ML con TC contrastada para supervivencia en hepatocarcinoma irresecable tratado con TACE, terapia dirigida e inmunoterapia. Métricas numéricas de discriminación y calibración no verificadas: pendiente lectura íntegra",
+    "rich": {
+      "overview": "Modelo ML con TC contrastada para supervivencia en hepatocarcinoma irresecable tratado con TACE, terapia dirigida e inmunoterapia",
+      "methodology": "Modelado de supervivencia global usando TC contrastada en pacientes tratados con TACE y terapia sistémica; detalles de partición no confirmados",
+      "architecture": "Modelo de aprendizaje automático; algoritmo exacto no confirmado en fuente accesible",
+      "limitations": [
+        "No evaluar utilidad clínica sin tamaño muestral, C-index, validación externa y calibración; solo metadatos bibliográficos y objetivo contrastados"
+      ],
+      "dataset_cards": [
+        {
+          "label": "Muestra",
+          "main": "Cohorte multicéntrica de hepatocarcinoma irresecable; tamaño no confirmado en extracto editorial",
+          "sub": "Fuente editorial original"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultados",
+          "main": "Métricas numéricas de discriminación y calibración no verificadas: pendiente lectura íntegra",
+          "sub": "Métricas verificadas o incertidumbre explícita"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Resultados reportados",
+          "Métricas numéricas de discriminación y calibración no verificadas: pendiente lectura íntegra",
+          "Consultar limitaciones de diseño"
+        ]
+      ],
+      "implementation": [
+        "Hardware: TC con contraste; hardware computacional no reportado",
+        "Software: Software y arquitectura no confirmados",
+        "Costos: No reportados"
+      ],
+      "figures": [],
+      "sources": [
+        "https://doi.org/10.1038/s41598-026-64608-3"
+      ]
+    }
+  },
+  {
     "date": "2026-11-09",
     "reviewed": "09 noviembre 2026",
     "published": "07 noviembre 2026",
