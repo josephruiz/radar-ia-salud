@@ -1,5 +1,488 @@
 [
   {
+    "date": "2026-11-11",
+    "reviewed": "11 noviembre 2026",
+    "published": "11 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-75575-0",
+    "code": "",
+    "figures": [],
+    "language": "Inglés",
+    "title": "Federated IoMT-assisted ensemble learning for automated pulmonary CT analysis",
+    "title_es": "Aprendizaje federado y ensamble IoMT para análisis automatizado de TC pulmonar",
+    "doi": "10.1038/s41598-026-75575-0",
+    "country": "India",
+    "institution": "Deshwal, Sangwan, Bohra y Das; instituciones de afiliación indias (detalle completo no corroborado)",
+    "sample": "TC torácicas de bases públicas con COVID-19, neumonía, tuberculosis y controles; número total de imágenes no confirmado",
+    "design": "Clasificación multiclase con aprendizaje federado, transferencia, Adam, dropout y parada temprana; integración de imágenes de repositorios públicos",
+    "model": "Ensamble de CNN y aprendizaje federado con agregación FedAvg",
+    "metrics": "Exactitud 98,96%; precisión 98,55%; recall 98,57%; F1 98,56%; AUC 98,56%",
+    "limitations": "Combinación de datasets públicos; no hay demostración de validación prospectiva clínica ni garantía de privacidad solo por usar FL",
+    "hardware": "TC torácica; nodos IoMT propuestos; GPU y escáner no confirmados",
+    "framework": "CNN, transferencia, FedAvg, Adam; librerías no confirmadas",
+    "cost": "No reportados",
+    "modality": "Tomografía computarizada",
+    "rubro": "IA en salud",
+    "area": "Investigación biomédica",
+    "key_metric": "Exactitud 98,96%; precisión 98,55%; recall 98,57%; F1 98,56%; AUC 98,56%",
+    "summary": "Aprendizaje federado y ensamble IoMT para análisis automatizado de TC pulmonar. Exactitud 98,96%; precisión 98,55%; recall 98,57%; F1 98,56%; AUC 98,56%",
+    "rich": {
+      "overview": "Aprendizaje federado y ensamble IoMT para análisis automatizado de TC pulmonar",
+      "methodology": "Clasificación multiclase con aprendizaje federado, transferencia, Adam, dropout y parada temprana; integración de imágenes de repositorios públicos",
+      "architecture": "Ensamble de CNN y aprendizaje federado con agregación FedAvg",
+      "limitations": [
+        "Combinación de datasets públicos; no hay demostración de validación prospectiva clínica ni garantía de privacidad solo por usar FL"
+      ],
+      "dataset_cards": [
+        {
+          "label": "Muestra",
+          "main": "TC torácicas de bases públicas con COVID-19, neumonía, tuberculosis y controles; número total de imágenes no confirmado",
+          "sub": "Fuente científica original"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultados",
+          "main": "Exactitud 98,96%; precisión 98,55%; recall 98,57%; F1 98,56%; AUC 98,56%",
+          "sub": "Datos de publicación original"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Resultados verificados",
+          "Exactitud 98,96%; precisión 98,55%; recall 98,57%; F1 98,56%; AUC 98,56%",
+          "Interpretar según limitaciones"
+        ]
+      ],
+      "implementation": [
+        "Hardware: TC torácica; nodos IoMT propuestos; GPU y escáner no confirmados",
+        "Software: CNN, transferencia, FedAvg, Adam; librerías no confirmadas",
+        "Costos: No reportados"
+      ],
+      "figures": [],
+      "sources": [
+        "https://doi.org/10.1038/s41598-026-75575-0"
+      ]
+    }
+  },
+  {
+    "date": "2026-11-11",
+    "reviewed": "11 noviembre 2026",
+    "published": "11 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "npj Digital Surgery · 2026",
+    "paper": "https://doi.org/10.1038/s44484-026-00030-6",
+    "code": "https://github.com/Bigmouth233/Ligs-Mamba",
+    "figures": [],
+    "language": "Inglés",
+    "title": "Ligs-Mamba: a synergistic Mamba network for video breast Cooper’s ligament segmentation",
+    "title_es": "Ligs-Mamba: red Mamba sinérgica para segmentar ligamentos de Cooper en video quirúrgico",
+    "doi": "10.1038/s44484-026-00030-6",
+    "country": "No confirmado",
+    "institution": "Wu, Li, Xing y colaboradores; afiliaciones específicas pendientes de comprobación",
+    "sample": "90 videos endoscópicos y 6.403 fotogramas anotados (VLS); además, tres benchmarks de pólipos",
+    "design": "Segmentación temporal de ligamentos de bajo contraste; comparación con modelos de segmentación de imágenes y videos, ablación de módulos y pruebas de robustez",
+    "model": "Mamba espacial-temporal con ESF, anatomy-aware global Mamba (AGM) y uncertainty-focused local Mamba (ULM)",
+    "metrics": "VLS: Dice 0,635; IoU 0,476; inferencia 31 ms/fotograma (32,3 FPS); mejora Dice 5,83% frente al mejor comparador",
+    "limitations": "Un solo entorno clínico y estudio retrospectivo; no hay validación intraoperatoria prospectiva multicéntrica",
+    "hardware": "Endoscopia quirúrgica; hardware de entrenamiento no corroborado",
+    "framework": "Mamba; código y datos anunciados en github.com/Bigmouth233/Ligs-Mamba",
+    "cost": "No reportados",
+    "modality": "Video endoscópico",
+    "rubro": "Ingeniería biomédica",
+    "area": "Investigación biomédica",
+    "key_metric": "VLS: Dice 0,635; IoU 0,476; inferencia 31 ms/fotograma (32,3 FPS); mejora Dice 5,83% frente al mejor comparador",
+    "summary": "Ligs-Mamba: red Mamba sinérgica para segmentar ligamentos de Cooper en video quirúrgico. VLS: Dice 0,635; IoU 0,476; inferencia 31 ms/fotograma (32,3 FPS); mejora Dice 5,83% frente al mejor comparador",
+    "rich": {
+      "overview": "Ligs-Mamba: red Mamba sinérgica para segmentar ligamentos de Cooper en video quirúrgico",
+      "methodology": "Segmentación temporal de ligamentos de bajo contraste; comparación con modelos de segmentación de imágenes y videos, ablación de módulos y pruebas de robustez",
+      "architecture": "Mamba espacial-temporal con ESF, anatomy-aware global Mamba (AGM) y uncertainty-focused local Mamba (ULM)",
+      "limitations": [
+        "Un solo entorno clínico y estudio retrospectivo; no hay validación intraoperatoria prospectiva multicéntrica"
+      ],
+      "dataset_cards": [
+        {
+          "label": "Muestra",
+          "main": "90 videos endoscópicos y 6.403 fotogramas anotados (VLS); además, tres benchmarks de pólipos",
+          "sub": "Fuente científica original"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultados",
+          "main": "VLS: Dice 0,635; IoU 0,476; inferencia 31 ms/fotograma (32,3 FPS); mejora Dice 5,83% frente al mejor comparador",
+          "sub": "Datos de publicación original"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Resultados verificados",
+          "VLS: Dice 0,635; IoU 0,476; inferencia 31 ms/fotograma (32,3 FPS); mejora Dice 5,83% frente al mejor comparador",
+          "Interpretar según limitaciones"
+        ]
+      ],
+      "implementation": [
+        "Hardware: Endoscopia quirúrgica; hardware de entrenamiento no corroborado",
+        "Software: Mamba; código y datos anunciados en github.com/Bigmouth233/Ligs-Mamba",
+        "Costos: No reportados"
+      ],
+      "figures": [],
+      "sources": [
+        "https://doi.org/10.1038/s44484-026-00030-6"
+      ]
+    }
+  },
+  {
+    "date": "2026-11-11",
+    "reviewed": "11 noviembre 2026",
+    "published": "11 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Nature Medicine · 2026",
+    "paper": "https://doi.org/10.1038/s41591-026-04716-9",
+    "code": "",
+    "figures": [],
+    "language": "Inglés",
+    "title": "Normalized membrane ratio of TROP2 as a predictor of clinical outcomes with datopotamab deruxtecan in non-small-cell lung cancer",
+    "title_es": "Relación normalizada de TROP2 membranal como predictor de resultados clínicos en cáncer de pulmón",
+    "doi": "10.1038/s41591-026-04716-9",
+    "country": "Multinacional",
+    "institution": "Colaboración de ensayos TROPION y patología computacional; afiliaciones completas no corroboradas",
+    "sample": "115 muestras evaluables en TROPION-PanTumor01; 352 en TROPION-Lung01, incluidas 221 en población principal",
+    "design": "Análisis retrospectivo de láminas IHQ digitalizadas; cuantificación de TROP2 en membrana y citoplasma; asociación del biomarcador con supervivencia libre de progresión",
+    "model": "QCS con dos modelos supervisados en cascada: ART (región tumoral; EfficientNet/ResNet) y SSTC (compartimentos celulares)",
+    "metrics": "Con Dato-DXd, PFS mediana 7,2 frente a 4,0 meses según estado del biomarcador; HR 0,40 (IC95% 0,25–0,64); interacción P=0,0098",
+    "limitations": "Análisis retrospectivo y exploratorio; requiere validación prospectiva, control analítico y autorización de dispositivo antes de aplicación rutinaria",
+    "hardware": "Escáneres de patología Aperio AT2, Roche DP200/DP600; imágenes a 20x/40x",
+    "framework": "QCS, ART/SSTC, R 4.0.3 y paquete survival 3.5-7",
+    "cost": "No reportados",
+    "modality": "Histopatología digital",
+    "rubro": "IA en salud",
+    "area": "Investigación biomédica",
+    "key_metric": "Con Dato-DXd, PFS mediana 7,2 frente a 4,0 meses según estado del biomarcador; HR 0,40 (IC95% 0,25–0,64); interacción P=0,0098",
+    "summary": "Relación normalizada de TROP2 membranal como predictor de resultados clínicos en cáncer de pulmón. Con Dato-DXd, PFS mediana 7,2 frente a 4,0 meses según estado del biomarcador; HR 0,40 (IC95% 0,25–0,64); interacción P=0,0098",
+    "rich": {
+      "overview": "Relación normalizada de TROP2 membranal como predictor de resultados clínicos en cáncer de pulmón",
+      "methodology": "Análisis retrospectivo de láminas IHQ digitalizadas; cuantificación de TROP2 en membrana y citoplasma; asociación del biomarcador con supervivencia libre de progresión",
+      "architecture": "QCS con dos modelos supervisados en cascada: ART (región tumoral; EfficientNet/ResNet) y SSTC (compartimentos celulares)",
+      "limitations": [
+        "Análisis retrospectivo y exploratorio; requiere validación prospectiva, control analítico y autorización de dispositivo antes de aplicación rutinaria"
+      ],
+      "dataset_cards": [
+        {
+          "label": "Muestra",
+          "main": "115 muestras evaluables en TROPION-PanTumor01; 352 en TROPION-Lung01, incluidas 221 en población principal",
+          "sub": "Fuente científica original"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultados",
+          "main": "Con Dato-DXd, PFS mediana 7,2 frente a 4,0 meses según estado del biomarcador; HR 0,40 (IC95% 0,25–0,64); interacción P=0,0098",
+          "sub": "Datos de publicación original"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Resultados verificados",
+          "Con Dato-DXd, PFS mediana 7,2 frente a 4,0 meses según estado del biomarcador; HR 0,40 (IC95% 0,25–0,64); interacción P=0,0098",
+          "Interpretar según limitaciones"
+        ]
+      ],
+      "implementation": [
+        "Hardware: Escáneres de patología Aperio AT2, Roche DP200/DP600; imágenes a 20x/40x",
+        "Software: QCS, ART/SSTC, R 4.0.3 y paquete survival 3.5-7",
+        "Costos: No reportados"
+      ],
+      "figures": [],
+      "sources": [
+        "https://doi.org/10.1038/s41591-026-04716-9"
+      ]
+    }
+  },
+  {
+    "date": "2026-11-11",
+    "reviewed": "11 noviembre 2026",
+    "published": "10 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "npj Digital Medicine · 2026",
+    "paper": "https://doi.org/10.1038/s41746-026-03380-0",
+    "code": "",
+    "figures": [],
+    "language": "Inglés",
+    "title": "Synthetic data to lower barriers towards equitable artificial intelligence in rapid diagnostic test interpretation",
+    "title_es": "Datos sintéticos para facilitar IA equitativa en interpretación de pruebas diagnósticas rápidas",
+    "doi": "10.1038/s41746-026-03380-0",
+    "country": "Reino Unido y Sudáfrica",
+    "institution": "Rogers, Turbé, Gareta, Herbst, McKendry y Shahmanesh; colaboración académica internacional",
+    "sample": "Imágenes de pruebas rápidas para VIH y COVID-19; cantidad exacta de imágenes de evaluación no corroborada",
+    "design": "Entrenamiento de pipeline de segmentación y clasificación de pruebas rápidas con imágenes sintéticas; evaluación sobre pruebas reales",
+    "model": "SynSight, pipeline de segmentación y clasificación ML entrenado con datos sintéticos",
+    "metrics": "VIH: sensibilidad 98%, especificidad 99%; COVID-19: hasta 99% de exactitud",
+    "limitations": "Rendimiento dependiente de pruebas y condiciones de imagen; tamaño y diversidad de cohortes no corroborados; requiere evaluación local",
+    "hardware": "Cámaras para fotografiar pruebas rápidas; modelos de dispositivos no confirmados",
+    "framework": "SynSight, generación sintética y clasificación ML; framework no confirmado",
+    "cost": "No reportados; se propone reducir el costo de reunir imágenes reales",
+    "modality": "Pruebas diagnósticas rápidas",
+    "rubro": "Tecnología médica",
+    "area": "Investigación biomédica",
+    "key_metric": "VIH: sensibilidad 98%, especificidad 99%; COVID-19: hasta 99% de exactitud",
+    "summary": "Datos sintéticos para facilitar IA equitativa en interpretación de pruebas diagnósticas rápidas. VIH: sensibilidad 98%, especificidad 99%; COVID-19: hasta 99% de exactitud",
+    "rich": {
+      "overview": "Datos sintéticos para facilitar IA equitativa en interpretación de pruebas diagnósticas rápidas",
+      "methodology": "Entrenamiento de pipeline de segmentación y clasificación de pruebas rápidas con imágenes sintéticas; evaluación sobre pruebas reales",
+      "architecture": "SynSight, pipeline de segmentación y clasificación ML entrenado con datos sintéticos",
+      "limitations": [
+        "Rendimiento dependiente de pruebas y condiciones de imagen; tamaño y diversidad de cohortes no corroborados; requiere evaluación local"
+      ],
+      "dataset_cards": [
+        {
+          "label": "Muestra",
+          "main": "Imágenes de pruebas rápidas para VIH y COVID-19; cantidad exacta de imágenes de evaluación no corroborada",
+          "sub": "Fuente científica original"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultados",
+          "main": "VIH: sensibilidad 98%, especificidad 99%; COVID-19: hasta 99% de exactitud",
+          "sub": "Datos de publicación original"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Resultados verificados",
+          "VIH: sensibilidad 98%, especificidad 99%; COVID-19: hasta 99% de exactitud",
+          "Interpretar según limitaciones"
+        ]
+      ],
+      "implementation": [
+        "Hardware: Cámaras para fotografiar pruebas rápidas; modelos de dispositivos no confirmados",
+        "Software: SynSight, generación sintética y clasificación ML; framework no confirmado",
+        "Costos: No reportados; se propone reducir el costo de reunir imágenes reales"
+      ],
+      "figures": [],
+      "sources": [
+        "https://doi.org/10.1038/s41746-026-03380-0"
+      ]
+    }
+  },
+  {
+    "date": "2026-11-11",
+    "reviewed": "11 noviembre 2026",
+    "published": "10 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-78825-3",
+    "code": "",
+    "figures": [],
+    "language": "Inglés",
+    "title": "A super learner ensemble machine learning model with SHAP-based explanations for pneumonia detection based on routine hematological markers",
+    "title_es": "Super Learner interpretable con SHAP para detectar neumonía mediante marcadores hematológicos",
+    "doi": "10.1038/s41598-026-78825-3",
+    "country": "China",
+    "institution": "Nantong University, Jianhu Hospital y Haian People's Hospital",
+    "sample": "4.389 participantes: 1.671 con neumonía y 2.718 controles sanos, de dos centros",
+    "design": "Estudio retrospectivo; división por paciente; LASSO, 15 clasificadores, SMOTE, TOPSIS, ensambles y validación cruzada externa de cinco particiones",
+    "model": "Super Learner con metaaprendiz Random Forest, explicabilidad SHAP y nomograma sustituto",
+    "metrics": "Prueba retenida: AUC 0,9822 (IC95% 0,9744–0,9891); exactitud 0,9431; sensibilidad 0,9401; especificidad 0,9449; F1 0,9263; Brier 0,0450",
+    "limitations": "Comparador de controles sanos y no pacientes sintomáticos con diagnósticos diferenciales; no equivale a rendimiento clínico prospectivo",
+    "hardware": "Analizadores hematológicos; marcas y hardware computacional no especificados",
+    "framework": "LASSO, SMOTE, TOPSIS, Super Learner, Random Forest, SHAP",
+    "cost": "Costos no cuantificados; autores describen uso de analítica hematológica rutinaria",
+    "modality": "Laboratorio clínico",
+    "rubro": "IA en salud",
+    "area": "Investigación biomédica",
+    "key_metric": "Prueba retenida: AUC 0,9822 (IC95% 0,9744–0,9891); exactitud 0,9431; sensibilidad 0,9401; especificidad 0,9449; F1 0,9263; Brier 0,0450",
+    "summary": "Super Learner interpretable con SHAP para detectar neumonía mediante marcadores hematológicos. Prueba retenida: AUC 0,9822 (IC95% 0,9744–0,9891); exactitud 0,9431; sensibilidad 0,9401; especificidad 0,9449; F1 0,9263; Brier 0,0450",
+    "rich": {
+      "overview": "Super Learner interpretable con SHAP para detectar neumonía mediante marcadores hematológicos",
+      "methodology": "Estudio retrospectivo; división por paciente; LASSO, 15 clasificadores, SMOTE, TOPSIS, ensambles y validación cruzada externa de cinco particiones",
+      "architecture": "Super Learner con metaaprendiz Random Forest, explicabilidad SHAP y nomograma sustituto",
+      "limitations": [
+        "Comparador de controles sanos y no pacientes sintomáticos con diagnósticos diferenciales; no equivale a rendimiento clínico prospectivo"
+      ],
+      "dataset_cards": [
+        {
+          "label": "Muestra",
+          "main": "4.389 participantes: 1.671 con neumonía y 2.718 controles sanos, de dos centros",
+          "sub": "Fuente científica original"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultados",
+          "main": "Prueba retenida: AUC 0,9822 (IC95% 0,9744–0,9891); exactitud 0,9431; sensibilidad 0,9401; especificidad 0,9449; F1 0,9263; Brier 0,0450",
+          "sub": "Datos de publicación original"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Resultados verificados",
+          "Prueba retenida: AUC 0,9822 (IC95% 0,9744–0,9891); exactitud 0,9431; sensibilidad 0,9401; especificidad 0,9449; F1 0,9263; Brier 0,0450",
+          "Interpretar según limitaciones"
+        ]
+      ],
+      "implementation": [
+        "Hardware: Analizadores hematológicos; marcas y hardware computacional no especificados",
+        "Software: LASSO, SMOTE, TOPSIS, Super Learner, Random Forest, SHAP",
+        "Costos: Costos no cuantificados; autores describen uso de analítica hematológica rutinaria"
+      ],
+      "figures": [],
+      "sources": [
+        "https://doi.org/10.1038/s41598-026-78825-3"
+      ]
+    }
+  },
+  {
+    "date": "2026-11-11",
+    "reviewed": "11 noviembre 2026",
+    "published": "10 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-77207-z",
+    "code": "",
+    "figures": [],
+    "language": "Inglés",
+    "title": "Development and external validation of a machine learning model for 28-day mortality in patients with gastrointestinal bleeding and chronic kidney disease",
+    "title_es": "Desarrollo y validación externa de ML para mortalidad a 28 días en hemorragia gastrointestinal con enfermedad renal crónica",
+    "doi": "10.1038/s41598-026-77207-z",
+    "country": "China y Estados Unidos (datos)",
+    "institution": "Affiliated Hospital of Guangdong Medical University; datos MIMIC-IV de Estados Unidos",
+    "sample": "926 pacientes MIMIC-IV (648 entrenamiento, 278 validación interna) y 1.000 pacientes de validación externa",
+    "design": "Estudio retrospectivo; 45 variables; selección LASSO y Boruta; seis algoritmos, búsqueda de hiperparámetros y validación cruzada 10-fold; SHAP",
+    "model": "Regresión logística seleccionada frente a XGBoost, CatBoost, AdaBoost, LightGBM y Random Forest",
+    "metrics": "AUROC interna 0,734 (IC95% 0,666–0,802); externa 0,732 (0,689–0,774); sensibilidad externa 0,455; especificidad 0,840",
+    "limitations": "Sensibilidad externa limitada; riesgo de pasar por alto eventos y necesidad de validación prospectiva",
+    "hardware": "Registros UCI, laboratorio y monitorización; GPU no confirmada",
+    "framework": "LASSO, Boruta, regresión logística, SHAP, análisis de calibración y curvas de decisión",
+    "cost": "No reportados",
+    "modality": "Historia clínica electrónica",
+    "rubro": "IA en salud",
+    "area": "Investigación biomédica",
+    "key_metric": "AUROC interna 0,734 (IC95% 0,666–0,802); externa 0,732 (0,689–0,774); sensibilidad externa 0,455; especificidad 0,840",
+    "summary": "Desarrollo y validación externa de ML para mortalidad a 28 días en hemorragia gastrointestinal con enfermedad renal crónica. AUROC interna 0,734 (IC95% 0,666–0,802); externa 0,732 (0,689–0,774); sensibilidad externa 0,455; especificidad 0,840",
+    "rich": {
+      "overview": "Desarrollo y validación externa de ML para mortalidad a 28 días en hemorragia gastrointestinal con enfermedad renal crónica",
+      "methodology": "Estudio retrospectivo; 45 variables; selección LASSO y Boruta; seis algoritmos, búsqueda de hiperparámetros y validación cruzada 10-fold; SHAP",
+      "architecture": "Regresión logística seleccionada frente a XGBoost, CatBoost, AdaBoost, LightGBM y Random Forest",
+      "limitations": [
+        "Sensibilidad externa limitada; riesgo de pasar por alto eventos y necesidad de validación prospectiva"
+      ],
+      "dataset_cards": [
+        {
+          "label": "Muestra",
+          "main": "926 pacientes MIMIC-IV (648 entrenamiento, 278 validación interna) y 1.000 pacientes de validación externa",
+          "sub": "Fuente científica original"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultados",
+          "main": "AUROC interna 0,734 (IC95% 0,666–0,802); externa 0,732 (0,689–0,774); sensibilidad externa 0,455; especificidad 0,840",
+          "sub": "Datos de publicación original"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Resultados verificados",
+          "AUROC interna 0,734 (IC95% 0,666–0,802); externa 0,732 (0,689–0,774); sensibilidad externa 0,455; especificidad 0,840",
+          "Interpretar según limitaciones"
+        ]
+      ],
+      "implementation": [
+        "Hardware: Registros UCI, laboratorio y monitorización; GPU no confirmada",
+        "Software: LASSO, Boruta, regresión logística, SHAP, análisis de calibración y curvas de decisión",
+        "Costos: No reportados"
+      ],
+      "figures": [],
+      "sources": [
+        "https://doi.org/10.1038/s41598-026-77207-z"
+      ]
+    }
+  },
+  {
+    "date": "2026-11-11",
+    "reviewed": "11 noviembre 2026",
+    "published": "10 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-79602-y",
+    "code": "",
+    "figures": [],
+    "language": "Inglés",
+    "title": "An interpretable machine learning model for predicting 28-day in-hospital mortality in ICU patients with sepsis and atrial fibrillation",
+    "title_es": "Modelo interpretable para predecir mortalidad hospitalaria a 28 días en UCI con sepsis y fibrilación auricular",
+    "doi": "10.1038/s41598-026-79602-y",
+    "country": "China (investigadores); Estados Unidos (bases de datos)",
+    "institution": "Equipo de Sun, Xu, Gao, Xiao y Shi; MIMIC y eICU",
+    "sample": "11.740 pacientes: MIMIC-IV 8.374, MIMIC-III 1.669 y eICU 1.697",
+    "design": "Estudio retrospectivo de UCI; selección de 18 variables mediante LASSO, Boruta y RFE; comparación de ocho modelos y SHAP",
+    "model": "Gradient Boosting Machine (GBM), con versión simplificada de 12 variables",
+    "metrics": "AUC GBM: interna 0,770 (IC95% 0,749–0,790), MIMIC-III 0,781 (0,756–0,807), eICU 0,721 (0,691–0,750)",
+    "limitations": "Generalización menor en eICU; evaluación retrospectiva, sin evidencia de beneficio clínico prospectivo",
+    "hardware": "Monitorización y registros de UCI; GPU no confirmada",
+    "framework": "GBM, SHAP; prototipo web Shiny",
+    "cost": "No reportados",
+    "modality": "Historia clínica electrónica",
+    "rubro": "IA en salud",
+    "area": "Investigación biomédica",
+    "key_metric": "AUC GBM: interna 0,770 (IC95% 0,749–0,790), MIMIC-III 0,781 (0,756–0,807), eICU 0,721 (0,691–0,750)",
+    "summary": "Modelo interpretable para predecir mortalidad hospitalaria a 28 días en UCI con sepsis y fibrilación auricular. AUC GBM: interna 0,770 (IC95% 0,749–0,790), MIMIC-III 0,781 (0,756–0,807), eICU 0,721 (0,691–0,750)",
+    "rich": {
+      "overview": "Modelo interpretable para predecir mortalidad hospitalaria a 28 días en UCI con sepsis y fibrilación auricular",
+      "methodology": "Estudio retrospectivo de UCI; selección de 18 variables mediante LASSO, Boruta y RFE; comparación de ocho modelos y SHAP",
+      "architecture": "Gradient Boosting Machine (GBM), con versión simplificada de 12 variables",
+      "limitations": [
+        "Generalización menor en eICU; evaluación retrospectiva, sin evidencia de beneficio clínico prospectivo"
+      ],
+      "dataset_cards": [
+        {
+          "label": "Muestra",
+          "main": "11.740 pacientes: MIMIC-IV 8.374, MIMIC-III 1.669 y eICU 1.697",
+          "sub": "Fuente científica original"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultados",
+          "main": "AUC GBM: interna 0,770 (IC95% 0,749–0,790), MIMIC-III 0,781 (0,756–0,807), eICU 0,721 (0,691–0,750)",
+          "sub": "Datos de publicación original"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Resultados verificados",
+          "AUC GBM: interna 0,770 (IC95% 0,749–0,790), MIMIC-III 0,781 (0,756–0,807), eICU 0,721 (0,691–0,750)",
+          "Interpretar según limitaciones"
+        ]
+      ],
+      "implementation": [
+        "Hardware: Monitorización y registros de UCI; GPU no confirmada",
+        "Software: GBM, SHAP; prototipo web Shiny",
+        "Costos: No reportados"
+      ],
+      "figures": [],
+      "sources": [
+        "https://doi.org/10.1038/s41598-026-79602-y"
+      ]
+    }
+  },
+  {
     "date": "2026-11-10",
     "reviewed": "10 noviembre 2026",
     "published": "10 noviembre 2026",
