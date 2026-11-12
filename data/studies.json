@@ -1,5 +1,593 @@
 [
   {
+    "date": "2026-11-12",
+    "reviewed": "12 noviembre 2026",
+    "published": "12 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-79944-7",
+    "code": "",
+    "figures": [],
+    "language": "Inglés",
+    "title": "Explainable AI-driven neural activity analysis in Parkinsonian rats under electrical stimulation",
+    "title_es": "IA explicable para analizar actividad neural en ratas parkinsonianas sometidas a estimulación eléctrica",
+    "doi": "10.1038/s41598-026-79944-7",
+    "country": "Corea del Sur",
+    "institution": "Incheon National University, Center for Brain-Machine Interface",
+    "sample": "Modelo preclínico de ratas parkinsonianas; cuatro ratas según versión de investigación; confirmar equivalencia con versión editorial",
+    "design": "ECoG antes y después de estimulación cortical con electrodos de grafeno; análisis individual por animal y bandas de frecuencia",
+    "model": "EEGNet y DeepConvNet; explicabilidad LRP y DeepLIFT",
+    "metrics": "Atribuciones relevantes en bandas beta y gamma y regiones corticales; el resumen editorial no cuantifica exactitud global",
+    "limitations": "Estudio animal de pequeña escala; clasificación intraanimal no implica generalización entre pacientes ni eficacia terapéutica",
+    "hardware": "Matriz de electrodos corticales de grafeno para ECoG y estimulación; GPU no especificada",
+    "framework": "EEGNet, DeepConvNet, Layer-wise Relevance Propagation, DeepLIFT; librerías no confirmadas",
+    "cost": "No reportados",
+    "modality": "Electrocorticografía y neuroingeniería",
+    "rubro": "IA en salud",
+    "area": "Ingeniería biomédica",
+    "key_metric": "Atribuciones relevantes en bandas beta y gamma y regiones corticales; el resumen editorial no cuantifica exactitud global",
+    "summary": "IA explicable para analizar actividad neural en ratas parkinsonianas sometidas a estimulación eléctrica. Atribuciones relevantes en bandas beta y gamma y regiones corticales; el resumen editorial no cuantifica exactitud global. Limitación: Estudio animal de pequeña escala; clasificación intraanimal no implica generalización entre pacientes ni eficacia terapéutica",
+    "rich": {
+      "overview": "IA explicable para analizar actividad neural en ratas parkinsonianas sometidas a estimulación eléctrica. País: Corea del Sur. Institución: Incheon National University, Center for Brain-Machine Interface. Fecha: 12 noviembre 2026. Fuente primaria: https://doi.org/10.1038/s41598-026-79944-7",
+      "methodology": "ECoG antes y después de estimulación cortical con electrodos de grafeno; análisis individual por animal y bandas de frecuencia",
+      "architecture": "EEGNet y DeepConvNet; explicabilidad LRP y DeepLIFT",
+      "limitations": [
+        "Estudio animal de pequeña escala; clasificación intraanimal no implica generalización entre pacientes ni eficacia terapéutica"
+      ],
+      "dataset_cards": [
+        {
+          "label": "Muestra",
+          "main": "Modelo preclínico de ratas parkinsonianas; cuatro ratas según versión de investigación; confirmar equivalencia con versión editorial",
+          "sub": "Datos y población descritos por los autores"
+        },
+        {
+          "label": "Diseño",
+          "main": "ECoG antes y después de estimulación cortical con electrodos de grafeno; análisis individual por animal y bandas de frecuencia",
+          "sub": "Metodología de estudio"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultados",
+          "main": "Atribuciones relevantes en bandas beta y gamma y regiones corticales; el resumen editorial no cuantifica exactitud global",
+          "sub": "Métricas reportadas; revisar contexto de validación"
+        },
+        {
+          "label": "Aplicación",
+          "main": "Ingeniería biomédica",
+          "sub": "Electrocorticografía y neuroingeniería"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Métricas verificadas",
+          "Atribuciones relevantes en bandas beta y gamma y regiones corticales; el resumen editorial no cuantifica exactitud global",
+          "No comparar directamente entre cohortes y diseños"
+        ],
+        [
+          "Limitación",
+          "Estudio animal de pequeña escala; clasificación intraanimal no implica generalización entre pacientes ni eficacia terapéutica",
+          "Interpretación crítica"
+        ]
+      ],
+      "implementation": [
+        "Hardware: Matriz de electrodos corticales de grafeno para ECoG y estimulación; GPU no especificada",
+        "Software: EEGNet, DeepConvNet, Layer-wise Relevance Propagation, DeepLIFT; librerías no confirmadas",
+        "Costos: No reportados"
+      ],
+      "figures": [],
+      "sources": [
+        "https://doi.org/10.1038/s41598-026-79944-7"
+      ]
+    }
+  },
+  {
+    "date": "2026-11-12",
+    "reviewed": "12 noviembre 2026",
+    "published": "12 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Communications Biology · 2026",
+    "paper": "https://doi.org/10.1038/s42003-026-11268-8",
+    "code": "",
+    "figures": [],
+    "language": "Inglés",
+    "title": "A covariance-aware variational generative model preserving gene correlation structure in single-cell transcriptomic data",
+    "title_es": "Modelo generativo variacional sensible a covarianza para datos transcriptómicos unicelulares",
+    "doi": "10.1038/s42003-026-11268-8",
+    "country": "España",
+    "institution": "Equipo de Alba Lomas Redondo, Jose M. Sánchez Velázquez y Víctor Javier Sánchez-Arévalo Lobo; afiliaciones específicas no corroboradas",
+    "sample": "Dos cohortes independientes de pacientes con cáncer pancreático; tamaño celular exacto no confirmado",
+    "design": "Generación de células sintéticas y comparación de estructura de expresión y correlaciones gen-gen frente a modelos de referencia",
+    "model": "Modelo generativo variacional con estructura de covarianza latente; comparación con VAE emparejado y modelo de difusión",
+    "metrics": "Entrenamiento entre 100 y 1000 veces más rápido que alternativa de difusión; modelar covarianza explícita no mejoró correlaciones frente al VAE comparable",
+    "limitations": "Datos sintéticos no sustituyen muestras biológicas ni validan resultados clínicos; variabilidad entre cohortes",
+    "hardware": "Secuenciación unicelular de origen; GPU no especificada",
+    "framework": "Modelo variacional generativo, comparación con difusión; librerías no confirmadas",
+    "cost": "No reportados",
+    "modality": "Transcriptómica unicelular",
+    "rubro": "IA en salud",
+    "area": "IA biomédica",
+    "key_metric": "Entrenamiento entre 100 y 1000 veces más rápido que alternativa de difusión; modelar covarianza explícita no mejoró correlaciones frente al VAE comparable",
+    "summary": "Modelo generativo variacional sensible a covarianza para datos transcriptómicos unicelulares. Entrenamiento entre 100 y 1000 veces más rápido que alternativa de difusión; modelar covarianza explícita no mejoró correlaciones frente al VAE comparable. Limitación: Datos sintéticos no sustituyen muestras biológicas ni validan resultados clínicos; variabilidad entre cohortes",
+    "rich": {
+      "overview": "Modelo generativo variacional sensible a covarianza para datos transcriptómicos unicelulares. País: España. Institución: Equipo de Alba Lomas Redondo, Jose M. Sánchez Velázquez y Víctor Javier Sánchez-Arévalo Lobo; afiliaciones específicas no corroboradas. Fecha: 12 noviembre 2026. Fuente primaria: https://doi.org/10.1038/s42003-026-11268-8",
+      "methodology": "Generación de células sintéticas y comparación de estructura de expresión y correlaciones gen-gen frente a modelos de referencia",
+      "architecture": "Modelo generativo variacional con estructura de covarianza latente; comparación con VAE emparejado y modelo de difusión",
+      "limitations": [
+        "Datos sintéticos no sustituyen muestras biológicas ni validan resultados clínicos; variabilidad entre cohortes"
+      ],
+      "dataset_cards": [
+        {
+          "label": "Muestra",
+          "main": "Dos cohortes independientes de pacientes con cáncer pancreático; tamaño celular exacto no confirmado",
+          "sub": "Datos y población descritos por los autores"
+        },
+        {
+          "label": "Diseño",
+          "main": "Generación de células sintéticas y comparación de estructura de expresión y correlaciones gen-gen frente a modelos de referencia",
+          "sub": "Metodología de estudio"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultados",
+          "main": "Entrenamiento entre 100 y 1000 veces más rápido que alternativa de difusión; modelar covarianza explícita no mejoró correlaciones frente al VAE comparable",
+          "sub": "Métricas reportadas; revisar contexto de validación"
+        },
+        {
+          "label": "Aplicación",
+          "main": "IA biomédica",
+          "sub": "Transcriptómica unicelular"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Métricas verificadas",
+          "Entrenamiento entre 100 y 1000 veces más rápido que alternativa de difusión; modelar covarianza explícita no mejoró correlaciones frente al VAE comparable",
+          "No comparar directamente entre cohortes y diseños"
+        ],
+        [
+          "Limitación",
+          "Datos sintéticos no sustituyen muestras biológicas ni validan resultados clínicos; variabilidad entre cohortes",
+          "Interpretación crítica"
+        ]
+      ],
+      "implementation": [
+        "Hardware: Secuenciación unicelular de origen; GPU no especificada",
+        "Software: Modelo variacional generativo, comparación con difusión; librerías no confirmadas",
+        "Costos: No reportados"
+      ],
+      "figures": [],
+      "sources": [
+        "https://doi.org/10.1038/s42003-026-11268-8"
+      ]
+    }
+  },
+  {
+    "date": "2026-11-12",
+    "reviewed": "12 noviembre 2026",
+    "published": "11 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Communications Health · 2026",
+    "paper": "https://doi.org/10.1038/s44528-026-00051-0",
+    "code": "",
+    "figures": [],
+    "language": "Inglés",
+    "title": "Evaluation of machine learning-based prediction of pregnancy complications and adverse birth outcomes using routine data",
+    "title_es": "Evaluación de predicción de complicaciones gestacionales y resultados adversos con aprendizaje automático y datos rutinarios",
+    "doi": "10.1038/s44528-026-00051-0",
+    "country": "Estados Unidos",
+    "institution": "Kaiser Permanente Northern California, Massachusetts Institute of Technology y colaboradores",
+    "sample": "442.760 embarazos en cohorte de desarrollo; 6.105 embarazos de validación externa All of Us",
+    "design": "Predicción de siete desenlaces cada seis semanas de gestación usando historias clínicas; evaluación de transferibilidad y costo-efectividad",
+    "model": "XGBoost por desenlace y momento gestacional",
+    "metrics": "AUC a 12 semanas: hipertensión gestacional 0,789; diabetes gestacional 0,800; preeclampsia 0,740. AUC a 24 semanas: parto prematuro 0,683; mortinato 0,667; desprendimiento placentario 0,622; pequeño para edad gestacional 0,654",
+    "limitations": "Capacidad predictiva baja para varios desenlaces de parto; transferencia a All of Us requirió ajuste local; predicción no prueba beneficio de intervención",
+    "hardware": "Historias clínicas electrónicas, laboratorios y constantes vitales; GPU no reportada",
+    "framework": "XGBoost y evaluación de calibración/costo-efectividad; stack exacto no confirmado",
+    "cost": "Análisis económico de intervenciones; ejemplo citado de intervención preventiva para diabetes gestacional alrededor de USD 199 por mujer, no costo de IA",
+    "modality": "Historia clínica electrónica",
+    "rubro": "IA en salud",
+    "area": "IA clínica",
+    "key_metric": "AUC a 12 semanas: hipertensión gestacional 0,789; diabetes gestacional 0,800; preeclampsia 0,740. AUC a 24 semanas: parto prematuro 0,683; mortinato 0,667; desprendimiento placentario 0,622; pequeño para edad gestacional 0,654",
+    "summary": "Evaluación de predicción de complicaciones gestacionales y resultados adversos con aprendizaje automático y datos rutinarios. AUC a 12 semanas: hipertensión gestacional 0,789; diabetes gestacional 0,800; preeclampsia 0,740. AUC a 24 semanas: parto prematuro 0,683; mortinato 0,667; desprendimiento placentario 0,622; pequeño para edad gestacional 0,654. Limitación: Capacidad predictiva baja para varios desenlaces de parto; transferencia a All of Us requirió ajuste local; predicción no prueba beneficio de intervención",
+    "rich": {
+      "overview": "Evaluación de predicción de complicaciones gestacionales y resultados adversos con aprendizaje automático y datos rutinarios. País: Estados Unidos. Institución: Kaiser Permanente Northern California, Massachusetts Institute of Technology y colaboradores. Fecha: 11 noviembre 2026. Fuente primaria: https://doi.org/10.1038/s44528-026-00051-0",
+      "methodology": "Predicción de siete desenlaces cada seis semanas de gestación usando historias clínicas; evaluación de transferibilidad y costo-efectividad",
+      "architecture": "XGBoost por desenlace y momento gestacional",
+      "limitations": [
+        "Capacidad predictiva baja para varios desenlaces de parto; transferencia a All of Us requirió ajuste local; predicción no prueba beneficio de intervención"
+      ],
+      "dataset_cards": [
+        {
+          "label": "Muestra",
+          "main": "442.760 embarazos en cohorte de desarrollo; 6.105 embarazos de validación externa All of Us",
+          "sub": "Datos y población descritos por los autores"
+        },
+        {
+          "label": "Diseño",
+          "main": "Predicción de siete desenlaces cada seis semanas de gestación usando historias clínicas; evaluación de transferibilidad y costo-efectividad",
+          "sub": "Metodología de estudio"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultados",
+          "main": "AUC a 12 semanas: hipertensión gestacional 0,789; diabetes gestacional 0,800; preeclampsia 0,740. AUC a 24 semanas: parto prematuro 0,683; mortinato 0,667; desprendimiento placentario 0,622; pequeño para edad gestacional 0,654",
+          "sub": "Métricas reportadas; revisar contexto de validación"
+        },
+        {
+          "label": "Aplicación",
+          "main": "IA clínica",
+          "sub": "Historia clínica electrónica"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Métricas verificadas",
+          "AUC a 12 semanas: hipertensión gestacional 0,789; diabetes gestacional 0,800; preeclampsia 0,740. AUC a 24 semanas: parto prematuro 0,683; mortinato 0,667; desprendimiento placentario 0,622; pequeño para edad gestacional 0,654",
+          "No comparar directamente entre cohortes y diseños"
+        ],
+        [
+          "Limitación",
+          "Capacidad predictiva baja para varios desenlaces de parto; transferencia a All of Us requirió ajuste local; predicción no prueba beneficio de intervención",
+          "Interpretación crítica"
+        ]
+      ],
+      "implementation": [
+        "Hardware: Historias clínicas electrónicas, laboratorios y constantes vitales; GPU no reportada",
+        "Software: XGBoost y evaluación de calibración/costo-efectividad; stack exacto no confirmado",
+        "Costos: Análisis económico de intervenciones; ejemplo citado de intervención preventiva para diabetes gestacional alrededor de USD 199 por mujer, no costo de IA"
+      ],
+      "figures": [],
+      "sources": [
+        "https://doi.org/10.1038/s44528-026-00051-0"
+      ]
+    }
+  },
+  {
+    "date": "2026-11-12",
+    "reviewed": "12 noviembre 2026",
+    "published": "11 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-80469-2",
+    "code": "",
+    "figures": [],
+    "language": "Inglés",
+    "title": "Development of an explainable machine-learning-based predictive model for cisplatin-induced nephrotoxicity using real-world data",
+    "title_es": "Modelo interpretable para predecir nefrotoxicidad asociada a cisplatino con datos reales",
+    "doi": "10.1038/s41598-026-80469-2",
+    "country": "Japón",
+    "institution": "Kotoe Kiyomoto, Kenji Ikemura y Masahiro Okuda; afiliaciones institucionales no corroboradas",
+    "sample": "1.705 pacientes; 551 (32%) presentaron nefrotoxicidad",
+    "design": "Estudio unicéntrico con datos demográficos y laboratorios seriados, evaluación con conjunto de prueba independiente y SHAP",
+    "model": "Regresión logística comparada con Random Forest, SVM y red neuronal artificial",
+    "metrics": "Regresión logística: AUC-ROC 0,791; AUC-PR 0,702; exactitud 0,739; recall 0,645; Brier 0,188; F1.5 0,626",
+    "limitations": "Centro único, sin validación externa; creatinina días 4–6 implica una predicción durante seguimiento, no exclusivamente basal",
+    "hardware": "Analizadores de laboratorio clínico; modelos y GPU no reportados",
+    "framework": "Regresión logística, RF, SVM, ANN, SHAP; librerías no confirmadas",
+    "cost": "No reportados",
+    "modality": "Laboratorio clínico y EHR",
+    "rubro": "IA en salud",
+    "area": "IA clínica",
+    "key_metric": "Regresión logística: AUC-ROC 0,791; AUC-PR 0,702; exactitud 0,739; recall 0,645; Brier 0,188; F1.5 0,626",
+    "summary": "Modelo interpretable para predecir nefrotoxicidad asociada a cisplatino con datos reales. Regresión logística: AUC-ROC 0,791; AUC-PR 0,702; exactitud 0,739; recall 0,645; Brier 0,188; F1.5 0,626. Limitación: Centro único, sin validación externa; creatinina días 4–6 implica una predicción durante seguimiento, no exclusivamente basal",
+    "rich": {
+      "overview": "Modelo interpretable para predecir nefrotoxicidad asociada a cisplatino con datos reales. País: Japón. Institución: Kotoe Kiyomoto, Kenji Ikemura y Masahiro Okuda; afiliaciones institucionales no corroboradas. Fecha: 11 noviembre 2026. Fuente primaria: https://doi.org/10.1038/s41598-026-80469-2",
+      "methodology": "Estudio unicéntrico con datos demográficos y laboratorios seriados, evaluación con conjunto de prueba independiente y SHAP",
+      "architecture": "Regresión logística comparada con Random Forest, SVM y red neuronal artificial",
+      "limitations": [
+        "Centro único, sin validación externa; creatinina días 4–6 implica una predicción durante seguimiento, no exclusivamente basal"
+      ],
+      "dataset_cards": [
+        {
+          "label": "Muestra",
+          "main": "1.705 pacientes; 551 (32%) presentaron nefrotoxicidad",
+          "sub": "Datos y población descritos por los autores"
+        },
+        {
+          "label": "Diseño",
+          "main": "Estudio unicéntrico con datos demográficos y laboratorios seriados, evaluación con conjunto de prueba independiente y SHAP",
+          "sub": "Metodología de estudio"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultados",
+          "main": "Regresión logística: AUC-ROC 0,791; AUC-PR 0,702; exactitud 0,739; recall 0,645; Brier 0,188; F1.5 0,626",
+          "sub": "Métricas reportadas; revisar contexto de validación"
+        },
+        {
+          "label": "Aplicación",
+          "main": "IA clínica",
+          "sub": "Laboratorio clínico y EHR"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Métricas verificadas",
+          "Regresión logística: AUC-ROC 0,791; AUC-PR 0,702; exactitud 0,739; recall 0,645; Brier 0,188; F1.5 0,626",
+          "No comparar directamente entre cohortes y diseños"
+        ],
+        [
+          "Limitación",
+          "Centro único, sin validación externa; creatinina días 4–6 implica una predicción durante seguimiento, no exclusivamente basal",
+          "Interpretación crítica"
+        ]
+      ],
+      "implementation": [
+        "Hardware: Analizadores de laboratorio clínico; modelos y GPU no reportados",
+        "Software: Regresión logística, RF, SVM, ANN, SHAP; librerías no confirmadas",
+        "Costos: No reportados"
+      ],
+      "figures": [],
+      "sources": [
+        "https://doi.org/10.1038/s41598-026-80469-2"
+      ]
+    }
+  },
+  {
+    "date": "2026-11-12",
+    "reviewed": "12 noviembre 2026",
+    "published": "11 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-77072-w",
+    "code": "",
+    "figures": [],
+    "language": "Inglés",
+    "title": "MOSAIC (morphology-oriented spatial attention for inferring cell expression)",
+    "title_es": "MOSAIC: atención espacial basada en morfología para inferir expresión génica celular",
+    "doi": "10.1038/s41598-026-77072-w",
+    "country": "Brasil y Estados Unidos",
+    "institution": "Universidade Federal de Goiás; Hospital Israelita Albert Einstein; Universidade de São Paulo; University of Colorado Boulder",
+    "sample": "Datos histológicos H&E y transcriptómica Xenium de colon inflamado; 1.089.822 células en siete muestras integradas; prueba de clasificación UC1: 20.253 células",
+    "design": "Dos fases: inferencia de expresión de 460 genes desde imagen celular y seis vecinas; clasificación de nueve linajes desde expresión predicha; secciones de pacientes separadas",
+    "model": "MOSAIC, atención espacial por vecindario y clasificador de linaje posterior",
+    "metrics": "Correlación media Pearson 0,22 y Spearman 0,17; exactitud de linaje 63% vs azar 11%, mayoría 14% y control con expresión real 95%; macro-F1 0,544",
+    "limitations": "Acuerdo génico modesto y generalización limitada al conjunto; linajes anotados internamente, no anotaciones originales del reto; sin utilidad clínica probada",
+    "hardware": "Histología H&E y plataforma Xenium de transcriptómica espacial; GPU no confirmada",
+    "framework": "MOSAIC, integración Harmony, clustering Leiden y aprendizaje profundo; stack no corroborado",
+    "cost": "Costos no cuantificados; motivación es reducir dependencia de transcriptómica espacial",
+    "modality": "Patología digital y transcriptómica espacial",
+    "rubro": "IA en salud",
+    "area": "Ingeniería biomédica",
+    "key_metric": "Correlación media Pearson 0,22 y Spearman 0,17; exactitud de linaje 63% vs azar 11%, mayoría 14% y control con expresión real 95%; macro-F1 0,544",
+    "summary": "MOSAIC: atención espacial basada en morfología para inferir expresión génica celular. Correlación media Pearson 0,22 y Spearman 0,17; exactitud de linaje 63% vs azar 11%, mayoría 14% y control con expresión real 95%; macro-F1 0,544. Limitación: Acuerdo génico modesto y generalización limitada al conjunto; linajes anotados internamente, no anotaciones originales del reto; sin utilidad clínica probada",
+    "rich": {
+      "overview": "MOSAIC: atención espacial basada en morfología para inferir expresión génica celular. País: Brasil y Estados Unidos. Institución: Universidade Federal de Goiás; Hospital Israelita Albert Einstein; Universidade de São Paulo; University of Colorado Boulder. Fecha: 11 noviembre 2026. Fuente primaria: https://doi.org/10.1038/s41598-026-77072-w",
+      "methodology": "Dos fases: inferencia de expresión de 460 genes desde imagen celular y seis vecinas; clasificación de nueve linajes desde expresión predicha; secciones de pacientes separadas",
+      "architecture": "MOSAIC, atención espacial por vecindario y clasificador de linaje posterior",
+      "limitations": [
+        "Acuerdo génico modesto y generalización limitada al conjunto; linajes anotados internamente, no anotaciones originales del reto; sin utilidad clínica probada"
+      ],
+      "dataset_cards": [
+        {
+          "label": "Muestra",
+          "main": "Datos histológicos H&E y transcriptómica Xenium de colon inflamado; 1.089.822 células en siete muestras integradas; prueba de clasificación UC1: 20.253 células",
+          "sub": "Datos y población descritos por los autores"
+        },
+        {
+          "label": "Diseño",
+          "main": "Dos fases: inferencia de expresión de 460 genes desde imagen celular y seis vecinas; clasificación de nueve linajes desde expresión predicha; secciones de pacientes separadas",
+          "sub": "Metodología de estudio"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultados",
+          "main": "Correlación media Pearson 0,22 y Spearman 0,17; exactitud de linaje 63% vs azar 11%, mayoría 14% y control con expresión real 95%; macro-F1 0,544",
+          "sub": "Métricas reportadas; revisar contexto de validación"
+        },
+        {
+          "label": "Aplicación",
+          "main": "Ingeniería biomédica",
+          "sub": "Patología digital y transcriptómica espacial"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Métricas verificadas",
+          "Correlación media Pearson 0,22 y Spearman 0,17; exactitud de linaje 63% vs azar 11%, mayoría 14% y control con expresión real 95%; macro-F1 0,544",
+          "No comparar directamente entre cohortes y diseños"
+        ],
+        [
+          "Limitación",
+          "Acuerdo génico modesto y generalización limitada al conjunto; linajes anotados internamente, no anotaciones originales del reto; sin utilidad clínica probada",
+          "Interpretación crítica"
+        ]
+      ],
+      "implementation": [
+        "Hardware: Histología H&E y plataforma Xenium de transcriptómica espacial; GPU no confirmada",
+        "Software: MOSAIC, integración Harmony, clustering Leiden y aprendizaje profundo; stack no corroborado",
+        "Costos: Costos no cuantificados; motivación es reducir dependencia de transcriptómica espacial"
+      ],
+      "figures": [],
+      "sources": [
+        "https://doi.org/10.1038/s41598-026-77072-w"
+      ]
+    }
+  },
+  {
+    "date": "2026-11-12",
+    "reviewed": "12 noviembre 2026",
+    "published": "11 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-79195-6",
+    "code": "",
+    "figures": [],
+    "language": "Inglés",
+    "title": "Blood based multi biomarker panel discriminates Alzheimer disease from healthy controls in a single center nested cross validation",
+    "title_es": "Panel sanguíneo multibiomarcador para diferenciar Alzheimer de controles sanos mediante validación cruzada anidada",
+    "doi": "10.1038/s41598-026-79195-6",
+    "country": "China",
+    "institution": "Shanghai Mental Health Center y Shanghai Jiao Tong University, entre colaboradores",
+    "sample": "200 personas: 100 con Alzheimer establecido y 100 controles sanos; 12 biomarcadores sanguíneos",
+    "design": "Evaluación de biomarcadores neurotróficos, tau, daño neuronal e inflamación; PCA, OPLS-DA y validación cruzada anidada",
+    "model": "Regresión LASSO y ensamble stacking de clasificadores, además de PCA y OPLS-DA exploratorios",
+    "metrics": "Diseño 100 casos / 100 controles, 12 biomarcadores; no se corroboró una AUC concreta en el resumen editorial accesible",
+    "limitations": "Un solo centro, tamaño reducido y comparación contra controles sanos; no demuestra cribado en población general",
+    "hardware": "Equipamiento de laboratorio para biomarcadores sanguíneos; plataforma exacta no confirmada",
+    "framework": "PCA, OPLS-DA, LASSO, stacking; librerías no confirmadas",
+    "cost": "No reportados",
+    "modality": "Biomarcadores sanguíneos",
+    "rubro": "IA en salud",
+    "area": "IA clínica",
+    "key_metric": "Diseño 100 casos / 100 controles, 12 biomarcadores; no se corroboró una AUC concreta en el resumen editorial accesible",
+    "summary": "Panel sanguíneo multibiomarcador para diferenciar Alzheimer de controles sanos mediante validación cruzada anidada. Diseño 100 casos / 100 controles, 12 biomarcadores; no se corroboró una AUC concreta en el resumen editorial accesible. Limitación: Un solo centro, tamaño reducido y comparación contra controles sanos; no demuestra cribado en población general",
+    "rich": {
+      "overview": "Panel sanguíneo multibiomarcador para diferenciar Alzheimer de controles sanos mediante validación cruzada anidada. País: China. Institución: Shanghai Mental Health Center y Shanghai Jiao Tong University, entre colaboradores. Fecha: 11 noviembre 2026. Fuente primaria: https://doi.org/10.1038/s41598-026-79195-6",
+      "methodology": "Evaluación de biomarcadores neurotróficos, tau, daño neuronal e inflamación; PCA, OPLS-DA y validación cruzada anidada",
+      "architecture": "Regresión LASSO y ensamble stacking de clasificadores, además de PCA y OPLS-DA exploratorios",
+      "limitations": [
+        "Un solo centro, tamaño reducido y comparación contra controles sanos; no demuestra cribado en población general"
+      ],
+      "dataset_cards": [
+        {
+          "label": "Muestra",
+          "main": "200 personas: 100 con Alzheimer establecido y 100 controles sanos; 12 biomarcadores sanguíneos",
+          "sub": "Datos y población descritos por los autores"
+        },
+        {
+          "label": "Diseño",
+          "main": "Evaluación de biomarcadores neurotróficos, tau, daño neuronal e inflamación; PCA, OPLS-DA y validación cruzada anidada",
+          "sub": "Metodología de estudio"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultados",
+          "main": "Diseño 100 casos / 100 controles, 12 biomarcadores; no se corroboró una AUC concreta en el resumen editorial accesible",
+          "sub": "Métricas reportadas; revisar contexto de validación"
+        },
+        {
+          "label": "Aplicación",
+          "main": "IA clínica",
+          "sub": "Biomarcadores sanguíneos"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Métricas verificadas",
+          "Diseño 100 casos / 100 controles, 12 biomarcadores; no se corroboró una AUC concreta en el resumen editorial accesible",
+          "No comparar directamente entre cohortes y diseños"
+        ],
+        [
+          "Limitación",
+          "Un solo centro, tamaño reducido y comparación contra controles sanos; no demuestra cribado en población general",
+          "Interpretación crítica"
+        ]
+      ],
+      "implementation": [
+        "Hardware: Equipamiento de laboratorio para biomarcadores sanguíneos; plataforma exacta no confirmada",
+        "Software: PCA, OPLS-DA, LASSO, stacking; librerías no confirmadas",
+        "Costos: No reportados"
+      ],
+      "figures": [],
+      "sources": [
+        "https://doi.org/10.1038/s41598-026-79195-6"
+      ]
+    }
+  },
+  {
+    "date": "2026-11-12",
+    "reviewed": "12 noviembre 2026",
+    "published": "11 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-74605-1",
+    "code": "",
+    "figures": [],
+    "language": "Inglés",
+    "title": "Time adaptive clinical data driven cardiovascular disease detection using multi-objective features-based residual CapsNet with coordinate attention",
+    "title_es": "Detección cardiovascular con CapsNet residual, atención por coordenadas y selección multiobjetivo de variables",
+    "doi": "10.1038/s41598-026-74605-1",
+    "country": "India",
+    "institution": "J. Steephan Amalraj y T. Kumaresan; afiliaciones exactas no confirmadas",
+    "sample": "Dos bases de referencia cardiovascular; dataset 1 con 303 registros iniciales y 298 tras depuración; tamaño dataset 2 no confirmado",
+    "design": "Normalización DGPN, selección de características RBM ponderada y optimización RFO-BOA; partición 80/20 en dataset 1",
+    "model": "Adaptive Residual Capsule Network con Coordinate Attention (ARCCA) optimizada con RFO-BOA",
+    "metrics": "Exactitud de hasta 95,24% en pruebas de activación; comparación de estado del arte 94,94% y 94,99% en datasets 1 y 2; AUC 0,996 y 0,999 reportadas",
+    "limitations": "Benchmarks pequeños o públicos y resultados internos heterogéneos; ausencia de validación hospitalaria prospectiva; cifras de diferentes análisis no son intercambiables",
+    "hardware": "Datos clínicos tabulares; GPU no confirmada",
+    "framework": "Python, DGPN, RBM, ARCCA, RFO-BOA, SMOTE",
+    "cost": "No reportados",
+    "modality": "Datos clínicos cardiovasculares",
+    "rubro": "IA en salud",
+    "area": "IA clínica",
+    "key_metric": "Exactitud de hasta 95,24% en pruebas de activación; comparación de estado del arte 94,94% y 94,99% en datasets 1 y 2; AUC 0,996 y 0,999 reportadas",
+    "summary": "Detección cardiovascular con CapsNet residual, atención por coordenadas y selección multiobjetivo de variables. Exactitud de hasta 95,24% en pruebas de activación; comparación de estado del arte 94,94% y 94,99% en datasets 1 y 2; AUC 0,996 y 0,999 reportadas. Limitación: Benchmarks pequeños o públicos y resultados internos heterogéneos; ausencia de validación hospitalaria prospectiva; cifras de diferentes análisis no son intercambiables",
+    "rich": {
+      "overview": "Detección cardiovascular con CapsNet residual, atención por coordenadas y selección multiobjetivo de variables. País: India. Institución: J. Steephan Amalraj y T. Kumaresan; afiliaciones exactas no confirmadas. Fecha: 11 noviembre 2026. Fuente primaria: https://doi.org/10.1038/s41598-026-74605-1",
+      "methodology": "Normalización DGPN, selección de características RBM ponderada y optimización RFO-BOA; partición 80/20 en dataset 1",
+      "architecture": "Adaptive Residual Capsule Network con Coordinate Attention (ARCCA) optimizada con RFO-BOA",
+      "limitations": [
+        "Benchmarks pequeños o públicos y resultados internos heterogéneos; ausencia de validación hospitalaria prospectiva; cifras de diferentes análisis no son intercambiables"
+      ],
+      "dataset_cards": [
+        {
+          "label": "Muestra",
+          "main": "Dos bases de referencia cardiovascular; dataset 1 con 303 registros iniciales y 298 tras depuración; tamaño dataset 2 no confirmado",
+          "sub": "Datos y población descritos por los autores"
+        },
+        {
+          "label": "Diseño",
+          "main": "Normalización DGPN, selección de características RBM ponderada y optimización RFO-BOA; partición 80/20 en dataset 1",
+          "sub": "Metodología de estudio"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultados",
+          "main": "Exactitud de hasta 95,24% en pruebas de activación; comparación de estado del arte 94,94% y 94,99% en datasets 1 y 2; AUC 0,996 y 0,999 reportadas",
+          "sub": "Métricas reportadas; revisar contexto de validación"
+        },
+        {
+          "label": "Aplicación",
+          "main": "IA clínica",
+          "sub": "Datos clínicos cardiovasculares"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Métricas verificadas",
+          "Exactitud de hasta 95,24% en pruebas de activación; comparación de estado del arte 94,94% y 94,99% en datasets 1 y 2; AUC 0,996 y 0,999 reportadas",
+          "No comparar directamente entre cohortes y diseños"
+        ],
+        [
+          "Limitación",
+          "Benchmarks pequeños o públicos y resultados internos heterogéneos; ausencia de validación hospitalaria prospectiva; cifras de diferentes análisis no son intercambiables",
+          "Interpretación crítica"
+        ]
+      ],
+      "implementation": [
+        "Hardware: Datos clínicos tabulares; GPU no confirmada",
+        "Software: Python, DGPN, RBM, ARCCA, RFO-BOA, SMOTE",
+        "Costos: No reportados"
+      ],
+      "figures": [],
+      "sources": [
+        "https://doi.org/10.1038/s41598-026-74605-1"
+      ]
+    }
+  },
+  {
     "date": "2026-11-11",
     "reviewed": "11 noviembre 2026",
     "published": "11 noviembre 2026",
