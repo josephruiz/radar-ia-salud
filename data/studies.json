@@ -1,5 +1,593 @@
 [
   {
+    "date": "2026-11-13",
+    "reviewed": "13 noviembre 2026",
+    "published": "12 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-75902-5",
+    "code": "",
+    "figures": [],
+    "language": "Inglés",
+    "title": "Machine learning classification of acute concussion using data obtained from neurological tests delivered through virtual reality",
+    "title_es": "Clasificación de conmoción cerebral aguda mediante pruebas neurológicas de realidad virtual",
+    "doi": "10.1038/s41598-026-75902-5",
+    "country": "Estados Unidos",
+    "institution": "Northeast Ohio Medical University; Southwest Research Institute; HC Simulation LLC",
+    "sample": "726 participantes de 18–40 años: 29 casos y 697 controles",
+    "design": "Pruebas en realidad virtual, autoinformes y sensores; 175 características de sensores más variables demográficas; cinco configuraciones predictivas",
+    "model": "Regresión logística L1 (LASSO) y Histogram Gradient Boosting (HGB)",
+    "metrics": "AUC LASSO 0,86 (IC95% 0,66–0,98); HGB 0,85 (0,67–0,97); exactitud balanceada 0,77 y 0,69",
+    "limitations": "Solo 29 casos; desequilibrio marcado; intervalos de confianza amplios; evaluación inicial, sin demostración de utilidad clínica prospectiva",
+    "hardware": "Visor de realidad virtual con sensores de movimiento; marca no confirmada",
+    "framework": "LASSO y HGB; librerías no reportadas",
+    "cost": "Costo de dispositivo y despliegue no reportado; financiación de programa más amplio no equivale a costo de modelo",
+    "modality": "Neuroingeniería",
+    "rubro": "IA en salud e ingeniería biomédica",
+    "area": "Neuroingeniería",
+    "key_metric": "AUC LASSO 0,86 (IC95% 0,66–0,98)",
+    "summary": "Clasificación de conmoción cerebral aguda mediante pruebas neurológicas de realidad virtual. AUC LASSO 0,86 (IC95% 0,66–0,98); HGB 0,85 (0,67–0,97); exactitud balanceada 0,77 y 0,69. Limitación: Solo 29 casos; desequilibrio marcado; intervalos de confianza amplios; evaluación inicial, sin demostración de utilidad clínica prospectiva",
+    "rich": {
+      "overview": "Clasificación de conmoción cerebral aguda mediante pruebas neurológicas de realidad virtual. Estados Unidos. Northeast Ohio Medical University; Southwest Research Institute; HC Simulation LLC. Fuente original: https://doi.org/10.1038/s41598-026-75902-5",
+      "methodology": "Pruebas en realidad virtual, autoinformes y sensores; 175 características de sensores más variables demográficas; cinco configuraciones predictivas",
+      "architecture": "Regresión logística L1 (LASSO) y Histogram Gradient Boosting (HGB)",
+      "limitations": [
+        "Solo 29 casos; desequilibrio marcado; intervalos de confianza amplios; evaluación inicial, sin demostración de utilidad clínica prospectiva"
+      ],
+      "dataset_cards": [
+        {
+          "label": "Muestra",
+          "main": "726 participantes de 18–40 años: 29 casos y 697 controles",
+          "sub": "Datos del estudio"
+        },
+        {
+          "label": "Metodología",
+          "main": "Pruebas en realidad virtual, autoinformes y sensores; 175 características de sensores más variables demográficas; cinco configuraciones predictivas",
+          "sub": "Diseño y validación"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultados",
+          "main": "AUC LASSO 0,86 (IC95% 0,66–0,98); HGB 0,85 (0,67–0,97); exactitud balanceada 0,77 y 0,69",
+          "sub": "Resultados de publicación original"
+        },
+        {
+          "label": "Aplicación",
+          "main": "Neuroingeniería",
+          "sub": "Relevancia biomédica"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Resultados verificados",
+          "AUC LASSO 0,86 (IC95% 0,66–0,98); HGB 0,85 (0,67–0,97); exactitud balanceada 0,77 y 0,69",
+          "Respetar población y diseño"
+        ],
+        [
+          "Limitaciones",
+          "Solo 29 casos; desequilibrio marcado; intervalos de confianza amplios; evaluación inicial, sin demostración de utilidad clínica prospectiva",
+          "No extrapolar a práctica clínica"
+        ]
+      ],
+      "implementation": [
+        "Hardware: Visor de realidad virtual con sensores de movimiento; marca no confirmada",
+        "Software: LASSO y HGB; librerías no reportadas",
+        "Costos: Costo de dispositivo y despliegue no reportado; financiación de programa más amplio no equivale a costo de modelo"
+      ],
+      "figures": [],
+      "sources": [
+        "https://doi.org/10.1038/s41598-026-75902-5"
+      ]
+    }
+  },
+  {
+    "date": "2026-11-13",
+    "reviewed": "13 noviembre 2026",
+    "published": "13 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-75805-5",
+    "code": "",
+    "figures": [],
+    "language": "Inglés",
+    "title": "A context-token transformer framework for multi-resident smart home human activity recognition with comparative evaluation against recurrent architectures",
+    "title_es": "Transformer con tokens de contexto para reconocer actividades de varios residentes en hogares inteligentes",
+    "doi": "10.1038/s41598-026-75805-5",
+    "country": "India; Malasia",
+    "institution": "LNM Institute of Information Technology; Universiti Putra Malaysia; Manipal University Jaipur",
+    "sample": "Datasets MARBLE y CASAS-Kyoto; cantidad de participantes no indicada en resumen",
+    "design": "Evaluación de reconocimiento de actividades de uno y varios residentes con validación cruzada y ensayos repetidos",
+    "model": "Patch and Context-Token Transformer; comparadores BiLSTM con atención, TransformerHAR y Cascading LSTM",
+    "metrics": "Exactitud promedio multirresidente 69,38%; comparadores 58,66%, 58,96% y 60,41%",
+    "limitations": "Conjuntos de hogares inteligentes; rendimiento aún moderado; no valida resultados clínicos en pacientes",
+    "hardware": "Sensores ambientales de hogares inteligentes; modelos específicos no confirmados",
+    "framework": "TransformerHAR; redes recurrentes; framework no reportado",
+    "cost": "No reportados",
+    "modality": "Monitorización domiciliaria",
+    "rubro": "IA en salud e ingeniería biomédica",
+    "area": "Monitorización domiciliaria",
+    "key_metric": "Exactitud promedio multirresidente 69,38%",
+    "summary": "Transformer con tokens de contexto para reconocer actividades de varios residentes en hogares inteligentes. Exactitud promedio multirresidente 69,38%; comparadores 58,66%, 58,96% y 60,41%. Limitación: Conjuntos de hogares inteligentes; rendimiento aún moderado; no valida resultados clínicos en pacientes",
+    "rich": {
+      "overview": "Transformer con tokens de contexto para reconocer actividades de varios residentes en hogares inteligentes. India; Malasia. LNM Institute of Information Technology; Universiti Putra Malaysia; Manipal University Jaipur. Fuente original: https://doi.org/10.1038/s41598-026-75805-5",
+      "methodology": "Evaluación de reconocimiento de actividades de uno y varios residentes con validación cruzada y ensayos repetidos",
+      "architecture": "Patch and Context-Token Transformer; comparadores BiLSTM con atención, TransformerHAR y Cascading LSTM",
+      "limitations": [
+        "Conjuntos de hogares inteligentes; rendimiento aún moderado; no valida resultados clínicos en pacientes"
+      ],
+      "dataset_cards": [
+        {
+          "label": "Muestra",
+          "main": "Datasets MARBLE y CASAS-Kyoto; cantidad de participantes no indicada en resumen",
+          "sub": "Datos del estudio"
+        },
+        {
+          "label": "Metodología",
+          "main": "Evaluación de reconocimiento de actividades de uno y varios residentes con validación cruzada y ensayos repetidos",
+          "sub": "Diseño y validación"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultados",
+          "main": "Exactitud promedio multirresidente 69,38%; comparadores 58,66%, 58,96% y 60,41%",
+          "sub": "Resultados de publicación original"
+        },
+        {
+          "label": "Aplicación",
+          "main": "Monitorización domiciliaria",
+          "sub": "Relevancia biomédica"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Resultados verificados",
+          "Exactitud promedio multirresidente 69,38%; comparadores 58,66%, 58,96% y 60,41%",
+          "Respetar población y diseño"
+        ],
+        [
+          "Limitaciones",
+          "Conjuntos de hogares inteligentes; rendimiento aún moderado; no valida resultados clínicos en pacientes",
+          "No extrapolar a práctica clínica"
+        ]
+      ],
+      "implementation": [
+        "Hardware: Sensores ambientales de hogares inteligentes; modelos específicos no confirmados",
+        "Software: TransformerHAR; redes recurrentes; framework no reportado",
+        "Costos: No reportados"
+      ],
+      "figures": [],
+      "sources": [
+        "https://doi.org/10.1038/s41598-026-75805-5"
+      ]
+    }
+  },
+  {
+    "date": "2026-11-13",
+    "reviewed": "13 noviembre 2026",
+    "published": "13 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-78453-x",
+    "code": "",
+    "figures": [],
+    "language": "Inglés",
+    "title": "Explainable texture fusion for pediatric pneumonia classification using chest radiographs",
+    "title_es": "Fusión explicable de textura y aprendizaje profundo para clasificar neumonía pediátrica en radiografías",
+    "doi": "10.1038/s41598-026-78453-x",
+    "country": "Tailandia",
+    "institution": "University of Phayao; Burapha University",
+    "sample": "5.856 radiografías: entrenamiento 4.099, validación 877, prueba 880",
+    "design": "Fusión de imagen radiográfica y tres mapas GLCM; comparación con modelos sin atención, atribución y perturbación",
+    "model": "EfficientNet-B0 (imagen), ResNet-18 (GLCM contraste, disimilitud y entropía), atención squeeze-and-excitation",
+    "metrics": "Exactitud 0,9818; F1 0,9875; AUROC 0,9958; MCC 0,9539; cinco aciertos más que EfficientNet-B0",
+    "limitations": "Una partición por imagen; independencia entre pacientes no verificable; sin validación externa; atribución no validada por radiólogos",
+    "hardware": "Radiografía de tórax; GPU no especificada",
+    "framework": "EfficientNet-B0; ResNet-18; GLCM; SE attention",
+    "cost": "No reportados",
+    "modality": "Radiología pediátrica",
+    "rubro": "IA en salud e ingeniería biomédica",
+    "area": "Radiología pediátrica",
+    "key_metric": "Exactitud 0,9818",
+    "summary": "Fusión explicable de textura y aprendizaje profundo para clasificar neumonía pediátrica en radiografías. Exactitud 0,9818; F1 0,9875; AUROC 0,9958; MCC 0,9539; cinco aciertos más que EfficientNet-B0. Limitación: Una partición por imagen; independencia entre pacientes no verificable; sin validación externa; atribución no validada por radiólogos",
+    "rich": {
+      "overview": "Fusión explicable de textura y aprendizaje profundo para clasificar neumonía pediátrica en radiografías. Tailandia. University of Phayao; Burapha University. Fuente original: https://doi.org/10.1038/s41598-026-78453-x",
+      "methodology": "Fusión de imagen radiográfica y tres mapas GLCM; comparación con modelos sin atención, atribución y perturbación",
+      "architecture": "EfficientNet-B0 (imagen), ResNet-18 (GLCM contraste, disimilitud y entropía), atención squeeze-and-excitation",
+      "limitations": [
+        "Una partición por imagen; independencia entre pacientes no verificable; sin validación externa; atribución no validada por radiólogos"
+      ],
+      "dataset_cards": [
+        {
+          "label": "Muestra",
+          "main": "5.856 radiografías: entrenamiento 4.099, validación 877, prueba 880",
+          "sub": "Datos del estudio"
+        },
+        {
+          "label": "Metodología",
+          "main": "Fusión de imagen radiográfica y tres mapas GLCM; comparación con modelos sin atención, atribución y perturbación",
+          "sub": "Diseño y validación"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultados",
+          "main": "Exactitud 0,9818; F1 0,9875; AUROC 0,9958; MCC 0,9539; cinco aciertos más que EfficientNet-B0",
+          "sub": "Resultados de publicación original"
+        },
+        {
+          "label": "Aplicación",
+          "main": "Radiología pediátrica",
+          "sub": "Relevancia biomédica"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Resultados verificados",
+          "Exactitud 0,9818; F1 0,9875; AUROC 0,9958; MCC 0,9539; cinco aciertos más que EfficientNet-B0",
+          "Respetar población y diseño"
+        ],
+        [
+          "Limitaciones",
+          "Una partición por imagen; independencia entre pacientes no verificable; sin validación externa; atribución no validada por radiólogos",
+          "No extrapolar a práctica clínica"
+        ]
+      ],
+      "implementation": [
+        "Hardware: Radiografía de tórax; GPU no especificada",
+        "Software: EfficientNet-B0; ResNet-18; GLCM; SE attention",
+        "Costos: No reportados"
+      ],
+      "figures": [],
+      "sources": [
+        "https://doi.org/10.1038/s41598-026-78453-x"
+      ]
+    }
+  },
+  {
+    "date": "2026-11-13",
+    "reviewed": "13 noviembre 2026",
+    "published": "12 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-79688-4",
+    "code": "",
+    "figures": [],
+    "language": "Inglés",
+    "title": "Preserving explainability in federated learning for clinical decision-making: SHAP explainability consistency analysis of ICU mortality prediction models",
+    "title_es": "Consistencia de explicaciones SHAP en aprendizaje federado para mortalidad en UCI",
+    "doi": "10.1038/s41598-026-79688-4",
+    "country": "Corea del Sur",
+    "institution": "Yonsei University, ingeniería eléctrica y medicina de emergencias",
+    "sample": "Tres bases EHR: MIMIC-III, MIMIC-IV y eICU; tamaño agregado no confirmado en resumen",
+    "design": "Comparación federada vs centralizada de predicción de mortalidad y rangos de importancia SHAP mediante correlación Spearman",
+    "model": "LightGBM, XGBoost, boosting cíclico y estudiantes XGBoost destilados desde TabPFN",
+    "metrics": "Correlación Spearman SHAP 0,6463–0,8374; AUROC federada destilada MIMIC-III 0,8294; MIMIC-IV 0,8402; eICU 0,8515",
+    "limitations": "Consistencia de explicaciones no prueba causalidad ni seguridad clínica; benchmarking retrospectivo",
+    "hardware": "Infraestructura de procesamiento de historias clínicas; GPU no reportada",
+    "framework": "SHAP, LightGBM, XGBoost, TabPFN",
+    "cost": "No reportados",
+    "modality": "IA clínica federada",
+    "rubro": "IA en salud e ingeniería biomédica",
+    "area": "IA clínica federada",
+    "key_metric": "Correlación Spearman SHAP 0,6463–0,8374",
+    "summary": "Consistencia de explicaciones SHAP en aprendizaje federado para mortalidad en UCI. Correlación Spearman SHAP 0,6463–0,8374; AUROC federada destilada MIMIC-III 0,8294; MIMIC-IV 0,8402; eICU 0,8515. Limitación: Consistencia de explicaciones no prueba causalidad ni seguridad clínica; benchmarking retrospectivo",
+    "rich": {
+      "overview": "Consistencia de explicaciones SHAP en aprendizaje federado para mortalidad en UCI. Corea del Sur. Yonsei University, ingeniería eléctrica y medicina de emergencias. Fuente original: https://doi.org/10.1038/s41598-026-79688-4",
+      "methodology": "Comparación federada vs centralizada de predicción de mortalidad y rangos de importancia SHAP mediante correlación Spearman",
+      "architecture": "LightGBM, XGBoost, boosting cíclico y estudiantes XGBoost destilados desde TabPFN",
+      "limitations": [
+        "Consistencia de explicaciones no prueba causalidad ni seguridad clínica; benchmarking retrospectivo"
+      ],
+      "dataset_cards": [
+        {
+          "label": "Muestra",
+          "main": "Tres bases EHR: MIMIC-III, MIMIC-IV y eICU; tamaño agregado no confirmado en resumen",
+          "sub": "Datos del estudio"
+        },
+        {
+          "label": "Metodología",
+          "main": "Comparación federada vs centralizada de predicción de mortalidad y rangos de importancia SHAP mediante correlación Spearman",
+          "sub": "Diseño y validación"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultados",
+          "main": "Correlación Spearman SHAP 0,6463–0,8374; AUROC federada destilada MIMIC-III 0,8294; MIMIC-IV 0,8402; eICU 0,8515",
+          "sub": "Resultados de publicación original"
+        },
+        {
+          "label": "Aplicación",
+          "main": "IA clínica federada",
+          "sub": "Relevancia biomédica"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Resultados verificados",
+          "Correlación Spearman SHAP 0,6463–0,8374; AUROC federada destilada MIMIC-III 0,8294; MIMIC-IV 0,8402; eICU 0,8515",
+          "Respetar población y diseño"
+        ],
+        [
+          "Limitaciones",
+          "Consistencia de explicaciones no prueba causalidad ni seguridad clínica; benchmarking retrospectivo",
+          "No extrapolar a práctica clínica"
+        ]
+      ],
+      "implementation": [
+        "Hardware: Infraestructura de procesamiento de historias clínicas; GPU no reportada",
+        "Software: SHAP, LightGBM, XGBoost, TabPFN",
+        "Costos: No reportados"
+      ],
+      "figures": [],
+      "sources": [
+        "https://doi.org/10.1038/s41598-026-79688-4"
+      ]
+    }
+  },
+  {
+    "date": "2026-11-13",
+    "reviewed": "13 noviembre 2026",
+    "published": "12 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-80597-9",
+    "code": "",
+    "figures": [],
+    "language": "Inglés",
+    "title": "Machine learning-based analysis of gut microbial shifts along the normal–obese–MetS axis in metabolic syndrome using 16S rRNA amplicon data",
+    "title_es": "IA para estudiar cambios del microbioma intestinal entre estado normal, obesidad y síndrome metabólico",
+    "doi": "10.1038/s41598-026-80597-9",
+    "country": "Pakistán",
+    "institution": "Capital University of Science and Technology, Islamabad",
+    "sample": "144 muestras de microbioma después de filtrado de calidad y metadatos",
+    "design": "Secuenciación 16S; control de calidad, Kraken/Bracken, diversidad, Bray-Curtis, PERMANOVA y clasificación",
+    "model": "Random Forest y explicaciones SHAP",
+    "metrics": "31 filos, 388 géneros y 535 especies identificados; AUC descrita como elevada para comparaciones con enfermedad, sin cifra verificable en resumen",
+    "limitations": "Asociaciones exploratorias; no causalidad; sin validación independiente de biomarcadores",
+    "hardware": "Secuenciación 16S rRNA; modelo de secuenciador no reportado",
+    "framework": "Kraken, Bracken, Random Forest, SHAP",
+    "cost": "No reportados",
+    "modality": "Bioinformática",
+    "rubro": "IA en salud e ingeniería biomédica",
+    "area": "Bioinformática",
+    "key_metric": "31 filos, 388 géneros y 535 especies identificados",
+    "summary": "IA para estudiar cambios del microbioma intestinal entre estado normal, obesidad y síndrome metabólico. 31 filos, 388 géneros y 535 especies identificados; AUC descrita como elevada para comparaciones con enfermedad, sin cifra verificable en resumen. Limitación: Asociaciones exploratorias; no causalidad; sin validación independiente de biomarcadores",
+    "rich": {
+      "overview": "IA para estudiar cambios del microbioma intestinal entre estado normal, obesidad y síndrome metabólico. Pakistán. Capital University of Science and Technology, Islamabad. Fuente original: https://doi.org/10.1038/s41598-026-80597-9",
+      "methodology": "Secuenciación 16S; control de calidad, Kraken/Bracken, diversidad, Bray-Curtis, PERMANOVA y clasificación",
+      "architecture": "Random Forest y explicaciones SHAP",
+      "limitations": [
+        "Asociaciones exploratorias; no causalidad; sin validación independiente de biomarcadores"
+      ],
+      "dataset_cards": [
+        {
+          "label": "Muestra",
+          "main": "144 muestras de microbioma después de filtrado de calidad y metadatos",
+          "sub": "Datos del estudio"
+        },
+        {
+          "label": "Metodología",
+          "main": "Secuenciación 16S; control de calidad, Kraken/Bracken, diversidad, Bray-Curtis, PERMANOVA y clasificación",
+          "sub": "Diseño y validación"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultados",
+          "main": "31 filos, 388 géneros y 535 especies identificados; AUC descrita como elevada para comparaciones con enfermedad, sin cifra verificable en resumen",
+          "sub": "Resultados de publicación original"
+        },
+        {
+          "label": "Aplicación",
+          "main": "Bioinformática",
+          "sub": "Relevancia biomédica"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Resultados verificados",
+          "31 filos, 388 géneros y 535 especies identificados; AUC descrita como elevada para comparaciones con enfermedad, sin cifra verificable en resumen",
+          "Respetar población y diseño"
+        ],
+        [
+          "Limitaciones",
+          "Asociaciones exploratorias; no causalidad; sin validación independiente de biomarcadores",
+          "No extrapolar a práctica clínica"
+        ]
+      ],
+      "implementation": [
+        "Hardware: Secuenciación 16S rRNA; modelo de secuenciador no reportado",
+        "Software: Kraken, Bracken, Random Forest, SHAP",
+        "Costos: No reportados"
+      ],
+      "figures": [],
+      "sources": [
+        "https://doi.org/10.1038/s41598-026-80597-9"
+      ]
+    }
+  },
+  {
+    "date": "2026-11-13",
+    "reviewed": "13 noviembre 2026",
+    "published": "13 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-73447-1",
+    "code": "",
+    "figures": [],
+    "language": "Inglés",
+    "title": "SQCDL-WIoT: a scalable quantum convolutional deep learning framework with wearable IoT integration for breast cancer screening",
+    "title_es": "Aprendizaje profundo cuántico-clásico e IoT portátil para cribado experimental de cáncer de mama",
+    "doi": "10.1038/s41598-026-73447-1",
+    "country": "India (afiliaciones completas pendientes de corroboración)",
+    "institution": "Equipo de Kama Ramudu, Swapna Saturi y colaboradores; institución principal no confirmada",
+    "sample": "Datasets BreaKHis (histopatología) y CBIS-DDSM (mamografía); cantidades no verificadas en resumen",
+    "design": "Validación cruzada estratificada de cinco particiones en BreaKHis y transferencia zero-shot a CBIS-DDSM; prueba de latencia en edge",
+    "model": "ResNet-50 con dos circuitos cuánticos variacionales de cinco qubits y atención squeeze-and-excitation",
+    "metrics": "BreaKHis 40×: exactitud 98,14%, sensibilidad macro 97,63%, especificidad macro 98,87%, AUC 0,9891; CBIS-DDSM exactitud 93,41%; latencia 378±12 ms",
+    "limitations": "Conjuntos de imagen heterogéneos; no demuestra integración clínica real de sensores wearables con diagnóstico histopatológico; falta validación prospectiva",
+    "hardware": "Procesador ARM Cortex-A72 para inferencia edge; sensor IoT wearable propuesto; hardware cuántico físico no confirmado",
+    "framework": "ResNet-50, circuitos cuánticos variacionales, SE attention",
+    "cost": "No reportados",
+    "modality": "IA oncológica e IoMT",
+    "rubro": "IA en salud e ingeniería biomédica",
+    "area": "IA oncológica e IoMT",
+    "key_metric": "BreaKHis 40×: exactitud 98,14%, sensibilidad macro 97,63%, especificidad macro 98,87%, AUC 0,9891",
+    "summary": "Aprendizaje profundo cuántico-clásico e IoT portátil para cribado experimental de cáncer de mama. BreaKHis 40×: exactitud 98,14%, sensibilidad macro 97,63%, especificidad macro 98,87%, AUC 0,9891; CBIS-DDSM exactitud 93,41%; latencia 378±12 ms. Limitación: Conjuntos de imagen heterogéneos; no demuestra integración clínica real de sensores wearables con diagnóstico histopatológico; falta validación prospectiva",
+    "rich": {
+      "overview": "Aprendizaje profundo cuántico-clásico e IoT portátil para cribado experimental de cáncer de mama. India (afiliaciones completas pendientes de corroboración). Equipo de Kama Ramudu, Swapna Saturi y colaboradores; institución principal no confirmada. Fuente original: https://doi.org/10.1038/s41598-026-73447-1",
+      "methodology": "Validación cruzada estratificada de cinco particiones en BreaKHis y transferencia zero-shot a CBIS-DDSM; prueba de latencia en edge",
+      "architecture": "ResNet-50 con dos circuitos cuánticos variacionales de cinco qubits y atención squeeze-and-excitation",
+      "limitations": [
+        "Conjuntos de imagen heterogéneos; no demuestra integración clínica real de sensores wearables con diagnóstico histopatológico; falta validación prospectiva"
+      ],
+      "dataset_cards": [
+        {
+          "label": "Muestra",
+          "main": "Datasets BreaKHis (histopatología) y CBIS-DDSM (mamografía); cantidades no verificadas en resumen",
+          "sub": "Datos del estudio"
+        },
+        {
+          "label": "Metodología",
+          "main": "Validación cruzada estratificada de cinco particiones en BreaKHis y transferencia zero-shot a CBIS-DDSM; prueba de latencia en edge",
+          "sub": "Diseño y validación"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultados",
+          "main": "BreaKHis 40×: exactitud 98,14%, sensibilidad macro 97,63%, especificidad macro 98,87%, AUC 0,9891; CBIS-DDSM exactitud 93,41%; latencia 378±12 ms",
+          "sub": "Resultados de publicación original"
+        },
+        {
+          "label": "Aplicación",
+          "main": "IA oncológica e IoMT",
+          "sub": "Relevancia biomédica"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Resultados verificados",
+          "BreaKHis 40×: exactitud 98,14%, sensibilidad macro 97,63%, especificidad macro 98,87%, AUC 0,9891; CBIS-DDSM exactitud 93,41%; latencia 378±12 ms",
+          "Respetar población y diseño"
+        ],
+        [
+          "Limitaciones",
+          "Conjuntos de imagen heterogéneos; no demuestra integración clínica real de sensores wearables con diagnóstico histopatológico; falta validación prospectiva",
+          "No extrapolar a práctica clínica"
+        ]
+      ],
+      "implementation": [
+        "Hardware: Procesador ARM Cortex-A72 para inferencia edge; sensor IoT wearable propuesto; hardware cuántico físico no confirmado",
+        "Software: ResNet-50, circuitos cuánticos variacionales, SE attention",
+        "Costos: No reportados"
+      ],
+      "figures": [],
+      "sources": [
+        "https://doi.org/10.1038/s41598-026-73447-1"
+      ]
+    }
+  },
+  {
+    "date": "2026-11-13",
+    "reviewed": "13 noviembre 2026",
+    "published": "13 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-77300-3",
+    "code": "",
+    "figures": [],
+    "language": "Inglés",
+    "title": "A dual-modal fiducial marker with single-view x-ray pose recoverability for MR-guided surgical navigation",
+    "title_es": "Marcador fiducial de doble modalidad para navegación quirúrgica de realidad mixta con una sola radiografía",
+    "doi": "10.1038/s41598-026-77300-3",
+    "country": "China",
+    "institution": "Xiangya Hospital, Central South University, Changsha",
+    "sample": "100 imágenes radiográficas y 194 ópticas; evaluación técnica sin sujetos humanos",
+    "design": "Marcador con cubo central y cuatro ejes cilíndricos desiguales; estimación de pose 6-DoF por radiografía y óptica",
+    "model": "Optimización geométrica con extracción de características mediante aprendizaje profundo",
+    "metrics": "Error angular radiografía 1,58°±1,26° coronal y 1,90°±1,50° sagital; 94% <5°; éxito óptico 90,2%; error óptico 1,52°±0,98°",
+    "limitations": "Validación técnica preliminar sin sujetos humanos; falta validación intraoperatoria y de seguridad",
+    "hardware": "Rayos X, cámara óptica y marcador físico; Apple Vision Pro citado como exploración preliminar",
+    "framework": "Optimización geométrica y extracción profunda de características; software final no especificado",
+    "cost": "No reportados",
+    "modality": "Navegación quirúrgica",
+    "rubro": "IA en salud e ingeniería biomédica",
+    "area": "Navegación quirúrgica",
+    "key_metric": "Error angular radiografía 1,58°±1,26° coronal y 1,90°±1,50° sagital",
+    "summary": "Marcador fiducial de doble modalidad para navegación quirúrgica de realidad mixta con una sola radiografía. Error angular radiografía 1,58°±1,26° coronal y 1,90°±1,50° sagital; 94% <5°; éxito óptico 90,2%; error óptico 1,52°±0,98°. Limitación: Validación técnica preliminar sin sujetos humanos; falta validación intraoperatoria y de seguridad",
+    "rich": {
+      "overview": "Marcador fiducial de doble modalidad para navegación quirúrgica de realidad mixta con una sola radiografía. China. Xiangya Hospital, Central South University, Changsha. Fuente original: https://doi.org/10.1038/s41598-026-77300-3",
+      "methodology": "Marcador con cubo central y cuatro ejes cilíndricos desiguales; estimación de pose 6-DoF por radiografía y óptica",
+      "architecture": "Optimización geométrica con extracción de características mediante aprendizaje profundo",
+      "limitations": [
+        "Validación técnica preliminar sin sujetos humanos; falta validación intraoperatoria y de seguridad"
+      ],
+      "dataset_cards": [
+        {
+          "label": "Muestra",
+          "main": "100 imágenes radiográficas y 194 ópticas; evaluación técnica sin sujetos humanos",
+          "sub": "Datos del estudio"
+        },
+        {
+          "label": "Metodología",
+          "main": "Marcador con cubo central y cuatro ejes cilíndricos desiguales; estimación de pose 6-DoF por radiografía y óptica",
+          "sub": "Diseño y validación"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultados",
+          "main": "Error angular radiografía 1,58°±1,26° coronal y 1,90°±1,50° sagital; 94% <5°; éxito óptico 90,2%; error óptico 1,52°±0,98°",
+          "sub": "Resultados de publicación original"
+        },
+        {
+          "label": "Aplicación",
+          "main": "Navegación quirúrgica",
+          "sub": "Relevancia biomédica"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Resultados verificados",
+          "Error angular radiografía 1,58°±1,26° coronal y 1,90°±1,50° sagital; 94% <5°; éxito óptico 90,2%; error óptico 1,52°±0,98°",
+          "Respetar población y diseño"
+        ],
+        [
+          "Limitaciones",
+          "Validación técnica preliminar sin sujetos humanos; falta validación intraoperatoria y de seguridad",
+          "No extrapolar a práctica clínica"
+        ]
+      ],
+      "implementation": [
+        "Hardware: Rayos X, cámara óptica y marcador físico; Apple Vision Pro citado como exploración preliminar",
+        "Software: Optimización geométrica y extracción profunda de características; software final no especificado",
+        "Costos: No reportados"
+      ],
+      "figures": [],
+      "sources": [
+        "https://doi.org/10.1038/s41598-026-77300-3"
+      ]
+    }
+  },
+  {
     "date": "2026-11-12",
     "reviewed": "12 noviembre 2026",
     "published": "12 noviembre 2026",
