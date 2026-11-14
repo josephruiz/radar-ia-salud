@@ -1,5 +1,523 @@
 [
   {
+    "date": "2026-11-14",
+    "reviewed": "14 noviembre 2026",
+    "published": "13 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Nature Cancer · 2026",
+    "paper": "https://doi.org/10.1038/s43018-026-01270-8",
+    "doi": "10.1038/s43018-026-01270-8",
+    "title": "The deep learning framework Hist2Prot infers single-cell spatial proteomics from histology to predict biomarkers and clinical outcomes",
+    "title_es": "Hist2Prot infiere proteómica espacial unicelular desde histología para estudiar biomarcadores y resultados clínicos",
+    "country": "Internacional; afiliaciones específicas por corroborar",
+    "institution": "Equipo de J. Fan, S. Yang y E. Hu; afiliaciones completas por corroborar",
+    "sample": "Aproximadamente 51 millones de células emparejadas de entrenamiento y 72 millones adicionales en evaluaciones",
+    "design": "Entrenamiento con histología H&E y proteómica espacial G4X de la misma sección; pruebas internas, independientes de la misma plataforma y externas entre plataformas",
+    "model": "Hist2Prot: aprendizaje profundo para inferencia de perfiles proteicos espaciales a nivel celular",
+    "metrics": "51 millones de células de entrenamiento; 72 millones adicionales evaluadas; el resumen confirma superioridad sobre baselines, sin cifra global comparable",
+    "limitations": "Validación prospectiva clínica pendiente; los perfiles proteicos inferidos no sustituyen mediciones experimentales",
+    "hardware": "Escáner de histología digital y plataforma de proteómica espacial G4X; GPU no especificada",
+    "software": "Hist2Prot; framework no confirmado",
+    "framework": "Hist2Prot; framework no confirmado",
+    "cost": "No reportado; no se atribuye costo de implementación sin evidencia",
+    "code": "No confirmado",
+    "area": "Patología digital y proteómica",
+    "rubro": "Oncología computacional",
+    "modality": "Histología H&E y proteómica espacial",
+    "summary": "Predice perfiles proteicos virtuales desde histología rutinaria para caracterizar el microambiente tumoral",
+    "key_metric": "51 M entrenamiento / 72 M evaluación",
+    "language": "No aplica",
+    "figures": [],
+    "remember": "Validación prospectiva clínica pendiente; los perfiles proteicos inferidos no sustituyen mediciones experimentales",
+    "rich": {
+      "problem": "Predice perfiles proteicos virtuales desde histología rutinaria para caracterizar el microambiente tumoral",
+      "idea": "Hist2Prot: aprendizaje profundo para inferencia de perfiles proteicos espaciales a nivel celular",
+      "why": "Potencial aplicación en Patología digital y proteómica; requiere evaluar generalización y validación clínica",
+      "interpretability": "Explicabilidad específica según arquitectura; no asumir validez causal",
+      "dataset_cards": [
+        {
+          "name": "Muestra / datos",
+          "value": "Aproximadamente 51 millones de células emparejadas de entrenamiento y 72 millones adicionales en evaluaciones",
+          "detail": "Entrenamiento con histología H&E y proteómica espacial G4X de la misma sección; pruebas internas, independientes de la misma plataforma y externas entre plataformas",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado principal",
+          "main": "51 M entrenamiento / 72 M evaluación",
+          "sub": "51 millones de células de entrenamiento; 72 millones adicionales evaluadas; el resumen confirma superioridad sobre baselines, sin cifra global comparable"
+        }
+      ],
+      "implementation": [
+        "Entrenamiento con histología H&E y proteómica espacial G4X de la misma sección; pruebas internas, independientes de la misma plataforma y externas entre plataformas",
+        "Hist2Prot: aprendizaje profundo para inferencia de perfiles proteicos espaciales a nivel celular",
+        "Escáner de histología digital y plataforma de proteómica espacial G4X; GPU no especificada",
+        "Hist2Prot; framework no confirmado",
+        "Costos: no reportados"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Resultados",
+          "51 millones de células de entrenamiento; 72 millones adicionales evaluadas; el resumen confirma superioridad sobre baselines, sin cifra global comparable",
+          "Fuente original: 10.1038/s43018-026-01270-8"
+        ],
+        [
+          "Limitaciones",
+          "Validación prospectiva clínica pendiente; los perfiles proteicos inferidos no sustituyen mediciones experimentales",
+          "Evaluación crítica"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-11-14",
+    "reviewed": "14 noviembre 2026",
+    "published": "13 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Communications Medicine · 2026",
+    "paper": "https://doi.org/10.1038/s43856-026-02001-x",
+    "doi": "10.1038/s43856-026-02001-x",
+    "title": "Development and validation of a machine learning model to predict the daily risk of febrile neutropenia in patients with AML undergoing chemotherapy",
+    "title_es": "Predicción diaria del riesgo de neutropenia febril en leucemia mieloide aguda durante quimioterapia",
+    "country": "Finlandia",
+    "institution": "Helsinki University Hospital; University of Helsinki; Turku University Hospital",
+    "sample": "271 adultos; 540 eventos de neutropenia febril en ventanas de 48 h; cohorte externa de 136 pacientes",
+    "design": "Estudio retrospectivo en dos distritos hospitalarios; 1,2 millones de datos clínicos; predicción diaria a 48 h, discriminación y calibración externa",
+    "model": "XGBoost con siete variables y explicaciones SHAP",
+    "metrics": "AUROC interna 0,91 (IC95% 0,89–0,93); externa 0,79 (0,75–0,82); pendiente calibración externa 0,65",
+    "limitations": "Descenso de discriminación y calibración en validación externa; requiere ensayo prospectivo",
+    "hardware": "Sistemas de laboratorio, termometría e historia clínica electrónica; GPU no reportada",
+    "software": "XGBoost y SHAP",
+    "framework": "XGBoost y SHAP",
+    "cost": "No reportado; no se atribuye costo de implementación sin evidencia",
+    "code": "No confirmado",
+    "area": "Oncohematología",
+    "rubro": "Predicción clínica",
+    "modality": "Datos clínicos longitudinales",
+    "summary": "Predicción del riesgo de infección febril en 48 horas mediante siete variables clínicas",
+    "key_metric": "AUROC externa 0,79",
+    "language": "No aplica",
+    "figures": [],
+    "remember": "Descenso de discriminación y calibración en validación externa; requiere ensayo prospectivo",
+    "rich": {
+      "problem": "Predicción del riesgo de infección febril en 48 horas mediante siete variables clínicas",
+      "idea": "XGBoost con siete variables y explicaciones SHAP",
+      "why": "Potencial aplicación en Oncohematología; requiere evaluar generalización y validación clínica",
+      "interpretability": "SHAP descrito en el estudio",
+      "dataset_cards": [
+        {
+          "name": "Muestra / datos",
+          "value": "271 adultos; 540 eventos de neutropenia febril en ventanas de 48 h; cohorte externa de 136 pacientes",
+          "detail": "Estudio retrospectivo en dos distritos hospitalarios; 1,2 millones de datos clínicos; predicción diaria a 48 h, discriminación y calibración externa",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado principal",
+          "main": "AUROC externa 0,79",
+          "sub": "AUROC interna 0,91 (IC95% 0,89–0,93); externa 0,79 (0,75–0,82); pendiente calibración externa 0,65"
+        }
+      ],
+      "implementation": [
+        "Estudio retrospectivo en dos distritos hospitalarios; 1,2 millones de datos clínicos; predicción diaria a 48 h, discriminación y calibración externa",
+        "XGBoost con siete variables y explicaciones SHAP",
+        "Sistemas de laboratorio, termometría e historia clínica electrónica; GPU no reportada",
+        "XGBoost y SHAP",
+        "Costos: no reportados"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Resultados",
+          "AUROC interna 0,91 (IC95% 0,89–0,93); externa 0,79 (0,75–0,82); pendiente calibración externa 0,65",
+          "Fuente original: 10.1038/s43856-026-02001-x"
+        ],
+        [
+          "Limitaciones",
+          "Descenso de discriminación y calibración en validación externa; requiere ensayo prospectivo",
+          "Evaluación crítica"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-11-14",
+    "reviewed": "14 noviembre 2026",
+    "published": "13 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-77575-6",
+    "doi": "10.1038/s41598-026-77575-6",
+    "title": "Machine learning-based prediction of overall survival after lung SBRT using clinical, dosimetric, and radiomics features: a multicenter study",
+    "title_es": "Predicción de supervivencia tras radioterapia estereotáctica pulmonar mediante radiomics, dosimetría y datos clínicos",
+    "country": "Francia y Canadá",
+    "institution": "Institut Godinot; Polytechnique Montréal; seis centros de radioterapia",
+    "sample": "158 pacientes y 181 lesiones; 180 características (124 radiomics, 45 clínicas, 11 dosimétricas)",
+    "design": "Estudio retrospectivo de seis centros; doble segmentación y filtro ICC ≥0,80; LASSO dentro de validación cruzada; validación temporal y dejando un centro fuera",
+    "model": "Random Survival Forest con SHAP",
+    "metrics": "C-index conjunto 0,62 (IC95% 0,54–0,71); validación temporal 0,61; por centro 0,57; AUC a 1/2/3 años 0,69/0,62/0,52",
+    "limitations": "Discriminación moderada, peor a 3 años y entre centros; validación externa necesaria",
+    "hardware": "TC de planificación radioterápica; sistema de planificación de radioterapia; GPU no reportada",
+    "software": "Random Survival Forest, LASSO, SHAP y extracción radiomics",
+    "framework": "Random Survival Forest, LASSO, SHAP y extracción radiomics",
+    "cost": "No reportado; no se atribuye costo de implementación sin evidencia",
+    "code": "No confirmado",
+    "area": "Radioterapia y radiomics",
+    "rubro": "Oncología",
+    "modality": "TC, dosimetría e historia clínica",
+    "summary": "Evalúa con validación cuidadosa la contribución de radiomics a pronóstico tras SBRT pulmonar",
+    "key_metric": "C-index 0,62",
+    "language": "No aplica",
+    "figures": [],
+    "remember": "Discriminación moderada, peor a 3 años y entre centros; validación externa necesaria",
+    "rich": {
+      "problem": "Evalúa con validación cuidadosa la contribución de radiomics a pronóstico tras SBRT pulmonar",
+      "idea": "Random Survival Forest con SHAP",
+      "why": "Potencial aplicación en Radioterapia y radiomics; requiere evaluar generalización y validación clínica",
+      "interpretability": "SHAP descrito en el estudio",
+      "dataset_cards": [
+        {
+          "name": "Muestra / datos",
+          "value": "158 pacientes y 181 lesiones; 180 características (124 radiomics, 45 clínicas, 11 dosimétricas)",
+          "detail": "Estudio retrospectivo de seis centros; doble segmentación y filtro ICC ≥0,80; LASSO dentro de validación cruzada; validación temporal y dejando un centro fuera",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado principal",
+          "main": "C-index 0,62",
+          "sub": "C-index conjunto 0,62 (IC95% 0,54–0,71); validación temporal 0,61; por centro 0,57; AUC a 1/2/3 años 0,69/0,62/0,52"
+        }
+      ],
+      "implementation": [
+        "Estudio retrospectivo de seis centros; doble segmentación y filtro ICC ≥0,80; LASSO dentro de validación cruzada; validación temporal y dejando un centro fuera",
+        "Random Survival Forest con SHAP",
+        "TC de planificación radioterápica; sistema de planificación de radioterapia; GPU no reportada",
+        "Random Survival Forest, LASSO, SHAP y extracción radiomics",
+        "Costos: no reportados"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Resultados",
+          "C-index conjunto 0,62 (IC95% 0,54–0,71); validación temporal 0,61; por centro 0,57; AUC a 1/2/3 años 0,69/0,62/0,52",
+          "Fuente original: 10.1038/s41598-026-77575-6"
+        ],
+        [
+          "Limitaciones",
+          "Discriminación moderada, peor a 3 años y entre centros; validación externa necesaria",
+          "Evaluación crítica"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-11-14",
+    "reviewed": "14 noviembre 2026",
+    "published": "13 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-78644-6",
+    "doi": "10.1038/s41598-026-78644-6",
+    "title": "Machine learning model development for predicting pulmonary tuberculosis in symptomatic patients from Ethiopia’s Mid-Rift Valley",
+    "title_es": "Modelo de aprendizaje automático para predecir tuberculosis pulmonar en pacientes sintomáticos de Etiopía",
+    "country": "Etiopía",
+    "institution": "Addis Ababa University; Ethiopian Public Health Institute y cinco hospitales",
+    "sample": "2025 pacientes sintomáticos; 280 positivos (13,8%)",
+    "design": "Estudio transversal en cinco hospitales (diciembre 2023–enero 2025); GeneXpert MTB/RIF como referencia; partición 70/15/15; ocho modelos",
+    "model": "Random Forest con SHAP y permutación de importancia",
+    "metrics": "AUROC prueba 0,94 (IC95% 0,90–0,97); exactitud 0,88; sensibilidad 0,83; especificidad 0,89",
+    "limitations": "Sin validación externa independiente; no sustituye pruebas confirmatorias",
+    "hardware": "GeneXpert MTB/RIF y sistemas de laboratorio; GPU no reportada",
+    "software": "Python 3.12.4, Jupyter, Random Forest y SHAP",
+    "framework": "Python 3.12.4, Jupyter, Random Forest y SHAP",
+    "cost": "No reportado; no se atribuye costo de implementación sin evidencia",
+    "code": "No confirmado",
+    "area": "Enfermedades infecciosas",
+    "rubro": "Apoyo al cribado",
+    "modality": "Datos clínicos y GeneXpert",
+    "summary": "Predice positividad de tuberculosis en población sintomática usando datos clínicos",
+    "key_metric": "AUROC 0,94",
+    "language": "No aplica",
+    "figures": [],
+    "remember": "Sin validación externa independiente; no sustituye pruebas confirmatorias",
+    "rich": {
+      "problem": "Predice positividad de tuberculosis en población sintomática usando datos clínicos",
+      "idea": "Random Forest con SHAP y permutación de importancia",
+      "why": "Potencial aplicación en Enfermedades infecciosas; requiere evaluar generalización y validación clínica",
+      "interpretability": "SHAP descrito en el estudio",
+      "dataset_cards": [
+        {
+          "name": "Muestra / datos",
+          "value": "2025 pacientes sintomáticos; 280 positivos (13,8%)",
+          "detail": "Estudio transversal en cinco hospitales (diciembre 2023–enero 2025); GeneXpert MTB/RIF como referencia; partición 70/15/15; ocho modelos",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado principal",
+          "main": "AUROC 0,94",
+          "sub": "AUROC prueba 0,94 (IC95% 0,90–0,97); exactitud 0,88; sensibilidad 0,83; especificidad 0,89"
+        }
+      ],
+      "implementation": [
+        "Estudio transversal en cinco hospitales (diciembre 2023–enero 2025); GeneXpert MTB/RIF como referencia; partición 70/15/15; ocho modelos",
+        "Random Forest con SHAP y permutación de importancia",
+        "GeneXpert MTB/RIF y sistemas de laboratorio; GPU no reportada",
+        "Python 3.12.4, Jupyter, Random Forest y SHAP",
+        "Costos: no reportados"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Resultados",
+          "AUROC prueba 0,94 (IC95% 0,90–0,97); exactitud 0,88; sensibilidad 0,83; especificidad 0,89",
+          "Fuente original: 10.1038/s41598-026-78644-6"
+        ],
+        [
+          "Limitaciones",
+          "Sin validación externa independiente; no sustituye pruebas confirmatorias",
+          "Evaluación crítica"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-11-14",
+    "reviewed": "14 noviembre 2026",
+    "published": "13 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-75814-4",
+    "doi": "10.1038/s41598-026-75814-4",
+    "title": "Worker-independent multimodal physiological fatigue detection in industrial workers using a domain adaptation network with multi-scale maximum mean discrepancy",
+    "title_es": "Detección multimodal de fatiga fisiológica independiente del trabajador con adaptación de dominio",
+    "country": "India",
+    "institution": "BIT Mesra, Ranchi",
+    "sample": "50 trabajadores; 60.000 ventanas de señales; 85 características multimodales",
+    "design": "Evaluación separada por trabajador no visto; tres niveles de fatiga; comparación de cinco arquitecturas",
+    "model": "CNN + BiLSTM + atención multi-cabeza + Gradient Reversal Layer + MMD multiescala; SHAP/LIME",
+    "metrics": "Exactitud prueba DAN 97,08%; LightGBM 84,81%; CNN 87,96%; CNN+BiLSTM 96,72%; CNN+BiLSTM+atención 96,35%",
+    "limitations": "Cohorte laboral limitada; falta validación en otros entornos y dispositivos",
+    "hardware": "Sensores fisiológicos y ambientales portátiles; marcas no reportadas",
+    "software": "Red DAN, SHAP y LIME; framework no confirmado",
+    "framework": "Red DAN, SHAP y LIME; framework no confirmado",
+    "cost": "No reportado; no se atribuye costo de implementación sin evidencia",
+    "code": "No confirmado",
+    "area": "Sensores y salud ocupacional",
+    "rubro": "Ingeniería biomédica",
+    "modality": "Señales fisiológicas y ambientales",
+    "summary": "Evalúa reconocimiento de fatiga con independencia estricta entre trabajadores de entrenamiento y prueba",
+    "key_metric": "Exactitud 97,08%",
+    "language": "No aplica",
+    "figures": [],
+    "remember": "Cohorte laboral limitada; falta validación en otros entornos y dispositivos",
+    "rich": {
+      "problem": "Evalúa reconocimiento de fatiga con independencia estricta entre trabajadores de entrenamiento y prueba",
+      "idea": "CNN + BiLSTM + atención multi-cabeza + Gradient Reversal Layer + MMD multiescala; SHAP/LIME",
+      "why": "Potencial aplicación en Sensores y salud ocupacional; requiere evaluar generalización y validación clínica",
+      "interpretability": "SHAP descrito en el estudio",
+      "dataset_cards": [
+        {
+          "name": "Muestra / datos",
+          "value": "50 trabajadores; 60.000 ventanas de señales; 85 características multimodales",
+          "detail": "Evaluación separada por trabajador no visto; tres niveles de fatiga; comparación de cinco arquitecturas",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado principal",
+          "main": "Exactitud 97,08%",
+          "sub": "Exactitud prueba DAN 97,08%; LightGBM 84,81%; CNN 87,96%; CNN+BiLSTM 96,72%; CNN+BiLSTM+atención 96,35%"
+        }
+      ],
+      "implementation": [
+        "Evaluación separada por trabajador no visto; tres niveles de fatiga; comparación de cinco arquitecturas",
+        "CNN + BiLSTM + atención multi-cabeza + Gradient Reversal Layer + MMD multiescala; SHAP/LIME",
+        "Sensores fisiológicos y ambientales portátiles; marcas no reportadas",
+        "Red DAN, SHAP y LIME; framework no confirmado",
+        "Costos: no reportados"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Resultados",
+          "Exactitud prueba DAN 97,08%; LightGBM 84,81%; CNN 87,96%; CNN+BiLSTM 96,72%; CNN+BiLSTM+atención 96,35%",
+          "Fuente original: 10.1038/s41598-026-75814-4"
+        ],
+        [
+          "Limitaciones",
+          "Cohorte laboral limitada; falta validación en otros entornos y dispositivos",
+          "Evaluación crítica"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-11-14",
+    "reviewed": "14 noviembre 2026",
+    "published": "13 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-79184-9",
+    "doi": "10.1038/s41598-026-79184-9",
+    "title": "NeuroMemory-DiffNet: a reference-guided memory framework for brain tumor segmentation and classification",
+    "title_es": "NeuroMemory-DiffNet: segmentación y clasificación de tumores cerebrales con memoria anatómica de referencia",
+    "country": "Internacional; afiliaciones múltiples",
+    "institution": "Equipo de Parameswari Alagarsamy, B. R. Chandana y colaboradores",
+    "sample": "BraTS 2023 para segmentación y conjunto Figshare para clasificación; tamaño exacto no confirmado",
+    "design": "Comparación de representaciones de RM con referencias anatómicas aprendidas; evaluación independiente por sujeto",
+    "model": "Neuro-Anatomical Prior Memory (NAPM), Reference-Guided Difference Learning (RDL), Healthy-Reference Reconstruction (HRR)",
+    "metrics": "Exactitud clasificación 98,70%; macro-F1 98,70%; Dice segmentación 96,31%; IoU 93,62%; HD95 2,29 mm",
+    "limitations": "Validación externa y evaluación experta pendientes; cifras de tareas/datasets distintos no son directamente comparables",
+    "hardware": "Resonancia magnética; GPU no reportada",
+    "software": "NeuroMemory-DiffNet; framework no confirmado",
+    "framework": "NeuroMemory-DiffNet; framework no confirmado",
+    "cost": "No reportado; no se atribuye costo de implementación sin evidencia",
+    "code": "No confirmado",
+    "area": "Neuroimagen",
+    "rubro": "Radiología IA",
+    "modality": "RM cerebral",
+    "summary": "Usa referencias anatómicas para detectar diferencias compatibles con tumor y generar explicaciones estructurales",
+    "key_metric": "Dice 96,31%",
+    "language": "No aplica",
+    "figures": [],
+    "remember": "Validación externa y evaluación experta pendientes; cifras de tareas/datasets distintos no son directamente comparables",
+    "rich": {
+      "problem": "Usa referencias anatómicas para detectar diferencias compatibles con tumor y generar explicaciones estructurales",
+      "idea": "Neuro-Anatomical Prior Memory (NAPM), Reference-Guided Difference Learning (RDL), Healthy-Reference Reconstruction (HRR)",
+      "why": "Potencial aplicación en Neuroimagen; requiere evaluar generalización y validación clínica",
+      "interpretability": "Explicabilidad específica según arquitectura; no asumir validez causal",
+      "dataset_cards": [
+        {
+          "name": "Muestra / datos",
+          "value": "BraTS 2023 para segmentación y conjunto Figshare para clasificación; tamaño exacto no confirmado",
+          "detail": "Comparación de representaciones de RM con referencias anatómicas aprendidas; evaluación independiente por sujeto",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado principal",
+          "main": "Dice 96,31%",
+          "sub": "Exactitud clasificación 98,70%; macro-F1 98,70%; Dice segmentación 96,31%; IoU 93,62%; HD95 2,29 mm"
+        }
+      ],
+      "implementation": [
+        "Comparación de representaciones de RM con referencias anatómicas aprendidas; evaluación independiente por sujeto",
+        "Neuro-Anatomical Prior Memory (NAPM), Reference-Guided Difference Learning (RDL), Healthy-Reference Reconstruction (HRR)",
+        "Resonancia magnética; GPU no reportada",
+        "NeuroMemory-DiffNet; framework no confirmado",
+        "Costos: no reportados"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Resultados",
+          "Exactitud clasificación 98,70%; macro-F1 98,70%; Dice segmentación 96,31%; IoU 93,62%; HD95 2,29 mm",
+          "Fuente original: 10.1038/s41598-026-79184-9"
+        ],
+        [
+          "Limitaciones",
+          "Validación externa y evaluación experta pendientes; cifras de tareas/datasets distintos no son directamente comparables",
+          "Evaluación crítica"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-11-14",
+    "reviewed": "14 noviembre 2026",
+    "published": "13 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-76353-8",
+    "doi": "10.1038/s41598-026-76353-8",
+    "title": "Clinically interpretable video-derived movement quality metrics for rehabilitation monitoring in breast cancer survivors",
+    "title_es": "Métricas interpretables de calidad de movimiento obtenidas de video para rehabilitación tras cáncer de mama",
+    "country": "Corea del Sur",
+    "institution": "Investigadores Seung Hyun Chung y Eun Joo Yang; siete hospitales universitarios coreanos",
+    "sample": "71 supervivientes de cáncer de mama en siete hospitales",
+    "design": "Análisis secundario de propiedades de medición dentro de un ensayo prospectivo multicéntrico con lista de espera; análisis de movimiento sin marcadores desde video",
+    "model": "Análisis computacional de movimiento y métricas cinemáticas derivadas de video; arquitectura exacta no corroborada",
+    "metrics": "71 participantes y siete centros; métricas cuantitativas de validez no confirmadas en el extracto accesible",
+    "limitations": "Análisis secundario; falta confirmar validez y sensibilidad al cambio de cada métrica",
+    "hardware": "Cámara de video convencional; dispositivo específico no reportado",
+    "software": "Procesamiento de video sin marcadores; librería no confirmada",
+    "framework": "Procesamiento de video sin marcadores; librería no confirmada",
+    "cost": "No reportado; no se atribuye costo de implementación sin evidencia",
+    "code": "No confirmado",
+    "area": "Rehabilitación",
+    "rubro": "Tecnología médica",
+    "modality": "Video y cinemática",
+    "summary": "Analiza métricas de movimiento derivadas de video para seguimiento de rehabilitación",
+    "key_metric": "71 pacientes / 7 hospitales",
+    "language": "No aplica",
+    "figures": [],
+    "remember": "Análisis secundario; falta confirmar validez y sensibilidad al cambio de cada métrica",
+    "rich": {
+      "problem": "Analiza métricas de movimiento derivadas de video para seguimiento de rehabilitación",
+      "idea": "Análisis computacional de movimiento y métricas cinemáticas derivadas de video; arquitectura exacta no corroborada",
+      "why": "Potencial aplicación en Rehabilitación; requiere evaluar generalización y validación clínica",
+      "interpretability": "Explicabilidad específica según arquitectura; no asumir validez causal",
+      "dataset_cards": [
+        {
+          "name": "Muestra / datos",
+          "value": "71 supervivientes de cáncer de mama en siete hospitales",
+          "detail": "Análisis secundario de propiedades de medición dentro de un ensayo prospectivo multicéntrico con lista de espera; análisis de movimiento sin marcadores desde video",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado principal",
+          "main": "71 pacientes / 7 hospitales",
+          "sub": "71 participantes y siete centros; métricas cuantitativas de validez no confirmadas en el extracto accesible"
+        }
+      ],
+      "implementation": [
+        "Análisis secundario de propiedades de medición dentro de un ensayo prospectivo multicéntrico con lista de espera; análisis de movimiento sin marcadores desde video",
+        "Análisis computacional de movimiento y métricas cinemáticas derivadas de video; arquitectura exacta no corroborada",
+        "Cámara de video convencional; dispositivo específico no reportado",
+        "Procesamiento de video sin marcadores; librería no confirmada",
+        "Costos: no reportados"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Resultados",
+          "71 participantes y siete centros; métricas cuantitativas de validez no confirmadas en el extracto accesible",
+          "Fuente original: 10.1038/s41598-026-76353-8"
+        ],
+        [
+          "Limitaciones",
+          "Análisis secundario; falta confirmar validez y sensibilidad al cambio de cada métrica",
+          "Evaluación crítica"
+        ]
+      ]
+    }
+  },
+  {
     "date": "2026-11-13",
     "reviewed": "13 noviembre 2026",
     "published": "12 noviembre 2026",
