@@ -1,5 +1,523 @@
 [
   {
+    "date": "2026-11-15",
+    "reviewed": "15 noviembre 2026",
+    "published": "14 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-77542-1",
+    "doi": "10.1038/s41598-026-77542-1",
+    "title": "ParkMultiNet combines MRI and speech data for multimodal Parkinson’s disease classification",
+    "title_es": "ParkMultiNet combina resonancia magnética y voz para clasificar Parkinson",
+    "country": "China",
+    "institution": "Xinjiang Medical University; Second Affiliated Hospital of Xinjiang Medical University",
+    "sample": "PubPDdataset y PativePDdataset; número de pacientes no confirmado; pares MRI-voz pseudopareados",
+    "design": "Evaluación multimodal en datos pseudopareados; comparaciones unimodales y ablaciones",
+    "model": "ParkMultiNet con MVSA, GECR y CASPM; cuatro etapas",
+    "metrics": "PubPD: exactitud 0,9385, F1 0,9457; PativePD: exactitud 0,8417",
+    "limitations": "Pseudopareamiento no equivale a mediciones multimodales genuinas del mismo paciente; no valida diagnóstico prospectivo",
+    "hardware": "Resonancia magnética y grabación de voz; GPU no especificada",
+    "software": "ParkMultiNet; framework no confirmado",
+    "framework": "ParkMultiNet; framework no confirmado",
+    "cost": "No reportado; no se inventa costo de implementación",
+    "code": "No confirmado",
+    "area": "Neuroimagen",
+    "rubro": "Neuroimagen",
+    "modality": "Neuroimagen",
+    "summary": "ParkMultiNet combina resonancia magnética y voz para clasificar Parkinson",
+    "key_metric": "Exactitud 84,17% en PativePD",
+    "language": "No aplica",
+    "figures": [],
+    "remember": "Pseudopareamiento no equivale a mediciones multimodales genuinas del mismo paciente; no valida diagnóstico prospectivo",
+    "rich": {
+      "problem": "ParkMultiNet combina resonancia magnética y voz para clasificar Parkinson",
+      "idea": "ParkMultiNet con MVSA, GECR y CASPM; cuatro etapas",
+      "why": "Potencial para Neuroimagen; requiere validación según limitaciones",
+      "interpretability": "Interpretabilidad y validez causal no asumidas; consultar artículo original",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "PubPDdataset y PativePDdataset; número de pacientes no confirmado; pares MRI-voz pseudopareados",
+          "detail": "Evaluación multimodal en datos pseudopareados; comparaciones unimodales y ablaciones",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado principal",
+          "main": "Exactitud 84,17% en PativePD",
+          "sub": "PubPD: exactitud 0,9385, F1 0,9457; PativePD: exactitud 0,8417"
+        }
+      ],
+      "implementation": [
+        "Evaluación multimodal en datos pseudopareados; comparaciones unimodales y ablaciones",
+        "ParkMultiNet con MVSA, GECR y CASPM; cuatro etapas",
+        "Resonancia magnética y grabación de voz; GPU no especificada",
+        "ParkMultiNet; framework no confirmado",
+        "Costos: no reportados"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Resultados",
+          "PubPD: exactitud 0,9385, F1 0,9457; PativePD: exactitud 0,8417",
+          "Fuente original: 10.1038/s41598-026-77542-1"
+        ],
+        [
+          "Limitaciones",
+          "Pseudopareamiento no equivale a mediciones multimodales genuinas del mismo paciente; no valida diagnóstico prospectivo",
+          "Evaluación crítica"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-11-15",
+    "reviewed": "15 noviembre 2026",
+    "published": "14 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-79760-z",
+    "doi": "10.1038/s41598-026-79760-z",
+    "title": "A deep learning framework for label-free prostate tissue classification using two-photon imaging",
+    "title_es": "Clasificación prostática sin marcadores mediante microscopía de dos fotones e IA",
+    "country": "India y Taiwán (afiliaciones de autores)",
+    "institution": "Equipo de Nirmal Mazumder y Guan-Yu Zhuo",
+    "sample": "295 imágenes (146 normales, 149 tumorales), 135 grupos tisulares (71 normales, 64 tumorales)",
+    "design": "Validación cruzada de cinco particiones separadas por grupo; GLCM frente a modelos MobileNetV3",
+    "model": "MobileNetV3-Small; GFN, GLFN y GLEN; PCA",
+    "metrics": "GLCM exactitud 71,86%, AUC 0,766; GLEN exactitud 86,10%, AUC ≈0,914",
+    "limitations": "No se verificó independencia por paciente; falta cohorte externa",
+    "hardware": "Microscopía de dos fotones; GPU no reportada",
+    "software": "MobileNetV3-Small, GLCM, PCA",
+    "framework": "MobileNetV3-Small, GLCM, PCA",
+    "cost": "No reportado; no se inventa costo de implementación",
+    "code": "No confirmado",
+    "area": "Patología digital",
+    "rubro": "Patología digital",
+    "modality": "Patología digital",
+    "summary": "Clasificación prostática sin marcadores mediante microscopía de dos fotones e IA",
+    "key_metric": "GLEN AUC ≈0,914",
+    "language": "No aplica",
+    "figures": [],
+    "remember": "No se verificó independencia por paciente; falta cohorte externa",
+    "rich": {
+      "problem": "Clasificación prostática sin marcadores mediante microscopía de dos fotones e IA",
+      "idea": "MobileNetV3-Small; GFN, GLFN y GLEN; PCA",
+      "why": "Potencial para Patología digital; requiere validación según limitaciones",
+      "interpretability": "Interpretabilidad y validez causal no asumidas; consultar artículo original",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "295 imágenes (146 normales, 149 tumorales), 135 grupos tisulares (71 normales, 64 tumorales)",
+          "detail": "Validación cruzada de cinco particiones separadas por grupo; GLCM frente a modelos MobileNetV3",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado principal",
+          "main": "GLEN AUC ≈0,914",
+          "sub": "GLCM exactitud 71,86%, AUC 0,766; GLEN exactitud 86,10%, AUC ≈0,914"
+        }
+      ],
+      "implementation": [
+        "Validación cruzada de cinco particiones separadas por grupo; GLCM frente a modelos MobileNetV3",
+        "MobileNetV3-Small; GFN, GLFN y GLEN; PCA",
+        "Microscopía de dos fotones; GPU no reportada",
+        "MobileNetV3-Small, GLCM, PCA",
+        "Costos: no reportados"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Resultados",
+          "GLCM exactitud 71,86%, AUC 0,766; GLEN exactitud 86,10%, AUC ≈0,914",
+          "Fuente original: 10.1038/s41598-026-79760-z"
+        ],
+        [
+          "Limitaciones",
+          "No se verificó independencia por paciente; falta cohorte externa",
+          "Evaluación crítica"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-11-15",
+    "reviewed": "15 noviembre 2026",
+    "published": "14 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "npj Precision Oncology · 2026",
+    "paper": "https://doi.org/10.1038/s41698-026-01764-9",
+    "doi": "10.1038/s41698-026-01764-9",
+    "title": "HGS-BioAbductor: hypergraph-based explainable survival modelling and LLM-based biological hypothesis abduction",
+    "title_es": "HGS-BioAbductor: supervivencia explicable con hipergrafos e hipótesis generadas por LLM",
+    "country": "China",
+    "institution": "Southern University of Science and Technology; Chinese Academy of Medical Sciences",
+    "sample": "18 conjuntos clínicos independientes de proteómica y transcriptómica; pacientes no cuantificados en resumen",
+    "design": "Comparación con siete modelos; hipótesis por agentes y verificación bibliográfica; experimentos PFKFB2 en Huh7 y MHCC-LM3",
+    "model": "Red neuronal de hipergrafos HGS, XAI y torneo multiagente",
+    "metrics": "Mayor C-index en 16/18 conjuntos; ventaja 0,1–0,2 C-index ante comparadores interpretables; plausibilidad >0,8",
+    "limitations": "Hipótesis necesitan validación biológica independiente; experimentos celulares no validan uso clínico",
+    "hardware": "Instrumentación ómica y cultivo celular; GPU no especificada",
+    "software": "HGS-BioAbductor, XAI, LLM",
+    "framework": "HGS-BioAbductor, XAI, LLM",
+    "cost": "No reportado; no se inventa costo de implementación",
+    "code": "No confirmado",
+    "area": "Oncología molecular",
+    "rubro": "Oncología molecular",
+    "modality": "Oncología molecular",
+    "summary": "HGS-BioAbductor: supervivencia explicable con hipergrafos e hipótesis generadas por LLM",
+    "key_metric": "Lidera 16/18 benchmarks",
+    "language": "No aplica",
+    "figures": [],
+    "remember": "Hipótesis necesitan validación biológica independiente; experimentos celulares no validan uso clínico",
+    "rich": {
+      "problem": "HGS-BioAbductor: supervivencia explicable con hipergrafos e hipótesis generadas por LLM",
+      "idea": "Red neuronal de hipergrafos HGS, XAI y torneo multiagente",
+      "why": "Potencial para Oncología molecular; requiere validación según limitaciones",
+      "interpretability": "Interpretabilidad y validez causal no asumidas; consultar artículo original",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "18 conjuntos clínicos independientes de proteómica y transcriptómica; pacientes no cuantificados en resumen",
+          "detail": "Comparación con siete modelos; hipótesis por agentes y verificación bibliográfica; experimentos PFKFB2 en Huh7 y MHCC-LM3",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado principal",
+          "main": "Lidera 16/18 benchmarks",
+          "sub": "Mayor C-index en 16/18 conjuntos; ventaja 0,1–0,2 C-index ante comparadores interpretables; plausibilidad >0,8"
+        }
+      ],
+      "implementation": [
+        "Comparación con siete modelos; hipótesis por agentes y verificación bibliográfica; experimentos PFKFB2 en Huh7 y MHCC-LM3",
+        "Red neuronal de hipergrafos HGS, XAI y torneo multiagente",
+        "Instrumentación ómica y cultivo celular; GPU no especificada",
+        "HGS-BioAbductor, XAI, LLM",
+        "Costos: no reportados"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Resultados",
+          "Mayor C-index en 16/18 conjuntos; ventaja 0,1–0,2 C-index ante comparadores interpretables; plausibilidad >0,8",
+          "Fuente original: 10.1038/s41698-026-01764-9"
+        ],
+        [
+          "Limitaciones",
+          "Hipótesis necesitan validación biológica independiente; experimentos celulares no validan uso clínico",
+          "Evaluación crítica"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-11-15",
+    "reviewed": "15 noviembre 2026",
+    "published": "14 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "npj Digital Medicine · 2026",
+    "paper": "https://doi.org/10.1038/s41746-026-03446-z",
+    "doi": "10.1038/s41746-026-03446-z",
+    "title": "Measurement fidelity and external validation of automated breast DCE-MRI segmentation",
+    "title_es": "Fidelidad de medición y validación externa de segmentación automática de RM mamaria contrastada",
+    "country": "China",
+    "institution": "Harbin Medical University Cancer Hospital; Chinese Academy of Medical Sciences",
+    "sample": "521 casos emparejados internos/DUKE; 80 máscaras revisadas; 276 casos de análisis de respuesta",
+    "design": "Evaluación retrospectiva multicohorte con checkpoints congelados y revisión ciega de radiólogos",
+    "model": "MedNeXt 3D con gated skip fusion y supervisión de bordes",
+    "metrics": "Dice 0,831 interno, 0,823 DUKE, 0,812 BC-MRI-SEG, 0,806 BreastDCEDL_AMBL; ICC volumen 0,97; AUROC respuesta 0,732 frente a 0,757 experto",
+    "limitations": "No inferioridad predictiva no demostrada; uso supervisado por radiólogo",
+    "hardware": "Resonancia magnética con contraste; GPU no especificada",
+    "software": "MedNeXt 3D",
+    "framework": "MedNeXt 3D",
+    "cost": "No reportado; no se inventa costo de implementación",
+    "code": "No confirmado",
+    "area": "Imagen mamaria",
+    "rubro": "Imagen mamaria",
+    "modality": "Imagen mamaria",
+    "summary": "Fidelidad de medición y validación externa de segmentación automática de RM mamaria contrastada",
+    "key_metric": "Dice externo 0,806–0,812",
+    "language": "No aplica",
+    "figures": [],
+    "remember": "No inferioridad predictiva no demostrada; uso supervisado por radiólogo",
+    "rich": {
+      "problem": "Fidelidad de medición y validación externa de segmentación automática de RM mamaria contrastada",
+      "idea": "MedNeXt 3D con gated skip fusion y supervisión de bordes",
+      "why": "Potencial para Imagen mamaria; requiere validación según limitaciones",
+      "interpretability": "Interpretabilidad y validez causal no asumidas; consultar artículo original",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "521 casos emparejados internos/DUKE; 80 máscaras revisadas; 276 casos de análisis de respuesta",
+          "detail": "Evaluación retrospectiva multicohorte con checkpoints congelados y revisión ciega de radiólogos",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado principal",
+          "main": "Dice externo 0,806–0,812",
+          "sub": "Dice 0,831 interno, 0,823 DUKE, 0,812 BC-MRI-SEG, 0,806 BreastDCEDL_AMBL; ICC volumen 0,97; AUROC respuesta 0,732 frente a 0,757 experto"
+        }
+      ],
+      "implementation": [
+        "Evaluación retrospectiva multicohorte con checkpoints congelados y revisión ciega de radiólogos",
+        "MedNeXt 3D con gated skip fusion y supervisión de bordes",
+        "Resonancia magnética con contraste; GPU no especificada",
+        "MedNeXt 3D",
+        "Costos: no reportados"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Resultados",
+          "Dice 0,831 interno, 0,823 DUKE, 0,812 BC-MRI-SEG, 0,806 BreastDCEDL_AMBL; ICC volumen 0,97; AUROC respuesta 0,732 frente a 0,757 experto",
+          "Fuente original: 10.1038/s41746-026-03446-z"
+        ],
+        [
+          "Limitaciones",
+          "No inferioridad predictiva no demostrada; uso supervisado por radiólogo",
+          "Evaluación crítica"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-11-15",
+    "reviewed": "15 noviembre 2026",
+    "published": "14 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Nature Communications · 2026",
+    "paper": "https://doi.org/10.1038/s41467-026-79121-4",
+    "doi": "10.1038/s41467-026-79121-4",
+    "title": "A subspecialty diagnostic system powered by self-supervised learning for cervical histopathology",
+    "title_es": "CerS-Path: histopatología cervical especializada con aprendizaje autosupervisado",
+    "country": "País de afiliación no confirmado en extracto",
+    "institution": "Wang, Chen, Huang y colaboradores; instituciones por corroborar",
+    "sample": "190 millones de parches histológicos; 2,5 millones de pares imagen-texto; seis cohortes independientes",
+    "design": "Preentrenamiento autosupervisado y multimodal; validación retrospectiva y prospectiva multicéntrica",
+    "model": "CerS-Path: extractor cervical especializado y ocho funciones diagnósticas",
+    "metrics": "Supera modelos fundacionales en 26/30 tareas; sensibilidad hasta 99% en detección de lesiones relevantes",
+    "limitations": "El 99% es máximo observado, no sensibilidad uniforme entre cohortes; falta detalle de especificidad por sitio",
+    "hardware": "Escáneres de histología digital; GPU no especificada",
+    "software": "CerS-Path; framework no confirmado",
+    "framework": "CerS-Path; framework no confirmado",
+    "cost": "No reportado; no se inventa costo de implementación",
+    "code": "No confirmado",
+    "area": "Patología cervical",
+    "rubro": "Patología cervical",
+    "modality": "Patología cervical",
+    "summary": "CerS-Path: histopatología cervical especializada con aprendizaje autosupervisado",
+    "key_metric": "26/30 tareas superiores",
+    "language": "No aplica",
+    "figures": [],
+    "remember": "El 99% es máximo observado, no sensibilidad uniforme entre cohortes; falta detalle de especificidad por sitio",
+    "rich": {
+      "problem": "CerS-Path: histopatología cervical especializada con aprendizaje autosupervisado",
+      "idea": "CerS-Path: extractor cervical especializado y ocho funciones diagnósticas",
+      "why": "Potencial para Patología cervical; requiere validación según limitaciones",
+      "interpretability": "Interpretabilidad y validez causal no asumidas; consultar artículo original",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "190 millones de parches histológicos; 2,5 millones de pares imagen-texto; seis cohortes independientes",
+          "detail": "Preentrenamiento autosupervisado y multimodal; validación retrospectiva y prospectiva multicéntrica",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado principal",
+          "main": "26/30 tareas superiores",
+          "sub": "Supera modelos fundacionales en 26/30 tareas; sensibilidad hasta 99% en detección de lesiones relevantes"
+        }
+      ],
+      "implementation": [
+        "Preentrenamiento autosupervisado y multimodal; validación retrospectiva y prospectiva multicéntrica",
+        "CerS-Path: extractor cervical especializado y ocho funciones diagnósticas",
+        "Escáneres de histología digital; GPU no especificada",
+        "CerS-Path; framework no confirmado",
+        "Costos: no reportados"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Resultados",
+          "Supera modelos fundacionales en 26/30 tareas; sensibilidad hasta 99% en detección de lesiones relevantes",
+          "Fuente original: 10.1038/s41467-026-79121-4"
+        ],
+        [
+          "Limitaciones",
+          "El 99% es máximo observado, no sensibilidad uniforme entre cohortes; falta detalle de especificidad por sitio",
+          "Evaluación crítica"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-11-15",
+    "reviewed": "15 noviembre 2026",
+    "published": "14 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "npj Health Systems · 2026",
+    "paper": "https://doi.org/10.1038/s44401-026-00121-z",
+    "doi": "10.1038/s44401-026-00121-z",
+    "title": "Personas shift clinical action thresholds in large language models",
+    "title_es": "Los estilos de instrucción cambian umbrales de decisión clínica de los LLM",
+    "country": "Estados Unidos e Israel",
+    "institution": "Beth Israel Deaconess Medical Center; Harvard Medical School y colaboradores",
+    "sample": "20 LLM abiertos; 2500 viñetas de urgencias y 2500 resúmenes MIMIC-IV-Note; cinco millones de decisiones",
+    "design": "Nueve estilos factoriales ético-cognitivos, cinco preguntas binarias por caso y diez repeticiones",
+    "model": "20 LLM open-weight sin herramientas ni recuperación; variación de instrucciones de sistema",
+    "metrics": "Respuestas afirmativas basales 42,8%; con estilos 36,9–46,4% (amplitud 9,5 puntos); acuerdo direccional 85,7%; r=0,82",
+    "limitations": "No evaluó corrección clínica contra patrón de referencia ni resultados en pacientes",
+    "hardware": "Clúster con cuatro NVIDIA H100",
+    "software": "LLM de pesos abiertos y evaluación factorial",
+    "framework": "LLM de pesos abiertos y evaluación factorial",
+    "cost": "No reportado; no se inventa costo de implementación",
+    "code": "No confirmado",
+    "area": "Seguridad IA clínica",
+    "rubro": "Seguridad IA clínica",
+    "modality": "Seguridad IA clínica",
+    "summary": "Los estilos de instrucción cambian umbrales de decisión clínica de los LLM",
+    "key_metric": "Variación de 9,5 puntos porcentuales",
+    "language": "No aplica",
+    "figures": [],
+    "remember": "No evaluó corrección clínica contra patrón de referencia ni resultados en pacientes",
+    "rich": {
+      "problem": "Los estilos de instrucción cambian umbrales de decisión clínica de los LLM",
+      "idea": "20 LLM open-weight sin herramientas ni recuperación; variación de instrucciones de sistema",
+      "why": "Potencial para Seguridad IA clínica; requiere validación según limitaciones",
+      "interpretability": "Interpretabilidad y validez causal no asumidas; consultar artículo original",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "20 LLM abiertos; 2500 viñetas de urgencias y 2500 resúmenes MIMIC-IV-Note; cinco millones de decisiones",
+          "detail": "Nueve estilos factoriales ético-cognitivos, cinco preguntas binarias por caso y diez repeticiones",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado principal",
+          "main": "Variación de 9,5 puntos porcentuales",
+          "sub": "Respuestas afirmativas basales 42,8%; con estilos 36,9–46,4% (amplitud 9,5 puntos); acuerdo direccional 85,7%; r=0,82"
+        }
+      ],
+      "implementation": [
+        "Nueve estilos factoriales ético-cognitivos, cinco preguntas binarias por caso y diez repeticiones",
+        "20 LLM open-weight sin herramientas ni recuperación; variación de instrucciones de sistema",
+        "Clúster con cuatro NVIDIA H100",
+        "LLM de pesos abiertos y evaluación factorial",
+        "Costos: no reportados"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Resultados",
+          "Respuestas afirmativas basales 42,8%; con estilos 36,9–46,4% (amplitud 9,5 puntos); acuerdo direccional 85,7%; r=0,82",
+          "Fuente original: 10.1038/s44401-026-00121-z"
+        ],
+        [
+          "Limitaciones",
+          "No evaluó corrección clínica contra patrón de referencia ni resultados en pacientes",
+          "Evaluación crítica"
+        ]
+      ]
+    }
+  },
+  {
+    "date": "2026-11-15",
+    "reviewed": "15 noviembre 2026",
+    "published": "14 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-77681-5",
+    "doi": "10.1038/s41598-026-77681-5",
+    "title": "Data readiness and cross database transportability of creatinine based acute kidney injury prediction in intensive care",
+    "title_es": "Preparación de datos y transferibilidad de modelos de lesión renal aguda basados en creatinina en UCI",
+    "country": "China y Estados Unidos",
+    "institution": "Ansteel Group General Hospital; Taizhou People's Hospital; Cornell University; Jiangyin People's Hospital",
+    "sample": "Auditoría: 94.458 estancias MIMIC-IV y 200.234 eICU; modelado: 84.237 y 131.429 estancias respectivamente",
+    "design": "Análisis retrospectivo, predicción a las 24 h de un desenlace operacional de creatinina posterior hasta día 7; validación bidireccional",
+    "model": "Regresión logística regularizada L2 con variables de laboratorio y ausencia de datos",
+    "metrics": "AUROC interna 0,732 MIMIC-IV y 0,723 eICU; externa 0,703 MIMIC→eICU y 0,722 eICU→MIMIC",
+    "limitations": "Desenlace no equivale a clasificación KDIGO completa; calibración cambió entre bases y no se demostró preparación clínica",
+    "hardware": "Historias clínicas y analizadores de creatinina; cómputo local, GPU no reportada",
+    "software": "Regresión logística L2; parámetros de reconstrucción en suplemento",
+    "framework": "Regresión logística L2; parámetros de reconstrucción en suplemento",
+    "cost": "No reportado; no se inventa costo de implementación",
+    "code": "No confirmado",
+    "area": "UCI y nefrología",
+    "rubro": "UCI y nefrología",
+    "modality": "UCI y nefrología",
+    "summary": "Preparación de datos y transferibilidad de modelos de lesión renal aguda basados en creatinina en UCI",
+    "key_metric": "AUROC externa 0,703–0,722",
+    "language": "No aplica",
+    "figures": [],
+    "remember": "Desenlace no equivale a clasificación KDIGO completa; calibración cambió entre bases y no se demostró preparación clínica",
+    "rich": {
+      "problem": "Preparación de datos y transferibilidad de modelos de lesión renal aguda basados en creatinina en UCI",
+      "idea": "Regresión logística regularizada L2 con variables de laboratorio y ausencia de datos",
+      "why": "Potencial para UCI y nefrología; requiere validación según limitaciones",
+      "interpretability": "Interpretabilidad y validez causal no asumidas; consultar artículo original",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "Auditoría: 94.458 estancias MIMIC-IV y 200.234 eICU; modelado: 84.237 y 131.429 estancias respectivamente",
+          "detail": "Análisis retrospectivo, predicción a las 24 h de un desenlace operacional de creatinina posterior hasta día 7; validación bidireccional",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado principal",
+          "main": "AUROC externa 0,703–0,722",
+          "sub": "AUROC interna 0,732 MIMIC-IV y 0,723 eICU; externa 0,703 MIMIC→eICU y 0,722 eICU→MIMIC"
+        }
+      ],
+      "implementation": [
+        "Análisis retrospectivo, predicción a las 24 h de un desenlace operacional de creatinina posterior hasta día 7; validación bidireccional",
+        "Regresión logística regularizada L2 con variables de laboratorio y ausencia de datos",
+        "Historias clínicas y analizadores de creatinina; cómputo local, GPU no reportada",
+        "Regresión logística L2; parámetros de reconstrucción en suplemento",
+        "Costos: no reportados"
+      ],
+      "figures": [],
+      "metrics_table": [
+        [
+          "Resultados",
+          "AUROC interna 0,732 MIMIC-IV y 0,723 eICU; externa 0,703 MIMIC→eICU y 0,722 eICU→MIMIC",
+          "Fuente original: 10.1038/s41598-026-77681-5"
+        ],
+        [
+          "Limitaciones",
+          "Desenlace no equivale a clasificación KDIGO completa; calibración cambió entre bases y no se demostró preparación clínica",
+          "Evaluación crítica"
+        ]
+      ]
+    }
+  },
+  {
     "date": "2026-11-14",
     "reviewed": "14 noviembre 2026",
     "published": "13 noviembre 2026",
