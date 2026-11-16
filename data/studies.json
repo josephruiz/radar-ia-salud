@@ -1,5 +1,474 @@
 [
   {
+    "date": "2026-11-16",
+    "reviewed": "16 noviembre 2026",
+    "published": "14 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-78291-x",
+    "doi": "10.1038/s41598-026-78291-x",
+    "title": "Machine learning-based diabetes risk classification using clinical and lifestyle indicators",
+    "title_es": "Clasificación del riesgo actual de diabetes mediante variables clínicas y hábitos",
+    "country": "Irak",
+    "institution": "Salahaddin University-Erbil; Cihan University-Erbil; Qaiwan International University",
+    "sample": "825 observaciones; nueve predictores",
+    "design": "Clasificación multiclase de estratos actuales de riesgo; partición estratificada 80:20 y validación cruzada de diez pliegues; Friedman y ajuste Holm",
+    "model": "XGBoost comparado con SVM, Random Forest y MLP",
+    "metrics": "Exactitud 98,18%; precisión 98,22%; recall 98,18%; F1 98,18%; ROC-AUC 0,99970",
+    "limitations": "Un centro; validación exclusivamente interna; las variables HbA1c y glucosa ya reflejan estado metabólico, por lo que no predice incidencia futura",
+    "hardware": "Analizadores de glucosa y HbA1c; equipo exacto no especificado",
+    "software": "XGBoost, SVM, Random Forest, MLP; librerías no confirmadas",
+    "framework": "XGBoost, SVM, Random Forest, MLP; librerías no confirmadas",
+    "cost": "No reportados",
+    "code": "No confirmado",
+    "area": "Endocrinología",
+    "rubro": "Endocrinología",
+    "modality": "Endocrinología",
+    "summary": "Clasificación del riesgo actual de diabetes mediante variables clínicas y hábitos",
+    "key_metric": "Exactitud 98,18%",
+    "language": "No aplica",
+    "figures": [],
+    "remember": "Un centro; validación exclusivamente interna; las variables HbA1c y glucosa ya reflejan estado metabólico, por lo que no predice incidencia futura",
+    "rich": {
+      "problem": "Clasificación del riesgo actual de diabetes mediante variables clínicas y hábitos",
+      "idea": "XGBoost comparado con SVM, Random Forest y MLP",
+      "why": "Relevancia para Endocrinología; requiere evaluación de las limitaciones metodológicas.",
+      "interpretability": "No asumir causalidad ni seguridad clínica a partir de métricas internas.",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "825 observaciones; nueve predictores",
+          "detail": "Clasificación multiclase de estratos actuales de riesgo; partición estratificada 80:20 y validación cruzada de diez pliegues; Friedman y ajuste Holm",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado principal",
+          "main": "Exactitud 98,18%",
+          "sub": "Exactitud 98,18%; precisión 98,22%; recall 98,18%; F1 98,18%; ROC-AUC 0,99970"
+        }
+      ],
+      "metrics_table": [
+        {
+          "metric": "Resultados reportados",
+          "value": "Exactitud 98,18%; precisión 98,22%; recall 98,18%; F1 98,18%; ROC-AUC 0,99970"
+        }
+      ],
+      "limitations": "Un centro; validación exclusivamente interna; las variables HbA1c y glucosa ya reflejan estado metabólico, por lo que no predice incidencia futura",
+      "hardware": "Analizadores de glucosa y HbA1c; equipo exacto no especificado",
+      "software": "XGBoost, SVM, Random Forest, MLP; librerías no confirmadas",
+      "cost": "No reportados",
+      "methodology": "Clasificación multiclase de estratos actuales de riesgo; partición estratificada 80:20 y validación cruzada de diez pliegues; Friedman y ajuste Holm",
+      "architecture": "XGBoost comparado con SVM, Random Forest y MLP",
+      "source": "https://doi.org/10.1038/s41598-026-78291-x"
+    }
+  },
+  {
+    "date": "2026-11-16",
+    "reviewed": "16 noviembre 2026",
+    "published": "14 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-80585-z",
+    "doi": "10.1038/s41598-026-80585-z",
+    "title": "Interpretable machine learning identifies patients at risk for persistent influenza A nucleic-acid positivity",
+    "title_es": "IA interpretable para persistencia de positividad molecular en influenza A",
+    "country": "China",
+    "institution": "Affiliated Suzhou Hospital of Nanjing Medical University",
+    "sample": "432 adultos hospitalizados; entrenamiento 346; validación 86",
+    "design": "Retrospectivo; elastic net para selección; siete algoritmos, validación cruzada anidada y SHAP",
+    "model": "XGBoost",
+    "metrics": "AUROC validación 0,835 (IC95% 0,734–0,914); PR-AUC 0,714; sensibilidad 0,800; especificidad 0,656; VPN 0,889",
+    "limitations": "Un centro y sin validación externa; persistencia de prueba positiva no implica necesariamente infectividad",
+    "hardware": "Pruebas moleculares respiratorias y analítica clínica; plataformas no especificadas",
+    "software": "XGBoost, elastic net, SHAP",
+    "framework": "XGBoost, elastic net, SHAP",
+    "cost": "No reportados",
+    "code": "No confirmado",
+    "area": "Infectología",
+    "rubro": "Infectología",
+    "modality": "Infectología",
+    "summary": "IA interpretable para persistencia de positividad molecular en influenza A",
+    "key_metric": "AUROC validación 0,835 (IC95% 0,734–0,914)",
+    "language": "No aplica",
+    "figures": [],
+    "remember": "Un centro y sin validación externa; persistencia de prueba positiva no implica necesariamente infectividad",
+    "rich": {
+      "problem": "IA interpretable para persistencia de positividad molecular en influenza A",
+      "idea": "XGBoost",
+      "why": "Relevancia para Infectología; requiere evaluación de las limitaciones metodológicas.",
+      "interpretability": "No asumir causalidad ni seguridad clínica a partir de métricas internas.",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "432 adultos hospitalizados; entrenamiento 346; validación 86",
+          "detail": "Retrospectivo; elastic net para selección; siete algoritmos, validación cruzada anidada y SHAP",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado principal",
+          "main": "AUROC validación 0,835 (IC95% 0,734–0,914)",
+          "sub": "AUROC validación 0,835 (IC95% 0,734–0,914); PR-AUC 0,714; sensibilidad 0,800; especificidad 0,656; VPN 0,889"
+        }
+      ],
+      "metrics_table": [
+        {
+          "metric": "Resultados reportados",
+          "value": "AUROC validación 0,835 (IC95% 0,734–0,914); PR-AUC 0,714; sensibilidad 0,800; especificidad 0,656; VPN 0,889"
+        }
+      ],
+      "limitations": "Un centro y sin validación externa; persistencia de prueba positiva no implica necesariamente infectividad",
+      "hardware": "Pruebas moleculares respiratorias y analítica clínica; plataformas no especificadas",
+      "software": "XGBoost, elastic net, SHAP",
+      "cost": "No reportados",
+      "methodology": "Retrospectivo; elastic net para selección; siete algoritmos, validación cruzada anidada y SHAP",
+      "architecture": "XGBoost",
+      "source": "https://doi.org/10.1038/s41598-026-80585-z"
+    }
+  },
+  {
+    "date": "2026-11-16",
+    "reviewed": "16 noviembre 2026",
+    "published": "15 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-80472-7",
+    "doi": "10.1038/s41598-026-80472-7",
+    "title": "Machine learning maps multiplanar spinal surface alignment and patterns of change across heterogeneous cohorts",
+    "title_es": "Aprendizaje estadístico de alineación superficial de columna en varios planos",
+    "country": "Emiratos Árabes Unidos y colaboración internacional",
+    "institution": "University of Sharjah y colaboradores",
+    "sample": "468 participantes basales (CGH 200, FMS 120, LSR 80, AIS 68); 268 pares longitudinales",
+    "design": "Análisis retrospectivo combinado; PCA, correlación canónica, agrupamiento exploratorio y clasificación de cambios",
+    "model": "PCA, CCA, K-means y modelos de clasificación",
+    "metrics": "PCA basal dos componentes 83,3% varianza; CCA Rc 0,926; cambios PCA 87,9% acumulado; clasificación balanceada 0,418±0,072",
+    "limitations": "Agrupamientos no confirmados por mezcla gaussiana; no se validó desenlace clínico; heterogeneidad de intervenciones",
+    "hardware": "Mediciones de superficie toracolumbar-pélvica; instrumento exacto no confirmado",
+    "software": "PCA, CCA, K-means, Gaussian mixture",
+    "framework": "PCA, CCA, K-means, Gaussian mixture",
+    "cost": "No reportados",
+    "code": "No confirmado",
+    "area": "Biomecánica",
+    "rubro": "Biomecánica",
+    "modality": "Biomecánica",
+    "summary": "Aprendizaje estadístico de alineación superficial de columna en varios planos",
+    "key_metric": "PCA basal dos componentes 83,3% varianza",
+    "language": "No aplica",
+    "figures": [],
+    "remember": "Agrupamientos no confirmados por mezcla gaussiana; no se validó desenlace clínico; heterogeneidad de intervenciones",
+    "rich": {
+      "problem": "Aprendizaje estadístico de alineación superficial de columna en varios planos",
+      "idea": "PCA, CCA, K-means y modelos de clasificación",
+      "why": "Relevancia para Biomecánica; requiere evaluación de las limitaciones metodológicas.",
+      "interpretability": "No asumir causalidad ni seguridad clínica a partir de métricas internas.",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "468 participantes basales (CGH 200, FMS 120, LSR 80, AIS 68); 268 pares longitudinales",
+          "detail": "Análisis retrospectivo combinado; PCA, correlación canónica, agrupamiento exploratorio y clasificación de cambios",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado principal",
+          "main": "PCA basal dos componentes 83,3% varianza",
+          "sub": "PCA basal dos componentes 83,3% varianza; CCA Rc 0,926; cambios PCA 87,9% acumulado; clasificación balanceada 0,418±0,072"
+        }
+      ],
+      "metrics_table": [
+        {
+          "metric": "Resultados reportados",
+          "value": "PCA basal dos componentes 83,3% varianza; CCA Rc 0,926; cambios PCA 87,9% acumulado; clasificación balanceada 0,418±0,072"
+        }
+      ],
+      "limitations": "Agrupamientos no confirmados por mezcla gaussiana; no se validó desenlace clínico; heterogeneidad de intervenciones",
+      "hardware": "Mediciones de superficie toracolumbar-pélvica; instrumento exacto no confirmado",
+      "software": "PCA, CCA, K-means, Gaussian mixture",
+      "cost": "No reportados",
+      "methodology": "Análisis retrospectivo combinado; PCA, correlación canónica, agrupamiento exploratorio y clasificación de cambios",
+      "architecture": "PCA, CCA, K-means y modelos de clasificación",
+      "source": "https://doi.org/10.1038/s41598-026-80472-7"
+    }
+  },
+  {
+    "date": "2026-11-16",
+    "reviewed": "16 noviembre 2026",
+    "published": "15 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-79085-x",
+    "doi": "10.1038/s41598-026-79085-x",
+    "title": "A generative approach for synthetic image-response in surface plasmon resonance sensors",
+    "title_es": "Generación de respuestas de imagen sintéticas para sensores de resonancia plasmónica superficial",
+    "country": "Brasil",
+    "institution": "Universidade Federal Rural do Semi-Árido; Universidade Federal de Campina Grande",
+    "sample": "Imágenes SPR experimentales de soluciones acuosas y respuestas Fresnel elaboradas; número de imágenes no confirmado",
+    "design": "Generación de imágenes sintéticas a partir de respuestas SPR y evaluación en clasificación de sustancias",
+    "model": "Deep Convolutional Generative Adversarial Network (DCGAN)",
+    "metrics": "Se reporta mejora de clasificación al usar datos sintéticos; magnitud cuantitativa no confirmada en resumen editorial",
+    "limitations": "Prueba de concepto de sensor; sin validación diagnóstica clínica; evaluación de calidad sintética limitada a escenarios estudiados",
+    "hardware": "Sensor SPR en configuración Kretschmann; componentes exactos no confirmados",
+    "software": "DCGAN; framework no confirmado",
+    "framework": "DCGAN; framework no confirmado",
+    "cost": "Costo monetario no reportado; motivación: reducir gasto experimental de generación de datos",
+    "code": "No confirmado",
+    "area": "Biosensores",
+    "rubro": "Biosensores",
+    "modality": "Biosensores",
+    "summary": "Generación de respuestas de imagen sintéticas para sensores de resonancia plasmónica superficial",
+    "key_metric": "Se reporta mejora de clasificación al usar datos sintéticos",
+    "language": "No aplica",
+    "figures": [],
+    "remember": "Prueba de concepto de sensor; sin validación diagnóstica clínica; evaluación de calidad sintética limitada a escenarios estudiados",
+    "rich": {
+      "problem": "Generación de respuestas de imagen sintéticas para sensores de resonancia plasmónica superficial",
+      "idea": "Deep Convolutional Generative Adversarial Network (DCGAN)",
+      "why": "Relevancia para Biosensores; requiere evaluación de las limitaciones metodológicas.",
+      "interpretability": "No asumir causalidad ni seguridad clínica a partir de métricas internas.",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "Imágenes SPR experimentales de soluciones acuosas y respuestas Fresnel elaboradas; número de imágenes no confirmado",
+          "detail": "Generación de imágenes sintéticas a partir de respuestas SPR y evaluación en clasificación de sustancias",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado principal",
+          "main": "Se reporta mejora de clasificación al usar datos sintéticos",
+          "sub": "Se reporta mejora de clasificación al usar datos sintéticos; magnitud cuantitativa no confirmada en resumen editorial"
+        }
+      ],
+      "metrics_table": [
+        {
+          "metric": "Resultados reportados",
+          "value": "Se reporta mejora de clasificación al usar datos sintéticos; magnitud cuantitativa no confirmada en resumen editorial"
+        }
+      ],
+      "limitations": "Prueba de concepto de sensor; sin validación diagnóstica clínica; evaluación de calidad sintética limitada a escenarios estudiados",
+      "hardware": "Sensor SPR en configuración Kretschmann; componentes exactos no confirmados",
+      "software": "DCGAN; framework no confirmado",
+      "cost": "Costo monetario no reportado; motivación: reducir gasto experimental de generación de datos",
+      "methodology": "Generación de imágenes sintéticas a partir de respuestas SPR y evaluación en clasificación de sustancias",
+      "architecture": "Deep Convolutional Generative Adversarial Network (DCGAN)",
+      "source": "https://doi.org/10.1038/s41598-026-79085-x"
+    }
+  },
+  {
+    "date": "2026-11-16",
+    "reviewed": "16 noviembre 2026",
+    "published": "13 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-79256-w",
+    "doi": "10.1038/s41598-026-79256-w",
+    "title": "Explainable federated blockchain framework for privacy preserving medical image analysis in smart healthcare systems",
+    "title_es": "Aprendizaje federado explicable y blockchain para imágenes médicas",
+    "country": "Colaboración internacional; afiliaciones por país no confirmadas",
+    "institution": "Murala y colaboradores; instituciones específicas pendientes de comprobación",
+    "sample": "Benchmarks LIDC-IDRI (TC pulmonar), LiTS (hígado) e ISIC-2020 (piel); número de imágenes no confirmado",
+    "design": "Entrenamiento federado jerárquico; validación de gradientes en cadena permisionada; evaluación de explicabilidad y privacidad diferencial",
+    "model": "XFedChain-IoMT; agregación HFAP, filtro PoMI, SHAP, Grad-CAM++ y LIME",
+    "metrics": "Exactitud 97,3%; AUROC 0,984; F1 0,971; sobrecarga blockchain <2,3%; latencia XAI 12 ms",
+    "limitations": "Ablación de privacidad-interpretabilidad usa proxy y no saliencias reales; no prueba seguridad ni cumplimiento normativo en despliegue hospitalario",
+    "hardware": "Nodos edge/IoMT simulados; configuración física no confirmada",
+    "software": "Aprendizaje federado, blockchain permisionada, SHAP, Grad-CAM++, LIME",
+    "framework": "Aprendizaje federado, blockchain permisionada, SHAP, Grad-CAM++, LIME",
+    "cost": "No reportados; sobrecarga temporal <2,3% no equivale a costo monetario",
+    "code": "No confirmado",
+    "area": "IA federada",
+    "rubro": "IA federada",
+    "modality": "IA federada",
+    "summary": "Aprendizaje federado explicable y blockchain para imágenes médicas",
+    "key_metric": "Exactitud 97,3%",
+    "language": "No aplica",
+    "figures": [],
+    "remember": "Ablación de privacidad-interpretabilidad usa proxy y no saliencias reales; no prueba seguridad ni cumplimiento normativo en despliegue hospitalario",
+    "rich": {
+      "problem": "Aprendizaje federado explicable y blockchain para imágenes médicas",
+      "idea": "XFedChain-IoMT; agregación HFAP, filtro PoMI, SHAP, Grad-CAM++ y LIME",
+      "why": "Relevancia para IA federada; requiere evaluación de las limitaciones metodológicas.",
+      "interpretability": "No asumir causalidad ni seguridad clínica a partir de métricas internas.",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "Benchmarks LIDC-IDRI (TC pulmonar), LiTS (hígado) e ISIC-2020 (piel); número de imágenes no confirmado",
+          "detail": "Entrenamiento federado jerárquico; validación de gradientes en cadena permisionada; evaluación de explicabilidad y privacidad diferencial",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado principal",
+          "main": "Exactitud 97,3%",
+          "sub": "Exactitud 97,3%; AUROC 0,984; F1 0,971; sobrecarga blockchain <2,3%; latencia XAI 12 ms"
+        }
+      ],
+      "metrics_table": [
+        {
+          "metric": "Resultados reportados",
+          "value": "Exactitud 97,3%; AUROC 0,984; F1 0,971; sobrecarga blockchain <2,3%; latencia XAI 12 ms"
+        }
+      ],
+      "limitations": "Ablación de privacidad-interpretabilidad usa proxy y no saliencias reales; no prueba seguridad ni cumplimiento normativo en despliegue hospitalario",
+      "hardware": "Nodos edge/IoMT simulados; configuración física no confirmada",
+      "software": "Aprendizaje federado, blockchain permisionada, SHAP, Grad-CAM++, LIME",
+      "cost": "No reportados; sobrecarga temporal <2,3% no equivale a costo monetario",
+      "methodology": "Entrenamiento federado jerárquico; validación de gradientes en cadena permisionada; evaluación de explicabilidad y privacidad diferencial",
+      "architecture": "XFedChain-IoMT; agregación HFAP, filtro PoMI, SHAP, Grad-CAM++ y LIME",
+      "source": "https://doi.org/10.1038/s41598-026-79256-w"
+    }
+  },
+  {
+    "date": "2026-11-16",
+    "reviewed": "16 noviembre 2026",
+    "published": "13 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-77966-9",
+    "doi": "10.1038/s41598-026-77966-9",
+    "title": "GRU-based temporal modeling of ECG derived physiological features for eclampsia outcome classification",
+    "title_es": "Modelado temporal GRU de ECG para clasificación de desenlaces relacionados con eclampsia",
+    "country": "India",
+    "institution": "Syed Ammal Engineering College",
+    "sample": "10.000 instancias generadas a partir de fuentes biomédicas y literatura; no equivalen a 10.000 gestantes",
+    "design": "Normalización, control de ruido, ADASYN y características RR, QRS y eje ECG; comparación de seis modelos",
+    "model": "Gated Recurrent Unit (GRU), frente a LR, SVM, RF, XGBoost y LSTM",
+    "metrics": "Exactitud 97,2%; precisión 96,8%; recall 97,0%; F1 96,9%; ROC-AUC 0,989; PR-AUC 0,98",
+    "limitations": "Datos generados, no validación con cohorte clínica prospectiva; no apto para alertas obstétricas reales",
+    "hardware": "ECG multiderivación representado en datos; equipo físico no confirmado",
+    "software": "GRU, ADASYN y modelos comparadores",
+    "framework": "GRU, ADASYN y modelos comparadores",
+    "cost": "No reportados",
+    "code": "No confirmado",
+    "area": "Bioseñales",
+    "rubro": "Bioseñales",
+    "modality": "Bioseñales",
+    "summary": "Modelado temporal GRU de ECG para clasificación de desenlaces relacionados con eclampsia",
+    "key_metric": "Exactitud 97,2%",
+    "language": "No aplica",
+    "figures": [],
+    "remember": "Datos generados, no validación con cohorte clínica prospectiva; no apto para alertas obstétricas reales",
+    "rich": {
+      "problem": "Modelado temporal GRU de ECG para clasificación de desenlaces relacionados con eclampsia",
+      "idea": "Gated Recurrent Unit (GRU), frente a LR, SVM, RF, XGBoost y LSTM",
+      "why": "Relevancia para Bioseñales; requiere evaluación de las limitaciones metodológicas.",
+      "interpretability": "No asumir causalidad ni seguridad clínica a partir de métricas internas.",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "10.000 instancias generadas a partir de fuentes biomédicas y literatura; no equivalen a 10.000 gestantes",
+          "detail": "Normalización, control de ruido, ADASYN y características RR, QRS y eje ECG; comparación de seis modelos",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado principal",
+          "main": "Exactitud 97,2%",
+          "sub": "Exactitud 97,2%; precisión 96,8%; recall 97,0%; F1 96,9%; ROC-AUC 0,989; PR-AUC 0,98"
+        }
+      ],
+      "metrics_table": [
+        {
+          "metric": "Resultados reportados",
+          "value": "Exactitud 97,2%; precisión 96,8%; recall 97,0%; F1 96,9%; ROC-AUC 0,989; PR-AUC 0,98"
+        }
+      ],
+      "limitations": "Datos generados, no validación con cohorte clínica prospectiva; no apto para alertas obstétricas reales",
+      "hardware": "ECG multiderivación representado en datos; equipo físico no confirmado",
+      "software": "GRU, ADASYN y modelos comparadores",
+      "cost": "No reportados",
+      "methodology": "Normalización, control de ruido, ADASYN y características RR, QRS y eje ECG; comparación de seis modelos",
+      "architecture": "Gated Recurrent Unit (GRU), frente a LR, SVM, RF, XGBoost y LSTM",
+      "source": "https://doi.org/10.1038/s41598-026-77966-9"
+    }
+  },
+  {
+    "date": "2026-11-16",
+    "reviewed": "16 noviembre 2026",
+    "published": "13 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-74784-x",
+    "doi": "10.1038/s41598-026-74784-x",
+    "title": "Development of multihead cross-correlation attention fusion-based deep learning model for myocardial infarction detection using ECG signal and ESMOTE data balancing",
+    "title_es": "Fusión de atención multicíabeza para identificar infarto mediante señales ECG",
+    "country": "India",
+    "institution": "Equipo de Anantha Lakshmi Gali, Subhranginee Das y Ravi Boda; afiliaciones no verificadas completamente",
+    "sample": "Base pública de ECG; número de registros no confirmado en resumen accesible",
+    "design": "Preprocesamiento de ECG, balanceo ESMOTE y extracción/fusión de características con atención",
+    "model": "Modelo de aprendizaje profundo con fusión de atención de correlación cruzada multicabeza",
+    "metrics": "No se verificaron métricas numéricas en el extracto editorial disponible",
+    "limitations": "Sin evaluación externa corroborada; el sobremuestreo exige evitar fuga de datos entre entrenamiento y prueba",
+    "hardware": "Adquisición ECG de referencia; modelo físico no especificado",
+    "software": "ESMOTE y red de atención multicabeza; framework no confirmado",
+    "framework": "ESMOTE y red de atención multicabeza; framework no confirmado",
+    "cost": "No reportados",
+    "code": "No confirmado",
+    "area": "Cardiología",
+    "rubro": "Cardiología",
+    "modality": "Cardiología",
+    "summary": "Fusión de atención multicíabeza para identificar infarto mediante señales ECG",
+    "key_metric": "No se verificaron métricas numéricas en el extracto editorial disponible",
+    "language": "No aplica",
+    "figures": [],
+    "remember": "Sin evaluación externa corroborada; el sobremuestreo exige evitar fuga de datos entre entrenamiento y prueba",
+    "rich": {
+      "problem": "Fusión de atención multicíabeza para identificar infarto mediante señales ECG",
+      "idea": "Modelo de aprendizaje profundo con fusión de atención de correlación cruzada multicabeza",
+      "why": "Relevancia para Cardiología; requiere evaluación de las limitaciones metodológicas.",
+      "interpretability": "No asumir causalidad ni seguridad clínica a partir de métricas internas.",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "Base pública de ECG; número de registros no confirmado en resumen accesible",
+          "detail": "Preprocesamiento de ECG, balanceo ESMOTE y extracción/fusión de características con atención",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado principal",
+          "main": "No se verificaron métricas numéricas en el extracto editorial disponible",
+          "sub": "No se verificaron métricas numéricas en el extracto editorial disponible"
+        }
+      ],
+      "metrics_table": [
+        {
+          "metric": "Resultados reportados",
+          "value": "No se verificaron métricas numéricas en el extracto editorial disponible"
+        }
+      ],
+      "limitations": "Sin evaluación externa corroborada; el sobremuestreo exige evitar fuga de datos entre entrenamiento y prueba",
+      "hardware": "Adquisición ECG de referencia; modelo físico no especificado",
+      "software": "ESMOTE y red de atención multicabeza; framework no confirmado",
+      "cost": "No reportados",
+      "methodology": "Preprocesamiento de ECG, balanceo ESMOTE y extracción/fusión de características con atención",
+      "architecture": "Modelo de aprendizaje profundo con fusión de atención de correlación cruzada multicabeza",
+      "source": "https://doi.org/10.1038/s41598-026-74784-x"
+    }
+  },
+  {
     "date": "2026-11-15",
     "reviewed": "15 noviembre 2026",
     "published": "14 noviembre 2026",
