@@ -1,5 +1,474 @@
 [
   {
+    "date": "2026-11-17",
+    "reviewed": "17 noviembre 2026",
+    "published": "16 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-80025-y",
+    "doi": "10.1038/s41598-026-80025-y",
+    "title": "Explainable hybrid CNN–transformer with fuzzy feature optimization for thyroid nodule malignancy classification on ultrasound",
+    "title_es": "CNN–Transformer explicable para clasificar malignidad de nódulos tiroideos por ecografía",
+    "country": "India",
+    "institution": "Christ University; Dayananda Sagar Academy; Manipal Institute of Technology Bengaluru",
+    "sample": "TG3K+TN3K para entrenamiento; DDTI, AUITD-Algerian y microlesiones sintéticas para pruebas; tamaño no corroborado",
+    "design": "Evaluación retrospectiva entre datasets; alineación TI-RADS, calibración, ablaciones y estudio de tres radiólogos",
+    "model": "CNN + Transformer + selección difusa + Softmax + Grad-CAM",
+    "metrics": "Exactitud 91,8%; sensibilidad 89,8%; especificidad 93,0%; F1 90,5%; AUC 0,932; 0,54 s/imagen; error de calibración 11,6% a 3,8%",
+    "limitations": "Desplazamiento entre datasets, perturbaciones sintéticas y falta de validación prospectiva multicéntrica",
+    "hardware": "Ecógrafo; GPU y fabricante no corroborados",
+    "software": "CNN, Transformer, Grad-CAM, lógica difusa; framework no corroborado",
+    "framework": "CNN, Transformer, Grad-CAM, lógica difusa; framework no corroborado",
+    "cost": "No reportados en la fuente consultada",
+    "code": "No corroborado",
+    "area": "Endocrinología",
+    "rubro": "Endocrinología",
+    "modality": "Endocrinología",
+    "summary": "CNN–Transformer explicable para clasificar malignidad de nódulos tiroideos por ecografía",
+    "key_metric": "Exactitud 91,8%",
+    "language": "No aplica",
+    "figures": [],
+    "remember": "Desplazamiento entre datasets, perturbaciones sintéticas y falta de validación prospectiva multicéntrica",
+    "rich": {
+      "problem": "CNN–Transformer explicable para clasificar malignidad de nódulos tiroideos por ecografía",
+      "idea": "CNN + Transformer + selección difusa + Softmax + Grad-CAM",
+      "why": "Aplicación potencial a Endocrinología; requiere evaluación crítica de generalización y sesgos.",
+      "interpretability": "No inferir causalidad ni desempeño clínico prospectivo a partir de validación retrospectiva.",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "TG3K+TN3K para entrenamiento; DDTI, AUITD-Algerian y microlesiones sintéticas para pruebas; tamaño no corroborado",
+          "detail": "Evaluación retrospectiva entre datasets; alineación TI-RADS, calibración, ablaciones y estudio de tres radiólogos",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado verificable",
+          "main": "Exactitud 91,8%",
+          "sub": "Exactitud 91,8%; sensibilidad 89,8%; especificidad 93,0%; F1 90,5%; AUC 0,932; 0,54 s/imagen; error de calibración 11,6% a 3,8%"
+        }
+      ],
+      "metrics_table": [
+        {
+          "metric": "Resultados de la publicación",
+          "value": "Exactitud 91,8%; sensibilidad 89,8%; especificidad 93,0%; F1 90,5%; AUC 0,932; 0,54 s/imagen; error de calibración 11,6% a 3,8%"
+        }
+      ],
+      "limitations": "Desplazamiento entre datasets, perturbaciones sintéticas y falta de validación prospectiva multicéntrica",
+      "hardware": "Ecógrafo; GPU y fabricante no corroborados",
+      "software": "CNN, Transformer, Grad-CAM, lógica difusa; framework no corroborado",
+      "cost": "No reportados en la fuente consultada",
+      "methodology": "Evaluación retrospectiva entre datasets; alineación TI-RADS, calibración, ablaciones y estudio de tres radiólogos",
+      "architecture": "CNN + Transformer + selección difusa + Softmax + Grad-CAM",
+      "source": "https://doi.org/10.1038/s41598-026-80025-y"
+    }
+  },
+  {
+    "date": "2026-11-17",
+    "reviewed": "17 noviembre 2026",
+    "published": "16 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Pediatric Research · 2026",
+    "paper": "https://doi.org/10.1038/s41390-026-05565-5",
+    "doi": "10.1038/s41390-026-05565-5",
+    "title": "Identification of associative factors for recurrent respiratory tract infection using machine learning models in preschoolers",
+    "title_es": "Factores asociados a infecciones respiratorias recurrentes en preescolares mediante aprendizaje automático",
+    "country": "China",
+    "institution": "Afiliaciones institucionales específicas no corroboradas en la vista consultada",
+    "sample": "15.075 registros de encuestas de 2020 y 2025; prevalencia 14,55%",
+    "design": "Dos encuestas transversales por conglomerados; 29 variables; diez modelos; selección de nueve variables y aplicación web",
+    "model": "XGBoost con interpretación SHAP",
+    "metrics": "AUC 0,733; variables destacadas: duración del sueño, edad y tiempo de pantalla",
+    "limitations": "Asociación transversal sin causalidad; desempeño moderado; validación externa no confirmada",
+    "hardware": "Cuestionarios; no requiere dispositivo biomédico específico",
+    "software": "XGBoost, SHAP, Streamlit",
+    "framework": "XGBoost, SHAP, Streamlit",
+    "cost": "No reportados en la fuente consultada",
+    "code": "No corroborado",
+    "area": "Pediatría",
+    "rubro": "Pediatría",
+    "modality": "Pediatría",
+    "summary": "Factores asociados a infecciones respiratorias recurrentes en preescolares mediante aprendizaje automático",
+    "key_metric": "AUC 0,733",
+    "language": "No aplica",
+    "figures": [],
+    "remember": "Asociación transversal sin causalidad; desempeño moderado; validación externa no confirmada",
+    "rich": {
+      "problem": "Factores asociados a infecciones respiratorias recurrentes en preescolares mediante aprendizaje automático",
+      "idea": "XGBoost con interpretación SHAP",
+      "why": "Aplicación potencial a Pediatría; requiere evaluación crítica de generalización y sesgos.",
+      "interpretability": "No inferir causalidad ni desempeño clínico prospectivo a partir de validación retrospectiva.",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "15.075 registros de encuestas de 2020 y 2025; prevalencia 14,55%",
+          "detail": "Dos encuestas transversales por conglomerados; 29 variables; diez modelos; selección de nueve variables y aplicación web",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado verificable",
+          "main": "AUC 0,733",
+          "sub": "AUC 0,733; variables destacadas: duración del sueño, edad y tiempo de pantalla"
+        }
+      ],
+      "metrics_table": [
+        {
+          "metric": "Resultados de la publicación",
+          "value": "AUC 0,733; variables destacadas: duración del sueño, edad y tiempo de pantalla"
+        }
+      ],
+      "limitations": "Asociación transversal sin causalidad; desempeño moderado; validación externa no confirmada",
+      "hardware": "Cuestionarios; no requiere dispositivo biomédico específico",
+      "software": "XGBoost, SHAP, Streamlit",
+      "cost": "No reportados en la fuente consultada",
+      "methodology": "Dos encuestas transversales por conglomerados; 29 variables; diez modelos; selección de nueve variables y aplicación web",
+      "architecture": "XGBoost con interpretación SHAP",
+      "source": "https://doi.org/10.1038/s41390-026-05565-5"
+    }
+  },
+  {
+    "date": "2026-11-17",
+    "reviewed": "17 noviembre 2026",
+    "published": "16 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-80511-3",
+    "doi": "10.1038/s41598-026-80511-3",
+    "title": "Machine learning models with SMOTE and GAN-based augmentation for myofascial pelvic pain syndrome classification",
+    "title_es": "Modelos ML con SMOTE y GAN para clasificar síndrome de dolor pélvico miofascial",
+    "country": "China",
+    "institution": "Third Affiliated Hospital of Zhengzhou University",
+    "sample": "2.016 registros (568 casos y 1.448 controles); desarrollo 1.409, prueba intacta 607",
+    "design": "Retrospectivo unicéntrico; 23 predictores; separación de firmas duplicadas; validación anidada 5×3; GAN tabular restringida frente a SMOTENC y pesos de clase",
+    "model": "XGBoost y regresión logística; sobremuestreo SMOTENC y GAN tabular",
+    "metrics": "ROC-AUC GAN-XGBoost 0,852 (IC95% 0,813–0,886) frente a ponderado 0,846; PR-AUC 0,749 vs 0,747; Brier 0,128 vs 0,130",
+    "limitations": "Mejoría mínima y calibración no uniformemente superior; controles sanos y ausencia de validación externa sintomática",
+    "hardware": "Datos clínicos tabulares; GPU no especificada",
+    "software": "XGBoost, SMOTENC, GAN tabular, regresión logística",
+    "framework": "XGBoost, SMOTENC, GAN tabular, regresión logística",
+    "cost": "No reportados en la fuente consultada",
+    "code": "No corroborado",
+    "area": "Salud de la mujer",
+    "rubro": "Salud de la mujer",
+    "modality": "Salud de la mujer",
+    "summary": "Modelos ML con SMOTE y GAN para clasificar síndrome de dolor pélvico miofascial",
+    "key_metric": "AUC 0,852",
+    "language": "No aplica",
+    "figures": [],
+    "remember": "Mejoría mínima y calibración no uniformemente superior; controles sanos y ausencia de validación externa sintomática",
+    "rich": {
+      "problem": "Modelos ML con SMOTE y GAN para clasificar síndrome de dolor pélvico miofascial",
+      "idea": "XGBoost y regresión logística; sobremuestreo SMOTENC y GAN tabular",
+      "why": "Aplicación potencial a Salud de la mujer; requiere evaluación crítica de generalización y sesgos.",
+      "interpretability": "No inferir causalidad ni desempeño clínico prospectivo a partir de validación retrospectiva.",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "2.016 registros (568 casos y 1.448 controles); desarrollo 1.409, prueba intacta 607",
+          "detail": "Retrospectivo unicéntrico; 23 predictores; separación de firmas duplicadas; validación anidada 5×3; GAN tabular restringida frente a SMOTENC y pesos de clase",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado verificable",
+          "main": "AUC 0,852",
+          "sub": "ROC-AUC GAN-XGBoost 0,852 (IC95% 0,813–0,886) frente a ponderado 0,846; PR-AUC 0,749 vs 0,747; Brier 0,128 vs 0,130"
+        }
+      ],
+      "metrics_table": [
+        {
+          "metric": "Resultados de la publicación",
+          "value": "ROC-AUC GAN-XGBoost 0,852 (IC95% 0,813–0,886) frente a ponderado 0,846; PR-AUC 0,749 vs 0,747; Brier 0,128 vs 0,130"
+        }
+      ],
+      "limitations": "Mejoría mínima y calibración no uniformemente superior; controles sanos y ausencia de validación externa sintomática",
+      "hardware": "Datos clínicos tabulares; GPU no especificada",
+      "software": "XGBoost, SMOTENC, GAN tabular, regresión logística",
+      "cost": "No reportados en la fuente consultada",
+      "methodology": "Retrospectivo unicéntrico; 23 predictores; separación de firmas duplicadas; validación anidada 5×3; GAN tabular restringida frente a SMOTENC y pesos de clase",
+      "architecture": "XGBoost y regresión logística; sobremuestreo SMOTENC y GAN tabular",
+      "source": "https://doi.org/10.1038/s41598-026-80511-3"
+    }
+  },
+  {
+    "date": "2026-11-17",
+    "reviewed": "17 noviembre 2026",
+    "published": "16 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "npj Digital Medicine · 2026",
+    "paper": "https://doi.org/10.1038/s41746-026-03471-y",
+    "doi": "10.1038/s41746-026-03471-y",
+    "title": "STBI: dataset of over 12000 brain CT scans for machine learning in traumatic brain injury",
+    "title_es": "STBI: conjunto de más de 12.000 tomografías cerebrales para IA en traumatismo craneoencefálico",
+    "country": "Irán",
+    "institution": "Institución de Shiraz; afiliación exacta no corroborada en el extracto",
+    "sample": "3.602 pacientes; 12.155 estudios TC seriados; 376.195 imágenes DICOM",
+    "design": "Creación y validación de conjunto multimodal longitudinal; estudios TC sin contraste, DICOM y NIfTI con anotaciones y desenlaces vinculados",
+    "model": "Recurso de datos para entrenamiento ML; no se corroboró una arquitectura predictiva única",
+    "metrics": "12.155 exámenes y 376.195 imágenes; métricas de modelo no verificadas en extracto",
+    "limitations": "Dataset no equivale a validación clínica de algoritmo; potencial sesgo geográfico y de adquisición",
+    "hardware": "Tomografía computarizada cerebral sin contraste",
+    "software": "DICOM, NIfTI; librerías de referencia no confirmadas",
+    "framework": "DICOM, NIfTI; librerías de referencia no confirmadas",
+    "cost": "No reportados en la fuente consultada",
+    "code": "No corroborado",
+    "area": "Neuroimagen",
+    "rubro": "Neuroimagen",
+    "modality": "Neuroimagen",
+    "summary": "STBI: conjunto de más de 12.000 tomografías cerebrales para IA en traumatismo craneoencefálico",
+    "key_metric": "12.155 TC",
+    "language": "No aplica",
+    "figures": [],
+    "remember": "Dataset no equivale a validación clínica de algoritmo; potencial sesgo geográfico y de adquisición",
+    "rich": {
+      "problem": "STBI: conjunto de más de 12.000 tomografías cerebrales para IA en traumatismo craneoencefálico",
+      "idea": "Recurso de datos para entrenamiento ML; no se corroboró una arquitectura predictiva única",
+      "why": "Aplicación potencial a Neuroimagen; requiere evaluación crítica de generalización y sesgos.",
+      "interpretability": "No inferir causalidad ni desempeño clínico prospectivo a partir de validación retrospectiva.",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "3.602 pacientes; 12.155 estudios TC seriados; 376.195 imágenes DICOM",
+          "detail": "Creación y validación de conjunto multimodal longitudinal; estudios TC sin contraste, DICOM y NIfTI con anotaciones y desenlaces vinculados",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado verificable",
+          "main": "12.155 TC",
+          "sub": "12.155 exámenes y 376.195 imágenes; métricas de modelo no verificadas en extracto"
+        }
+      ],
+      "metrics_table": [
+        {
+          "metric": "Resultados de la publicación",
+          "value": "12.155 exámenes y 376.195 imágenes; métricas de modelo no verificadas en extracto"
+        }
+      ],
+      "limitations": "Dataset no equivale a validación clínica de algoritmo; potencial sesgo geográfico y de adquisición",
+      "hardware": "Tomografía computarizada cerebral sin contraste",
+      "software": "DICOM, NIfTI; librerías de referencia no confirmadas",
+      "cost": "No reportados en la fuente consultada",
+      "methodology": "Creación y validación de conjunto multimodal longitudinal; estudios TC sin contraste, DICOM y NIfTI con anotaciones y desenlaces vinculados",
+      "architecture": "Recurso de datos para entrenamiento ML; no se corroboró una arquitectura predictiva única",
+      "source": "https://doi.org/10.1038/s41746-026-03471-y"
+    }
+  },
+  {
+    "date": "2026-11-17",
+    "reviewed": "17 noviembre 2026",
+    "published": "16 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-78690-0",
+    "doi": "10.1038/s41598-026-78690-0",
+    "title": "Context-aware tooth instance segmentation and missing-tooth localization in panoramic radiographs",
+    "title_es": "Segmentación contextual de dientes y localización de piezas ausentes en radiografías panorámicas",
+    "country": "No corroborado",
+    "institution": "Shaily Bajpai, Hamza Shafiq y Bumshik Lee; afiliaciones por verificar",
+    "sample": "Radiografías panorámicas; tamaño de muestra no corroborado",
+    "design": "Segmentación por instancia y localización de dientes ausentes con contexto anatómico; evaluación cuantitativa no accesible en extracto",
+    "model": "Modelo de segmentación contextual; arquitectura exacta pendiente de verificación",
+    "metrics": "Métricas numéricas no verificadas; no atribuidas",
+    "limitations": "Muestra, particiones y validación externa no corroboradas; requiere revisión integral",
+    "hardware": "Equipo de radiografía panorámica; fabricante no confirmado",
+    "software": "Modelo de visión por computadora; framework no confirmado",
+    "framework": "Modelo de visión por computadora; framework no confirmado",
+    "cost": "No reportados en la fuente consultada",
+    "code": "No corroborado",
+    "area": "Odontología",
+    "rubro": "Odontología",
+    "modality": "Odontología",
+    "summary": "Segmentación contextual de dientes y localización de piezas ausentes en radiografías panorámicas",
+    "key_metric": "Segmentación por instancia",
+    "language": "No aplica",
+    "figures": [],
+    "remember": "Muestra, particiones y validación externa no corroboradas; requiere revisión integral",
+    "rich": {
+      "problem": "Segmentación contextual de dientes y localización de piezas ausentes en radiografías panorámicas",
+      "idea": "Modelo de segmentación contextual; arquitectura exacta pendiente de verificación",
+      "why": "Aplicación potencial a Odontología; requiere evaluación crítica de generalización y sesgos.",
+      "interpretability": "No inferir causalidad ni desempeño clínico prospectivo a partir de validación retrospectiva.",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "Radiografías panorámicas; tamaño de muestra no corroborado",
+          "detail": "Segmentación por instancia y localización de dientes ausentes con contexto anatómico; evaluación cuantitativa no accesible en extracto",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado verificable",
+          "main": "Segmentación por instancia",
+          "sub": "Métricas numéricas no verificadas; no atribuidas"
+        }
+      ],
+      "metrics_table": [
+        {
+          "metric": "Resultados de la publicación",
+          "value": "Métricas numéricas no verificadas; no atribuidas"
+        }
+      ],
+      "limitations": "Muestra, particiones y validación externa no corroboradas; requiere revisión integral",
+      "hardware": "Equipo de radiografía panorámica; fabricante no confirmado",
+      "software": "Modelo de visión por computadora; framework no confirmado",
+      "cost": "No reportados en la fuente consultada",
+      "methodology": "Segmentación por instancia y localización de dientes ausentes con contexto anatómico; evaluación cuantitativa no accesible en extracto",
+      "architecture": "Modelo de segmentación contextual; arquitectura exacta pendiente de verificación",
+      "source": "https://doi.org/10.1038/s41598-026-78690-0"
+    }
+  },
+  {
+    "date": "2026-11-17",
+    "reviewed": "17 noviembre 2026",
+    "published": "16 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-79748-9",
+    "doi": "10.1038/s41598-026-79748-9",
+    "title": "Brain tumor classification from contrast-enhanced T1 MRI, a patient-wise deep learning study",
+    "title_es": "Clasificación de tumores cerebrales en resonancia T1 contrastada con evaluación por paciente",
+    "country": "No corroborado",
+    "institution": "Abdullah A. Asiri y colaboradores; afiliaciones completas pendientes",
+    "sample": "Imágenes de resonancia T1 con contraste; número de pacientes no corroborado",
+    "design": "Evaluación deep learning separada por paciente; incluye calibración de probabilidades y análisis de clasificación",
+    "model": "CNN, U-Net y preprocesamiento CLAHE mencionados; configuración exacta no confirmada",
+    "metrics": "Métricas numéricas no verificadas en vista consultada",
+    "limitations": "Sin cifras ni cohortes confirmadas para evaluar generalización; no extrapolar resultados",
+    "hardware": "Resonancia magnética con contraste; GPU no confirmada",
+    "software": "CNN, U-Net, CLAHE, Dice loss",
+    "framework": "CNN, U-Net, CLAHE, Dice loss",
+    "cost": "No reportados en la fuente consultada",
+    "code": "No corroborado",
+    "area": "Neuroimagen",
+    "rubro": "Neuroimagen",
+    "modality": "Neuroimagen",
+    "summary": "Clasificación de tumores cerebrales en resonancia T1 contrastada con evaluación por paciente",
+    "key_metric": "Evaluación por paciente",
+    "language": "No aplica",
+    "figures": [],
+    "remember": "Sin cifras ni cohortes confirmadas para evaluar generalización; no extrapolar resultados",
+    "rich": {
+      "problem": "Clasificación de tumores cerebrales en resonancia T1 contrastada con evaluación por paciente",
+      "idea": "CNN, U-Net y preprocesamiento CLAHE mencionados; configuración exacta no confirmada",
+      "why": "Aplicación potencial a Neuroimagen; requiere evaluación crítica de generalización y sesgos.",
+      "interpretability": "No inferir causalidad ni desempeño clínico prospectivo a partir de validación retrospectiva.",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "Imágenes de resonancia T1 con contraste; número de pacientes no corroborado",
+          "detail": "Evaluación deep learning separada por paciente; incluye calibración de probabilidades y análisis de clasificación",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado verificable",
+          "main": "Evaluación por paciente",
+          "sub": "Métricas numéricas no verificadas en vista consultada"
+        }
+      ],
+      "metrics_table": [
+        {
+          "metric": "Resultados de la publicación",
+          "value": "Métricas numéricas no verificadas en vista consultada"
+        }
+      ],
+      "limitations": "Sin cifras ni cohortes confirmadas para evaluar generalización; no extrapolar resultados",
+      "hardware": "Resonancia magnética con contraste; GPU no confirmada",
+      "software": "CNN, U-Net, CLAHE, Dice loss",
+      "cost": "No reportados en la fuente consultada",
+      "methodology": "Evaluación deep learning separada por paciente; incluye calibración de probabilidades y análisis de clasificación",
+      "architecture": "CNN, U-Net y preprocesamiento CLAHE mencionados; configuración exacta no confirmada",
+      "source": "https://doi.org/10.1038/s41598-026-79748-9"
+    }
+  },
+  {
+    "date": "2026-11-17",
+    "reviewed": "17 noviembre 2026",
+    "published": "16 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-77862-2",
+    "doi": "10.1038/s41598-026-77862-2",
+    "title": "EPFH-Net: efficient pyramid forward harmonic network for non-alcoholic fatty liver disease detection",
+    "title_es": "EPFH-Net: red piramidal armónica para detectar hígado graso no alcohólico",
+    "country": "India",
+    "institution": "Chipurupalli Sekhar, K. Venkata Rao, Satyanarayana Murthy Moka y colaboradores; afiliaciones no corroboradas",
+    "sample": "Datos de detección de esteatosis hepática; cantidad y modalidad exacta no confirmadas",
+    "design": "Clasificación de hígado graso no alcohólico mediante red profunda; protocolo de validación pendiente de corroborar",
+    "model": "Efficient Pyramid Forward Harmonic Network (EPFH-Net)",
+    "metrics": "No se corroboraron métricas numéricas en la fuente accesible",
+    "limitations": "Sin muestra, validación externa ni cifras contrastadas; no apto para inferencia clínica",
+    "hardware": "Instrumentación de adquisición no confirmada",
+    "software": "EPFH-Net; framework no confirmado",
+    "framework": "EPFH-Net; framework no confirmado",
+    "cost": "No reportados en la fuente consultada",
+    "code": "No corroborado",
+    "area": "Hepatología",
+    "rubro": "Hepatología",
+    "modality": "Hepatología",
+    "summary": "EPFH-Net: red piramidal armónica para detectar hígado graso no alcohólico",
+    "key_metric": "Arquitectura EPFH-Net",
+    "language": "No aplica",
+    "figures": [],
+    "remember": "Sin muestra, validación externa ni cifras contrastadas; no apto para inferencia clínica",
+    "rich": {
+      "problem": "EPFH-Net: red piramidal armónica para detectar hígado graso no alcohólico",
+      "idea": "Efficient Pyramid Forward Harmonic Network (EPFH-Net)",
+      "why": "Aplicación potencial a Hepatología; requiere evaluación crítica de generalización y sesgos.",
+      "interpretability": "No inferir causalidad ni desempeño clínico prospectivo a partir de validación retrospectiva.",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "Datos de detección de esteatosis hepática; cantidad y modalidad exacta no confirmadas",
+          "detail": "Clasificación de hígado graso no alcohólico mediante red profunda; protocolo de validación pendiente de corroborar",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado verificable",
+          "main": "Arquitectura EPFH-Net",
+          "sub": "No se corroboraron métricas numéricas en la fuente accesible"
+        }
+      ],
+      "metrics_table": [
+        {
+          "metric": "Resultados de la publicación",
+          "value": "No se corroboraron métricas numéricas en la fuente accesible"
+        }
+      ],
+      "limitations": "Sin muestra, validación externa ni cifras contrastadas; no apto para inferencia clínica",
+      "hardware": "Instrumentación de adquisición no confirmada",
+      "software": "EPFH-Net; framework no confirmado",
+      "cost": "No reportados en la fuente consultada",
+      "methodology": "Clasificación de hígado graso no alcohólico mediante red profunda; protocolo de validación pendiente de corroborar",
+      "architecture": "Efficient Pyramid Forward Harmonic Network (EPFH-Net)",
+      "source": "https://doi.org/10.1038/s41598-026-77862-2"
+    }
+  },
+  {
     "date": "2026-11-16",
     "reviewed": "16 noviembre 2026",
     "published": "14 noviembre 2026",
