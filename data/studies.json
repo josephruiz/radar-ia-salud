@@ -1,5 +1,474 @@
 [
   {
+    "date": "2026-11-18",
+    "reviewed": "18 noviembre 2026",
+    "published": "17 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-80526-w",
+    "doi": "10.1038/s41598-026-80526-w",
+    "title": "PreVAP: an explainable machine learning model for early prediction of ventilator-associated pneumonia using electronic health records and near-real-time clinical dashboards",
+    "title_es": "PreVAP: predicción explicable de neumonía asociada a ventilación mecánica",
+    "country": "España",
+    "institution": "Hospital Universitari Joan XXIII, Tarragona; Tarragona Health Data Research Working Group",
+    "sample": "2817 adultos ventilados ≥48 h (2014–2025); 334 desarrollaron neumonía asociada a ventilación",
+    "design": "Retrospectivo unicéntrico; diagnósticos documentados por médicos y registros horarios; comparación de 12 algoritmos y horizontes de 1, 24 y 48 h",
+    "model": "CatBoost con 18 variables de rutina; SHAP; tablero de riesgo horario",
+    "metrics": "AUROC 0,86; sensibilidad 0,76 en prueba reservada; anticipación 24 h",
+    "limitations": "Sin validación externa ni prospectiva; operación silenciosa no equivale a beneficio clínico",
+    "hardware": "Ventiladores, monitores de UCI y registros electrónicos; especificaciones no informadas",
+    "software": "CatBoost; SHAP; tablero clínico; versiones no reportadas",
+    "framework": "CatBoost; SHAP; tablero clínico; versiones no reportadas",
+    "cost": "No se reporta costo de implementación",
+    "code": "No corroborado",
+    "area": "Cuidados intensivos",
+    "rubro": "Cuidados intensivos",
+    "modality": "Cuidados intensivos",
+    "summary": "PreVAP: predicción explicable de neumonía asociada a ventilación mecánica",
+    "key_metric": "AUROC 0,86",
+    "language": "No aplica",
+    "figures": [],
+    "remember": "Sin validación externa ni prospectiva; operación silenciosa no equivale a beneficio clínico",
+    "rich": {
+      "problem": "PreVAP: predicción explicable de neumonía asociada a ventilación mecánica",
+      "idea": "CatBoost con 18 variables de rutina; SHAP; tablero de riesgo horario",
+      "why": "Investigación biomédica original; no sustituye evaluación clínica independiente.",
+      "interpretability": "Sin validación externa ni prospectiva; operación silenciosa no equivale a beneficio clínico",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "2817 adultos ventilados ≥48 h (2014–2025); 334 desarrollaron neumonía asociada a ventilación",
+          "detail": "Retrospectivo unicéntrico; diagnósticos documentados por médicos y registros horarios; comparación de 12 algoritmos y horizontes de 1, 24 y 48 h",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado reportado",
+          "main": "AUROC 0,86",
+          "sub": "AUROC 0,86; sensibilidad 0,76 en prueba reservada; anticipación 24 h"
+        }
+      ],
+      "metrics_table": [
+        {
+          "metric": "Resultados",
+          "value": "AUROC 0,86; sensibilidad 0,76 en prueba reservada; anticipación 24 h"
+        }
+      ],
+      "limitations": "Sin validación externa ni prospectiva; operación silenciosa no equivale a beneficio clínico",
+      "hardware": "Ventiladores, monitores de UCI y registros electrónicos; especificaciones no informadas",
+      "software": "CatBoost; SHAP; tablero clínico; versiones no reportadas",
+      "cost": "No se reporta costo de implementación",
+      "methodology": "Retrospectivo unicéntrico; diagnósticos documentados por médicos y registros horarios; comparación de 12 algoritmos y horizontes de 1, 24 y 48 h",
+      "architecture": "CatBoost con 18 variables de rutina; SHAP; tablero de riesgo horario",
+      "source": "https://doi.org/10.1038/s41598-026-80526-w"
+    }
+  },
+  {
+    "date": "2026-11-18",
+    "reviewed": "18 noviembre 2026",
+    "published": "17 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-80517-x",
+    "doi": "10.1038/s41598-026-80517-x",
+    "title": "Machine learning detects mild cognitive impairment in cerebral small vessel disease via retinal vascular–structural–morphologic metrics",
+    "title_es": "Aprendizaje automático identifica deterioro cognitivo leve mediante biomarcadores retinianos en enfermedad de pequeño vaso cerebral",
+    "country": "China",
+    "institution": "Grupo de Yuheng Zhang y Qinkang Lu; afiliaciones hospitalarias específicas por verificar",
+    "sample": "309 pacientes consecutivos evaluados; 256 incluidos: 101 con deterioro cognitivo leve y 155 sin él",
+    "design": "Estudio retrospectivo; partición 70/30; Boruta retuvo 22 variables y regresión paso a paso seleccionó siete predictores retinianos",
+    "model": "XGBoost comparado con regresión logística y árbol de decisión; SHAP",
+    "metrics": "AUROC XGBoost 0,908 en evaluación; otros valores no corroborados",
+    "limitations": "Un solo entorno retrospectivo; no hay validación externa ni prueba de utilidad prospectiva",
+    "hardware": "Angiografía OCT de fuente barrida (SS-OCTA); marca no corroborada",
+    "software": "Boruta; XGBoost; SHAP; regresión logística",
+    "framework": "Boruta; XGBoost; SHAP; regresión logística",
+    "cost": "No reportados",
+    "code": "No corroborado",
+    "area": "Oftalmología y neurología",
+    "rubro": "Oftalmología y neurología",
+    "modality": "Oftalmología y neurología",
+    "summary": "Aprendizaje automático identifica deterioro cognitivo leve mediante biomarcadores retinianos en enfermedad de pequeño vaso cerebral",
+    "key_metric": "AUROC 0,908",
+    "language": "No aplica",
+    "figures": [],
+    "remember": "Un solo entorno retrospectivo; no hay validación externa ni prueba de utilidad prospectiva",
+    "rich": {
+      "problem": "Aprendizaje automático identifica deterioro cognitivo leve mediante biomarcadores retinianos en enfermedad de pequeño vaso cerebral",
+      "idea": "XGBoost comparado con regresión logística y árbol de decisión; SHAP",
+      "why": "Investigación biomédica original; no sustituye evaluación clínica independiente.",
+      "interpretability": "Un solo entorno retrospectivo; no hay validación externa ni prueba de utilidad prospectiva",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "309 pacientes consecutivos evaluados; 256 incluidos: 101 con deterioro cognitivo leve y 155 sin él",
+          "detail": "Estudio retrospectivo; partición 70/30; Boruta retuvo 22 variables y regresión paso a paso seleccionó siete predictores retinianos",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado reportado",
+          "main": "AUROC 0,908",
+          "sub": "AUROC XGBoost 0,908 en evaluación; otros valores no corroborados"
+        }
+      ],
+      "metrics_table": [
+        {
+          "metric": "Resultados",
+          "value": "AUROC XGBoost 0,908 en evaluación; otros valores no corroborados"
+        }
+      ],
+      "limitations": "Un solo entorno retrospectivo; no hay validación externa ni prueba de utilidad prospectiva",
+      "hardware": "Angiografía OCT de fuente barrida (SS-OCTA); marca no corroborada",
+      "software": "Boruta; XGBoost; SHAP; regresión logística",
+      "cost": "No reportados",
+      "methodology": "Estudio retrospectivo; partición 70/30; Boruta retuvo 22 variables y regresión paso a paso seleccionó siete predictores retinianos",
+      "architecture": "XGBoost comparado con regresión logística y árbol de decisión; SHAP",
+      "source": "https://doi.org/10.1038/s41598-026-80517-x"
+    }
+  },
+  {
+    "date": "2026-11-18",
+    "reviewed": "18 noviembre 2026",
+    "published": "16 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-78000-8",
+    "doi": "10.1038/s41598-026-78000-8",
+    "title": "A heterogeneous deep-learning ensemble for assistive 11-class classification of kidney diseases using transmission electron microscopy",
+    "title_es": "Ensamble profundo para clasificación de once enfermedades renales mediante microscopía electrónica",
+    "country": "China",
+    "institution": "Equipo de Liu Liu, Jie Liu y Junpu Wang; instituciones completas por verificar",
+    "sample": "60.509 imágenes TEM de 8250 pacientes; entrenamiento 5940, metacalibración 661, prueba 1649",
+    "design": "Partición estricta por paciente; folds anidados; agregación de predicciones por paciente; calibración de temperatura y reglas de derivación",
+    "model": "EfficientNet-B4, ViT-B/16, Swin-B, ConvNeXt-B, DeiT-B; soft voting y stacking logístico",
+    "metrics": "Exactitud por imagen 0,444; macro-F1 0,361; macro-AUC 0,793; exactitud por paciente 0,610; error de calibración 0,059→0,028",
+    "limitations": "No alcanzó objetivo de precisión autónoma ≥0,90; resultados no sustentan diagnóstico independiente",
+    "hardware": "Microscopía electrónica de transmisión; equipos y GPU no corroborados",
+    "software": "Cinco backbones; stacking; test-time augmentation 8×; escalado de temperatura",
+    "framework": "Cinco backbones; stacking; test-time augmentation 8×; escalado de temperatura",
+    "cost": "No reportados",
+    "code": "No corroborado",
+    "area": "Nefropatología",
+    "rubro": "Nefropatología",
+    "modality": "Nefropatología",
+    "summary": "Ensamble profundo para clasificación de once enfermedades renales mediante microscopía electrónica",
+    "key_metric": "Macro-AUC 0,793",
+    "language": "No aplica",
+    "figures": [],
+    "remember": "No alcanzó objetivo de precisión autónoma ≥0,90; resultados no sustentan diagnóstico independiente",
+    "rich": {
+      "problem": "Ensamble profundo para clasificación de once enfermedades renales mediante microscopía electrónica",
+      "idea": "EfficientNet-B4, ViT-B/16, Swin-B, ConvNeXt-B, DeiT-B; soft voting y stacking logístico",
+      "why": "Investigación biomédica original; no sustituye evaluación clínica independiente.",
+      "interpretability": "No alcanzó objetivo de precisión autónoma ≥0,90; resultados no sustentan diagnóstico independiente",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "60.509 imágenes TEM de 8250 pacientes; entrenamiento 5940, metacalibración 661, prueba 1649",
+          "detail": "Partición estricta por paciente; folds anidados; agregación de predicciones por paciente; calibración de temperatura y reglas de derivación",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado reportado",
+          "main": "Macro-AUC 0,793",
+          "sub": "Exactitud por imagen 0,444; macro-F1 0,361; macro-AUC 0,793; exactitud por paciente 0,610; error de calibración 0,059→0,028"
+        }
+      ],
+      "metrics_table": [
+        {
+          "metric": "Resultados",
+          "value": "Exactitud por imagen 0,444; macro-F1 0,361; macro-AUC 0,793; exactitud por paciente 0,610; error de calibración 0,059→0,028"
+        }
+      ],
+      "limitations": "No alcanzó objetivo de precisión autónoma ≥0,90; resultados no sustentan diagnóstico independiente",
+      "hardware": "Microscopía electrónica de transmisión; equipos y GPU no corroborados",
+      "software": "Cinco backbones; stacking; test-time augmentation 8×; escalado de temperatura",
+      "cost": "No reportados",
+      "methodology": "Partición estricta por paciente; folds anidados; agregación de predicciones por paciente; calibración de temperatura y reglas de derivación",
+      "architecture": "EfficientNet-B4, ViT-B/16, Swin-B, ConvNeXt-B, DeiT-B; soft voting y stacking logístico",
+      "source": "https://doi.org/10.1038/s41598-026-78000-8"
+    }
+  },
+  {
+    "date": "2026-11-18",
+    "reviewed": "18 noviembre 2026",
+    "published": "17 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-80139-3",
+    "doi": "10.1038/s41598-026-80139-3",
+    "title": "Bias-resilient ECG waveform modeling for rapid differentiation of stanford type-A aortic syndrome from STEMI",
+    "title_es": "Modelo de ECG resistente a sesgos para diferenciar síndrome aórtico tipo A de infarto con elevación ST",
+    "country": "China",
+    "institution": "Equipo clínico-tecnológico asociado a Tsinghua University; centros completos por verificar",
+    "sample": "728 registros ECG iniciales de 12 derivaciones: 344 síndrome aórtico tipo A y 384 STEMI",
+    "design": "Digitalización de ECG en papel, corrección de perspectiva y cuadrícula, reconstrucción de señales 1D y comparación de morfología",
+    "model": "ConvNeXt-Femto con compresión de bajo rango y atención relacional entre derivaciones",
+    "metrics": "Exactitud 0,900; F1 0,906; 61.850 parámetros; latencia 4,010 ms por muestra",
+    "limitations": "Prueba de concepto; riesgo de sesgo del soporte papel; no reemplaza imagen confirmatoria",
+    "hardware": "Electrocardiógrafo de 12 derivaciones y digitalización de trazos; marca no informada",
+    "software": "ConvNeXt-Femto; procesamiento de señales",
+    "framework": "ConvNeXt-Femto; procesamiento de señales",
+    "cost": "No reportados",
+    "code": "No corroborado",
+    "area": "Cardiología e ingeniería de bioseñales",
+    "rubro": "Cardiología e ingeniería de bioseñales",
+    "modality": "Cardiología e ingeniería de bioseñales",
+    "summary": "Modelo de ECG resistente a sesgos para diferenciar síndrome aórtico tipo A de infarto con elevación ST",
+    "key_metric": "Exactitud 90,0%",
+    "language": "No aplica",
+    "figures": [],
+    "remember": "Prueba de concepto; riesgo de sesgo del soporte papel; no reemplaza imagen confirmatoria",
+    "rich": {
+      "problem": "Modelo de ECG resistente a sesgos para diferenciar síndrome aórtico tipo A de infarto con elevación ST",
+      "idea": "ConvNeXt-Femto con compresión de bajo rango y atención relacional entre derivaciones",
+      "why": "Investigación biomédica original; no sustituye evaluación clínica independiente.",
+      "interpretability": "Prueba de concepto; riesgo de sesgo del soporte papel; no reemplaza imagen confirmatoria",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "728 registros ECG iniciales de 12 derivaciones: 344 síndrome aórtico tipo A y 384 STEMI",
+          "detail": "Digitalización de ECG en papel, corrección de perspectiva y cuadrícula, reconstrucción de señales 1D y comparación de morfología",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado reportado",
+          "main": "Exactitud 90,0%",
+          "sub": "Exactitud 0,900; F1 0,906; 61.850 parámetros; latencia 4,010 ms por muestra"
+        }
+      ],
+      "metrics_table": [
+        {
+          "metric": "Resultados",
+          "value": "Exactitud 0,900; F1 0,906; 61.850 parámetros; latencia 4,010 ms por muestra"
+        }
+      ],
+      "limitations": "Prueba de concepto; riesgo de sesgo del soporte papel; no reemplaza imagen confirmatoria",
+      "hardware": "Electrocardiógrafo de 12 derivaciones y digitalización de trazos; marca no informada",
+      "software": "ConvNeXt-Femto; procesamiento de señales",
+      "cost": "No reportados",
+      "methodology": "Digitalización de ECG en papel, corrección de perspectiva y cuadrícula, reconstrucción de señales 1D y comparación de morfología",
+      "architecture": "ConvNeXt-Femto con compresión de bajo rango y atención relacional entre derivaciones",
+      "source": "https://doi.org/10.1038/s41598-026-80139-3"
+    }
+  },
+  {
+    "date": "2026-11-18",
+    "reviewed": "18 noviembre 2026",
+    "published": "17 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "npj Parkinson's Disease · 2026",
+    "paper": "https://doi.org/10.1038/s41531-026-01606-2",
+    "doi": "10.1038/s41531-026-01606-2",
+    "title": "Machine learning-based plasma proteomics discovers biomarkers for the early diagnosis of Parkinson’s disease",
+    "title_es": "Proteómica plasmática y aprendizaje automático para investigar biomarcadores tempranos de Parkinson",
+    "country": "China",
+    "institution": "First Affiliated Hospital of Zhengzhou University",
+    "sample": "391 participantes; análisis de plasma en diseño de dos etapas",
+    "design": "Proteómica plasmática, selección de biomarcadores y comparación de modelos; panel candidato LAMP1, APOD, VIM, CTSF, HEG1",
+    "model": "XGBoost, LightGBM, Random Forest, árbol de decisión, regresión logística y eliminación recursiva de variables",
+    "metrics": "La fuente consultada no permitió confirmar una AUC única con su cohorte correspondiente; no se atribuye una cifra",
+    "limitations": "Los resultados de descubrimiento requieren replicación y evaluación prospectiva; métricas por cohorte pendientes",
+    "hardware": "Plataforma de proteómica plasmática; instrumento exacto no confirmado",
+    "software": "XGBoost; LightGBM; Random Forest; selección recursiva",
+    "framework": "XGBoost; LightGBM; Random Forest; selección recursiva",
+    "cost": "No reportados",
+    "code": "No corroborado",
+    "area": "Neurología y proteómica",
+    "rubro": "Neurología y proteómica",
+    "modality": "Neurología y proteómica",
+    "summary": "Proteómica plasmática y aprendizaje automático para investigar biomarcadores tempranos de Parkinson",
+    "key_metric": "391 participantes",
+    "language": "No aplica",
+    "figures": [],
+    "remember": "Los resultados de descubrimiento requieren replicación y evaluación prospectiva; métricas por cohorte pendientes",
+    "rich": {
+      "problem": "Proteómica plasmática y aprendizaje automático para investigar biomarcadores tempranos de Parkinson",
+      "idea": "XGBoost, LightGBM, Random Forest, árbol de decisión, regresión logística y eliminación recursiva de variables",
+      "why": "Investigación biomédica original; no sustituye evaluación clínica independiente.",
+      "interpretability": "Los resultados de descubrimiento requieren replicación y evaluación prospectiva; métricas por cohorte pendientes",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "391 participantes; análisis de plasma en diseño de dos etapas",
+          "detail": "Proteómica plasmática, selección de biomarcadores y comparación de modelos; panel candidato LAMP1, APOD, VIM, CTSF, HEG1",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado reportado",
+          "main": "391 participantes",
+          "sub": "La fuente consultada no permitió confirmar una AUC única con su cohorte correspondiente; no se atribuye una cifra"
+        }
+      ],
+      "metrics_table": [
+        {
+          "metric": "Resultados",
+          "value": "La fuente consultada no permitió confirmar una AUC única con su cohorte correspondiente; no se atribuye una cifra"
+        }
+      ],
+      "limitations": "Los resultados de descubrimiento requieren replicación y evaluación prospectiva; métricas por cohorte pendientes",
+      "hardware": "Plataforma de proteómica plasmática; instrumento exacto no confirmado",
+      "software": "XGBoost; LightGBM; Random Forest; selección recursiva",
+      "cost": "No reportados",
+      "methodology": "Proteómica plasmática, selección de biomarcadores y comparación de modelos; panel candidato LAMP1, APOD, VIM, CTSF, HEG1",
+      "architecture": "XGBoost, LightGBM, Random Forest, árbol de decisión, regresión logística y eliminación recursiva de variables",
+      "source": "https://doi.org/10.1038/s41531-026-01606-2"
+    }
+  },
+  {
+    "date": "2026-11-18",
+    "reviewed": "18 noviembre 2026",
+    "published": "17 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "npj Digital Medicine · 2026",
+    "paper": "https://doi.org/10.1038/s41746-026-03405-8",
+    "doi": "10.1038/s41746-026-03405-8",
+    "title": "Routine laboratory trajectories predict organ-level complications in cancer",
+    "title_es": "Trayectorias de laboratorio para predecir complicaciones orgánicas en cáncer",
+    "country": "Alemania",
+    "institution": "Technical University of Munich / TUM Klinikum Rechts der Isar y colaboradores",
+    "sample": "3.905 pacientes con mieloma múltiple o cáncer ovárico; 2.777.595 mediciones; 162 complicaciones",
+    "design": "Modelado longitudinal de análisis clínicos; horizonte de dos años; comparación con modelos no secuenciales y validación externa MIMIC-IV y MMRF CoMMpass",
+    "model": "Transformer temporal sobre series de laboratorio; análisis por enmascaramiento de biomarcadores",
+    "metrics": "Enriquecimiento 1,5–6,1 veces sobre prevalencia; mejora media AUROC +0,024 a +0,070 respecto a baselines",
+    "limitations": "Transferencia heterogénea por desenlace, peor en infecciones; no demuestra beneficio de intervención",
+    "hardware": "Analizadores clínicos e infraestructura EHR; GPU no especificada",
+    "software": "Transformer; evaluación longitudinal; software exacto no reportado",
+    "framework": "Transformer; evaluación longitudinal; software exacto no reportado",
+    "cost": "Sin pruebas adicionales más allá de laboratorio rutinario; costo computacional no reportado",
+    "code": "No corroborado",
+    "area": "Oncología y laboratorio clínico",
+    "rubro": "Oncología y laboratorio clínico",
+    "modality": "Oncología y laboratorio clínico",
+    "summary": "Trayectorias de laboratorio para predecir complicaciones orgánicas en cáncer",
+    "key_metric": "3.905 pacientes",
+    "language": "No aplica",
+    "figures": [],
+    "remember": "Transferencia heterogénea por desenlace, peor en infecciones; no demuestra beneficio de intervención",
+    "rich": {
+      "problem": "Trayectorias de laboratorio para predecir complicaciones orgánicas en cáncer",
+      "idea": "Transformer temporal sobre series de laboratorio; análisis por enmascaramiento de biomarcadores",
+      "why": "Investigación biomédica original; no sustituye evaluación clínica independiente.",
+      "interpretability": "Transferencia heterogénea por desenlace, peor en infecciones; no demuestra beneficio de intervención",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "3.905 pacientes con mieloma múltiple o cáncer ovárico; 2.777.595 mediciones; 162 complicaciones",
+          "detail": "Modelado longitudinal de análisis clínicos; horizonte de dos años; comparación con modelos no secuenciales y validación externa MIMIC-IV y MMRF CoMMpass",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado reportado",
+          "main": "3.905 pacientes",
+          "sub": "Enriquecimiento 1,5–6,1 veces sobre prevalencia; mejora media AUROC +0,024 a +0,070 respecto a baselines"
+        }
+      ],
+      "metrics_table": [
+        {
+          "metric": "Resultados",
+          "value": "Enriquecimiento 1,5–6,1 veces sobre prevalencia; mejora media AUROC +0,024 a +0,070 respecto a baselines"
+        }
+      ],
+      "limitations": "Transferencia heterogénea por desenlace, peor en infecciones; no demuestra beneficio de intervención",
+      "hardware": "Analizadores clínicos e infraestructura EHR; GPU no especificada",
+      "software": "Transformer; evaluación longitudinal; software exacto no reportado",
+      "cost": "Sin pruebas adicionales más allá de laboratorio rutinario; costo computacional no reportado",
+      "methodology": "Modelado longitudinal de análisis clínicos; horizonte de dos años; comparación con modelos no secuenciales y validación externa MIMIC-IV y MMRF CoMMpass",
+      "architecture": "Transformer temporal sobre series de laboratorio; análisis por enmascaramiento de biomarcadores",
+      "source": "https://doi.org/10.1038/s41746-026-03405-8"
+    }
+  },
+  {
+    "date": "2026-11-18",
+    "reviewed": "18 noviembre 2026",
+    "published": "17 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-78728-3",
+    "doi": "10.1038/s41598-026-78728-3",
+    "title": "NeuroNet-X: a hybrid CNN-transformer architecture with CBAM attention for brain tumor MRI classification — multi-seed validation and explainability analysis",
+    "title_es": "NeuroNet-X: arquitectura híbrida CNN-Transformer con atención para clasificación de tumores en RM",
+    "country": "No corroborado",
+    "institution": "Yuxuan Dong, MD AL Fassi y Md. Hadi Al-Amin; afiliaciones por verificar",
+    "sample": "Imágenes de RM de tumores cerebrales; cantidad de pacientes no confirmada en extracto accesible",
+    "design": "Clasificación retrospectiva con evaluación de múltiples semillas y explicabilidad; particiones y validación externa por corroborar",
+    "model": "ResNet-50 preentrenada, CBAM tras capas 2–4, puente de patches y Vision Transformer ligero",
+    "metrics": "No se corroboraron métricas numéricas exactas en fuente primaria accesible",
+    "limitations": "No se verificó separación por paciente ni validación externa; rendimiento no cuantificable con evidencia disponible",
+    "hardware": "Resonancia magnética; GPU no reportada",
+    "software": "ResNet-50; CBAM; ViT; framework no reportado",
+    "framework": "ResNet-50; CBAM; ViT; framework no reportado",
+    "cost": "No reportados",
+    "code": "No corroborado",
+    "area": "Neuroimagen",
+    "rubro": "Neuroimagen",
+    "modality": "Neuroimagen",
+    "summary": "NeuroNet-X: arquitectura híbrida CNN-Transformer con atención para clasificación de tumores en RM",
+    "key_metric": "Métricas pendientes",
+    "language": "No aplica",
+    "figures": [],
+    "remember": "No se verificó separación por paciente ni validación externa; rendimiento no cuantificable con evidencia disponible",
+    "rich": {
+      "problem": "NeuroNet-X: arquitectura híbrida CNN-Transformer con atención para clasificación de tumores en RM",
+      "idea": "ResNet-50 preentrenada, CBAM tras capas 2–4, puente de patches y Vision Transformer ligero",
+      "why": "Investigación biomédica original; no sustituye evaluación clínica independiente.",
+      "interpretability": "No se verificó separación por paciente ni validación externa; rendimiento no cuantificable con evidencia disponible",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "Imágenes de RM de tumores cerebrales; cantidad de pacientes no confirmada en extracto accesible",
+          "detail": "Clasificación retrospectiva con evaluación de múltiples semillas y explicabilidad; particiones y validación externa por corroborar",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado reportado",
+          "main": "Métricas pendientes",
+          "sub": "No se corroboraron métricas numéricas exactas en fuente primaria accesible"
+        }
+      ],
+      "metrics_table": [
+        {
+          "metric": "Resultados",
+          "value": "No se corroboraron métricas numéricas exactas en fuente primaria accesible"
+        }
+      ],
+      "limitations": "No se verificó separación por paciente ni validación externa; rendimiento no cuantificable con evidencia disponible",
+      "hardware": "Resonancia magnética; GPU no reportada",
+      "software": "ResNet-50; CBAM; ViT; framework no reportado",
+      "cost": "No reportados",
+      "methodology": "Clasificación retrospectiva con evaluación de múltiples semillas y explicabilidad; particiones y validación externa por corroborar",
+      "architecture": "ResNet-50 preentrenada, CBAM tras capas 2–4, puente de patches y Vision Transformer ligero",
+      "source": "https://doi.org/10.1038/s41598-026-78728-3"
+    }
+  },
+  {
     "date": "2026-11-17",
     "reviewed": "17 noviembre 2026",
     "published": "16 noviembre 2026",
