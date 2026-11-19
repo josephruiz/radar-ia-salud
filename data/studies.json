@@ -1,5 +1,516 @@
 [
   {
+    "date": "2026-11-19",
+    "reviewed": "19 noviembre 2026",
+    "published": "17 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "npj Digital Medicine · 2026",
+    "paper": "https://doi.org/10.1038/s41746-026-03463-y",
+    "doi": "10.1038/s41746-026-03463-y",
+    "title": "Deep learning retinal vascular biomarker predicts preeclampsia in a multicenter prospective cohort",
+    "title_es": "Biomarcador vascular retiniano mediante aprendizaje profundo para predecir preeclampsia",
+    "country": "China",
+    "institution": "Shanghai First Maternity and Infant Hospital; Shanghai Jiading Maternal and Child Health Hospital",
+    "sample": "8616 embarazadas, datos multicéntricos recogidos prospectivamente",
+    "design": "Desarrollo y evaluación retrospectivos con validación externa; predicción de preeclampsia en distintas ventanas gestacionales",
+    "model": "Retina-PE: fusión multimodal con atención cruzada de fotografía retiniana, factores maternos y presión arterial media",
+    "metrics": "AUC externas por imagen: 0,728 y 0,815 para ocurrencia; 0,801 y 0,801 para prematuridad a 1 y 4 semanas; 0,776 y 0,766 para inicio temprano",
+    "limitations": "Pocos eventos para ciertas tareas; evaluación retrospectiva de cohorte prospectiva; requiere evaluación clínica prospectiva",
+    "hardware": "Cámara de fondo de ojo y tensiómetro; modelos no especificados",
+    "software": "Red multimodal Retina-PE; atención cruzada; versiones no confirmadas",
+    "framework": "Red multimodal Retina-PE; atención cruzada; versiones no confirmadas",
+    "cost": "No reportados",
+    "code": "No corroborado",
+    "area": "Oftalmología y obstetricia",
+    "rubro": "Oftalmología y obstetricia",
+    "modality": "Oftalmología y obstetricia",
+    "summary": "Biomarcador vascular retiniano mediante aprendizaje profundo para predecir preeclampsia",
+    "key_metric": "AUC externas por imagen: 0,728 y 0,815 para ocurrencia",
+    "language": "No aplica",
+    "figures": [],
+    "remember": "Pocos eventos para ciertas tareas; evaluación retrospectiva de cohorte prospectiva; requiere evaluación clínica prospectiva",
+    "rich": {
+      "problem": "Biomarcador vascular retiniano mediante aprendizaje profundo para predecir preeclampsia",
+      "idea": "Retina-PE: fusión multimodal con atención cruzada de fotografía retiniana, factores maternos y presión arterial media",
+      "methodology": "Desarrollo y evaluación retrospectivos con validación externa; predicción de preeclampsia en distintas ventanas gestacionales",
+      "architecture": "Retina-PE: fusión multimodal con atención cruzada de fotografía retiniana, factores maternos y presión arterial media",
+      "results": "AUC externas por imagen: 0,728 y 0,815 para ocurrencia; 0,801 y 0,801 para prematuridad a 1 y 4 semanas; 0,776 y 0,766 para inicio temprano",
+      "limitations": "Pocos eventos para ciertas tareas; evaluación retrospectiva de cohorte prospectiva; requiere evaluación clínica prospectiva",
+      "hardware": "Cámara de fondo de ojo y tensiómetro; modelos no especificados",
+      "software": "Red multimodal Retina-PE; atención cruzada; versiones no confirmadas",
+      "cost": "No reportados",
+      "source": "https://doi.org/10.1038/s41746-026-03463-y",
+      "interpretability": "Ver metodología y limitaciones del estudio original.",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "8616 embarazadas, datos multicéntricos recogidos prospectivamente",
+          "detail": "Desarrollo y evaluación retrospectivos con validación externa; predicción de preeclampsia en distintas ventanas gestacionales",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado",
+          "main": "AUC externas por imagen: 0,728 y 0,815 para ocurrencia",
+          "sub": "Interpretar según diseño y cohorte"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Indicadores reportados",
+          "AUC externas por imagen: 0,728 y 0,815 para ocurrencia; 0,801 y 0,801 para prematuridad a 1 y 4 semanas; 0,776 y 0,766 para inicio temprano",
+          "Fuente editorial original"
+        ]
+      ],
+      "implementation": [
+        "Revisar independencia y validación externa",
+        "No extrapolar resultados fuera de la cohorte"
+      ],
+      "figures": []
+    }
+  },
+  {
+    "date": "2026-11-19",
+    "reviewed": "19 noviembre 2026",
+    "published": "18 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-80163-3",
+    "doi": "10.1038/s41598-026-80163-3",
+    "title": "Machine learning based reference assisted signal recovery under anatomical domain shift in simulated radiofrequency fracture sensing",
+    "title_es": "Recuperación de señal asistida por referencia para detección simulada de fracturas mediante radiofrecuencia",
+    "country": "Reino Unido",
+    "institution": "University of Bradford y colaboradores",
+    "sample": "5580 adquisiciones de transmisor, 1395 configuraciones físicas simuladas, cinco ubicaciones",
+    "design": "Simulaciones de sensado de fractura bajo cambio de dominio anatómico y ruido; comparación de referencia sana y condiciones de SNR",
+    "model": "LightGBM con descriptores de señales de radiofrecuencia y referencia sana",
+    "metrics": "AUROC macro promedio en fase inicial: 0,7935 sin referencia comparable frente a 0,9725 con referencia a igual SNR (según análisis publicado)",
+    "limitations": "Solo simulación; no cuantifica exactitud diagnóstica humana; sensibilidad al ruido y transferencia de umbrales",
+    "hardware": "Transmisores y sensores RF simulados; sin equipo clínico real validado",
+    "software": "LightGBM; MATLAB y Python; código/datos en Zenodo 22030635",
+    "framework": "LightGBM; MATLAB y Python; código/datos en Zenodo 22030635",
+    "cost": "No reportados",
+    "code": "https://zenodo.org/records/22030635",
+    "area": "Sensores biomédicos",
+    "rubro": "Sensores biomédicos",
+    "modality": "Sensores biomédicos",
+    "summary": "Recuperación de señal asistida por referencia para detección simulada de fracturas mediante radiofrecuencia",
+    "key_metric": "AUROC macro promedio en fase inicial: 0,7935 sin referencia comparable frente a 0,9725 con referencia a igual SNR (según análisis publicado)",
+    "language": "No aplica",
+    "figures": [],
+    "remember": "Solo simulación; no cuantifica exactitud diagnóstica humana; sensibilidad al ruido y transferencia de umbrales",
+    "rich": {
+      "problem": "Recuperación de señal asistida por referencia para detección simulada de fracturas mediante radiofrecuencia",
+      "idea": "LightGBM con descriptores de señales de radiofrecuencia y referencia sana",
+      "methodology": "Simulaciones de sensado de fractura bajo cambio de dominio anatómico y ruido; comparación de referencia sana y condiciones de SNR",
+      "architecture": "LightGBM con descriptores de señales de radiofrecuencia y referencia sana",
+      "results": "AUROC macro promedio en fase inicial: 0,7935 sin referencia comparable frente a 0,9725 con referencia a igual SNR (según análisis publicado)",
+      "limitations": "Solo simulación; no cuantifica exactitud diagnóstica humana; sensibilidad al ruido y transferencia de umbrales",
+      "hardware": "Transmisores y sensores RF simulados; sin equipo clínico real validado",
+      "software": "LightGBM; MATLAB y Python; código/datos en Zenodo 22030635",
+      "cost": "No reportados",
+      "source": "https://doi.org/10.1038/s41598-026-80163-3",
+      "interpretability": "Ver metodología y limitaciones del estudio original.",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "5580 adquisiciones de transmisor, 1395 configuraciones físicas simuladas, cinco ubicaciones",
+          "detail": "Simulaciones de sensado de fractura bajo cambio de dominio anatómico y ruido; comparación de referencia sana y condiciones de SNR",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado",
+          "main": "AUROC macro promedio en fase inicial: 0,7935 sin referencia comparable frente a 0,9725 con referencia a igual SNR (según análisis publicado)",
+          "sub": "Interpretar según diseño y cohorte"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Indicadores reportados",
+          "AUROC macro promedio en fase inicial: 0,7935 sin referencia comparable frente a 0,9725 con referencia a igual SNR (según análisis publicado)",
+          "Fuente editorial original"
+        ]
+      ],
+      "implementation": [
+        "Revisar independencia y validación externa",
+        "No extrapolar resultados fuera de la cohorte"
+      ],
+      "figures": []
+    }
+  },
+  {
+    "date": "2026-11-19",
+    "reviewed": "19 noviembre 2026",
+    "published": "18 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-80689-6",
+    "doi": "10.1038/s41598-026-80689-6",
+    "title": "An interpretable machine learning framework for automated screening of patient-facing LLM consultations: a comparative evaluation in medical aesthetic consultation",
+    "title_es": "Marco interpretable para evaluar automáticamente consultas médicas generadas por LLM",
+    "country": "China",
+    "institution": "First Affiliated Hospital of Shandong First Medical University; First Affiliated Hospital of Harbin Medical University; Qilu Hospital of Shandong University",
+    "sample": "600 respuestas a 25 consultas estandarizadas en cinco temas",
+    "design": "Comparación de DeepSeek-V3 y Kimi bajo seis estrategias de prompting y dos modos conversacionales; dos dermatólogos ciegos evaluaron seis dimensiones",
+    "model": "Clasificador interpretable basado en metadatos de generación y legibilidad; comparación de dos LLM",
+    "metrics": "600 respuestas; seis dimensiones evaluadas: exactitud, relevancia, exhaustividad, empatía, falsedades y seguridad; métrica del clasificador no corroborada",
+    "limitations": "Entorno de estética médica; conjunto de consultas limitado; triaje para revisión experta, no sustituto de evaluación clínica",
+    "hardware": "Infraestructura informática para inferencia de LLM; GPU no reportada",
+    "software": "DeepSeek-V3, Kimi; clasificador interpretable, especificación no confirmada",
+    "framework": "DeepSeek-V3, Kimi; clasificador interpretable, especificación no confirmada",
+    "cost": "No reportados",
+    "code": "No corroborado",
+    "area": "Seguridad de IA clínica",
+    "rubro": "Seguridad de IA clínica",
+    "modality": "Seguridad de IA clínica",
+    "summary": "Marco interpretable para evaluar automáticamente consultas médicas generadas por LLM",
+    "key_metric": "600 respuestas",
+    "language": "No aplica",
+    "figures": [],
+    "remember": "Entorno de estética médica; conjunto de consultas limitado; triaje para revisión experta, no sustituto de evaluación clínica",
+    "rich": {
+      "problem": "Marco interpretable para evaluar automáticamente consultas médicas generadas por LLM",
+      "idea": "Clasificador interpretable basado en metadatos de generación y legibilidad; comparación de dos LLM",
+      "methodology": "Comparación de DeepSeek-V3 y Kimi bajo seis estrategias de prompting y dos modos conversacionales; dos dermatólogos ciegos evaluaron seis dimensiones",
+      "architecture": "Clasificador interpretable basado en metadatos de generación y legibilidad; comparación de dos LLM",
+      "results": "600 respuestas; seis dimensiones evaluadas: exactitud, relevancia, exhaustividad, empatía, falsedades y seguridad; métrica del clasificador no corroborada",
+      "limitations": "Entorno de estética médica; conjunto de consultas limitado; triaje para revisión experta, no sustituto de evaluación clínica",
+      "hardware": "Infraestructura informática para inferencia de LLM; GPU no reportada",
+      "software": "DeepSeek-V3, Kimi; clasificador interpretable, especificación no confirmada",
+      "cost": "No reportados",
+      "source": "https://doi.org/10.1038/s41598-026-80689-6",
+      "interpretability": "Ver metodología y limitaciones del estudio original.",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "600 respuestas a 25 consultas estandarizadas en cinco temas",
+          "detail": "Comparación de DeepSeek-V3 y Kimi bajo seis estrategias de prompting y dos modos conversacionales; dos dermatólogos ciegos evaluaron seis dimensiones",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado",
+          "main": "600 respuestas",
+          "sub": "Interpretar según diseño y cohorte"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Indicadores reportados",
+          "600 respuestas; seis dimensiones evaluadas: exactitud, relevancia, exhaustividad, empatía, falsedades y seguridad; métrica del clasificador no corroborada",
+          "Fuente editorial original"
+        ]
+      ],
+      "implementation": [
+        "Revisar independencia y validación externa",
+        "No extrapolar resultados fuera de la cohorte"
+      ],
+      "figures": []
+    }
+  },
+  {
+    "date": "2026-11-19",
+    "reviewed": "19 noviembre 2026",
+    "published": "18 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "npj Digital Public Health · 2026",
+    "paper": "https://doi.org/10.1038/s44482-026-00046-2",
+    "doi": "10.1038/s44482-026-00046-2",
+    "title": "Explainable spatiotemporal graph learning for early identification of localized infectious disease risk",
+    "title_es": "Aprendizaje explicable de grafos espaciotemporales para identificar riesgo localizado de enfermedades infecciosas",
+    "country": "Suecia",
+    "institution": "Afiliaciones de Atiye Sadat Hashemi, Carl Bonander y Jonas Björk; institución exacta no corroborada",
+    "sample": "Áreas geográficas finas de Suecia, con datos demográficos, socioeconómicos, epidemiológicos y vigilancia sindrómica; número no corroborado",
+    "design": "Pronóstico espacial del riesgo de COVID-19 a escala regional con grafo nacional y explicabilidad",
+    "model": "Modelo de aprendizaje de grafos espaciotemporales explicable",
+    "metrics": "Métricas cuantitativas no corroboradas en resumen editorial consultado",
+    "limitations": "Caso de estudio COVID-19 en Suecia; transferibilidad a otros patógenos y países no establecida",
+    "hardware": "Infraestructura de cómputo geoespacial; hardware no reportado",
+    "software": "Redes neuronales de grafos espaciotemporales; versiones no reportadas",
+    "framework": "Redes neuronales de grafos espaciotemporales; versiones no reportadas",
+    "cost": "No reportados",
+    "code": "No corroborado",
+    "area": "Salud pública",
+    "rubro": "Salud pública",
+    "modality": "Salud pública",
+    "summary": "Aprendizaje explicable de grafos espaciotemporales para identificar riesgo localizado de enfermedades infecciosas",
+    "key_metric": "Métricas cuantitativas no corroboradas en resumen editorial consultado",
+    "language": "No aplica",
+    "figures": [],
+    "remember": "Caso de estudio COVID-19 en Suecia; transferibilidad a otros patógenos y países no establecida",
+    "rich": {
+      "problem": "Aprendizaje explicable de grafos espaciotemporales para identificar riesgo localizado de enfermedades infecciosas",
+      "idea": "Modelo de aprendizaje de grafos espaciotemporales explicable",
+      "methodology": "Pronóstico espacial del riesgo de COVID-19 a escala regional con grafo nacional y explicabilidad",
+      "architecture": "Modelo de aprendizaje de grafos espaciotemporales explicable",
+      "results": "Métricas cuantitativas no corroboradas en resumen editorial consultado",
+      "limitations": "Caso de estudio COVID-19 en Suecia; transferibilidad a otros patógenos y países no establecida",
+      "hardware": "Infraestructura de cómputo geoespacial; hardware no reportado",
+      "software": "Redes neuronales de grafos espaciotemporales; versiones no reportadas",
+      "cost": "No reportados",
+      "source": "https://doi.org/10.1038/s44482-026-00046-2",
+      "interpretability": "Ver metodología y limitaciones del estudio original.",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "Áreas geográficas finas de Suecia, con datos demográficos, socioeconómicos, epidemiológicos y vigilancia sindrómica; número no corroborado",
+          "detail": "Pronóstico espacial del riesgo de COVID-19 a escala regional con grafo nacional y explicabilidad",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado",
+          "main": "Métricas cuantitativas no corroboradas en resumen editorial consultado",
+          "sub": "Interpretar según diseño y cohorte"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Indicadores reportados",
+          "Métricas cuantitativas no corroboradas en resumen editorial consultado",
+          "Fuente editorial original"
+        ]
+      ],
+      "implementation": [
+        "Revisar independencia y validación externa",
+        "No extrapolar resultados fuera de la cohorte"
+      ],
+      "figures": []
+    }
+  },
+  {
+    "date": "2026-11-19",
+    "reviewed": "19 noviembre 2026",
+    "published": "17 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-79868-2",
+    "doi": "10.1038/s41598-026-79868-2",
+    "title": "Deep learning assisted blunt liver injury diagnosis with ultrasound: an animal study",
+    "title_es": "Diagnóstico de lesión hepática contusa mediante ecografía asistida por aprendizaje profundo: estudio animal",
+    "country": "China",
+    "institution": "Chinese PLA General Hospital, Beijing; Southeast University, Nanjing",
+    "sample": "54 conejos Nueva Zelanda, imágenes ecográficas antes y después de inducir lesión",
+    "design": "Modelo animal; índice de hemoperitoneo y análisis de signos directos e indirectos de lesión; correlación con peso de hemoperitoneo",
+    "model": "ResNet50",
+    "metrics": "Hemoperitoneo: exactitud 0,842, sensibilidad 0,901, especificidad 0,712; foco traumático: 0,864, 0,852 y 0,881; grado: exactitud 0,732; r=0,788 índice/peso",
+    "limitations": "Estudio preclínico animal; no demuestra desempeño en humanos",
+    "hardware": "Ecógrafo; marca no reportada",
+    "software": "ResNet50; framework y versiones no confirmados",
+    "framework": "ResNet50; framework y versiones no confirmados",
+    "cost": "No reportados",
+    "code": "No corroborado",
+    "area": "Ultrasonido",
+    "rubro": "Ultrasonido",
+    "modality": "Ultrasonido",
+    "summary": "Diagnóstico de lesión hepática contusa mediante ecografía asistida por aprendizaje profundo: estudio animal",
+    "key_metric": "Hemoperitoneo: exactitud 0,842, sensibilidad 0,901, especificidad 0,712",
+    "language": "No aplica",
+    "figures": [],
+    "remember": "Estudio preclínico animal; no demuestra desempeño en humanos",
+    "rich": {
+      "problem": "Diagnóstico de lesión hepática contusa mediante ecografía asistida por aprendizaje profundo: estudio animal",
+      "idea": "ResNet50",
+      "methodology": "Modelo animal; índice de hemoperitoneo y análisis de signos directos e indirectos de lesión; correlación con peso de hemoperitoneo",
+      "architecture": "ResNet50",
+      "results": "Hemoperitoneo: exactitud 0,842, sensibilidad 0,901, especificidad 0,712; foco traumático: 0,864, 0,852 y 0,881; grado: exactitud 0,732; r=0,788 índice/peso",
+      "limitations": "Estudio preclínico animal; no demuestra desempeño en humanos",
+      "hardware": "Ecógrafo; marca no reportada",
+      "software": "ResNet50; framework y versiones no confirmados",
+      "cost": "No reportados",
+      "source": "https://doi.org/10.1038/s41598-026-79868-2",
+      "interpretability": "Ver metodología y limitaciones del estudio original.",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "54 conejos Nueva Zelanda, imágenes ecográficas antes y después de inducir lesión",
+          "detail": "Modelo animal; índice de hemoperitoneo y análisis de signos directos e indirectos de lesión; correlación con peso de hemoperitoneo",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado",
+          "main": "Hemoperitoneo: exactitud 0,842, sensibilidad 0,901, especificidad 0,712",
+          "sub": "Interpretar según diseño y cohorte"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Indicadores reportados",
+          "Hemoperitoneo: exactitud 0,842, sensibilidad 0,901, especificidad 0,712; foco traumático: 0,864, 0,852 y 0,881; grado: exactitud 0,732; r=0,788 índice/peso",
+          "Fuente editorial original"
+        ]
+      ],
+      "implementation": [
+        "Revisar independencia y validación externa",
+        "No extrapolar resultados fuera de la cohorte"
+      ],
+      "figures": []
+    }
+  },
+  {
+    "date": "2026-11-19",
+    "reviewed": "19 noviembre 2026",
+    "published": "17 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-79559-y",
+    "doi": "10.1038/s41598-026-79559-y",
+    "title": "Deep learning classifies calcium imaging dynamics using time-series representations",
+    "title_es": "Aprendizaje profundo para clasificar dinámicas de imágenes de calcio mediante series temporales",
+    "country": "Alemania y Brasil",
+    "institution": "Equipo de Caroline L. Alves y Christiane Thielemann; afiliaciones específicas no corroboradas",
+    "sample": "Series temporales de fluorescencia de imágenes de calcio; cantidad exacta no corroborada",
+    "design": "Matrices de transición de cuantiles de tamaño fijo; estrategias por imagen completa y cuadrícula; prueba independiente y perturbaciones de ruido",
+    "model": "Redes neuronales convolucionales sobre representaciones cuantílicas de series temporales",
+    "metrics": "Precisión 0,99; sensibilidad 0,99; especificidad 0,99 en validación independiente reportada",
+    "limitations": "Desempeño disminuye al aumentar ruido; clasificación de dinámica experimental, no diagnóstico clínico",
+    "hardware": "Microscopía de fluorescencia e imagen de calcio; modelo no reportado",
+    "software": "CNN; representaciones QTN/MTF; versiones no reportadas",
+    "framework": "CNN; representaciones QTN/MTF; versiones no reportadas",
+    "cost": "No reportados",
+    "code": "No corroborado",
+    "area": "Neuroingeniería",
+    "rubro": "Neuroingeniería",
+    "modality": "Neuroingeniería",
+    "summary": "Aprendizaje profundo para clasificar dinámicas de imágenes de calcio mediante series temporales",
+    "key_metric": "Precisión 0,99",
+    "language": "No aplica",
+    "figures": [],
+    "remember": "Desempeño disminuye al aumentar ruido; clasificación de dinámica experimental, no diagnóstico clínico",
+    "rich": {
+      "problem": "Aprendizaje profundo para clasificar dinámicas de imágenes de calcio mediante series temporales",
+      "idea": "Redes neuronales convolucionales sobre representaciones cuantílicas de series temporales",
+      "methodology": "Matrices de transición de cuantiles de tamaño fijo; estrategias por imagen completa y cuadrícula; prueba independiente y perturbaciones de ruido",
+      "architecture": "Redes neuronales convolucionales sobre representaciones cuantílicas de series temporales",
+      "results": "Precisión 0,99; sensibilidad 0,99; especificidad 0,99 en validación independiente reportada",
+      "limitations": "Desempeño disminuye al aumentar ruido; clasificación de dinámica experimental, no diagnóstico clínico",
+      "hardware": "Microscopía de fluorescencia e imagen de calcio; modelo no reportado",
+      "software": "CNN; representaciones QTN/MTF; versiones no reportadas",
+      "cost": "No reportados",
+      "source": "https://doi.org/10.1038/s41598-026-79559-y",
+      "interpretability": "Ver metodología y limitaciones del estudio original.",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "Series temporales de fluorescencia de imágenes de calcio; cantidad exacta no corroborada",
+          "detail": "Matrices de transición de cuantiles de tamaño fijo; estrategias por imagen completa y cuadrícula; prueba independiente y perturbaciones de ruido",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado",
+          "main": "Precisión 0,99",
+          "sub": "Interpretar según diseño y cohorte"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Indicadores reportados",
+          "Precisión 0,99; sensibilidad 0,99; especificidad 0,99 en validación independiente reportada",
+          "Fuente editorial original"
+        ]
+      ],
+      "implementation": [
+        "Revisar independencia y validación externa",
+        "No extrapolar resultados fuera de la cohorte"
+      ],
+      "figures": []
+    }
+  },
+  {
+    "date": "2026-11-19",
+    "reviewed": "19 noviembre 2026",
+    "published": "17 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-78836-0",
+    "doi": "10.1038/s41598-026-78836-0",
+    "title": "A machine learning algorithm facilitates treatment selection for up to three hepatocellular carcinomas ≤ 3 cm in size",
+    "title_es": "Aprendizaje automático para orientar la selección de tratamiento en hepatocarcinomas pequeños",
+    "country": "Japón",
+    "institution": "National Center for Global Health and Medicine; Japan Institute for Health Security; Teikyo University",
+    "sample": "18958 pacientes con hasta tres hepatocarcinomas de máximo 3 cm en encuesta nacional japonesa",
+    "design": "Estudio retrospectivo de supervivencia; validación cruzada de diez particiones; comparación con Cox, log-rank y emparejamiento por propensión",
+    "model": "Recurrent Deep Survival Machines (RDSM)",
+    "metrics": "C-index 0,68 vs Cox 0,69; supervivencia 5 años resección 81,4% vs ablación 73,1%; recomendado 81,2% vs no recomendado 73,9%",
+    "limitations": "Asignación no aleatorizada y confusión residual; diferencias de supervivencia no prueban beneficio causal de seguir recomendaciones",
+    "hardware": "TC y sistemas de información clínica; equipo no reportado",
+    "software": "RDSM; modelo Cox; software no especificado",
+    "framework": "RDSM; modelo Cox; software no especificado",
+    "cost": "No reportados",
+    "code": "No corroborado",
+    "area": "Oncología",
+    "rubro": "Oncología",
+    "modality": "Oncología",
+    "summary": "Aprendizaje automático para orientar la selección de tratamiento en hepatocarcinomas pequeños",
+    "key_metric": "C-index 0,68 vs Cox 0,69",
+    "language": "No aplica",
+    "figures": [],
+    "remember": "Asignación no aleatorizada y confusión residual; diferencias de supervivencia no prueban beneficio causal de seguir recomendaciones",
+    "rich": {
+      "problem": "Aprendizaje automático para orientar la selección de tratamiento en hepatocarcinomas pequeños",
+      "idea": "Recurrent Deep Survival Machines (RDSM)",
+      "methodology": "Estudio retrospectivo de supervivencia; validación cruzada de diez particiones; comparación con Cox, log-rank y emparejamiento por propensión",
+      "architecture": "Recurrent Deep Survival Machines (RDSM)",
+      "results": "C-index 0,68 vs Cox 0,69; supervivencia 5 años resección 81,4% vs ablación 73,1%; recomendado 81,2% vs no recomendado 73,9%",
+      "limitations": "Asignación no aleatorizada y confusión residual; diferencias de supervivencia no prueban beneficio causal de seguir recomendaciones",
+      "hardware": "TC y sistemas de información clínica; equipo no reportado",
+      "software": "RDSM; modelo Cox; software no especificado",
+      "cost": "No reportados",
+      "source": "https://doi.org/10.1038/s41598-026-78836-0",
+      "interpretability": "Ver metodología y limitaciones del estudio original.",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "18958 pacientes con hasta tres hepatocarcinomas de máximo 3 cm en encuesta nacional japonesa",
+          "detail": "Estudio retrospectivo de supervivencia; validación cruzada de diez particiones; comparación con Cox, log-rank y emparejamiento por propensión",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado",
+          "main": "C-index 0,68 vs Cox 0,69",
+          "sub": "Interpretar según diseño y cohorte"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Indicadores reportados",
+          "C-index 0,68 vs Cox 0,69; supervivencia 5 años resección 81,4% vs ablación 73,1%; recomendado 81,2% vs no recomendado 73,9%",
+          "Fuente editorial original"
+        ]
+      ],
+      "implementation": [
+        "Revisar independencia y validación externa",
+        "No extrapolar resultados fuera de la cohorte"
+      ],
+      "figures": []
+    }
+  },
+  {
     "date": "2026-11-18",
     "reviewed": "18 noviembre 2026",
     "published": "17 noviembre 2026",
