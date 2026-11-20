@@ -1,5 +1,581 @@
 [
   {
+    "date": "2026-11-20",
+    "reviewed": "20 noviembre 2026",
+    "published": "19 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-80158-0",
+    "doi": "10.1038/s41598-026-80158-0",
+    "title": "Machine learning and molecular validation reveal the PI3K/AKT/mTOR inflammatory axis for therapeutic targeting in severe COVID-19",
+    "title_es": "IA explicable y validación molecular de la vía PI3K/AKT/mTOR en COVID-19 grave",
+    "country": "País no corroborado",
+    "institution": "Afiliaciones no corroboradas en el resumen consultado",
+    "sample": "83 pacientes confirmados: 40 leves, 24 moderados y 19 graves",
+    "design": "RT-qPCR de genes y variables de afectación pulmonar; ocho clasificadores; validación cruzada estratificada de cinco particiones",
+    "model": "Random Forest y SHAP",
+    "metrics": "Exactitud 0,879 ± 0,041; F1 0,874 ± 0,045; AUROC 0,978 ± 0,007; F1 clase grave 0,727",
+    "limitations": "Piloto de muestra pequeña; validación cruzada interna; SHAP no demuestra causalidad de la vía molecular",
+    "hardware": "RT-qPCR y evaluación clínica pulmonar; modelos de equipos no indicados",
+    "software": "Random Forest y SHAP; versiones no indicadas",
+    "framework": "Random Forest y SHAP; versiones no indicadas",
+    "cost": "No reportados",
+    "code": "No corroborado",
+    "area": "Biomarcadores moleculares",
+    "rubro": "Biomarcadores moleculares",
+    "modality": "Biomarcadores moleculares",
+    "summary": "IA explicable y validación molecular de la vía PI3K/AKT/mTOR en COVID-19 grave",
+    "key_metric": "Exactitud 0,879 ± 0,041",
+    "language": "No aplica",
+    "figures": [],
+    "remember": "Piloto de muestra pequeña; validación cruzada interna; SHAP no demuestra causalidad de la vía molecular",
+    "rich": {
+      "problem": "IA explicable y validación molecular de la vía PI3K/AKT/mTOR en COVID-19 grave",
+      "idea": "Random Forest y SHAP",
+      "methodology": "RT-qPCR de genes y variables de afectación pulmonar; ocho clasificadores; validación cruzada estratificada de cinco particiones",
+      "architecture": "Random Forest y SHAP",
+      "results": "Exactitud 0,879 ± 0,041; F1 0,874 ± 0,045; AUROC 0,978 ± 0,007; F1 clase grave 0,727",
+      "limitations": "Piloto de muestra pequeña; validación cruzada interna; SHAP no demuestra causalidad de la vía molecular",
+      "hardware": "RT-qPCR y evaluación clínica pulmonar; modelos de equipos no indicados",
+      "software": "Random Forest y SHAP; versiones no indicadas",
+      "cost": "No reportados",
+      "source": "https://doi.org/10.1038/s41598-026-80158-0",
+      "interpretability": "SHAP; atribución predictiva no implica causalidad",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "83 pacientes confirmados: 40 leves, 24 moderados y 19 graves",
+          "detail": "RT-qPCR de genes y variables de afectación pulmonar; ocho clasificadores; validación cruzada estratificada de cinco particiones",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado",
+          "main": "Exactitud 0,879 ± 0,041",
+          "sub": "Según cohorte y diseño"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Indicador",
+          "Exactitud 0,879 ± 0,041",
+          "Fuente editorial original"
+        ],
+        [
+          "Indicador",
+          "F1 0,874 ± 0,045",
+          "Fuente editorial original"
+        ],
+        [
+          "Indicador",
+          "AUROC 0,978 ± 0,007",
+          "Fuente editorial original"
+        ],
+        [
+          "Indicador",
+          "F1 clase grave 0,727",
+          "Fuente editorial original"
+        ]
+      ],
+      "implementation": [
+        "Verificar independencia por paciente y validez externa",
+        "No utilizar como dispositivo clínico autónomo sin validación"
+      ],
+      "figures": []
+    }
+  },
+  {
+    "date": "2026-11-20",
+    "reviewed": "20 noviembre 2026",
+    "published": "19 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-79913-0",
+    "doi": "10.1038/s41598-026-79913-0",
+    "title": "Interpretable machine learning for predicting residual cancer burden following neoadjuvant therapy in HER2 positive breast cancer: A real-world study",
+    "title_es": "IA interpretable para predecir carga tumoral residual tras neoadyuvancia en cáncer de mama HER2 positivo",
+    "country": "China",
+    "institution": "Fujian Medical University Union Hospital, Fuzhou",
+    "sample": "692 pacientes tratados entre noviembre de 2018 y mayo de 2025",
+    "design": "Estudio retrospectivo unicéntrico; LASSO seleccionó nueve predictores; diez algoritmos, CV 10-fold y búsqueda en rejilla; prueba independiente",
+    "model": "Gradient Boosting Machine (GBM) con SHAP",
+    "metrics": "AUROC 0,796 en prueba independiente; mejor calibración y beneficio neto reportados",
+    "limitations": "Un centro; discriminación moderada; no apto para decisiones clínicas autónomas",
+    "hardware": "Registros clínicos y anatomía patológica; dispositivos no especificados",
+    "software": "GBM, LASSO, SHAP y aplicación Shiny",
+    "framework": "GBM, LASSO, SHAP y aplicación Shiny",
+    "cost": "No reportados",
+    "code": "No corroborado",
+    "area": "Oncología mamaria",
+    "rubro": "Oncología mamaria",
+    "modality": "Oncología mamaria",
+    "summary": "IA interpretable para predecir carga tumoral residual tras neoadyuvancia en cáncer de mama HER2 positivo",
+    "key_metric": "AUROC 0,796 en prueba independiente",
+    "language": "No aplica",
+    "figures": [],
+    "remember": "Un centro; discriminación moderada; no apto para decisiones clínicas autónomas",
+    "rich": {
+      "problem": "IA interpretable para predecir carga tumoral residual tras neoadyuvancia en cáncer de mama HER2 positivo",
+      "idea": "Gradient Boosting Machine (GBM) con SHAP",
+      "methodology": "Estudio retrospectivo unicéntrico; LASSO seleccionó nueve predictores; diez algoritmos, CV 10-fold y búsqueda en rejilla; prueba independiente",
+      "architecture": "Gradient Boosting Machine (GBM) con SHAP",
+      "results": "AUROC 0,796 en prueba independiente; mejor calibración y beneficio neto reportados",
+      "limitations": "Un centro; discriminación moderada; no apto para decisiones clínicas autónomas",
+      "hardware": "Registros clínicos y anatomía patológica; dispositivos no especificados",
+      "software": "GBM, LASSO, SHAP y aplicación Shiny",
+      "cost": "No reportados",
+      "source": "https://doi.org/10.1038/s41598-026-79913-0",
+      "interpretability": "SHAP; atribución predictiva no implica causalidad",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "692 pacientes tratados entre noviembre de 2018 y mayo de 2025",
+          "detail": "Estudio retrospectivo unicéntrico; LASSO seleccionó nueve predictores; diez algoritmos, CV 10-fold y búsqueda en rejilla; prueba independiente",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado",
+          "main": "AUROC 0,796 en prueba independiente",
+          "sub": "Según cohorte y diseño"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Indicador",
+          "AUROC 0,796 en prueba independiente",
+          "Fuente editorial original"
+        ],
+        [
+          "Indicador",
+          "mejor calibración y beneficio neto reportados",
+          "Fuente editorial original"
+        ]
+      ],
+      "implementation": [
+        "Verificar independencia por paciente y validez externa",
+        "No utilizar como dispositivo clínico autónomo sin validación"
+      ],
+      "figures": []
+    }
+  },
+  {
+    "date": "2026-11-20",
+    "reviewed": "20 noviembre 2026",
+    "published": "19 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-80931-1",
+    "doi": "10.1038/s41598-026-80931-1",
+    "title": "HMCKD-Net: hybrid machine learning for chronic kidney disease screening and probability calibration assessment",
+    "title_es": "HMCKD-Net para cribado de enfermedad renal crónica y evaluación de calibración",
+    "country": "India y Portugal",
+    "institution": "Maharshi Dayanand University; Panjab University; Portucalense University",
+    "sample": "400 registros de desarrollo (320 entrenamiento, 80 prueba); evaluación de transporte con 491 registros de Abu Dabi",
+    "design": "Preprocesamiento solo en entrenamiento, seis componentes PCA y cuatro componentes de autoencoder; evaluación de calibración y desplazamiento de tarea",
+    "model": "Stacking logístico de XGBoost, Random Forest y LightGBM",
+    "metrics": "Prueba: AUROC 0,9973, exactitud 0,9875, Brier 0,0146; evaluación externa con desenlace diferente: AUROC 0,6786, Brier 0,3133",
+    "limitations": "La prueba externa cambia predictores y desenlace; siete de diez predictores faltaban; no constituye validación externa convencional",
+    "hardware": "Datos tabulares de laboratorio y clínica; dispositivos no especificados",
+    "software": "PCA, autoencoder, XGBoost, RF, LightGBM y regresión logística",
+    "framework": "PCA, autoencoder, XGBoost, RF, LightGBM y regresión logística",
+    "cost": "No reportados",
+    "code": "No corroborado",
+    "area": "Nefrología",
+    "rubro": "Nefrología",
+    "modality": "Nefrología",
+    "summary": "HMCKD-Net para cribado de enfermedad renal crónica y evaluación de calibración",
+    "key_metric": "Prueba: AUROC 0,9973, exactitud 0,9875, Brier 0,0146",
+    "language": "No aplica",
+    "figures": [],
+    "remember": "La prueba externa cambia predictores y desenlace; siete de diez predictores faltaban; no constituye validación externa convencional",
+    "rich": {
+      "problem": "HMCKD-Net para cribado de enfermedad renal crónica y evaluación de calibración",
+      "idea": "Stacking logístico de XGBoost, Random Forest y LightGBM",
+      "methodology": "Preprocesamiento solo en entrenamiento, seis componentes PCA y cuatro componentes de autoencoder; evaluación de calibración y desplazamiento de tarea",
+      "architecture": "Stacking logístico de XGBoost, Random Forest y LightGBM",
+      "results": "Prueba: AUROC 0,9973, exactitud 0,9875, Brier 0,0146; evaluación externa con desenlace diferente: AUROC 0,6786, Brier 0,3133",
+      "limitations": "La prueba externa cambia predictores y desenlace; siete de diez predictores faltaban; no constituye validación externa convencional",
+      "hardware": "Datos tabulares de laboratorio y clínica; dispositivos no especificados",
+      "software": "PCA, autoencoder, XGBoost, RF, LightGBM y regresión logística",
+      "cost": "No reportados",
+      "source": "https://doi.org/10.1038/s41598-026-80931-1",
+      "interpretability": "Consultar estudio original para interpretabilidad",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "400 registros de desarrollo (320 entrenamiento, 80 prueba); evaluación de transporte con 491 registros de Abu Dabi",
+          "detail": "Preprocesamiento solo en entrenamiento, seis componentes PCA y cuatro componentes de autoencoder; evaluación de calibración y desplazamiento de tarea",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado",
+          "main": "Prueba: AUROC 0,9973, exactitud 0,9875, Brier 0,0146",
+          "sub": "Según cohorte y diseño"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Indicador",
+          "Prueba: AUROC 0,9973, exactitud 0,9875, Brier 0,0146",
+          "Fuente editorial original"
+        ],
+        [
+          "Indicador",
+          "evaluación externa con desenlace diferente: AUROC 0,6786, Brier 0,3133",
+          "Fuente editorial original"
+        ]
+      ],
+      "implementation": [
+        "Verificar independencia por paciente y validez externa",
+        "No utilizar como dispositivo clínico autónomo sin validación"
+      ],
+      "figures": []
+    }
+  },
+  {
+    "date": "2026-11-20",
+    "reviewed": "20 noviembre 2026",
+    "published": "19 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-81346-8",
+    "doi": "10.1038/s41598-026-81346-8",
+    "title": "A kidney–brain-axis machine-learning framework for predicting 28-day mortality in chronic kidney disease with acute brain injury: derivation and external validation",
+    "title_es": "Modelo del eje riñón-cerebro para mortalidad a 28 días con validación externa",
+    "country": "China; cohortes estadounidenses",
+    "institution": "The 910th Hospital, Huaqiao University; Jinling Hospital, Nanjing University",
+    "sample": "MIMIC-IV: 1887 pacientes; eICU-CRD: 791 pacientes",
+    "design": "43 características; puntuación CKD-BI de diez variables, nomograma LASSO y siete modelos de ML comparados con escalas UCI",
+    "model": "Random Forest, LASSO logístico y SHAP",
+    "metrics": "Random Forest AUROC interna 0,8011; CKD-BI AUROC CV 0,7937 y externa 0,7310; nomograma externo 0,7445; ensamble externo 0,7768",
+    "limitations": "Retrospectivo; necesita recalibración local y validación prospectiva; discriminación externa moderada",
+    "hardware": "Registros de UCI, monitorización y laboratorio; marcas no reportadas",
+    "software": "Random Forest, LASSO y SHAP",
+    "framework": "Random Forest, LASSO y SHAP",
+    "cost": "No reportados",
+    "code": "No corroborado",
+    "area": "Cuidados intensivos",
+    "rubro": "Cuidados intensivos",
+    "modality": "Cuidados intensivos",
+    "summary": "Modelo del eje riñón-cerebro para mortalidad a 28 días con validación externa",
+    "key_metric": "Random Forest AUROC interna 0,8011",
+    "language": "No aplica",
+    "figures": [],
+    "remember": "Retrospectivo; necesita recalibración local y validación prospectiva; discriminación externa moderada",
+    "rich": {
+      "problem": "Modelo del eje riñón-cerebro para mortalidad a 28 días con validación externa",
+      "idea": "Random Forest, LASSO logístico y SHAP",
+      "methodology": "43 características; puntuación CKD-BI de diez variables, nomograma LASSO y siete modelos de ML comparados con escalas UCI",
+      "architecture": "Random Forest, LASSO logístico y SHAP",
+      "results": "Random Forest AUROC interna 0,8011; CKD-BI AUROC CV 0,7937 y externa 0,7310; nomograma externo 0,7445; ensamble externo 0,7768",
+      "limitations": "Retrospectivo; necesita recalibración local y validación prospectiva; discriminación externa moderada",
+      "hardware": "Registros de UCI, monitorización y laboratorio; marcas no reportadas",
+      "software": "Random Forest, LASSO y SHAP",
+      "cost": "No reportados",
+      "source": "https://doi.org/10.1038/s41598-026-81346-8",
+      "interpretability": "SHAP; atribución predictiva no implica causalidad",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "MIMIC-IV: 1887 pacientes; eICU-CRD: 791 pacientes",
+          "detail": "43 características; puntuación CKD-BI de diez variables, nomograma LASSO y siete modelos de ML comparados con escalas UCI",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado",
+          "main": "Random Forest AUROC interna 0,8011",
+          "sub": "Según cohorte y diseño"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Indicador",
+          "Random Forest AUROC interna 0,8011",
+          "Fuente editorial original"
+        ],
+        [
+          "Indicador",
+          "CKD-BI AUROC CV 0,7937 y externa 0,7310",
+          "Fuente editorial original"
+        ],
+        [
+          "Indicador",
+          "nomograma externo 0,7445",
+          "Fuente editorial original"
+        ],
+        [
+          "Indicador",
+          "ensamble externo 0,7768",
+          "Fuente editorial original"
+        ]
+      ],
+      "implementation": [
+        "Verificar independencia por paciente y validez externa",
+        "No utilizar como dispositivo clínico autónomo sin validación"
+      ],
+      "figures": []
+    }
+  },
+  {
+    "date": "2026-11-20",
+    "reviewed": "20 noviembre 2026",
+    "published": "18 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-80198-6",
+    "doi": "10.1038/s41598-026-80198-6",
+    "title": "Predicting under-five mortality in Bangladesh through comparative survival analysis using traditional, machine learning, and deep learning models",
+    "title_es": "Predicción de mortalidad infantil mediante modelos de supervivencia clásicos y profundos",
+    "country": "Bangladés; validación en Nepal",
+    "institution": "Bangladesh Institute of Governance and Management, Dhaka",
+    "sample": "13 119 niños de BDHS 2022; validación externa con cohorte independiente de Nepal (tamaño no corroborado)",
+    "design": "Ocho modelos de supervivencia; selección de 15 variables; comparaciones de discriminación, Brier, calibración y validación externa",
+    "model": "DeepHit, DeepSurv, RSF, GBSA y Cox regularizado",
+    "metrics": "DeepHit C-index 0,977; IBS 0,016; AUC temporal media 0,987; Nepal C-index 0,9663 y AUC 0,9811",
+    "limitations": "Datos observacionales de encuesta; posible dependencia de historia reproductiva y diferencias entre países; no prueba causalidad",
+    "hardware": "Encuestas poblacionales; sin hardware biomédico específico",
+    "software": "DeepHit, DeepSurv, Random Survival Forest, Cox",
+    "framework": "DeepHit, DeepSurv, Random Survival Forest, Cox",
+    "cost": "No reportados",
+    "code": "No corroborado",
+    "area": "Salud pública maternoinfantil",
+    "rubro": "Salud pública maternoinfantil",
+    "modality": "Salud pública maternoinfantil",
+    "summary": "Predicción de mortalidad infantil mediante modelos de supervivencia clásicos y profundos",
+    "key_metric": "DeepHit C-index 0,977",
+    "language": "No aplica",
+    "figures": [],
+    "remember": "Datos observacionales de encuesta; posible dependencia de historia reproductiva y diferencias entre países; no prueba causalidad",
+    "rich": {
+      "problem": "Predicción de mortalidad infantil mediante modelos de supervivencia clásicos y profundos",
+      "idea": "DeepHit, DeepSurv, RSF, GBSA y Cox regularizado",
+      "methodology": "Ocho modelos de supervivencia; selección de 15 variables; comparaciones de discriminación, Brier, calibración y validación externa",
+      "architecture": "DeepHit, DeepSurv, RSF, GBSA y Cox regularizado",
+      "results": "DeepHit C-index 0,977; IBS 0,016; AUC temporal media 0,987; Nepal C-index 0,9663 y AUC 0,9811",
+      "limitations": "Datos observacionales de encuesta; posible dependencia de historia reproductiva y diferencias entre países; no prueba causalidad",
+      "hardware": "Encuestas poblacionales; sin hardware biomédico específico",
+      "software": "DeepHit, DeepSurv, Random Survival Forest, Cox",
+      "cost": "No reportados",
+      "source": "https://doi.org/10.1038/s41598-026-80198-6",
+      "interpretability": "Consultar estudio original para interpretabilidad",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "13 119 niños de BDHS 2022; validación externa con cohorte independiente de Nepal (tamaño no corroborado)",
+          "detail": "Ocho modelos de supervivencia; selección de 15 variables; comparaciones de discriminación, Brier, calibración y validación externa",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado",
+          "main": "DeepHit C-index 0,977",
+          "sub": "Según cohorte y diseño"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Indicador",
+          "DeepHit C-index 0,977",
+          "Fuente editorial original"
+        ],
+        [
+          "Indicador",
+          "IBS 0,016",
+          "Fuente editorial original"
+        ],
+        [
+          "Indicador",
+          "AUC temporal media 0,987",
+          "Fuente editorial original"
+        ],
+        [
+          "Indicador",
+          "Nepal C-index 0,9663 y AUC 0,9811",
+          "Fuente editorial original"
+        ]
+      ],
+      "implementation": [
+        "Verificar independencia por paciente y validez externa",
+        "No utilizar como dispositivo clínico autónomo sin validación"
+      ],
+      "figures": []
+    }
+  },
+  {
+    "date": "2026-11-20",
+    "reviewed": "20 noviembre 2026",
+    "published": "18 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-79974-1",
+    "doi": "10.1038/s41598-026-79974-1",
+    "title": "A comparative study of convolutional neural networks and vision transformers for human identification from ante-mortem panoramic dental radiographs",
+    "title_es": "Comparación de CNN y Transformers para identificación mediante radiografías panorámicas dentales",
+    "country": "Francia",
+    "institution": "Montpellier University Hospital; University of Montpellier",
+    "sample": "Radiografías panorámicas del CHU Montpellier; cantidad total exacta no corroborada en resumen (aprox. 6000 imágenes de 2000 identidades en experimento de tamaño)",
+    "design": "Aprendizaje métrico con triplet loss; verificación de pares y recuperación de identidad con identidades no vistas",
+    "model": "ConvNeXt-S, ConvNeXt-L y otras CNN/Transformers",
+    "metrics": "Verificación ConvNeXt-S: exactitud 0,9908; identificación ConvNeXt-L: Rank@1 0,9877 y Rank@5 0,9983",
+    "limitations": "Solo imágenes ante mortem de un hospital; no probado con imágenes post mortem reales; generalización entre equipos no demostrada",
+    "hardware": "Radiografía panorámica dental; escáneres de distintos modelos no detallados",
+    "software": "ConvNeXt y triplet loss",
+    "framework": "ConvNeXt y triplet loss",
+    "cost": "No reportados",
+    "code": "No corroborado",
+    "area": "Odontología digital y medicina forense",
+    "rubro": "Odontología digital y medicina forense",
+    "modality": "Odontología digital y medicina forense",
+    "summary": "Comparación de CNN y Transformers para identificación mediante radiografías panorámicas dentales",
+    "key_metric": "Verificación ConvNeXt-S: exactitud 0,9908",
+    "language": "No aplica",
+    "figures": [],
+    "remember": "Solo imágenes ante mortem de un hospital; no probado con imágenes post mortem reales; generalización entre equipos no demostrada",
+    "rich": {
+      "problem": "Comparación de CNN y Transformers para identificación mediante radiografías panorámicas dentales",
+      "idea": "ConvNeXt-S, ConvNeXt-L y otras CNN/Transformers",
+      "methodology": "Aprendizaje métrico con triplet loss; verificación de pares y recuperación de identidad con identidades no vistas",
+      "architecture": "ConvNeXt-S, ConvNeXt-L y otras CNN/Transformers",
+      "results": "Verificación ConvNeXt-S: exactitud 0,9908; identificación ConvNeXt-L: Rank@1 0,9877 y Rank@5 0,9983",
+      "limitations": "Solo imágenes ante mortem de un hospital; no probado con imágenes post mortem reales; generalización entre equipos no demostrada",
+      "hardware": "Radiografía panorámica dental; escáneres de distintos modelos no detallados",
+      "software": "ConvNeXt y triplet loss",
+      "cost": "No reportados",
+      "source": "https://doi.org/10.1038/s41598-026-79974-1",
+      "interpretability": "Consultar estudio original para interpretabilidad",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "Radiografías panorámicas del CHU Montpellier; cantidad total exacta no corroborada en resumen (aprox. 6000 imágenes de 2000 identidades en experimento de tamaño)",
+          "detail": "Aprendizaje métrico con triplet loss; verificación de pares y recuperación de identidad con identidades no vistas",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado",
+          "main": "Verificación ConvNeXt-S: exactitud 0,9908",
+          "sub": "Según cohorte y diseño"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Indicador",
+          "Verificación ConvNeXt-S: exactitud 0,9908",
+          "Fuente editorial original"
+        ],
+        [
+          "Indicador",
+          "identificación ConvNeXt-L: Rank@1 0,9877 y Rank@5 0,9983",
+          "Fuente editorial original"
+        ]
+      ],
+      "implementation": [
+        "Verificar independencia por paciente y validez externa",
+        "No utilizar como dispositivo clínico autónomo sin validación"
+      ],
+      "figures": []
+    }
+  },
+  {
+    "date": "2026-11-20",
+    "reviewed": "20 noviembre 2026",
+    "published": "19 noviembre 2026",
+    "rich_detail": true,
+    "flag": "🌐",
+    "countryFlags": "🌐",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-76878-y",
+    "doi": "10.1038/s41598-026-76878-y",
+    "title": "A novel hybrid fuzzy membership function-based feature transformation for cardiovascular disease prediction",
+    "title_es": "Transformación híbrida difusa de características para predecir enfermedad cardiovascular",
+    "country": "India",
+    "institution": "Banaras Hindu University; UPES University",
+    "sample": "UCI Heart Disease y versión pública Framingham de Kaggle; tamaños exactos no corroborados",
+    "design": "Funciones gaussianas y sigmoides para transformar características; validación cruzada de diez particiones en dos benchmarks",
+    "model": "Fuzzy-GBDT y ensamble bagging Fuzzy-GBDT",
+    "metrics": "UCI: exactitud 98%, AUROC 0,99; Framingham: exactitud 84,23%, sensibilidad 70,49%, AUROC 0,91",
+    "limitations": "Datasets públicos; sin validación clínica prospectiva ni evaluación en nuevos hospitales",
+    "hardware": "Datos tabulares clínicos; no se especifican equipos",
+    "software": "Funciones de pertenencia difusa, GBDT y bagging",
+    "framework": "Funciones de pertenencia difusa, GBDT y bagging",
+    "cost": "No reportados",
+    "code": "No corroborado",
+    "area": "Cardiología",
+    "rubro": "Cardiología",
+    "modality": "Cardiología",
+    "summary": "Transformación híbrida difusa de características para predecir enfermedad cardiovascular",
+    "key_metric": "UCI: exactitud 98%, AUROC 0,99",
+    "language": "No aplica",
+    "figures": [],
+    "remember": "Datasets públicos; sin validación clínica prospectiva ni evaluación en nuevos hospitales",
+    "rich": {
+      "problem": "Transformación híbrida difusa de características para predecir enfermedad cardiovascular",
+      "idea": "Fuzzy-GBDT y ensamble bagging Fuzzy-GBDT",
+      "methodology": "Funciones gaussianas y sigmoides para transformar características; validación cruzada de diez particiones en dos benchmarks",
+      "architecture": "Fuzzy-GBDT y ensamble bagging Fuzzy-GBDT",
+      "results": "UCI: exactitud 98%, AUROC 0,99; Framingham: exactitud 84,23%, sensibilidad 70,49%, AUROC 0,91",
+      "limitations": "Datasets públicos; sin validación clínica prospectiva ni evaluación en nuevos hospitales",
+      "hardware": "Datos tabulares clínicos; no se especifican equipos",
+      "software": "Funciones de pertenencia difusa, GBDT y bagging",
+      "cost": "No reportados",
+      "source": "https://doi.org/10.1038/s41598-026-76878-y",
+      "interpretability": "Consultar estudio original para interpretabilidad",
+      "dataset_cards": [
+        {
+          "name": "Muestra",
+          "value": "UCI Heart Disease y versión pública Framingham de Kaggle; tamaños exactos no corroborados",
+          "detail": "Funciones gaussianas y sigmoides para transformar características; validación cruzada de diez particiones en dos benchmarks",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado",
+          "main": "UCI: exactitud 98%, AUROC 0,99",
+          "sub": "Según cohorte y diseño"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Indicador",
+          "UCI: exactitud 98%, AUROC 0,99",
+          "Fuente editorial original"
+        ],
+        [
+          "Indicador",
+          "Framingham: exactitud 84,23%, sensibilidad 70,49%, AUROC 0,91",
+          "Fuente editorial original"
+        ]
+      ],
+      "implementation": [
+        "Verificar independencia por paciente y validez externa",
+        "No utilizar como dispositivo clínico autónomo sin validación"
+      ],
+      "figures": []
+    }
+  },
+  {
     "date": "2026-11-19",
     "reviewed": "19 noviembre 2026",
     "published": "17 noviembre 2026",
