@@ -20756,5 +20756,807 @@
         ]
       ]
     }
+  },
+  {
+    "date": "2026-11-22",
+    "reviewed": "22 noviembre 2026",
+    "rich_detail": true,
+    "language": "en",
+    "figures": [],
+    "published": "21 noviembre 2026",
+    "flag": "🇮🇳",
+    "countryFlags": "🇮🇳",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-79182-x",
+    "doi": "10.1038/s41598-026-79182-x",
+    "title": "Physics-informed neural surrogate learning predicts cervical cancer progression with mechanistic interpretability",
+    "title_es": "Aprendizaje neuronal sustituto informado por física para predecir la progresión del cáncer cervicouterino con interpretabilidad mecanística",
+    "country": "India",
+    "institution": "Apollo Proton Cancer Centre (cohorte de desarrollo); Tata Memorial Centre y All India Institute of Medical Sciences (validación externa). Afiliación de los autores: Vellore Institute of Technology, Chennai.",
+    "sample": "Cohorte longitudinal de desarrollo: 20.287 pacientes tratados entre 2018 y 2023 en Apollo Proton Cancer Centre. Prueba temporal interna: 3.043 pacientes, incluidos 2.663 de 2023 (subconjunto, no adicional). Validación externa: TMC n=8.432 y AIIMS n=7.535.",
+    "design": "Estudio retrospectivo longitudinal; partición de desarrollo 70/15/15, prueba temporal con pacientes de 2023 y validación externa en dos instituciones independientes.",
+    "model": "PI-NSL: variational physics encoder para inferir parámetros individuales, solucionador diferenciable de EDP y operador dinámico de riesgo para supervivencia.",
+    "metrics": "AUC dependiente del tiempo a 2 años: 0,91 ± 0,03; C-index: 0,89 ± 0,04; Integrated Brier Score: 0,082 ± 0,015. Validación externa: AUC 0,87 ± 0,05 en TMC y 0,86 ± 0,05 en AIIMS. Prueba temporal 2023: AUC 0,89 ± 0,05.",
+    "limitations": "Retrospectivo; validación externa circunscrita a instituciones de India; los clústeres biológicos son hipótesis mecanísticas y requieren validación prospectiva. No demuestra que usar las predicciones mejore resultados clínicos.",
+    "hardware": "Historias clínicas y datos clínicos rutinarios. Cómputo de alto rendimiento de Vellore Institute of Technology; modelo de GPU y configuración exacta no reportados.",
+    "software": "Red neuronal informada por física, solucionador diferenciable de EDP y operador de supervivencia. Framework y versiones de software no especificados en el registro editorial consultado.",
+    "framework": "PI-NSL; framework de deep learning con restricciones físico-biológicas.",
+    "cost": "No se reporta costo de adquisición, entrenamiento ni inferencia. El artículo indica financiación de acceso abierto por Vellore Institute of Technology; no recibió financiación específica para el estudio.",
+    "code": "",
+    "area": "Oncología digital",
+    "rubro": "Predicción de progresión y supervivencia",
+    "modality": "Datos clínicos longitudinales · modelos físico-informados",
+    "summary": "PI-NSL combina ecuaciones diferenciales parciales de dinámica tumor-inmunidad-virus con una red neuronal para estimar riesgo y supervivencia en cáncer cervicouterino. Incluye prueba temporal y validación externa en dos centros de India.",
+    "key_metric": "AUC a 2 años 0,91 ± 0,03; C-index 0,89 ± 0,04; AUC externas 0,87 y 0,86.",
+    "remember": "Estudio de oncología digital con arquitectura neuronal informada por física y validación externa multicéntrica en India.",
+    "rich": {
+      "figures": [],
+      "problem": "Predicción de progresión y supervivencia en cáncer cervicouterino con interpretabilidad biológica.",
+      "idea": "PI-NSL integra ecuaciones diferenciales parciales de dinámica tumor-inmunidad-virus como restricciones suaves de la red neuronal.",
+      "methodology": "Cohorte longitudinal retrospectiva de 20.287 pacientes (2018–2023); partición de desarrollo 70/15/15; prueba temporal de 2023 y validación externa en Tata Memorial Centre y AIIMS.",
+      "architecture": "Variational physics encoder que infiere parámetros PDE por paciente; solucionador PDE diferenciable para simulación espaciotemporal; dynamic risk operator para predicción de supervivencia.",
+      "results": "AUC dependiente del tiempo a 2 años 0,91 ± 0,03; C-index 0,89 ± 0,04; IBS 0,082 ± 0,015. AUC externa TMC 0,87 ± 0,05 y AIIMS 0,86 ± 0,05.",
+      "limitations": "Estudio retrospectivo; validación externa solo en India; las hipótesis mecanísticas y la utilidad clínica requieren validación prospectiva e impacto clínico.",
+      "hardware": "Datos clínicos rutinarios y HPC de Vellore Institute of Technology; GPU específica no reportada.",
+      "software": "PI-NSL y solucionador diferenciable de EDP; framework y versiones no reportados.",
+      "cost": "Costos de cómputo y despliegue no reportados; acceso abierto financiado por VIT.",
+      "source": "https://doi.org/10.1038/s41598-026-79182-x",
+      "interpretability": "Restricciones físico-biológicas y clústeres latentes; la interpretación mecanística genera hipótesis, no causalidad demostrada.",
+      "dataset_cards": [
+        {
+          "name": "Cohorte de desarrollo",
+          "value": "20.287 pacientes",
+          "detail": "Apollo Proton Cancer Centre; 2018–2023; test temporal de 3.043 incluido dentro de la cohorte.",
+          "accent": "#0c7ea5"
+        },
+        {
+          "name": "Validación externa",
+          "value": "15.967 pacientes",
+          "detail": "Tata Memorial Centre n=8.432 y AIIMS n=7.535; centros separados de la cohorte de desarrollo.",
+          "accent": "#0c7ea5"
+        },
+        {
+          "name": "Arquitectura",
+          "value": "PI-NSL",
+          "detail": "Encoder físico variacional + solucionador PDE diferenciable + operador dinámico de riesgo.",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "AUC a 2 años",
+          "main": "0,91 ± 0,03",
+          "sub": "Predicción de supervivencia libre de progresión"
+        },
+        {
+          "label": "C-index",
+          "main": "0,89 ± 0,04",
+          "sub": "Discriminación del modelo"
+        },
+        {
+          "label": "AUC externa",
+          "main": "0,87 / 0,86",
+          "sub": "TMC / AIIMS"
+        }
+      ],
+      "metrics_table": [
+        [
+          "AUC a 2 años",
+          "0,91 ± 0,03",
+          "Predicción de supervivencia libre de progresión"
+        ],
+        [
+          "C-index",
+          "0,89 ± 0,04",
+          "Cohorte de prueba"
+        ],
+        [
+          "Integrated Brier Score",
+          "0,082 ± 0,015",
+          "Calibración de supervivencia"
+        ],
+        [
+          "AUC externa TMC",
+          "0,87 ± 0,05",
+          "n=8.432"
+        ],
+        [
+          "AUC externa AIIMS",
+          "0,86 ± 0,05",
+          "n=7.535"
+        ],
+        [
+          "AUC temporal 2023",
+          "0,89 ± 0,05",
+          "n=2.663; subconjunto de la prueba"
+        ]
+      ],
+      "implementation": [
+        "Mantener la distinción entre prueba temporal y validación externa; no sumar los 2.663 pacientes de 2023 a la cohorte.",
+        "Exigir validación prospectiva y evaluación de impacto antes de usar el modelo para decisiones clínicas.",
+        "Revisar calibración y transportabilidad fuera de las instituciones indias estudiadas."
+      ]
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "reviewed": "22 noviembre 2026",
+    "rich_detail": true,
+    "language": "en",
+    "figures": [],
+    "published": "20 noviembre 2026",
+    "flag": "🇸🇦 🇹🇷",
+    "countryFlags": "🇸🇦 🇹🇷",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-81727-z",
+    "doi": "10.1038/s41598-026-81727-z",
+    "title": "Rigorous multi-seed evaluation of domain generalization strategies for multi-center tuberculosis detection in chest radiography",
+    "title_es": "Evaluación rigurosa con múltiples semillas de estrategias de generalización entre dominios para detectar tuberculosis en radiografías de tórax multicéntricas",
+    "country": "Arabia Saudita y Türkiye",
+    "institution": "Department of Information Systems, King Saud University (Arabia Saudita); Department of Nursing, Faculty of Health Sciences, Bahçeşehir Cyprus University (Türkiye).",
+    "sample": "1.280 imágenes de radiografía de tórax, tras eliminar casi duplicados, de cuatro cohortes públicas: Shenzhen, Montgomery, TB Chest X-ray Database y GlobalSubset. Siete objetivos de entrenamiento, cinco semillas por configuración y 140 ejecuciones.",
+    "design": "Benchmark leave-one-domain-out entre cuatro cohortes públicas; 20 evaluaciones emparejadas por método; pruebas pareadas y modelos de efectos mixtos para analizar variación entre semillas y cohortes.",
+    "model": "Comparación de ERM, MixStyle, CORAL, AdaMix, IRM, GroupDRO y HP-EAR (regularizador de asignación entrópica de prototipos hiperesféricos). El backbone exacto no se especifica en el resumen editorial.",
+    "metrics": "AUROC medio entre 0,752 y 0,767 (MixStyle 0,767). Ningún método superó significativamente a ERM (p=0,59). AdaMix redujo ECE a 0,232 frente a 0,286–0,327. Sensibilidad media en cohortes no vistas: 0,55–0,60.",
+    "limitations": "El AUROC no mejoró significativamente frente a ERM; rankings inestables entre semillas; sensibilidad moderada en cohortes no vistas. Cuatro conjuntos públicos no representan toda la variación clínica.",
+    "hardware": "No reportado por los autores en el resumen editorial; GPU, CPU y memoria no especificadas.",
+    "software": "Siete objetivos de entrenamiento y análisis multi-semilla; frameworks, versiones y repositorio de código no confirmados en la ficha editorial.",
+    "framework": "Deep learning para clasificación de radiografías y generalización de dominio.",
+    "cost": "Sin subvención externa específica; costos de cómputo no reportados.",
+    "code": "",
+    "area": "Imagenología torácica",
+    "rubro": "Generalización y reproducibilidad",
+    "modality": "Radiografía de tórax · deep learning",
+    "summary": "Benchmark multicéntrico de tuberculosis que demuestra que la variación entre semillas y la calibración pueden cambiar las conclusiones sobre generalización de modelos de radiografía.",
+    "key_metric": "AUROC 0,752–0,767; AdaMix ECE 0,232; sensibilidad en centros no vistos 0,55–0,60.",
+    "remember": "Benchmark de generalización de dominio para tuberculosis con cuatro cohortes públicas, siete objetivos y cinco semillas.",
+    "rich": {
+      "figures": [],
+      "problem": "La pérdida de rendimiento de modelos de cribado de tuberculosis al trasladarlos a hospitales o cohortes diferentes.",
+      "idea": "Comparar estrategias de generalización con múltiples semillas y evaluación leave-one-domain-out, incluyendo calibración.",
+      "methodology": "1.280 radiografías de cuatro cohortes públicas tras eliminación de casi duplicados; siete objetivos de entrenamiento; cinco semillas; 140 ejecuciones y 20 evaluaciones emparejadas por método.",
+      "architecture": "ERM, MixStyle, CORAL, AdaMix, IRM, GroupDRO y HP-EAR. El backbone CNN no queda identificado en el resumen editorial.",
+      "results": "AUROC medio 0,752–0,767; MixStyle 0,767. Diferencia frente a ERM no significativa (p=0,59). AdaMix ECE 0,232 frente a 0,286–0,327; sensibilidad en dominios no vistos 0,55–0,60.",
+      "limitations": "No se observó mejora significativa del AUROC frente a ERM; inestabilidad de ranking entre semillas y sensibilidad moderada fuera del dominio de entrenamiento.",
+      "hardware": "No reportado.",
+      "software": "Implementación de siete objetivos de entrenamiento; framework y versiones no reportados.",
+      "cost": "Sin financiación externa específica; costo computacional no reportado.",
+      "source": "https://doi.org/10.1038/s41598-026-81727-z",
+      "interpretability": "El estudio enfatiza reproducibilidad, calibración y evaluación de dominio; no propone explicabilidad clínica individual.",
+      "dataset_cards": [
+        {
+          "name": "Datos",
+          "value": "1.280 radiografías",
+          "detail": "Cuatro cohortes públicas: Shenzhen, Montgomery, TB Chest X-ray Database y GlobalSubset.",
+          "accent": "#0c7ea5"
+        },
+        {
+          "name": "Experimentos",
+          "value": "140 ejecuciones",
+          "detail": "Siete objetivos de entrenamiento por cinco semillas; evaluación leave-one-domain-out.",
+          "accent": "#0c7ea5"
+        },
+        {
+          "name": "Métodos",
+          "value": "7 estrategias",
+          "detail": "ERM, MixStyle, CORAL, AdaMix, IRM, GroupDRO y HP-EAR.",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "AUROC máximo medio",
+          "main": "0,767",
+          "sub": "MixStyle; sin diferencia significativa vs ERM"
+        },
+        {
+          "label": "ECE AdaMix",
+          "main": "0,232",
+          "sub": "Frente a 0,286–0,327 en otros métodos"
+        },
+        {
+          "label": "Sensibilidad",
+          "main": "0,55–0,60",
+          "sub": "Umbral predeterminado en cohortes no vistas"
+        }
+      ],
+      "metrics_table": [
+        [
+          "AUROC medio",
+          "0,752–0,767",
+          "Rango entre métodos; MixStyle 0,767"
+        ],
+        [
+          "Comparación con ERM",
+          "p=0,59",
+          "Sin diferencia significativa en modelos de efectos mixtos"
+        ],
+        [
+          "ECE AdaMix",
+          "0,232",
+          "Frente a 0,286–0,327"
+        ],
+        [
+          "Sensibilidad",
+          "0,55–0,60",
+          "Cohortes no vistas al umbral predeterminado"
+        ],
+        [
+          "Reproducibilidad",
+          "5 semillas",
+          "140 ejecuciones totales"
+        ]
+      ],
+      "implementation": [
+        "No elegir un modelo solo por una única semilla o por el AUROC agregado.",
+        "Reportar calibración y sensibilidad al umbral de uso previsto.",
+        "Repetir evaluación externa con centros y protocolos de adquisición adicionales."
+      ]
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "reviewed": "22 noviembre 2026",
+    "rich_detail": true,
+    "language": "en",
+    "figures": [],
+    "published": "21 noviembre 2026",
+    "flag": "🇨🇳",
+    "countryFlags": "🇨🇳",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-81578-8",
+    "doi": "10.1038/s41598-026-81578-8",
+    "title": "An integrated multimodal neural network framework for early diagnosis of Alzheimer’s disease and mild cognitive impairment combining genomic, neuroimaging, and behavioral modalities",
+    "title_es": "Marco integrado de red neuronal multimodal para el diagnóstico temprano de Alzheimer y deterioro cognitivo leve mediante datos genómicos, neuroimagen y comportamiento",
+    "country": "China",
+    "institution": "The Sixth Affiliated Hospital of Xinjiang Medical University, Urumqi, Xinjiang, China.",
+    "sample": "Análisis secundario de datos multimodales armonizados de Alzheimer’s Disease Neuroimaging Initiative (ADNI) y UK Biobank. El resumen editorial consultado no informa el tamaño analítico exacto.",
+    "design": "Estudio de desarrollo y evaluación retrospectiva con datos secundarios armonizados de cohortes ADNI y UK Biobank; comparación del modelo multimodal con alternativas unimodales.",
+    "model": "Red multimodal con tres vías: 3D-CNN para morfología de MRI; red densamente conectada para variantes genéticas; codificación longitudinal de trayectorias conductuales y cognitivas; mecanismo de gating adaptativo de modalidades basado en atención.",
+    "metrics": "El resumen editorial informa que el modelo multimodal supera a las alternativas unimodales y que el gating identifica biomarcadores relevantes; no presenta valores numéricos de AUC, exactitud o tamaño muestral.",
+    "limitations": "Análisis secundario de cohortes armonizadas; la validez depende de la calidad y compatibilidad entre ADNI y UK Biobank. No se informa validación prospectiva en práctica clínica ni cifras cuantitativas en el resumen accesible.",
+    "hardware": "MRI de las cohortes ADNI y UK Biobank; fabricantes y modelos de escáner no detallados en el resumen editorial. Recursos computacionales institucionales.",
+    "software": "3D-CNN, red densa y gating por atención; framework, versiones y repositorio de código no especificados en el resumen editorial.",
+    "framework": "Deep learning multimodal con gating adaptativo de modalidades.",
+    "cost": "Financiado por National Natural Science Foundation of China, proyecto 82560970. Costos de entrenamiento y despliegue no reportados.",
+    "code": "",
+    "area": "Neuroinformática",
+    "rubro": "Diagnóstico temprano y fusión multimodal",
+    "modality": "MRI · genómica · evaluación cognitiva longitudinal",
+    "summary": "Integra MRI, variantes genéticas y trayectorias cognitivas mediante ramas neuronales especializadas y gating por atención; el artículo informa superioridad frente a modelos unimodales, sin cifras cuantitativas en el resumen editorial consultado.",
+    "key_metric": "Mejora cualitativa frente a alternativas unimodales; métricas numéricas y N exacto no informados en el resumen editorial.",
+    "remember": "Modelo multimodal de Alzheimer que combina 3D-CNN, genómica y variables cognitivas longitudinales.",
+    "rich": {
+      "figures": [],
+      "problem": "Detección temprana de Alzheimer y deterioro cognitivo leve integrando señales biológicas, neuroimagen y comportamiento.",
+      "idea": "Fusionar tres modalidades mediante atención adaptativa que pondera su contribución predictiva.",
+      "methodology": "Análisis secundario de datos armonizados ADNI y UK Biobank; comparación del modelo multimodal con ramas unimodales.",
+      "architecture": "3D-CNN para MRI; red densamente conectada para variantes genéticas; encoder longitudinal de comportamiento y cognición; attention-driven adaptive modality gating.",
+      "results": "El artículo informa mayor eficacia predictiva y resiliencia frente a alternativas unimodales; el resumen editorial consultado no expone AUC, exactitud ni N final.",
+      "limitations": "Datos secundarios armonizados; falta de validación prospectiva clínica; tamaño muestral y métricas numéricas no especificados en el resumen editorial.",
+      "hardware": "Escáneres MRI de ADNI y UK Biobank; modelos no especificados.",
+      "software": "Deep learning multimodal; framework y versiones no reportados.",
+      "cost": "Financiación NSF China 82560970; costo computacional no reportado.",
+      "source": "https://doi.org/10.1038/s41598-026-81578-8",
+      "interpretability": "El gating por atención identifica contribuciones de modalidad y biomarcadores; atención no equivale por sí sola a explicación causal.",
+      "dataset_cards": [
+        {
+          "name": "Fuentes",
+          "value": "ADNI + UK Biobank",
+          "detail": "Datos secundarios multimodales armonizados; N final no especificado en el resumen editorial.",
+          "accent": "#0c7ea5"
+        },
+        {
+          "name": "Modalidades",
+          "value": "3 vías",
+          "detail": "MRI, variantes genéticas y trayectorias conductuales/cognitivas longitudinales.",
+          "accent": "#0c7ea5"
+        },
+        {
+          "name": "Fusión",
+          "value": "Gating por atención",
+          "detail": "Ajusta dinámicamente el peso de cada modalidad.",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Resultado reportado",
+          "main": "Supera modelos unimodales",
+          "sub": "Comparación cualitativa en el resumen editorial"
+        },
+        {
+          "label": "Métricas numéricas",
+          "main": "No expuestas",
+          "sub": "No se infieren AUC ni exactitud"
+        },
+        {
+          "label": "Interpretabilidad",
+          "main": "Gating adaptativo",
+          "sub": "Contribuciones de modalidades y biomarcadores"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Comparación multimodal",
+          "Superior a unimodales",
+          "Resultado cualitativo reportado por los autores"
+        ],
+        [
+          "AUC / exactitud",
+          "No reportado en abstract",
+          "No se atribuyen valores no visibles en fuente consultada"
+        ],
+        [
+          "Tamaño analítico",
+          "No reportado en abstract",
+          "ADNI + UK Biobank armonizados"
+        ]
+      ],
+      "implementation": [
+        "Revisar texto completo y material suplementario antes de reutilizar cifras o tamaños de muestra.",
+        "Evaluar validación externa por cohorte y por sitio, además de robustez ante modalidades faltantes.",
+        "No usar como sistema diagnóstico autónomo; se requiere validación clínica prospectiva."
+      ]
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "reviewed": "22 noviembre 2026",
+    "rich_detail": true,
+    "language": "en",
+    "figures": [],
+    "published": "21 noviembre 2026",
+    "flag": "🇰🇷",
+    "countryFlags": "🇰🇷",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-71466-6",
+    "doi": "10.1038/s41598-026-71466-6",
+    "title": "Large language model surrogates for Bayesian optimization of antibody sequences",
+    "title_es": "Modelos de lenguaje como sustitutos para optimización bayesiana de secuencias de anticuerpos",
+    "country": "Corea del Sur",
+    "institution": "MOGAM Institute for Biomedical Research; CROID Research; Seoul School of Integrated Sciences & Technologies (aSSIST) University.",
+    "sample": "Benchmarks experimentales y simulados de secuencias de anticuerpos. El resumen del artículo no especifica el número de secuencias ni el tamaño exacto de cada benchmark. El repositorio cita como ejemplo una base externa AlphaSeq de 104.972 interacciones anticuerpo-péptido; no se asume que todas formen la muestra evaluada.",
+    "design": "Marco de optimización bayesiana con inicialización warm-start desde un LLM específico de anticuerpos; comparación frente a optimización bayesiana convencional con procesos gaussianos.",
+    "model": "AbL2BO usa Ab-RoBERTa como modelo de lenguaje de anticuerpos y surrogate; ajuste bayesiano mediante LoRA, con aproximación de Laplace o Monte Carlo dropout para incertidumbre.",
+    "metrics": "El artículo reporta mayor eficiencia muestral y mejor calibración de incertidumbre que comparadores basados en Gaussian Process en benchmarks experimentales y simulados. No se muestran cifras numéricas en el resumen editorial consultado.",
+    "limitations": "Resultados de benchmark computacional; el resumen no aporta tamaños de muestra ni cifras comparables, y no demuestra eficacia terapéutica ni validación clínica. La generación de candidatos requiere ensayos experimentales independientes.",
+    "hardware": "Una GPU NVIDIA A100-SXM4 de 40 GB, según el repositorio oficial de los autores.",
+    "software": "Python 3.12.5, PyTorch 2.6.0, BoTorch 0.11.3, CUDA 11.8+ y Transformers; Ab-RoBERTa, LoRA, aproximación de Laplace y MC dropout, según el repositorio oficial.",
+    "framework": "AbL2BO · Ab-RoBERTa · Bayesian optimization · Bayesian LoRA.",
+    "cost": "El artículo declara no haber recibido financiación externa. Costo de GPU, energía y experimentación no reportado.",
+    "code": "https://github.com/mogam-ai/AbL2BO",
+    "area": "Ingeniería de proteínas",
+    "rubro": "Descubrimiento y optimización de anticuerpos",
+    "modality": "Secuencias de anticuerpos · LLM · optimización bayesiana",
+    "summary": "AbL2BO utiliza Ab-RoBERTa con LoRA bayesiana como surrogate para optimizar secuencias de anticuerpos con mayor eficiencia muestral y estimaciones de incertidumbre mejor calibradas que procesos gaussianos.",
+    "key_metric": "Mejor eficiencia muestral y calibración de incertidumbre frente a Gaussian Process; valores numéricos no expuestos en el resumen.",
+    "remember": "Marco LLM + Bayesian optimization para optimización computacional de secuencias de anticuerpos terapéuticos.",
+    "rich": {
+      "figures": [],
+      "problem": "La optimización experimental de anticuerpos requiere iteraciones costosas de diseño de secuencias y ensayos de unión.",
+      "idea": "Usar un LLM específico de anticuerpos como surrogate de optimización bayesiana para reducir el número de evaluaciones necesarias.",
+      "methodology": "Benchmarks experimentales y simulados; comparación con optimización bayesiana basada en Gaussian Process; warm-start desde conocimiento preentrenado.",
+      "architecture": "Ab-RoBERTa como LLM de anticuerpos; Bayesian Low-Rank Adaptation (LoRA); inferencia aproximada mediante Laplace o Monte Carlo dropout; surrogate integrado en Bayesian Optimization.",
+      "results": "Mayor eficiencia muestral y mejor calibración de incertidumbre que métodos kernel/GP, según el resumen de los autores; no se informan valores numéricos en el abstract.",
+      "limitations": "No demuestra eficacia clínica ni actividad terapéutica in vivo; tamaños de benchmark y métricas numéricas no aparecen en el resumen editorial consultado; los candidatos requieren validación experimental.",
+      "hardware": "NVIDIA A100-SXM4 GPU, 40 GB (README del repositorio oficial).",
+      "software": "Python 3.12.5; PyTorch 2.6.0; BoTorch 0.11.3; CUDA 11.8+; Transformers; Ab-RoBERTa.",
+      "cost": "Sin financiación externa declarada; costo de cómputo no reportado.",
+      "source": "https://doi.org/10.1038/s41598-026-71466-6",
+      "interpretability": "Incertidumbre bayesiana con aproximación de Laplace o MC dropout; no es explicación clínica de decisiones.",
+      "dataset_cards": [
+        {
+          "name": "Modelo base",
+          "value": "Ab-RoBERTa",
+          "detail": "LLM preentrenado específico de secuencias de anticuerpos.",
+          "accent": "#0c7ea5"
+        },
+        {
+          "name": "Hardware",
+          "value": "1 × NVIDIA A100",
+          "detail": "GPU de 40 GB declarada en el repositorio oficial.",
+          "accent": "#0c7ea5"
+        },
+        {
+          "name": "Entorno",
+          "value": "PyTorch 2.6.0",
+          "detail": "Python 3.12.5, BoTorch 0.11.3 y CUDA 11.8+ según README.",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Eficiencia muestral",
+          "main": "Superior a GP",
+          "sub": "Resultado comparativo reportado por autores"
+        },
+        {
+          "label": "Incertidumbre",
+          "main": "Mejor calibrada",
+          "sub": "Laplace o Monte Carlo dropout"
+        },
+        {
+          "label": "Código",
+          "main": "Repositorio público",
+          "sub": "mogam-ai/AbL2BO"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Eficiencia muestral",
+          "Superior a GP",
+          "Resultado cualitativo; cifra no visible en abstract"
+        ],
+        [
+          "Calibración de incertidumbre",
+          "Mejor que métodos kernel",
+          "Resultado cualitativo; cifra no visible en abstract"
+        ],
+        [
+          "GPU",
+          "NVIDIA A100-SXM4 40 GB",
+          "README del repositorio oficial"
+        ],
+        [
+          "Entorno",
+          "PyTorch 2.6.0 / BoTorch 0.11.3",
+          "README del repositorio oficial"
+        ]
+      ],
+      "implementation": [
+        "Separar optimización computacional de validación experimental de afinidad y función del anticuerpo.",
+        "Registrar incertidumbre y comparar con procesos gaussianos bajo el mismo presupuesto de evaluaciones.",
+        "No interpretar el rendimiento de benchmark como eficacia terapéutica o clínica."
+      ]
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "reviewed": "22 noviembre 2026",
+    "rich_detail": true,
+    "language": "en",
+    "figures": [],
+    "published": "21 noviembre 2026",
+    "flag": "🇨🇳",
+    "countryFlags": "🇨🇳",
+    "journal": "Scientific Reports · 2026",
+    "paper": "https://doi.org/10.1038/s41598-026-78874-8",
+    "doi": "10.1038/s41598-026-78874-8",
+    "title": "A novel framework for automated volume quantification of subretinal fluid in central serous chorioretinopathy",
+    "title_es": "Nuevo marco para la cuantificación automatizada del volumen de líquido subretiniano en coriorretinopatía serosa central",
+    "country": "China",
+    "institution": "Nanjing University of Aeronautics and Astronautics; Center of Digital Dentistry, Peking University School and Hospital of Stomatology; Affiliated Eye Hospital of Nanjing Medical University.",
+    "sample": "Imágenes OCT radiales de pacientes con coriorretinopatía serosa central, facilitadas por centros colaboradores. El resumen editorial consultado no indica el número exacto de pacientes ni de volúmenes OCT.",
+    "design": "Desarrollo retrospectivo de un procedimiento de procesamiento de imágenes y reconstrucción geométrica 3D para cuantificar el volumen de líquido subretiniano; evaluación frente a patrón de referencia e interpolación con muestreo escaso.",
+    "model": "No se describe una red neuronal. El marco utiliza extracción de contornos, alineación espacial, serialización de puntos, reconstrucción 3D, relaciones de adyacencia, subdivisión de microelementos e integración discreta.",
+    "metrics": "Error absoluto mínimo 0,0011 mm³; error relativo 0,16–7,82% (mayoría alrededor de 6%); MAPE mínimo 0,30% con factor de muestreo de interpolación 2. Son mínimos/rangos reportados, no promedios globales.",
+    "limitations": "Número de pacientes y escáneres no visible en el resumen consultado; requiere validación externa y prospectiva. La calidad depende de la adquisición radial y de la delimitación de contornos.",
+    "hardware": "Tomografía de coherencia óptica (OCT) con adquisición radial; fabricante y modelo no especificados.",
+    "software": "Procesamiento de imágenes, detección de bordes, alineación espacial, reconstrucción 3D e integración numérica; lenguaje y versiones no reportados.",
+    "framework": "Algoritmo geométrico de imagen médica; no es un modelo deep learning según la descripción metodológica.",
+    "cost": "No reportado.",
+    "code": "",
+    "area": "Oftalmología digital",
+    "rubro": "Cuantificación volumétrica de imagen médica",
+    "modality": "OCT radial · reconstrucción 3D",
+    "summary": "Método de procesamiento de imágenes OCT que reconstruye el volumen de líquido subretiniano a partir de cortes radiales; aporta métricas de error geométrico y no debe clasificarse como deep learning.",
+    "key_metric": "Error absoluto mínimo 0,0011 mm³; MAPE mínimo 0,30% con factor de interpolación 2.",
+    "remember": "Algoritmo de cuantificación volumétrica de líquido subretiniano mediante OCT radial y reconstrucción geométrica 3D.",
+    "rich": {
+      "figures": [],
+      "problem": "La cuantificación manual de líquido subretiniano en OCT requiere procesamiento corte por corte y presenta dificultades en segmentos iniciales y finales de barridos.",
+      "idea": "Reconstruir geométricamente el volumen de líquido a partir de contornos de OCT radial y compensar huecos entre cortes mediante interpolación.",
+      "methodology": "Tres módulos: extracción de contornos por recorte, anotación y detección de bordes; alineación espacial y reconstrucción 3D; cálculo volumétrico por subdivisión de microelementos e integración discreta.",
+      "architecture": "Pipeline determinista de visión por computador y geometría 3D. No se describe CNN, Transformer ni otro modelo de aprendizaje profundo.",
+      "results": "Error absoluto mínimo 0,0011 mm³; error relativo 0,16–7,82%, con mayoría alrededor de 6%; MAPE mínimo 0,30% con factor de muestreo 2.",
+      "limitations": "Tamaño de muestra no visible en el resumen editorial; validación externa/prospectiva no establecida; dependencia de la calidad de los barridos y contornos.",
+      "hardware": "Escáner OCT radial; fabricante y modelo no reportados.",
+      "software": "Recorte, anotación de contornos, detección de bordes, alineación espacial, interpolación e integración discreta; software/versiones no reportados.",
+      "cost": "No reportado.",
+      "source": "https://doi.org/10.1038/s41598-026-78874-8",
+      "interpretability": "Pipeline geométrico explícito y trazable; no es un modelo opaco de deep learning.",
+      "dataset_cards": [
+        {
+          "name": "Modalidad",
+          "value": "OCT radial",
+          "detail": "Cortes B-scan radiales para reconstrucción del líquido subretiniano.",
+          "accent": "#0c7ea5"
+        },
+        {
+          "name": "Pipeline",
+          "value": "3 módulos",
+          "detail": "Extracción de contornos, reconstrucción 3D y cuantificación volumétrica.",
+          "accent": "#0c7ea5"
+        },
+        {
+          "name": "Interpolación",
+          "value": "Factor 2",
+          "detail": "Evaluación de cuantificación con un muestreo radial más escaso.",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Error absoluto mínimo",
+          "main": "0,0011 mm³",
+          "sub": "Valor mínimo reportado"
+        },
+        {
+          "label": "Error relativo",
+          "main": "0,16–7,82%",
+          "sub": "Rango reportado; mayoría alrededor de 6%"
+        },
+        {
+          "label": "MAPE mínimo",
+          "main": "0,30%",
+          "sub": "Factor de muestreo de interpolación 2"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Error absoluto mínimo",
+          "0,0011 mm³",
+          "Valor mínimo reportado frente al patrón de referencia"
+        ],
+        [
+          "Error relativo",
+          "0,16–7,82%",
+          "Rango reportado; mayoría alrededor de 6%"
+        ],
+        [
+          "MAPE mínimo",
+          "0,30%",
+          "Factor de muestreo de interpolación 2"
+        ],
+        [
+          "Modelo de IA",
+          "No descrito",
+          "Algoritmo de visión/geométrico, no deep learning"
+        ]
+      ],
+      "implementation": [
+        "Clasificarlo como procesamiento de imágenes y reconstrucción 3D, no como deep learning.",
+        "Solicitar tamaño de muestra, modelo OCT y validación externa antes de comparar con otros métodos.",
+        "Evaluar reproducibilidad de anotación y sensibilidad a la densidad de barridos."
+      ]
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "reviewed": "22 noviembre 2026",
+    "rich_detail": true,
+    "language": "en",
+    "figures": [],
+    "published": "20 noviembre 2026",
+    "flag": "🇨🇳",
+    "countryFlags": "🇨🇳",
+    "journal": "Scientific Data · 2026",
+    "paper": "https://doi.org/10.1038/s41597-026-08627-9",
+    "doi": "10.1038/s41597-026-08627-9",
+    "title": "A Dataset of Teeth Segmentation and Keypoint Detection for Mandibular Motion Analysis",
+    "title_es": "Conjunto de datos para segmentación dental y detección de puntos clave en el análisis del movimiento mandibular",
+    "country": "China",
+    "institution": "School of Airspace Science and Engineering, Shandong University, Weihai; School and Hospital of Stomatology, Shandong University, Jinan.",
+    "sample": "27 voluntarios universitarios sanos de 18–21 años; 27 videos de movimiento mandibular; más de 1.200 imágenes orales anotadas manualmente y 35 puntos clave dentales.",
+    "design": "Data Descriptor con adquisición de videos de movimiento mandibular, anotación manual de regiones dentales y landmarks, y experimentos de referencia con algoritmos de segmentación semántica y detección de puntos clave.",
+    "model": "Benchmark con múltiples algoritmos convencionales de segmentación semántica y modelos clásicos de detección de keypoints. Los nombres de arquitecturas y métricas numéricas no aparecen en el resumen editorial consultado.",
+    "metrics": "El resumen informa precisión y recall competitivos en segmentación y localización favorable de landmarks; no expone cifras numéricas de Dice, IoU, mAP o PCK.",
+    "limitations": "Muestra pequeña de voluntarios sanos y rango etario estrecho; no representa pacientes con patología dental o variabilidad clínica amplia. Generalización externa aún no demostrada.",
+    "hardware": "Sistema de captura de video de movimiento mandibular y adquisición de imágenes orales; cámara, óptica e iluminación exactas no especificadas en el resumen.",
+    "software": "Scripts de entrenamiento, archivos de configuración y ejemplos de evaluación disponibles en el repositorio GitHub de los autores; framework y versiones no especificados en el resumen.",
+    "framework": "Dataset de visión por computador para segmentación dental y keypoint detection.",
+    "cost": "Dataset publicado bajo licencia CC BY 4.0 en Zenodo; no se reporta costo de adquisición ni anotación.",
+    "code": "https://github.com/Han-Han-Hanna/Dental-Motion-Dataset",
+    "area": "Odontología digital",
+    "rubro": "Segmentación dental y análisis de movimiento",
+    "modality": "Video oral · imágenes anotadas · landmarks",
+    "summary": "Recurso abierto de movimiento mandibular con videos e imágenes anotadas para entrenar y comparar algoritmos de segmentación dental y detección de puntos anatómicos.",
+    "key_metric": "27 videos; más de 1.200 imágenes anotadas; 35 puntos clave; 27 voluntarios.",
+    "remember": "Dataset de movimiento mandibular y anotaciones dentales para visión artificial y odontología digital.",
+    "rich": {
+      "figures": [],
+      "problem": "Falta de conjuntos públicos dinámicos para analizar estructuras dentales durante el movimiento mandibular, más allá de imágenes estáticas de rayos X.",
+      "idea": "Publicar videos e imágenes orales anotadas con segmentación dental y 35 landmarks para entrenar y evaluar algoritmos.",
+      "methodology": "Captura de 27 voluntarios sanos de 18–21 años; 27 videos; más de 1.200 imágenes anotadas manualmente; benchmark de segmentación semántica y detección de puntos clave.",
+      "architecture": "No propone una arquitectura única. Evalúa múltiples modelos convencionales de segmentación semántica y modelos clásicos de keypoint detection; nombres y métricas exactas no aparecen en el resumen editorial.",
+      "results": "Los autores reportan precisión/recall competitivos para clases dentales y localización favorable de puntos clave; cifras cuantitativas no expuestas en el resumen.",
+      "limitations": "Solo 27 voluntarios sanos, edad 18–21; no incluye representación suficiente de patología, restauraciones, edentulismo ni poblaciones clínicas diversas.",
+      "hardware": "Sistema de captura de videos e imágenes orales; marca/modelo de cámara no reportado.",
+      "software": "Scripts, configuraciones y ejemplos de entrenamiento/evaluación en GitHub; framework no especificado en el resumen.",
+      "cost": "Datos CC BY 4.0 en Zenodo; costo de captura/anotación no reportado.",
+      "source": "https://doi.org/10.1038/s41597-026-08627-9",
+      "interpretability": "Anotaciones espaciales explícitas permiten inspeccionar máscaras dentales y landmarks; el dataset no es un modelo clínico validado.",
+      "dataset_cards": [
+        {
+          "name": "Participantes",
+          "value": "27 voluntarios",
+          "detail": "Adultos jóvenes sanos de 18–21 años.",
+          "accent": "#0c7ea5"
+        },
+        {
+          "name": "Videos",
+          "value": "27 clips",
+          "detail": "Registro de movimiento mandibular humano.",
+          "accent": "#0c7ea5"
+        },
+        {
+          "name": "Anotaciones",
+          "value": ">1.200 imágenes",
+          "detail": "Segmentación dental y 35 puntos clave.",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Dataset",
+          "main": "27 videos",
+          "sub": "Movimiento mandibular"
+        },
+        {
+          "label": "Imágenes",
+          "main": ">1.200",
+          "sub": "Anotación manual oral"
+        },
+        {
+          "label": "Landmarks",
+          "main": "35",
+          "sub": "Puntos clave dentales"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Voluntarios",
+          "27",
+          "Sanos, 18–21 años"
+        ],
+        [
+          "Videos",
+          "27",
+          "Movimiento mandibular"
+        ],
+        [
+          "Imágenes anotadas",
+          ">1.200",
+          "Segmentación dental y keypoints"
+        ],
+        [
+          "Puntos clave",
+          "35",
+          "Landmarks dentales"
+        ],
+        [
+          "Métricas de benchmark",
+          "No cuantificadas en abstract",
+          "El resumen solo indica rendimiento competitivo/favorable"
+        ]
+      ],
+      "implementation": [
+        "Dataset Zenodo: https://doi.org/10.5281/zenodo.19201948 (CC BY 4.0).",
+        "Código y configuraciones: https://github.com/Han-Han-Hanna/Dental-Motion-Dataset.",
+        "Separar sujetos entre entrenamiento y prueba para evitar fuga entre cuadros del mismo video; validar en población clínica diversa."
+      ]
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "reviewed": "22 noviembre 2026",
+    "rich_detail": true,
+    "language": "en",
+    "figures": [],
+    "published": "21 noviembre 2026",
+    "flag": "🇨🇳",
+    "countryFlags": "🇨🇳",
+    "journal": "Scientific Data · 2026",
+    "paper": "https://doi.org/10.1038/s41597-026-08836-2",
+    "doi": "10.1038/s41597-026-08836-2",
+    "title": "A perioperative electrocardiography and photoplethysmography dataset synchronized with arterial blood gas measurements",
+    "title_es": "Conjunto perioperatorio de electrocardiografía y fotopletismografía sincronizadas con mediciones de gases arteriales",
+    "country": "China",
+    "institution": "Sichuan Academy of Medical Sciences & Sichuan Provincial People’s Hospital / University of Electronic Science and Technology of China; Second Affiliated Hospital of Chengdu Medical College; West China Second University Hospital, West China Hospital y West China Fourth Hospital de Sichuan University; Affiliated Hospital of Guizhou Medical University.",
+    "sample": "1.033 pacientes de cuatro centros; 3.313 mediciones de gases arteriales (ABG) y 2.841 segmentos de ECG/PPG emparejados temporalmente (85,8% de los eventos ABG); 946 pacientes aportaron al menos un segmento de onda emparejado.",
+    "design": "Data Descriptor prospectivo multicéntrico. Cirugías con anestesia general entre diciembre de 2023 y agosto de 2024. Dataset de ondas fisiológicas sincronizadas con ABG; el dispositivo de investigación solo capturó datos y no guio el manejo clínico.",
+    "model": "No se entrenó ni validó un modelo de IA en el Data Descriptor. Recurso para desarrollo futuro de modelos de señales, biomarcadores digitales, integración multimodal y estimación no invasiva de variables bioquímicas.",
+    "metrics": "ECG y dos canales PPG sincronizados a 500 Hz. 85,8% de eventos ABG emparejados con onda. Ventanas utilizables: ECG 65,8%; PPG rojo 64,2%; PPG infrarrojo 59,1%.",
+    "limitations": "14,2% de ABG sin segmento de onda emparejado; ventanas con artefacto o pérdida de señal; diferencias de case-mix y analizadores entre centros; posible desplazamiento de distribución. No es una validación de modelo predictivo.",
+    "hardware": "ECG de tres electrodos; front-end KS1081 y CN122; ADC de 24 bits ADS1292; PPG con AFE4400 y sonda Nellcor DS-100A (rojo ~660 nm e IR ~940 nm); Bluetooth GR5515 y gateway 4G. Analizadores ABG: Werfen GEM Premier 5000, Roche cobas b 123, Abbott i-STAT y Radiometer ABL.",
+    "software": "Datos crudos en TXT y tablas CSV; sincronización temporal NTP; scripts de importación, filtrado y visualización en R 4.4.1; compatible con análisis posterior en Python.",
+    "framework": "Dataset multimodal para investigación de señales fisiológicas; no incluye modelo IA entrenado.",
+    "cost": "Dataset CC BY 4.0 de acceso abierto. Costos de adquisición del sistema wearable y procesamiento no reportados.",
+    "code": "https://doi.org/10.5281/zenodo.23499737",
+    "area": "Ingeniería biomédica",
+    "rubro": "Monitorización perioperatoria y señales fisiológicas",
+    "modality": "ECG · PPG · gases arteriales · wearable",
+    "summary": "Dataset prospectivo de cuatro centros con señales ECG/PPG de wearable sincronizadas a gases arteriales, con especificaciones de hardware y trazabilidad de la adquisición; habilita futuros modelos de IA, pero el artículo no entrena uno.",
+    "key_metric": "1.033 pacientes; 3.313 ABG; 2.841 segmentos ECG/PPG; muestreo 500 Hz; 85,8% de emparejamiento.",
+    "remember": "Dataset de monitorización perioperatoria con wearable ECG/PPG, gases arteriales y documentación técnica de hardware.",
+    "rich": {
+      "figures": [],
+      "problem": "Escasez de recursos perioperatorios abiertos que vinculen señales continuas ECG/PPG con mediciones de gases arteriales temporalmente alineadas.",
+      "idea": "Liberar un dataset prospectivo multicéntrico de ondas de wearable y ABG para biomarcadores digitales, estimación no invasiva y modelos de riesgo.",
+      "methodology": "1.033 pacientes en cuatro centros chinos; 3.313 ABG; 2.841 segmentos ECG/PPG emparejados; adquisición diciembre 2023–agosto 2024; control de calidad automatizado por ventanas de 5 segundos.",
+      "architecture": "No se presenta arquitectura de IA. Dataset de tres canales sincronizados: ECG de un canal, PPG rojo e infrarrojo; tablas clínicas y ABG enlazadas por identificador seudonimizado.",
+      "results": "500 Hz de muestreo; 85,8% de ABG emparejados con ondas; ventanas utilizables ECG 65,8%, PPG rojo 64,2% y PPG IR 59,1%.",
+      "limitations": "472 ABG (14,2%) no tienen onda emparejada; calidad utilizable parcial; heterogeneidad entre centros y analizadores; riesgo de leakage temporal si se usan muestras posteriores al ABG para predecirlo.",
+      "hardware": "ECG: tres electrodos; front-end KS1081/CN122; ADC ADS1292 de 24 bits. PPG: AFE4400 y Nellcor DS-100A con LED rojo ~660 nm e IR ~940 nm. Bluetooth GR5515 y gateway 4G. Analizadores ABG GEM Premier 5000, cobas b 123, i-STAT y Radiometer ABL.",
+      "software": "R 4.4.1 para scripts de importación, denoising, filtrado y visualización; archivos de ondas TXT, tablas CSV; Python posible con NumPy/Matplotlib.",
+      "cost": "Dataset abierto CC BY 4.0; costo de hardware y operación no reportado.",
+      "source": "https://doi.org/10.1038/s41597-026-08836-2",
+      "interpretability": "Señales crudas y marcas temporales preservan trazabilidad; el artículo advierte que las ventanas posteriores al muestreo pueden causar fuga temporal al predecir ABG.",
+      "dataset_cards": [
+        {
+          "name": "Pacientes",
+          "value": "1.033",
+          "detail": "Cuatro centros, cirugías bajo anestesia general.",
+          "accent": "#0c7ea5"
+        },
+        {
+          "name": "Mediciones",
+          "value": "3.313 ABG",
+          "detail": "2.841 segmentos de ondas ECG/PPG emparejados (85,8%).",
+          "accent": "#0c7ea5"
+        },
+        {
+          "name": "Muestreo",
+          "value": "500 Hz",
+          "detail": "Un canal ECG y dos canales PPG (rojo e infrarrojo).",
+          "accent": "#0c7ea5"
+        }
+      ],
+      "result_cards": [
+        {
+          "label": "Emparejamiento ABG-onda",
+          "main": "85,8%",
+          "sub": "2.841 de 3.313 eventos"
+        },
+        {
+          "label": "ECG utilizable",
+          "main": "65,8%",
+          "sub": "Ventanas de 5 segundos"
+        },
+        {
+          "label": "PPG utilizable",
+          "main": "64,2% / 59,1%",
+          "sub": "Rojo / infrarrojo"
+        }
+      ],
+      "metrics_table": [
+        [
+          "Pacientes",
+          "1.033",
+          "Cuatro centros"
+        ],
+        [
+          "ABG",
+          "3.313",
+          "Mediciones intraoperatorias"
+        ],
+        [
+          "Segmentos ECG/PPG",
+          "2.841",
+          "85,8% de los ABG"
+        ],
+        [
+          "Frecuencia de muestreo",
+          "500 Hz",
+          "ECG + PPG rojo + PPG IR"
+        ],
+        [
+          "Ventanas ECG utilizables",
+          "65,8%",
+          "Control de calidad"
+        ],
+        [
+          "Ventanas PPG utilizables",
+          "64,2% / 59,1%",
+          "Rojo / infrarrojo"
+        ]
+      ],
+      "implementation": [
+        "Dataset: https://huggingface.co/datasets/DX-anes/PeriWaveSync-ABG (CC BY 4.0).",
+        "Código R 4.4.1: https://doi.org/10.5281/zenodo.23499737.",
+        "Para estimar ABG, limitar predictores a la ventana previa al muestreo y evitar leakage temporal; estratificar por centro."
+      ]
+    }
   }
 ]
